@@ -151,6 +151,7 @@ key_binder:
   bindings:                 # 每条定义包含条件、接收按键（IBus 规格的键名，可加修饰符，如 Control+Return）、发送按键
     - { when: has_menu, accept: semicolon, send: 2 }        # ; 2 候选
     - { when: has_menu, accept: apostrophe, send: 3 }       # ' 3 候选
+    - { when: has_menu, accept: slash, send: 4 }            # ' 4 候选
     - { when: paging, accept: comma, send: Page_Up }        # , 向上翻页
     - { when: has_menu, accept: period, send: Page_Down }   # . 向下翻页
 
@@ -166,7 +167,7 @@ recognizer:
 # --- 候选相关 ---
 #- 一般在 default.yaml 或 default.custom.yaml
 menu:
-  page_size: 7
+  page_size: 4
 
 # --- 外观定制 ---
 #- 一般在 weasel.yaml 或 weasel.custom.yaml

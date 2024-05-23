@@ -24,6 +24,7 @@ function M.func(input, seg, env)
         yield_cand(seg, os.date('%Y-%m-%d %H:%M', current_time))
         yield_cand(seg, os.date('%Y-%m-%d', current_time))
         yield_cand(seg, os.date('%H:%M', current_time))
+        yield_cand(seg, os.date('`> %Y-%m-%d %H:%M`', current_time))
         local week_tab = {'日', '一', '二', '三', '四', '五', '六'}
         local text = week_tab[tonumber(os.date('%w', current_time) + 1)]
         yield_cand(seg, '星期' .. text)

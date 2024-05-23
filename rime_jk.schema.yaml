@@ -12,6 +12,7 @@ schema:
     知心五笔，一个知心的五笔拼音小女仆。
     码表源自 wubi86
   dependencies:
+    - emoji
     - wubi86
     - pinyin_simp
   version: 0.0.1            # 版本号，在发布新版前请确保已升级版本号

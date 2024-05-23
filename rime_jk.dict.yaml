@@ -1,0 +1,42 @@
+# Rime dictionary
+# encoding: utf-8
+
+---
+name: rime_jk
+version: 0.0.1
+sort: by_weight
+import_tables:
+  - wubi86
+#   - pinyin_simp
+# ? 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
+use_preset_vocabulary: true
+...
+
+刘增玺	yfqi
+刘奕遥	yyer
+小满意	iiuj
+姚秋萍	vtai
+知心	tdny
+女仆	tdny
+
+后接	rgru
+
+大家好	hello
+再見	bye
+再會	bye
+
+星期一	monday
+星期二	tuesday
+星期三	wednesday
+星期四	thursday
+星期五	friday
+星期六	saturday
+星期日	sunday
+
+星期一	weekday
+星期二	weekday
+星期三	weekday
+星期四	weekday
+星期五	weekday
+星期六	weekday
+星期日	weekday

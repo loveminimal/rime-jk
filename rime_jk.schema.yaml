@@ -78,12 +78,12 @@ engine:
   
   # --- 过滤翻译的结果，自定义滤镜皆可使用开关调控 ---
   filters:
+    - simplifier            # 用字转换，？默认繁转简
+    - simplifier@emoji      # Emoji
     - uniquifier            # 过滤重复的候选字，有可能来自 simplifier
-    # - simplifier            # 用字转换
     # - lua_filter            # 使用 lua 自定义过滤，如过滤字符集、调整排序，后接 @+lua 函数名
     #                         # - lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input,  env)
     #                         # - 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
-    - simplifier@emoji        # Emoji
 
 
 # === speller ===

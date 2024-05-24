@@ -15,13 +15,13 @@ import_tables:
 # ? 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
 use_preset_vocabulary: true
 ...
-
-刘增玺	yfqi
-姚秋萍	vtai
-小满意	iiuj
-刘奕遥	yyer
-
+好家伙	vpwo
+秋萍	toai	9999
+姚秋萍	vtai	9999
+小满意	iiuj	9999
+刘增玺	yfqi	9999
+记着	ynud
+刘奕遥	yyer	9999
 知心	tdny
 女仆	tdny
-
 后接	rgru

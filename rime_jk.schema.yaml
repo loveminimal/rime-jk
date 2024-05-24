@@ -143,7 +143,24 @@ emoji:
 # === 下设 full_shape: 和 half_shape: 分别控制全角、半角模式下的符号 ===
 punctuator:                 # 设定符号表，这里直接导入预设的
   import_preset: default
-
+  half_shape:
+    "@":
+      - "@"
+      - "loveminimal@163.com"
+      - "loveminimal@outlook.com"
+      - "loveminimal163@gmail.com"
+      - "@163.com"
+      - "@outlook.com"
+      - "@gmail.com"
+      - "aituyaa@gmail.com"
+    "#":
+      - "#" 
+      - "loveminimal"
+      - "aituyaa"
+      - "Jack Liu"
+    "^":
+      - "^"
+      - "……"
 
 # === 下设 bindings 设置功能性快捷键 ===
 key_binder:

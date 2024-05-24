@@ -8,14 +8,18 @@ sort: by_weight
 import_tables:
   - wubi86
   - pinyin_simp
+  # 引入极点五笔的词库
+  - wubi86_jidian
+  - wubi86_jidian_extra               # 扩展词库
+  - wubi86_jidian_extra_district      # 扩展词库 - 行政区域
 # ? 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
 use_preset_vocabulary: true
 ...
 
 刘增玺	yfqi
-刘奕遥	yyer
-小满意	iiuj
 姚秋萍	vtai
+小满意	iiuj
+刘奕遥	yyer
 
 知心	tdny
 女仆	tdny

@@ -8,6 +8,7 @@ sort: by_weight
 import_tables:
   - wubi86
   - pinyin_simp
+  - your_jk_custom                          # 引入自定义词库
   # 引入极点五笔的词库
   - dicts/wubi86_jidian
   - dicts/wubi86_jidian_extra               # 扩展词库
@@ -15,13 +16,15 @@ import_tables:
 # ? 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
 use_preset_vocabulary: true
 ...
-好家伙	vpwo
-秋萍	toai	9999
-姚秋萍	vtai	9999
-小满意	iiuj	9999
 刘增玺	yfqi	9999
-记着	ynud
+增玺	fuqi	9999
+知心五笔	tngt
+姚秋萍	vtai	9999
+秋萍	toai	9999
+小满意	iiuj	9999
 刘奕遥	yyer	9999
+好家伙	vpwo
+俺宝	wdpg
+记着	ynud
 知心	tdny
-女仆	tdny
 后接	rgru

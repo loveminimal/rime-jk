@@ -186,14 +186,14 @@ recognizer:
 menu:
   page_size: 4
 
-# --- 外观定制 ---
-#- 一般在 weasel.yaml 或 weasel.custom.yaml
-style:
-  font_face: LXGW WenKai GB Screen R
-  label_font_face: LXGW WenKai GB Screen R
-  comment_font_face: LXGW WenKai GB Screen R
-  font_point: 13 
-  label_font_point: 11
-  comment_font_point: 11
-  horizontal: false 
-  color_scheme: aqua  # aqua google metroblue
+# # --- 外观定制 ---
+# #- 一般在 weasel.yaml 或 weasel.custom.yaml
+# style:
+#   font_face: LXGW WenKai GB Screen R
+#   label_font_face: LXGW WenKai GB Screen R
+#   comment_font_face: LXGW WenKai GB Screen R
+#   font_point: 13 
+#   label_font_point: 11
+#   comment_font_point: 11
+#   horizontal: false 
+#   color_scheme: aqua  # aqua google metroblue

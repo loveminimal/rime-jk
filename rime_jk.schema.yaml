@@ -158,9 +158,9 @@ punctuator:                 # 设定符号表，这里直接导入预设的
       - "loveminimal"
       - "aituyaa"
       - "Jack Liu"
-    "^":
-      - "^"
-      - "……"
+    # "^":
+    #   - "^"
+    #   - "……"
 
 # === 下设 bindings 设置功能性快捷键 ===
 key_binder:

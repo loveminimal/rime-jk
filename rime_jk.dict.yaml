@@ -6,9 +6,10 @@ name: rime_jk
 version: 0.0.1
 sort: by_weight
 import_tables:
-  - wubi86
+  # - wubi86
+  - dicts/wubi86_lex                          # https://wubi.aardio.com/
   - pinyin_simp
-  - your_jk_custom                          # 引入自定义词库
+  - your_jk_custom                            # 引入自定义词库
   # 引入极点五笔的词库
   # - dicts/wubi86_jidian
   # - dicts/wubi86_jidian_extra               # 扩展词库
@@ -16,6 +17,7 @@ import_tables:
 # ? 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
 use_preset_vocabulary: true
 ...
+
 刘增玺	yfqi	9999
 增玺	fuqi	9999
 姚秋萍	vtai	9999

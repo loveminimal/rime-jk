@@ -19,10 +19,6 @@
 					{
 						"type": "text",
 						"file": "others.txt"
-					},
-					{
-						"type": "text",
-						"file": "misc.txt"
 					}
 				]
 			}

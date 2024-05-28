@@ -75,7 +75,7 @@ engine:
     #                                 # - lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input, seg, env)
     #                                 # - 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
     - lua_translator@date_translator  # 时间、日期、星期
-    - table_translator@custom_phrase    # 自定义短语 custom_phrase.txt
+    - table_translator@custom_phrase  # 自定义短语 custom_phrase.txt
   
   # --- 过滤翻译的结果，自定义滤镜皆可使用开关调控 ---
   filters:

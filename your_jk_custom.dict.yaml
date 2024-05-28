@@ -1,4 +1,4 @@
-# Rime dictionary
+# Rime custom dictionary
 # encoding: utf-8
 #
 # 这里可以放置你的自定义词典
@@ -8,6 +8,6 @@ name: your_jk_custom
 version: 0.0.1
 sort: by_weight
 ...
-
 俺宝	wdpg
 后接	rgru
+微信	tmwy

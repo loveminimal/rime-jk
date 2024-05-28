@@ -1,19 +1,16 @@
-# Rime dictionary
+# Rime JK dictionary
 # encoding: utf-8
 
 ---
 name: rime_jk
-version: 0.0.1
+version: 0.1.0
 sort: by_weight
 import_tables:
-  # - wubi86
+  - wubi86
   - pinyin_simp
   - your_jk_custom                            # 引入自定义词库
-  # 引入极点五笔的词库
-  - dicts/wubi86_jidian
-  - dicts/wubi86_jidian_extra               # 扩展词库
-  - dicts/wubi86_jidian_extra_district      # 扩展词库 - 行政区域
-# ? 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
+  - dicts/wubi86_district                     # 扩展词库 - 行政区域
+# 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
 use_preset_vocabulary: true
 ...
 

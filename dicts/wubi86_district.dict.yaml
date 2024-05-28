@@ -1,5 +1,5 @@
 ---
-name: wubi86_jidian_extra_district
+name: wubi86_district
 note: "扩展词库-行政区域"
 version: "2022-12-16"
 last_edit_time: "2022-12-16"
@@ -9,6 +9,9 @@ sort: original
 
 # 码表内容格式：字词 编码 权重 注释 中间是tab，不是空格）
 # 行政区的词条过多，可以根据自己需求进行删减
+
+# ！源自wubi86_jidian_extra_district.dict.ymal
+# https://github.com/KyleBing/rime-wubi86-jidian
 ...
 ## 北京市
 北京市	uyym		110000

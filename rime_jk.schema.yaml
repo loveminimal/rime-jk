@@ -110,12 +110,13 @@ translator:
                             # 这里我们使用自定义词典 rime_jk，其中包含有 wubi86 词典
   prism: rime_jk            # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
   enable_charset_filter: true           # 是否开启字符集过滤
-  enable_encoder: true                  # 是否开启自动造词
   encode_commit_history: true           # 是否对已上屏词自动成词
   max_phrase_length: 4                  # 最大自动成词词长
   disable_user_dict_for_patterns:       # 禁止某些编码录入用户词典
     - "^z.*$"
   enable_sentence: true                 # 是否开启自动造句
+  enable_user_dict: true                # 是否开启用户词典（用户词典记录动态字词频、用户词）
+  enable_encoder: true                  # 是否开启自动造词
 
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===

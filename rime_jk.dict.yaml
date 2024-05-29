@@ -3,7 +3,7 @@
 
 ---
 name: rime_jk
-version: 0.1.0
+version: 1.0.0
 sort: by_weight
 columns:
   - text

@@ -15,7 +15,7 @@ schema:
     - emoji
     - wubi86
     - pinyin_simp
-  version: 0.0.1            # 版本号，在发布新版前请确保已升级版本号
+  version: 1.0.0            # 版本号，在发布新版前请确保已升级版本号
 
 
 # === 开关 ===

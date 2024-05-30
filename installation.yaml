@@ -7,3 +7,4 @@ rime_version: 1.11.2
 installation_id: 'jk-wubi'
 sync_dir: 'C:\Users\jack\Nutstore\1\我的坚果云\RimeSync'
 # sync_dir: 'D:\华为云盘\RimeSync'
+# sync_dir: '/storage/emulated/0/Android/data/nutstore.android/files/f16b0183/RimeSync'

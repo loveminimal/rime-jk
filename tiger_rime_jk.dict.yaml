@@ -1,0 +1,41 @@
+# Rime JK dictionary
+# encoding: utf-8
+
+---
+name: tiger_rime_jk
+version: 1.0.0
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  exclude_patterns:
+    - '^z.*$'
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaBaCaCb"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa"
+import_tables:
+  - tigress
+  # - tigress_ci
+  # - tigress_simp_ci
+  - pinyin_simp
+  - your_jk_custom                            # 引入自定义词库
+  # - dicts/wubi86_district                     # 扩展词库 - 行政区域
+# 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
+# use_preset_vocabulary: true
+...
+
+刘增玺	yfqi	9999
+增玺	fuqi	9999
+姚秋萍	vtai	9999
+秋萍	toai	9999
+小满意	iiuj	9999
+满意	iauj	9999
+刘奕遥	yyer	9999
+奕遥	yoer	9999

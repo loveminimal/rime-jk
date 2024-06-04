@@ -10,17 +10,17 @@ patch:
 
   # --- 外观定制 ---
   #- 一般在 weasel.yaml 或 weasel.custom.yaml
-  preset_color_schemes/jk:                      # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／JK"                            # 方案设置中显示的配色名称
+  preset_color_schemes/tjk:                      # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／TJK"                            # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
     text_color: 0x2E3440                        # 文字
     shadow_color: 0x000000b4                    # 阴影
-    label_color: 0x0A3AFA99                     # 标签
-    comment_text_color: 0x0A3AFA99              # 注释
-    border_color: 0xECEFF4                      # 边框
-    back_color: 0xECEFF4                        # 背景
+    label_color: 0x66636199                     # 标签
+    comment_text_color: 0x66636199              # 注释
+    border_color: 0xFFF8F3                      # 边框
+    back_color: 0xFFF8F3                        # 背景
     # --- 候选项配色 ---
     # candidate_back_color: 0xECEFF4         # 背景
     # candidate_border_color:                # 边框
@@ -28,19 +28,19 @@ patch:
     candidate_text_color: 0x000000DD            # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
-    hilited_back_color: 0x0A3AFA99              # 背景
+    hilited_back_color: 0x66636199              # 背景
     # --- 选中的候选区域配色 ---
     # hilited_mark_color: 0xBF616A              # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
     # hilited_candidate_text_color: 0x2E3440    # 文字
     # hilited_candidate_border_color: 0x8FBCBB  # 边框
-    hilited_candidate_back_color: 0x0A3AFACC    # 背景
-    nextpage_color: 0x0A3AFA99                  # 下一页
+    hilited_candidate_back_color: 0x666361CC    # 背景
+    nextpage_color: 0x66636199                  # 下一页
     prevpage_color: 0x000000DD                  # 上一页
 
   style/+:
-    color_scheme: jk                            # aqua google metroblue
+    color_scheme: tjk                            # aqua google metroblue
     font_face: LXGW WenKai GB Screen R
     label_font_face: LXGW WenKai GB Screen R
     comment_font_face: LXGW WenKai GB Screen R

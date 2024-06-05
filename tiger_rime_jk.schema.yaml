@@ -23,7 +23,7 @@ schema:
 # === 开关 ===
 switches:
   - name: ascii_mode        # 中英文转换开关，0-中文  1-英文
-    reset: 0
+    reset: 0 
     states: [ 中文, 西方 ]
   - name: full_shape        # 半角/全角转换，0-半角 1-全角
     states: [半角, 全角]
@@ -186,6 +186,8 @@ key_binder:
     - { when: has_menu, accept: slash, send: 4 }            # ' 4 候选
     - { when: paging, accept: comma, send: Page_Up }        # , 向上翻页
     - { when: has_menu, accept: period, send: Page_Down }   # . 向下翻页
+    - { when: composing, accept: Control+k, send: Up }      # C-K 向上移动选词
+    - { when: composing, accept: Control+j, send: Down }    # C-J 向下移动选词
 
 
 # === 下设 patterns ，配合 segmentor 的 prefix 和 suffix 完成段落划分、tag 分配 ===

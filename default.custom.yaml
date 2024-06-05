@@ -8,3 +8,8 @@ patch:
   schema_list:
     - {schema: rime_jk}
     - {schema: tiger_rime_jk}
+  switcher/+:
+    caption: 〔方案选单〕
+    hotkeys/+:
+      - Control+i
+    option_list_separator: ' | ' 

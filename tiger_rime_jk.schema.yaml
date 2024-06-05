@@ -16,7 +16,8 @@ schema:
     - pinyin_simp
   version: 1.0.0            # 版本号，在发布新版前请确保已升级版本号
   # icon: "assets/tiger.ico"
-  icon: "assets/tigress.ico"
+  icon: "assets/tiger_s.ico"
+  # icon: "assets/tigress.ico"
   # ascii_icon: "🐯"
 
 # === 开关 ===
@@ -26,13 +27,13 @@ switches:
     states: [ 中文, 西方 ]
   - name: full_shape        # 半角/全角转换，0-半角 1-全角
     states: [半角, 全角]
-  - name: extended_charset
-    states: [ 常用, 增廣 ]
+  # - name: extended_charset
+  #   states: [ 常用, 增廣 ]
   # - name: simplification    # 繁简转换开关，0-否 1-是
   #   # reset: 0
   #   states: [ 漢字, 汉字 ]
-  - name: ascii_punct
-    states: [ 。，, ．， ]
+  # - name: ascii_punct
+  #   states: [ 。，, ．， ]
   - name: emoji
     reset: 1
     states: [ 💀, 😄 ]

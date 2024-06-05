@@ -18,7 +18,8 @@ schema:
   # icon: "assets/tiger.ico"
   icon: "assets/tiger_s.ico"
   # icon: "assets/tigress.ico"
-  # ascii_icon: "🐯"
+  ascii_icon: 'assets/ascii.ico'
+
 
 # === 开关 ===
 switches:
@@ -180,14 +181,15 @@ punctuator:                 # 设定符号表，这里直接导入预设的
 # === 下设 bindings 设置功能性快捷键 ===
 key_binder:
   import_preset: default
-  bindings:                 # 每条定义包含条件、接收按键（IBus 规格的键名，可加修饰符，如 Control+Return）、发送按键
-    - { when: has_menu, accept: semicolon, send: 2 }        # ; 2 候选
-    - { when: has_menu, accept: apostrophe, send: 3 }       # ' 3 候选
-    - { when: has_menu, accept: slash, send: 4 }            # ' 4 候选
-    - { when: paging, accept: comma, send: Page_Up }        # , 向上翻页
-    - { when: has_menu, accept: period, send: Page_Down }   # . 向下翻页
-    - { when: composing, accept: Control+k, send: Up }      # C-K 向上移动选词
-    - { when: composing, accept: Control+j, send: Down }    # C-J 向下移动选词
+  # 迁移至 default.custom.yaml ，以方便多方案共享
+  # bindings:                 # 每条定义包含条件、接收按键（IBus 规格的键名，可加修饰符，如 Control+Return）、发送按键
+  #   - { when: has_menu, accept: semicolon, send: 2 }        # ; 2 候选
+  #   - { when: has_menu, accept: apostrophe, send: 3 }       # ' 3 候选
+  #   - { when: has_menu, accept: slash, send: 4 }            # ' 4 候选
+  #   - { when: paging, accept: comma, send: Page_Up }        # , 向上翻页
+  #   - { when: has_menu, accept: period, send: Page_Down }   # . 向下翻页
+  #   - { when: composing, accept: Control+k, send: Up }      # C-K 向上移动选词
+  #   - { when: composing, accept: Control+j, send: Down }    # C-J 向下移动选词
 
 
 # === 下设 patterns ，配合 segmentor 的 prefix 和 suffix 完成段落划分、tag 分配 ===

@@ -10,6 +10,47 @@ patch:
     - {schema: tiger_rime_jk}
   switcher/+:
     caption: 〔方案选单〕
-    hotkeys/+:
-      - Control+i
+    # hotkeys/+:
+    #   - Control+i
     option_list_separator: ' | ' 
+  key_binder:
+    # import_preset: default
+    bindings:
+      # --- 自定义键位 ---
+      # numbered_mode_switch & schema_switch
+      - { when: always, accept: Control+o, select: .next }        # C-o 切换下一方案
+      - { when: always, accept: Control+i, toggle: ascii_mode }   # C-i 开关中英状态
+      # select_with_`sas`
+      - { when: has_menu, accept: semicolon, send: 2 }            # ; 2 候选
+      - { when: has_menu, accept: apostrophe, send: 3 }           # ' 3 候选
+      - { when: has_menu, accept: slash, send: 4 }                # ' 4 候选
+      # paging_with_comma_period
+      - { when: paging, accept: comma, send: Page_Up }            # , 向上翻页
+      - { when: has_menu, accept: period, send: Page_Down }       # . 向下翻页
+      # move_with_j_k - like vim
+      - { when: composing, accept: Control+k, send: Up }          # C-k 向上移动选词
+      - { when: composing, accept: Control+j, send: Down }        # C-j 向下移动选词
+      # --- 默认键位部分选用 ---
+      # -----------------------------------------------------------------------------
+      # emacs_editing
+      - { when: composing, accept: Control+p, send: Up }
+      - { when: composing, accept: Control+n, send: Down }
+      - { when: composing, accept: Control+b, send: Left }
+      - { when: composing, accept: Control+f, send: Right }
+      # - { when: composing, accept: Control+a, send: Home }
+      # - { when: composing, accept: Control+e, send: End }
+      - { when: composing, accept: Control+d, send: Delete }
+      # - { when: composing, accept: Control+k, send: Shift+Delete }
+      - { when: composing, accept: Control+h, send: BackSpace }
+      # - { when: composing, accept: Control+g, send: Escape }
+      # - { when: composing, accept: Control+bracketleft, send: Escape }
+      # - { when: composing, accept: Control+y, send: Page_Up }
+      # - { when: composing, accept: Alt+v, send: Page_Up }
+      # - { when: composing, accept: Control+v, send: Page_Down }
+      # -----------------------------------------------------------------------------
+      # paging_with_minus_equal
+      - { when: has_menu, accept: minus, send: Page_Up }
+      - { when: has_menu, accept: equal, send: Page_Down }
+      # paging_with_brackets
+      - { when: paging, accept: bracketleft, send: Page_Up }
+      - { when: has_menu, accept: bracketright, send: Page_Down }

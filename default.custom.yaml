@@ -1,56 +1,70 @@
+# Rime default custom settings
+# encoding: utf-8
+#
+# 用来放置一些方案共享的配置，注意 - 
+# 并不是所有的配置项都可以在这里生效，
+# 这里只会覆盖程序文件夹中 default.yaml 中包含的配置项
+
 customization:
   distribution_code_name: Weasel
   distribution_version: 0.16.0
   generator: "Rime::SwitcherSettings"
   modified_time: "Tue Jun  4 16:17:26 2024"
   rime_version: 1.11.2
+
+
 patch:
   schema_list:
     - {schema: rime_jk}
     - {schema: tiger_rime_jk}
+
+
+  # === 候选相关 ===
   switcher/+:
     caption: 〔方案选单〕
     # hotkeys/+:
     #   - Control+i
     option_list_separator: ' | ' 
-  key_binder:
-    # import_preset: default
-    bindings:
+  menu/page_size: 4
+
+
+  # === 标点符号控制 ===
+  # 下设 full_shape: 和 half_shape: 分别控制全角、半角模式下的符号
+  punctuator/+:
+    half_shape/+:
+      "@":
+        - "@"
+        - "loveminimal@163.com"
+        - "loveminimal@outlook.com"
+        - "loveminimal163@gmail.com"
+        - "@163.com"
+        - "@outlook.com"
+        - "@gmail.com"
+        - "aituyaa@gmail.com"
+      "#":
+        - "#" 
+        - "loveminimal"
+        - "aituyaa"
+        - "Jack Liu"
+      # 在中文状态下输出一些常用的半角英文标点
+      '<' : [ '<',《 ,〈 , « , ‹ ]
+      '>' : [ '>', 》, 〉, » , › ]
+      '[' : [ '[',「, 【, 〔 , ［  ]
+      ']' : [ ']', 」, 】, 〕,  ］ ]
+      '{' : ['{', 『, 〖, ｛ ]
+      '}' : ['{', 』, 〗, ｝ ]
+
+
+  # === 键位绑定 ===
+  key_binder/+:
+    bindings/+:
       # --- 自定义键位 ---
-      # numbered_mode_switch & schema_switch
       - { when: always, accept: Control+o, select: .next }        # C-o 切换下一方案
       - { when: always, accept: Control+i, toggle: ascii_mode }   # C-i 开关中英状态
-      # select_with_`sas`
       - { when: has_menu, accept: semicolon, send: 2 }            # ; 2 候选
       - { when: has_menu, accept: apostrophe, send: 3 }           # ' 3 候选
       - { when: has_menu, accept: slash, send: 4 }                # ' 4 候选
-      # paging_with_comma_period
       - { when: paging, accept: comma, send: Page_Up }            # , 向上翻页
       - { when: has_menu, accept: period, send: Page_Down }       # . 向下翻页
-      # move_with_j_k - like vim
       - { when: composing, accept: Control+k, send: Up }          # C-k 向上移动选词
       - { when: composing, accept: Control+j, send: Down }        # C-j 向下移动选词
-      # --- 默认键位部分选用 ---
-      # -----------------------------------------------------------------------------
-      # emacs_editing
-      - { when: composing, accept: Control+p, send: Up }
-      - { when: composing, accept: Control+n, send: Down }
-      - { when: composing, accept: Control+b, send: Left }
-      - { when: composing, accept: Control+f, send: Right }
-      # - { when: composing, accept: Control+a, send: Home }
-      # - { when: composing, accept: Control+e, send: End }
-      - { when: composing, accept: Control+d, send: Delete }
-      # - { when: composing, accept: Control+k, send: Shift+Delete }
-      - { when: composing, accept: Control+h, send: BackSpace }
-      # - { when: composing, accept: Control+g, send: Escape }
-      # - { when: composing, accept: Control+bracketleft, send: Escape }
-      # - { when: composing, accept: Control+y, send: Page_Up }
-      # - { when: composing, accept: Alt+v, send: Page_Up }
-      # - { when: composing, accept: Control+v, send: Page_Down }
-      # -----------------------------------------------------------------------------
-      # paging_with_minus_equal
-      - { when: has_menu, accept: minus, send: Page_Up }
-      - { when: has_menu, accept: equal, send: Page_Down }
-      # paging_with_brackets
-      - { when: paging, accept: bracketleft, send: Page_Up }
-      - { when: has_menu, accept: bracketright, send: Page_Down }

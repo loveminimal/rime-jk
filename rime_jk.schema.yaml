@@ -10,6 +10,7 @@ schema:
     - 撰写者 Jack Liu
   description: |
     知心五笔，一个知心的五笔拼音小女仆。
+    https://github.com/loveminimal/rime-jk
     码表源自 wubi86
   dependencies:
     - emoji
@@ -156,62 +157,19 @@ emoji:
   inherit_comment: false    # 在 corrector.lua 及反查中，emoji 返回空注释
 
 
-# === 下设 full_shape: 和 half_shape: 分别控制全角、半角模式下的符号 ===
-punctuator:                 # 设定符号表，这里直接导入预设的
-  import_preset: default
-  half_shape:
-    "@":
-      - "@"
-      - "loveminimal@163.com"
-      - "loveminimal@outlook.com"
-      - "loveminimal163@gmail.com"
-      - "@163.com"
-      - "@outlook.com"
-      - "@gmail.com"
-      - "aituyaa@gmail.com"
-    "#":
-      - "#" 
-      - "loveminimal"
-      - "aituyaa"
-      - "Jack Liu"
-    # "^":
-    #   - "^"
-    #   - "……"
+# === 标点符号控制 ===
+punctuator:
+  import_preset: default  # 设定符号表，这里直接导入预设的
 
-# === 下设 bindings 设置功能性快捷键 ===
+
+# === 键位绑定 ===
 key_binder:
   import_preset: default
   # 迁移至 default.custom.yaml ，以方便多方案共享
-  # bindings:                 # 每条定义包含条件、接收按键（IBus 规格的键名，可加修饰符，如 Control+Return）、发送按键
-  #   - { when: has_menu, accept: semicolon, send: 2 }        # ; 2 候选
-  #   - { when: has_menu, accept: apostrophe, send: 3 }       # ' 3 候选
-  #   - { when: has_menu, accept: slash, send: 4 }            # ' 4 候选
-  #   - { when: paging, accept: comma, send: Page_Up }        # , 向上翻页
-  #   - { when: has_menu, accept: period, send: Page_Down }   # . 向下翻页
-  #   - { when: composing, accept: Control+k, send: Up }      # C-K 向上移动选词
-  #   - { when: composing, accept: Control+j, send: Down }    # C-J 向下移动选词
+
 
 # === 下设 patterns ，配合 segmentor 的 prefix 和 suffix 完成段落划分、tag 分配 ===
 recognizer:
   import_preset: default
   patterns:
     reverse_lookup: "`[a-z]*'?$"
-
-
-# # === 外观 ===
-# # --- 候选相关 ---
-# #- 一般在 default.yaml 或 default.custom.yaml
-# menu:
-#   page_size: 4
-
-# # --- 外观定制 ---
-# #- 一般在 weasel.yaml 或 weasel.custom.yaml
-# style:
-#   font_face: LXGW WenKai GB Screen R
-#   label_font_face: LXGW WenKai GB Screen R
-#   comment_font_face: LXGW WenKai GB Screen R
-#   font_point: 13 
-#   label_font_point: 11
-#   comment_font_point: 11
-#   horizontal: false 
-#   color_scheme: aqua  # aqua google metroblue

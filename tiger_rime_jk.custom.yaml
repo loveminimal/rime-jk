@@ -3,11 +3,7 @@
 
 patch:
   # === 外观 ===
-  # --- 候选相关 ---
-  #- 一般在 default.yaml 或 default.custom.yaml
-  menu:
-    page_size: 4
-
+  
   # --- 外观定制 ---
   #- 一般在 weasel.yaml 或 weasel.custom.yaml
   preset_color_schemes/tjk:                      # 在 `style/color_schema` 指定的配色方案值

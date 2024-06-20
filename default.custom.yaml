@@ -59,8 +59,9 @@ patch:
   key_binder/+:
     bindings/+:
       # --- 自定义键位 ---
+      - { when: composing, accept: "Control+u", toggle: chaifen } # C-u 开关拆分滤镜
+      - { when: always, accept: Control+i, toggle: ascii_mode }   # C-i 切换中英状态
       - { when: always, accept: Control+o, select: .next }        # C-o 切换下一方案
-      - { when: always, accept: Control+i, toggle: ascii_mode }   # C-i 开关中英状态
       - { when: has_menu, accept: semicolon, send: 2 }            # ; 2 候选
       - { when: has_menu, accept: apostrophe, send: 3 }           # ' 3 候选
       - { when: has_menu, accept: slash, send: 4 }                # ' 4 候选
@@ -68,4 +69,3 @@ patch:
       - { when: has_menu, accept: period, send: Page_Down }       # . 向下翻页
       - { when: composing, accept: Control+k, send: Up }          # C-k 向上移动选词
       - { when: composing, accept: Control+j, send: Down }        # C-j 向下移动选词
-      - { when: composing, accept: "Control+u", toggle: chaifen } # PC 拆分滤镜开关

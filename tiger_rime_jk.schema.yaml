@@ -40,6 +40,9 @@ switches:
   - name: emoji
     reset: 1
     states: [ 💀, 😄 ]
+  - name: chaifen
+    reset: 0 
+    states: [ 拆隐, 拆显 ]
 
 
 # === 引擎 ===
@@ -87,6 +90,7 @@ engine:
     - simplifier            # 用字转换，？默认繁转简
     - simplifier@emoji      # Emoji
     - uniquifier            # 过滤重复的候选字，有可能来自 simplifier
+    - simplifier@chaifen    # 虎码的拆分滤镜
     # - lua_filter            # 使用 lua 自定义过滤，如过滤字符集、调整排序，后接 @+lua 函数名
     #                         # - lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input,  env)
     #                         # - 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
@@ -157,6 +161,20 @@ emoji:
   opencc_config: emoji.json
   inherit_comment: false    # 在 corrector.lua 及反查中，emoji 返回空注释
 
+
+# === 虎码拆分滤镜 ===
+chaifen:
+  opencc_config: hu_cf.json
+  option_name: chaifen
+  show_in_comment: true 
+  comment_format:     
+    - "xform/&nbsp;/ /"
+  tags:     
+    - abc
+    - tiger
+    - tigress
+    - reverse_lookup
+  tips: all  #只给单字加滤镜，改为 char 。 词也显示，改为 all
 
 # === 标点符号控制 ===
 punctuator:

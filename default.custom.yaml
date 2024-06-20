@@ -68,3 +68,4 @@ patch:
       - { when: has_menu, accept: period, send: Page_Down }       # . 向下翻页
       - { when: composing, accept: Control+k, send: Up }          # C-k 向上移动选词
       - { when: composing, accept: Control+j, send: Down }        # C-j 向下移动选词
+      - { when: composing, accept: "Control+u", toggle: chaifen } # PC 拆分滤镜开关

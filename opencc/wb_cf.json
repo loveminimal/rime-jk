@@ -1,0 +1,16 @@
+{
+  "name": "wb_cf",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "wb_cf.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "text",
+      "file": "wb_cf.txt"
+    }
+  }]
+}

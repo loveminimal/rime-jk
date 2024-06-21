@@ -16,7 +16,7 @@ schema:
     - emoji
     - tigress
     - pinyin_simp
-  version: 1.0.0            # 版本号，在发布新版前请确保已升级版本号
+  version: 2.0.0            # 版本号，在发布新版前请确保已升级版本号
   # icon: "assets/tiger.ico"
   icon: "assets/tiger_s.ico"
   # icon: "assets/tigress.ico"

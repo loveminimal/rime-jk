@@ -189,6 +189,6 @@ key_binder:
 
 # === 下设 patterns ，配合 segmentor 的 prefix 和 suffix 完成段落划分、tag 分配 ===
 recognizer:
-  import_preset: default
   patterns:
+    import_preset: default
     reverse_lookup: "`[a-z]*'?$"

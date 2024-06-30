@@ -131,7 +131,7 @@ translator:
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===
 date_translator:
-  jk_datetime: ii
+  jk_datetime: iii
 
 
 reverse_lookup:

@@ -1,0 +1,58 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: s_rime_jk
+  name: 知心字符
+  author: 
+    - 发明人 Jack Liu
+  description: |
+    一款快速输入数字和预设字符的键盘式输入法方案。
+    https://github.com/loveminimal/rime-jk
+  version: "0.0.1"
+  icon: "assets/star.ico"
+  ascii_icon: 'assets/ascii.ico'
+
+engine:
+  processors:
+    - key_binder
+    - punctuator
+    - selector
+    - express_editor
+  segmentors:
+    - punct_segmentor
+  translators:
+    - punct_translator
+
+punctuator:
+  half_shape: &symtable
+    "q" : ""
+    "w" : ""
+    "e" : ""
+    "r" : ""
+    "t" : ""
+    "y" : ""
+    "u" : ""
+    "i" : ""
+    "o" : ""
+    "p" : ""
+    "a" : 1
+    "s" : 2
+    "d" : 3
+    "f" : 4
+    "g" : 5
+    "h" : 6
+    "j" : 7
+    "k" : 8
+    "l" : 9
+    "m" : 0
+    "z" : ""
+    "x" : ""
+    "c" : ""
+    "v" : ""
+    "b" : ""
+    "n" : ""
+  full_shape: *symtable
+
+key_binder:
+  import_preset: default

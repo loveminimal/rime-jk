@@ -16,7 +16,8 @@ customization:
 patch:
   schema_list:
     - {schema: rime_jk}
-    - {schema: tiger_rime_jk}
+    # - {schema: tiger_rime_jk}
+    - {schema: s_rime_jk}
 
 
   # === 候选相关 ===
@@ -60,6 +61,7 @@ patch:
   key_binder/+:
     bindings/+:
       # --- 自定义键位 ---
+      # - { when: always, accept: "Control+m", toggle: full_shape } # C-m 开关半角全角滤镜
       - { when: composing, accept: "Control+u", toggle: chaifen } # C-u 开关拆分滤镜
       - { when: always, accept: Control+i, toggle: ascii_mode }   # C-i 切换中英状态
       - { when: always, accept: Control+o, select: .next }        # C-o 切换下一方案

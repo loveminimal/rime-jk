@@ -2877,7 +2877,7 @@
 鞑	〔&nbsp;·&nbsp;afdp〕
 佃	〔&nbsp;·&nbsp;wlg〕
 揪	〔&nbsp;·&nbsp;rtoy〕
-嗯	〔&nbsp;·&nbsp;kldn&nbsp;·&nbsp;ǹg_ńg_ňg_ǹ_ń_ň_en_eng〕
+嗯	〔&nbsp;·&nbsp;kldn〕
 粥	〔&nbsp;·&nbsp;xoxn〕
 肴	〔&nbsp;·&nbsp;qdef〕
 泻	〔&nbsp;·&nbsp;ipgg〕
@@ -6070,7 +6070,7 @@
 揎	〔&nbsp;·&nbsp;rpgg〕
 搋	〔&nbsp;·&nbsp;rrhm〕
 吒	〔&nbsp;·&nbsp;ktan〕
-呒	〔&nbsp;·&nbsp;kfqn&nbsp;·&nbsp;fǔ_ḿ〕
+呒	〔&nbsp;·&nbsp;kfqn〕
 咣	〔&nbsp;·&nbsp;kiqn〕
 唪	〔&nbsp;·&nbsp;kdwh〕
 唼	〔&nbsp;·&nbsp;kuvg〕
@@ -7933,7 +7933,7 @@
 嘳	〔&nbsp;·&nbsp;kkhm〕
 嘵	〔&nbsp;·&nbsp;kffq〕
 嘷	〔&nbsp;·&nbsp;kthf〕
-嘸	〔&nbsp;·&nbsp;krlo&nbsp;·&nbsp;fǔ_ḿ_mú〕
+嘸	〔&nbsp;·&nbsp;krlo〕
 嘺	〔&nbsp;·&nbsp;ktdk〕
 嘼	〔&nbsp;·&nbsp;kklk〕
 嘽	〔&nbsp;·&nbsp;kkkf〕
@@ -10110,9 +10110,9 @@
 挼	〔&nbsp;·&nbsp;revg〕
 挾	〔&nbsp;·&nbsp;rdww〕
 挿	〔&nbsp;·&nbsp;rtgh〕
-捀	〔&nbsp;·&nbsp;rtdh&nbsp;·&nbsp;péng_féng_féng〕
+捀	〔&nbsp;·&nbsp;rtdh〕
 捁	〔&nbsp;·&nbsp;rtfk〕
-捄	〔&nbsp;·&nbsp;rfiy&nbsp;·&nbsp;jiù_jū_qiú〕
+捄	〔&nbsp;·&nbsp;rfiy〕
 捇	〔&nbsp;·&nbsp;rfoy〕
 捈	〔&nbsp;·&nbsp;rwty〕
 捊	〔&nbsp;·&nbsp;rebg〕
@@ -16345,7 +16345,7 @@
 蝝	〔&nbsp;·&nbsp;jxey〕
 蝞	〔&nbsp;·&nbsp;jnhg〕
 蝟	〔&nbsp;·&nbsp;jleg〕
-蝡	〔&nbsp;·&nbsp;jdmd&nbsp;·&nbsp;rú_ruăn_ruǎn〕
+蝡	〔&nbsp;·&nbsp;jdmd〕
 蝢	〔&nbsp;·&nbsp;jdmy〕
 蝦	〔&nbsp;·&nbsp;jnhc〕
 蝧	〔&nbsp;·&nbsp;jamd〕
@@ -21586,7 +21586,7 @@
 㙋	〔&nbsp;·&nbsp;fadw〕
 㙌	〔&nbsp;·&nbsp;fvij〕
 㙍	〔&nbsp;·&nbsp;fccc〕
-㙎	〔&nbsp;·&nbsp;fdgt&nbsp;·&nbsp;wēi_wēi〕
+㙎	〔&nbsp;·&nbsp;fdgt〕
 㙏	〔&nbsp;·&nbsp;ftjt〕
 㙐	〔&nbsp;·&nbsp;fmdj〕
 㙑	〔&nbsp;·&nbsp;tkmf〕

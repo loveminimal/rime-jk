@@ -67,7 +67,7 @@ patch:
       - { when: always, accept: Control+o, select: .next }        # C-o 切换下一方案
       - { when: has_menu, accept: semicolon, send: 2 }            # ; 2 候选
       - { when: has_menu, accept: apostrophe, send: 3 }           # ' 3 候选
-      - { when: has_menu, accept: slash, send: 4 }                # ' 4 候选
+      - { when: has_menu, accept: slash, send: 4 }                # / 4 候选
       - { when: paging, accept: comma, send: Page_Up }            # , 向上翻页
       - { when: has_menu, accept: period, send: Page_Down }       # . 向下翻页
       - { when: composing, accept: Control+k, send: Up }          # C-k 向上移动选词

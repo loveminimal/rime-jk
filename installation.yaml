@@ -1,10 +1,8 @@
 distribution_code_name: Weasel
 distribution_name: "小狼毫"
-distribution_version: 0.16.1
+distribution_version: 0.16.3
 install_time: "Thu May 23 21:23:57 2024"
 installation_id: "jk-wubi"
 rime_version: 1.11.2
 sync_dir: "C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync"
-# sync_dir: 'D:\华为云盘\RimeSync'
-# sync_dir: '/storage/emulated/0/Android/data/nutstore.android/files/f16b0183/RimeSync'
-update_time: "Fri Jun  7 10:47:58 2024"
+update_time: "Thu Oct 31 16:32:18 2024"

@@ -25,6 +25,8 @@ patch:
     caption: 〔方案选单〕
     # hotkeys/+:
     #   - Control+i
+    hotkeys:
+      - Control+m
     option_list_separator: ' | ' 
   menu/page_size: 4
 

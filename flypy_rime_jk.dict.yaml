@@ -5,7 +5,7 @@
 
 
 ---
-name: rime_ice
+name: flypy_rime_jk
 version: "2023-11-13"
 import_tables:
   - cn_dicts/8105     # 字表

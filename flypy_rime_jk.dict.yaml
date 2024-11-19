@@ -25,57 +25,57 @@ import_tables:
 # 可在拼音方案下直接输入大写字母（Shift + 字母），大写字母参与造句。
 # 示例：输入 `nihaoASDFzaijian` 得到 `你好ASDF再见`
 # （非雾凇方案的双拼如果要启用，需要参考双拼方案下的 speller/algebra 将大写字母搭桥改成一些特殊字符）
-A	A
-B	B
-C	C
-D	D
-E	E
-F	F
-G	G
-H	H
-I	I
-J	J
-K	K
-L	L
-M	M
-N	N
-O	O
-P	P
-Q	Q
-R	R
-S	S
-T	T
-U	U
-V	V
-W	W
-X	X
-Y	Y
-Z	Z
+# A	A
+# B	B
+# C	C
+# D	D
+# E	E
+# F	F
+# G	G
+# H	H
+# I	I
+# J	J
+# K	K
+# L	L
+# M	M
+# N	N
+# O	O
+# P	P
+# Q	Q
+# R	R
+# S	S
+# T	T
+# U	U
+# V	V
+# W	W
+# X	X
+# Y	Y
+# Z	Z
 
 # 数字参与中文造词，方便输入一些特殊的 ID。配合大写字母造词可以自动为 `5G网络`，`3D打印` 等词汇注音
-0	ling
-1	yi
-1	yao
-2	er
-3	san
-4	si
-5	wu
-6	liu
-7	qi
-8	ba
-9	jiu
+# 0	ling
+# 1	yi
+# 1	yao
+# 2	er
+# 3	san
+# 4	si
+# 5	wu
+# 6	liu
+# 7	qi
+# 8	ba
+# 9	jiu
 
 # 示例：输入 sanDdayin 得到 3D打印
-M1
-M2
-M3
-M4
-3G
-4G
-5G
-2D
-4D
-3D打印
+# M1
+# M2
+# M3
+# M4
+# 3G
+# 4G
+# 5G
+# 2D
+# 4D
+# 3D打印
 
 # 加入词典，响应 opencc/others.txt 的 emoji 集合
 V动物

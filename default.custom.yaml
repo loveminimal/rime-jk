@@ -17,7 +17,8 @@ patch:
   schema_list:
     - {schema: rime_jk}
     # - {schema: tiger_rime_jk}
-    - {schema: s_rime_jk}
+    # - {schema: s_rime_jk}
+    - {schema: flypy_rime_jk}
 
 
   # === 候选相关 ===

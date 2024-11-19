@@ -1,0 +1,39 @@
+# Rime JK dictionary
+# encoding: utf-8
+
+---
+name: flypy_rime_jk
+version: 1.0.0
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+  - stem
+# encoder:
+#   exclude_patterns:
+#     - '^z.*$'
+#   rules:
+#     - length_equal: 2
+#       formula: "AaAbBaBb"
+#     - length_equal: 3
+#       formula: "AaBaCaCb"
+#     - length_in_range: [4, 10]
+#       formula: "AaBaCaZa"
+import_tables:
+  # - dicts/tigress_simp_ci
+  - pinyin_simp
+  - your_flypy_jk_custom                        # 引入自定义词库
+  # - dicts/wubi86_district                     # 扩展词库 - 行政区域
+# 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
+# use_preset_vocabulary: true
+...
+
+刘增玺	lzx	9999
+增玺	zx	9999
+姚秋萍	yqp	9999
+秋萍	qp	9999
+小满意	xmy	9999
+满意	my	9999
+刘奕遥	lyy	9999
+奕遥	yy	9999

@@ -15,8 +15,8 @@ patch:
     shadow_color: 0x000000b4                    # 阴影
     label_color: 0x48466d99                     # 标签
     comment_text_color: 0x48466d99              # 注释
-    border_color: 0xFFF8F3                      # 边框
-    back_color: 0xFFF8F3                        # 背景
+    border_color: 0xEEEEFF                      # 边框
+    back_color: 0xEEEEFF                        # 背景
     # --- 候选项配色 ---
     # candidate_back_color: 0xECEFF4         # 背景
     # candidate_border_color:                # 边框

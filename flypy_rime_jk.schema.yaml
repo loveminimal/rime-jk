@@ -150,7 +150,8 @@ translator:
   enable_sentence: true                 # 是否开启自动造句
   enable_user_dict: true                # 是否开启用户词典（用户词典记录动态字词频、用户词）
   enable_encoder: true                  # 是否开启自动造词
-  preedit_format:
+  preedit_format:                       # 将其直接修改为 comment_format ，就可以输什么显示什么
+  # comment_format:
     - xform/([bpmfdtnljqx])n/$1iao/
     - xform/(\w)g/$1eng/
     - xform/(\w)q/$1iu/

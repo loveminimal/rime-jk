@@ -141,7 +141,7 @@ abc_segmentor:
 
 # === 每个方案都有一个主 translator ===
 translator:
-  dictionary: flypy_rime_jk            #  设定 table_translator 使用的词典名
+  dictionary: py_rime_jk            #  设定 table_translator 使用的词典名
                                        # 这里我们使用自定义词典 pinyin_simp
   prism: flypy_rime_jk                 # prism 要以本输入方案的名称来命名
   # enable_charset_filter: true           # 是否开启字符集过滤

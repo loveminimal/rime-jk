@@ -113,7 +113,7 @@ abc_segmentor:
 
 # === 每个方案都有一个主 translator ===
 translator:
-  dictionary: flypy_rime_jk            #  设定 table_translator 使用的词典名
+  dictionary: py_rime_jk            #  设定 table_translator 使用的词典名
                                        # 这里我们使用自定义词典 pinyin_simp
   prism: py_rime_jk                # prism 要以本输入方案的名称来命名
   enable_word_completion: true         # 大于 4 音节的词条自动补全，librime > 1.11.2

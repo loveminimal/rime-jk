@@ -17,6 +17,7 @@ import_tables:
 
   # 建议把扩展词库放到下面，有重复词条时，最上面的权重生效
   # - cn_dicts/mydict
+  - your_py_jk_custom
 ...
 
 # 按需启用：

@@ -3,7 +3,7 @@
 
 # === 描述档 ===
 schema:
-  schema_id: flypy_rime_jk        # 方案内部名，在代码中引用此方案时以此名为准。此 ID 与 rime_jk.schema.yaml 之间部分相同
+  schema_id: flypy_rime_jk  # 方案内部名，在代码中引用此方案时以此名为准
   name: 知心小鹤            # 方案显示名称，在方案选单中显示
   author: 
     - 发明人 double pinyin layout by 鹤
@@ -16,7 +16,7 @@ schema:
     - stroke
     - pinyin_simp
   version: 2.0.0            # 版本号，在发布新版前请确保已升级版本号
-  icon: "assets/fly_b.ico"
+  icon: "assets/pen.ico"
   # icon: "assets/fly_y.ico"
   ascii_icon: 'assets/ascii.ico'
 
@@ -72,7 +72,7 @@ engine:
   translators:
     # - echo_translator               # 没有其他候选字时，回显输入码，创建一个与编码串相同的修行项
     - punct_translator                # 配合 punct_segmentor 进行符号转换
-    - table_translator                # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
+    # - table_translator                # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
                                       #- 此项可以加载多个实例，后接 @+翻译器名 (如 cangjie、wubi 等)
     - script_translator               # 脚本翻译器，用于拼音、粤拼等基于音节表的输入方案，
                                       #- 此项可以加载多个实例，后接 @+翻译器名 (如 pinyin、yjutping 等)
@@ -130,12 +130,10 @@ speller:
     - xform/in$/B/
     - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
     #- abbrev/^(.).+$/$1/
-  # max_code_length: 4        # 形码最大码长，超过则顶字上屏。四码顶字上屏
-
 
 # === segmentor ===
 abc_segmentor:
-  extra_tags:               # 为此 segmentor 所标记的段落插上其它 tag
+  extra_tags:                       # 为此 segmentor 所标记的段落插上其它 tag
     - reverse_lookup
 
 

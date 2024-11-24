@@ -3,40 +3,31 @@
 
 # === 描述档 ===
 schema:
-  schema_id: tiger_rime_jk        # 方案内部名，在代码中引用此方案时以此名为准。此 ID 与 rime_jk.schema.yaml 之间部分相同
-  name: 知心老虎            # 方案显示名称，在方案选单中显示
+  schema_id: tiger_rime_jk               # 方案内部名，在代码中引用此方案时以此名为准
+  name: 知心老虎                         # 方案显示名称，在方案选单中显示
   author: 
     - 发明人 tiger
-    - 撰写者 Jack Liu
+    - 撰写者 Jack Liu <loveminimal@163.com>
   description: |
-    知心老虎，调教一只知心的小老虎。
-    https://github.com/loveminimal/rime-jk
-    码表源自 https://tiger-code.com/
+    - 知心老虎，调教一只知心的小老虎
+    - https://github.com/loveminimal/rime-jk
+    - 码表源自 https://tiger-code.com/
   dependencies:
     - emoji
     - tigress
     - pinyin_simp
-  version: 2.0.0            # 版本号，在发布新版前请确保已升级版本号
-  # icon: "assets/tiger.ico"
+  version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
   icon: "assets/tiger_s.ico"
-  # icon: "assets/tigress.ico"
   ascii_icon: 'assets/ascii.ico'
 
 
 # === 开关 ===
 switches:
-  - name: ascii_mode        # 中英文转换开关，0-中文  1-英文
+  - name: ascii_mode                     # 中英文转换开关，0-中文  1-英文
     reset: 0 
     states: [ 中文, 西文 ]
-  - name: full_shape        # 半角/全角转换，0-半角 1-全角
+  - name: full_shape                     # 半角/全角转换，0-半角 1-全角
     states: [半角, 全角]
-  # - name: extended_charset
-  #   states: [ 常用, 增廣 ]
-  # - name: simplification    # 繁简转换开关，0-否 1-是
-  #   # reset: 0
-  #   states: [ 漢字, 汉字 ]
-  # - name: ascii_punct
-  #   states: [ 。，, ．， ]
   - name: emoji
     reset: 1
     states: [ 💀, 😄 ]
@@ -49,84 +40,84 @@ switches:
 engine:
   # --- 处理各类按键消息 ---
   processors:
-    - ascii_composer        # 处理西文模式及中西文切换
-    - recognizer            # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
-    - key_binder            # 在特定条件下将按键绑定到其他按键，放在其他 processor 之前判定……
-    - speller               # 拼写处理器，把字母追加到编码串
-    - punctuator            # 句读处理器（处理符号按键），将单个字符按键直接映射为标点符号或文字
-    - selector              # 选字处理器，选字、换页
-    - navigator             # 移动插入点，即处理栏内的光标移动
-    - express_editor        # 编辑器，处理空格、回车上屏、回退键。空格确认当前输入、其他字符直接上屏
-    # - fluid_editor          # 句式编辑器，用于以空格断词、回车上屏的注音、语句流等输入方案；替换 express_editor
-    # - lua_processor         # 使用 lua 自定义按键，后接 @+lua函数名 - 即用户文件夹内 rime.lua 中函数名，参数为 (key, env)
+    - ascii_composer                     # 处理西文模式及中西文切换
+    - recognizer                         # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
+    - key_binder                         # 在特定条件下将按键绑定到其他按键，放在其他 processor 之前判定……
+    - speller                            # 拼写处理器，把字母追加到编码串
+    - punctuator                         # 句读处理器（处理符号按键），将单个字符按键直接映射为标点符号或文字
+    - selector                           # 选字处理器，选字、换页
+    - navigator                          # 移动插入点，即处理栏内的光标移动
+    - express_editor                     # 编辑器，处理空格、回车上屏、回退键。空格确认当前输入、其他字符直接上屏
+    # - fluid_editor                       # 句式编辑器，用于以空格断词、回车上屏的注音、语句流等输入方案；替换 express_editor
+    # - lua_processor                      # 使用 lua 自定义按键，后接 @+lua函数名 - 即用户文件夹内 rime.lua 中函数名，参数为 (key, env)
 
   # --- 识别不同内容类型，将输入码分段并加上 tag ---
-  segmentors:               #
-    - ascii_segmentor       # 标识西方段落字母直接上屏
-    - matcher               # 配合 recognizer 标签符合特定规则的段落，如网址、反查等，加上选定 tag
-    - abc_segmentor         # 标识常规的文字段落，加上 abc 这个 tag
-    - punct_segmentor       # 标识句读段落，键入标点符号用，加上 punct 这个 tag 
-    - fallback_segmentor    # 标识其他未标识的段落
-    # - affix_segmentor       # 用户自定义 tag - 此项可加载多个实例，后接 @+tag名
-    # - lua_segmentor         # 使用 lua 自定义切分，后接 @+lua 函数名
+  segmentors:
+    - ascii_segmentor                    # 标识西方段落字母直接上屏
+    - matcher                            # 配合 recognizer 标签符合特定规则的段落，如网址、反查等，加上选定 tag
+    - abc_segmentor                      # 标识常规的文字段落，加上 abc 这个 tag
+    - punct_segmentor                    # 标识句读段落，键入标点符号用，加上 punct 这个 tag 
+    - fallback_segmentor                 # 标识其他未标识的段落
+    # - affix_segmentor                    # 用户自定义 tag - 此项可加载多个实例，后接 @+tag名
+    # - lua_segmentor                      # 使用 lua 自定义切分，后接 @+lua 函数名
     
   # --- 翻译特定类型的编码段为一组候选文字 ---
   translators:
-    # - echo_translator               # 没有其他候选字时，回显输入码，创建一个与编码串相同的修行项
-    - punct_translator                # 配合 punct_segmentor 进行符号转换
-    - table_translator                # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
-                                      #- 此项可以加载多个实例，后接 @+翻译器名 (如 cangjie、wubi 等)
-    # - script_translator             # 脚本翻译器，用于拼音、粤拼等基于音节表的输入方案，
-                                      #- 此项可以加载多个实例，后接 @+翻译器名 (如 pinyin、yjutping 等)
-    - reverse_lookup_translator       # 反查翻译器，用另一种编码方案查码
-    # - lua_translator                # 使用 lua 自定义输入，例如动态输入当前日期、时间，后接 @+lua 函数名
-    #                                 # - lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input, seg, env)
-    #                                 # - 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
-    - lua_translator@date_translator  # 时间、日期、星期
-    - table_translator@custom_phrase  # 自定义短语 custom_phrase.txt
+    # - echo_translator                  # 没有其他候选字时，回显输入码，创建一个与编码串相同的修行项
+    - punct_translator                   # 配合 punct_segmentor 进行符号转换
+    - table_translator                   # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
+    #                                      # ... 此项可以加载多个实例，后接 @+翻译器名 (如 cangjie、wubi 等)
+    # - script_translator                # 脚本翻译器，用于拼音、粤拼等基于音节表的输入方案，
+    #                                      # ... 此项可以加载多个实例，后接 @+翻译器名 (如 pinyin、yjutping 等)
+    - reverse_lookup_translator          # 反查翻译器，用另一种编码方案查码
+    # - lua_translator                   # 使用 lua 自定义输入，例如动态输入当前日期、时间，后接 @+lua 函数名
+    #                                      # ... lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input, seg, env)
+    #                                      # ... 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
+    - lua_translator@date_translator     # 时间、日期、星期
+    - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
   
   # --- 过滤翻译的结果，自定义滤镜皆可使用开关调控 ---
   filters:
-    - simplifier            # 用字转换，？默认繁转简
-    - simplifier@emoji      # Emoji
-    - uniquifier            # 过滤重复的候选字，有可能来自 simplifier
-    - simplifier@chaifen    # 虎码的拆分滤镜
-    # - lua_filter            # 使用 lua 自定义过滤，如过滤字符集、调整排序，后接 @+lua 函数名
-    #                         # - lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input,  env)
-    #                         # - 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
+    - simplifier                         # 用字转换，？默认繁转简
+    - simplifier@emoji                   # Emoji
+    - uniquifier                         # 过滤重复的候选字，有可能来自 simplifier
+    - simplifier@chaifen                 # 虎码的拆分滤镜
+    # - lua_filter                         # 使用 lua 自定义过滤，如过滤字符集、调整排序，后接 @+lua 函数名
+    #                                      # - lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input,  env)
+    #                                      # - 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
 
 
 # === speller ===
 speller:
-  # alphabet: zyxwvutsrqponmlkjihgfedcba  # 定义本方案输入键
-  delimiter: " ;'"          # 上屏时的音节间分音符
-  # algebra:                  # 拼写运算规则，由之算出的拼写汇入 prism 中
+  # alphabet: zyxwvutsrqponmlkjihgfedcba   # 定义本方案输入键
+  delimiter: " ;'"                       # 上屏时的音节间分音符
+  # algebra:                               # 拼写运算规则，由之算出的拼写汇入 prism 中
   #   - erase/^xx$/
   #   - abbrev/^([a-z]).+$/$1/
   #   - abbrev/^([zcs]h).+$/$1/
   #   - derive/^([nl])ve$/$1ue/
-  # max_code_length: 4        # 形码最大码长，超过则顶字上屏。四码顶字上屏
+  # max_code_length: 4                   # 形码最大码长，超过则顶字上屏。四码顶字上屏
 
 
 # === segmentor ===
 abc_segmentor:
-  extra_tags:               # 为此 segmentor 所标记的段落插上其它 tag
+  extra_tags:                            # 为此 segmentor 所标记的段落插上其它 tag
     - reverse_lookup
 
 
 # === 每个方案都有一个主 translator ===
 translator:
-  dictionary: tiger_rime_jk       # 与 wubi86 共用词典，设定 table_translator 使用的词典名
-                            # 这里我们使用自定义词典 rime_jk，其中包含有 wubi86 词典
-  prism: tiger_rime_jk            # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
-  enable_charset_filter: true           # 是否开启字符集过滤
-  encode_commit_history: true           # 是否对已上屏词自动成词
-  max_phrase_length: 4                  # 最大自动成词词长
-  disable_user_dict_for_patterns:       # 禁止某些编码录入用户词典
+  dictionary: tiger_rime_jk              # 与 wubi86 共用词典，设定 table_translator 使用的词典名
+  #                                        # ... 这里我们使用自定义词典 rime_jk，其中包含有 wubi86 词典
+  prism: tiger_rime_jk                   # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+  enable_charset_filter: true            # 是否开启字符集过滤
+  encode_commit_history: true            # 是否对已上屏词自动成词
+  max_phrase_length: 4                   # 最大自动成词词长
+  disable_user_dict_for_patterns:        # 禁止某些编码录入用户词典
     - "^z.*$"
-  enable_sentence: true                 # 是否开启自动造句
-  enable_user_dict: true                # 是否开启用户词典（用户词典记录动态字词频、用户词）
-  enable_encoder: true                  # 是否开启自动造词
+  enable_sentence: true                  # 是否开启自动造句
+  enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
+  enable_encoder: true                   # 是否开启自动造词
 
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===
@@ -148,18 +139,18 @@ reverse_lookup:
 # === 自定义短语：custom_phrase.txt ===
 custom_phrase:
   dictionary: ""
-  user_dict: custom_phrase  # 可以修改这里，改成自己的 txt 文件
-  db_class: stabledb        # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
-  enable_completion: false  # 补全提示
-  enable_sentence: false    # 禁止造句
-  initial_quality: 99       # custom_phrase 的权重应该比 pinyin 和 melt_eng 大
+  user_dict: custom_phrase               # 可以修改这里，改成自己的 txt 文件
+  db_class: stabledb                     # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
+  enable_completion: false               # 补全提示
+  enable_sentence: false                 # 禁止造句
+  initial_quality: 99                    # custom_phrase 的权重应该比 pinyin 和 melt_eng 大
 
 
 # === Emoji ===
 emoji:
   option_name: emoji
   opencc_config: emoji.json
-  inherit_comment: false    # 在 corrector.lua 及反查中，emoji 返回空注释
+  inherit_comment: false                 # 在 corrector.lua 及反查中，emoji 返回空注释
 
 
 # === 虎码拆分滤镜 ===
@@ -174,11 +165,11 @@ chaifen:
     - tiger
     - tigress
     - reverse_lookup
-  tips: all  #只给单字加滤镜，改为 char 。 词也显示，改为 all
+  tips: all                              #只给单字加滤镜，改为 char 。 词也显示，改为 all
 
 # === 标点符号控制 ===
 punctuator:
-  import_preset: default  # 设定符号表，这里直接导入预设的
+  import_preset: default                 # 设定符号表，这里直接导入预设的
 
 
 # === 键位绑定 ===

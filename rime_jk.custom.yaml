@@ -18,10 +18,10 @@ patch:
     border_color: 0xEEEEFF                      # 边框
     back_color: 0xEEEEFF                        # 背景
     # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4         # 背景
-    # candidate_border_color:                # 边框
-    # candidate_shadow_color:                # 阴影
-    candidate_text_color: 0x48466d            # 文字
+    # candidate_back_color: 0xECEFF4              # 背景
+    # candidate_border_color:                     # 边框
+    # candidate_shadow_color:                     # 阴影
+    candidate_text_color: 0x48466d              # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
     hilited_back_color: 0x48466d99              # 背景
@@ -35,8 +35,8 @@ patch:
     nextpage_color: 0x48466d99                  # 下一页
     prevpage_color: 0x48466dDD                  # 上一页
 
-  preset_color_schemes/ojk:                      # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／OJK"                            # 方案设置中显示的配色名称
+  preset_color_schemes/ojk:                     # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／OJK"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -47,9 +47,9 @@ patch:
     border_color: 0xECEFF4                      # 边框
     back_color: 0xECEFF4                        # 背景
     # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4         # 背景
-    # candidate_border_color:                # 边框
-    # candidate_shadow_color:                # 阴影
+    # candidate_back_color: 0xECEFF4              # 背景
+    # candidate_border_color:                     # 边框
+    # candidate_shadow_color:                     # 阴影
     candidate_text_color: 0x000000DD            # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
@@ -65,7 +65,7 @@ patch:
     prevpage_color: 0x000000DD                  # 上一页
 
   style/+:
-    color_scheme: jk                            # aqua google metroblue
+    color_scheme: jk
     font_face: 黑体字根, LXGW WenKai GB Screen R
     label_font_face: 黑体字根, LXGW WenKai GB Screen R
     comment_font_face: 黑体字根, LXGW WenKai GB Screen R

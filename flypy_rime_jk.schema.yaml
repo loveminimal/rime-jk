@@ -9,12 +9,10 @@ schema:
     - 发明人 double pinyin layout by 鹤
     - 撰写者 Jack Liu <loveminimal@163.com>
   description: |
-    - 知心的小鹤
+    - 知心小鹤，双拼，小啊小蓝鸟
     - https://github.com/loveminimal/rime-jk
   dependencies:
-    - emoji
     - stroke
-    - pinyin_simp
   version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
   icon: "assets/fly_b.ico"
   ascii_icon: 'assets/ascii.ico'

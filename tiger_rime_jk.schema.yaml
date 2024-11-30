@@ -9,12 +9,10 @@ schema:
     - 发明人 tiger
     - 撰写者 Jack Liu <loveminimal@163.com>
   description: |
-    - 知心老虎，调教一只知心的小老虎
+    - 知心老虎，虎码，小啊小老虎
     - https://github.com/loveminimal/rime-jk
     - 码表源自 https://tiger-code.com/
   dependencies:
-    - emoji
-    - tigress
     - pinyin_simp
   version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
   icon: "assets/tiger_s.ico"

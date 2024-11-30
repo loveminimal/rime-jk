@@ -9,10 +9,9 @@ schema:
     - 发明人 朙月拼音 佛振 <chen.sst@gmail.com>
     - 撰写者 Jack Liu <loveminimal@163.com>
   description: |
-    - 知心全拼
+    - 知心拼音，全拼，小啊小青柠
     - https://github.com/loveminimal/rime-jk
   dependencies:
-    - emoji
     - stroke
   version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
   icon: "assets/py.ico"
@@ -81,8 +80,8 @@ engine:
     - uniquifier                         # 过滤重复的候选字，有可能来自 simplifier
     # - simplifier@chaifen                 # 虎码的拆分滤镜
     # - lua_filter                         # 使用 lua 自定义过滤，如过滤字符集、调整排序，后接 @+lua 函数名
-    #                                      # - lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input,  env)
-    #                                      # - 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
+    #                                      # ... lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input,  env)
+    #                                      # ... 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
 
 
 # === speller ===
@@ -90,10 +89,18 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba   # 定义本方案输入键
   delimiter: " ;'"                       # 上屏时的音节间分音符
   algebra:                               # 拼写运算规则，由之算出的拼写汇入 prism 中
-    __patch:
-      - pinyin:/abbreviation
-      - pinyin:/spelling_correction
-      - pinyin:/key_correction
+    - abbrev/^([a-z]).+$/$1/             # 简拼（首字母）
+    - abbrev/^([zcs]h).+$/$1/            # 简拼（zh, ch, sh）
+    - derive/^([nl])ve$/$1ue/            # nve = nue, lve = lue
+    - derive/^([jqxy])u/$1v/             # ju = jv,
+    - derive/un$/uen/                    # gun = guen,
+    - derive/ui$/uei/                    # gui = guei,
+    - derive/iu$/iou/                    # jiu = jiou,
+    - derive/([aeiou])ng$/$1gn/          # dagn => dang
+    - derive/([dtngkhrzcs])o(u|ng)$/$1o/ # zho => zhong|zhou
+    - derive/ong$/on/                    # zhonguo => zhong guo
+    - derive/ao$/oa/                     # hoa => hao
+    - derive/([iu])a(o|ng?)$/a$1$2/      # tain => tian
 
 
 # === segmentor ===
@@ -105,7 +112,7 @@ abc_segmentor:
 # === 每个方案都有一个主 translator ===
 translator:
   dictionary: py_rime_jk                 # 设定 table_translator 使用的词典名
-                                           # ... 这里我们使用自定义词典 pinyin_simp
+  #                                        # ... 这里我们使用自定义词典 pinyin_simp
   prism: py_rime_jk                      # prism 要以本输入方案的名称来命名
   enable_word_completion: true           # 大于 4 音节的词条自动补全，librime > 1.11.2
   initial_quality: 1.2                   # 拼音的权重应该比英文大

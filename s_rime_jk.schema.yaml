@@ -7,7 +7,7 @@ schema:
   author: 
     - 发明人 Jack Liu <loveminimal@163.com>
   description: |
-    - 一款快速输入数字和预设字符的键盘式输入法方案
+    - 知心字符，一款快速输入数字和预设字符的键盘式输入法方案
     - https://github.com/loveminimal/rime-jk
   version: "0.0.1"
   icon: "assets/star.ico"

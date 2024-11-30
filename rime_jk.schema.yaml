@@ -3,17 +3,15 @@
 
 # === 描述档 ===
 schema:
-  schema_id: rime_jk                   # 方案内部名，在代码中引用此方案时以此名为准，此 ID 与 rime_jk.schema.yaml 之间部分相同
-  name: 知心五笔                       # 方案显示名称，在方案选单中显示
+  schema_id: rime_jk                     # 方案内部名，在代码中引用此方案时以此名为准，此 ID 与 rime_jk.schema.yaml 之间部分相同
+  name: 知心五笔                         # 方案显示名称，在方案选单中显示
   author: 
     - 发明人 王永民先生
     - 修改者 Jack Liu <loveminimal@163.com>
   description: |
-    - 知心五笔，一个知心的五笔拼音小女仆
+    - 知心五笔，五笔·拼音混输，小啊小女仆
     - https://github.com/loveminimal/rime-jk
-    - 码表源自 wubi86
   dependencies:
-    - emoji
     - wubi86
     - pinyin_simp
   version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号

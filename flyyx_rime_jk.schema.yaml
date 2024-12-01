@@ -33,7 +33,7 @@ switches:
     reset: 1
     states: [ 💀, 😄 ]
   - name: chaifen
-    reset: 0 
+    reset: 1 
     states: [ 拆隐, 拆显 ]
 
 
@@ -256,6 +256,17 @@ emoji:
   option_name: emoji
   opencc_config: emoji.json
   inherit_comment: false                 # 在 corrector.lua 及反查中，emoji 返回空注释
+
+
+# 显示墨奇码拆分
+chaifen:
+  option_name: chaifen
+  opencc_config: moqi_cf.json
+  tips: char
+  show_in_comment: true
+  comment_format:
+    - "xform/	/ /"
+
 
 # === 标点符号控制 ===
 punctuator:

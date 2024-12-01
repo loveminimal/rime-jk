@@ -64,14 +64,15 @@ engine:
     - punct_translator                   # 配合 punct_segmentor 进行符号转换
     - table_translator                   # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
     #                                      # ... 此项可以加载多个实例，后接 @+翻译器名 (如 cangjie、wubi 等)
+    - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
     # - script_translator                # 脚本翻译器，用于拼音、粤拼等基于音节表的输入方案，
     #                                      # ... 此项可以加载多个实例，后接 @+翻译器名 (如 pinyin、yjutping 等)
     - reverse_lookup_translator          # 反查翻译器，用另一种编码方案查码
     # - lua_translator                   # 使用 lua 自定义输入，例如动态输入当前日期、时间，后接 @+lua 函数名
     #                                      # ... lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input, seg, env)
     #                                      # ... 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
-    - lua_translator@date_translator     # 时间、日期、星期
-    - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
+    - lua_translator@*date_translator    # 时间、日期、星期
+    - lua_translator@*force_gc           # 暴力 GC 降低内存
   
   # --- 过滤翻译的结果，自定义滤镜皆可使用开关调控 ---
   filters:

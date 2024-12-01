@@ -14,7 +14,7 @@ local M = {}
 function M.init(env)
     local config = env.engine.schema.config
     env.name_space = env.name_space:gsub('^*', '')
-    M.jk_datetime = config:get_string(env.name_space .. '/jk_datetime') or 'ii'
+    M.jk_datetime = config:get_string(env.name_space .. '/jk_datetime') or 'iii'
 end
 
 function M.func(input, seg, env)
@@ -28,9 +28,7 @@ function M.func(input, seg, env)
         local week_tab = {'日', '一', '二', '三', '四', '五', '六'}
         local text = week_tab[tonumber(os.date('%w', current_time) + 1)]
         yield_cand(seg, '星期' .. text)
-
     end
-
 end
 
 return M

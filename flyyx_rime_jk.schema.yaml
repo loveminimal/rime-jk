@@ -70,9 +70,7 @@ engine:
   # --- 过滤翻译的结果，自定义滤镜皆可使用开关调控 ---
   filters:
     # lua的filter：
-    - lua_filter@*pro_comment_format                #超级注释模块，支持错词错音提示、任意长度辅助码显示，支持个性化配置和关闭相应的功能，详情搜索pro_comment_format进行详细配置
-    # - lua_filter@*stick       #简码回显
-    # - lua_filter@*is_in_user_dict # 用户词典的词加上一个*
+    - lua_filter@*is_in_user_dict # 用户词典的词加上一个*
     # 反查的filter
     - simplifier                         # 用字转换，？默认繁转简
     - simplifier@emoji                   # Emoji

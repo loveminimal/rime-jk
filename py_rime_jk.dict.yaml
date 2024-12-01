@@ -2,6 +2,8 @@
 # encoding: utf-8
 # 这是一份 rime_ice.dict.yaml 的拷贝 - ( 2024-11-19 21:52 )
 # https://github.com/iDvel/rime-ice/blob/main/rime_ice.dict.yaml
+# 拼音（全拼、双拼）使用雾凇拼音词库 (cn_dicts)  https://github.com/iDvel/rime-ice
+# 当前词库版本 - ed19135 （2024-12-01 14:37）
 
 
 ---

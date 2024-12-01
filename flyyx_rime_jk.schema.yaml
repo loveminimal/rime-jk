@@ -15,7 +15,8 @@ schema:
     - 辅助码方案源自 > 墨奇辅助码 鹤拼版
     - https://github.com/gaboolic/rime-shuangpin-fuzhuma
   dependencies:
-    - stroke
+    # - stroke
+    - pinyin_simp
   version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
   icon: "assets/fly_m.ico"
   ascii_icon: 'assets/ascii.ico'
@@ -220,16 +221,27 @@ translator:
 date_translator:
   jk_datetime: iii
 
+# reverse_lookup:
+#   dictionary: stroke
+#   enable_completion: true
+#   prefix: "`"
+#   suffix: "'"
+#   tips: 〔笔画〕
+#   preedit_format:
+#     - xlit/hspnz/一丨丿丶乙/
+#   comment_format:
+#     - xform/([nl])v/$1ü/
+
 reverse_lookup:
-  dictionary: stroke
-  enable_completion: true
+  dictionary: pinyin_simp
   prefix: "`"
   suffix: "'"
-  tips: 〔笔画〕
+  tips: 〔拼音〕
   preedit_format:
-    - xlit/hspnz/一丨丿丶乙/
-  comment_format:
     - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
 
 # === 自定义短语：custom_phrase.txt ===
 custom_phrase:

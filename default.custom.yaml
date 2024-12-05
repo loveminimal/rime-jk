@@ -18,9 +18,8 @@ patch:
     - {schema: rime_jk}
     # - {schema: tiger_rime_jk}
     # - {schema: s_rime_jk}
-    # - {schema: flypy_rime_jk}
-    - {schema: flyyx_rime_jk}
-    # - {schema: py_rime_jk}
+    - {schema: flypy_rime_jk}
+    - {schema: py_rime_jk}
 
 # 
 

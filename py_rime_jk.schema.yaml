@@ -1,6 +1,16 @@
 # Rime schema settings
 # encoding: utf-8
 
+# === 初始化 ===
+set_shuru_schema:                        # 配置输入方案
+  __include: wanxiang.yaml:/algebra_py   # 可选解码规则有： algebra_py, algebra_zrm, algebra_flypy
+set_algebra_fuzhu:                       # 配置此项就是选择什么辅助码
+  __include: wanxiang.yaml:/fuzhu_moqi   # 可选辅助码有：fuzhu_kong，fuzhu_moqi, fuzhu_zrm, fuzhu_flypy, fuzhu_tiger, fuzhu_wubi, fuzhu_hanxin
+pro_comment_format:
+  __include: wanxiang.yaml:/pro_comment_format 
+  fuzhu_type: moqi
+
+
 # === 描述档 ===
 schema:
   schema_id: py_rime_jk                  # 方案内部名，在代码中引用此方案时以此名为准
@@ -11,6 +21,9 @@ schema:
   description: |
     - 知心拼音，全拼，小啊小青柠
     - https://github.com/loveminimal/rime-jk
+    - 辅助码方案源自 > 万象拼音
+    - https://github.com/amzxyz/rime_wanxiang_pro
+    - 其它使用 https://github.com/gaboolic/rime-shuangpin-fuzhuma
   dependencies:
     - stroke
   version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
@@ -37,72 +50,76 @@ switches:
 engine:
   # --- 处理各类按键消息 ---
   processors:
-    - ascii_composer                     # 处理西文模式及中西文切换
-    - recognizer                         # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
-    - key_binder                         # 在特定条件下将按键绑定到其他按键，放在其他 processor 之前判定……
-    - speller                            # 拼写处理器，把字母追加到编码串
-    - punctuator                         # 句读处理器（处理符号按键），将单个字符按键直接映射为标点符号或文字
-    - selector                           # 选字处理器，选字、换页
-    - navigator                          # 移动插入点，即处理栏内的光标移动
-    - express_editor                     # 编辑器，处理空格、回车上屏、回退键。空格确认当前输入、其他字符直接上屏
-    # - fluid_editor                       # 句式编辑器，用于以空格断词、回车上屏的注音、语句流等输入方案；替换 express_editor
-    # - lua_processor                      # 使用 lua 自定义按键，后接 @+lua函数名 - 即用户文件夹内 rime.lua 中函数名，参数为 (key, env)
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
 
   # --- 识别不同内容类型，将输入码分段并加上 tag ---
   segmentors:                            #
-    - ascii_segmentor                    # 标识西方段落字母直接上屏
-    - matcher                            # 配合 recognizer 标签符合特定规则的段落，如网址、反查等，加上选定 tag
-    - abc_segmentor                      # 标识常规的文字段落，加上 abc 这个 tag
-    - punct_segmentor                    # 标识句读段落，键入标点符号用，加上 punct 这个 tag 
-    - fallback_segmentor                 # 标识其他未标识的段落
-    # - affix_segmentor                    # 用户自定义 tag - 此项可加载多个实例，后接 @+tag名
-    # - lua_segmentor                      # 使用 lua 自定义切分，后接 @+lua 函数名
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
     
   # --- 翻译特定类型的编码段为一组候选文字 ---
   translators:
-    # - echo_translator                  # 没有其他候选字时，回显输入码，创建一个与编码串相同的修行项
-    - punct_translator                   # 配合 punct_segmentor 进行符号转换
-    # - table_translator                   # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
-    #                                      # ... 此项可以加载多个实例，后接 @+翻译器名 (如 cangjie、wubi 等)
-    - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
-    - script_translator                  # 脚本翻译器，用于拼音、粤拼等基于音节表的输入方案，
-    #                                      # ... 此项可以加载多个实例，后接 @+翻译器名 (如 pinyin、yjutping 等)
-    - reverse_lookup_translator          # 反查翻译器，用另一种编码方案查码
-    # - lua_translator                   # 使用 lua 自定义输入，例如动态输入当前日期、时间，后接 @+lua 函数名
-    #                                      # ... lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input, seg, env)
-    #                                      # ... 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
+    - punct_translator
+    - table_translator@custom_phrase     # 1、2码置顶
+    - script_translator
+    - reverse_lookup_translator
     - lua_translator@*date_translator    # 时间、日期、星期
     - lua_translator@*force_gc           # 暴力 GC 降低内存
-
   
   # --- 过滤翻译的结果，自定义滤镜皆可使用开关调控 ---
   filters:
+    # lua的filter：
+    - lua_filter@*pro_comment_format     # 超级注释模块
+    - lua_filter@*is_in_user_dict        # 用户词典的词加上一个*
+    # 反查的filter
     - simplifier                         # 用字转换，？默认繁转简
     - simplifier@emoji                   # Emoji
-    - uniquifier                         # 过滤重复的候选字，有可能来自 simplifier
-    # - simplifier@chaifen                 # 虎码的拆分滤镜
-    # - lua_filter                         # 使用 lua 自定义过滤，如过滤字符集、调整排序，后接 @+lua 函数名
-    #                                      # ... lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input,  env)
-    #                                      # ... 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
+    - uniquifier
+    - simplifier@chaifen
 
 
 # === speller ===
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba   # 定义本方案输入键
-  delimiter: " ;'"                       # 上屏时的音节间分音符
-  algebra:                               # 拼写运算规则，由之算出的拼写汇入 prism 中
-    - abbrev/^([a-z]).+$/$1/             # 简拼（首字母）
-    - abbrev/^([zcs]h).+$/$1/            # 简拼（zh, ch, sh）
-    - derive/^([nl])ve$/$1ue/            # nve = nue, lve = lue
-    - derive/^([jqxy])u/$1v/             # ju = jv,
-    - derive/un$/uen/                    # gun = guen,
-    - derive/ui$/uei/                    # gui = guei,
-    - derive/iu$/iou/                    # jiu = jiou,
-    - derive/([aeiou])ng$/$1gn/          # dagn => dang
-    - derive/([dtngkhrzcs])o(u|ng)$/$1o/ # zho => zhong|zhou
-    - derive/ong$/on/                    # zhonguo => zhong guo
-    - derive/ao$/oa/                     # hoa => hao
-    - derive/([iu])a(o|ng?)$/a$1$2/      # tain => tian
+  max_code_length: 5
+  # table_translator翻译器，支持自动上屏。例如 “zmhu”可以自动上屏“怎么回事”
+  auto_select: false
+  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
+  # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA[/|
+  # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  # 第一位<空格>是拼音之间的分隔符；第二位<'>表示可以手动输入单引号来分割拼音。
+  delimiter: " '"
+  # speller 未允许 aj 表示 an
+  algebra:
+    __patch:
+      - set_shuru_schema     #拼音转双拼码
+      - set_algebra_fuzhu    #辅助码部分
+
+    # --- 飞键 可选择性开启 ---
+    # - derive/^([y])j/$1f/
+    # - derive/^qx/qw/
+    # - derive/^xq/xo/
+    # - derive/^qq/qo/
+    # - derive/^ww/wi/
+    # # - derive/^y([a-df-qs-z])/e$1/ # y -> e互击
+    # - derive/^j([a-twyz])/f$1/ # j -> f互击
+    # # - derive/^jn/jv/
+    # # - derive/^mn/mv/
+    # # - derive/^jm/jz/
+    # - derive/^([y])h/$1g/
+    # # - derive/^([rgv])f/$1m/
+    # - derive/^([rsgv])c/$1n/
 
 
 # === segmentor ===
@@ -113,26 +130,22 @@ abc_segmentor:
 
 # === 每个方案都有一个主 translator ===
 translator:
-  dictionary: py_rime_jk                 # 设定 table_translator 使用的词典名
-  #                                        # ... 这里我们使用自定义词典 pinyin_simp
-  prism: py_rime_jk                      # prism 要以本输入方案的名称来命名
-  enable_word_completion: true           # 大于 4 音节的词条自动补全，librime > 1.11.2
-  initial_quality: 1.2                   # 拼音的权重应该比英文大
-  # enable_charset_filter: true            # 是否开启字符集过滤
-  # encode_commit_history: true            # 是否对已上屏词自动成词
-  # max_phrase_length: 4                   # 最大自动成词词长
-  # disable_user_dict_for_patterns:        # 禁止某些编码录入用户词典
-  #   - "^z.*$"
-  enable_sentence: true                  # 是否开启自动造句
+  dictionary: wanxiang
+  prism: py_rime_jk                     # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+  # initial_quality: 10000
+  # 是否自动补全（预测），酌情开启。
+  # ... 开启之后，打 ilqmmkyt 的时候，二选会是"床前明月光",
+  # ... 但是影响3码简码，例如 idz 首选会变成"拆字"而非"扯犊子"
+  enable_completion: false
+  # 默认为不超过 2 个字的候选项显示输入码；
+  # ... 将 2 改为 0 可关闭编码提示，
+  # ... 改为 1 则是只显示单字的输入码，依此类推
+  spelling_hints: 1
+  # enable_sentence: true                  # 是否开启自动造句
   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
   enable_encoder: true                   # 是否开启自动造词
-  preedit_format:                        # preedit_format 影响到输入框的显示和“Shift+回车”上屏的字符
-    - xform/([jqxy])v/$1u/               # 显示为 ju qu xu yu
-    # - xform/([nl])v/$1ü/                 # 显示为 nü lü
-    # - xform/([nl])ue/$1üe/               # 显示为 nüe lüe
-    - xform/([nl])v/$1v/                 # 显示为 nv lv
-    - xform/([nl])ue/$1ve/               # 显示为 nve lve
-
+  comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置
+  
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===
 date_translator:
@@ -165,6 +178,16 @@ emoji:
   option_name: emoji
   opencc_config: emoji.json
   inherit_comment: false                 # 在 corrector.lua 及反查中，emoji 返回空注释
+
+# 显示墨奇码拆分
+chaifen:
+  option_name: chaifen
+  opencc_config: moqi_cf.json
+  tips: char
+  show_in_comment: true
+  comment_format:
+    - "xform/	/ /"
+
 
 # === 标点符号控制 ===
 punctuator:

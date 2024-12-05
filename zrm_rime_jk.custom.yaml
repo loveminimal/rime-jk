@@ -11,29 +11,29 @@ patch:
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
-    text_color: 0x1e293b                        # 文字
+    text_color: 0x334155                        # 文字
     shadow_color: 0x000000b4                    # 阴影
-    label_color: 0x1e293b99                     # 标签
-    comment_text_color: 0x1e293b99              # 注释
+    label_color: 0x33415599                     # 标签
+    comment_text_color: 0x33415599              # 注释
     border_color: 0xe2e8f0                      # 边框
     back_color: 0xe2e8f0                        # 背景
     # --- 候选项配色 ---
     # candidate_back_color: 0xECEFF4              # 背景
     # candidate_border_color:                     # 边框
     # candidate_shadow_color:                     # 阴影
-    candidate_text_color: 0x1e293b              # 文字
+    candidate_text_color: 0x334155              # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
-    hilited_back_color: 0x1e293b99              # 背景
+    hilited_back_color: 0x33415599              # 背景
     # --- 选中的候选区域配色 ---
     # hilited_mark_color: 0xBF616A                # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
     # hilited_candidate_text_color: 0x2E3440      # 文字
     # hilited_candidate_border_color: 0x8FBCBB    # 边框
-    hilited_candidate_back_color: 0x1e293bCC    # 背景
-    nextpage_color: 0x1e293b99                  # 下一页
-    prevpage_color: 0x1e293bDD                  # 上一页
+    hilited_candidate_back_color: 0x334155CC    # 背景
+    nextpage_color: 0x33415599                  # 下一页
+    prevpage_color: 0x334155DD                  # 上一页
 
   style/+:
     color_scheme: zjk                            # aqua google metroblue

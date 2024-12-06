@@ -17,8 +17,8 @@ jk_style:
 # === 配色方案 ===
 # --- 绛紫 Purple ---
 pujk:
-  preset_color_schemes/pujk:                      # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／PU紫JK"                            # 方案设置中显示的配色名称
+  preset_color_schemes/pujk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／PU紫JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -29,9 +29,9 @@ pujk:
     border_color: 0xEEEEFF                      # 边框
     back_color: 0xEEEEFF                        # 背景
     # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4              # 背景
-    # candidate_border_color:                     # 边框
-    # candidate_shadow_color:                     # 阴影
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
     candidate_text_color: 0x48466d              # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
@@ -50,8 +50,8 @@ pujk:
 
 # --- 天空蓝 Sky ----
 skjk:
-  preset_color_schemes/skjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／SK蓝JK"                           # 方案设置中显示的配色名称
+  preset_color_schemes/skjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／SK蓝JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -62,27 +62,27 @@ skjk:
     border_color: 0xD6EAF8                      # 边框
     back_color: 0xD6EAF8                        # 背景
     # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4              # 背景
-    # candidate_border_color:                     # 边框
-    # candidate_shadow_color:                     # 阴影
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
     candidate_text_color: 0x1B4F72              # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
     hilited_back_color: 0x1B4F7299              # 背景
     # --- 选中的候选区域配色 ---
-    # hilited_mark_color: 0xBF616A                # 标签前的标记
+    # hilited_mark_color: 0xBF616A              # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
-    # hilited_candidate_text_color: 0x2E3440      # 文字
-    # hilited_candidate_border_color: 0x8FBCBB    # 边框
+    # hilited_candidate_text_color: 0x2E3440    # 文字
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
     hilited_candidate_back_color: 0x1B4F72CC    # 背景
     nextpage_color: 0x1B4F7299                  # 下一页
     prevpage_color: 0x1B4F72DD                  # 上一页
 
 # --- 板岩灰 Slate ---
 sljk:
-  preset_color_schemes/sljk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／SL岩JK"                           # 方案设置中显示的配色名称
+  preset_color_schemes/sljk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／SL岩JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -93,27 +93,27 @@ sljk:
     border_color: 0xe2e8f0                      # 边框
     back_color: 0xe2e8f0                        # 背景
     # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4              # 背景
-    # candidate_border_color:                     # 边框
-    # candidate_shadow_color:                     # 阴影
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
     candidate_text_color: 0x334155              # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
     hilited_back_color: 0x33415599              # 背景
     # --- 选中的候选区域配色 ---
-    # hilited_mark_color: 0xBF616A                # 标签前的标记
+    # hilited_mark_color: 0xBF616A              # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
-    # hilited_candidate_text_color: 0x2E3440      # 文字
-    # hilited_candidate_border_color: 0x8FBCBB    # 边框
+    # hilited_candidate_text_color: 0x2E3440    # 文字
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
     hilited_candidate_back_color: 0x334155CC    # 背景
     nextpage_color: 0x33415599                  # 下一页
     prevpage_color: 0x334155DD                  # 上一页
 
 # --- 橙 Orange ---
 orjk:
-  preset_color_schemes/orjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／OR橙JK"                           # 方案设置中显示的配色名称
+  preset_color_schemes/orjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／OR橙JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -124,9 +124,9 @@ orjk:
     border_color: 0xFFF8F3                      # 边框
     back_color: 0xFFF8F3                        # 背景
     # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4              # 背景
-    # candidate_border_color:                     # 边框
-    # candidate_shadow_color:                     # 阴影
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
     candidate_text_color: 0x666361              # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
@@ -143,8 +143,8 @@ orjk:
 
 # --- 翠绿色 Emerald---
 emjk:
-  preset_color_schemes/emjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／EM翠JK"                           # 方案设置中显示的配色名称
+  preset_color_schemes/emjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／EM翠JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -155,9 +155,9 @@ emjk:
     border_color: 0xD0ECE7                      # 边框
     back_color: 0xD0ECE7                        # 背景
     # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4              # 背景
-    # candidate_border_color:                     # 边框
-    # candidate_shadow_color:                     # 阴影
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
     candidate_text_color: 0x0B5345              # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字
@@ -166,8 +166,8 @@ emjk:
     # hilited_mark_color: 0xBF616A              # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
-    # hilited_candidate_text_color: 0x2E3440      # 文字
-    # hilited_candidate_border_color: 0x8FBCBB    # 边框
+    # hilited_candidate_text_color: 0x2E3440    # 文字
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
     hilited_candidate_back_color: 0x0B5345CC    # 背景
     nextpage_color: 0x0B534599                  # 下一页
     prevpage_color: 0x0B5345DD                  # 上一页
@@ -175,8 +175,8 @@ emjk:
 
 # --- Aqua 碧水〔改〕---
 aqjk:
-  preset_color_schemes/aqjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／AQ碧JK"                           # 方案设置中显示的配色名称
+  preset_color_schemes/aqjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／AQ碧JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -187,9 +187,9 @@ aqjk:
     border_color: 0xECEFF4                      # 边框
     back_color: 0xECEFF4                        # 背景
     # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4              # 背景
-    # candidate_border_color:                     # 边框
-    # candidate_shadow_color:                     # 阴影
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
     candidate_text_color: 0x000000DD            # 文字
     # --- 高亮区域配色 ---
     hilited_text_color: 0xFFFFFF                # 文字

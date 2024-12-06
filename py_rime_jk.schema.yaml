@@ -21,9 +21,7 @@ schema:
   description: |
     - 知心拼音，全拼，小啊小青柠
     - https://github.com/loveminimal/rime-jk
-    - 辅助码方案源自 > 万象拼音
-    - https://github.com/amzxyz/rime_wanxiang_pro
-    - 其它使用 https://github.com/gaboolic/rime-shuangpin-fuzhuma
+    - 辅助码方案源自万象拼音 https://github.com/amzxyz/rime_wanxiang_pro
   dependencies:
     - stroke
   version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
@@ -60,7 +58,7 @@ engine:
     - express_editor
 
   # --- 识别不同内容类型，将输入码分段并加上 tag ---
-  segmentors:                            #
+  segmentors: 
     - ascii_segmentor
     - matcher
     - abc_segmentor
@@ -103,8 +101,8 @@ speller:
   # speller 未允许 aj 表示 an
   algebra:
     __patch:
-      - set_shuru_schema     #拼音转双拼码
-      - set_algebra_fuzhu    #辅助码部分
+      - set_shuru_schema                 #拼音转双拼码
+      - set_algebra_fuzhu                #辅助码部分
 
     # --- 飞键 可选择性开启 ---
     # - derive/^([y])j/$1f/
@@ -141,7 +139,7 @@ translator:
   # ... 将 2 改为 0 可关闭编码提示，
   # ... 改为 1 则是只显示单字的输入码，依此类推
   spelling_hints: 1
-  # enable_sentence: true                  # 是否开启自动造句
+  # enable_sentence: true                # 是否开启自动造句
   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
   enable_encoder: true                   # 是否开启自动造词
   comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置

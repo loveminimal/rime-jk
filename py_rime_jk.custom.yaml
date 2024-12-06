@@ -2,45 +2,9 @@
 # encoding: utf-8
 
 patch:
-  # === 外观 ===
-  
-  # --- 外观定制 ---
-  #- 一般在 weasel.yaml 或 weasel.custom.yaml
-  preset_color_schemes/pjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／PJK"                           # 方案设置中显示的配色名称
-    author: Jack Liu                            # 配色作者名称
-    color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
-    # --- 默认配色 ---
-    text_color: 0x0B5345                        # 文字
-    shadow_color: 0x000000b4                    # 阴影
-    label_color: 0x0B534599                     # 标签
-    comment_text_color: 0x0B534599              # 注释
-    border_color: 0xD0ECE7                      # 边框
-    back_color: 0xD0ECE7                        # 背景
-    # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4              # 背景
-    # candidate_border_color:                     # 边框
-    # candidate_shadow_color:                     # 阴影
-    candidate_text_color: 0x0B5345              # 文字
-    # --- 高亮区域配色 ---
-    hilited_text_color: 0xFFFFFF                # 文字
-    hilited_back_color: 0x0B534599              # 背景
-    # --- 选中的候选区域配色 ---
-    # hilited_mark_color: 0xBF616A              # 标签前的标记
-    hilited_label_color: 0xCCCCCC               # 标签
-    hilited_comment_text_color: 0xCCCCCC        # 注释
-    # hilited_candidate_text_color: 0x2E3440      # 文字
-    # hilited_candidate_border_color: 0x8FBCBB    # 边框
-    hilited_candidate_back_color: 0x0B5345CC    # 背景
-    nextpage_color: 0x0B534599                  # 下一页
-    prevpage_color: 0x0B5345DD                  # 上一页
-
-  style/+:
-    color_scheme: pjk
-    font_face: TumanPUA, LXGW WenKai GB Screen R
-    label_font_face: TumanPUA, LXGW WenKai GB Screen R
-    comment_font_face: TumanPUA, LXGW WenKai GB Screen R
-    font_point: 13 
-    label_font_point: 11
-    comment_font_point: 11
-    horizontal: false 
+  __include: style.yaml:/emjk
+  __append:
+    __include: style.yaml:/jk_style
+  __patch:
+    style/+:
+      color_scheme: emjk

@@ -1,20 +1,7 @@
-# Rime 主题配置及其配色方案
+# Rime 主题配色方案
 # encoding: utf-8
 
-# === 主题配置 ===
-jk_style:
-  style/+:
-    color_scheme: pujk
-    font_face: TumanPUA, LXGW WenKai GB Screen R
-    label_font_face: TumanPUA, LXGW WenKai GB Screen R
-    comment_font_face: TumanPUA, LXGW WenKai GB Screen R
-    font_point: 13 
-    label_font_point: 11
-    comment_font_point: 11
-    horizontal: false 
 
-
-# === 配色方案 ===
 # --- 绛紫 Purple ---
 pujk:
   preset_color_schemes/pujk:                    # 在 `style/color_schema` 指定的配色方案值
@@ -48,7 +35,7 @@ pujk:
 
 
 
-# --- 天空蓝 Sky ----
+# --- 天蓝色 Sky ----
 skjk:
   preset_color_schemes/skjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心／SK蓝JK"                        # 方案设置中显示的配色名称

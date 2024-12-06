@@ -3,8 +3,13 @@
 
 patch:
   __include: style.yaml:/sljk
-  __append:
-    __include: style.yaml:/jk_style
   __patch:
     style/+:
       color_scheme: sljk
+      font_face: 黑体字根, LXGW WenKai GB Screen R
+      label_font_face: 黑体字根, LXGW WenKai GB Screen R
+      comment_font_face: 黑体字根, LXGW WenKai GB Screen R
+      font_point: 13 
+      label_font_point: 11
+      comment_font_point: 11
+      horizontal: false 

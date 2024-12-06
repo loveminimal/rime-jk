@@ -1,0 +1,11 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.16.3
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Fri Dec  6 10:55:38 2024"
+  rime_version: 1.11.2
+patch:
+  __append:
+    __include: "style.yaml:/pujk"
+  __include: "style.yaml:/jk_style"
+  "style/color_scheme": pujk

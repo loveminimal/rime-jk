@@ -15,10 +15,10 @@ jk_style:
 
 
 # === 配色方案 ===
-# --- 紫 Purple ---
+# --- 绛紫 Purple ---
 pujk:
   preset_color_schemes/pujk:                      # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／PUJK"                            # 方案设置中显示的配色名称
+    name: "知心／PU紫JK"                            # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -48,10 +48,10 @@ pujk:
 
 
 
-# --- 蓝 Sky ----
+# --- 天空蓝 Sky ----
 skjk:
   preset_color_schemes/skjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／SKJK"                           # 方案设置中显示的配色名称
+    name: "知心／SK蓝JK"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -82,7 +82,7 @@ skjk:
 # --- 板岩灰 Slate ---
 sljk:
   preset_color_schemes/sljk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／SLJK"                           # 方案设置中显示的配色名称
+    name: "知心／SL岩JK"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -113,7 +113,7 @@ sljk:
 # --- 橙 Orange ---
 orjk:
   preset_color_schemes/orjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／ORJK"                           # 方案设置中显示的配色名称
+    name: "知心／OR橙JK"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -144,7 +144,7 @@ orjk:
 # --- 翠绿色 Emerald---
 emjk:
   preset_color_schemes/emjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／EMJK"                           # 方案设置中显示的配色名称
+    name: "知心／EM翠JK"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---
@@ -176,7 +176,7 @@ emjk:
 # --- Aqua 碧水〔改〕---
 aqjk:
   preset_color_schemes/aqjk:                     # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／AQJK"                           # 方案设置中显示的配色名称
+    name: "知心／AQ碧JK"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # --- 默认配色 ---

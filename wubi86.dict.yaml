@@ -16,6 +16,13 @@
 #
 # Original table author
 # Wozy <wozy.in@gmail.com>
+# 
+# ======
+# --- 五笔 86 极爽词库 6.x 版本 ---
+# ... 该版本为 Rime 内置的五笔码表方案
+# ... https://github.com/rime/rime-wubi/blob/master/wubi86.dict.yaml
+# ... 体验良好
+# ======
 
 ---
 name: wubi86

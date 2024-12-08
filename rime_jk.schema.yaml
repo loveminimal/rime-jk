@@ -11,6 +11,9 @@ schema:
   description: |
     - 知心五笔，五笔·拼音混输，小啊小女仆
     - https://github.com/loveminimal/rime-jk
+    - 源自 https://github.com/rime/rime-wubi
+    - 雪齐的 Schema 说明文档
+    - ... https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
     - wubi86
     - pinyin_simp
@@ -87,13 +90,7 @@ engine:
 
 # === speller ===
 speller:
-  # alphabet: zyxwvutsrqponmlkjihgfedcba # 定义本方案输入键
   delimiter: " ;'"                       # 上屏时的音节间分音符
-  # algebra:                             # 拼写运算规则，由之算出的拼写汇入 prism 中
-  #   - erase/^xx$/
-  #   - abbrev/^([a-z]).+$/$1/
-  #   - abbrev/^([zcs]h).+$/$1/
-  #   - derive/^([nl])ve$/$1ue/
   # max_code_length: 4                   # 形码最大码长，超过则顶字上屏。四码顶字上屏
 
 
@@ -123,6 +120,7 @@ date_translator:
   jk_datetime: iii
 
 
+# === 反查 ===
 reverse_lookup:
   dictionary: pinyin_simp
   prefix: "`"
@@ -150,6 +148,7 @@ emoji:
   opencc_config: emoji.json
   inherit_comment: false                 # 在 corrector.lua 及反查中，emoji 返回空注释
 
+
 # === 五笔拆分滤镜 ===
 chaifen:
   opencc_config: wb_cf.json
@@ -162,6 +161,7 @@ chaifen:
     - wubi86
     - reverse_lookup
   tips: all                              #只给单字加滤镜，改为 char 。 词也显示，改为 all
+
 
 # === 标点符号控制 ===
 punctuator:

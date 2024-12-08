@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 schema:
-  schema_id: s_rime_jk
+  schema_id: jk_s
   name: 知心字符
   author: 
     - 发明人 Jack Liu <loveminimal@163.com>

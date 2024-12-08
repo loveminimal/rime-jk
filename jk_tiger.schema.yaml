@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 schema:
-  schema_id: tiger_jk
+  schema_id: jk_tiger
   name: 知心老虎
   author: 
     - 发明人 tiger
@@ -76,8 +76,8 @@ abc_segmentor:
 
 
 translator:
-  dictionary: tiger_jk           
-  prism: tiger_jk                
+  dictionary: jk_tiger           
+  prism: jk_tiger                
   enable_charset_filter: true    
   encode_commit_history: true    
   max_phrase_length: 4           

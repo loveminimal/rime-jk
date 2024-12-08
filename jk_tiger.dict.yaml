@@ -1,0 +1,34 @@
+# Rime JK dictionary
+# encoding: utf-8
+
+---
+name: jk_tiger
+version: 3.0.0
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  exclude_patterns:
+    - '^z.*$'
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaBaCaCb"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa"
+import_tables:
+  - dicts/tigress
+  - dicts/tigress_ci
+  # - dicts/tigress_simp_ci
+  - pinyin_simp
+
+# 编译输入方案期间是否引入 Rime 预设的【八股文】词汇——及词频资料
+use_preset_vocabulary: false
+...
+
+小满意	ykxh	9999
+满意	klxh	9999

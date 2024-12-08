@@ -13,7 +13,7 @@ pro_comment_format:
 
 # === 描述档 ===
 schema:
-  schema_id: py_rime_jk                  # 方案内部名，在代码中引用此方案时以此名为准
+  schema_id: jk_pinyin                  # 方案内部名，在代码中引用此方案时以此名为准
   name: 知心拼音                         # 方案显示名称，在方案选单中显示
   author: 
     - 发明人 朙月拼音 佛振 <chen.sst@gmail.com>
@@ -129,7 +129,7 @@ abc_segmentor:
 # === 每个方案都有一个主 translator ===
 translator:
   dictionary: wanxiang
-  prism: py_rime_jk                     # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+  prism: jk_pinyin                     # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
   # initial_quality: 10000
   # 是否自动补全（预测），酌情开启。
   # ... 开启之后，打 ilqmmkyt 的时候，二选会是"床前明月光",

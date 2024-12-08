@@ -3,7 +3,7 @@
 
 # === 初始化 ===
 set_shuru_schema:                         # 配置输入方案
-  __include: wanxiang.yaml:/algebra_zrm   # 可选解码规则有： algebra_py, algebra_zrm, algebra_flypy
+  __include: wanxiang.yaml:/algebra_flypy # 可选解码规则有： algebra_py, algebra_zrm, algebra_flypy
 set_algebra_fuzhu:                        # 配置此项就是选择什么辅助码
   __include: wanxiang.yaml:/fuzhu_moqi    # 可选辅助码有：fuzhu_kong，fuzhu_moqi, fuzhu_zrm, fuzhu_flypy, fuzhu_tiger, fuzhu_wubi, fuzhu_hanxin
 pro_comment_format:
@@ -13,19 +13,19 @@ pro_comment_format:
 
 # === 描述档 ===
 schema:
-  schema_id: zrm_rime_jk
-  name: 知心自然
+  schema_id: jk_flypy
+  name: 知心小鹤
   author:
     - 发明人 gaboolic
     - 撰写者 Jack Liu <loveminimal@163.com>
   description: |
-    - 知心自然，双拼·辅助码，小啊小自然
+    - 知心小鹤，双拼·辅助码，小啊小小鹤
     - https://github.com/loveminimal/rime-jk
     - 辅助码方案源自万象拼音 https://github.com/amzxyz/rime_wanxiang_pro
   dependencies:
     - pinyin_simp
   version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
-  icon: "assets/bi_e.ico"
+  icon: "assets/fly_b.ico"
   ascii_icon: 'assets/ascii.ico'
 
 
@@ -40,7 +40,7 @@ switches:
     reset: 1
     states: [ 💀, 😄 ]
   - name: chaifen
-    reset: 0
+    reset: 1
     states: [ 拆隐, 拆显 ]
 
 
@@ -101,8 +101,8 @@ speller:
   # speller 未允许 aj 表示 an
   algebra:
     __patch:
-      - set_shuru_schema                 #拼音转双拼码
-      - set_algebra_fuzhu                #辅助码部分
+      - set_shuru_schema                 # 拼音转双拼码
+      - set_algebra_fuzhu                # 辅助码部分
 
     # --- 飞键 可选择性开启 ---
     # - derive/^([y])j/$1f/
@@ -126,7 +126,7 @@ abc_segmentor:
 
 translator:
   dictionary: wanxiang
-  prism: zrm_rime_jk                     # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+  prism: jk_flypy                   # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
   # initial_quality: 10000
   # 是否自动补全（预测），酌情开启。
   # ... 开启之后，打 ilqmmkyt 的时候，二选会是"床前明月光",
@@ -216,7 +216,7 @@ emoji:
 # 显示墨奇码拆分
 chaifen:
   option_name: chaifen
-  opencc_config: zrm_cf.json
+  opencc_config: moqi_cf.json
   tips: char
   show_in_comment: true
   comment_format:

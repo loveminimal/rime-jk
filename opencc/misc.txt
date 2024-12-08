@@ -5,4 +5,4 @@
 ----------https://github.com/iDvel/rime-ice/blob/main/opencc/others.txt 	----------
 
 ----------自定义选项	----------
-五笔	五笔 wubi rime_jk
+五笔	五笔 wubi jk_wubi

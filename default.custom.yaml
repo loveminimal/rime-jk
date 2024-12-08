@@ -15,12 +15,12 @@ customization:
 
 patch:
   schema_list:
-    - {schema: rime_jk}
-    - {schema: tiger_jk}
-    # - {schema: s_rime_jk}
-    # - {schema: flypy_rime_jk}
-    # - {schema: zrm_rime_jk}
-    # - {schema: py_rime_jk}
+    - {schema: jk_wubi}
+    # - {schema: jk_tiger}
+    # - {schema: jk_s}
+    # - {schema: jk_flypy}
+    - {schema: jk_zrm}
+    - {schema: jk_pinyin}
 
 # 
 

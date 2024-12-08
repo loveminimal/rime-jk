@@ -3,9 +3,9 @@
 
 # === 初始化 ===
 set_shuru_schema:                        # 配置输入方案
-  __include: jk.yaml:/algebra_py   # 可选解码规则有： algebra_py, algebra_zrm, algebra_flypy
+  __include: jk.yaml:/algebra_py         # 可选解码规则有： algebra_py, algebra_zrm, algebra_flypy
 set_algebra_fuzhu:                       # 配置此项就是选择什么辅助码
-  __include: jk.yaml:/fuzhu_moqi   # 可选辅助码有：fuzhu_kong，fuzhu_moqi, fuzhu_zrm, fuzhu_flypy, fuzhu_tiger, fuzhu_wubi, fuzhu_hanxin
+  __include: jk.yaml:/fuzhu_moqi         # 可选辅助码有：fuzhu_kong，fuzhu_moqi, fuzhu_zrm, fuzhu_flypy, fuzhu_tiger, fuzhu_wubi, fuzhu_hanxin
 pro_comment_format:
   __include: jk.yaml:/pro_comment_format 
   fuzhu_type: moqi
@@ -13,7 +13,7 @@ pro_comment_format:
 
 # === 描述档 ===
 schema:
-  schema_id: jk_pinyin                  # 方案内部名，在代码中引用此方案时以此名为准
+  schema_id: jk_pinyin                   # 方案内部名，在代码中引用此方案时以此名为准
   name: 知心拼音                         # 方案显示名称，在方案选单中显示
   author: 
     - 发明人 朙月拼音 佛振 <chen.sst@gmail.com>
@@ -129,7 +129,7 @@ abc_segmentor:
 # === 每个方案都有一个主 translator ===
 translator:
   dictionary: py
-  prism: jk_pinyin                     # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+  prism: jk_pinyin                       # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
   # initial_quality: 10000
   # 是否自动补全（预测），酌情开启。
   # ... 开启之后，打 ilqmmkyt 的时候，二选会是"床前明月光",
@@ -139,7 +139,7 @@ translator:
   # ... 将 2 改为 0 可关闭编码提示，
   # ... 改为 1 则是只显示单字的输入码，依此类推
   spelling_hints: 1
-  # enable_sentence: true                # 是否开启自动造句
+  enable_sentence: false                 # 是否开启自动造句
   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
   enable_encoder: true                   # 是否开启自动造词
   comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置

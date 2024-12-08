@@ -83,7 +83,7 @@ translator:
   max_phrase_length: 4           
   disable_user_dict_for_patterns:
     - "^z.*$"
-  enable_sentence: true          
+  enable_sentence: false          
   enable_user_dict: true         
   enable_encoder: true           
 

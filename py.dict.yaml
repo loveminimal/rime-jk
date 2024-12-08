@@ -11,7 +11,7 @@
 
 
 ---
-name: wanxiang
+name: py
 version: "2024.05.11"
 sort: by_weight                # 字典初始排序，可选 original 或 by_weight
 import_tables:      

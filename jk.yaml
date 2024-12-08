@@ -3,6 +3,10 @@
 # 万象字库方案集成了多个辅助码方案
 # https://github.com/amzxyz/rime_wanxiang_pro
 
+# === 版本 ===
+version:
+  version: 6.0.0
+
 # === 超级注释模块 ===
 pro_comment_format:                   # 超级注释，子项配置 true 开启，false 关闭
   fuzhu_code: true                    # 启用辅助码提醒，用于辅助输入练习辅助码，成熟后可关闭

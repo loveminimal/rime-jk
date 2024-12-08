@@ -203,8 +203,3 @@ recognizer:
   patterns:
     import_preset: default
     reverse_lookup: "`[a-z]*'?$"
-
-
-# === 启用语言模型 ===
-octagram:
-  __include: wanxiang.yaml:/octagram 

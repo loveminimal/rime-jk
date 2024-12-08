@@ -239,6 +239,8 @@ fuzhu_hanxin:
     - derive|^(\w+?);.*,(\w)(\w).*$|$1$2$3/|                          # 整句模式下，输入syff/ 出单字 增强单字性能
     - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3/|                          # 整句模式下，输入syff/ 出单字 增强单字性能
 
+
+# === 模糊音 ===
 # mohuyin:
 #   __append:
 #     # 模糊音 可选择性开启
@@ -248,15 +250,3 @@ fuzhu_hanxin:
 #     - derive/^v([a-z])/z$1/
 #     - derive/^i([a-z])/c$1/
 #     - derive/^u([a-z])/s$1/
-
-# __include: octagram   #启用语言模型
-# === 语言模型 ===
-octagram:
-  __patch:
-    grammar:
-      language: amz-v2n3m1-zh-hans  
-      collocation_max_length: 5
-      collocation_min_length: 2
-    translator/contextual_suggestions: true
-    translator/max_homophones: 7
-    translator/max_homographs: 7

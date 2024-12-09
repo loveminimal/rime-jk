@@ -117,9 +117,8 @@ emoji:
   inherit_comment: false
 
 
-# 小鹤形码的拆分是闭源的，暂时用自然码的拆分表，聊胜于无
 chaifen:
-  opencc_config: zrm_cf.json
+  opencc_config: flyyx_cf.json
   option_name: chaifen
   show_in_comment: true 
   comment_format:     

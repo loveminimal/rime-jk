@@ -21,6 +21,7 @@ encoder:
     - length_in_range: [4, 10]
       formula: "AaBaCaZa"
 import_tables:
+  # - dicts/flyyx_ci
   - dicts/flyyx
   - pinyin_simp
 

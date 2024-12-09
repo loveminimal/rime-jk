@@ -18,9 +18,9 @@ patch:
     - {schema: jk_wubi}
     # - {schema: jk_tiger}
     # - {schema: jk_s}
-    # - {schema: jk_flypy}
+    - {schema: jk_flypy}
     - {schema: jk_zrm}
-    - {schema: jk_pinyin}
+    # - {schema: jk_pinyin}
 
 # 
 

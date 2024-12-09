@@ -1,0 +1,146 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: jk_flyyx
+  name: 知心大鹤
+  author: 
+    - 发明人 tiger
+    - 撰写者 Jack Liu <loveminimal@163.com>
+  description: |
+    - 知心大鹤，小鹤音形，小啊小大鹤
+    - https://github.com/loveminimal/rime-jk
+  dependencies:
+    - pinyin_simp
+  version: 6.0.0
+  icon: "assets/fly_m.ico"
+  ascii_icon: 'assets/ascii.ico'
+
+
+switches:
+  - name: ascii_mode
+    reset: 0 
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [半角, 全角]
+  - name: emoji
+    reset: 1
+    states: [ 💀, 😄 ]
+  - name: chaifen
+    reset: 0 
+    states: [ 拆隐, 拆显 ]
+
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer    
+    - key_binder    
+    - speller       
+    - punctuator    
+    - selector      
+    - navigator     
+    - express_editor
+
+  segmentors:
+    - ascii_segmentor   
+    - matcher           
+    - abc_segmentor     
+    - punct_segmentor   
+    - fallback_segmentor
+
+  translators:
+    - punct_translator               
+    - table_translator               
+    - table_translator@custom_phrase 
+    - reverse_lookup_translator      
+    - lua_translator@*date_translator
+    - lua_translator@*force_gc       
+  
+  filters:
+    - simplifier        
+    - simplifier@emoji  
+    - uniquifier        
+    - simplifier@chaifen
+
+
+speller:
+  delimiter: " ;'"    
+  # max_code_length: 4
+
+
+abc_segmentor:
+  extra_tags:
+    - reverse_lookup
+
+
+translator:
+  dictionary: jk_flyyx           
+  prism: jk_flyyx                
+  enable_charset_filter: true    
+  encode_commit_history: true    
+  max_phrase_length: 4           
+  disable_user_dict_for_patterns:
+    - "^z.*$"
+  enable_sentence: false          
+  enable_user_dict: true         
+  enable_encoder: true           
+
+
+date_translator:
+  jk_datetime: iii
+
+
+reverse_lookup:
+  dictionary: pinyin_simp
+  prefix: "`"
+  suffix: "'"
+  tips: 〔拼音〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb      
+  enable_completion: false
+  enable_sentence: false  
+  initial_quality: 99     
+
+
+emoji:
+  option_name: emoji
+  opencc_config: emoji.json
+  inherit_comment: false
+
+
+# 小鹤形码的拆分是闭源的，暂时用自然码的拆分表，聊胜于无
+chaifen:
+  opencc_config: zrm_cf.json
+  option_name: chaifen
+  show_in_comment: true 
+  comment_format:     
+    - "xform/&nbsp;/ /"
+  tags:     
+    - abc
+    - tiger
+    - tigress
+    - reverse_lookup
+  tips: all
+
+
+punctuator:
+  import_preset: default
+
+
+key_binder:
+  import_preset: default
+
+
+recognizer:
+  patterns:
+    import_preset: default
+    reverse_lookup: "`[a-z]*'?$"

@@ -254,3 +254,16 @@ fuzhu_hanxin:
 #     - derive/^v([a-z])/z$1/
 #     - derive/^i([a-z])/c$1/
 #     - derive/^u([a-z])/s$1/
+
+
+# === 语言模型 ===
+# 语言模型 - amz-v1-5-zh-hans.gram
+octagram:
+  __patch:
+    grammar:
+      language: octagram  
+      collocation_max_length: 4
+      collocation_min_length: 2
+    translator/contextual_suggestions: true
+    translator/max_homophones: 7
+    translator/max_homographs: 7

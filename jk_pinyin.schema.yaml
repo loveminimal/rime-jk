@@ -14,7 +14,7 @@ pro_comment_format:
 # === 描述档 ===
 schema:
   schema_id: jk_pinyin                   # 方案内部名，在代码中引用此方案时以此名为准
-  name: 知心拼音                         # 方案显示名称，在方案选单中显示
+  name: 全拼·知心                        # 方案显示名称，在方案选单中显示
   author: 
     - 发明人 朙月拼音 佛振 <chen.sst@gmail.com>
     - 撰写者 Jack Liu <loveminimal@163.com>

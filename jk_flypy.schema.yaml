@@ -14,7 +14,7 @@ pro_comment_format:
 # === 描述档 ===
 schema:
   schema_id: jk_flypy
-  name: 知心小鹤
+  name: 音鹤·知心
   author:
     - 发明人 gaboolic
     - 撰写者 Jack Liu <loveminimal@163.com>

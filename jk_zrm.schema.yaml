@@ -14,7 +14,7 @@ pro_comment_format:
 # === 描述档 ===
 schema:
   schema_id: jk_zrm
-  name: 知心自然
+  name: 自然·知心
   author:
     - 发明人 gaboolic
     - 撰写者 Jack Liu <loveminimal@163.com>

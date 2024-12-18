@@ -5,10 +5,9 @@
 set_shuru_schema:                        # 配置输入方案
   __include: jk.yaml:/algebra_zrm        # 可选解码规则有： algebra_py, algebra_zrm, algebra_flypy
 set_algebra_fuzhu:                       # 配置此项就是选择什么辅助码
-  __include: jk.yaml:/fuzhu_zrm          # 可选辅助码有：fuzhu_kong，fuzhu_moqi, fuzhu_zrm, fuzhu_flypy, fuzhu_tiger, fuzhu_wubi, fuzhu_hanxin
+  __include: jk.yaml:/fuzhu_wubi          # 可选辅助码有：fuzhu_kong，fuzhu_moqi, fuzhu_zrm, fuzhu_flypy, fuzhu_tiger, fuzhu_wubi, fuzhu_hanxin
 pro_comment_format:
-  __include: jk.yaml:/pro_comment_format 
-  fuzhu_type: zrm
+  __include: jk.yaml:/pro_comment_format
 
 
 # === 描述档 ===

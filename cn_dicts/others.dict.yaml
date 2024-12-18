@@ -1,0 +1,578 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# https://github.com/iDvel/rime-ice
+# ------- 一些杂项，按需选择 -------
+---
+name: others
+version: "2024-05-21"
+sort: by_weight
+...
+空落落	kong;pw luo;ai luo;ai	16
+空落落	kong;pw lao;ai lao;ai	16
+空落落的	kong;pw luo;ai luo;ai de;r,rq	87
+空落落的	kong;pw lao;ai lao;ai de;r,rq	87
+阿房宫	e;bs pang;yn gong;pk	180
+阿房宫	a;bs pang;yn gong;pk	180
+阿房宫	e;bs fang;yn gong;pk	180
+阿房宫	a;bs fang;yn gong;pk	180
+阿房宫赋	e;bs pang;yn gong;pk fu;mg	44
+阿房宫赋	a;bs pang;yn gong;pk fu;mg	44
+阿房宫赋	e;bs fang;yn gong;pk fu;mg	44
+阿房宫赋	a;bs fang;yn gong;pk fu;mg	44
+伯伯	bo;wr bo;wr	541
+伯伯	bai;wr bai;wr	541
+远上寒山石径斜	yuan;fq shang;h,hh han;pf shan;mm shi;dg jing;tc xie;wt	38
+远上寒山石径斜	yuan;fq shang;h,hh han;pf shan;mm shi;dg jing;tc xia;wt	38
+坐骑	zuo;ww qi;cd	1019
+坐骑	zuo;ww ji;cd	1019
+铁骑	tie;qr qi;cd	383
+铁骑	tie;qr ji;cd	383
+一骑绝尘	yi;g,gg qi;cd jue;xq chen;if	684
+一骑绝尘	yi;g,gg ji;cd jue;xq chen;if	684
+一骑当千	yi;g,gg qi;cd dang;iv qian;tf	53
+一骑当千	yi;g,gg ji;cd dang;iv qian;tf	53
+一骑红尘妃子笑	yi;g,gg qi;cd hong;xa chen;if fei;vn zi;bb xiao;tt	37
+一骑红尘妃子笑	yi;g,gg ji;cd hong;xa chen;if fei;vn zi;bb xiao;tt	37
+走单骑	zou;fh dan;uj qi;cd	0
+走单骑	zou;fh dan;uj ji;cd	0
+千里走单骑	qian;tf li;jf zou;fh dan;uj qi;cd	100
+千里走单骑	qian;tf li;jf zou;fh dan;uj ji;cd	100
+仆街	pu;wh jie;tf	37
+仆街	pu;wh gai;tf	37
+扑街	pu;rh jie;tf	1315
+扑街	pu;rh gai;tf	1315
+扑街仔	pu;rh jie;tf zai;wb	20
+扑街仔	pu;rh gai;tf zai;wb	20
+仆街仔	pu;wh jie;tf zai;wb	0
+仆街仔	pu;wh gai;tf zai;wb	0
+街溜子	jie;tf liu;iq zi;bb	70
+街溜子	gai;tf liu;iq zi;bb	70
+郭明錤	guo;yb ming;je ji;qa	38
+郭明錤	guo;yb ming;je qi;qa	38
+李昌镐	li;sb chang;jj hao;qy	242
+曹世镐	cao;gm shi;an hao;qy	0
+张镐哲	zhang;xt gao;qy zhe;rr	0
+姜成镐	jiang;ug cheng;dn hao;qy	0
+姜镐童	jiang;ug hao;qy tong;uj	0
+张镐濂	zhang;xt hao;qy lian;iy	0
+李敏镐	li;sb min;tx hao;qy	28
+李陈镐	li;sb chen;ba hao;qy	2
+赵亮镐	zhao;fh liang;yp hao;qy	0
+郑俊镐	zheng;ud jun;wc hao;qy	1
+馄饨	hun;qn tun;qn	898
+馄饨	hun;qn dun;qn	898
+主角	zhu;y,yg jue;qe	24115
+主角	zhu;y,yg jiao;qe	24115
+角色	jue;qe se;qc	20102
+角色	jiao;qe se;qc	20102
+比萨	bi;xx sa;ab	197
+比萨	pi;xx sa;ab	197
+比萨饼	bi;xx sa;ab bing;qn	23
+比萨饼	pi;xx sa;ab bing;qn	23
+吃比萨	chi;kt bi;xx sa;ab	5
+吃比萨	chi;kt pi;xx sa;ab	5
+说服	shuo;yu fu;eb	5642
+说服	shui;yu fu;eb	5642
+道行	dao;ut heng;tf	270
+道行	dao;ut hang;tf	270
+模样	mu;sa yang;su	5185
+模样	mo;sa yang;su	5185
+有模有样	you;e,de mu;sa you;e,de yang;su	279
+有模有样	you;e,de mo;sa you;e,de yang;su	279
+一模一样	yi;g,gg mu;sa yi;g,gg yang;su	5083
+一模一样	yi;g,gg mo;sa yi;g,gg yang;su	5083
+装模作样	zhuang;uf mu;sa zuo;wt yang;su	485
+装模作样	zhuang;uf mo;sa zuo;wt yang;su	485
+人模狗样	ren;w,ww mu;sa gou;qt yang;su	146
+人模狗样	ren;w,ww mo;sa gou;qt yang;su	146
+模板	mu;sa ban;sr	14674
+模板	mo;sa ban;sr	14674
+阿弥陀佛	e;bs mi;xq tuo;bp fo;wx	371
+阿弥陀佛	a;bs mi;xq tuo;bp fo;wx	371
+南无阿弥陀佛	na;fm mo;fq e;bs mi;xq tuo;bp fo;wx	42
+南无阿弥陀佛	na;fm mo;fq a;bs mi;xq tuo;bp fo;wx	42
+南无阿弥陀佛	nan;fm wu;fq e;bs mi;xq tuo;bp fo;wx	42
+南无阿弥陀佛	nan;fm wu;fq a;bs mi;xq tuo;bp fo;wx	42
+给予	ji;xw yu;cb	11349
+给予	gei;xw yu;cb	11349
+槟榔	bing;sp lang;sy	633
+槟榔	bin;sp lang;sy	633
+张柏芝	zhang;xt bo;sr zhi;ap	748
+张柏芝	zhang;xt bai;sr zhi;ap	748
+藤蔓	teng;ae wan;aj	320
+藤蔓	teng;ae man;aj	320
+弄堂	long;ga tang;ip	126
+弄堂	nong;ga tang;ip	126
+心宽体胖	xin;ny kuan;pa ti;ws pan;eu	39
+心宽体胖	xin;ny kuan;pa ti;ws pang;eu	39
+埋怨	man;fj yuan;qb	1138
+埋怨	mai;fj yuan;qb	1138
+虚与委蛇	xu;ha yu;gn wei;tv yi;jp	93
+虚与委蛇	xu;ha yu;gn wei;tv she;jp	93
+木讷	mu;ss ne;ym	471
+木讷	mu;ss na;ym	471
+独乐乐	du;qt yue;qi le;qi	13
+独乐乐	du;qt le;qi le;qi	13
+众乐乐	zhong;ww yue;qi le;qi	20
+众乐乐	zhong;ww le;qi le;qi	20
+荨麻	qian;av ma;ys	71
+荨麻	xun;av ma;ys	71
+荨麻疹	xun;av ma;ys zhen;uw	198
+荨麻疹	qian;av ma;ys zhen;uw	198
+模具	mu;sa ju;hw	1935
+模具	mo;sa ju;hw	1935
+草薙	cao;aj ti;at	88
+草薙	cao;aj zhi;at	88
+草薙京	cao;aj ti;at jing;yi	144
+草薙京	cao;aj zhi;at jing;yi	144
+草薙剑	cao;aj ti;at jian;wg	17
+草薙剑	cao;aj zhi;at jian;wg	17
+贾平凹	jia;sm ping;gu wa;mm	247
+贾平凹	jia;sm ping;gu ao;mm	247
+雪佛兰	xue;fv fu;wx lan;uf	365
+雪佛兰	xue;fv fo;wx lan;uf	365
+强劲	qiang;xk jing;ca	1505
+强劲	qiang;xk jin;ca	1505
+胴体	dong;em ti;ws	80
+胴体	tong;em ti;ws	80
+力能扛鼎	li;lt neng;ce gang;ra ding;hn	26
+力能扛鼎	li;lt neng;ce kang;ra ding;hn	26
+鸭绿江	ya;lq lu;xv jiang;ia	152
+鸭绿江	ya;lq lv;xv jiang;ia	152
+大腹便便	da;dd fu;et pian;wg pian;wg	147
+大腹便便	da;dd fu;et bian;wg bian;wg	147
+卡脖子	qia;hh bo;ef zi;bb	308
+卡脖子	ka;hh bo;ef zi;bb	308
+吱声	zi;kf sheng;fn	217
+吱声	zhi;kf sheng;fn	217
+掺和	chan;rc huo;t,tk	438
+掺和	chan;rc he;t,tk	438
+掺和	can;rc huo;t,tk	438
+掺和	can;rc he;t,tk	438
+称职	chen;tq zhi;bk	90
+称职	cheng;tq zhi;bk	90
+螺蛳粉	luo;jl si;jj fen;ow	645
+螺蛳粉	luo;jl shi;jj fen;ow	645
+调换	diao;ym huan;rq	616
+调换	tiao;ym huan;rq	616
+太行山	tai;dy hang;tf shan;mm	390
+太行山	tai;dy xing;tf shan;mm	390
+歇斯底里	xie;jq si;ad di;yq li;jf	883
+歇斯底里	jie;jq si;ad di;yq li;jf	883
+暖和	nuan;je huo;t,tk	743
+暖和	nuan;je he;t,tk	743
+模棱两可	mo;sa leng;sf liang;gm ke;sk	848
+模棱两可	mo;sa ling;sf liang;gm ke;sk	848
+鄱阳湖	po;to yang;bj hu;id	1336
+鄱阳湖	pan;to yang;bj hu;id	1336
+脖颈	bo;ef geng;ca	483
+脖颈	bo;ef jing;ca	483
+脖颈儿	bo;ef geng;ca er;qt	1
+脖颈儿	bo;ef jing;ca er;qt	1
+结扎	jie;xf za;rn	126
+结扎	jie;xf zha;rn	126
+海参崴	hai;it shen;cd wai;md	304
+海参崴	hai;it shen;cd wei;md	304
+厚朴	hou;dj po;sh	52
+厚朴	hou;dj pu;sh	52
+大宛马	da;dd yuan;pq ma;cn	9
+大宛马	da;dd wan;pq ma;cn	9
+龇牙	zi;hw ya;ah	62
+龇牙	ci;hw ya;ah	62
+龇着牙	zi;hw zhe;ud ya;ah	14
+龇着牙	ci;hw zhe;ud ya;ah	14
+龇牙咧嘴	zi;hw ya;ah lie;kg zui;kh	166
+龇牙咧嘴	ci;hw ya;ah lie;kg zui;kh	166
+头皮屑	tou;ud pi;hc xie;ni	525
+头皮屑	tou;ud pi;hc xue;ni	525
+六安	lu;uy an;pv	110
+六安	liu;uy an;pv	110
+六安县	lu;uy an;pv xian;eg	3
+六安县	liu;uy an;pv xian;eg	3
+六安市	lu;uy an;pv shi;ym	23
+六安市	liu;uy an;pv shi;ym	23
+六合区	lu;uy he;wg qu;aq	3
+六合区	liu;uy he;wg qu;aq	3
+安徽六安	an;pv hui;tm lu;uy an;pv	16
+安徽六安	an;pv hui;tm liu;uy an;pv	16
+安徽六安市	an;pv hui;tm lu;uy an;pv shi;ym	3
+安徽六安市	an;pv hui;tm liu;uy an;pv shi;ym	3
+安徽省六安市	an;pv hui;tm sheng;it lu;uy an;pv shi;ym	8
+安徽省六安市	an;pv hui;tm sheng;it liu;uy an;pv shi;ym	8
+南京六合	nan;fm jing;yi lu;uy he;wg	5
+南京六合	nan;fm jing;yi liu;uy he;wg	5
+南京六合区	nan;fm jing;yi lu;uy he;wg qu;aq	1
+南京六合区	nan;fm jing;yi liu;uy he;wg qu;aq	1
+南京市六合区	nan;fm jing;yi shi;ym lu;uy he;wg qu;aq	2
+南京市六合区	nan;fm jing;yi shi;ym liu;uy he;wg qu;aq	2
+偌大	ruo;wa da;dd	680
+偌大	nuo;wa da;dd	680
+饮鸩止渴	yin;qn zhen;pq zhi;hh ke;ij	336
+饮鸩止渴	yin;qn jiu;pq zhi;hh ke;ij	336
+饮鸩解渴	yin;qn zhen;pq jie;qe ke;ij	0
+饮鸩解渴	yin;qn jiu;pq jie;qe ke;ij	0
+曾经	ceng;ul jing;x,xc	39759
+曾今	ceng;ul jin;wy	105
+按捺	an;rp na;rd	127
+按耐	an;rp nai;dm	8
+按捺不住	an;rp na;rd bu;i,gi zhu;wy	345
+按耐不住	an;rp nai;dm bu;i,gi zhu;wy	0
+别价	bie;kl jie;ww	1
+别介	bie;kl jie;wj	31
+甭价	beng;gi jie;ww	0
+甭介	beng;gi jie;wj	0
+血脉贲张	xue;tl mai;ey ben;fa zhang;xt	49
+血脉偾张	xue;tl mai;ey fen;wf zhang;xt	0
+血脉喷张	xue;tl mai;ey pen;kf zhang;xt	0
+契诃夫	qi;dh he;ys fu;fw	437
+契科夫	qi;dh ke;tu fu;fw	0
+凑合	cou;ud he;wg	1809
+凑活	cou;ud huo;it	246
+巨惠	ju;an hui;gj	0
+钜惠	ju;qa hui;gj	0
+摩羯座	mo;ys jie;ud zuo;yw	107
+魔蝎座	mo;ys xie;jj zuo;yw	0
+两个火	liang;gm ge;wh huo;oo	0
+两个土	liang;gm ge;wh tu;ff	0
+两个一	liang;gm ge;wh yi;g,gg	0
+两个二	liang;gm ge;wh er;fg	0
+两个山	liang;gm ge;wh shan;mm	0
+两个口	liang;gm ge;wh kou;kk	0
+两个田	liang;gm ge;wh tian;ll	0
+两个九	liang;gm ge;wh jiu;vt	0
+两个人	liang;gm ge;wh ren;w,ww	18484
+两个飞	liang;gm ge;wh fei;nu	0
+两个戈	liang;gm ge;wh ge;ag	0
+两个厶	liang;gm ge;wh si;cn	0
+两个厶	liang;gm ge;wh mou;cn	0
+两个又	liang;gm ge;wh you;cc	0
+两个香	liang;gm ge;wh xiang;tj	0
+两个面	liang;gm ge;wh mian;dm	0
+两个兀	liang;gm ge;wh wu;gq	0
+两个女	liang;gm ge;wh nv;vv	0
+两个𡥦	liang;gm ge;wh ni;bb	0
+两个臣	liang;gm ge;wh chen;ah	0
+两个巾	liang;gm ge;wh jin;mh	0
+两个左	liang;gm ge;wh zuo;da	0
+两个母	liang;gm ge;wh mu;xg	0
+两个来	liang;gm ge;wh lai;go	0
+两个凡	liang;gm ge;wh fan;my	0
+两个夕	liang;gm ge;wh xi;qt	0
+两个彐	liang;gm ge;wh ji;vn,zz	0
+两个𢎘	liang;gm ge;wh han;nn	0
+两个魚	liang;gm ge;wh yu;qo	0
+两个明	liang;gm ge;wh ming;je	0
+两个朿	liang;gm ge;wh ci;gm	0
+两个乂	liang;gm ge;wh yi;qt	0
+两个曰	liang;gm ge;wh yue;jh	0
+两个尸	liang;gm ge;wh shi;nn	0
+两个户	liang;gm ge;wh hu;yn	0
+两个大	liang;gm ge;wh da;dd	541
+两个八	liang;gm ge;wh ba;wt	12
+两个而	liang;gm ge;wh er;dm	0
+两个羊	liang;gm ge;wh yang;ud	0
+两个吉	liang;gm ge;wh ji;fk	0
+两个马	liang;gm ge;wh ma;cn	0
+两个卅	liang;gm ge;wh sa;gk	0
+两个巛	liang;gm ge;wh chuan;vn	0
+两个止	liang;gm ge;wh zhi;hh	0
+两个比	liang;gm ge;wh bi;xx	0
+两个言	liang;gm ge;wh yan;yy	0
+两个申	liang;gm ge;wh shen;jh	0
+两个牛	liang;gm ge;wh niu;rh	0
+两个余	liang;gm ge;wh yu;wt	0
+两个束	liang;gm ge;wh shu;gk	0
+两个罒	liang;gm ge;wh mu;lh	0
+两个㐅	liang;gm ge;wh wu;qt	0
+两个金	liang;gm ge;wh jin;qq	0
+两个木	liang;gm ge;wh mu;ss	0
+两个水	liang;gm ge;wh shui;ii	0
+两个風	liang;gm ge;wh feng;mt	0
+两个石	liang;gm ge;wh shi;dg	0
+两个日	liang;gm ge;wh ri;jj	0
+两个月	liang;gm ge;wh yue;ee	7342
+两个目	liang;gm ge;wh mu;hh	0
+两个白	liang;gm ge;wh bai;rr	0
+两个百	liang;gm ge;wh bai;dj	0
+两个耳	liang;gm ge;wh er;bg	0
+两个屮	liang;gm ge;wh che;bh,zz	0
+两个屮	liang;gm ge;wh cao;bh,zz	0
+两个廿	liang;gm ge;wh nian;ag	0
+两个卄	liang;gm ge;wh nian;ag	0
+两个虫	liang;gm ge;wh chong;jh	0
+两个虎	liang;gm ge;wh hu;ha	0
+两个龍	liang;gm ge;wh long;ue	0
+两个馬	liang;gm ge;wh ma;cg	0
+两个犬	liang;gm ge;wh quan;dg	0
+两个入	liang;gm ge;wh ru;ty	0
+两个习	liang;gm ge;wh xi;nu	0
+两个卪	liang;gm ge;wh jie;by	0
+两个㔾	liang;gm ge;wh jie;bn	0
+两个几	liang;gm ge;wh ji;mt	0
+两个乙	liang;gm ge;wh yi;nn	0
+两个夫	liang;gm ge;wh fu;fw	0
+两个禾	liang;gm ge;wh he;tt	0
+两个干	liang;gm ge;wh gan;fg	0
+两个井	liang;gm ge;wh jing;fj	0
+两个斤	liang;gm ge;wh jin;rt	0
+两个片	liang;gm ge;wh pian;th	0
+两个牙	liang;gm ge;wh ya;ah	0
+两个炎	liang;gm ge;wh yan;oo	0
+两个弓	liang;gm ge;wh gong;xn	0
+两个永	liang;gm ge;wh yong;yn	0
+两个亦	liang;gm ge;wh yi;yo	0
+两个手	liang;gm ge;wh shou;rt	0
+两个毛	liang;gm ge;wh mao;tf	0
+两个王	liang;gm ge;wh wang;gg	0
+两个男	liang;gm ge;wh nan;ll	0
+两个支	liang;gm ge;wh zhi;fc	0
+两个隻	liang;gm ge;wh zhi;wy	0
+两个古	liang;gm ge;wh gu;dg	0
+两个舌	liang;gm ge;wh she;td	0
+两个启	liang;gm ge;wh qi;yn	0
+两个來	liang;gm ge;wh lai;sw	0
+两个桼	liang;gm ge;wh qi;sw	0
+两个旡	liang;gm ge;wh ji;aq	0
+两个歹	liang;gm ge;wh dai;gq	0
+两个匕	liang;gm ge;wh bi;xt	0
+两个幺	liang;gm ge;wh yao;xn	0
+两个玄	liang;gm ge;wh xuan;yx	0
+两个心	liang;gm ge;wh xin;ny	0
+两个力	liang;gm ge;wh li;lt	0
+两个欠	liang;gm ge;wh qian;qw	0
+两个子	liang;gm ge;wh zi;bb	0
+两个予	liang;gm ge;wh yu;cb	0
+两个享	liang;gm ge;wh xiang;yb	0
+两个立	liang;gm ge;wh li;uu	0
+两个音	liang;gm ge;wh yin;uj	0
+两个竟	liang;gm ge;wh jing;uj	0
+两个竞	liang;gm ge;wh jing;uk	0
+两个兄	liang;gm ge;wh xiong;kq	0
+两个見	liang;gm ge;wh jian;hq	0
+两个貝	liang;gm ge;wh bei;mh	0
+两个辛	liang;gm ge;wh xin;uy	0
+两个瓜	liang;gm ge;wh gua;rc	0
+两个呆	liang;gm ge;wh dai;ks	0
+两个果	liang;gm ge;wh guo;js	0
+两个鸟	liang;gm ge;wh niao;qy	0
+两个巢	liang;gm ge;wh chao;vj	0
+两个禺	liang;gm ge;wh yu;jm	0
+两个巿	liang;gm ge;wh fu;gm	0
+两个句	liang;gm ge;wh ju;qk	0
+两个奇	liang;gm ge;wh qi;ds	0
+两个真	liang;gm ge;wh zhen;fh	0
+两个尹	liang;gm ge;wh yin;vt	0
+两个昔	liang;gm ge;wh xi;aj	0
+两个易	liang;gm ge;wh yi;jq	0
+两个先	liang;gm ge;wh xian;tf	0
+两个老	liang;gm ge;wh lao;ft	0
+两个示	liang;gm ge;wh shi;fi	0
+两个至	liang;gm ge;wh zhi;gc	0
+两个生	liang;gm ge;wh sheng;tg	0
+两个車	liang;gm ge;wh che;lg	0
+两个車	liang;gm ge;wh ju;lg	0
+两个足	liang;gm ge;wh zu;kh	0
+两个區	liang;gm ge;wh qu;ak	0
+两个隹	liang;gm ge;wh zhui;wy	0
+两个牟	liang;gm ge;wh mou;cr	0
+两个豕	liang;gm ge;wh shi;eg	0
+两个𠂢	liang;gm ge;wh pai;re	0
+两个畐	liang;gm ge;wh fu;gk	0
+两个㣇	liang;gm ge;wh yi;xg	0
+两个邑	liang;gm ge;wh yi;kc	0
+两个堯	liang;gm ge;wh yao;ff	0
+两个秉	liang;gm ge;wh bing;tg	0
+两个倉	liang;gm ge;wh cang;wy	0
+两个東	liang;gm ge;wh dong;gj	0
+两个善	liang;gm ge;wh shan;ud	0
+两个僉	liang;gm ge;wh qian;wg	0
+两个齒	liang;gm ge;wh chi;hb,hw	0
+两个喜	liang;gm ge;wh xi;fk	0
+两个走	liang;gm ge;wh zou;fh	0
+两个昌	liang;gm ge;wh chang;jj	0
+两个串	liang;gm ge;wh chuan;kk	0
+两个米	liang;gm ge;wh mi;oy	0
+两个隶	liang;gm ge;wh li;vi	0
+两个不	liang;gm ge;wh bu;i,gi	0
+两个龙	liang;gm ge;wh long;dx	0
+两个乞	liang;gm ge;wh qi;tn	0
+两个夋	liang;gm ge;wh qun;cw	0
+两个天	liang;gm ge;wh tian;gd	0
+三个生	san;dg ge;wh sheng;tg	0
+三个秦	san;dg ge;wh qin;dw	0
+三个若	san;dg ge;wh ruo;ad	0
+三个雲	san;dg ge;wh yun;ff	0
+三个人	san;dg ge;wh ren;w,ww	4260
+三个刀	san;dg ge;wh dao;vn	0
+三个十	san;dg ge;wh shi;fg	1
+三个力	san;dg ge;wh li;lt	0
+三个原	san;dg ge;wh yuan;dr	0
+三个厶	san;dg ge;wh si;cn	0
+三个厶	san;dg ge;wh mou;cn	0
+三个又	san;dg ge;wh you;cc	0
+三个口	san;dg ge;wh kou;kk	5
+三个七	san;dg ge;wh qi;ag	0
+三个吉	san;dg ge;wh ji;fk	0
+三个土	san;dg ge;wh tu;ff	0
+三个士	san;dg ge;wh shi;fg	0
+三个女	san;dg ge;wh nv;vv	0
+三个子	san;dg ge;wh zi;bb	0
+三个小	san;dg ge;wh xiao;ih	0
+三个心	san;dg ge;wh xin;ny	0
+三个手	san;dg ge;wh shou;rt	0
+三个日	san;dg ge;wh ri;jj	0
+三个木	san;dg ge;wh mu;ss	0
+三个止	san;dg ge;wh zhi;hh	0
+三个毛	san;dg ge;wh mao;tf	0
+三个水	san;dg ge;wh shui;ii	0
+三个泉	san;dg ge;wh quan;ri	0
+三个火	san;dg ge;wh huo;oo	0
+三个牛	san;dg ge;wh niu;rh	0
+三个犬	san;dg ge;wh quan;dg	0
+三个田	san;dg ge;wh tian;ll	0
+三个白	san;dg ge;wh bai;rr	0
+三个目	san;dg ge;wh mu;hh	0
+三个直	san;dg ge;wh zhi;fh	0
+三个石	san;dg ge;wh shi;dg	0
+三个羊	san;dg ge;wh yang;ud	0
+三个耳	san;dg ge;wh er;bg	0
+三个舌	san;dg ge;wh she;td	0
+三个屮	san;dg ge;wh che;bh,zz	0
+三个屮	san;dg ge;wh cao;bh,zz	0
+三个虫	san;dg ge;wh chong;jh	0
+三个言	san;dg ge;wh yan;yy	0
+三个贝	san;dg ge;wh bei;mh	0
+三个車	san;dg ge;wh che;lg	0
+三个金	san;dg ge;wh jin;qq	0
+三个隹	san;dg ge;wh zhui;wy	0
+三个雷	san;dg ge;wh lei;fl	0
+三个風	san;dg ge;wh feng;mt	0
+三个飛	san;dg ge;wh fei;nu	0
+三个香	san;dg ge;wh xiang;tj	0
+三个马	san;dg ge;wh ma;cn	0
+三个魚	san;dg ge;wh yu;qo	0
+三个鹿	san;dg ge;wh lu;yn	0
+三个龍	san;dg ge;wh long;ue	0
+三个个	san;dg ge;wh ge;wh	0
+三个丶	san;dg ge;wh zhu;yy,zz	0
+三个丶	san;dg ge;wh dian;yy,zz	0
+三个了	san;dg ge;wh le;b,bn	0
+三个介	san;dg ge;wh jie;wj	0
+三个企	san;dg ge;wh qi;wh	0
+三个舍	san;dg ge;wh she;wf	0
+三个圥	san;dg ge;wh lu;fq	0
+三个光	san;dg ge;wh guang;iq	0
+三个兔	san;dg ge;wh tu;qk	0
+三个全	san;dg ge;wh quan;wg	0
+三个𠙽	san;dg ge;wh kuai;	0
+三个𠧪	san;dg ge;wh tiao;hl	0
+三个𠧪	san;dg ge;wh you;hl	0
+三个㔾	san;dg ge;wh jie;bn	0
+三个厡	san;dg ge;wh yuan;dr	0
+三个可	san;dg ge;wh ke;sk	0
+三个因	san;dg ge;wh yin;ld	0
+三个夏	san;dg ge;wh xia;dh	0
+三个大	san;dg ge;wh da;dd	0
+三个天	san;dg ge;wh tian;gd	0
+三个太	san;dg ge;wh tai;dy	0
+三个𦉼	san;dg ge;wh ku;	0
+三个宝	san;dg ge;wh bao;pg	0
+三个宜	san;dg ge;wh yi;pe	0
+三个客	san;dg ge;wh ke;pt	0
+三个寒	san;dg ge;wh han;pf	0
+三个少	san;dg ge;wh shao;it	0
+三个山	san;dg ge;wh shan;mm	0
+三个市	san;dg ge;wh shi;ym	3
+三个文	san;dg ge;wh wen;yy	0
+三个斗	san;dg ge;wh dou;uf	0
+三个朿	san;dg ge;wh ci;gm	0
+三个束	san;dg ge;wh shu;gk	0
+三个林	san;dg ge;wh lin;ss	0
+三个果	san;dg ge;wh guo;js	0
+三个欠	san;dg ge;wh qian;qw	0
+三个𣥚	san;dg ge;wh zou;	0
+三个爪	san;dg ge;wh zhao;rh	0
+三个妥	san;dg ge;wh tuo;ev	0
+三个用	san;dg ge;wh yong;et	0
+三个甲	san;dg ge;wh jia;lh	0
+三个百	san;dg ge;wh bai;dj	0
+三个盖	san;dg ge;wh gai;ug	0
+三个県	san;dg ge;wh xian;hn	0
+三个空	san;dg ge;wh kong;pw	0
+三个亇	san;dg ge;wh ge;qh	0
+三个竹	san;dg ge;wh zhu;tt	0
+三个罒	san;dg ge;wh mu;lh	0
+三个羗	san;dg ge;wh qiang;ud	0
+三个老	san;dg ge;wh lao;ft	0
+三个月	san;dg ge;wh yue;ee	9003
+三个至	san;dg ge;wh zhi;gc	0
+三个興	san;dg ge;wh xing;vm,wf	0
+三个足	san;dg ge;wh zu;kh	0
+三个㖖	san;dg ge;wh nie;uk	0
+三个門	san;dg ge;wh men;uh	0
+三个面	san;dg ge;wh mian;dm	0
+三个頁	san;dg ge;wh ye;dm	0
+三个鳥	san;dg ge;wh niao;wv	0
+三个男	san;dg ge;wh nan;ll	0
+三个立	san;dg ge;wh li;uu	0
+三个九	san;dg ge;wh jiu;vt	3
+三个也	san;dg ge;wh ye;bn	0
+三个加	san;dg ge;wh jia;lk	0
+三个動	san;dg ge;wh dong;tg	0
+三个千	san;dg ge;wh qian;tf	0
+三个方	san;dg ge;wh fang;yy	0
+三个朔	san;dg ge;wh shuo;ub	0
+三个玉	san;dg ge;wh yu;gy	0
+三个申	san;dg ge;wh shen;jh	0
+三个𡿨	san;dg ge;wh quan;nn	0
+三个去	san;dg ge;wh qu;fc	0
+三个弓	san;dg ge;wh gong;xn	0
+三个䖝	san;dg ge;wh chong;tj	0
+三个丿	san;dg ge;wh pie;tt,zz	0
+三个户	san;dg ge;wh hu;yn	0
+三个瓜	san;dg ge;wh gua;rc	0
+三个鸟	san;dg ge;wh niao;qy	0
+三个米	san;dg ge;wh mi;oy	0
+四个乂	si;lh ge;wh yi;qt	0
+四个人	si;lh ge;wh ren;w,ww	2268
+四个厶	si;lh ge;wh si;cn	0
+四个厶	si;lh ge;wh mou;cn	0
+四个又	si;lh ge;wh you;cc	0
+四个匕	si;lh ge;wh bi;xt	0
+四个工	si;lh ge;wh gong;a,aa	0
+四个口	si;lh ge;wh kou;kk	0
+四个天	si;lh ge;wh tian;gd	0
+四个小	si;lh ge;wh xiao;ih	0
+四个屮	si;lh ge;wh che;bh,zz	0
+四个屮	si;lh ge;wh cao;bh,zz	0
+四个火	si;lh ge;wh huo;oo	0
+四个牛	si;lh ge;wh niu;rh	0
+四个魚	si;lh ge;wh yu;qo	0
+四个月	si;lh ge;wh yue;ee	1860
+四个日	si;lh ge;wh ri;jj	0
+四个林	si;lh ge;wh lin;ss	0
+四个水	si;lh ge;wh shui;ii	0
+四个石	si;lh ge;wh shi;dg	0
+四个田	si;lh ge;wh tian;ll	0
+四个甲	si;lh ge;wh jia;lh	0
+四个且	si;lh ge;wh qie;eg	0
+四个囚	si;lh ge;wh qiu;lw	0
+四个困	si;lh ge;wh kun;ls	0
+四个竹	si;lh ge;wh zhu;tt	0
+四个老	si;lh ge;wh lao;ft	0
+四个朿	si;lh ge;wh ci;gm	0
+四个先	si;lh ge;wh xian;tf	0
+四个金	si;lh ge;wh jin;qq	0
+四个泉	si;lh ge;wh quan;ri	0
+四个言	si;lh ge;wh yan;yy	0
+四个門	si;lh ge;wh men;uh	0
+四个果	si;lh ge;wh guo;js	0
+四个春	si;lh ge;wh chun;dw	0
+四个車	si;lh ge;wh che;lg	0
+四个風	si;lh ge;wh feng;mt	0
+四个雷	si;lh ge;wh lei;fl	0
+四个雲	si;lh ge;wh yun;ff	0
+四个興	si;lh ge;wh xing;vm,wf	0
+四个龍	si;lh ge;wh long;ue	0
+四个土	si;lh ge;wh tu;ff	0

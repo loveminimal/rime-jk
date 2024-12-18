@@ -15,8 +15,15 @@ name: py
 version: "2024.05.11"
 sort: by_weight                # 字典初始排序，可选 original 或 by_weight
 import_tables:      
-  - dicts/8105                 # 字表
-  - dicts/base                 # 基础词库
+  # - dicts/8105                 # 字表
+  # - dicts/base                 # 基础词库
   # - dicts/41448              # 4万字大字表 可以关闭
+
+  - cn_dicts/8105     # 字表
+  # - cn_dicts/41448  # 大字表（按需启用）
+  - cn_dicts/base     # 基础词库
+  # - cn_dicts/ext      # 扩展词库
+  # - cn_dicts/tencent  # 腾讯词向量（大词库，部署时间较长）
+  # - cn_dicts/others   # 一些杂项
 use_preset_vocabulary: false
 ...

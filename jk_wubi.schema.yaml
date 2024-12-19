@@ -3,8 +3,8 @@
 
 # === 描述档 ===
 schema:
-  schema_id: jk_wubi                     # 方案内部名，在代码中引用此方案时以此名为准，此 ID 与 jk_wubi.schema.yaml 之间部分相同
-  name: 五笔·知心                        # 方案显示名称，在方案选单中显示
+  schema_id: jk_wubi
+  name: 五笔·知心
   author: 
     - 发明人 王永民先生
     - 修改者 Jack Liu <loveminimal@163.com>
@@ -12,29 +12,18 @@ schema:
     - 知心五笔，五笔·拼音混输，小啊小女仆
     - https://github.com/loveminimal/rime-jk
     - 源自 https://github.com/rime/rime-wubi
-    - 雪齐的 Schema 说明文档
-    - ... https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
+    - 📄雪齐的 Schema 说明文档 https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
     - wubi86
     - pinyin_simp
-  version: 6.2.0                         # 版本号，在发布新版前请确保已升级版本号
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
+  version: 6.2.0
 
 
 # === 开关 ===
 switches:
-  - name: ascii_mode                                                  # 中英文转换开关，0-中文  1-英文
-    reset: 0 
-    states: [ 中文, 西文 ]
-  # - name: full_shape                                                # 半角/全角转换，0-半角 1-全角
-  #   states: [半角, 全角]
-  - name: emoji
-    reset: 1
-    states: [ 💀, 😄 ]
-  - name: chaifen
-    reset: 0
-    states: [ 隐拆, 显拆 ]
+  __include: jk:/switches
 
 
 # === 引擎 ===
@@ -49,8 +38,7 @@ engine:
     - selector                           # 选字处理器，选字、换页
     - navigator                          # 移动插入点，即处理栏内的光标移动
     - express_editor                     # 编辑器，处理空格、回车上屏、回退键。空格确认当前输入、其他字符直接上屏
-    # - fluid_editor                     # 句式编辑器，用于以空格断词、回车上屏的注音、语句流等输入方案；替换 express_editor
-    # - lua_processor                    # 使用 lua 自定义按键，后接 @+lua函数名 - 即用户文件夹内 rime.lua 中函数名，参数为 (key, env)
+
 
   # --- 识别不同内容类型，将输入码分段并加上 tag ---
   segmentors:                            #
@@ -69,12 +57,7 @@ engine:
     - table_translator                   # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
                                          # ... 此项可以加载多个实例，后接 @+翻译器名 (如 cangjie、wubi 等)
     - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
-    # - script_translator                # 脚本翻译器，用于拼音、粤拼等基于音节表的输入方案，
-                                         # ... 此项可以加载多个实例，后接 @+翻译器名 (如 pinyin、yjutping 等)
     - reverse_lookup_translator          # 反查翻译器，用另一种编码方案查码
-    # - lua_translator                   # 使用 lua 自定义输入，例如动态输入当前日期、时间，后接 @+lua 函数名
-                                         # ... lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input, seg, env)
-                                         # ... 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
     - lua_translator@*date_translator    # 时间、日期、星期
     - lua_translator@*force_gc           # 暴力 GC 降低内存
   
@@ -84,9 +67,6 @@ engine:
     - simplifier@emoji                   # Emoji
     - uniquifier                         # 过滤重复的候选字，有可能来自 simplifier
     - simplifier@chaifen                 # 五笔的拆分滤镜
-    # - lua_filter                       # 使用 lua 自定义过滤，如过滤字符集、调整排序，后接 @+lua 函数名
-                                         # ... lua 函数名即用户文件夹内 rime.lua 中的函数名，参数为 (input,  env)
-                                         # ... 可以 env.engine.context:get_option("option_name") 方式绑定到 switch 开关 / key_binder 快捷键
 
 
 # === speller ===
@@ -104,7 +84,6 @@ abc_segmentor:
 # === 每个方案都有一个主 translator ===
 translator:
   dictionary: jk_wubi                    # 与 wubi86 共用词典，设定 table_translator 使用的词典名
-                                         # ... 这里我们使用自定义词典 jk_wubi，其中包含有 wubi86 词典
   prism: jk_wubi                         # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
   enable_charset_filter: true            # 是否开启字符集过滤
   encode_commit_history: true            # 是否对已上屏词自动成词
@@ -136,7 +115,7 @@ reverse_lookup:
 # === 自定义短语：custom_phrase.txt ===
 custom_phrase:
   dictionary: ""
-  user_dict: custom_phrase               # 可以修改这里，改成自己的 txt 文件
+  user_dict: custom_phrase
   db_class: stabledb                     # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
   enable_completion: false               # 补全提示
   enable_sentence: false                 # 禁止造句
@@ -147,7 +126,7 @@ custom_phrase:
 emoji:
   option_name: emoji
   opencc_config: emoji.json
-  inherit_comment: false                 # 在 corrector.lua 及反查中，emoji 返回空注释
+  inherit_comment: false
 
 
 # === 五笔拆分滤镜 ===
@@ -161,18 +140,18 @@ chaifen:
     - abc
     - wubi86
     - reverse_lookup
-  tips: all                              #只给单字加滤镜，改为 char 。 词也显示，改为 all
+  # char←字 词→all
+  tips: all                              
 
 
 # === 标点符号控制 ===
 punctuator:
-  import_preset: default                 # 设定符号表，这里直接导入预设的
+  import_preset: default
 
 
 # === 键位绑定 ===
 key_binder:
   import_preset: default
-  # 迁移至 default.custom.yaml ，以方便多方案共享
 
 
 # === 下设 patterns ，配合 segmentor 的 prefix 和 suffix 完成段落划分、tag 分配 ===

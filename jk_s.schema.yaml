@@ -9,9 +9,14 @@ schema:
   description: |
     - 知心字符，一款快速输入数字和预设字符的键盘式输入法方案
     - https://github.com/loveminimal/rime-jk
-  version: "6.2.0"
   icon: "assets/pr.ico"
   ascii_icon: 'assets/ascii.ico'
+  version: 0.0.1
+
+# === 开关 ===
+switches:
+  __include: jk:/switches
+    
 
 engine:
   processors:

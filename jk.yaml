@@ -1,0 +1,18 @@
+# Rime jk model
+# encoding: utf-8
+# 通用配置
+
+# === 开关 ===
+# reset: ← 0 1 →
+switches:
+  - name: ascii_mode
+    reset: 0 
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    states: [半角, 全角]
+  - name: emoji
+    reset: 1
+    states: [ 💀, 😄 ]
+  - name: chaifen
+    reset: 0
+    states: [ 隐拆, 显拆 ]

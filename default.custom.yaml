@@ -18,7 +18,6 @@ patch:
     - {schema: jk_wubi}
     - {schema: jk_s}
 
-# 
 
   # === 候选相关 ===
   switcher/+:
@@ -64,14 +63,14 @@ patch:
   key_binder/+:
     bindings/+:
       # --- 自定义键位 ---
-      # - { when: always, accept: "Control+m", toggle: full_shape } # C-m 开关半角全角滤镜
-      - { when: always, accept: "Control+u", toggle: chaifen }    # C-u 开关拆分滤镜
-      - { when: always, accept: Control+i, toggle: ascii_mode }   # C-i 切换中英状态
-      - { when: always, accept: Control+o, select: .next }        # C-o 切换下一方案
-      - { when: has_menu, accept: semicolon, send: 2 }            # ; 2 候选
-      - { when: has_menu, accept: apostrophe, send: 3 }           # ' 3 候选
-      - { when: has_menu, accept: slash, send: 4 }                # / 4 候选
-      - { when: paging, accept: comma, send: Page_Up }            # , 向上翻页
-      - { when: has_menu, accept: period, send: Page_Down }       # . 向下翻页
-      - { when: composing, accept: Control+k, send: Up }          # C-k 向上移动选词
-      - { when: composing, accept: Control+j, send: Down }        # C-j 向下移动选词
+      # - { when: always, accept: "Control+comma", toggle: full_shape } # C-, 切换半角全角
+      - { when: always, accept: "Control+period", toggle: chaifen }   # C-. 切换拆隐折显
+      - { when: always, accept: Control+i, toggle: ascii_mode }       # C-i 切换中英状态
+      - { when: always, accept: Control+o, select: .next }            # C-o 切换下一方案
+      - { when: has_menu, accept: semicolon, send: 2 }                # ; 2 候选
+      - { when: has_menu, accept: apostrophe, send: 3 }               # ' 3 候选
+      - { when: has_menu, accept: slash, send: 4 }                    # / 4 候选
+      - { when: paging, accept: comma, send: Page_Up }                # , 向上翻页
+      - { when: has_menu, accept: period, send: Page_Down }           # . 向下翻页
+      - { when: composing, accept: Control+k, send: Up }              # C-k 向上移动选词
+      - { when: composing, accept: Control+j, send: Down }            # C-j 向下移动选词

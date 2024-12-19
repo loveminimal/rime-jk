@@ -8,8 +8,8 @@ switches:
   - name: ascii_mode
     reset: 0 
     states: [ 中文, 英文 ]
-  - name: full_shape
-    states: [半角, 全角]
+  # - name: full_shape
+  #   states: [半角, 全角]
   - name: emoji
     reset: 1
     states: [ 💀, 😄 ]

@@ -2,10 +2,10 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/aqjk
+  __include: style.yaml:/prjk
   __patch:
     style/+:
-      color_scheme: aqjk
+      color_scheme: prjk
       font_face: 黑体字根, LXGW WenKai GB Screen R
       label_font_face: 黑体字根, LXGW WenKai GB Screen R
       comment_font_face: 黑体字根, LXGW WenKai GB Screen R

@@ -16,12 +16,7 @@ customization:
 patch:
   schema_list:
     - {schema: jk_wubi}
-    # - {schema: jk_tiger}
-    # - {schema: jk_s}
-    # - {schema: jk_flypy}
-    # - {schema: jk_flyyx}
-    - {schema: jk_zrm}
-    - {schema: jk_pinyin}
+    - {schema: jk_s}
 
 # 
 
@@ -70,7 +65,7 @@ patch:
     bindings/+:
       # --- 自定义键位 ---
       # - { when: always, accept: "Control+m", toggle: full_shape } # C-m 开关半角全角滤镜
-      - { when: composing, accept: "Control+u", toggle: chaifen } # C-u 开关拆分滤镜
+      - { when: always, accept: "Control+u", toggle: chaifen }    # C-u 开关拆分滤镜
       - { when: always, accept: Control+i, toggle: ascii_mode }   # C-i 切换中英状态
       - { when: always, accept: Control+o, select: .next }        # C-o 切换下一方案
       - { when: has_menu, accept: semicolon, send: 2 }            # ; 2 候选

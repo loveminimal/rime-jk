@@ -17,24 +17,25 @@ schema:
   dependencies:
     - wubi86
     - pinyin_simp
-  version: 5.0.0                         # 版本号，在发布新版前请确保已升级版本号
+  version: 6.2.0                         # 版本号，在发布新版前请确保已升级版本号
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
 
 
 # === 开关 ===
 switches:
-  - name: ascii_mode                     # 中英文转换开关，0-中文  1-英文
-    reset: 0
+  - name: ascii_mode                                                  # 中英文转换开关，0-中文  1-英文
+    reset: 0 
     states: [ 中文, 西文 ]
-  - name: full_shape                     # 半角/全角转换，0-半角 1-全角
-    states: [半角, 全角]
+  # - name: full_shape                                                # 半角/全角转换，0-半角 1-全角
+  #   states: [半角, 全角]
   - name: emoji
     reset: 1
     states: [ 💀, 😄 ]
   - name: chaifen
-    reset: 0 
-    states: [ 拆隐, 拆显 ]
+    reset: 0
+    states: [ 隐拆, 显拆 ]
+
 
 # === 引擎 ===
 engine:

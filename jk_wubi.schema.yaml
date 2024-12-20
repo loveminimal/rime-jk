@@ -135,7 +135,8 @@ chaifen:
   option_name: chaifen
   show_in_comment: true 
   comment_format:     
-    - "xform/&nbsp;/ /"
+    - "xform/-/ /"
+    # - "xform/&nbsp;/ /"
   tags:     
     - abc
     - wubi86

@@ -20,6 +20,9 @@ schema:
   ascii_icon: 'assets/ascii.ico'
   version: 6.2.0
 
+# === 候选 ===
+# menu:
+#   page_size: 10
 
 # === 开关 ===
 switches:

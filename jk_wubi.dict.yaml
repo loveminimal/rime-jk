@@ -21,10 +21,11 @@ encoder:
     - length_in_range: [4, 10]
       formula: "AaBaCaZa"
 import_tables:
-  # - wubi86
+  - wubi86
   # - pinyin_simp
   - dicts/wubi_user                           # 引入自定义词库
   - dicts/wubi86_district                     # 扩展词库 - 行政区域
+  # --- ↓白霜词库转换的五笔大词库 ---
   - cn_dicts/8105     # 字表
   # - cn_dicts/41448  # 大字表（按需启用）
   - cn_dicts/base     # 基础词库

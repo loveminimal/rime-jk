@@ -1,0 +1,33 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 音乐相关
+
+---
+name: music
+version: "1.0"
+sort: by_weight
+use_preset_vocabulary: false
+...
+点弦	hkxy	0
+琶音	gguj	365
+中央音	kmuj	0
+纯律	xgtv	287
+协和音程	ftut	42
+不协和音程	gftt	42
+无调性	fynt	214
+平行五度	gtgy	13
+单调音乐	uyuq	0
+复调音乐	tyuq	240
+复调	tjym	871
+滑奏	imdw	9
+符头	twud	35
+符干	twfg	48
+延音线	tuxg	18
+连音线	luxg	19
+延音	thuj	203
+还原记号	gdyk	7
+歌芮拉	saru	18
+拿火	wgoo	150
+瑞声	gmfn	37
+打品	rskk	121

@@ -1,0 +1,17 @@
+# Rime dictionary
+# encoding: utf-8
+# 计算机 互联网相关
+#
+---
+name: computer
+version: "2024-07-19"
+sort: by_weight
+...
+入参	tycd	50
+出参	bmcd	10
+强依赖	xwgk	38
+弱依赖	xwgk	4
+发版	ntth	111
+竞业	ukog	194
+父级目录	wxhv	0
+会邀	wfry	0

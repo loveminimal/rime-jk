@@ -74,7 +74,7 @@ engine:
 
 # === speller ===
 speller:
-  delimiter: " ;'"                       # 上屏时的音节间分音符
+  delimiter: " z"                       # 上屏时的音节间分音符
   # max_code_length: 4                   # 形码最大码长，超过则顶字上屏。四码顶字上屏
 
 

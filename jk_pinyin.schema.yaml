@@ -2,10 +2,10 @@
 # encoding: utf-8
 
 # === 初始化 ===
-set_shuru_schema:                        # 配置输入方案
-  __include: jk.yaml:/algebra_py         # 可选解码规则有： algebra_py, algebra_zrm, algebra_flypy
-set_algebra_fuzhu:                       # 配置此项就是选择什么辅助码
-  __include: jk.yaml:/fuzhu_flypy        # 可选辅助码有：fuzhu_kong，fuzhu_moqi, fuzhu_zrm, fuzhu_flypy, fuzhu_tiger, fuzhu_wubi, fuzhu_hanxin
+set_shuru_schema: 
+  __include: jk.yaml:/algebra_py
+set_algebra_fuzhu:
+  __include: jk.yaml:/fuzhu_flypy
 pro_comment_format:
   __include: jk.yaml:/pro_comment_format 
   fuzhu_type: flypy
@@ -13,8 +13,8 @@ pro_comment_format:
 
 # === 描述档 ===
 schema:
-  schema_id: jk_pinyin                   # 方案内部名，在代码中引用此方案时以此名为准
-  name: 全拼·知心                        # 方案显示名称，在方案选单中显示
+  schema_id: jk_pinyin 
+  name: 全拼·知心
   author: 
     - 发明人 朙月拼音 佛振 <chen.sst@gmail.com>
     - 撰写者 Jack Liu <loveminimal@163.com>
@@ -24,7 +24,7 @@ schema:
     - 辅助码方案源自万象拼音 https://github.com/amzxyz/rime_wanxiang_pro
   dependencies:
     - stroke
-  version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
+  version: 6.1.0
   icon: "assets/pr.ico"
   ascii_icon: 'assets/ascii.ico'
 
@@ -58,20 +58,20 @@ engine:
   # --- 翻译特定类型的编码段为一组候选文字 ---
   translators:
     - punct_translator
-    - table_translator@custom_phrase     # 1、2码置顶
+    - table_translator@custom_phrase
     - script_translator
     - reverse_lookup_translator
-    - lua_translator@*date_translator    # 时间、日期、星期
-    - lua_translator@*force_gc           # 暴力 GC 降低内存
+    - lua_translator@*date_translator
+    - lua_translator@*force_gc
   
   # --- 过滤翻译的结果，自定义滤镜皆可使用开关调控 ---
   filters:
     # lua的filter：
-    - lua_filter@*pro_comment_format     # 超级注释模块
-    - lua_filter@*is_in_user_dict        # 用户词典的词加上一个*
+    - lua_filter@*pro_comment_format
+    - lua_filter@*is_in_user_dict
     # 反查的filter
-    - simplifier                         # 用字转换，？默认繁转简
-    - simplifier@emoji                   # Emoji
+    - simplifier
+    - simplifier@emoji
     - uniquifier
     - simplifier@chaifen
 
@@ -91,23 +91,8 @@ speller:
   # speller 未允许 aj 表示 an
   algebra:
     __patch:
-      - set_shuru_schema                 #拼音转双拼码
-      - set_algebra_fuzhu                #辅助码部分
-
-    # --- 飞键 可选择性开启 ---
-    # - derive/^([y])j/$1f/
-    # - derive/^qx/qw/
-    # - derive/^xq/xo/
-    # - derive/^qq/qo/
-    # - derive/^ww/wi/
-    # # - derive/^y([a-df-qs-z])/e$1/ # y -> e互击
-    # - derive/^j([a-twyz])/f$1/ # j -> f互击
-    # # - derive/^jn/jv/
-    # # - derive/^mn/mv/
-    # # - derive/^jm/jz/
-    # - derive/^([y])h/$1g/
-    # # - derive/^([rgv])f/$1m/
-    # - derive/^([rsgv])c/$1n/
+      - set_shuru_schema                 # 拼音转双拼码
+      - set_algebra_fuzhu                # 辅助码部分
 
 
 # === segmentor ===
@@ -119,7 +104,7 @@ abc_segmentor:
 # === 每个方案都有一个主 translator ===
 translator:
   dictionary: py
-  prism: jk_pinyin                       # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+  prism: jk_pinyin
   # initial_quality: 10000
   # 是否自动补全（预测），酌情开启。
   # ... 开启之后，打 ilqmmkyt 的时候，二选会是"床前明月光",
@@ -148,8 +133,9 @@ reverse_lookup:
   tips: 〔笔画〕
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
-  comment_format:
-    - xform/([nl])v/$1ü/
+  # comment_format:
+  #   - xform/([nl])v/$1ü/
+
 
 # === 自定义短语：custom_phrase.txt ===
 custom_phrase:
@@ -199,5 +185,5 @@ recognizer:
 
 
 # === 启用语言模型 ===
-octagram:
-  __include: jk.yaml:/octagram
+# octagram:
+#   __include: jk.yaml:/octagram

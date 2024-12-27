@@ -2,10 +2,10 @@
 # encoding: utf-8
 
 # === 初始化 ===
-set_shuru_schema:                        # 配置输入方案
-  __include: jk.yaml:/algebra_flypy      # 可选解码规则有： algebra_py, algebra_zrm, algebra_flypy
-set_algebra_fuzhu:                       # 配置此项就是选择什么辅助码
-  __include: jk.yaml:/fuzhu_flypy         # 可选辅助码有：fuzhu_kong，fuzhu_moqi, fuzhu_zrm, fuzhu_flypy, fuzhu_tiger, fuzhu_wubi, fuzhu_hanxin
+set_shuru_schema: 
+  __include: jk.yaml:/algebra_flypy
+set_algebra_fuzhu:
+  __include: jk.yaml:/fuzhu_flypy
 pro_comment_format:
   __include: jk.yaml:/pro_comment_format 
   fuzhu_type: flypy
@@ -24,7 +24,7 @@ schema:
     - 辅助码方案源自万象拼音 https://github.com/amzxyz/rime_wanxiang_pro
   dependencies:
     - pinyin_simp
-  version: 3.0.0                         # 版本号，在发布新版前请确保已升级版本号
+  version: 6.1.0
   icon: "assets/fly_b.ico"
   ascii_icon: 'assets/ascii.ico'
 
@@ -94,20 +94,6 @@ speller:
       - set_shuru_schema                 # 拼音转双拼码
       - set_algebra_fuzhu                # 辅助码部分
 
-    # --- 飞键 可选择性开启 ---
-    # - derive/^([y])j/$1f/
-    # - derive/^qx/qw/
-    # - derive/^xq/xo/
-    # - derive/^qq/qo/
-    # - derive/^ww/wi/
-    # # - derive/^y([a-df-qs-z])/e$1/ # y -> e互击
-    # - derive/^j([a-twyz])/f$1/ # j -> f互击
-    # # - derive/^jn/jv/
-    # # - derive/^mn/mv/
-    # # - derive/^jm/jz/
-    # - derive/^([y])h/$1g/
-    # # - derive/^([rgv])f/$1m/
-    # - derive/^([rsgv])c/$1n/
 
 # === segmentor ===
 abc_segmentor:
@@ -116,7 +102,7 @@ abc_segmentor:
 
 translator:
   dictionary: py
-  prism: jk_flypy                        # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+  prism: jk_flypy
   # initial_quality: 10000
   # 是否自动补全（预测），酌情开启。
   # ... 开启之后，打 ilqmmkyt 的时候，二选会是"床前明月光",
@@ -215,7 +201,7 @@ chaifen:
 
 # === 标点符号控制 ===
 punctuator:
-  import_preset: default                 # 设定符号表，这里直接导入预设的
+  import_preset: default
   symbols:
     __include: symbols_z:/symbols        # 从 symbols_z.yaml 导入配置
 

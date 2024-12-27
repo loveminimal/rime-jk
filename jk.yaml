@@ -1,6 +1,9 @@
 # Rime jk model
 # encoding: utf-8
-# 通用配置
+
+# === 版本 ===
+version:
+  version: 6.0.0
 
 # === 开关 ===
 # reset: ← 0 1 →
@@ -17,20 +20,12 @@ switches:
     reset: 0
     states: [ 隐拆, 显拆 ]
 
-# Rime wanxiang model
-# encoding: utf-8
-# 万象字库方案集成了多个辅助码方案
-# https://github.com/amzxyz/rime_wanxiang_pro
-
-# === 版本 ===
-version:
-  version: 6.0.0
 
 # === 超级注释模块 ===
 pro_comment_format:                   # 超级注释，子项配置 true 开启，false 关闭
   fuzhu_code: true                    # 启用辅助码提醒，用于辅助输入练习辅助码，成熟后可关闭
   candidate_length: 1                 # 候选词辅助码提醒的生效长度，0为关闭  但同时清空其它，应当使用上面开关来处理    
-  fuzhu_type: moqi                    # 用于匹配对应的辅助码注释显示，可选显示类型有：moqi, flypy, zrm, tiger, wubi,选择一个填入，应与上面辅助码类型一致
+  fuzhu_type: flypy                   # 用于匹配对应的辅助码注释显示，可选显示类型有：moqi, flypy, zrm, tiger, wubi,选择一个填入，应与上面辅助码类型一致
   corrector: true                     # 启用错音错词提醒，例如输入 geiyu 给予 获得 jiyu 提示
   corrector_type: "{comment}"         # 新增一个显示类型，比如"【{comment}】" 
 
@@ -39,7 +34,9 @@ pro_comment_format:                   # 超级注释，子项配置 true 开启�
 algebra_py: 
   __append: 
     - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - erase/^xx;.*$/
+    #- erase/^xx;.*$/
+    - derive/(;.*)$//
+    - derive/;//
     - abbrev/^([a-z]).+$/$1/
 
 # --- 自然码 ---

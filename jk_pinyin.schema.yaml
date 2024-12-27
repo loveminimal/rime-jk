@@ -24,7 +24,6 @@ schema:
     - 辅助码方案源自万象拼音 https://github.com/amzxyz/rime_wanxiang_pro
   dependencies:
     - stroke
-  version: 6.1.0
   icon: "assets/pr.ico"
   ascii_icon: 'assets/ascii.ico'
 

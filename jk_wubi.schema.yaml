@@ -18,7 +18,7 @@ schema:
     - pinyin_simp
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
-  version: 6.2.0
+
 
 # === 候选 ===
 # menu:

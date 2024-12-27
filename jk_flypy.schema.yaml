@@ -14,7 +14,7 @@ pro_comment_format:
 # === 描述档 ===
 schema:
   schema_id: jk_flypy
-  name: 音鹤·知心
+  name: 小鹤·知心
   author:
     - 发明人 gaboolic
     - 撰写者 Jack Liu <loveminimal@163.com>
@@ -24,7 +24,6 @@ schema:
     - 辅助码方案源自万象拼音 https://github.com/amzxyz/rime_wanxiang_pro
   dependencies:
     - pinyin_simp
-  version: 6.1.0
   icon: "assets/fly_b.ico"
   ascii_icon: 'assets/ascii.ico'
 

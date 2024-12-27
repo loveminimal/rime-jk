@@ -17,6 +17,7 @@ patch:
   schema_list:
     - {schema: jk_wubi}
     - {schema: jk_flypy}
+    - {schema: jk_pinyin}
 
 
   # === 候选相关 ===

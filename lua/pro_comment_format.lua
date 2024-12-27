@@ -181,7 +181,7 @@ function FZ.run(cand, env, initial_comment)
 
         -- 定义 fuzhu_type 与匹配模式的映射表
         local patterns = {
-            zrm = "[^;]*;([^;]*);",
+            flypy = "[^;]*;([^;]*);",
             -- moqi = "[^;]*;([^;]*);",
             -- flypy = "[^;]*;[^;]*;([^;]*);",
             -- zrm = "[^;]*;[^;]*;[^;]*;([^;]*);",

@@ -189,7 +189,8 @@ emoji:
   inherit_comment: false                 # 在 corrector.lua 及反查中，emoji 返回空注释
 
 
-# 显示墨奇码拆分
+# 显示鹤形拆分
+# 拆分规则 https://flypy.com/help/#/ux
 chaifen:
   option_name: chaifen
   opencc_config: flyyx_cf.json

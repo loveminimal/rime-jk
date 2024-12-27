@@ -16,6 +16,7 @@ customization:
 patch:
   schema_list:
     - {schema: jk_wubi}
+    - {schema: jk_zrm}
 
 
   # === 候选相关 ===

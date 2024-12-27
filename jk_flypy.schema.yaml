@@ -216,7 +216,8 @@ chaifen:
 # === 标点符号控制 ===
 punctuator:
   import_preset: default                 # 设定符号表，这里直接导入预设的
-
+  symbols:
+    __include: symbols_z:/symbols        # 从 symbols_z.yaml 导入配置
 
 # === 键位绑定 ===
 key_binder:
@@ -226,9 +227,10 @@ key_binder:
 
 # === 下设 patterns ，配合 segmentor 的 prefix 和 suffix 完成段落划分、tag 分配 ===
 recognizer:
+  import_preset: default
   patterns:
-    import_preset: default
     reverse_lookup: "`[a-z]*'?$"
+    punct: "^z([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
 
 
 # === 启用语言模型 ===

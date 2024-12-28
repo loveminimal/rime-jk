@@ -2,8 +2,8 @@
 # encoding: utf-8
 # 
 # --- 说明 ---
-# 该字典是基于官方码表版本
-# - https://github.com/rime/rime-wubi
+# 该字典是基于官方及极点五笔码表合并排序生成
+# - https://github.com/loveminimal/rime-jk
 # - Jack Liu <https://aituyaa.com>
 # 
 # 修改内容：
@@ -15,12 +15,13 @@
 # - https://github.com/loveminimal/rime-utils/blob/master/scripts/wubi86.py
 # - py scripts/wubi86.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 # 
-# 其他参考码表：
+# 参考码表：
+# - https://github.com/rime/rime-wubi
 # - https://github.com/KyleBing/rime-wubi86-jidian
 # 
 ---
 name: wubi86
-version: 2024-12-27
+version: 2024-12-29
 sort: by_weight
 use_preset_vocabulary: false
 ...

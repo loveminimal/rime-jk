@@ -14,6 +14,7 @@ schema:
     - https://github.com/rime/rime-wubi
     - https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
+    - melt_eng                           # 英文输入，作为次翻译器挂载到拼音方案
     - pinyin_simp
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
@@ -79,6 +80,7 @@ engine:
     - table_translator                   # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
                                          # ... 此项可以加载多个实例，后接 @+翻译器名 (如 cangjie、wubi 等)
     - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
+    - table_translator@melt_eng          # 英文输入
     - reverse_lookup_translator          # 反查翻译器，用另一种编码方案查码
     - lua_translator@*date_translator    # 时间、日期、星期
     - lua_translator@*force_gc           # 暴力 GC 降低内存
@@ -97,8 +99,12 @@ engine:
 
 # === speller ===
 speller:
-  delimiter: " z"                       # 上屏时的音节间分音符
-  # max_code_length: 4                   # 形码最大码长，超过则顶字上屏。四码顶字上屏
+  # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA1234567890`
+  # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  delimiter: " z"                        # 第一位<空格>是拼音之间的分隔符；第二位 <z> 表示可以手动输入 z 来分割拼音
+  # max_code_length: 4                   # 形码最大码长，超过则顶字上屏，四码顶字上屏
 
 
 # === segmentor ===
@@ -120,6 +126,18 @@ translator:
   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
   enable_encoder: true                   # 是否开启自动造词
   comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置
+  # --- melt_eng ---
+  # enable_word_completion: true         # 大于 4 音节的词条自动补全，librime > 1.11.2
+  initial_quality: 1.2                   # 拼音的权重应该比英文大
+
+# 次翻译器，英文
+melt_eng:
+  dictionary: melt_eng                   # 挂载词库 melt_eng.dict.yaml
+  enable_sentence: false                 # 禁止造句
+  enable_user_dict: false                # 禁用用户词典
+  initial_quality: 1.1                   # 初始权重
+  comment_format:                        # 自定义提示码
+    - xform/.*//                         # 清空提示码
 
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===

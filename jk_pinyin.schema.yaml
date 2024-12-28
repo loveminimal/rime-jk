@@ -132,8 +132,6 @@ reverse_lookup:
   tips: 〔笔画〕
   preedit_format:
     - xlit/hspnz/一丨丿丶乙/
-  # comment_format:
-  #   - xform/([nl])v/$1ü/
 
 
 # === 自定义短语：custom_phrase.txt ===

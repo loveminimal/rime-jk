@@ -6,22 +6,23 @@ schema:
   schema_id: jk_wubi
   name: 五笔·知心
   author: 
-    - 发明人 王永民先生
-    - 修改者 Jack Liu <loveminimal@163.com>
+    - 修改者 Jack Liu <https://aituyaa.com>
   description: |
     - 知心五笔，五笔·拼音混输，小啊小女仆
     - https://github.com/loveminimal/rime-jk
-    - 源自 https://github.com/rime/rime-wubi
-    - 📄雪齐的 Schema 说明文档 https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
+    - 参考 »
+    - https://github.com/rime/rime-wubi
+    - https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
-    - wubi86
     - pinyin_simp
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
+  version: 6.2.0
 
 
 # === 初始化 ===
-pro_comment_format:                      # --- 超级注释 ---
+# --- 超级注释 ---
+pro_comment_format:
   fuzhu_code: true                       # 启用辅助码提醒
   candidate_length: 0                    # 候选词辅助码提醒的生效长度，0 为关闭
   fuzhu_type: wubi                       # 用于匹配对应的辅助码注释显示
@@ -31,9 +32,21 @@ pro_comment_format:                      # --- 超级注释 ---
 # menu:
 #   page_size: 10
 
+
 # === 开关 ===
+# reset: ← 0 1 →
 switches:
-  __include: jk:/switches
+  - name: ascii_mode
+    reset: 0 
+    states: [ 中文, 英文 ]
+  # - name: full_shape
+  #   states: [半角, 全角]
+  - name: emoji
+    reset: 1
+    states: [ 💀, 😄 ]
+  - name: chaifen
+    reset: 0
+    states: [ 隐拆, 显拆 ]
 
 
 # === 引擎 ===
@@ -48,7 +61,6 @@ engine:
     - selector                           # 选字处理器，选字、换页
     - navigator                          # 移动插入点，即处理栏内的光标移动
     - express_editor                     # 编辑器，处理空格、回车上屏、回退键。空格确认当前输入、其他字符直接上屏
-
 
   # --- 识别不同内容类型，将输入码分段并加上 tag ---
   segmentors:                            #

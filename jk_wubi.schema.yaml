@@ -1,13 +1,6 @@
 # Rime schema settings
 # encoding: utf-8
 
-# === 初始化 ===
-pro_comment_format:
-  __include: jk.yaml:/pro_comment_format 
-  candidate_length: 0
-  fuzhu_type: wubi
-
-
 # === 描述档 ===
 schema:
   schema_id: jk_wubi
@@ -25,6 +18,13 @@ schema:
     - pinyin_simp
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
+
+
+# === 初始化 ===
+pro_comment_format:                      # --- 超级注释 ---
+  fuzhu_code: true                       # 启用辅助码提醒
+  candidate_length: 0                    # 候选词辅助码提醒的生效长度，0 为关闭
+  fuzhu_type: wubi                       # 用于匹配对应的辅助码注释显示
 
 
 # === 候选 ===

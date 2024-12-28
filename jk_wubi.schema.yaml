@@ -1,6 +1,13 @@
 # Rime schema settings
 # encoding: utf-8
 
+# === 初始化 ===
+pro_comment_format:
+  __include: jk.yaml:/pro_comment_format 
+  candidate_length: 0
+  fuzhu_type: wubi
+
+
 # === 描述档 ===
 schema:
   schema_id: jk_wubi
@@ -66,6 +73,10 @@ engine:
   
   # --- 过滤翻译的结果，自定义滤镜皆可使用开关调控 ---
   filters:
+    # lua 的 filter：
+    - lua_filter@*pro_comment_format     # 超级注释模块
+    - lua_filter@*is_in_user_dict        # 用户词典的词加上一个*
+    # 反查的 filter
     - simplifier                         # 用字转换，？默认繁转简
     - simplifier@emoji                   # Emoji
     - uniquifier                         # 过滤重复的候选字，有可能来自 simplifier
@@ -96,6 +107,7 @@ translator:
   enable_sentence: true                  # 是否开启自动造句
   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
   enable_encoder: true                   # 是否开启自动造词
+  comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置
 
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===

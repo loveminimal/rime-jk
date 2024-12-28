@@ -1,5 +1,5 @@
 -- 根据是否在用户词典，在结尾加上一个星号 *
--- is_in_user_dict: true           输入过的内容
+-- is_in_user_dict: true            输入过的内容
 -- is_in_user_dict: false 或不写    未输入过的内容
 
 local M = {}
@@ -23,7 +23,7 @@ function M.func(input, env)
 
         -- 整句联想，加上𑄗符号
         if cand.type == 'sentence' then
-            cand.comment = cand.comment .. '∞'
+            cand.comment = cand.comment .. '💭' -- '∞'
         end
         yield(cand)
     end

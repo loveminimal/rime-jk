@@ -800,6 +800,7 @@ x64	x64	0
 rho	rho	0
 D&D	D&D	0
 DnD	DnD	0
+D&D	DnD	0
 LSP	LSP	0
 I'm	I'm	0
 PVP	PVP	0
@@ -1214,6 +1215,7 @@ nat	nat	0
 nav	nav	0
 nay	nay	0
 NBC	NBC	0
+net	net	0
 neu	neu	0
 new	new	0
 nib	nib	0
@@ -2626,6 +2628,7 @@ AIA	AIA	0
 CEC	CEC	0
 ecp	ecp	0
 ESB	ESB	0
+ill	ill	0
 RMI	RMI	0
 ESA	ESA	0
 ilk	ilk	0
@@ -3939,6 +3942,7 @@ free	free	0
 freq	freq	0
 fret	fret	0
 Frey	Frey	0
+Fri.	Fri	0
 frog	frog	0
 from	from	0
 fuck	fuck	0
@@ -4071,6 +4075,7 @@ heel	heel	0
 hehe	hehe	0
 heir	heir	0
 held	held	0
+hell	hell	0
 helm	helm	0
 help	help	0
 hemp	hemp	0
@@ -4796,6 +4801,7 @@ sexy	sexy	0
 sham	sham	0
 Shaw	Shaw	0
 shea	shea	0
+shed	shed	0
 shin	shin	0
 ship	ship	0
 shit	shit	0
@@ -5094,6 +5100,7 @@ week	week	0
 weep	weep	0
 weir	weir	0
 weld	weld	0
+well	well	0
 went	went	0
 were	were	0
 west	west	0
@@ -8328,6 +8335,7 @@ Lyons	Lyons	0
 lyric	lyric	0
 Macau	Macau	0
 Macon	Macon	0
+macOS	macOS	0
 macro	macro	0
 Madam	Madam	0
 madam	madam	0
@@ -10241,6 +10249,7 @@ anglo	anglo	0
 mined	mined	0
 pimps	pimps	0
 blume	blume	0
+shell	shell	0
 lunes	lunes	0
 mince	mince	0
 torte	torte	0
@@ -11732,6 +11741,7 @@ Monday	Mon	0
 Thurs.	Thu.	0
 Thurs.	Thurs.	0
 Friday	Friday	0
+Friday	Fri	0
 Sunday	Sunday	0
 Sunday	Sun	0
 Howard	Howard	0
@@ -11865,6 +11875,7 @@ Python	Python	0
 Apache	Apache	0
 Ubuntu	Ubuntu	0
 Oracle	Oracle	0
+iPhone	iPhone	0
 Kinect	Kinect	0
 ToDesk	ToDesk	0
 Odysee	Odysee	0
@@ -17715,6 +17726,7 @@ January	Jan	0
 October	October	0
 October	Oct	0
 Tuesday	Tuesday	0
+Tuesday	Tue.	0
 Sheldon	Sheldon	0
 Leonard	Leonard	0
 Windows	Windows	999
@@ -17829,6 +17841,7 @@ GalGame	GalGame	0
 Mozilla	Mozilla	0
 Android	Android	0
 android	android	0
+Windows	Windows	0
 DirectX	DirectX	0
 Hip-Hop	Hip-Hop	0
 Dnsmasq	Dnsmasq	0
@@ -23842,8 +23855,10 @@ February	Feb	0
 November	November	0
 November	Nov	0
 December	December	0
+December	Dec	0
 Thursday	Thursday	0
 Thursday	Thu	0
+Thursday	Thurs	0
 Saturday	Saturday	0
 Saturday	Sat	0
 Chandler	Chandler	0
@@ -29033,6 +29048,7 @@ September	September	0
 September	Sep	0
 September	Sept	0
 Wednesday	Wednesday	0
+Wednesday	Wed	0
 iPhone 16	iPhone	4
 OS X Lion	OSX	1
 Windows 7	Windows	7
@@ -29067,6 +29083,7 @@ Notion AI	NotionAI	0
 Touch Bar	TouchBar	0
 OceanBase	OceanBase	0
 Instagram	IG	0
+Instagram	INS	0
 Instagram	Instagram	0
 JetBrains	JetBrains	0
 Macintosh	Macintosh	0
@@ -33122,6 +33139,7 @@ Xbox One X	XboxOneX	0
 ClashX Pro	ClashXPro	0
 Epic Games	EpicGames	0
 PowerPoint	PowerPoint	0
+PowerPoint	PPT	0
 Sourcetree	Sourcetree	0
 ECMAScript	ECMAScript	0
 JavaScript	JS	0
@@ -38816,6 +38834,7 @@ Windows Mobile	WindowsMobile	0
 Stack Overflow	StackOverflow	0
 Pickup Artists	PUA	0
 Pickup Artists	PickupArtists	0
+Counter-Strike	CS	0
 GitHub Copilot	GitHubCopilot	0
 Silicon Valley	SiliconValley	0
 Studio Display	StudioDisplay	0
@@ -39105,6 +39124,7 @@ Laugh Out Loudly	LaughOutLoudly	0
 Grand Theft Auto	GTA	0
 Grand Theft Auto	GrandTheftAuto	0
 Counter-Strike 2	Counter-Strike2	0
+Counter-Strike 2	CS2	0
 Google Analytics	GoogleAnalytics	0
 Google Workspace	GoogleWorkspace	0
 QuickTime Player	QuickTimePlayer	0
@@ -39194,6 +39214,7 @@ Internet Explorer	IE	0
 Internet Explorer	InternetExplorer	0
 Table of Contents	TOC	0
 Table of Contents	TableOfContents	0
+Apple File System	APFS	0
 Cloudflare Images	CloudflareImages	0
 Cloudflare Stream	CloudflareStream	0
 Universal Actions	UniversalActions	0
@@ -39218,6 +39239,7 @@ Domain Name System	DomainNameSystem	0
 GitHub Copilot CLI	GitHubCopilotCLI	0
 Cloudflare Workers	CloudflareWorkers	0
 Visual Studio Code	VisualStudioCode	0
+Visual Studio Code	VSCode	0
 Last In, First out	LIFO	0
 Simplified Chinese	SimplifiedChinese	0
 Quality of Service	QoS	0
@@ -39227,8 +39249,10 @@ Non-Fungible Token	NFT	0
 ungoogled-chromium	ungoogled-chromium	0
 Dungeons & Dragons	D&D	0
 Dungeons & Dragons	Dungeons&Dragons	0
+Dungeons & Dragons	DnD	0
 Apple Intelligence	AppleIntelligence	0
 master boot record	masterbootrecord	0
+master boot record	MBR	0
 indestructibleness	indestructibleness	0
 telecommunications	telecommunications	0
 traditionalization	traditionalization	0
@@ -39265,6 +39289,7 @@ Universal Serial Bus	USB	0
 Universal Serial Bus	UniversalSerialBus	0
 Turbo Boost Switcher	TurboBoostSwitcher	0
 Microsoft PowerPoint	MicrosoftPowerPoint	0
+Microsoft PowerPoint	PowerPoint	0
 Windows Media Player	MediaPlayer	0
 Windows Media Player	WindowsMediaPlayer	0
 Non-Player Character	NPC	0
@@ -39358,6 +39383,7 @@ GNU Compiler Collection	GCC	0
 GNU Compiler Collection	GNUCompilerCollection	0
 virtual private network	VPN	0
 Microsoft Visual Studio	MicrosoftVisualStudio	0
+Microsoft Visual Studio	VisualStudio	0
 Universal Plug and Play	UPnP	0
 Universal Plug and Play	UniversalPlugandPlay	0
 Graphics Processing Unit	GPU	0
@@ -39419,6 +39445,7 @@ Search Engine Optimization	SEO	0
 Search Engine Optimization	SearchEngineOptimization	0
 GNU General Public License	GNU	0
 GNU General Public License	GNUGeneralPublicLicense	0
+GNU General Public License	GPL	0
 Globally Unique Identifier	GUID	0
 Globally Unique Identifier	GloballyUniqueIdentifier	0
 New Technology File System	NTFS	0
@@ -39447,6 +39474,7 @@ International Monetary Fund	IMF	0
 International Monetary Fund	InternationalMonetaryFund	0
 Windows Subsystem for Linux	WSL	0
 object-oriented programming	object-orientedprogramming	0
+object-oriented programming	OOP	0
 What You See Is What You Get	WYSIWYG	0
 qBittorrent Enhanced Edition	qEE	0
 qBittorrent Enhanced Edition	qBEE	0
@@ -39471,6 +39499,7 @@ Transmission Control Protocol	TCP	0
 Universally Unique Identifier	UUID	0
 field-programmable gate array	FPGA	0
 Extensible Firmware Interface	ExtensibleFirmwareInterface	0
+Extensible Firmware Interface	EFI	0
 International Data Corporation	IDC	0
 International Data Corporation	InternationalDataCorporation	0
 Tom's Obvious Minimal Language	TOML	0
@@ -39494,6 +39523,7 @@ Artificial general intelligence	AGI	0
 Counter-Strike: Global Offensive	CS:GO	0
 Counter-Strike: Global Offensive	Counter-Strike:GlobalOffensive	0
 Joint Photographic Experts Group	JPG	0
+Joint Photographic Experts Group	JPEG	0
 Digital Millennium Copyright Act	DMCA	0
 Digital Millennium Copyright Act	DigitalMillenniumCopyrightAct	0
 Internet Message Access Protocol	IMAP	0
@@ -39518,6 +39548,7 @@ International Standard Book Number	ISBN	0
 International Standard Book Number	InternationalStandardBookNumber	0
 Generative Pre-trained Transformer	GPT	0
 integrated development environment	integrateddevelopmentenvironment	0
+integrated development environment	IDE	0
 International Ethernet Private Line	IEPL	0
 Dynamic Host Configuration Protocol	DHCP	0
 Union of Soviet Socialist Republics	USSR	0
@@ -39537,7 +39568,9 @@ Massachusetts Institute of Technology	MIT	0
 Massachusetts Institute of Technology	MassachusettsInstituteofTechnology	0
 Point-to-Point Protocol over Ethernet	PPPoE	0
 Unified Extensible Firmware Interface	UnifiedExtensibleFirmwareInterface	0
+Unified Extensible Firmware Interface	UEFI	0
 complementary metal-oxide-semiconductor	complementarymetal-oxide-semiconductor	0
+complementary metal-oxide-semiconductor	CMOS	0
 attention deficit hyperactivity disorder	ADHD	0
 attention deficit hyperactivity disorder	attentiondeficithyperactivitydisorder	0
 Language Model for Dialogue Applications	LaMDA	0

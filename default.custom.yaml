@@ -15,8 +15,8 @@ customization:
 
 patch:
   schema_list:
-    - {schema: jk_wubi}
     - {schema: jk_ascii}
+    - {schema: jk_wubi}
 
 
   # === 候选相关 ===
@@ -52,12 +52,12 @@ patch:
       "\\": "、"
       '_' : '_'
       # 在中文状态下输出一些常用的半角英文标点
-      '<' : [ '<',《 , « , ‹ ]
-      '>' : [ '>', 》, » , › ]
-      '[' : [ '[',「 ,【, 〔 ]
-      ']' : [ ']', 」, 】, 〕]
-      '{' : ['{', 『, 〖, ｛ ]
-      '}' : ['{', 』, 〗, ｝ ]
+      '<' : [ '<',《 , « ,  ‹ ]
+      '>' : [ '>', 》, » ,  › ]
+      '[' : [ '[',「 ,【 , 〔 ]
+      ']' : [ ']', 」, 】, 〕 ]
+      '{' : [ '{',『, 〖,  ｛ ]
+      '}' : [ '{', 』, 〗, ｝ ]
 
 
   # === 键位绑定 ===
@@ -67,7 +67,6 @@ patch:
       - { when: always, accept: "Control+period", toggle: chaifen }   # C-. 切换拆隐折显
       # - { when: always, accept: Control+comma, toggle: ascii_mode } # C-, 切换中英状态
       - { when: always, accept: Control+comma, select: .next }        # C-, 切换下一方案
-      # - { when: always, accept: Control+o, select: .next }          # C-o 切换下一方案
       - { when: has_menu, accept: semicolon, send: 2 }                # ; 2 候选
       - { when: has_menu, accept: apostrophe, send: 3 }               # ' 3 候选
       - { when: has_menu, accept: slash, send: 4 }                    # / 4 候选
@@ -80,3 +79,15 @@ patch:
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
       - { when: always, accept: Control+p, send: '+' }
+
+      - { when: always, accept: Control+1, send: '!' }
+      - { when: always, accept: Control+2, send: '@' }
+      - { when: always, accept: Control+3, send: '#' }
+      - { when: always, accept: Control+4, send: '$' }
+      - { when: always, accept: Control+5, send: '%' }
+      - { when: always, accept: Control+6, send: '^' }
+      - { when: always, accept: Control+7, send: '&' }
+      - { when: always, accept: Control+8, send: '*' }
+      - { when: always, accept: Control+9, send: '(' }
+      - { when: always, accept: Control+0, send: ')' }
+

@@ -90,4 +90,3 @@ patch:
       - { when: always, accept: Control+8, send: '*' }
       - { when: always, accept: Control+9, send: '(' }
       - { when: always, accept: Control+0, send: ')' }
-

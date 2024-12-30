@@ -56,6 +56,7 @@ symbols:
   'zts' : [💡,🔔,🪧,🔮]
   'zrz' : [©️,®️,™️]
   'znz' : [⏰]
+  'ztx' : [⏰,🚨]
   'zmf' : [🔮]
   'zxh' : [⭐️,🌟,❤️,💖]
   'zxz' : [📥,⬇️,↓,📤]
@@ -119,6 +120,7 @@ symbols:
   'zif' : [18539282698,410928199007132712,loveminimal,aituyaa]
 
   # --- 文本编辑 ---
-  'zbj' : ['```','> :: ','*_*', '*=*']
-  'zbjq': [VSCode,WebStrom,IntelliJ IDEA,Emacs,Vim]
-  'zyy' : [JavaScript,Java,Python,Lisp]
+  'zbj' : ['``', '`> `', '```', '> :: ', '*_*', '*=*']
+  'zbjq': [VSCode, WebStrom, IntelliJ IDEA, Emacs, Vim]
+  'zyy' : [JavaScript, Java, Python, Lisp]
+  'zutf': ['-*- coding: utf-8 -*-', utf8, utf-8, UTF-8]

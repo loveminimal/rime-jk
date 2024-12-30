@@ -9,9 +9,13 @@ version: 6.2.0
 sort: by_weight
 ...
 
-俺宝	wdpg
-微信	tmwy
-越来	fhgo
-被	p
+被	p	9999
+
+俺宝	wdpg	9999
+微信	tmwy	9999
+越来	fhgo	9999
+
 濮阳县	ibeg	9999
 濮阳市	ibym	9999
+
+吞噬星空	gkjp	9999

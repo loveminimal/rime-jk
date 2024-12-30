@@ -120,3 +120,5 @@ symbols:
 
   # --- 文本编辑 ---
   'zbj' : ['```','> :: ','*_*', '*=*']
+  'zbjq': [VSCode,WebStrom,IntelliJ IDEA,Emacs,Vim]
+  'zyy' : [JavaScript,Java,Python,Lisp]

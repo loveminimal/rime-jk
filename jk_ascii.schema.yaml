@@ -1,0 +1,69 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jk_ascii
+  name: 字符·知心
+  author: 
+    - 发明人 Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心字符，一款快速输入数字和预设字符的键盘式输入法方案
+    - https://github.com/loveminimal/rime-jk
+  version: "0.0.1"
+  icon: "assets/pr.ico"
+  ascii_icon: 'assets/ascii.ico'
+
+engine:
+  processors:
+    - key_binder
+    - punctuator
+    - selector
+    - express_editor
+  segmentors:
+    - punct_segmentor
+  translators:
+    - punct_translator
+
+punctuator:
+  import_preset: default
+  half_shape: &symtable
+    ',' : { commit: ',' }
+    '.' : { commit: '.' }
+    '<' : '<'
+    '>' : '>'
+    '/' : '/'
+    '?' : { commit: '?' }
+    ';' : { commit: ';' }
+    ':' : { commit: ':' }
+    "'" : "'"
+    '"' : '"'
+    '\' : '\'
+    '|' : '|'
+    '`' : '`'
+    '~' : '~'
+    '!' : { commit: '!' }
+    '@' : '@'
+    '#' : '#'
+    '%' : '%'
+    '$' : '$'
+    '^' : '^'
+    '&' : '&'
+    '*' : '*'
+    '(' : '('
+    ')' : ')'
+    '-' : '-'
+    '_' : '_'
+    '+' : '+'
+    '=' : '='
+    '[' : '['
+    ']' : ']'
+    '{' : '{'
+    '}' : '}'
+  full_shape: *symtable
+
+key_binder:
+  import_preset: default
+  # bindings/+:
+  #   - { when: always, accept: Control+o, send: minus }
+
+

@@ -3,7 +3,7 @@
 
 schema:
   schema_id: jk_ascii
-  name: En符·知心
+  name: ASCI·IOVE
   author: 
     - 发明人 Jack Liu <https://aituyaa.com>
   description: |
@@ -23,6 +23,7 @@ engine:
     - punct_segmentor
   translators:
     - punct_translator
+    - lua_translator@*force_gc
 
 punctuator:
   import_preset: default

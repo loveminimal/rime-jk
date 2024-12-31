@@ -6,9 +6,9 @@ patch:
   __patch:
     style/+:
       color_scheme: pujk
-      font_face: LXGW WenKai Mono, Segoe UI Emoji, 黑体字根, LXGW WenKai GB Screen R
-      label_font_face: LXGW WenKai Mono, Segoe UI Emoji, 黑体字根, LXGW WenKai GB Screen R
-      comment_font_face: LXGW WenKai Mono, Segoe UI Emoji, 黑体字根, LXGW WenKai GB Screen R
+      font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      label_font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      comment_font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       font_point: 13 
       label_font_point: 11
       comment_font_point: 11

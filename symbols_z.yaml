@@ -124,8 +124,7 @@ symbols:
   'zif' : [18539282698,410928199007132712,loveminimal,aituyaa]
 
   # --- 文本编辑 ---
-  'zbj' : ['``', '`> `', '```', '> :: ', '*_*', '*=*']
-  'zbjq': [VSCode, WebStrom, IntelliJ IDEA, Emacs, Vim]
+  'zcc' : ['``', '```', '> :: ', '`> `', '*_*', '*=*']
+  'zll' : ['# ', '// ', '-- ', ';; ']
   'zyy' : [JavaScript, Java, Python, Lisp]
-  'zutf': ['-*- coding: utf-8 -*-', utf8, utf-8, UTF-8]
-  'zzs' : ['# ', '// ', '-- ']
+  'zbjq': [VSCode, Emacs, Vim, Neovim, IntelliJ IDEA, WebStrom]

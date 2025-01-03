@@ -22,6 +22,7 @@ encoder:
       formula: "AaBaCaZa"
 import_tables:
   - dicts/wubi86                              # 8105 精炼词库（10万+）
+  - dicts/wubi_custom                         # 用来自定义常用的字词
   # - pinyin_simp
   - dicts/wubi_user                           # 引入自定义词库
 

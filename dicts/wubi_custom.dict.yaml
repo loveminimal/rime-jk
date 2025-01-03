@@ -1,0 +1,21 @@
+# Rime dictionary - wubi86.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典为区对既有五笔词典的适用于个人使用习惯的扩充
+# - 常用词直接一简，如 “被”
+# - 单字重码以读音做辅助，如 “去、云、支”，读音规则
+#   ... 以双拼为准，如 z,zh→v  sh→u  ch→i ang→h 等
+#   ... z 已经做为字符分隔码使用
+# 
+---
+name: wubi86
+version: 2024-12-29
+sort: by_weight
+use_preset_vocabulary: false
+...
+被	p	9999
+
+去	fcuq	9999
+云	fcuy	9999
+支	fcuv	9999

@@ -127,4 +127,4 @@ symbols:
   'zcc' : ['``', '```', '> :: ', '`> `', '*_*', '*=*']
   'zll' : ['# ', '// ', '-- ', ';; ']
   'zyy' : [JavaScript, Java, Python, Lisp]
-  'zbjq': [VSCode, Emacs, Vim, Neovim, IntelliJ IDEA, WebStrom]
+  

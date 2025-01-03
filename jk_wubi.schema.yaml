@@ -100,9 +100,9 @@ engine:
 # === speller ===
 speller:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
-  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " z"                        # 第一位<空格>是拼音之间的分隔符；第二位 <z> 表示可以手动输入 z 来分割拼音
   # max_code_length: 4                   # 形码最大码长，超过则顶字上屏，四码顶字上屏
 
@@ -148,7 +148,8 @@ date_translator:
 # === 反查 ===
 reverse_lookup:
   dictionary: pinyin_simp
-  prefix: "`"
+  # prefix: "`"
+  prefix: "Z"
   suffix: "'"
   tips: 〔拼音〕
   preedit_format:
@@ -206,6 +207,7 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    reverse_lookup: "`[a-z]*'?$"
+    # reverse_lookup: "`[a-z]*'?$"
+    reverse_lookup: "Z[a-z]*'?$"
     punct: "^z([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
 

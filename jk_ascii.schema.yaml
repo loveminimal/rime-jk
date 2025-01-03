@@ -65,6 +65,13 @@ punctuator:
 key_binder:
   import_preset: default
   # bindings/+:
-  #   - { when: always, accept: Control+o, send: minus }
-
+  #   - { when: always, accept: Control+u, send: '_' }
+  #   - { when: always, accept: Control+i, send: '-' }
+  #   - { when: always, accept: Control+o, send: '=' }
+  #   - { when: always, accept: Control+j, send: '+' }
+  #   - { when: always, accept: Control+k, send: '(' }
+  #   - { when: always, accept: Control+g, send: '`' }
+  #   - { when: always, accept: Control+n, send: '*' }
+  #   - { when: always, accept: Control+h, send: '?' }
+  #   - { when: always, accept: Control+l, send: ':' }
 

@@ -20,6 +20,7 @@ pro_comment_format:
 
 engine:
   processors:
+    - recognizer
     - key_binder
     - speller
     - punctuator
@@ -28,6 +29,7 @@ engine:
     - express_editor
   segmentors:
     - abc_segmentor
+    - matcher
     - punct_segmentor
     - fallback_segmentor
   translators:
@@ -62,6 +64,8 @@ translator:
 
 punctuator:
   import_preset: default
+  symbols:
+    __include: symbols_z:/symbols
   half_shape: &symtable
     ',' : { commit: ',' }
     '.' : { commit: '.' }
@@ -110,3 +114,7 @@ key_binder:
   #   - { when: always, accept: Control+h, send: '?' }
   #   - { when: always, accept: Control+l, send: ':' }
 
+recognizer:
+  import_preset: default
+  patterns:
+    punct: "^z([0-9]|10|[A-Za-z]+)$" 

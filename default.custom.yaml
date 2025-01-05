@@ -53,6 +53,7 @@ patch:
       '_' : '_'
       '*' : '*'
       '#' : '#'
+      '/' : '/'
       # 在中文状态下输出一些常用的半角英文标点
       '<' : [ '<',《 , « ,  ‹ ]
       '>' : [ '>', 》, » ,  › ]
@@ -78,16 +79,16 @@ patch:
       - { when: composing, accept: Control+j, send: Down }            # C-j 向下移动选词
 
       - { when: always, accept: Control+u, send: '_' }
-      - { when: always, accept: Control+i, send: '-' }
+      # - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
-      - { when: always, accept: Control+p, send: '`' }
+      # - { when: always, accept: Control+p, send: '`' }
 
-      - { when: always, accept: Control+h, send: '#' }
-      - { when: always, accept: Control+j, send: '+' }
-      - { when: always, accept: Control+k, send: '(' }
-      - { when: always, accept: Control+l, send: '*' }
+      # - { when: always, accept: Control+h, send: '#' }
+      # - { when: always, accept: Control+j, send: '+' }
+      # - { when: always, accept: Control+k, send: '(' }
+      # - { when: always, accept: Control+l, send: '*' }
 
-      - { when: always, accept: Control+b, send: '!' }
-      - { when: always, accept: Control+n, send: '?' }
-      - { when: always, accept: Control+m, send: ':' }
+      # - { when: always, accept: Control+b, send: '!' }
+      # - { when: always, accept: Control+n, send: '?' }
+      # - { when: always, accept: Control+m, send: ':' }
 

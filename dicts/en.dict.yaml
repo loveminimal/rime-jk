@@ -766,6 +766,7 @@ KFC	KFC	0
 AWP	AWP	0
 CLI	CLI	0
 DOS	DOS	0
+lua	lua	0
 Lua	Lua	0
 DoS	DoS	0
 EMS	EMS	0
@@ -33142,7 +33143,6 @@ PowerPoint	PowerPoint	0
 PowerPoint	PPT	0
 Sourcetree	Sourcetree	0
 ECMAScript	ECMAScript	0
-JavaScript	JS	0
 JavaScript	JavaScript	0
 uBlacklist	uBlacklist	0
 AppleCare+	AppleCare+	0

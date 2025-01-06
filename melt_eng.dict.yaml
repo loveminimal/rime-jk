@@ -12,4 +12,5 @@ import_tables:
   # - dicts/en        # 英文主词库
   # - dicts/en_ext_yd # 补充（来源黄狗 34585 条）
   - dicts/en          # 超集英文码表（近 4 万条）
+  - dicts/en_custom
 ...

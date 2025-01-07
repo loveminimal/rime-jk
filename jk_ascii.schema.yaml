@@ -16,7 +16,7 @@ schema:
 pro_comment_format:
   fuzhu_code: true   
   candidate_length: 0
-  fuzhu_type: wubi   
+  fuzhu_type: en   
 
 engine:
   processors:

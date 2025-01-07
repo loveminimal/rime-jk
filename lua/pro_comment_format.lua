@@ -36,7 +36,9 @@ function FZ.run(cand, env, initial_comment)
 
         -- 定义 fuzhu_type 与匹配模式的映射表
         local patterns = {
-            wubi = "[^a-z]*);",  -- 匹配原生五笔码表
+            
+            en = "[^a-z]*$)",
+            wubi = "[^a-z]*$)",  -- 匹配原生五笔码表
             flypy = "[^;]*;([^;]*);",
             -- moqi = "[^;]*;([^;]*);",
             -- flypy = "[^;]*;[^;]*;([^;]*);",

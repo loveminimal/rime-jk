@@ -14,6 +14,7 @@
 # - py scripts/wubi86.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 # 
 # 参考码表：
+# ❌ 这两个英文词库都是垃圾❗️导致生成的词表也是垃圾❗️❗️❗️
 # - https://github.com/iDvel/rime-ice
 # - https://github.com/tumuyan/rime-melt
 #

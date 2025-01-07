@@ -3,7 +3,7 @@
 
 schema:
   schema_id: jk_ascii
-  name: ASCI·IOVE
+  name: ASCII·J_K
   author: 
     - 发明人 Jack Liu <https://aituyaa.com>
   description: |
@@ -58,24 +58,19 @@ abc_segmentor:
     - reverse_lookup
 
 translator:
-  dictionary: melt_eng
+  dictionary: jk_ascii
   enable_sentence: false  
   enable_user_dict: false 
   enable_word_completion: true
   initial_quality: 1.1    
-  comment_format: {comment}
-    # - xform/.*//          
+  comment_format: {comment}      
 
-# reverse_lookup:
-#   dictionary: melt_eng
-#   # prefix: "`"
-#   prefix: "Z"
-#   suffix: "'"
-#   tips: 〔字符〕
-  # preedit_format:
-  #   - xform/([nl])v/$1ü/
-  #   - xform/([nl])ue/$1üe/
-  #   - xform/([jqxy])v/$1u/
+reverse_lookup:
+  dictionary: jk_ascii
+  # prefix: "`"
+  prefix: "Z"
+  suffix: "'"
+  tips: 〔字符〕
 
 punctuator:
   import_preset: default
@@ -122,15 +117,9 @@ key_binder:
   #   - { when: always, accept: Control+u, send: '_' }
   #   - { when: always, accept: Control+i, send: '-' }
   #   - { when: always, accept: Control+o, send: '=' }
-  #   - { when: always, accept: Control+j, send: '+' }
-  #   - { when: always, accept: Control+k, send: '(' }
-  #   - { when: always, accept: Control+g, send: '`' }
-  #   - { when: always, accept: Control+n, send: '*' }
-  #   - { when: always, accept: Control+h, send: '?' }
-  #   - { when: always, accept: Control+l, send: ':' }
 
 recognizer:
   # import_preset: default
   patterns:
-    # reverse_lookup: "Z[a-z]*'?$"
+    reverse_lookup: "Z[a-z]*'?$"
     punct: "^z([0-9]|10|[A-Za-z]+)$" 

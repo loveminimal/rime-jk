@@ -48,9 +48,10 @@ speller:
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
   # alphabet: ·
   # alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
-  alphabet: ZYXWVUTSRQPONMLKJIHGFEDCBA
+  alphabet: zZYXWVUTSRQPONMLKJIHGFEDCBA
   # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  # initials: zyxwvutsrqponmlkjihgfedcba`
 
 abc_segmentor:
   extra_tags:
@@ -65,12 +66,12 @@ translator:
   comment_format: {comment}
     # - xform/.*//          
 
-reverse_lookup:
-  dictionary: melt_eng
-  # prefix: "`"
-  prefix: "Z"
-  suffix: "'"
-  tips: 〔字符〕
+# reverse_lookup:
+#   dictionary: melt_eng
+#   # prefix: "`"
+#   prefix: "Z"
+#   suffix: "'"
+#   tips: 〔字符〕
   # preedit_format:
   #   - xform/([nl])v/$1ü/
   #   - xform/([nl])ue/$1üe/
@@ -129,7 +130,7 @@ key_binder:
   #   - { when: always, accept: Control+l, send: ':' }
 
 recognizer:
-  import_preset: default
+  # import_preset: default
   patterns:
-    reverse_lookup: "Z[a-z]*'?$"
+    # reverse_lookup: "Z[a-z]*'?$"
     punct: "^z([0-9]|10|[A-Za-z]+)$" 

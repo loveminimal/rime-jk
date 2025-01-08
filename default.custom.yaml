@@ -78,6 +78,9 @@ patch:
       - { when: composing, accept: Control+k, send: Up }              # C-k 向上移动选词
       - { when: composing, accept: Control+j, send: Down }            # C-j 向下移动选词
 
+      # - { when: composing, accept: Control+semicolon, send: Return }
+      - { when: composing, accept: Control+l, send: Return }
+      - { when: composing, accept: Control+u, send: Return }
 
       - { when: always, accept: Control+u, send: '_' }
       - { when: always, accept: Control+i, send: '`' }
@@ -91,5 +94,5 @@ patch:
 
       # - { when: always, accept: Control+b, send: '!' }
       # - { when: always, accept: Control+n, send: '?' }
-      - { when: always, accept: Control+m, send: Return }
+      # - { when: always, accept: Control+m, send: Return }
 

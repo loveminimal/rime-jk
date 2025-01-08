@@ -55,8 +55,8 @@ engine:
   # --- 处理各类按键消息 ---
   processors:
     - ascii_composer                     # 处理西文模式及中西文切换
-    - recognizer                         # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
     - key_binder                         # 在特定条件下将按键绑定到其他按键，放在其他 processor 之前判定……
+    - recognizer                         # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
     - speller                            # 拼写处理器，把字母追加到编码串
     - punctuator                         # 句读处理器（处理符号按键），将单个字符按键直接映射为标点符号或文字
     - selector                           # 选字处理器，选字、换页
@@ -149,9 +149,9 @@ date_translator:
 reverse_lookup:
   dictionary: pinyin_simp
   # prefix: "`"
-  prefix: "Z"
+  prefix: "/"
   suffix: "'"
-  tips: 〔拼音〕
+  tips: 〔拼音·反查〕
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
@@ -208,6 +208,6 @@ recognizer:
   # import_preset: default
   patterns:
     # reverse_lookup: "`[a-z]*'?$"
-    reverse_lookup: "Z[a-z]*'?$"
+    reverse_lookup: "/[a-z]*'?$"
     punct: "^z([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
 

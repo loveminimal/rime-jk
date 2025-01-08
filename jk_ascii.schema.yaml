@@ -20,8 +20,8 @@ pro_comment_format:
 
 engine:
   processors:
-    - recognizer
     - key_binder
+    - recognizer
     - speller
     - punctuator
     - selector
@@ -48,7 +48,7 @@ speller:
   # [ ✗上屏 ]
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
   # alphabet: ·
-  alphabet: z
+  alphabet: z/
   # alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   # alphabet: zZYXWVUTSRQPONMLKJIHGFEDCBA
   # [ ✓上屏 ]
@@ -71,9 +71,9 @@ translator:
 reverse_lookup:
   dictionary: jk_ascii
   # prefix: "`"
-  prefix: "Z"
-  suffix: "'"
-  tips: 〔字符〕
+  prefix: "/"
+  suffix: ":"
+  tips: 〔字符·反查〕
 
 punctuator:
   import_preset: default
@@ -124,5 +124,5 @@ key_binder:
 recognizer:
   # import_preset: default
   patterns:
-    reverse_lookup: "Z[a-z]*'?$"
-    punct: "^z([0-9]|10|[A-Za-z]+)$" 
+    reverse_lookup: "/[a-z]*:?$"
+    punct: "^z([0-9]|10|[A-Za-z]+)$"

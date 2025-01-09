@@ -79,8 +79,9 @@ patch:
       - { when: composing, accept: Control+j, send: Down }            # C-j 向下移动选词
 
       # - { when: composing, accept: Control+semicolon, send: Return }
-      - { when: composing, accept: Control+l, send: Return }
       - { when: composing, accept: Control+u, send: Return }
+      - { when: composing, accept: Control+i, send: Return }
+      - { when: composing, accept: Control+l, send: Return }
 
       - { when: always, accept: Control+u, send: '_' }
       - { when: always, accept: Control+i, send: '-' }

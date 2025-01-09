@@ -83,9 +83,9 @@ patch:
       - { when: composing, accept: Control+u, send: Return }
 
       - { when: always, accept: Control+u, send: '_' }
-      - { when: always, accept: Control+i, send: '`' }
+      - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
-      - { when: always, accept: Control+p, send: '\' }
+      - { when: always, accept: Control+p, send: '`' }
 
       # - { when: always, accept: Control+h, send: '#' }
       # - { when: always, accept: Control+j, send: '+' }

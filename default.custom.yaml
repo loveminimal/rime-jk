@@ -17,6 +17,7 @@ patch:
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_wubi}
+    - {schema: jk_flypy}
 
 
   # === 候选相关 ===
@@ -24,8 +25,8 @@ patch:
     caption: 〔方案选单〕
     # hotkeys/+:
     #   - Control+i
-    # hotkeys:
-    #   - Control+m
+    hotkeys:
+      - Control+m
     option_list_separator: ' | ' 
   menu/page_size: 4
 

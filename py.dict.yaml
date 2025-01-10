@@ -1,0 +1,26 @@
+# Rime dictionary
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于白霜拼音词库的万象鹤形辅助码版本，该
+# ... 版本的词量和词频体验良好，只使用基础词库的情况下便是如此，故
+# ... 我们只保留基础词库和 8105 通用单字表即可，可以用到老 ~
+# 
+# 参考码表：
+# - https://github.com/iDvel/rime-ice
+# - https://github.com/gaboolic/rime-frost 
+# - https://github.com/amzxyz/rime_wanxiang_pro
+# 
+---
+name: py
+version: "2024.05.11"
+sort: by_weight
+import_tables:      
+  - flypy_dicts/8105
+  # - flypy_dicts/base 
+  # - flypy_dicts/41448
+  # - flypy_dicts/ext
+  # - flypy_dicts/others
+  # - flypy_dicts/tencent
+use_preset_vocabulary: false
+...

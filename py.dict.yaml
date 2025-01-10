@@ -17,7 +17,7 @@ version: "2024.05.11"
 sort: by_weight
 import_tables:      
   - flypy_dicts/8105
-  # - flypy_dicts/base 
+  - flypy_dicts/base 
   # - flypy_dicts/41448
   # - flypy_dicts/ext
   # - flypy_dicts/others

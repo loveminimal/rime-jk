@@ -18,6 +18,17 @@ pro_comment_format:
   candidate_length: 0
   fuzhu_type: en   
 
+switches:
+  - name: ascii_mode
+    reset: 0 
+    states: [ 中文, 英文 ]
+  - name: emoji
+    reset: 1
+    states: [ 💀, 😄 ]
+  - name: chaifen
+    reset: 0
+    states: [ 隐拆, 显拆 ]
+
 engine:
   processors:
     - key_binder

@@ -12,8 +12,8 @@ schema:
     - 知心小鹤，双拼·辅助码，小啊小小鹤
     - https://github.com/loveminimal/rime-jk
     - 辅助码方案源自万象拼音 https://github.com/amzxyz/rime_wanxiang_pro
-  # dependencies:
-  #   - pinyin_simp
+  dependencies:
+    - pinyin_simp
   icon: "assets/fly_b.ico"
   ascii_icon: 'assets/ascii.ico'
 
@@ -170,11 +170,15 @@ date_translator:
 
 # === 反查 ===
 reverse_lookup:
-  dictionary: jk_ascii
+  dictionary: pinyin_simp
   # prefix: "`"
   prefix: "/"
-  suffix: ":"
-  tips: 〔字符·反查〕
+  suffix: "'"
+  tips: 〔拼音·反查〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
 
 
 # === 自定义短语：custom_phrase.txt ===
@@ -221,5 +225,5 @@ recognizer:
   # import_preset: default
   patterns:
     # reverse_lookup: "`[a-z]*'?$"
-    reverse_lookup: "/[a-z]*'?$"
+    reverse_lookup: "^/[a-z]*:?$"
     punct: "^z([0-9]|10|[A-Za-z]+)$"

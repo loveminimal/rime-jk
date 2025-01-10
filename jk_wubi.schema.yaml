@@ -208,6 +208,6 @@ recognizer:
   # import_preset: default
   patterns:
     # reverse_lookup: "`[a-z]*'?$"
-    reverse_lookup: "/[a-z]*'?$"
+    reverse_lookup: "^/[a-z]*:?$"
     punct: "^z([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
 

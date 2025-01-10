@@ -170,15 +170,11 @@ date_translator:
 
 # === 反查 ===
 reverse_lookup:
-  dictionary: pinyin_simp
+  dictionary: jk_ascii
   # prefix: "`"
   prefix: "/"
-  suffix: "'"
-  tips: 〔拼音·反查〕
-  preedit_format:
-    - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
-    - xform/([jqxy])v/$1u/
+  suffix: ":"
+  tips: 〔字符·反查〕
 
 
 # === 自定义短语：custom_phrase.txt ===

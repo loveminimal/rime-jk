@@ -14,9 +14,9 @@ echo -e "\e[42m✅ 白霜万象鹤形词库已转换完成  「 flypy_dicts 」\
 
 cd C:/Users/jack/AppData/Roaming/Rime
 echo -e "\e[32m🔜 开始复制为白霜万象鹤形词库  「 flypy_dicts 」\e[0m"
-echo -e "\e[32m正在复制 20% »»»»               「 flypy_dicts 」\e[0m"
-echo -e "\e[32m正在复制 63% »»»»»»»»»»         「 flypy_dicts 」\e[0m"
-echo -e "\e[32m正在复制 99% »»»»»»»»»»»»»»»»»»»「 flypy_dicts 」\e[0m"
+echo -e "正在复制 20% »»»»                          「 flypy_dicts 」"
+echo -e "正在复制 63% »»»»»»»»»»»»»»»»              「 flypy_dicts 」"
+echo -e "正在复制 99% »»»»»»»»»»»»»»»»»»»»»»»»»»»»»»「 flypy_dicts 」"
 if [ -d "flypy_dicts" ]
 then
     rm -rf flypy_dicts

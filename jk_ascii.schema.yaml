@@ -59,7 +59,7 @@ speller:
   # [ ✗上屏 ]
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
   # alphabet: ·
-  alphabet: z/
+  alphabet: z%
   # alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   # alphabet: zZYXWVUTSRQPONMLKJIHGFEDCBA
   # [ ✓上屏 ]
@@ -82,7 +82,7 @@ translator:
 reverse_lookup:
   dictionary: jk_ascii
   # prefix: "`"
-  prefix: "/"
+  prefix: "%"
   suffix: ":"
   tips: 〔字符·反查〕
 
@@ -135,5 +135,5 @@ key_binder:
 recognizer:
   # import_preset: default
   patterns:
-    reverse_lookup: "^/[a-z]*:?$"
+    reverse_lookup: "^%[a-z]*:?$"
     punct: "^z([0-9]|10|[A-Za-z]+)$"

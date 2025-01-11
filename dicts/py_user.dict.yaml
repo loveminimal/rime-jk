@@ -1,0 +1,377 @@
+# Rime dictionary - py_user.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于官方自动同步的用户词典合并排序生成
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+# 运行脚本：
+# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_py_user_dict.py
+# - py scripts/sync_py_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# 
+---
+name: py_user
+version: '2025.01'
+sort: by_weight
+use_preset_vocabulary: false
+...
+啊	a;kb; 	0
+吧	ba;kc; 	0
+帮	bang;dt; 	0
+宝	bao;pg; 	1
+抱	bao;rq; 	0
+比	bi;xx; 	1
+并	bing;ua; 	0
+打	da;rs; 	1
+带	dai;gk; 	0
+地	de;f,fb; 	1
+的	de;r,rq; 	11
+得	de;tj; 	2
+都	dou;ft; 	1
+多	duo;qq; 	1
+嗯	en;kl; 	1
+发	fa;v,nt; 	1
+放	fang;yt; 	1
+刚	gang;mq; 	1
+个	ge;wh; 	1
+给	gei;xw; 	0
+跟	gen;kh; 	1
+哈	ha;kw; 	0
+还	hai;gi; 	1
+嗨	hai;ki; 	1
+和	he;t,tk; 	3
+很	hen;tv; 	1
+击	ji;fm; 	0
+记	ji;yn; 	0
+就	jiu;yi; 	1
+啦	la;kr; 	0
+了	le;b,bn; 	2
+嘞	lei;ka; 	2
+吗	ma;kc; 	0
+没	mei;im; 	0
+姆	mu;vx; 	1
+呢	ne;kn; 	1
+你	ni;wq; 	0
+票	piao;sf; 	0
+起	qi;fh; 	1
+强	qiang;xk; 	0
+亲	qin;us; 	2
+是	shi;j,jg; 	7
+他	ta;wb; 	0
+我	wo;q,tr; 	1
+想	xiang;sh; 	0
+小	xiao;ih; 	0
+要	yao;s,sv; 	1
+也	ye;bn; 	2
+用	yong;et; 	0
+有	you;e,de; 	1
+在	zai;d,dh; 	1
+早	zao;jh; 	1
+这	zhe;p,yp; 	1
+振	zhen;rd; 	2
+安心	an;pv; xin;ny; 	0
+宝子	bao;pg; zi;bb; 	1
+别管	bie;kl; guan;tp; 	0
+并击	bing;ua; ji;fm; 	1
+不错	bu;i,gi; cuo;qa; 	0
+不放	bu;i,gi; fang;yt; 	1
+不好	bu;i,gi; hao;vb; 	0
+不要	bu;i,gi; yao;s,sv; 	0
+不再	bu;i,gi; zai;gm; 	0
+超强	chao;fh; qiang;xk; 	0
+吃过	chi;kt; guo;fp; 	0
+抽抽	chou;rm; chou;rm; 	0
+刺激	ci;gm; ji;ir; 	0
+词库	ci;yn; ku;yl; 	0
+词语	ci;yn; yu;yg; 	2
+错的	cuo;qa; de;r,rq; 	0
+大大	da;dd; da;dd; 	0
+大人	da;dd; ren;w,ww; 	0
+打字	da;rs; zi;pb; 	0
+带的	dai;gk; de;r,rq; 	0
+单纯	dan;uj; chun;xg; 	0
+单独	dan;uj; du;qt; 	0
+到底	dao;gc; di;yq; 	0
+得啦	de;tj; la;kr; 	0
+定居	ding;pg; ju;nd; 	0
+都是	dou;ft; shi;j,jg; 	0
+都在	dou;ft; zai;d,dh; 	0
+多点	duo;qq; dian;hk; 	1
+多是	duo;qq; shi;j,jg; 	0
+发展	fa;v,nt; zhan;na; 	1
+放假	fang;yt; jia;wn; 	1
+方式	fang;yy; shi;aa; 	0
+公司	gong;wc; si;ng; 	0
+估计	gu;wd; ji;yf; 	0
+挂了	gua;rf; le;b,bn; 	1
+过年	guo;fp; nian;rh; 	0
+哈哈	ha;kw; ha;kw; 	6
+还是	hai;gi; shi;j,jg; 	2
+还有	hai;gi; you;e,de; 	0
+好的	hao;vb; de;r,rq; 	1
+好好	hao;vb; hao;vb; 	0
+嘿嘿	hei;kl; hei;kl; 	4
+换成	huan;rq; cheng;dn; 	0
+换个	huan;rq; ge;wh; 	0
+换谁	huan;rq; shei;yw; 	1
+几点	ji;mt; dian;hk; 	0
+几个	ji;mt; ge;wh; 	0
+教程	jiao;ft; cheng;tk; 	0
+看看	kan;rh; kan;rh; 	0
+看了	kan;rh; le;b,bn; 	0
+看着	kan;rh; zhe;ud; 	0
+可以	ke;sk; yi;c,ny; 	0
+来回	lai;go; hui;lk; 	0
+懒得	lan;ng; de;tj; 	0
+老姐	lao;ft; jie;ve; 	4
+老人	lao;ft; ren;w,ww; 	0
+老师	lao;ft; shi;jg; 	1
+了吗	le;b,bn; ma;kc; 	0
+累的	lei;lx; de;r,rq; 	0
+两笔	liang;gm; bi;tt; 	0
+妈妈	ma;vc; ma;vc; 	2
+买过	mai;nu; guo;fp; 	0
+买票	mai;nu; piao;sf; 	0
+没见	mei;im; jian;mq; 	0
+没有	mei;im; you;e,de; 	1
+美丽	mei;ug; li;gm; 	0
+懵圈	meng;na; quan;lu; 	1
+目前	mu;hh; qian;ue; 	0
+那是	na;vf; shi;j,jg; 	0
+奶奶	nai;ve; nai;ve; 	1
+腻歪	ni;ea; wai;gi; 	0
+你用	ni;wq; yong;et; 	0
+其实	qi;ad; shi;pu; 	1
+起床	qi;fh; chuang;ys; 	1
+前二	qian;ue; er;fg; 	1
+上班	shang;h,hh; ban;gy; 	0
+深圳	shen;ip; zhen;fk; 	1
+是啊	shi;j,jg; a;kb; 	1
+是的	shi;j,jg; de;r,rq; 	1
+是谁	shi;j,jg; shei;yw; 	0
+视频	shi;py; pin;hi; 	0
+使用	shi;wg; yong;et; 	0
+输入	shu;lw; ru;ty; 	0
+双拼	shuang;cc; pin;ru; 	4
+说了	shuo;yu; le;b,bn; 	0
+琐事	suo;gi; shi;gk; 	0
+所以	suo;rn; yi;c,ny; 	0
+太小	tai;dy; xiao;ih; 	1
+天性	tian;gd; xing;nt; 	0
+挺早	ting;rt; zao;jh; 	1
+网上	wang;mq; shang;h,hh; 	0
+我刚	wo;q,tr; gang;mq; 	0
+我们	wo;q,tr; men;wu; 	1
+五笔	wu;gg; bi;tt; 	2
+现在	xian;gm; zai;d,dh; 	1
+想了	xiang;sh; le;b,bn; 	0
+想你	xiang;sh; ni;wq; 	0
+小孩	xiao;ih; hai;by; 	1
+小鹤	xiao;ih; he;pw; 	2
+新的	xin;us; de;r,rq; 	0
+学习	xue;ip; xi;nu; 	0
+演练	yan;ip; lian;xa; 	0
+样子	yang;su; zi;bb; 	1
+养大	yang;ud; da;dd; 	0
+要请	yao;s,sv; qing;yg; 	1
+也是	ye;bn; shi;j,jg; 	0
+一半	yi;g,gg; ban;uf; 	1
+一万	yi;g,gg; wan;dn; 	0
+一下	yi;g,gg; xia;gh; 	0
+一项	yi;g,gg; xiang;ad; 	1
+已经	yi;nn; jing;x,xc; 	0
+引擎	yin;xh; qing;aq; 	0
+运动	yun;fc; dong;fc; 	0
+在家	zai;d,dh; jia;pe; 	0
+再说	zai;gm; shuo;yu; 	0
+早晨	zao;jh; chen;jd; 	0
+早饭	zao;jh; fan;qn; 	1
+找到	zhao;ra; dao;gc; 	0
+这边	zhe;p,yp; bian;lp; 	1
+这个	zhe;p,yp; ge;wh; 	0
+这是	zhe;p,yp; shi;j,jg; 	0
+郑州	zheng;ud; zhou;yt; 	1
+至少	zhi;gc; shao;it; 	0
+至于	zhi;gc; yu;gf; 	0
+指导	zhi;rx; dao;nf; 	0
+中午	zhong;k,kh; wu;tf; 	0
+足球	zu;kh; qiu;gf; 	2
+最近	zui;jb; jin;rp; 	0
+本质上	ben;sg; zhi;rf; shang;h,hh; 	0
+不好哈	bu;i,gi; hao;vb; ha;kw; 	1
+不让我	bu;i,gi; rang;yh; wo;q,tr; 	0
+不值当	bu;i,gi; zhi;wf; dang;iv; 	0
+吃饭晚	chi;kt; fan;qn; wan;jq; 	0
+待几天	dai;tf; ji;mt; tian;gd; 	0
+得什么	de;tj; shen;wf; me;tc; 	0
+都一样	dou;ft; yi;g,gg; yang;su; 	0
+多一点	duo;qq; yi;g,gg; dian;hk; 	1
+放假了	fang;yt; jia;wn; le;b,bn; 	0
+辅助码	fu;lg; zhu;eg; ma;dc; 	1
+跟孩子	gen;kh; hai;by; zi;bb; 	0
+过几年	guo;fp; ji;mt; nian;rh; 	0
+还是跟	hai;gi; shi;j,jg; gen;kh; 	1
+好家伙	hao;vb; jia;pe; huo;wo; 	1
+花架子	hua;aw; jia;lk; zi;bb; 	1
+几个人	ji;mt; ge;wh; ren;w,ww; 	1
+几天假	ji;mt; tian;gd; jia;wn; 	0
+加起来	jia;lk; qi;fh; lai;go; 	1
+见到了	jian;mq; dao;gc; le;b,bn; 	1
+就回家	jiu;yi; hui;lk; jia;pe; 	0
+看了个	kan;rh; le;b,bn; ge;wh; 	0
+可以的	ke;sk; yi;c,ny; de;r,rq; 	1
+理论上	li;gj; lun;yw; shang;h,hh; 	0
+慢慢地	man;nj; man;nj; de;f,fb; 	0
+没入门	mei;im; ru;ty; men;uy; 	0
+姆巴佩	mu;vx; ba;cn; pei;wm; 	1
+那么长	na;vf; me;tc; chang;ta; 	0
+你倒是	ni;wq; dao;wg; shi;j,jg; 	0
+你来吗	ni;wq; lai;go; ma;kc; 	1
+你是谁	ni;wq; shi;j,jg; shei;yw; 	1
+弄过来	nong;ga; guo;fp; lai;go; 	0
+强制地	qiang;xk; zhi;rm; de;f,fb; 	0
+群公告	qun;vt; gong;wc; gao;tf; 	1
+是不是	shi;j,jg; bu;i,gi; shi;j,jg; 	0
+输入法	shu;lw; ru;ty; fa;if; 	0
+说说看	shuo;yu; shuo;yu; kan;rh; 	0
+太多了	tai;dy; duo;qq; le;b,bn; 	0
+我来了	wo;q,tr; lai;go; le;b,bn; 	1
+我们是	wo;q,tr; men;wu; shi;j,jg; 	0
+我是谁	wo;q,tr; shi;j,jg; shei;yw; 	1
+我也在	wo;q,tr; ye;bn; zai;d,dh; 	0
+养大的	yang;ud; da;dd; de;r,rq; 	1
+要回家	yao;s,sv; hui;lk; jia;pe; 	0
+也不错	ye;bn; bu;i,gi; cuo;qa; 	1
+也没有	ye;bn; mei;im; you;e,de; 	0
+一向不	yi;g,gg; xiang;tm; bu;i,gi; 	0
+怎么改	zen;th; me;tc; gai;nt; 	0
+怎么用	zen;th; me;tc; yong;et; 	0
+找时间	zhao;ra; shi;jf; jian;uj; 	0
+这也是	zhe;p,yp; ye;bn; shi;j,jg; 	0
+郑州强	zheng;ud; zhou;yt; qiang;xk; 	1
+直接用	zhi;fh; jie;ru; yong;et; 	0
+只有我	zhi;kw; you;e,de; wo;q,tr; 	0
+主要是	zhu;y,yg; yao;s,sv; shi;j,jg; 	0
+爸爸妈妈	ba;wq; ba;wq; ma;vc; ma;vc; 	0
+不再使用	bu;i,gi; zai;gm; shi;wg; yong;et; 	0
+不值当的	bu;i,gi; zhi;wf; dang;iv; de;r,rq; 	1
+超强两笔	chao;fh; qiang;xk; liang;gm; bi;tt; 	1
+吃饭了吗	chi;kt; fan;qn; le;b,bn; ma;kc; 	0
+大人过年	da;dd; ren;w,ww; guo;fp; nian;rh; 	1
+都是琐事	dou;ft; shi;j,jg; suo;gi; shi;gk; 	1
+多长时间	duo;qq; chang;ta; shi;jf; jian;uj; 	1
+多少天了	duo;qq; shao;it; tian;gd; le;b,bn; 	0
+多是演练	duo;qq; shi;j,jg; yan;ip; lian;xa; 	1
+感觉不错	gan;dg; jue;ip; bu;i,gi; cuo;qa; 	0
+还是打字	hai;gi; shi;j,jg; da;rs; zi;pb; 	1
+好好歇歇	hao;vb; hao;vb; xie;jq; xie;jq; 	0
+几天假吗	ji;mt; tian;gd; jia;wn; ma;kc; 	1
+看了一圈	kan;rh; le;b,bn; yi;g,gg; quan;lu; 	0
+看着并击	kan;rh; zhe;ud; bing;ua; ji;fm; 	1
+没入门呢	mei;im; ru;ty; men;uy; ne;kn; 	1
+你的地址	ni;wq; de;r,rq; di;f,fb; zhi;fh; 	0
+你来不来	ni;wq; lai;go; bu;i,gi; lai;go; 	0
+你是谁啊	ni;wq; shi;j,jg; shei;yw; a;kb; 	1
+你在哪儿	ni;wq; zai;d,dh; na;kv; er;qt; 	0
+入门教程	ru;ty; men;uy; jiao;ft; cheng;tk; 	0
+省会城市	sheng;it; hui;wf; cheng;fd; shi;ym; 	1
+是一样的	shi;j,jg; yi;g,gg; yang;su; de;r,rq; 	0
+输入方案	shu;lw; ru;ty; fang;yy; an;pv; 	1
+输入引擎	shu;lw; ru;ty; yin;xh; qing;aq; 	1
+吞噬星空	tun;gd; shi;kt; xing;jt; kong;pw; 	1
+我不知道	wo;q,tr; bu;i,gi; zhi;td; dao;ut; 	0
+我刚吃过	wo;q,tr; gang;mq; chi;kt; guo;fp; 	1
+我这也是	wo;q,tr; zhe;p,yp; ye;bn; shi;j,jg; 	1
+五笔前二	wu;gg; bi;tt; qian;ue; er;fg; 	2
+现在在家	xian;gm; zai;d,dh; zai;d,dh; jia;pe; 	1
+想太多了	xiang;sh; tai;dy; duo;qq; le;b,bn; 	1
+小鹤双拼	xiao;ih; he;pw; shuang;cc; pin;ru; 	0
+学习并击	xue;ip; xi;nu; bing;ua; ji;fm; 	1
+要慢慢地	yao;s,sv; man;nj; man;nj; de;f,fb; 	1
+在一起吗	zai;d,dh; yi;g,gg; qi;fh; ma;kc; 	1
+早晨几点	zao;jh; chen;jd; ji;mt; dian;hk; 	1
+怎么说呢	zen;th; me;tc; shuo;yu; ne;kn; 	1
+正在努力	zheng;gh; zai;d,dh; nu;vc; li;lt; 	1
+只不过是	zhi;kw; bu;i,gi; guo;fp; shi;j,jg; 	0
+不错的运动	bu;i,gi; cuo;qa; de;r,rq; yun;fc; dong;fc; 	1
+不让我抱吧	bu;i,gi; rang;yh; wo;q,tr; bao;rq; ba;kc; 	1
+不要那么长	bu;i,gi; yao;s,sv; na;vf; me;tc; chang;ta; 	1
+不要那么多	bu;i,gi; yao;s,sv; na;vf; me;tc; duo;qq; 	1
+都是好孩子	dou;ft; shi;j,jg; hao;vb; hai;by; zi;bb; 	1
+都是一样的	dou;ft; shi;j,jg; yi;g,gg; yang;su; de;r,rq; 	1
+感觉差不多	gan;dg; jue;ip; cha;ud; bu;i,gi; duo;qq; 	0
+公司强制地	gong;wc; si;ng; qiang;xk; zhi;rm; de;f,fb; 	1
+过几年再说	guo;fp; ji;mt; nian;rh; zai;gm; shuo;yu; 	1
+还是不错的	hai;gi; shi;j,jg; bu;i,gi; cuo;qa; de;r,rq; 	1
+还是一样的	hai;gi; shi;j,jg; yi;g,gg; yang;su; de;r,rq; 	1
+还有他是谁	hai;gi; you;e,de; ta;wb; shi;j,jg; shei;yw; 	1
+回家过大年	hui;lk; jia;pe; guo;fp; da;dd; nian;rh; 	1
+减轻了负担	jian;ud; qing;lc; le;b,bn; fu;qm; dan;rj; 	0
+今年不回家	jin;wy; nian;rh; bu;i,gi; hui;lk; jia;pe; 	0
+来回小一万	lai;go; hui;lk; xiao;ih; yi;g,gg; wan;dn; 	1
+没见小孩了	mei;im; jian;mq; xiao;ih; hai;by; le;b,bn; 	1
+美丽本质上	mei;ug; li;gm; ben;sg; zhi;rf; shang;h,hh; 	1
+你来不来啊	ni;wq; lai;go; bu;i,gi; lai;go; a;kb; 	1
+你来不来吗	ni;wq; lai;go; bu;i,gi; lai;go; ma;kc; 	1
+你在哪儿嘞	ni;wq; zai;d,dh; na;kv; er;qt; lei;ka; 	1
+票买过了吗	piao;sf; mai;nu; guo;fp; le;b,bn; ma;kc; 	1
+是什么样的	shi;j,jg; shen;wf; me;tc; yang;su; de;r,rq; 	0
+输入法抽抽	shu;lw; ru;ty; fa;if; chou;rm; chou;rm; 	1
+压力太大了	ya;df; li;lt; tai;dy; da;dd; le;b,bn; 	0
+也是累的哈	ye;bn; shi;j,jg; lei;lx; de;r,rq; ha;kw; 	1
+已经放假了	yi;nn; jing;x,xc; fang;yt; jia;wn; le;b,bn; 	1
+至于多一点	zhi;gc; yu;gf; duo;qq; yi;g,gg; dian;hk; 	1
+最近看了个	zui;jb; jin;rp; kan;rh; le;b,bn; ge;wh; 	1
+单纯是吃饭晚	dan;uj; chun;xg; shi;j,jg; chi;kt; fan;qn; wan;jq; 	1
+都是一样的啦	dou;ft; shi;j,jg; yi;g,gg; yang;su; de;r,rq; la;kr; 	1
+感觉差不多啦	gan;dg; jue;ip; cha;ud; bu;i,gi; duo;qq; la;kr; 	1
+今年不回家嘞	jin;wy; nian;rh; bu;i,gi; hui;lk; jia;pe; lei;ka; 	1
+理论上可以吧	li;gj; lun;yw; shang;h,hh; ke;sk; yi;c,ny; ba;kc; 	1
+目前感觉不错	mu;hh; qian;ue; gan;dg; jue;ip; bu;i,gi; cuo;qa; 	1
+你倒是说说看	ni;wq; dao;wg; shi;j,jg; shuo;yu; shuo;yu; kan;rh; 	1
+你们什么时候	ni;wq; men;wu; shen;wf; me;tc; shi;jf; hou;wh; 	0
+所以老人给带	suo;rn; yi;c,ny; lao;ft; ren;w,ww; gei;xw; dai;gk; 	1
+网上看了一圈	wang;mq; shang;h,hh; kan;rh; le;b,bn; yi;g,gg; quan;lu; 	1
+我也在用小鹤	wo;q,tr; ye;bn; zai;d,dh; yong;et; xiao;ih; he;pw; 	1
+五笔怎么说呢	wu;gg; bi;tt; zen;th; me;tc; shuo;yu; ne;kn; 	1
+现在还不知道	xian;gm; zai;d,dh; hai;gi; bu;i,gi; zhi;td; dao;ut; 	0
+只有我放假早	zhi;kw; you;e,de; wo;q,tr; fang;yt; jia;wn; zao;jh; 	1
+中午吃饭了吗	zhong;k,kh; wu;tf; chi;kt; fan;qn; le;b,bn; ma;kc; 	1
+爸爸妈妈帮带的	ba;wq; ba;wq; ma;vc; ma;vc; bang;dt; dai;gk; de;r,rq; 	1
+别管是不是妈妈	bie;kl; guan;tp; shi;j,jg; bu;i,gi; shi;j,jg; ma;vc; ma;vc; 	1
+不再使用五笔了	bu;i,gi; zai;gm; shi;wg; yong;et; wu;gg; bi;tt; le;b,bn; 	1
+不再学习并击的	bu;i,gi; zai;gm; xue;ip; xi;nu; bing;ua; ji;fm; de;r,rq; 	1
+大大减轻了负担	da;dd; da;dd; jian;ud; qing;lc; le;b,bn; fu;qm; dan;rj; 	1
+还有什么好说的	hai;gi; you;e,de; shen;wf; me;tc; hao;vb; shuo;yu; de;r,rq; 	0
+江湖夜雨十年灯	jiang;ia; hu;id; ye;yw; yu;fg; shi;fg; nian;rh; deng;os; 	1
+你是什么样的呢	ni;wq; shi;j,jg; shen;wf; me;tc; yang;su; de;r,rq; ne;kn; 	2
+你用得什么词库	ni;wq; yong;et; de;tj; shen;wf; me;tc; ci;yn; ku;yl; 	1
+说了都一样得啦	shuo;yu; le;b,bn; dou;ft; yi;g,gg; yang;su; de;tj; la;kr; 	1
+我们都是好孩子	wo;q,tr; men;wu; dou;ft; shi;j,jg; hao;vb; hai;by; zi;bb; 	1
+我们都是一样的	wo;q,tr; men;wu; dou;ft; shi;j,jg; yi;g,gg; yang;su; de;r,rq; 	2
+一向不错的运动	yi;g,gg; xiang;tm; bu;i,gi; cuo;qa; de;r,rq; yun;fc; dong;fc; 	1
+这个教程可以的	zhe;p,yp; ge;wh; jiao;ft; cheng;tk; ke;sk; yi;c,ny; de;r,rq; 	1
+这是小孩的天性	zhe;p,yp; shi;j,jg; xiao;ih; hai;by; de;r,rq; tian;gd; xing;nt; 	1
+直接用的五笔的	zhi;fh; jie;ru; yong;et; de;r,rq; wu;gg; bi;tt; de;r,rq; 	1
+并击看了几个视频	bing;ua; ji;fm; kan;rh; le;b,bn; ji;mt; ge;wh; shi;py; pin;hi; 	1
+辅助码懒得记新的	fu;lg; zhu;eg; ma;dc; lan;ng; de;tj; ji;yn; xin;us; de;r,rq; 	1
+还有什么好说的呢	hai;gi; you;e,de; shen;wf; me;tc; hao;vb; shuo;yu; de;r,rq; ne;kn; 	1
+好好跟孩子待几天	hao;vb; hao;vb; gen;kh; hai;by; zi;bb; dai;tf; ji;mt; tian;gd; 	1
+就回家没多少天了	jiu;yi; hui;lk; jia;pe; mei;im; duo;qq; shao;it; tian;gd; le;b,bn; 	1
+起使用双拼也是打	qi;fh; shi;wg; yong;et; shuang;cc; pin;ru; ye;bn; shi;j,jg; da;rs; 	1
+我不知道怎么改嘞	wo;q,tr; bu;i,gi; zhi;td; dao;ut; zen;th; me;tc; gai;nt; lei;ka; 	1
+至少可以安心上班	zhi;gc; shao;it; ke;sk; yi;c,ny; an;pv; xin;ny; shang;h,hh; ban;gy; 	1
+只不过是都在这边	zhi;kw; bu;i,gi; guo;fp; shi;j,jg; dou;ft; zai;d,dh; zhe;p,yp; bian;lp; 	1
+你的地址弄过来看看	ni;wq; de;r,rq; di;f,fb; zhi;fh; nong;ga; guo;fp; lai;go; kan;rh; kan;rh; 	1
+你们什么时候放假嘞	ni;wq; men;wu; shen;wf; me;tc; shi;jf; hou;wh; fang;yt; jia;wn; lei;ka; 	1
+我们是来回不好买票	wo;q,tr; men;wu; shi;j,jg; lai;go; hui;lk; bu;i,gi; hao;vb; mai;nu; piao;sf; 	1
+小孩估计想你想了很	xiao;ih; hai;by; gu;wd; ji;yf; xiang;sh; ni;wq; xiang;sh; le;b,bn; hen;tv; 	1
+找时间单独指导一下	zhao;ra; shi;jf; jian;uj; dan;uj; du;qt; zhi;rx; dao;nf; yi;g,gg; xia;gh; 	1
+这边定居压力太大了	zhe;p,yp; bian;lp; ding;pg; ju;nd; ya;df; li;lt; tai;dy; da;dd; le;b,bn; 	1
+换个新的方式刺激一下	huan;rq; ge;wh; xin;us; de;r,rq; fang;yy; shi;aa; ci;gm; ji;ir; yi;g,gg; xia;gh; 	1
+那是要回家好好歇歇了	na;vf; shi;j,jg; yao;s,sv; hui;lk; jia;pe; hao;vb; hao;vb; xie;jq; xie;jq; le;b,bn; 	1
+我主要是五笔用腻歪了	wo;q,tr; zhu;y,yg; yao;s,sv; shi;j,jg; wu;gg; bi;tt; yong;et; ni;ea; wai;gi; le;b,bn; 	1
+现在换成使用小鹤双拼了	xian;gm; zai;d,dh; huan;rq; cheng;dn; shi;wg; yong;et; xiao;ih; he;pw; shuang;cc; pin;ru; le;b,bn; 	1
+也没有找到不错的入门教程	ye;bn; mei;im; you;e,de; zhao;ra; dao;gc; bu;i,gi; cuo;qa; de;r,rq; ru;ty; men;uy; jiao;ft; cheng;tk; 	1
+我现在还不知道并击到底怎么用	wo;q,tr; xian;gm; zai;d,dh; hai;gi; bu;i,gi; zhi;td; dao;ut; bing;ua; ji;fm; dao;gc; di;yq; zen;th; me;tc; yong;et; 	1

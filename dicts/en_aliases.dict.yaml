@@ -14,7 +14,7 @@
 #
 ---
 name: en_aliases
-version: '2025-01-10'
+version: '2025.01'
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -92,11 +92,14 @@ cd ~/AppData/Roaming/site/content/.obsidian/themes/Virgo	cdo	0
 cd D:/sourcecode/sc_rime/rime-utils	cdu	0
 # --- Linux ---
 cd ~/.emacs.d	cdee	0
+cd ~/.shell	cdsh	0
 cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
 cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	pysync	0
-cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	ssuenalias	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_py_user_dict.py	pysyncpy	0
+cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	ssualias	0
+cd ~/AppData/Roaming/Rime && source scripts/update-flypy_dicts.sh	ssuflypy	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && scp -r public/* aituyaa.com:/home/jack/blog/ && rm -rf public	sscp	0
 

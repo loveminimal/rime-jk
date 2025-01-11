@@ -22,5 +22,6 @@ import_tables:
   - flypy_dicts/ext
   - flypy_dicts/others
   - flypy_dicts/tencent
+  - dicts/py_user
 use_preset_vocabulary: false
 ...

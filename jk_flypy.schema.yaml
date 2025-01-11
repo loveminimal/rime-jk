@@ -31,8 +31,6 @@ switches:
   - name: ascii_mode
     reset: 0 
     states: [ 中文, 英文 ]
-  # - name: full_shape
-  #   states: [半角, 全角]
   - name: emoji
     reset: 1
     states: [ 💀, 😄 ]
@@ -124,7 +122,6 @@ speller:
     - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
     - abbrev/^([a-z]).+$/$1/
     # --- 辅助码 ---
-    # - xform/^(.{2}|\w+?);.*?;(.*?);.*$/$1;$2/   
     - derive|^(.{2});.*$|$1|                                          # 纯双拼的情况
     - derive|^(.{2});(\w)(\w).*$|$1$2|                                # 双拼+一位辅助码的情况
     - derive|^(.{2});(\w)(\w).*$|$1[$2|                               # 双拼+[一位辅助码的情况
@@ -161,6 +158,41 @@ translator:
   enable_user_dict: true                 # 是否开启用户词典
   enable_encoder: true                   # 是否开启自动造词
   comment_format: {comment}
+  # preedit_format 影响到输入框的显示和“ Shift+⏎” 上屏的字符
+  # preedit_format:                        
+  #   - xform/([bpmfdtnljqx])n/$1iao/
+  #   - xform/(\w)g/$1eng/
+  #   - xform/(\w)q/$1iu/
+  #   - xform/(\w)w/$1ei/
+  #   - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
+  #   - xform/(\w)t/$1ve/
+  #   - xform/(\w)y/$1un/
+  #   - xform/([dtnlgkhvuirzcs])o/$1uo/
+  #   - xform/(\w)p/$1ie/
+  #   - xform/([jqx])s/$1iong/
+  #   - xform/(\w)s/$1ong/
+  #   - xform/(\w)d/$1ai/
+  #   - xform/(\w)f/$1en/
+  #   - xform/(\w)h/$1ang/
+  #   - xform/(\w)j/$1an/
+  #   - xform/([gkhvuirzcs])k/$1uai/
+  #   - xform/(\w)k/$1ing/
+  #   - xform/([jqxnlb])l/$1iang/
+  #   - xform/(\w)l/$1uang/
+  #   - xform/(\w)z/$1ou/
+  #   - xform/([gkhvuirzcs])x/$1ua/
+  #   - xform/(\w)x/$1ia/
+  #   - xform/(\w)c/$1ao/
+  #   - xform/([dtgkhvuirzcs])v/$1ui/
+  #   - xform/(\w)b/$1in/
+  #   - xform/(\w)m/$1ian/
+  #   - xform/([aoe])\1(\w)/$1$2/
+  #   - "xform/(^|[ '])v/$1zh/"
+  #   - "xform/(^|[ '])i/$1ch/"
+  #   - "xform/(^|[ '])u/$1sh/"
+  #   - xform/([jqxy])v/$1u/
+  #   - xform/([nl])v/$1ü/
+  #   - xform/ü/v/
 
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===
@@ -172,7 +204,7 @@ date_translator:
 reverse_lookup:
   dictionary: pinyin_simp
   # prefix: "`"
-  prefix: "/"
+  prefix: "%"
   suffix: "'"
   tips: 〔拼音·反查〕
   preedit_format:
@@ -184,11 +216,11 @@ reverse_lookup:
 # === 自定义短语：custom_phrase.txt ===
 custom_phrase:
   dictionary: ""
-  user_dict: custom_phrase               # 可以修改这里，改成自己的 txt 文件
-  db_class: stabledb                     # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
+  user_dict: custom_phrase 
+  db_class: stabledb
   enable_completion: false               # 补全提示
   enable_sentence: false                 # 禁止造句
-  initial_quality: 99                    # custom_phrase 的权重应该比 pinyin 和 melt_eng 大
+  initial_quality: 99
 
 
 # === Emoji ===
@@ -225,5 +257,5 @@ recognizer:
   # import_preset: default
   patterns:
     # reverse_lookup: "`[a-z]*'?$"
-    reverse_lookup: "^/[a-z]*:?$"
+    reverse_lookup: "^%[a-z]*:?$"
     punct: "^z([0-9]|10|[A-Za-z]+)$"

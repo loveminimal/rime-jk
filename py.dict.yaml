@@ -2,7 +2,7 @@
 # encoding: utf-8
 # 
 # --- 说明 ---
-# 该字典是基于万象拼音词库的拼音+五笔前二辅助码版本，该
+# 该字典是基于白霜拼音词库的拼音+五笔前二辅助码版本，该
 # ... 版本的词量和词频体验良好，只使用基础词库的情况下便是如此，故
 # ... 我们只保留基础词库和 8105 通用单字表即可，可以用到老 ~
 # 
@@ -16,14 +16,12 @@ name: py
 version: "2024.05.11"
 sort: by_weight
 import_tables:      
-  - cn_dicts/chars        
-  - cn_dicts/base         
-  - cn_dicts/correlation  
-  - cn_dicts/associational
-  - cn_dicts/corrections  
-  - cn_dicts/compatible   
-  - cn_dicts/people       
-  - cn_dicts/division     
+  - cn_dicts/8105
+  - cn_dicts/base 
+  - cn_dicts/41448
+  - cn_dicts/ext
+  - cn_dicts/others
+  - cn_dicts/tencent
   - dicts/py_user
 use_preset_vocabulary: false
 ...

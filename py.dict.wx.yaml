@@ -1,0 +1,29 @@
+# Rime dictionary
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于万象拼音词库的拼音+五笔前二辅助码版本，该
+# ... 版本的词量和词频体验良好，只使用基础词库的情况下便是如此，故
+# ... 我们只保留基础词库和 8105 通用单字表即可，可以用到老 ~
+# 
+# 参考码表：
+# - https://github.com/iDvel/rime-ice
+# - https://github.com/gaboolic/rime-frost 
+# - https://github.com/amzxyz/rime_wanxiang_pro
+# 
+---
+name: py
+version: "2024.05.11"
+sort: by_weight
+import_tables:      
+  - cn_dicts/chars        
+  - cn_dicts/base         
+  - cn_dicts/correlation  
+  - cn_dicts/associational
+  - cn_dicts/corrections  
+  - cn_dicts/compatible   
+  - cn_dicts/people       
+  - cn_dicts/division     
+  - dicts/py_user
+use_preset_vocabulary: false
+...

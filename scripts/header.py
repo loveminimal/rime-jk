@@ -35,7 +35,7 @@ use_preset_vocabulary: false
 
 
 # === 中文表头 ===
-def get_header_ice_wx(file_name):
+def get_header_wx(file_name):
     header = f'''
 # Rime dictionary - {file_name}
 # encoding: utf-8

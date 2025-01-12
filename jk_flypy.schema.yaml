@@ -43,6 +43,7 @@ switches:
 engine:
   processors:
     - ascii_composer
+    - chord_composer
     - recognizer
     - key_binder
     - speller
@@ -133,6 +134,9 @@ speller:
     - derive|^(.{2});(\w)(\w).*$|$1$2$3/|                             # 整句模式下，输入syff/ 出单字 增强单字性能
     - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3o|                          # 整句模式下，输入syffo 出单字 增强单字性能
     - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3/|                          # 整句模式下，输入syff/ 出单字 增强单字性能
+
+chord_composer:
+  __include: jk.yaml:/chord_composer
 
 
 # === segmentor ===
@@ -258,4 +262,4 @@ recognizer:
   patterns:
     # reverse_lookup: "`[a-z]*'?$"
     reverse_lookup: "^%[a-z]*:?$"
-    punct: "^z([0-9]|10|[A-Za-z]+)$"
+    punct: "^Z([0-9]|10|[A-Za-z]+)$"

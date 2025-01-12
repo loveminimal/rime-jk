@@ -1,0 +1,39 @@
+# Rime JK model
+# encoding: utf-8
+
+# === 并击 ===
+chord_composer:
+  # 字母表，包含用并击按键
+  # 击键一律以字母表顺序排列
+  # alphabet: "qwertasdfgzxcvbnmhkjklyuiop"
+  alphabet: ",.;'"
+  algebra:
+    # --- 修改为JK键位 ---
+    # - "xform/^,$/,/"
+    # - "xform/^\.$/./"
+    # 定义左手11键 - yuiop hjkl nm      
+    # - xform/^er(?![左右])/y左/
+    # - xform/^we(?![左右])/u左/
+    # - xform/^qw(?![左右])/i左/
+    # - xform/^wr(?![左右])/o左/
+    # - xform/^qr(?![左右])/p左/
+
+    # 定义右手15键 - qwert asdfg zxcvb
+    # - xform/ui(?![左右])$/q右/
+    # - xform/io(?![左右])$/w右/
+    # - xform/op(?![左右])$/e右/
+    # - xform/uo(?![左右])$/r右/
+    # - xform/up(?![左右])$/t右/
+
+    - xform/,.(?![左右])$/Z右/
+    - xform/;'(?![左右])$/%右/
+
+ # 并击过程中套用式样  
+  prompt_format:
+    # 加方括号
+    - "xform/^(.*)$/[$1]/" 
+  # 并击完成后套用式样
+  output_format:
+    - "xform/^(.*)左/$1/"
+    - "xform/^(.*)右$/$1/"
+    - "xform/^(.*)左(.*)右$/$1$2/"

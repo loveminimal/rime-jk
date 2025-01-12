@@ -52,6 +52,7 @@ engine:
   # --- 处理各类按键消息 ---
   processors:
     - ascii_composer                     # 处理西文模式及中西文切换
+    - chord_composer
     - key_binder                         # 在特定条件下将按键绑定到其他按键，放在其他 processor 之前判定……
     - recognizer                         # 与 matcher 搭配，处理符合特定规则的输入码，如网址、反查等 tags
     - speller                            # 拼写处理器，把字母追加到编码串
@@ -102,6 +103,10 @@ speller:
   delimiter: " z"                        # 第一位<空格>是拼音之间的分隔符；第二位 <z> 表示可以手动输入 z 来分割拼音
   # max_code_length: 4                   # 形码最大码长，超过则顶字上屏，四码顶字上屏
 
+
+chord_composer:
+  __include: jk.yaml:/chord_composer
+    
 
 # === segmentor ===
 abc_segmentor:
@@ -193,5 +198,5 @@ recognizer:
   patterns:
     # reverse_lookup: "`[a-z]*'?$"
     reverse_lookup: "^%[a-z]*:?$"
-    punct: "^z([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
+    punct: "^Z([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
 

@@ -16,8 +16,8 @@ customization:
 patch:
   schema_list:
     - {schema: jk_ascii}
-    # - {schema: jk_wubi}
-    - {schema: jk_flypy}
+    - {schema: jk_wubi}
+    # - {schema: jk_flypy}
     - {schema: jk_bingji}
 
 

@@ -206,15 +206,15 @@ date_translator:
 
 # === 反查 ===
 reverse_lookup:
-  dictionary: pinyin_simp
+  dictionary: jk_wubi
   # prefix: "`"
   prefix: "%"
   suffix: "'"
-  tips: 〔拼音·反查〕
+  tips: 〔五笔·反查〕
   preedit_format:
-    - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
-    - xform/([jqxy])v/$1u/
+    # - xform/([nl])v/$1ü/
+    # - xform/([nl])ue/$1üe/
+    # - xform/([jqxy])v/$1u/
 
 
 # === 自定义短语：custom_phrase.txt ===

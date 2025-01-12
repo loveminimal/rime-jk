@@ -1160,7 +1160,7 @@ use_preset_vocabulary: false
 一般	ggte 	5
 一行	ggtf 	1
 一种	ggtk 	8
-五笔	ggtt 	29
+五笔	ggtt 	30
 一律	ggtv 	2
 一篇	ggty 	1
 一半	gguf 	1
@@ -1313,7 +1313,7 @@ use_preset_vocabulary: false
 小时	ihjf 	3
 小幅	ihmh 	1
 小写	ihpg 	8
-小鹤	ihpw 	6
+小鹤	ihpw 	7
 滤镜	ihqu 	4
 小伟	ihwf 	7
 小传	ihwf 	1

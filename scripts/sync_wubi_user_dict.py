@@ -4,7 +4,7 @@
 # 
 # 运行脚本：
 # - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
-# - py scripts/rime_sync_dict_to_wubi86_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - py scripts/sync_wubi_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 # 
 # 默认目录：
 # src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-wubi\\jk_wubi.userdb.txt
@@ -86,9 +86,9 @@ def convert(SRC_DIR, OUT_DIR, FILE_ENDSWITH_FILETER, MULTIFILE_OUT_MODE):
 					o.write(res)
 			# 统一生成在单个文件
 			elif MULTIFILE_OUT_MODE == 0:
-				with open(OUT_DIR / f'wubi_user.dict.yaml', 'a', encoding='utf-8') as o:
+				with open(OUT_DIR / f'{out_file}', 'a', encoding='utf-8') as o:
 					print('✅  » 已合并处理生成 %s 字词语' % word_len)
-					word_len == 1 and o.write(get_header_sync(f'wubi_user.dict.yaml'))	# 仅字长为 1 时添加表头
+					word_len == 1 and o.write(get_header_sync(f'{out_file}'))	# 仅字长为 1 时添加表头
 					o.write(res)
 
 if __name__ == '__main__':

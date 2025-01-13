@@ -14,7 +14,7 @@ schema:
     - https://github.com/rime/rime-wubi
     - https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
-    - pinyin_simp
+    - jk_flypy
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
   version: 6.2.0
@@ -136,11 +136,11 @@ date_translator:
 
 # === 反查 ===
 reverse_lookup:
-  dictionary: pinyin_simp
+  dictionary: jk_flypy
   # prefix: "`"
   prefix: "%"
   suffix: "'"
-  tips: 〔拼音·反查〕
+  tips: 〔小鹤·反查〕
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/

@@ -145,7 +145,7 @@ abc_segmentor:
     - reverse_lookup
 
 translator:
-  dictionary: py
+  dictionary: jk_flypy
   prism: jk_flypy
   # initial_quality: 10000
   # 是否自动补全（预测），酌情开启。

@@ -1,4 +1,4 @@
-# Rime dictionary - py_user.dict.yaml
+# Rime dictionary - flypy_user.dict.yaml
 # encoding: utf-8
 # 
 # --- 说明 ---
@@ -7,11 +7,11 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_py_user_dict.py
-# - py scripts/sync_py_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_flypy_user_dict.py
+# - py scripts/sync_flypy_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 # 
 ---
-name: py_user
+name: flypy_user
 version: '2025.01'
 sort: by_weight
 use_preset_vocabulary: false

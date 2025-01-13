@@ -29,7 +29,7 @@ then
     rm -rf $OUT_DICTS
 fi
 cp -r D:/sourcecode/sc_rime/rime-utils/dicts/rime-frost/$OUT_DICTS ./
-cp -f py.dict.frost.yaml py.dict.yaml
+cp -f scripts/data/flypy.dict.frost.yaml jk_flypy.dict.yaml
 echo -e "\e[42m✅ 白霜万象鹤形词库已复制完成  「 $OUT_DICTS 」\e[0m"
 
 # cd D:/sourcecode/sc_rime/rime-utils

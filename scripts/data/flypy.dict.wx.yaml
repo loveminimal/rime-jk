@@ -12,7 +12,7 @@
 # - https://github.com/amzxyz/rime_wanxiang_pro
 # 
 ---
-name: py
+name: jk_flypy
 version: "2024.05.11"
 sort: by_weight
 import_tables:      
@@ -24,6 +24,6 @@ import_tables:
   - cn_dicts/compatible   
   - cn_dicts/people       
   - cn_dicts/division     
-  - dicts/py_user
+  - dicts/flypy_user
 use_preset_vocabulary: false
 ...

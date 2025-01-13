@@ -6,10 +6,6 @@
 # 用于自定义字符串、命令的快捷输入
 # - https://github.com/loveminimal/rime-jk
 # - Jack Liu <https://aituyaa.com>
-# 
-# 运行脚本：
-# - https://github.com/loveminimal/rime-utils/blob/master/scripts/melt_eng_custom.py
-# - py scripts/wubi86.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 #
 ---
 name: en_custom

@@ -13,7 +13,7 @@ schema:
     - https://github.com/loveminimal/rime-jk
     - 辅助码方案源自万象拼音 https://github.com/amzxyz/rime_wanxiang_pro
   dependencies:
-    - pinyin_simp
+    - jk_wubi
   icon: "assets/fly_b.ico"
   ascii_icon: 'assets/ascii.ico'
 

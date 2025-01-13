@@ -9,7 +9,7 @@ name: jk_ascii
 version: "2023-05-09"
 sort: by_weight
 import_tables:
-  # - dicts/en          # 超集英文码表（近 4 万条）❌ melt_eng 的英文词库就是个垃圾
+  - dicts/en
   - dicts/en_custom
   - dicts/en_aliases
 ...

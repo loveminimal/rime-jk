@@ -1,6 +1,18 @@
 # Rime JK model
 # encoding: utf-8
 
+# === 字典反查 ===
+reverse_lookup:
+  dictionary: jk_ascii
+  # prefix: "`"
+  prefix: "%"
+  suffix: ":"
+  tips: 〔字符·反查〕
+  preedit_format:
+    - "xlit|%| |"
+  # comment_format:
+  #   - xform/%//
+
 # === 并击 ===
 chord_composer:
   # 字母表，包含用并击按键

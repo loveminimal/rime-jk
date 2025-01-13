@@ -14,7 +14,7 @@ schema:
     - https://github.com/rime/rime-wubi
     - https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
-    - jk_flypy
+    - jk_ascii
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
   version: 6.2.0
@@ -109,9 +109,9 @@ chord_composer:
     
 
 # === segmentor ===
-abc_segmentor:
-  extra_tags:                            # 为此 segmentor 所标记的段落插上其它 tag
-    - reverse_lookup
+# abc_segmentor:
+#   extra_tags:                            # 为此 segmentor 所标记的段落插上其它 tag
+#     - reverse_lookup
 
 
 # === 每个方案都有一个主 translator ===
@@ -135,17 +135,18 @@ date_translator:
 
 
 # === 反查 ===
+# reverse_lookup:
+#   dictionary: jk_flypy
+#   # prefix: "`"
+#   prefix: "%"
+#   suffix: "'"
+#   tips: 〔小鹤·反查〕
+#   preedit_format:
+#     - xform/([nl])v/$1ü/
+#     - xform/([nl])ue/$1üe/
+#     - xform/([jqxy])v/$1u/
 reverse_lookup:
-  dictionary: jk_flypy
-  # prefix: "`"
-  prefix: "%"
-  suffix: "'"
-  tips: 〔小鹤·反查〕
-  preedit_format:
-    - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
-    - xform/([jqxy])v/$1u/
-
+  __include: jk.yaml:/reverse_lookup
 
 # === 自定义短语：custom_phrase.txt ===
 custom_phrase:

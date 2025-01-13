@@ -19,15 +19,7 @@ pro_comment_format:
   fuzhu_type: en   
 
 switches:
-  - name: ascii_mode
-    reset: 0 
-    states: [ 中文, 英文 ]
-  - name: emoji
-    reset: 1
-    states: [ 💀, 😄 ]
-  - name: chaifen
-    reset: 0
-    states: [ 隐拆, 显拆 ]
+  __include: jk.yaml:/switches
 
 engine:
   processors:

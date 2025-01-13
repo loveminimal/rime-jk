@@ -28,15 +28,7 @@ pro_comment_format:
 # === 开关 ===
 # reset: ← 0 1 →
 switches:
-  - name: ascii_mode
-    reset: 0 
-    states: [ 中文, 英文 ]
-  - name: emoji
-    reset: 1
-    states: [ 💀, 😄 ]
-  - name: chaifen
-    reset: 0
-    states: [ 隐拆, 显拆 ]
+  __include: jk.yaml:/switches
 
 
 # === 引擎 ===

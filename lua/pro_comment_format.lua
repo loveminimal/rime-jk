@@ -114,7 +114,8 @@ function C.func(input, env)
             local cand_text = cand.text
             -- log.warning('cand.text >>> ' .. cand_text) 
             -- local cand_text = "China n.    中国 adj. 中国的 中国制造的"
-            local word, pos, meaning = string.match(cand_text, "(%a+)%s+(%a+%.%s*)(.+)")
+            -- local word, pos, meaning = string.match(cand_text, "(%a+)%s+(%a+%.%s*)(.+)")
+            local word, pos, meaning = string.match(cand_text, "(%a+)%s+([%a&%.]+)%s+(.+)")
             if word then                
                 -- log.warning("Word:" .. word)        -- 输出: Word: China
                 -- log.warning("POS:" .. pos)          -- 输出: POS: n.    

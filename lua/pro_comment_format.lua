@@ -92,7 +92,7 @@ end
 function C.func(input, env)
     -- 调用全局初始共享环境
     C.init(env)
-
+    -- log.warning('---------开始处理脚本-----')
     local processed_candidates = {}               -- 用于存储处理后的候选词
     local deal_count = 1
     if (env.settings == nil) then
@@ -109,6 +109,25 @@ function C.func(input, env)
             deal_count = deal_count + 1
             -- log.info(cand.type)
             -- log.info(cand.text)
+
+            -- 增强一下英文词典反查 将释义放在注释中---
+            local cand_text = cand.text
+            -- log.warning('cand.text >>> ' .. cand_text) 
+            -- local cand_text = "China n.    中国 adj. 中国的 中国制造的"
+            local word, pos, meaning = string.match(cand_text, "(%a+)%s+(%a+%.%s*)(.+)")
+            if word then                
+                -- log.warning("Word:" .. word)        -- 输出: Word: China
+                -- log.warning("POS:" .. pos)          -- 输出: POS: n.    
+                -- log.warning("Meaning:" .. meaning)  -- 输出: Meaning: 中国 adj. 中国的 中国制造的
+
+                cand.text = word
+                cand.comment = pos .. meaning
+
+                yield(cand)
+                goto continue
+            end
+
+
             local initial_comment = cand.comment   -- 保存候选词的初始注释
             local final_comment = initial_comment  -- 初始化最终注释为初始注释
             -- 处理辅助码提示

@@ -66,7 +66,7 @@ engine:
     # 反查的filter
     - simplifier
     - simplifier@emoji
-    - uniquifier
+    # - uniquifier
     - simplifier@chaifen
 
 

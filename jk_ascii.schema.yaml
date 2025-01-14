@@ -45,7 +45,7 @@ engine:
   filters:
     - lua_filter@*pro_comment_format
     - lua_filter@*is_in_user_dict
-    - uniquifier
+    # - uniquifier
 
 # === speller ===
 speller:

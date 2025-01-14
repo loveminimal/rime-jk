@@ -23,7 +23,8 @@ import_tables:
   - cn_dicts/corrections  
   - cn_dicts/compatible   
   - cn_dicts/people       
-  - cn_dicts/division     
+  - cn_dicts/division   
+  - cn_dicts/poetry
   - dicts/flypy_user
 use_preset_vocabulary: false
 ...

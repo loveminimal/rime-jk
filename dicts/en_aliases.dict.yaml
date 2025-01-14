@@ -96,11 +96,11 @@ cd ~/.shell	cdsh	0
 cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
-cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	swud	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_flypy_user_dict.py	sfud	0
-cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	ualias	0
-cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_wx.sh	uwd	0
-cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_frost.sh	ufd	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	sydwu	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_flypy_user_dict.py	sydfu	0
+cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	udea	0
+cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_wx.sh	uddw	0
+cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_frost.sh	uddf	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && scp -r public/* aituyaa.com:/home/jack/blog/ && rm -rf public	sscp	0
 

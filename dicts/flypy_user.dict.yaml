@@ -16,13 +16,21 @@ version: '2025.01'
 sort: by_weight
 use_preset_vocabulary: false
 ...
+把	ba;rc; 	1
+帮	bang;dt; 	1
 不	bu;i,gi; 	1
-的	de;r,rq; 	2
+的	de;r,rq; 	4
+个	ge;wh; 	1
+好	hao;vb; 	1
+快	kuai;nn; 	0
 了	le;b,bn; 	0
 是	shi;j,jg; 	1
 双	shuang;cc; 	0
 玩	wan;gf; 	1
 我	wo;q,tr; 	1
+以	yi;c,ny; 	1
+中	zhong;k,kh; 	1
+煮	zhu;ft; 	0
 左	zuo;da; 	1
 按键	an;rp; jian;qv; 	0
 宝子	bao;pg; zi;bb; 	1
@@ -33,63 +41,93 @@ use_preset_vocabulary: false
 不能	bu;i,gi; neng;ce; 	1
 不用	bu;i,gi; yong;et; 	1
 补充	bu;pu; chong;yc; 	0
-词库	ci;yn; ku;yl; 	0
+查词	cha;sj; ci;yn; 	1
+词典	ci;yn; dian;ma; 	1
+词库	ci;yn; ku;yl; 	1
 存在	cun;dh; zai;d,dh; 	0
 当然	dang;iv; ran;qd; 	0
 的人	de;r,rq; ren;w,ww; 	0
 都快	dou;ft; kuai;nn; 	1
 对头	dui;cf; tou;ud; 	1
+反查	fan;rc; cha;sj; 	1
+放在	fang;yt; zai;d,dh; 	0
+方便	fang;yy; bian;wg; 	1
 符号	fu;tw; hao;kg; 	0
 搞得	gao;ry; de;tj; 	1
 歌词	ge;sk; ci;yn; 	0
 更好	geng;gj; hao;vb; 	1
+好了	hao;vb; le;b,bn; 	0
 好嘛	hao;vb; ma;ky; 	1
 核心	he;sy; xin;ny; 	0
+嘿嘿	hei;kl; hei;kl; 	1
 几个	ji;mt; ge;wh; 	0
 可以	ke;sk; yi;c,ny; 	1
+来源	lai;go; yuan;id; 	0
 模型	mo;sa; xing;ga; 	0
+内容	nei;mw; rong;pw; 	0
 你也	ni;wq; ye;bn; 	0
 拼凑	pin;ru; cou;ud; 	0
+如何	ru;vk; he;ws; 	1
 什么	shen;wf; me;tc; 	0
+生成	sheng;tg; cheng;dn; 	1
 使用	shi;wg; yong;et; 	2
 熟悉	shu;yb; xi;to; 	0
 通过	tong;ce; guo;fp; 	1
 为了	wei;o,yl; le;b,bn; 	0
 问题	wen;uk; ti;jg; 	0
 无敌	wu;fq; di;td; 	0
-小鹤	xiao;ih; he;pw; 	1
+小鹤	xiao;ih; he;pw; 	2
+需要	xu;fd; yao;s,sv; 	1
 选择	xuan;tf; ze;rc; 	1
 押韵	ya;rl; yun;uj; 	0
 一天	yi;g,gg; tian;gd; 	0
+一下	yi;g,gg; xia;gh; 	1
+已经	yi;nn; jing;x,xc; 	0
 映射	ying;jm; she;tm; 	0
 应该	ying;yi; gai;yy; 	0
+有葫	you;e,de; hu;ad; 	1
 这种	zhe;p,yp; zhong;tk; 	1
+整合	zheng;gk; he;wg; 	1
 只是	zhi;kw; shi;j,jg; 	0
+指定	zhi;rx; ding;pg; 	1
 智慧	zhi;td; hui;dh; 	0
+注释	zhu;iy; shi;to; 	0
+字典	zi;pb; dian;ma; 	2
+自取	zi;th; qu;bc; 	1
 作为	zuo;wt; wei;o,yl; 	0
 不行了	bu;i,gi; xing;tf; le;b,bn; 	1
 都可以	dou;ft; ke;sk; yi;c,ny; 	0
 辅助码	fu;lg; zhu;eg; ma;dc; 	1
+候选项	hou;wh; xuan;tf; xiang;ad; 	1
 解决了	jie;qe; jue;un; le;b,bn; 	0
 经常打	jing;x,xc; chang;ip; da;rs; 	1
 另一个	ling;kl; yi;g,gg; ge;wh; 	0
 双符号	shuang;cc; fu;tw; hao;kg; 	1
 体验了	ti;ws; yan;cw; le;b,bn; 	0
+文件夹	wen;yy; jian;wr; jia;gu; 	1
 无所谓	wu;fq; suo;rn; wei;yl; 	1
 选择了	xuan;tf; ze;rc; le;b,bn; 	0
 眼镜娘	yan;hv; jing;qu; niang;vy; 	2
+已经快	yi;nn; jing;x,xc; kuai;nn; 	1
 永远是	yong;yn; yuan;fq; shi;j,jg; 	0
 有时候	you;e,de; shi;jf; hou;wh; 	0
+煮好了	zhu;ft; hao;vb; le;b,bn; 	1
+注释中	zhu;iy; shi;to; zhong;k,kh; 	1
 最终还	zui;jb; zhong;xt; hai;gi; 	0
 毕竟熟悉	bi;xx; jing;uj; shu;yb; xi;to; 	1
 不会打字	bu;i,gi; hui;wf; da;rs; zi;pb; 	0
+词库来源	ci;yn; ku;yl; lai;go; yuan;id; 	1
+放在什么	fang;yt; zai;d,dh; shen;wf; me;tc; 	1
+内容放在	nei;mw; rong;pw; fang;yt; zai;d,dh; 	1
 你也不必	ni;wq; ye;bn; bu;i,gi; bi;nt; 	1
 如何使用	ru;vk; he;ws; shi;wg; yong;et; 	2
+深度优化	shen;ip; du;ya; you;wd; hua;wx; 	1
 他是一个	ta;wb; shi;j,jg; yi;g,gg; ge;wh; 	1
 吞噬星空	tun;gd; shi;kt; xing;jt; kong;pw; 	1
 歪打正着	wai;gi; da;rs; zheng;gh; zhao;ud; 	0
 五笔前二	wu;gg; bi;tt; qian;ue; er;fg; 	2
 小鹤双拼	xiao;ih; he;pw; shuang;cc; pin;ru; 	1
+英文字典	ying;am; wen;yy; zi;pb; dian;ma; 	1
 映射按键	ying;jm; she;tm; an;rp; jian;qv; 	1
 这玩意儿	zhe;p,yp; wan;gf; yi;uj; er;qt; 	0
 智慧的人	zhi;td; hui;dh; de;r,rq; ren;w,ww; 	1

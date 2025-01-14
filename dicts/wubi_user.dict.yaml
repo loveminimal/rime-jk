@@ -72,7 +72,7 @@ use_preset_vocabulary: false
 难	cw 	1
 难	cwy 	1
 难	cwyg 	1
-在	d 	111
+在	d 	112
 左	da 	4
 友	dc 	1
 码	dcg 	52
@@ -205,7 +205,7 @@ use_preset_vocabulary: false
 王	gggg 	1
 下	gh 	61
 正	ghd 	1
-不	gi 	157
+不	gi 	158
 否	gik 	5
 还	gip 	55
 更	gjq 	11
@@ -305,7 +305,7 @@ use_preset_vocabulary: false
 晒	jsg 	1
 览	jtyq 	2
 照	jvko 	1
-中	k 	142
+中	k 	143
 呀	ka 	1
 嘞	kaf 	7
 喵	kal 	1
@@ -313,7 +313,7 @@ use_preset_vocabulary: false
 啊	kb 	1
 啊	kbs 	13
 吧	kc 	18
-吗	kcg 	19
+吗	kcg 	20
 喹	kdf 	1
 哒	kdp 	1
 吸	ke 	1
@@ -482,7 +482,7 @@ use_preset_vocabulary: false
 煞	qvt 	1
 欠	qw 	1
 久	qy 	1
-的	r 	745
+的	r 	746
 找	ra 	9
 拒	ran 	1
 把	rcn 	25
@@ -691,7 +691,7 @@ use_preset_vocabulary: false
 全	wg 	5
 倒	wgc 	2
 便	wgj 	3
-合	wgk 	4
+合	wgk 	5
 使	wgkq 	4
 俩	wgm 	1
 例	wgq 	2
@@ -764,7 +764,7 @@ use_preset_vocabulary: false
 主	yg 	3
 请	yge 	11
 语	ygk 	2
-让	yh 	16
+让	yh 	17
 就	yi 	85
 应	yid 	2
 刘	yj 	2
@@ -1324,7 +1324,7 @@ use_preset_vocabulary: false
 水果	iijs 	1
 消息	iith 	10
 滥用	ijet 	1
-混输	ijlw 	3
+混输	ijlw 	4
 混入	ijty 	1
 混合	ijwg 	1
 没有	imde 	1
@@ -1354,7 +1354,7 @@ use_preset_vocabulary: false
 当场	ivfn 	1
 当时	ivjf 	1
 当然	ivqd 	8
-当前	ivue 	6
+当前	ivue 	7
 当作	ivwt 	2
 兴萍	iwai 	3
 举例	iwwg 	1
@@ -1611,7 +1611,7 @@ use_preset_vocabulary: false
 字频	pbhi 	2
 字汇	pbia 	1
 字串	pbkk 	1
-字典	pbma 	5
+字典	pbma 	7
 字长	pbta 	1
 字符	pbtw 	47
 字音	pbuj 	1
@@ -1751,7 +1751,7 @@ use_preset_vocabulary: false
 反转	rclf 	2
 返回	rclk 	4
 反之	rcpp 	2
-反查	rcsj 	11
+反查	rcsj 	12
 反复	rctj 	1
 排除	rdbw 	2
 排列	rdgq 	3
@@ -1873,6 +1873,7 @@ use_preset_vocabulary: false
 模型	saga 	4
 框架	salk 	1
 模糊	saod 	6
+模板	sasr 	2
 权限	scbv 	1
 权重	sctg 	4
 权值	scwf 	1
@@ -1963,7 +1964,7 @@ use_preset_vocabulary: false
 适用	tdet 	2
 智力	tdlt 	1
 智商	tdum 	1
-知道	tdut 	6
+知道	tdut 	7
 适合	tdwg 	4
 筹组	tdxe 	1
 笼统	tdxy 	1
@@ -2219,7 +2220,7 @@ use_preset_vocabulary: false
 如下	vkgh 	3
 如此	vkhx 	3
 如果	vkjs 	21
-如何	vkws 	15
+如何	vkws 	16
 如今	vkwy 	1
 鼠标	vnsf 	2
 灵感	vodg 	1

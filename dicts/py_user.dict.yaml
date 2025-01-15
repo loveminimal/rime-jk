@@ -19,42 +19,51 @@ use_preset_vocabulary: false
 啊	a;kb; 	1
 吧	ba;kc; 	1
 把	ba;rc; 	2
+版	ban;th; 	0
 帮	bang;dt; 	1
 宝	bao;pg; 	3
 被	bei;pu; 	1
 不	bu;i,gi; 	2
+拆	chai;rr; 	1
+重	chong;tg; 	1
 纯	chun;xg; 	1
 从	cong;ww; 	2
 单	dan;uj; 	1
 当	dang;iv; 	1
-的	de;r,rq; 	21
+的	de;r,rq; 	22
 得	de;tj; 	1
 等	deng;tf; 	1
 掉	diao;rh; 	1
 对	dui;cf; 	3
 嗯	en;kl; 	2
+而	er;dm; 	1
 儿	er;qt; 	1
 放	fang;yt; 	1
+费	fei;xj; 	1
 分	fen;wv; 	6
 改	gai;nt; 	0
 该	gai;yy; 	0
 赶	gan;fh; 	1
 刚	gang;mq; 	1
-个	ge;wh; 	4
+个	ge;wh; 	5
 贵	gui;kh; 	0
 好	hao;vb; 	10
+鹤	he;pw; 	1
 和	he;t,tk; 	0
 后	hou;rg; 	1
 话	hua;yt; 	1
 换	huan;rq; 	1
 或	huo;ak; 	1
+集	ji;wy; 	0
 将	jiang;uq; 	1
 就	jiu;yi; 	5
 看	kan;rh; 	3
 快	kuai;nn; 	0
 啦	la;kr; 	1
-了	le;b,bn; 	5
+浪	lang;iy; 	1
+了	le;b,bn; 	7
 喽	lou;ko; 	0
+码	ma;dc; 	1
 吗	ma;kc; 	3
 墨	mo;lf; 	1
 那	na;vf; 	1
@@ -62,6 +71,7 @@ use_preset_vocabulary: false
 你	ni;wq; 	4
 爬	pa;rh; 	1
 奇	qi;ds; 	1
+取	qu;bc; 	2
 去	qu;fc; 	1
 让	rang;yh; 	0
 日	ri;jj; 	1
@@ -71,11 +81,16 @@ use_preset_vocabulary: false
 是	shi;j,jg; 	8
 双	shuang;cc; 	0
 她	ta;vb; 	0
+太	tai;dy; 	0
 调	tiao;ym; 	1
 玩	wan;gf; 	1
+为	wei;o,yl; 	1
+文	wen;yy; 	2
 我	wo;q,tr; 	7
 下	xia;gh; 	2
 显	xian;jo; 	1
+想	xiang;sh; 	0
+形	xing;ga; 	1
 呀	ya;ka; 	0
 以	yi;c,ny; 	1
 译	yi;yc; 	2
@@ -88,7 +103,7 @@ use_preset_vocabulary: false
 在	zai;d,dh; 	2
 再	zai;gm; 	1
 长	zhang;ta; 	1
-只	zhi;kw; 	1
+只	zhi;kw; 	2
 中	zhong;k,kh; 	10
 煮	zhu;ft; 	0
 总	zong;uk; 	1
@@ -97,10 +112,12 @@ use_preset_vocabulary: false
 按键	an;rp; jian;qv; 	0
 按下	an;rp; xia;gh; 	1
 俺宝	an;wd; bao;pg; 	1
+白霜	bai;rr; shuang;fs; 	0
 办法	ban;lw; fa;if; 	1
 宝子	bao;pg; zi;bb; 	1
 包含	bao;qn; han;wy; 	0
 包括	bao;qn; kuo;rt; 	1
+本机	ben;sg; ji;sm; 	1
 本身	ben;sg; shen;tm; 	1
 必须	bi;nt; xu;ed; 	0
 毕竟	bi;xx; jing;uj; 	0
@@ -114,10 +131,12 @@ use_preset_vocabulary: false
 不过	bu;i,gi; guo;fp; 	1
 不好	bu;i,gi; hao;vb; 	0
 不能	bu;i,gi; neng;ce; 	1
+不是	bu;i,gi; shi;j,jg; 	0
 不用	bu;i,gi; yong;et; 	1
 不在	bu;i,gi; zai;d,dh; 	1
 补充	bu;pu; chong;yc; 	0
 部分	bu;uk; fen;wv; 	0
+部署	bu;uk; shu;lf; 	1
 查词	cha;sj; ci;yn; 	1
 拆分	chai;rr; fen;wv; 	0
 出来	chu;bm; lai;go; 	1
@@ -127,6 +146,7 @@ use_preset_vocabulary: false
 词汇	ci;yn; hui;ia; 	0
 词库	ci;yn; ku;yl; 	1
 存在	cun;dh; zai;d,dh; 	0
+大字	da;dd; zi;pb; 	0
 单间	dan;uj; jian;uj; 	1
 单一	dan;uj; yi;g,gg; 	0
 但是	dan;wj; shi;j,jg; 	1
@@ -138,7 +158,9 @@ use_preset_vocabulary: false
 定义	ding;pg; yi;yq; 	1
 动态	dong;fc; tai;dy; 	1
 都快	dou;ft; kuai;nn; 	1
+都是	dou;ft; shi;j,jg; 	0
 对头	dui;cf; tou;ud; 	1
+对于	dui;cf; yu;gf; 	0
 多点	duo;qq; dian;hk; 	1
 恩情	en;ld; qing;ng; 	0
 反查	fan;rc; cha;sj; 	3
@@ -175,7 +197,9 @@ use_preset_vocabulary: false
 核心	he;sy; xin;ny; 	0
 和粮	he;t,tk; liang;oy; 	1
 嘿嘿	hei;kl; hei;kl; 	5
+很香	hen;tv; xiang;tj; 	1
 候选	hou;wh; xuan;tf; 	1
+欢迎	huan;cq; ying;qb; 	1
 基本	ji;ad; ben;sg; 	1
 几点	ji;mt; dian;hk; 	0
 几个	ji;mt; ge;wh; 	0
@@ -183,24 +207,29 @@ use_preset_vocabulary: false
 加载	jia;lk; zai;fa; 	1
 家里	jia;pe; li;jf; 	1
 家人	jia;pe; ren;w,ww; 	0
+键位	jian;qv; wei;wu; 	1
 将军	jiang;uq; jun;pl; 	1
 脚本	jiao;ef; ben;sg; 	8
 结果	jie;xf; guo;js; 	1
 今年	jin;wy; nian;rh; 	0
 今天	jin;wy; tian;gd; 	0
 精简	jing;og; jian;tu; 	0
+精校	jing;og; jiao;su; 	0
 就是	jiu;yi; shi;j,jg; 	3
 就在	jiu;yi; zai;d,dh; 	0
 开关	kai;ga; guan;ud; 	1
 开始	kai;ga; shi;vc; 	0
 可以	ke;sk; yi;c,ny; 	3
 空格	kong;pw; ge;st; 	1
+空明	kong;pw; ming;je; 	0
 快捷	kuai;nn; jie;rg; 	1
 快乐	kuai;nn; le;qi; 	1
 扩充	kuo;ry; chong;yc; 	0
 啦啦	la;kr; la;kr; 	1
+来说	lai;go; shuo;yu; 	1
 来源	lai;go; yuan;id; 	0
 累死	lei;lx; si;gq; 	1
+两次	liang;gm; ci;uq; 	0
 两个	liang;gm; ge;wh; 	0
 旅游	lv;yt; you;iy; 	0
 码表	ma;dc; biao;ge; 	0
@@ -210,9 +239,11 @@ use_preset_vocabulary: false
 缅甸	mian;xd; dian;ql; 	1
 明白	ming;je; bai;rr; 	0
 命令	ming;wg; ling;wy; 	1
+末笔	mo;gs; bi;tt; 	1
 默认	mo;lf; ren;yw; 	1
 模糊	mo;sa; hu;od; 	1
 模型	mo;sa; xing;ga; 	0
+魔改	mo;ys; gai;nt; 	1
 目前	mu;hh; qian;ue; 	2
 哪里	na;kv; li;jf; 	1
 那就	na;vf; jiu;yi; 	1
@@ -222,6 +253,7 @@ use_preset_vocabulary: false
 你把	ni;wq; ba;rc; 	1
 你的	ni;wq; de;r,rq; 	1
 你好	ni;wq; hao;vb; 	9
+你们	ni;wq; men;wu; 	0
 你也	ni;wq; ye;bn; 	0
 你在	ni;wq; zai;d,dh; 	0
 牛马	niu;rh; ma;cn; 	0
@@ -234,6 +266,7 @@ use_preset_vocabulary: false
 配置	pei;sg; zhi;lf; 	0
 匹配	pi;aq; pei;sg; 	3
 拼凑	pin;ru; cou;ud; 	0
+前二	qian;ue; er;fg; 	1
 切换	qie;av; huan;rq; 	0
 情况	qing;ng; kuang;uk; 	1
 去了	qu;fc; le;b,bn; 	0
@@ -242,30 +275,37 @@ use_preset_vocabulary: false
 如果	ru;vk; guo;js; 	1
 如何	ru;vk; he;ws; 	2
 塞弗	sai;pf; fu;xj; 	1
+三妹	san;dg; mei;vf; 	1
 上屏	shang;h,hh; ping;nu; 	1
 深圳	shen;ip; zhen;fk; 	1
 什么	shen;wf; me;tc; 	0
 生成	sheng;tg; cheng;dn; 	1
 是吧	shi;j,jg; ba;kc; 	1
 时候	shi;jf; hou;wh; 	1
+时间	shi;jf; jian;uj; 	1
 实现	shi;pu; xian;gm; 	2
 释义	shi;to; yi;yq; 	1
 使用	shi;wg; yong;et; 	4
+识别	shi;yk; bie;kl; 	1
 手操	shou;rt; cao;rk; 	1
+首末	shou;ut; mo;gs; 	1
 输出	shu;lw; chu;bm; 	1
 输入	shu;lw; ru;ty; 	0
 属性	shu;nt; xing;nt; 	0
 熟悉	shu;yb; xi;to; 	0
+双拼	shuang;cc; pin;ru; 	1
 说明	shuo;yu; ming;je; 	1
 四种	si;lh; zhong;tk; 	0
 思想	si;ln; xiang;sh; 	1
 泰国	tai;dw; guo;l,lg; 	1
+太多	tai;dy; duo;qq; 	1
 太冷	tai;dy; leng;uw; 	1
 太小	tai;dy; xiao;ih; 	0
 条数	tiao;ts; shu;ov; 	1
 调皮	tiao;ym; pi;hc; 	1
 调试	tiao;ym; shi;ya; 	1
 通过	tong;ce; guo;fp; 	1
+同步	tong;m,mg; bu;hi; 	1
 同文	tong;m,mg; wen;yy; 	0
 万象	wan;dn; xiang;qj; 	3
 未来	wei;fi; lai;go; 	0
@@ -277,8 +317,10 @@ use_preset_vocabulary: false
 我看	wo;q,tr; kan;rh; 	1
 我去	wo;q,tr; qu;fc; 	1
 无敌	wu;fq; di;td; 	0
+五笔	wu;gg; bi;tt; 	3
 希望	xi;qd; wang;yn; 	1
 系统	xi;tx; tong;xy; 	1
+下载	xia;gh; zai;fa; 	1
 显示	xian;jo; shi;fi; 	1
 想要	xiang;sh; yao;s,sv; 	1
 小鹤	xiao;ih; he;pw; 	2
@@ -292,19 +334,23 @@ use_preset_vocabulary: false
 样式	yang;su; shi;aa; 	1
 以后	yi;c,ny; hou;rg; 	0
 以上	yi;c,ny; shang;h,hh; 	1
+一般	yi;g,gg; ban;te; 	0
+一次	yi;g,gg; ci;uq; 	0
 一个	yi;g,gg; ge;wh; 	1
+一晃	yi;g,gg; huang;ji; 	0
 一天	yi;g,gg; tian;gd; 	0
 一下	yi;g,gg; xia;gh; 	2
 一些	yi;g,gg; xie;hx; 	0
 一样	yi;g,gg; yang;su; 	0
 已经	yi;nn; jing;x,xc; 	0
-因为	yin;ld; wei;o,yl; 	2
+因为	yin;ld; wei;o,yl; 	3
 英文	ying;am; wen;yy; 	1
 映射	ying;jm; she;tm; 	0
 应该	ying;yi; gai;yy; 	1
 用的	yong;et; de;r,rq; 	0
 用法	yong;et; fa;if; 	0
 用来	yong;et; lai;go; 	2
+用以	yong;et; yi;c,ny; 	1
 有葫	you;e,de; hu;ad; 	1
 有些	you;e,de; xie;hx; 	0
 原理	yuan;dr; li;gj; 	0
@@ -314,9 +360,11 @@ use_preset_vocabulary: false
 增强	zeng;fu; qiang;xk; 	1
 战队	zhan;hk; dui;bw; 	0
 这边	zhe;p,yp; bian;lp; 	0
-这个	zhe;p,yp; ge;wh; 	2
+这个	zhe;p,yp; ge;wh; 	3
 这样	zhe;p,yp; yang;su; 	0
 这种	zhe;p,yp; zhong;tk; 	1
+遮天	zhe;ya; tian;gd; 	1
+真的	zhen;fh; de;r,rq; 	1
 正常	zheng;gh; chang;ip; 	0
 正确	zheng;gh; que;dq; 	1
 正在	zheng;gh; zai;d,dh; 	0
@@ -325,6 +373,7 @@ use_preset_vocabulary: false
 整合	zheng;gk; he;wg; 	1
 直接	zhi;fh; jie;ru; 	1
 只是	zhi;kw; shi;j,jg; 	1
+只有	zhi;kw; you;e,de; 	1
 之前	zhi;pp; qian;ue; 	0
 指定	zhi;rx; ding;pg; 	1
 智慧	zhi;td; hui;dh; 	0
@@ -333,6 +382,8 @@ use_preset_vocabulary: false
 注释	zhu;iy; shi;to; 	0
 主业	zhu;y,yg; ye;og; 	0
 专门	zhuan;fn; men;uy; 	0
+转换	zhuan;lf; huan;rq; 	1
+准备	zhun;uw; bei;tl; 	0
 字典	zi;pb; dian;ma; 	2
 字符	zi;pb; fu;tw; 	2
 字体	zi;pb; ti;ws; 	0
@@ -340,8 +391,10 @@ use_preset_vocabulary: false
 自取	zi;th; qu;bc; 	1
 足够	zu;kh; gou;qk; 	0
 最后	zui;jb; hou;rg; 	1
+最新	zui;jb; xin;us; 	0
 做到	zuo;wd; dao;gc; 	0
 作为	zuo;wt; wei;o,yl; 	0
+本来就	ben;sg; lai;go; jiu;yi; 	0
 不成功	bu;i,gi; cheng;dn; gong;al; 	1
 不错了	bu;i,gi; cuo;qa; le;b,bn; 	1
 不及时	bu;i,gi; ji;ey; shi;jf; 	1
@@ -351,6 +404,7 @@ use_preset_vocabulary: false
 差不多	cha;ud; bu;i,gi; duo;qq; 	1
 吃完饭	chi;kt; wan;pf; fan;qn; 	1
 大冬天	da;dd; dong;tu; tian;gd; 	1
+大字集	da;dd; zi;pb; ji;wy; 	1
 都可以	dou;ft; ke;sk; yi;c,ny; 	0
 都在这	dou;ft; zai;d,dh; zhe;p,yp; 	0
 而不是	er;dm; bu;i,gi; shi;j,jg; 	0
@@ -362,6 +416,7 @@ use_preset_vocabulary: false
 跟其他	gen;kh; qi;ad; ta;wb; 	0
 更舒服	geng;gj; shu;wf; fu;eb; 	0
 好几个	hao;vb; ji;mt; ge;wh; 	0
+好几年	hao;vb; ji;mt; nian;rh; 	0
 很出名	hen;tv; chu;bm; ming;qk; 	1
 候选词	hou;wh; xuan;tf; ci;yn; 	0
 候选项	hou;wh; xuan;tf; xiang;ad; 	1
@@ -373,14 +428,17 @@ use_preset_vocabulary: false
 解决了	jie;qe; jue;un; le;b,bn; 	0
 接收到	jie;ru; shou;nh; dao;gc; 	1
 惊愕的	jing;ny; e;nk; de;r,rq; 	1
+精校版	jing;og; jiao;su; ban;th; 	1
 经常打	jing;x,xc; chang;ip; da;rs; 	1
 就可以	jiu;yi; ke;sk; yi;c,ny; 	0
 就离谱	jiu;yi; li;yb; pu;yu; 	1
 看看你	kan;rh; kan;rh; ni;wq; 	0
 看来要	kan;rh; lai;go; yao;s,sv; 	0
+看一下	kan;rh; yi;g,gg; xia;gh; 	0
 可以当	ke;sk; yi;c,ny; dang;iv; 	0
 可以先	ke;sk; yi;c,ny; xian;tf; 	0
 可以有	ke;sk; yi;c,ny; you;e,de; 	1
+空明码	kong;pw; ming;je; ma;dc; 	1
 类似于	lei;od; si;wn; yu;gf; 	0
 离家近	li;yb; jia;pe; jin;rp; 	1
 另一个	ling;kl; yi;g,gg; ge;wh; 	0
@@ -402,6 +460,7 @@ use_preset_vocabulary: false
 是怎么	shi;j,jg; zen;th; me;tc; 	0
 实现了	shi;pu; xian;gm; le;b,bn; 	1
 使用的	shi;wg; yong;et; de;r,rq; 	0
+使用者	shi;wg; yong;et; zhe;ft; 	1
 输入法	shu;lw; ru;ty; fa;if; 	1
 双符号	shuang;cc; fu;tw; hao;kg; 	1
 搜一下	sou;rv; yi;g,gg; xia;gh; 	0
@@ -415,10 +474,14 @@ use_preset_vocabulary: false
 我好像	wo;q,tr; hao;vb; xiang;wq; 	0
 我记得	wo;q,tr; ji;yn; de;tj; 	1
 我试试	wo;q,tr; shi;ya; shi;ya; 	1
+我一直	wo;q,tr; yi;g,gg; zhi;fh; 	0
 无所谓	wu;fq; suo;rn; wei;yl; 	1
 下班啊	xia;gh; ban;gy; a;kb; 	0
+下班早	xia;gh; ban;gy; zao;jh; 	1
+小狼毫	xiao;ih; lang;qt; hao;yp; 	1
 消耗品	xiao;ii; hao;di; pin;kk; 	1
 写一个	xie;pg; yi;g,gg; ge;wh; 	0
+星期几	xing;jt; qi;ad; ji;mt; 	0
 修改了	xiu;wh; gai;nt; le;b,bn; 	2
 选择了	xuan;tf; ze;rc; le;b,bn; 	0
 眼镜娘	yan;hv; jing;qu; niang;vy; 	2
@@ -440,28 +503,37 @@ use_preset_vocabulary: false
 怎么让	zen;th; me;tc; rang;yh; 	0
 怎么说	zen;th; me;tc; shuo;yu; 	1
 这样看	zhe;p,yp; yang;su; kan;rh; 	1
+真的是	zhen;fh; de;r,rq; shi;j,jg; 	0
 拯救了	zheng;rb; jiu;fi; le;b,bn; 	0
 煮好了	zhu;ft; hao;vb; le;b,bn; 	1
 注释中	zhu;iy; shi;to; zhong;k,kh; 	1
 转一下	zhuan;lf; yi;g,gg; xia;gh; 	0
+最新的	zui;jb; xin;us; de;r,rq; 	1
 最终还	zui;jb; zhong;xt; hai;gi; 	0
 做一些	zuo;wd; yi;g,gg; xie;hx; 	0
+本来就是	ben;sg; lai;go; jiu;yi; shi;j,jg; 	1
 毕竟熟悉	bi;xx; jing;uj; shu;yb; xi;to; 	1
+并击方案	bing;ua; ji;fm; fang;yy; an;pv; 	1
 不会打字	bu;i,gi; hui;wf; da;rs; zi;pb; 	0
+不难理解	bu;i,gi; nan;cw; li;gj; jie;qe; 	0
+不怎么好	bu;i,gi; zen;th; me;tc; hao;vb; 	0
 插入空格	cha;rt; ru;ty; kong;pw; ge;st; 	0
 差不多了	cha;ud; bu;i,gi; duo;qq; le;b,bn; 	0
 此类字符	ci;hx; lei;od; zi;pb; fu;tw; 	1
 词库来源	ci;yn; ku;yl; lai;go; yuan;id; 	1
 到哪儿了	dao;gc; na;kv; er;qt; le;b,bn; 	0
 底层牛马	di;yq; ceng;nf; niu;rh; ma;cn; 	1
+对于五笔	dui;cf; yu;gf; wu;gg; bi;tt; 	1
 放在什么	fang;yt; zai;d,dh; shen;wf; me;tc; 	1
 该上学了	gai;yy; shang;h,hh; xue;ip; le;b,bn; 	1
 跟你一起	gen;kh; ni;wq; yi;g,gg; qi;fh; 	0
+公费旅游	gong;wc; fei;xj; lv;yt; you;iy; 	0
 还有什么	hai;gi; you;e,de; shen;wf; me;tc; 	0
 回老家了	hui;lk; lao;ft; jia;pe; le;b,bn; 	0
 几岁更难	ji;mt; sui;mq; geng;gj; nan;cw; 	1
 今年就在	jin;wy; nian;rh; jiu;yi; zai;d,dh; 	1
 精简词汇	jing;og; jian;tu; ci;yn; hui;ia; 	1
+就是用的	jiu;yi; shi;j,jg; yong;et; de;r,rq; 	1
 开发指南	kai;ga; fa;v,nt; zhi;rx; nan;fm; 	1
 开始处理	kai;ga; shi;vc; chu;th; li;gj; 	1
 开始调试	kai;ga; shi;vc; tiao;ym; shi;ya; 	1
@@ -472,6 +544,7 @@ use_preset_vocabulary: false
 没啥问题	mei;im; sha;kw; wen;uk; ti;jg; 	0
 没有匹配	mei;im; you;e,de; pi;aq; pei;sg; 	1
 没有找到	mei;im; you;e,de; zhao;ra; dao;gc; 	0
+目前就是	mu;hh; qian;ue; jiu;yi; shi;j,jg; 	1
 那必须贵	na;vf; bi;nt; xu;ed; gui;kh; 	1
 内容放在	nei;mw; rong;pw; fang;yt; zai;d,dh; 	1
 你的意思	ni;wq; de;r,rq; yi;uj; si;ln; 	0
@@ -479,6 +552,7 @@ use_preset_vocabulary: false
 你也知道	ni;wq; ye;bn; zhi;td; dao;ut; 	1
 女孩子的	nv;vv; hai;by; zi;bb; de;r,rq; 	1
 配送范围	pei;sg; song;ud; fan;ai; wei;lf; 	1
+拼音词库	pin;ru; yin;uj; ci;yn; ku;yl; 	0
 其实已经	qi;ad; shi;pu; yi;nn; jing;x,xc; 	0
 起的作用	qi;fh; de;r,rq; zuo;wt; yong;et; 	0
 全部候选	quan;wg; bu;uk; hou;wh; xuan;tf; 	1
@@ -500,6 +574,7 @@ use_preset_vocabulary: false
 歪打正着	wai;gi; da;rs; zheng;gh; zhao;ud; 	0
 未雨绸缪	wei;fi; yu;fg; chou;xm; mou;xn; 	0
 我给你说	wo;q,tr; gei;xw; ni;wq; shuo;yu; 	0
+我一直想	wo;q,tr; yi;g,gg; zhi;fh; xiang;sh; 	1
 我找到了	wo;q,tr; zhao;ra; dao;gc; le;b,bn; 	0
 五笔前二	wu;gg; bi;tt; qian;ue; er;fg; 	2
 下载下来	xia;gh; zai;fa; xia;gh; lai;go; 	0
@@ -516,10 +591,12 @@ use_preset_vocabulary: false
 这个思路	zhe;p,yp; ge;wh; si;ln; lu;kh; 	1
 这个问题	zhe;p,yp; ge;wh; wen;uk; ti;jg; 	0
 这玩意儿	zhe;p,yp; wan;gf; yi;uj; er;qt; 	0
+真的是太	zhen;fh; de;r,rq; shi;j,jg; tai;dy; 	1
 正在派单	zheng;gh; zai;d,dh; pai;ir; dan;uj; 	1
 智慧的人	zhi;td; hui;dh; de;r,rq; ren;w,ww; 	1
 注释上屏	zhu;iy; shi;to; shang;h,hh; ping;nu; 	1
 字典用的	zi;pb; dian;ma; yong;et; de;r,rq; 	1
+仔细一想	zi;wb; xi;xl; yi;g,gg; xiang;sh; 	0
 比如只输出	bi;xx; ru;vk; zhi;kw; shu;lw; chu;bm; 	1
 不回老家了	bu;i,gi; hui;lk; lao;ft; jia;pe; le;b,bn; 	1
 不会打字了	bu;i,gi; hui;wf; da;rs; zi;pb; le;b,bn; 	1
@@ -529,6 +606,7 @@ use_preset_vocabulary: false
 放在注释中	fang;yt; zai;d,dh; zhu;iy; shi;to; zhong;k,kh; 	1
 方案加进去	fang;yy; an;pv; jia;lk; jin;fj; qu;fc; 	1
 分割字符串	fen;wv; ge;pd; zi;pb; fu;tw; chuan;kk; 	1
+辅助码都是	fu;lg; zhu;eg; ma;dc; dou;ft; shi;j,jg; 	1
 更加是牛马	geng;gj; jia;lk; shi;j,jg; niu;rh; ma;cn; 	1
 还有什么呢	hai;gi; you;e,de; shen;wf; me;tc; ne;kn; 	1
 家人都在这	jia;pe; ren;w,ww; dou;ft; zai;d,dh; zhe;p,yp; 	1
@@ -540,15 +618,21 @@ use_preset_vocabulary: false
 我去换一下	wo;q,tr; qu;fc; huan;rq; yi;g,gg; xia;gh; 	1
 无敌的存在	wu;fq; di;td; de;r,rq; cun;dh; zai;d,dh; 	1
 写一个正则	xie;pg; yi;g,gg; ge;wh; zheng;gh; ze;mj; 	1
+一晃好几年	yi;g,gg; huang;ji; hao;vb; ji;mt; nian;rh; 	1
 一天好几个	yi;g,gg; tian;gd; hao;vb; ji;mt; ge;wh; 	1
 有需要包含	you;e,de; xu;fd; yao;s,sv; bao;qn; han;wy; 	1
 原来是这样	yuan;dr; lai;go; shi;j,jg; zhe;p,yp; yang;su; 	1
 怎么在这里	zen;th; me;tc; zai;d,dh; zhe;p,yp; li;jf; 	1
+这种玩意儿	zhe;p,yp; zhong;tk; wan;gf; yi;uj; er;qt; 	1
 之前改脚本	zhi;pp; qian;ue; gai;nt; jiao;ef; ben;sg; 	1
 之前字体调	zhi;pp; qian;ue; zi;pb; ti;ws; tiao;ym; 	1
 终端怎么让	zhong;xt; duan;um; zen;th; me;tc; rang;yh; 	1
 转一下格式	zhuan;lf; yi;g,gg; xia;gh; ge;st; shi;aa; 	1
+准备看一下	zhun;uw; bei;tl; kan;rh; yi;g,gg; xia;gh; 	1
+白霜拼音词库	bai;rr; shuang;fs; pin;ru; yin;uj; ci;yn; ku;yl; 	1
 不过歪打正着	bu;i,gi; guo;fp; wai;gi; da;rs; zheng;gh; zhao;ud; 	1
+不在考虑范围	bu;i,gi; zai;d,dh; kao;ft; lv;ha; fan;ai; wei;lf; 	0
+不怎么好处理	bu;i,gi; zen;th; me;tc; hao;vb; chu;th; li;gj; 	1
 当然你也可以	dang;iv; ran;qd; ni;wq; ye;bn; ke;sk; yi;c,ny; 	1
 歌词这玩意儿	ge;sk; ci;yn; zhe;p,yp; wan;gf; yi;uj; er;qt; 	1
 给你在网上买	gei;xw; ni;wq; zai;d,dh; wang;mq; shang;h,hh; mai;nu; 	1
@@ -558,6 +642,7 @@ use_preset_vocabulary: false
 目前功能单一	mu;hh; qian;ue; gong;al; neng;ce; dan;uj; yi;g,gg; 	1
 你在网上买呀	ni;wq; zai;d,dh; wang;mq; shang;h,hh; mai;nu; ya;ka; 	1
 如果使用你的	ru;vk; guo;js; shi;wg; yong;et; ni;wq; de;r,rq; 	1
+输入法和码表	shu;lw; ru;ty; fa;if; he;t,tk; ma;dc; biao;ge; 	1
 我搜一下用法	wo;q,tr; sou;rv; yi;g,gg; xia;gh; yong;et; fa;if; 	1
 我找到了这个	wo;q,tr; zhao;ra; dao;gc; le;b,bn; zhe;p,yp; ge;wh; 	1
 显示效果不好	xian;jo; shi;fi; xiao;uq; guo;js; bu;i,gi; hao;vb; 	1
@@ -572,6 +657,7 @@ use_preset_vocabulary: false
 可以直接让注释	ke;sk; yi;c,ny; zhi;fh; jie;ru; rang;yh; zhu;iy; shi;to; 	1
 拎包入住那种吧	lin;rw; bao;qn; ru;ty; zhu;wy; na;vf; zhong;tk; ba;kc; 	1
 你词库足够正常	ni;wq; ci;yn; ku;yl; zu;kh; gou;qk; zheng;gh; chang;ip; 	1
+你们一般星期几	ni;wq; men;wu; yi;g,gg; ban;te; xing;jt; qi;ad; ji;mt; 	1
 你现在到哪儿了	ni;wq; xian;gm; zai;d,dh; dao;gc; na;kv; er;qt; le;b,bn; 	1
 尿不湿拯救了我	niao;ni; bu;i,gi; shi;ij; zheng;rb; jiu;fi; le;b,bn; wo;q,tr; 	1
 什么都可以拼凑	shen;wf; me;tc; dou;ft; ke;sk; yi;c,ny; pin;ru; cou;ud; 	1
@@ -591,6 +677,8 @@ use_preset_vocabulary: false
 类似于码表的拆分	lei;od; si;wn; yu;gf; ma;dc; biao;ge; de;r,rq; chai;rr; fen;wv; 	1
 你可以先下载下来	ni;wq; ke;sk; yi;c,ny; xian;tf; xia;gh; zai;fa; xia;gh; lai;go; 	1
 她是怎么做到又欲	ta;vb; shi;j,jg; zen;th; me;tc; zuo;wd; dao;gc; you;cc; yu;ww; 	1
+仔细一想不难理解	zi;wb; xi;xl; yi;g,gg; xiang;sh; bu;i,gi; nan;cw; li;gj; jie;qe; 	1
+本来就不在考虑范围	ben;sg; lai;go; jiu;yi; bu;i,gi; zai;d,dh; kao;ft; lv;ha; fan;ai; wei;lf; 	1
 跟其他反查原理一样	gen;kh; qi;ad; ta;wb; fan;rc; cha;sj; yuan;dr; li;gj; yi;g,gg; yang;su; 	1
 你那个脚本增强一下	ni;wq; na;vf; ge;wh; jiao;ef; ben;sg; zeng;fu; qiang;xk; yi;g,gg; xia;gh; 	1
 偶尔切换别的输入法	ou;wj; er;qi; qie;av; huan;rq; bie;kl; de;r,rq; shu;lw; ru;ty; fa;if; 	1
@@ -600,6 +688,7 @@ use_preset_vocabulary: false
 你现在用的是什么方案	ni;wq; xian;gm; zai;d,dh; yong;et; de;r,rq; shi;j,jg; shen;wf; me;tc; fang;yy; an;pv; 	1
 我大概明白你的意思了	wo;q,tr; da;dd; gai;sv; ming;je; bai;rr; ni;wq; de;r,rq; yi;uj; si;ln; le;b,bn; 	1
 我给你说是那几个文件	wo;q,tr; gei;xw; ni;wq; shuo;yu; shi;j,jg; na;vf; ji;mt; ge;wh; wen;yy; jian;wr; 	1
+公费旅游不是一次两次了	gong;wc; fei;xj; lv;yt; you;iy; bu;i,gi; shi;j,jg; yi;g,gg; ci;uq; liang;gm; ci;uq; le;b,bn; 	1
 做一些未来可以当主业的	zuo;wd; yi;g,gg; xie;hx; wei;fi; lai;go; ke;sk; yi;c,ny; dang;iv; zhu;y,yg; ye;og; de;r,rq; 	1
 本身可以避免这个问题是吧	ben;sg; shen;tm; ke;sk; yi;c,ny; bi;nk; mian;qk; zhe;p,yp; ge;wh; wen;uk; ti;jg; shi;j,jg; ba;kc; 	1
 而不是作为候选项的一部分	er;dm; bu;i,gi; shi;j,jg; zuo;wt; wei;o,yl; hou;wh; xuan;tf; xiang;ad; de;r,rq; yi;g,gg; bu;uk; fen;wv; 	1

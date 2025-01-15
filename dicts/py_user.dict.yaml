@@ -1,4 +1,4 @@
-# Rime dictionary - flypy_user.dict.yaml
+# Rime dictionary - py_user.dict.yaml
 # encoding: utf-8
 # 
 # --- 说明 ---
@@ -7,140 +7,553 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_flypy_user_dict.py
-# - py scripts/sync_flypy_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_py_user_dict.py
+# - py scripts/sync_py_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 # 
 ---
-name: flypy_user
+name: py_user
 version: '2025.01'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-把	ba;rc; 	1
+啊	a;kb; 	1
+吧	ba;kc; 	1
+把	ba;rc; 	2
 帮	bang;dt; 	1
-不	bu;i,gi; 	1
-的	de;r,rq; 	4
-个	ge;wh; 	1
-好	hao;vb; 	1
+宝	bao;pg; 	3
+被	bei;pu; 	1
+不	bu;i,gi; 	2
+纯	chun;xg; 	1
+从	cong;ww; 	2
+单	dan;uj; 	1
+当	dang;iv; 	1
+的	de;r,rq; 	21
+得	de;tj; 	1
+等	deng;tf; 	1
+对	dui;cf; 	3
+嗯	en;kl; 	2
+儿	er;qt; 	1
+分	fen;wv; 	6
+改	gai;nt; 	0
+该	gai;yy; 	0
+赶	gan;fh; 	1
+刚	gang;mq; 	1
+个	ge;wh; 	4
+贵	gui;kh; 	0
+好	hao;vb; 	10
+和	he;t,tk; 	0
+后	hou;rg; 	1
+话	hua;yt; 	1
+换	huan;rq; 	1
+或	huo;ak; 	1
+将	jiang;uq; 	1
+就	jiu;yi; 	5
+看	kan;rh; 	3
 快	kuai;nn; 	0
-了	le;b,bn; 	0
-是	shi;j,jg; 	1
+啦	la;kr; 	1
+了	le;b,bn; 	5
+喽	lou;ko; 	0
+吗	ma;kc; 	3
+墨	mo;lf; 	1
+那	na;vf; 	1
+呢	ne;kn; 	2
+你	ni;wq; 	4
+爬	pa;rh; 	1
+奇	qi;ds; 	1
+去	qu;fc; 	1
+让	rang;yh; 	0
+日	ri;jj; 	1
+上	shang;h,hh; 	1
+是	shi;j,jg; 	8
 双	shuang;cc; 	0
+调	tiao;ym; 	1
 玩	wan;gf; 	1
-我	wo;q,tr; 	1
+我	wo;q,tr; 	7
+下	xia;gh; 	2
+显	xian;jo; 	1
+呀	ya;ka; 	0
 以	yi;c,ny; 	1
-中	zhong;k,kh; 	1
+译	yi;yc; 	2
+隐	yin;bq; 	1
+用	yong;et; 	1
+又	you;cc; 	0
+有	you;e,de; 	1
+原	yuan;dr; 	1
+在	zai;d,dh; 	2
+再	zai;gm; 	1
+长	zhang;ta; 	1
+只	zhi;kw; 	0
+中	zhong;k,kh; 	10
 煮	zhu;ft; 	0
+总	zong;uk; 	1
 左	zuo;da; 	1
+安顿	an;pv; dun;gb; 	1
 按键	an;rp; jian;qv; 	0
+按下	an;rp; xia;gh; 	1
+俺宝	an;wd; bao;pg; 	1
+办法	ban;lw; fa;if; 	1
 宝子	bao;pg; zi;bb; 	1
+本身	ben;sg; shen;tm; 	1
+必须	bi;nt; xu;ed; 	0
 毕竟	bi;xx; jing;uj; 	0
-并击	bing;ua; ji;fm; 	2
+比如	bi;xx; ru;vk; 	0
+表示	biao;ge; shi;fi; 	0
+别的	bie;kl; de;r,rq; 	0
+别闹	bie;kl; nao;uy; 	1
+并击	bing;ua; ji;fm; 	3
 不必	bu;i,gi; bi;nt; 	0
-不过	bu;i,gi; guo;fp; 	0
+不过	bu;i,gi; guo;fp; 	1
+不好	bu;i,gi; hao;vb; 	0
 不能	bu;i,gi; neng;ce; 	1
 不用	bu;i,gi; yong;et; 	1
+不在	bu;i,gi; zai;d,dh; 	1
 补充	bu;pu; chong;yc; 	0
+部分	bu;uk; fen;wv; 	0
 查词	cha;sj; ci;yn; 	1
-词典	ci;yn; dian;ma; 	1
+拆分	chai;rr; fen;wv; 	0
+出来	chu;bm; lai;go; 	1
+处理	chu;th; li;gj; 	0
+词典	ci;yn; dian;ma; 	2
+词汇	ci;yn; hui;ia; 	0
 词库	ci;yn; ku;yl; 	1
 存在	cun;dh; zai;d,dh; 	0
+单间	dan;uj; jian;uj; 	1
+单一	dan;uj; yi;g,gg; 	0
+但是	dan;wj; shi;j,jg; 	1
+当成	dang;iv; cheng;dn; 	0
 当然	dang;iv; ran;qd; 	0
 的人	de;r,rq; ren;w,ww; 	0
+等级	deng;tf; ji;xe; 	0
+底层	di;yq; ceng;nf; 	0
+定义	ding;pg; yi;yq; 	1
+动态	dong;fc; tai;dy; 	1
 都快	dou;ft; kuai;nn; 	1
 对头	dui;cf; tou;ud; 	1
-反查	fan;rc; cha;sj; 	1
+多点	duo;qq; dian;hk; 	1
+恩情	en;ld; qing;ng; 	0
+反查	fan;rc; cha;sj; 	3
+翻译	fan;to; yi;yc; 	1
+放假	fang;yt; jia;wn; 	1
 放在	fang;yt; zai;d,dh; 	0
+方案	fang;yy; an;pv; 	1
 方便	fang;yy; bian;wg; 	1
+方式	fang;yy; shi;aa; 	0
+粉丝	fen;ow; si;xx; 	2
 符号	fu;tw; hao;kg; 	0
+感觉	gan;dg; jue;ip; 	0
+感谢	gan;dg; xie;yt; 	1
 搞得	gao;ry; de;tj; 	1
+高亮	gao;ym; liang;yp; 	0
 歌词	ge;sk; ci;yn; 	0
+格式	ge;st; shi;aa; 	0
+给你	gei;xw; ni;wq; 	0
+跟着	gen;kh; zhe;ud; 	1
 更好	geng;gj; hao;vb; 	1
+更加	geng;gj; jia;lk; 	0
+更难	geng;gj; nan;cw; 	0
+更新	geng;gj; xin;us; 	1
+功能	gong;al; neng;ce; 	0
+滚动	gun;iu; dong;fc; 	1
+过百	guo;fp; bai;dj; 	1
+过啦	guo;fp; la;kr; 	1
+哈哈	ha;kw; ha;kw; 	11
+好办	hao;vb; ban;lw; 	1
+好的	hao;vb; de;r,rq; 	1
 好了	hao;vb; le;b,bn; 	0
-好嘛	hao;vb; ma;ky; 	1
+好嘛	hao;vb; ma;ky; 	4
+好像	hao;vb; xiang;wq; 	0
 核心	he;sy; xin;ny; 	0
-嘿嘿	hei;kl; hei;kl; 	1
+和粮	he;t,tk; liang;oy; 	1
+嘿嘿	hei;kl; hei;kl; 	5
+候选	hou;wh; xuan;tf; 	0
+几点	ji;mt; dian;hk; 	0
 几个	ji;mt; ge;wh; 	0
-可以	ke;sk; yi;c,ny; 	1
+几岁	ji;mt; sui;mq; 	0
+加载	jia;lk; zai;fa; 	1
+家里	jia;pe; li;jf; 	1
+家人	jia;pe; ren;w,ww; 	0
+将军	jiang;uq; jun;pl; 	1
+脚本	jiao;ef; ben;sg; 	8
+结果	jie;xf; guo;js; 	1
+今年	jin;wy; nian;rh; 	0
+今天	jin;wy; tian;gd; 	0
+精简	jing;og; jian;tu; 	0
+就是	jiu;yi; shi;j,jg; 	3
+就在	jiu;yi; zai;d,dh; 	0
+开关	kai;ga; guan;ud; 	1
+开始	kai;ga; shi;vc; 	0
+可以	ke;sk; yi;c,ny; 	3
+快乐	kuai;nn; le;qi; 	1
+啦啦	la;kr; la;kr; 	1
 来源	lai;go; yuan;id; 	0
+累死	lei;lx; si;gq; 	1
+两个	liang;gm; ge;wh; 	0
+旅游	lv;yt; you;iy; 	0
+码表	ma;dc; biao;ge; 	0
+麻烦	ma;ys; fan;od; 	0
+满意	man;ia; yi;uj; 	1
+没有	mei;im; you;e,de; 	1
+缅甸	mian;xd; dian;ql; 	1
+明白	ming;je; bai;rr; 	0
+默认	mo;lf; ren;yw; 	1
 模型	mo;sa; xing;ga; 	0
-内容	nei;mw; rong;pw; 	0
+目前	mu;hh; qian;ue; 	2
+哪里	na;kv; li;jf; 	1
+那就	na;vf; jiu;yi; 	1
+那是	na;vf; shi;j,jg; 	1
+那种	na;vf; zhong;tk; 	0
+内容	nei;mw; rong;pw; 	2
+你把	ni;wq; ba;rc; 	1
+你的	ni;wq; de;r,rq; 	1
+你好	ni;wq; hao;vb; 	9
 你也	ni;wq; ye;bn; 	0
+你在	ni;wq; zai;d,dh; 	0
+牛马	niu;rh; ma;cn; 	0
+弄成	nong;ga; cheng;dn; 	0
+弄了	nong;ga; le;b,bn; 	0
+偶尔	ou;wj; er;qi; 	0
+怕你	pa;nr; ni;wq; 	0
+派单	pai;ir; dan;uj; 	0
+配置	pei;sg; zhi;lf; 	0
 拼凑	pin;ru; cou;ud; 	0
-如何	ru;vk; he;ws; 	1
+切换	qie;av; huan;rq; 	0
+去了	qu;fc; le;b,bn; 	0
+日志	ri;jj; zhi;fn; 	3
+如果	ru;vk; guo;js; 	1
+如何	ru;vk; he;ws; 	2
+塞弗	sai;pf; fu;xj; 	1
+上屏	shang;h,hh; ping;nu; 	1
+深圳	shen;ip; zhen;fk; 	1
 什么	shen;wf; me;tc; 	0
 生成	sheng;tg; cheng;dn; 	1
-使用	shi;wg; yong;et; 	2
+是吧	shi;j,jg; ba;kc; 	1
+时候	shi;jf; hou;wh; 	1
+实现	shi;pu; xian;gm; 	2
+释义	shi;to; yi;yq; 	1
+使用	shi;wg; yong;et; 	4
+手操	shou;rt; cao;rk; 	1
+输出	shu;lw; chu;bm; 	1
+输入	shu;lw; ru;ty; 	0
+属性	shu;nt; xing;nt; 	0
 熟悉	shu;yb; xi;to; 	0
+思想	si;ln; xiang;sh; 	1
+泰国	tai;dw; guo;l,lg; 	1
+太冷	tai;dy; leng;uw; 	1
+太小	tai;dy; xiao;ih; 	0
+条数	tiao;ts; shu;ov; 	1
+调皮	tiao;ym; pi;hc; 	1
+调试	tiao;ym; shi;ya; 	1
 通过	tong;ce; guo;fp; 	1
+同文	tong;m,mg; wen;yy; 	0
+万象	wan;dn; xiang;qj; 	3
+未来	wei;fi; lai;go; 	0
 为了	wei;o,yl; le;b,bn; 	0
 问题	wen;uk; ti;jg; 	0
+文件	wen;yy; jian;wr; 	0
+文总	wen;yy; zong;uk; 	2
+我看	wo;q,tr; kan;rh; 	1
+我去	wo;q,tr; qu;fc; 	1
 无敌	wu;fq; di;td; 	0
+系统	xi;tx; tong;xy; 	1
+显示	xian;jo; shi;fi; 	1
+想要	xiang;sh; yao;s,sv; 	1
 小鹤	xiao;ih; he;pw; 	2
+小丽	xiao;ih; li;gm; 	1
+消息	xiao;ii; xi;th; 	0
+效果	xiao;uq; guo;js; 	2
+修改	xiu;wh; gai;nt; 	2
 需要	xu;fd; yao;s,sv; 	1
 选择	xuan;tf; ze;rc; 	1
 押韵	ya;rl; yun;uj; 	0
+样式	yang;su; shi;aa; 	1
+以后	yi;c,ny; hou;rg; 	0
+一个	yi;g,gg; ge;wh; 	1
 一天	yi;g,gg; tian;gd; 	0
-一下	yi;g,gg; xia;gh; 	1
+一下	yi;g,gg; xia;gh; 	2
+一些	yi;g,gg; xie;hx; 	0
+一样	yi;g,gg; yang;su; 	0
 已经	yi;nn; jing;x,xc; 	0
+因为	yin;ld; wei;o,yl; 	2
+英文	ying;am; wen;yy; 	1
 映射	ying;jm; she;tm; 	0
-应该	ying;yi; gai;yy; 	0
+应该	ying;yi; gai;yy; 	1
+用的	yong;et; de;r,rq; 	0
+用法	yong;et; fa;if; 	0
+用来	yong;et; lai;go; 	0
 有葫	you;e,de; hu;ad; 	1
+有些	you;e,de; xie;hx; 	0
+原理	yuan;dr; li;gj; 	0
+运到	yun;fc; dao;gc; 	1
+怎么	zen;th; me;tc; 	1
+增强	zeng;fu; qiang;xk; 	1
+战队	zhan;hk; dui;bw; 	0
+这边	zhe;p,yp; bian;lp; 	0
+这个	zhe;p,yp; ge;wh; 	2
+这样	zhe;p,yp; yang;su; 	0
 这种	zhe;p,yp; zhong;tk; 	1
+正确	zheng;gh; que;dq; 	1
+正在	zheng;gh; zai;d,dh; 	0
 整合	zheng;gk; he;wg; 	1
-只是	zhi;kw; shi;j,jg; 	0
+直接	zhi;fh; jie;ru; 	1
+只是	zhi;kw; shi;j,jg; 	1
+之前	zhi;pp; qian;ue; 	0
 指定	zhi;rx; ding;pg; 	1
 智慧	zhi;td; hui;dh; 	0
+终端	zhong;xt; duan;um; 	0
+终于	zhong;xt; yu;gf; 	1
 注释	zhu;iy; shi;to; 	0
+主业	zhu;y,yg; ye;og; 	0
+专门	zhuan;fn; men;uy; 	0
 字典	zi;pb; dian;ma; 	2
+字体	zi;pb; ti;ws; 	0
+自动	zi;th; dong;fc; 	1
 自取	zi;th; qu;bc; 	1
+最后	zui;jb; hou;rg; 	1
 作为	zuo;wt; wei;o,yl; 	0
+不成功	bu;i,gi; cheng;dn; gong;al; 	1
+不错了	bu;i,gi; cuo;qa; le;b,bn; 	1
+不及时	bu;i,gi; ji;ey; shi;jf; 	1
 不行了	bu;i,gi; xing;tf; le;b,bn; 	1
+才知道	cai;ft; zhi;td; dao;ut; 	1
+差不多	cha;ud; bu;i,gi; duo;qq; 	1
+吃完饭	chi;kt; wan;pf; fan;qn; 	1
+大冬天	da;dd; dong;tu; tian;gd; 	1
 都可以	dou;ft; ke;sk; yi;c,ny; 	0
+都在这	dou;ft; zai;d,dh; zhe;p,yp; 	0
+而不是	er;dm; bu;i,gi; shi;j,jg; 	0
+发送到	fa;v,nt; song;ud; dao;gc; 	1
+非常快	fei;dj; chang;ip; kuai;nn; 	0
 辅助码	fu;lg; zhu;eg; ma;dc; 	1
+刚看到	gang;mq; kan;rh; dao;gc; 	1
+搞出来	gao;ry; chu;bm; lai;go; 	1
+跟其他	gen;kh; qi;ad; ta;wb; 	0
+更舒服	geng;gj; shu;wf; fu;eb; 	0
+好几个	hao;vb; ji;mt; ge;wh; 	0
+很出名	hen;tv; chu;bm; ming;qk; 	1
+候选词	hou;wh; xuan;tf; ci;yn; 	0
 候选项	hou;wh; xuan;tf; xiang;ad; 	1
+换一下	huan;rq; yi;g,gg; xia;gh; 	0
+回重庆	hui;lk; chong;tg; qing;yd; 	1
+加进去	jia;lk; jin;fj; qu;fc; 	0
+将释义	jiang;uq; shi;to; yi;yq; 	1
+脚本中	jiao;ef; ben;sg; zhong;k,kh; 	2
 解决了	jie;qe; jue;un; le;b,bn; 	0
+接收到	jie;ru; shou;nh; dao;gc; 	1
+惊愕的	jing;ny; e;nk; de;r,rq; 	1
 经常打	jing;x,xc; chang;ip; da;rs; 	1
+就可以	jiu;yi; ke;sk; yi;c,ny; 	0
+看看你	kan;rh; kan;rh; ni;wq; 	0
+看来要	kan;rh; lai;go; yao;s,sv; 	0
+可以当	ke;sk; yi;c,ny; dang;iv; 	0
+可以先	ke;sk; yi;c,ny; xian;tf; 	0
+可以有	ke;sk; yi;c,ny; you;e,de; 	1
+类似于	lei;od; si;wn; yu;gf; 	0
+离家近	li;yb; jia;pe; jin;rp; 	1
 另一个	ling;kl; yi;g,gg; ge;wh; 	0
+那个是	na;vf; ge;wh; shi;j,jg; 	2
+那几个	na;vf; ji;mt; ge;wh; 	0
+那可以	na;vf; ke;sk; yi;c,ny; 	1
+你好吗	ni;wq; hao;vb; ma;kc; 	1
+你那个	ni;wq; na;vf; ge;wh; 	0
+你现在	ni;wq; xian;gm; zai;d,dh; 	0
+尿不湿	niao;ni; bu;i,gi; shi;ij; 	0
+女孩子	nv;vv; hai;by; zi;bb; 	0
+去哪里	qu;fc; na;kv; li;jf; 	0
+如何把	ru;vk; he;ws; ba;rc; 	0
+上学了	shang;h,hh; xue;ip; le;b,bn; 	0
+是不是	shi;j,jg; bu;i,gi; shi;j,jg; 	0
+是国内	shi;j,jg; guo;l,lg; nei;mw; 	0
+是怕你	shi;j,jg; pa;nr; ni;wq; 	1
+是什么	shi;j,jg; shen;wf; me;tc; 	0
+实现了	shi;pu; xian;gm; le;b,bn; 	1
+使用的	shi;wg; yong;et; de;r,rq; 	0
+输入法	shu;lw; ru;ty; fa;if; 	1
 双符号	shuang;cc; fu;tw; hao;kg; 	1
+搜一下	sou;rv; yi;g,gg; xia;gh; 	0
+太远了	tai;dy; yuan;fq; le;b,bn; 	1
 体验了	ti;ws; yan;cw; le;b,bn; 	0
+网上买	wang;mq; shang;h,hh; mai;nu; 	0
+为什么	wei;o,yl; shen;wf; me;tc; 	1
 文件夹	wen;yy; jian;wr; jia;gu; 	1
+我不用	wo;q,tr; bu;i,gi; yong;et; 	0
+我大概	wo;q,tr; da;dd; gai;sv; 	0
+我好像	wo;q,tr; hao;vb; xiang;wq; 	0
+我记得	wo;q,tr; ji;yn; de;tj; 	1
+我试试	wo;q,tr; shi;ya; shi;ya; 	1
 无所谓	wu;fq; suo;rn; wei;yl; 	1
+下班啊	xia;gh; ban;gy; a;kb; 	0
+消耗品	xiao;ii; hao;di; pin;kk; 	1
+修改了	xiu;wh; gai;nt; le;b,bn; 	2
 选择了	xuan;tf; ze;rc; le;b,bn; 	0
 眼镜娘	yan;hv; jing;qu; niang;vy; 	2
+一部分	yi;g,gg; bu;uk; fen;wv; 	0
 已经快	yi;nn; jing;x,xc; kuai;nn; 	1
+用哪个	yong;et; na;kv; ge;wh; 	1
+用这个	yong;et; zhe;p,yp; ge;wh; 	1
+永不忘	yong;yn; bu;i,gi; wang;yn; 	0
 永远是	yong;yn; yuan;fq; shi;j,jg; 	0
-有时候	you;e,de; shi;jf; hou;wh; 	0
+有点大	you;e,de; dian;hk; da;dd; 	1
+有时候	you;e,de; shi;jf; hou;wh; 	1
+有一个	you;e,de; yi;g,gg; ge;wh; 	0
+在哪个	zai;d,dh; na;kv; ge;wh; 	0
+在哪里	zai;d,dh; na;kv; li;jf; 	1
+在这里	zai;d,dh; zhe;p,yp; li;jf; 	0
+再大点	zai;gm; da;dd; dian;hk; 	1
+怎么让	zen;th; me;tc; rang;yh; 	0
+怎么说	zen;th; me;tc; shuo;yu; 	1
+这样看	zhe;p,yp; yang;su; kan;rh; 	1
+拯救了	zheng;rb; jiu;fi; le;b,bn; 	0
 煮好了	zhu;ft; hao;vb; le;b,bn; 	1
 注释中	zhu;iy; shi;to; zhong;k,kh; 	1
+转一下	zhuan;lf; yi;g,gg; xia;gh; 	0
 最终还	zui;jb; zhong;xt; hai;gi; 	0
+做一些	zuo;wd; yi;g,gg; xie;hx; 	0
 毕竟熟悉	bi;xx; jing;uj; shu;yb; xi;to; 	1
 不会打字	bu;i,gi; hui;wf; da;rs; zi;pb; 	0
+插入空格	cha;rt; ru;ty; kong;pw; ge;st; 	0
+差不多了	cha;ud; bu;i,gi; duo;qq; le;b,bn; 	0
 词库来源	ci;yn; ku;yl; lai;go; yuan;id; 	1
+到哪儿了	dao;gc; na;kv; er;qt; le;b,bn; 	0
+底层牛马	di;yq; ceng;nf; niu;rh; ma;cn; 	1
 放在什么	fang;yt; zai;d,dh; shen;wf; me;tc; 	1
+该上学了	gai;yy; shang;h,hh; xue;ip; le;b,bn; 	1
+跟你一起	gen;kh; ni;wq; yi;g,gg; qi;fh; 	0
+还有什么	hai;gi; you;e,de; shen;wf; me;tc; 	0
+回老家了	hui;lk; lao;ft; jia;pe; le;b,bn; 	0
+几岁更难	ji;mt; sui;mq; geng;gj; nan;cw; 	1
+今年就在	jin;wy; nian;rh; jiu;yi; zai;d,dh; 	1
+精简词汇	jing;og; jian;tu; ci;yn; hui;ia; 	1
+开发指南	kai;ga; fa;v,nt; zhi;rx; nan;fm; 	1
+开始处理	kai;ga; shi;vc; chu;th; li;gj; 	1
+开始调试	kai;ga; shi;vc; tiao;ym; shi;ya; 	1
+可以避免	ke;sk; yi;c,ny; bi;nk; mian;qk; 	0
+可以直接	ke;sk; yi;c,ny; zhi;fh; jie;ru; 	1
+可以做到	ke;sk; yi;c,ny; zuo;wd; dao;gc; 	1
+拎包入住	lin;rw; bao;qn; ru;ty; zhu;wy; 	0
+没啥问题	mei;im; sha;kw; wen;uk; ti;jg; 	0
+没有找到	mei;im; you;e,de; zhao;ra; dao;gc; 	0
+那必须贵	na;vf; bi;nt; xu;ed; gui;kh; 	1
 内容放在	nei;mw; rong;pw; fang;yt; zai;d,dh; 	1
+你的意思	ni;wq; de;r,rq; yi;uj; si;ln; 	0
 你也不必	ni;wq; ye;bn; bu;i,gi; bi;nt; 	1
+你也知道	ni;wq; ye;bn; zhi;td; dao;ut; 	1
+女孩子的	nv;vv; hai;by; zi;bb; de;r,rq; 	1
+配送范围	pei;sg; song;ud; fan;ai; wei;lf; 	1
+其实已经	qi;ad; shi;pu; yi;nn; jing;x,xc; 	0
+起的作用	qi;fh; de;r,rq; zuo;wt; yong;et; 	0
+如何实现	ru;vk; he;ws; shi;pu; xian;gm; 	1
 如何使用	ru;vk; he;ws; shi;wg; yong;et; 	2
 深度优化	shen;ip; du;ya; you;wd; hua;wx; 	1
+深圳这边	shen;ip; zhen;fk; zhe;p,yp; bian;lp; 	1
+什么方式	shen;wf; me;tc; fang;yy; shi;aa; 	1
+什么意思	shen;wf; me;tc; yi;uj; si;ln; 	1
+输出等级	shu;lw; chu;bm; deng;tf; ji;xe; 	1
+输出日志	shu;lw; chu;bm; ri;jj; zhi;fn; 	2
+属性表示	shu;nt; xing;nt; biao;ge; shi;fi; 	1
 他是一个	ta;wb; shi;j,jg; yi;g,gg; ge;wh; 	1
 吞噬星空	tun;gd; shi;kt; xing;jt; kong;pw; 	1
 歪打正着	wai;gi; da;rs; zheng;gh; zhao;ud; 	0
+未雨绸缪	wei;fi; yu;fg; chou;xm; mou;xn; 	0
+我给你说	wo;q,tr; gei;xw; ni;wq; shuo;yu; 	0
+我找到了	wo;q,tr; zhao;ra; dao;gc; le;b,bn; 	0
 五笔前二	wu;gg; bi;tt; qian;ue; er;fg; 	2
+下载下来	xia;gh; zai;fa; xia;gh; lai;go; 	0
+显示效果	xian;jo; shi;fi; xiao;uq; guo;js; 	0
 小鹤双拼	xiao;ih; he;pw; shuang;cc; pin;ru; 	1
+需要用到	xu;fd; yao;s,sv; yong;et; dao;gc; 	1
+也是这样	ye;bn; shi;j,jg; zhe;p,yp; yang;su; 	1
+英文词典	ying;am; wen;yy; ci;yn; dian;ma; 	1
 英文字典	ying;am; wen;yy; zi;pb; dian;ma; 	1
 映射按键	ying;jm; she;tm; an;rp; jian;qv; 	1
+有些麻烦	you;e,de; xie;hx; ma;ys; fan;od; 	1
+原来如此	yuan;dr; lai;go; ru;vk; ci;hx; 	1
+这个思路	zhe;p,yp; ge;wh; si;ln; lu;kh; 	1
+这个问题	zhe;p,yp; ge;wh; wen;uk; ti;jg; 	0
 这玩意儿	zhe;p,yp; wan;gf; yi;uj; er;qt; 	0
+正在派单	zheng;gh; zai;d,dh; pai;ir; dan;uj; 	1
 智慧的人	zhi;td; hui;dh; de;r,rq; ren;w,ww; 	1
+注释上屏	zhu;iy; shi;to; shang;h,hh; ping;nu; 	1
+字典用的	zi;pb; dian;ma; yong;et; de;r,rq; 	1
+比如只输出	bi;xx; ru;vk; zhi;kw; shu;lw; chu;bm; 	1
+不回老家了	bu;i,gi; hui;lk; lao;ft; jia;pe; le;b,bn; 	1
 不会打字了	bu;i,gi; hui;wf; da;rs; zi;pb; le;b,bn; 	1
+当成候选项	dang;iv; cheng;dn; hou;wh; xuan;tf; xiang;ad; 	1
+的按键消息	de;r,rq; an;rp; jian;qv; xiao;ii; xi;th; 	1
+恩情永不忘	en;ld; qing;ng; yong;yn; bu;i,gi; wang;yn; 	1
+放在注释中	fang;yt; zai;d,dh; zhu;iy; shi;to; zhong;k,kh; 	1
+方案加进去	fang;yy; an;pv; jia;lk; jin;fj; qu;fc; 	1
+分割字符串	fen;wv; ge;pd; zi;pb; fu;tw; chuan;kk; 	1
+更加是牛马	geng;gj; jia;lk; shi;j,jg; niu;rh; ma;cn; 	1
+还有什么呢	hai;gi; you;e,de; shen;wf; me;tc; ne;kn; 	1
+家人都在这	jia;pe; ren;w,ww; dou;ft; zai;d,dh; zhe;p,yp; 	1
+就可以用了	jiu;yi; ke;sk; yi;c,ny; yong;et; le;b,bn; 	0
+释义在注释	shi;to; yi;yq; zai;d,dh; zhu;iy; shi;to; 	1
 体验了一天	ti;ws; yan;cw; le;b,bn; yi;g,gg; tian;gd; 	1
+未雨绸缪喽	wei;fi; yu;fg; chou;xm; mou;xn; lou;ko; 	1
+我不用同文	wo;q,tr; bu;i,gi; yong;et; tong;m,mg; wen;yy; 	1
+我去换一下	wo;q,tr; qu;fc; huan;rq; yi;g,gg; xia;gh; 	1
 无敌的存在	wu;fq; di;td; de;r,rq; cun;dh; zai;d,dh; 	1
+一天好几个	yi;g,gg; tian;gd; hao;vb; ji;mt; ge;wh; 	1
+原来是这样	yuan;dr; lai;go; shi;j,jg; zhe;p,yp; yang;su; 	1
+怎么在这里	zen;th; me;tc; zai;d,dh; zhe;p,yp; li;jf; 	1
+之前改脚本	zhi;pp; qian;ue; gai;nt; jiao;ef; ben;sg; 	1
+之前字体调	zhi;pp; qian;ue; zi;pb; ti;ws; tiao;ym; 	1
+终端怎么让	zhong;xt; duan;um; zen;th; me;tc; rang;yh; 	1
+转一下格式	zhuan;lf; yi;g,gg; xia;gh; ge;st; shi;aa; 	1
 不过歪打正着	bu;i,gi; guo;fp; wai;gi; da;rs; zheng;gh; zhao;ud; 	1
 当然你也可以	dang;iv; ran;qd; ni;wq; ye;bn; ke;sk; yi;c,ny; 	1
 歌词这玩意儿	ge;sk; ci;yn; zhe;p,yp; wan;gf; yi;uj; er;qt; 	1
+给你在网上买	gei;xw; ni;wq; zai;d,dh; wang;mq; shang;h,hh; mai;nu; 	1
+候选词的内容	hou;wh; xuan;tf; ci;yn; de;r,rq; nei;mw; rong;pw; 	1
+脚本起的作用	jiao;ef; ben;sg; qi;fh; de;r,rq; zuo;wt; yong;et; 	1
+就是两个方案	jiu;yi; shi;j,jg; liang;gm; ge;wh; fang;yy; an;pv; 	1
+目前功能单一	mu;hh; qian;ue; gong;al; neng;ce; dan;uj; yi;g,gg; 	1
+你在网上买呀	ni;wq; zai;d,dh; wang;mq; shang;h,hh; mai;nu; ya;ka; 	1
+如果使用你的	ru;vk; guo;js; shi;wg; yong;et; ni;wq; de;r,rq; 	1
+我搜一下用法	wo;q,tr; sou;rv; yi;g,gg; xia;gh; yong;et; fa;if; 	1
+我找到了这个	wo;q,tr; zhao;ra; dao;gc; le;b,bn; zhe;p,yp; ge;wh; 	1
+显示效果不好	xian;jo; shi;fi; xiao;uq; guo;js; bu;i,gi; hao;vb; 	1
+怎么插入空格	zen;th; me;tc; cha;rt; ru;ty; kong;pw; ge;st; 	1
+这个日志可以	zhe;p,yp; ge;wh; ri;jj; zhi;fn; ke;sk; yi;c,ny; 	1
+这个是国内的	zhe;p,yp; ge;wh; shi;j,jg; guo;l,lg; nei;mw; de;r,rq; 	1
+注释中的内容	zhu;iy; shi;to; zhong;k,kh; de;r,rq; nei;mw; rong;pw; 	1
+部分方案使用的	bu;uk; fen;wv; fang;yy; an;pv; shi;wg; yong;et; de;r,rq; 	1
 词库永远是核心	ci;yn; ku;yl; yong;yn; yuan;fq; shi;j,jg; he;sy; xin;ny; 	1
+和战队差不多了	he;t,tk; zhan;hk; dui;bw; cha;ud; bu;i,gi; duo;qq; le;b,bn; 	1
+今天几点下班啊	jin;wy; tian;gd; ji;mt; dian;hk; xia;gh; ban;gy; a;kb; 	1
+可以直接让注释	ke;sk; yi;c,ny; zhi;fh; jie;ru; rang;yh; zhu;iy; shi;to; 	1
+拎包入住那种吧	lin;rw; bao;qn; ru;ty; zhu;wy; na;vf; zhong;tk; ba;kc; 	1
+你现在到哪儿了	ni;wq; xian;gm; zai;d,dh; dao;gc; na;kv; er;qt; le;b,bn; 	1
+尿不湿拯救了我	niao;ni; bu;i,gi; shi;ij; zheng;rb; jiu;fi; le;b,bn; wo;q,tr; 	1
 什么都可以拼凑	shen;wf; me;tc; dou;ft; ke;sk; yi;c,ny; pin;ru; cou;ud; 	1
+是不是没啥问题	shi;j,jg; bu;i,gi; shi;j,jg; mei;im; sha;kw; wen;uk; ti;jg; 	1
+输出在哪个文件	shu;lw; chu;bm; zai;d,dh; na;kv; ge;wh; wen;yy; jian;wr; 	1
+我好像没有找到	wo;q,tr; hao;vb; xiang;wq; mei;im; you;e,de; zhao;ra; dao;gc; 	1
+我们都是一样的	wo;q,tr; men;wu; dou;ft; shi;j,jg; yi;g,gg; yang;su; de;r,rq; 	1
+我专门用来输入	wo;q,tr; zhuan;fn; men;uy; yong;et; lai;go; shu;lw; ru;ty; 	1
+应该就可以实现	ying;yi; gai;yy; jiu;yi; ke;sk; yi;c,ny; shi;pu; xian;gm; 	1
+应该就可以用了	ying;yi; gai;yy; jiu;yi; ke;sk; yi;c,ny; yong;et; le;b,bn; 	1
 有时候为了押韵	you;e,de; shi;jf; hou;wh; wei;o,yl; le;b,bn; ya;rl; yun;uj; 	1
 最终还是选择了	zui;jb; zhong;xt; hai;gi; shi;j,jg; xuan;tf; ze;rc; le;b,bn; 	1
 辅助码体验了几个	fu;lg; zhu;eg; ma;dc; ti;ws; yan;cw; le;b,bn; ji;mt; ge;wh; 	1
+感觉候选字体太小	gan;dg; jue;ip; hou;wh; xuan;tf; zi;pb; ti;ws; tai;dy; xiao;ih; 	1
+跟你一起去了没有	gen;kh; ni;wq; yi;g,gg; qi;fh; qu;fc; le;b,bn; mei;im; you;e,de; 	1
 解决了另一个问题	jie;qe; jue;un; le;b,bn; ling;kl; yi;g,gg; ge;wh; wen;uk; ti;jg; 	1
+类似于码表的拆分	lei;od; si;wn; yu;gf; ma;dc; biao;ge; de;r,rq; chai;rr; fen;wv; 	1
+你可以先下载下来	ni;wq; ke;sk; yi;c,ny; xian;tf; xia;gh; zai;fa; xia;gh; lai;go; 	1
+跟其他反查原理一样	gen;kh; qi;ad; ta;wb; fan;rc; cha;sj; yuan;dr; li;gj; yi;g,gg; yang;su; 	1
+你那个脚本增强一下	ni;wq; na;vf; ge;wh; jiao;ef; ben;sg; zeng;fu; qiang;xk; yi;g,gg; xia;gh; 	1
+偶尔切换别的输入法	ou;wj; er;qi; qie;av; huan;rq; bie;kl; de;r,rq; shu;lw; ru;ty; fa;if; 	1
+文总又去哪里旅游啦	wen;yy; zong;uk; you;cc; qu;fc; na;kv; li;jf; lv;yt; you;iy; la;kr; 	1
+过百其实已经非常快了	guo;fp; bai;dj; qi;ad; shi;pu; yi;nn; jing;x,xc; fei;dj; chang;ip; kuai;nn; le;b,bn; 	1
+你的配置中有一个功能	ni;wq; de;r,rq; pei;sg; zhi;lf; zhong;k,kh; you;e,de; yi;g,gg; ge;wh; gong;al; neng;ce; 	1
+你现在用的是什么方案	ni;wq; xian;gm; zai;d,dh; yong;et; de;r,rq; shi;j,jg; shen;wf; me;tc; fang;yy; an;pv; 	1
+我大概明白你的意思了	wo;q,tr; da;dd; gai;sv; ming;je; bai;rr; ni;wq; de;r,rq; yi;uj; si;ln; le;b,bn; 	1
+我给你说是那几个文件	wo;q,tr; gei;xw; ni;wq; shuo;yu; shi;j,jg; na;vf; ji;mt; ge;wh; wen;yy; jian;wr; 	1
+做一些未来可以当主业的	zuo;wd; yi;g,gg; xie;hx; wei;fi; lai;go; ke;sk; yi;c,ny; dang;iv; zhu;y,yg; ye;og; de;r,rq; 	1
+本身可以避免这个问题是吧	ben;sg; shen;tm; ke;sk; yi;c,ny; bi;nk; mian;qk; zhe;p,yp; ge;wh; wen;uk; ti;jg; shi;j,jg; ba;kc; 	1
+而不是作为候选项的一部分	er;dm; bu;i,gi; shi;j,jg; zuo;wt; wei;o,yl; hou;wh; xuan;tf; xiang;ad; de;r,rq; yi;g,gg; bu;uk; fen;wv; 	1
+如何把高亮的部分弄成注释	ru;vk; he;ws; ba;rc; gao;ym; liang;yp; de;r,rq; bu;uk; fen;wv; nong;ga; cheng;dn; zhu;iy; shi;to; 	1
+以后看来要看看你弄了没有	yi;c,ny; hou;rg; kan;rh; lai;go; yao;s,sv; kan;rh; kan;rh; ni;wq; nong;ga; le;b,bn; mei;im; you;e,de; 	1
 模型应该只是作为词库的补充	mo;sa; xing;ga; ying;yi; gai;yy; zhi;kw; shi;j,jg; zuo;wt; wei;o,yl; ci;yn; ku;yl; de;r,rq; bu;pu; chong;yc; 	1
+好像这种切换的方式更舒服一些	hao;vb; xiang;wq; zhe;p,yp; zhong;tk; qie;av; huan;rq; de;r,rq; fang;yy; shi;aa; geng;gj; shu;wf; fu;eb; yi;g,gg; xie;hx; 	1

@@ -97,7 +97,7 @@ cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
 cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	sydwu	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_flypy_user_dict.py	sydfu	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_py_user_dict.py	sydpu	0
 cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	udea	0
 cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_wx.sh	uddw	0
 cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_frost.sh	uddf	0

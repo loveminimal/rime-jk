@@ -10,7 +10,7 @@
 # 
 # 运行脚本：
 # - https://github.com/loveminimal/rime-utils/blob/master/scripts/bash_alias2en_aliases_dict.py
-# - py scripts/bash_alias2en_aliases_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - py scripts/wubi86.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 #
 ---
 name: en_aliases
@@ -96,11 +96,11 @@ cd ~/.shell	cdsh	0
 cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
-cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	sydwu	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_py_user_dict.py	sydpu	0
-cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	udea	0
-cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_wx.sh	uddw	0
-cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_frost.sh	uddf	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	uwbud	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_py_user_dict.py	upyud	0
+cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	uea	0
+cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_wx.sh	uwxd	0
+cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_frost.sh	ufrostd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && scp -r public/* aituyaa.com:/home/jack/blog/ && rm -rf public	sscp	0
 

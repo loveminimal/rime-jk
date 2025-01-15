@@ -133,7 +133,7 @@ def get_en_header(file_name):
 # 
 # 运行脚本：
 # - https://github.com/loveminimal/rime-utils/blob/master/scripts/melt_eng.py
-# - py scripts/wubi86.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - py scripts/melt_eng.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 # 
 # 参考码表：
 # - https://github.com/iDvel/rime-ice
@@ -163,7 +163,7 @@ def get_en_aliases_header(file_name):
 # 
 # 运行脚本：
 # - https://github.com/loveminimal/rime-utils/blob/master/scripts/bash_alias2en_aliases_dict.py
-# - py scripts/wubi86.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - py scripts/bash_alias2en_aliases_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 #
 ---
 name: {'.'.join(file_name.split('.')[:-2])}

@@ -137,7 +137,7 @@ chord_composer:
 #     - reverse_lookup
 
 translator:
-  dictionary: jk_flypy
+  dictionary: py
   prism: jk_flypy
   # initial_quality: 10000
   # 是否自动补全（预测），酌情开启。

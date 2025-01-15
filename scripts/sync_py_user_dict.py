@@ -3,18 +3,18 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_flypy_user_dict.py
-# - py scripts/sync_flypy_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_py_user_dict.py
+# - py scripts/sync_py_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 # 
 # 默认目录：
-# src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-wubi\\jk_flypy.userdb.txt
-# out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\flypy_user.dict.yaml
+# src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-wubi\\py.userdb.txt
+# out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\py_user.dict.yaml
 # 
 import sys
 import re
 from pathlib import Path
 from collections import defaultdict
-from header import get_header_sync_flypy
+from header import get_header_sync_py
 from data.char_8105 import char_8105
 from timer import timer
 
@@ -82,13 +82,13 @@ def convert(SRC_DIR, OUT_DIR, FILE_ENDSWITH_FILETER, MULTIFILE_OUT_MODE):
 			if MULTIFILE_OUT_MODE == 1:
 				with open(OUT_DIR / f'wubi86_{word_len}.dict.yaml', 'a', encoding='utf-8') as o:
 					print('✅  » 已合并处理生成 %s 字文件' % word_len)
-					o.write(get_header_sync_flypy(f'wubi86_{word_len}.dict.yaml'))
+					o.write(get_header_sync_py(f'wubi86_{word_len}.dict.yaml'))
 					o.write(res)
 			# 统一生成在单个文件
 			elif MULTIFILE_OUT_MODE == 0:
 				with open(OUT_DIR / f'{out_file}', 'a', encoding='utf-8') as o:
 					print('✅  » 已合并处理生成 %s 字词语' % word_len)
-					word_len == 1 and o.write(get_header_sync_flypy(f'{out_file}'))	# 仅字长为 1 时添加表头
+					word_len == 1 and o.write(get_header_sync_py(f'{out_file}'))	# 仅字长为 1 时添加表头
 					o.write(res)
 
 if __name__ == '__main__':
@@ -96,10 +96,10 @@ if __name__ == '__main__':
 
 	src = 'C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-wubi' # 用户同步词典目录
 	out = 'C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts'              # 输入用户词典目录
-	file_endswith_filter = 'jk_flypy.userdb.txt'                              # 待转换的用户词典
+	file_endswith_filter = 'py.userdb.txt'                              # 待转换的用户词典
 	multifile_out_mode = 0
 
-	out_file = 'flypy_user.dict.yaml'                                    # 转换后的用户词典
+	out_file = 'py_user.dict.yaml'                                    # 转换后的用户词典
 
 	# 命令行输入选项
 	# ... py scripts/wubi86.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]

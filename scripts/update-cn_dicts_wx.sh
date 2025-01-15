@@ -25,7 +25,7 @@ then
     rm -rf $OUT_DICTS
 fi
 cp -r D:/sourcecode/sc_rime/rime-utils/dicts/rime-wx/$OUT_DICTS ./
-cp -f scripts/data/flypy.dict.wx.yaml jk_flypy.dict.yaml
+cp -f scripts/data/py.dict.wx.yaml py.dict.yaml
 echo -e "\e[42m✅ 万象+五笔前二词库已复制完成  「 $OUT_DICTS 」\e[0m"
 # cd D:/sourcecode/sc_rime/rime-utils
 cd $CURRENT_DIR

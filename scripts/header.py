@@ -93,7 +93,7 @@ use_preset_vocabulary: false
     return header.strip() + '\n'
 
 # --- 用户词典同步表头·拼音+五笔前二 ---
-def get_header_sync_flypy(file_name):
+def get_header_sync_py(file_name):
     header = f'''
 # Rime dictionary - {file_name}
 # encoding: utf-8
@@ -104,8 +104,8 @@ def get_header_sync_flypy(file_name):
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_flypy_user_dict.py
-# - py scripts/sync_flypy_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_py_user_dict.py
+# - py scripts/sync_py_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 # 
 ---
 name: {'.'.join(file_name.split('.')[:-2])}

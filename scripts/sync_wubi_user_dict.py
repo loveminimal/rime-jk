@@ -44,7 +44,7 @@ def convert(SRC_DIR, OUT_DIR, FILE_ENDSWITH_FILETER, MULTIFILE_OUT_MODE):
 
 	# 设定最大统计字长列表 - 15个字
 	word_len_list = list(range(50))
-
+	has_header = False
 	for word_len in word_len_list:
 		res = ''
 		# 以下几行为原始同步词典格式
@@ -88,7 +88,9 @@ def convert(SRC_DIR, OUT_DIR, FILE_ENDSWITH_FILETER, MULTIFILE_OUT_MODE):
 			elif MULTIFILE_OUT_MODE == 0:
 				with open(OUT_DIR / f'{out_file}', 'a', encoding='utf-8') as o:
 					print('✅  » 已合并处理生成 %s 字词语' % word_len)
-					word_len == 1 and o.write(get_header_sync(f'{out_file}'))	# 仅字长为 1 时添加表头
+					if (not has_header and res[0] in char_8105):
+						o.write(get_header_sync(f'{out_file}'))	# 仅字长为 1 时添加表头
+						has_header = True
 					o.write(res)
 
 if __name__ == '__main__':
@@ -96,7 +98,7 @@ if __name__ == '__main__':
 
 	src = 'C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-wubi' # 用户同步词典目录
 	out = 'C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts'              # 输入用户词典目录
-	file_endswith_filter = 'jk_wubi.userdb.txt'                         # 待转换的用户词典
+	file_endswith_filter = 'wubi.userdb.txt'                         # 待转换的用户词典
 	multifile_out_mode = 0
 
 	out_file = 'wubi_user.dict.yaml'                                    # 转换后的用户词典

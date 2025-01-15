@@ -13,6 +13,10 @@ version: 2025-01-07
 sort: by_weight
 use_preset_vocabulary: false
 ...
+# --- 字典释义扩充 ---
+rime n. 雾凇（颗粒状的霜晶）	rime
+
+
 # --- 快捷 abbreviation ---
 js	js	0
 javascript	js	0
@@ -37,6 +41,3 @@ python3	py	0
 Python	py	0
 winpty python	py	0
 pip3	pip	0
-
-# --- 字典释义扩充 ---
-rime n. 雾凇（颗粒状的霜晶）	rime

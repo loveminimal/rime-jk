@@ -174,3 +174,29 @@ use_preset_vocabulary: false
 
 '''
     return header.strip() + '\n'
+
+def get_en_dict_header(file_name):
+    header = f'''
+# Rime dictionary - {file_name}
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 生成英文词典词库，方便查词
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+# 运行脚本：
+# - https://github.com/loveminimal/rime-utils/blob/master/scripts/get_en_dict.py
+# - py scripts/get_en_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# 
+# 参考码表：
+# - https://github.com/KyleBing/english-vocabulary
+# 
+---
+name: {'.'.join(file_name.split('.')[:-2])}
+version: '{datetime.now().date().strftime("%Y.%m")}'
+sort: by_weight
+use_preset_vocabulary: false
+...
+'''
+    return header.strip() + '\n'

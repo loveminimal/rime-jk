@@ -231,11 +231,12 @@ emoji:
 # 拆分规则 https://flypy.com/help/#/ux
 chaifen:
   option_name: chaifen
-  opencc_config: flyyx_cf.json
-  tips: char
+  opencc_config: wb_cf.json
+  tips: all
   show_in_comment: true
   comment_format:
-    - "xform/	/ /"
+    - "xform/-/ /"
+    # - "xform/	/ /"
 
 
 # === 标点符号控制 ===

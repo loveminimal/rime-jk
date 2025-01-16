@@ -132,7 +132,8 @@ speller:
 chord_composer:
   # 字母表，包含用并击按键
   # 击键一律以字母表顺序排列
-  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p',./"
+  # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p',./"
+  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
   algebra:
     # --- 修改为JK键位 ---
     # - "xform/^,$/,/"
@@ -169,7 +170,7 @@ chord_composer:
     - xform/jk(?![左右])$/a右/
     - xform/jl(?![左右])$/s右/
     - xform/jkl(?![左右])$/d右/
-    - xform/kl(?![左右])$/f右/
+    # - xform/kl(?![左右])$/f右/
     - xform/j;(?![左右])$/g右/    
 
     - xform/nk(?![左右])$/z右/
@@ -177,6 +178,9 @@ chord_composer:
     - xform/nkl(?![左右])$/c右/
     - xform/mk(?![左右])$/v右/
     - xform/ml(?![左右])$/b右/
+
+    - xform/kl(?![左右])$/f右/ # 173
+
     # --- 原运算规则 ---
     # # - "xform/^,$/,/"
     # # - "xform/^\.$/./"

@@ -22,6 +22,7 @@ reverse_lookup:
   prefix: "%"
   suffix: ":"
   tips: 〔字符·反查〕
+  enable_completion: true
   preedit_format:
     - "xlit|%| |"
   # comment_format:

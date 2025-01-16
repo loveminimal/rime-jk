@@ -10,7 +10,7 @@
 # 
 # 运行脚本：
 # - https://github.com/loveminimal/rime-utils/blob/master/scripts/bash_alias2en_aliases_dict.py
-# - py scripts/wubi86.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - py scripts/bash_alias2en_aliases_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
 #
 ---
 name: en_aliases
@@ -96,6 +96,7 @@ cd ~/.shell	cdsh	0
 cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
+cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py && py scripts/sync_py_user_dict.py	uud	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	uwbud	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_py_user_dict.py	upyud	0
 cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	uea	0

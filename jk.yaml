@@ -11,6 +11,9 @@ switches:
   - name: emoji
     reset: 1
     states: [ 💀, 😄 ]
+  - name: zh2en
+    reset: 1
+    states: [ 不译, 翻译 ]
   - name: chaifen
     reset: 0
     states: [ 隐拆, 显拆 ]

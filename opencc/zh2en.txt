@@ -1,0 +1,3 @@
+中英	中英 zh2en
+合同	合同 contract
+博客	博客 blog

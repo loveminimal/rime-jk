@@ -82,6 +82,7 @@ engine:
     # 反查的 filter
     - simplifier                         # 用字转换，？默认繁转简
     - simplifier@emoji                   # Emoji
+    - simplifier@zh2en
     # - uniquifier                         # 过滤重复的候选字，有可能来自 simplifier
     - simplifier@chaifen                 # 五笔的拆分滤镜
 
@@ -155,6 +156,11 @@ custom_phrase:
 emoji:
   option_name: emoji
   opencc_config: emoji.json
+  inherit_comment: false
+
+zh2en:
+  option_name: zh2en
+  opencc_config: zh2en.json
   inherit_comment: false
 
 

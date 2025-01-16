@@ -66,6 +66,7 @@ engine:
     # 反查的filter
     - simplifier
     - simplifier@emoji
+    - simplifier@zh2en
     # - uniquifier
     - simplifier@chaifen
 
@@ -224,6 +225,11 @@ custom_phrase:
 emoji:
   option_name: emoji
   opencc_config: emoji.json
+  inherit_comment: false
+
+zh2en:
+  option_name: zh2en
+  opencc_config: zh2en.json
   inherit_comment: false
 
 

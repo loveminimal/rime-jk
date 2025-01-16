@@ -110,6 +110,7 @@ chord_composer:
 translator:
   dictionary: wubi                    # 与 wubi86 共用词典，设定 table_translator 使用的词典名
   prism: jk_wubi                         # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+  enable_completion: false
   enable_charset_filter: true            # 是否开启字符集过滤
   encode_commit_history: true            # 是否对已上屏词自动成词
   max_phrase_length: 4                   # 最大自动成词词长

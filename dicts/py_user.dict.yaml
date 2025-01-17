@@ -17,112 +17,185 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 啊	a;kb; 	1
-按	an;rp; 	0
+按	an;rp; 	2
+把	ba;rc; 	1
+宝	bao;pg; 	0
+本	ben;sg; 	1
+比	bi;xx; 	1
 边	bian;lp; 	0
 并	bing;ua; 	0
+不	bu;i,gi; 	1
 从	cong;ww; 	1
 代	dai;wa; 	1
 到	dao;gc; 	1
-的	de;r,rq; 	14
+的	de;r,rq; 	21
 读	du;yf; 	1
+对	dui;cf; 	3
 多	duo;qq; 	0
 嗯	en;kl; 	1
 烦	fan;od; 	1
+翻	fan;to; 	1
 放	fang;yt; 	0
 封	feng;ff; 	0
 改	gai;nt; 	4
 该	gai;yy; 	0
 刚	gang;mq; 	1
 歌	ge;sk; 	2
+给	gei;xw; 	1
+更	geng;gj; 	0
 喊	han;kd; 	1
 㘎	han;ku; 	1
-好	hao;vb; 	1
-和	he;t,tk; 	1
+好	hao;vb; 	4
+和	he;t,tk; 	2
+很	hen;tv; 	1
 换	huan;rq; 	1
 加	jia;lk; 	2
-就	jiu;yi; 	0
+就	jiu;yi; 	1
+可	ke;sk; 	0
 框	kuang;sa; 	2
 啦	la;kr; 	0
-了	le;b,bn; 	6
+了	le;b,bn; 	7
 吗	ma;kc; 	1
 呢	ne;kn; 	1
-你	ni;wq; 	0
-年	nian;rh; 	4
+你	ni;wq; 	1
+年	nian;rh; 	5
+弄	nong;ga; 	1
+如	ru;vk; 	1
 卅	sa;gk; 	1
 是	shi;j,jg; 	4
 时	shi;jf; 	1
 试	shi;ya; 	1
+帅	shuai;jm; 	1
+太	tai;dy; 	1
+弹	tan;xu; 	0
 挺	ting;rt; 	0
 我	wo;q,tr; 	2
+显	xian;jo; 	2
 要	yao;s,sv; 	0
 也	ye;bn; 	0
+一	yi;g,gg; 	1
+译	yi;yc; 	5
+隐	yin;bq; 	1
+英	ying;am; 	2
+用	yong;et; 	0
 有	you;e,de; 	5
 原	yuan;dr; 	1
 在	zai;d,dh; 	6
 崽	zai;ml; 	0
+栈	zhan;sg; 	1
 这	zhe;p,yp; 	1
 只	zhi;kw; 	1
-中	zhong;k,kh; 	1
+中	zhong;k,kh; 	4
+做	zuo;wd; 	2
 阿福	a;bs; fu;py; 	1
 安装	an;pv; zhuang;uf; 	0
 按键	an;rp; jian;qv; 	0
+俺宝	an;wd; bao;pg; 	1
 奥赛	ao;tm; sai;pf; 	0
 版本	ban;th; ben;sg; 	1
+暴力	bao;ja; li;lt; 	0
+宝子	bao;pg; zi;bb; 	1
+报站	bao;rb; zhan;uh; 	1
+崩溃	beng;me; kui;ik; 	1
+比较	bi;xx; jiao;lu; 	0
 比如	bi;xx; ru;vk; 	0
 表示	biao;ge; shi;fi; 	0
+表意	biao;ge; yi;uj; 	0
 别的	bie;kl; de;r,rq; 	0
-并击	bing;ua; ji;fm; 	3
+并击	bing;ua; ji;fm; 	9
+博客	bo;fg; ke;pt; 	1
+不翻	bu;i,gi; fan;to; 	1
 不好	bu;i,gi; hao;vb; 	0
+不清	bu;i,gi; qing;ig; 	0
 不行	bu;i,gi; xing;tf; 	0
 不要	bu;i,gi; yao;s,sv; 	0
 不准	bu;i,gi; zhun;uw; 	1
 部分	bu;uk; fen;wv; 	0
+部署	bu;uk; shu;lf; 	0
+操蛋	cao;rk; dan;nh; 	0
 测试	ce;im; shi;ya; 	1
+长度	chang;ta; du;ya; 	0
 重复	chong;tg; fu;tj; 	0
 重装	chong;tg; zhuang;uf; 	0
-初中	chu;pu; zhong;k,kh; 	1
-词典	ci;yn; dian;ma; 	0
+充电	chong;yc; dian;jn; 	1
+初中	chu;pu; zhong;k,kh; 	2
+词长	ci;yn; chang;ta; 	1
+词典	ci;yn; dian;ma; 	1
+词汇	ci;yn; hui;ia; 	0
 词库	ci;yn; ku;yl; 	0
 词性	ci;yn; xing;nt; 	0
+词语	ci;yn; yu;yg; 	0
+单独	dan;uj; du;qt; 	0
 到了	dao;gc; le;b,bn; 	0
+地方	di;f,fb; fang;yy; 	0
 地址	di;f,fb; zhi;fh; 	0
 多个	duo;qq; ge;wh; 	0
+多少	duo;qq; shao;it; 	0
+泛化	fan;it; hua;wx; 	1
+饭店	fan;qn; dian;yh; 	2
 反查	fan;rc; cha;sj; 	2
+反向	fan;rc; xiang;tm; 	1
+反正	fan;rc; zheng;gh; 	0
+翻译	fan;to; yi;yc; 	2
 放假	fang;yt; jia;wn; 	1
 方案	fang;yy; an;pv; 	0
 改改	gai;nt; gai;nt; 	0
 感觉	gan;dg; jue;ip; 	0
-功能	gong;al; neng;ce; 	0
+刚学	gang;mq; xue;ip; 	1
+根据	gen;sv; ju;rn; 	1
+工具	gong;a,aa; ju;hw; 	1
+功能	gong;al; neng;ce; 	1
+过来	guo;fp; lai;go; 	0
 哈哈	ha;kw; ha;kw; 	1
+汉字	han;ic; zi;pb; 	0
 行中	hang;tf; zhong;k,kh; 	1
 合并	he;wg; bing;ua; 	1
+合成	he;wg; cheng;dn; 	1
+合同	he;wg; tong;m,mg; 	6
 横向	heng;sa; xiang;tm; 	1
 候选	hou;wh; xuan;tf; 	0
 换成	huan;rq; cheng;dn; 	0
 换个	huan;rq; ge;wh; 	0
 基于	ji;ad; yu;gf; 	1
+几天	ji;mt; tian;gd; 	0
 极端	ji;se; duan;um; 	0
 妓女	ji;vf; nv;vv; 	1
+架构	jia;lk; gou;sq; 	1
+加油	jia;lk; you;im; 	0
 家长	jia;pe; zhang;ta; 	0
 键位	jian;qv; wei;wu; 	1
 脚本	jiao;ef; ben;sg; 	1
+解读	jie;qe; du;yf; 	0
+就是	jiu;yi; shi;j,jg; 	0
 开头	kai;ga; tou;ud; 	1
+看看	kan;rh; kan;rh; 	0
 看着	kan;rh; zhe;ud; 	0
+可以	ke;sk; yi;c,ny; 	0
 肯定	ken;he; ding;pg; 	1
 空格	kong;pw; ge;st; 	2
+快啊	kuai;nn; a;kb; 	1
 哐哐	kuang;ka; kuang;ka; 	0
+扩充	kuo;ry; chong;yc; 	1
 来回	lai;go; hui;lk; 	0
 来呀	lai;go; ya;ka; 	1
 类似	lei;od; si;wn; 	1
+练习	lian;xa; xi;nu; 	0
 两次	liang;gm; ci;uq; 	1
-乱序	luan;td; xu;yc; 	1
+乱序	luan;td; xu;yc; 	2
+没了	mei;im; le;b,bn; 	1
 没有	mei;im; you;e,de; 	2
+蒙着	meng;ap; zhe;ud; 	0
+命令	ming;wg; ling;wy; 	0
+模拟	mo;sa; ni;rn; 	0
 母狗	mu;xg; gou;qt; 	0
 那个	na;vf; ge;wh; 	0
 那天	na;vf; tian;gd; 	0
 你好	ni;wq; hao;vb; 	1
 排除	pai;rd; chu;bw; 	0
+排序	pai;rd; xu;yc; 	1
 匹配	pi;aq; pei;sg; 	2
+其实	qi;ad; shi;pu; 	0
+起码	qi;fh; ma;dc; 	1
 启用	qi;yn; yong;et; 	0
 前后	qian;ue; hou;rg; 	0
 前面	qian;ue; mian;dm; 	1
@@ -130,70 +203,107 @@ use_preset_vocabulary: false
 驱动	qu;ca; dong;fc; 	2
 去除	qu;fc; chu;bw; 	0
 全部	quan;wg; bu;uk; 	0
+确实	que;dq; shi;pu; 	1
 如何	ru;vk; he;ws; 	2
+软件	ruan;lq; jian;wr; 	1
 上述	shang;h,hh; shu;sy; 	0
+设计	she;ym; ji;yf; 	0
 设置	she;ym; zhi;lf; 	1
+谁是	shei;yw; shi;j,jg; 	0
+深度	shen;ip; du;ya; 	1
+什么	shen;wf; me;tc; 	1
 声调	sheng;fn; diao;ym; 	0
 时长	shi;jf; chang;ta; 	1
 时候	shi;jf; hou;wh; 	1
+使用	shi;wg; yong;et; 	2
 试试	shi;ya; shi;ya; 	1
+双拼	shuang;cc; pin;ru; 	6
+爽吧	shuang;dq; ba;kc; 	1
+睡了	shui;ht; le;b,bn; 	1
 四个	si;lh; ge;wh; 	0
+速录	su;gk; lu;vi; 	0
 太长	tai;dy; chang;ta; 	1
 替换	ti;fw; huan;rq; 	0
 调整	tiao;ym; zheng;gk; 	0
+玩意	wan;gf; yi;uj; 	1
 为啥	wei;o,yl; sha;kw; 	1
 问题	wen;uk; ti;jg; 	1
 我的	wo;q,tr; de;r,rq; 	0
 我都	wo;q,tr; dou;ft; 	0
 无敌	wu;fq; di;td; 	0
+五笔	wu;gg; bi;tt; 	1
 下面	xia;gh; mian;dm; 	1
 现在	xian;gm; zai;d,dh; 	2
 显示	xian;jo; shi;fi; 	2
+小鹤	xiao;ih; he;pw; 	1
 小心	xiao;ih; xin;ny; 	0
+效果	xiao;uq; guo;js; 	0
 需求	xu;fd; qiu;fi; 	1
 需要	xu;fd; yao;s,sv; 	0
 眼睛	yan;hv; jing;hg; 	0
+夜晚	ye;yw; wan;jq; 	1
 一次	yi;g,gg; ci;uq; 	0
 一点	yi;g,gg; dian;hk; 	0
-一个	yi;g,gg; ge;wh; 	1
+一个	yi;g,gg; ge;wh; 	3
 一行	yi;g,gg; hang;tf; 	1
 一起	yi;g,gg; qi;fh; 	0
 一入	yi;g,gg; ru;ty; 	1
-一下	yi;g,gg; xia;gh; 	0
+一下	yi;g,gg; xia;gh; 	1
+一些	yi;g,gg; xie;hx; 	0
+意思	yi;uj; si;ln; 	1
+因为	yin;ld; wei;o,yl; 	1
 英文	ying;am; wen;yy; 	0
 映射	ying;jm; she;tm; 	0
 应该	ying;yi; gai;yy; 	0
+又是	you;cc; shi;j,jg; 	1
+有个	you;e,de; ge;wh; 	0
 有些	you;e,de; xie;hx; 	1
+优化	you;wd; hua;wx; 	2
+语法	yu;yg; fa;if; 	1
+运行	yun;fc; xing;tf; 	1
 择校	ze;rc; xiao;su; 	1
 怎么	zen;th; me;tc; 	0
-这个	zhe;p,yp; ge;wh; 	3
+这个	zhe;p,yp; ge;wh; 	5
 这是	zhe;p,yp; shi;j,jg; 	0
 这样	zhe;p,yp; yang;su; 	0
 正确	zheng;gh; que;dq; 	1
 正则	zheng;gh; ze;mj; 	0
 整合	zheng;gk; he;wg; 	0
+只会	zhi;kw; hui;wf; 	0
 只能	zhi;kw; neng;ce; 	0
 只要	zhi;kw; yao;s,sv; 	0
 只用	zhi;kw; yong;et; 	1
 之前	zhi;pp; qian;ue; 	2
+知心	zhi;td; xin;ny; 	1
+中文	zhong;k,kh; wen;yy; 	1
+中英	zhong;k,kh; ying;am; 	2
 钟表	zhong;qk; biao;ge; 	1
 字符	zi;pb; fu;tw; 	0
+自己	zi;th; ji;nn; 	1
 总是	zong;uk; shi;j,jg; 	1
 纵向	zong;xw; xiang;tm; 	1
 祖先	zu;py; xian;tf; 	1
 作为	zuo;wt; wei;o,yl; 	1
 按一次	an;rp; yi;g,gg; ci;uq; 	1
 奥赛封	ao;tm; sai;pf; feng;ff; 	1
+必须的	bi;nt; xu;ed; de;r,rq; 	1
+不得不	bu;i,gi; de;tj; bu;i,gi; 	0
 不好按	bu;i,gi; hao;vb; an;rp; 	1
 不好用	bu;i,gi; hao;vb; yong;et; 	0
 不知道	bu;i,gi; zhi;td; dao;ut; 	1
 重复的	chong;tg; fu;tj; de;r,rq; 	1
+的时候	de;r,rq; shi;jf; hou;wh; 	0
 的问题	de;r,rq; wen;uk; ti;jg; 	0
+点一下	dian;hk; yi;g,gg; xia;gh; 	0
 放一下	fang;yt; yi;g,gg; xia;gh; 	1
+方案框	fang;yy; an;pv; kuang;sa; 	1
+改了个	gai;nt; le;b,bn; ge;wh; 	0
 更健康	geng;gj; jian;wv; kang;yv; 	0
 工作室	gong;a,aa; zuo;wt; shi;pg; 	1
 估计是	gu;wd; ji;yf; shi;j,jg; 	0
+过来后	guo;fp; lai;go; hou;rg; 	0
 果然是	guo;js; ran;qd; shi;j,jg; 	1
+寒风中	han;pf; feng;mq; zhong;k,kh; 	1
 好几个	hao;vb; ji;mt; ge;wh; 	0
 好了没	hao;vb; le;b,bn; mei;im; 	0
 会出现	hui;wf; chu;bm; xian;gm; 	1
@@ -202,55 +312,88 @@ use_preset_vocabulary: false
 加空格	jia;lk; kong;pw; ge;st; 	0
 简洁的	jian;tu; jie;if; de;r,rq; 	0
 解决了	jie;qe; jue;un; le;b,bn; 	0
+近似于	jin;rp; si;wn; yu;gf; 	1
+就是你	jiu;yi; shi;j,jg; ni;wq; 	0
 可以有	ke;sk; yi;c,ny; you;e,de; 	1
-空明码	kong;pw; ming;je; ma;dc; 	1
+空明码	kong;pw; ming;je; ma;dc; 	2
 控制下	kong;rp; zhi;rm; xia;gh; 	0
 了没有	le;b,bn; mei;im; you;e,de; 	1
+了一个	le;b,bn; yi;g,gg; ge;wh; 	0
+练习啊	lian;xa; xi;nu; a;kb; 	1
 慢慢地	man;nj; man;nj; de;f,fb; 	0
+蒙着用	meng;ap; zhe;ud; yong;et; 	1
+模拟了	mo;sa; ni;rn; le;b,bn; 	1
 那个是	na;vf; ge;wh; shi;j,jg; 	1
 能不能	neng;ce; bu;i,gi; neng;ce; 	0
+你好吗	ni;wq; hao;vb; ma;kc; 	1
+你是谁	ni;wq; shi;j,jg; shei;yw; 	4
 上班了	shang;h,hh; ban;gy; le;b,bn; 	0
+谁是你	shei;yw; shi;j,jg; ni;wq; 	1
 深似海	shen;ip; si;wn; hai;it; 	1
 声调我	sheng;fn; diao;ym; wo;q,tr; 	1
+速录宝	su;gk; lu;vi; bao;pg; 	1
+它本身	ta;px; ben;sg; shen;tm; 	0
 玩电脑	wan;gf; dian;jn; nao;ey; 	0
 稳定点	wen;tq; ding;pg; dian;hk; 	0
-我并击	wo;q,tr; bing;ua; ji;fm; 	1
+我爱你	wo;q,tr; ai;ep; ni;wq; 	5
+我并击	wo;q,tr; bing;ua; ji;fm; 	2
+我很好	wo;q,tr; hen;tv; hao;vb; 	1
+我说你	wo;q,tr; shuo;yu; ni;wq; 	1
 我自己	wo;q,tr; zi;th; ji;nn; 	1
 眼镜娘	yan;hv; jing;qu; niang;vy; 	0
 映射了	ying;jm; she;tm; le;b,bn; 	1
+用鼠标	yong;et; shu;vn; biao;sf; 	0
 有电脑	you;e,de; dian;jn; nao;ey; 	0
+有没有	you;e,de; mei;im; you;e,de; 	1
+有时候	you;e,de; shi;jf; hou;wh; 	0
 怎么样	zen;th; me;tc; yang;su; 	1
 这两个	zhe;p,yp; liang;gm; ge;wh; 	0
 这是要	zhe;p,yp; shi;j,jg; yao;s,sv; 	1
+这样就	zhe;p,yp; yang;su; jiu;yi; 	0
+只会弹	zhi;kw; hui;wf; tan;xu; 	1
+只能在	zhi;kw; neng;ce; zai;d,dh; 	0
 只需要	zhi;kw; xu;fd; yao;s,sv; 	1
 主要是	zhu;y,yg; yao;s,sv; shi;j,jg; 	1
+自定义	zi;th; ding;pg; yi;yq; 	0
 自己用	zi;th; ji;nn; yong;et; 	0
+自己做	zi;th; ji;nn; zuo;wd; 	0
+最前面	zui;jb; qian;ue; mian;dm; 	0
 最下策	zui;jb; xia;gh; ce;tg; 	0
+比较习惯	bi;xx; jiao;lu; xi;nu; guan;nx; 	1
 比如这样	bi;xx; ru;vk; zhe;p,yp; yang;su; 	1
 表示词性	biao;ge; shi;fi; ci;yn; xing;nt; 	1
 并击方案	bing;ua; ji;fm; fang;yy; an;pv; 	0
-并击键位	bing;ua; ji;fm; jian;qv; wei;wu; 	1
+并击键位	bing;ua; ji;fm; jian;qv; wei;wu; 	2
 不回去了	bu;i,gi; hui;lk; qu;fc; le;b,bn; 	0
 不是很好	bu;i,gi; shi;j,jg; hen;tv; hao;vb; 	0
 初步拟定	chu;pu; bu;hi; ni;rn; ding;pg; 	0
 多个候选	duo;qq; ge;wh; hou;wh; xuan;tf; 	1
 给你看个	gei;xw; ni;wq; kan;rh; ge;wh; 	0
+国色芳华	guo;l,lg; se;qc; fang;ay; hua;wx; 	3
 汉语拼音	han;ic; yu;yg; pin;ru; yin;uj; 	1
 换个版本	huan;rq; ge;wh; ban;th; ben;sg; 	1
+键位映射	jian;qv; wei;wu; ying;jm; she;tm; 	0
 今年过年	jin;wy; nian;rh; guo;fp; nian;rh; 	0
 就知道了	jiu;yi; zhi;td; dao;ut; le;b,bn; 	1
+可以自己	ke;sk; yi;c,ny; zi;th; ji;nn; 	1
 类似上述	lei;od; si;wn; shang;h,hh; shu;sy; 	1
 两个版本	liang;gm; ge;wh; ban;th; ben;sg; 	2
 灵光一闪	ling;vo; guang;iq; yi;g,gg; shan;uw; 	0
 没啥影响	mei;im; sha;kw; ying;jy; xiang;kt; 	0
+命令方式	ming;wg; ling;wy; fang;yy; shi;aa; 	1
 哪个版本	na;kv; ge;wh; ban;th; ben;sg; 	1
+你到哪儿	ni;wq; dao;gc; na;kv; er;qt; 	0
 匹配到了	pi;aq; pei;sg; dao;gc; le;b,bn; 	1
+日常使用	ri;jj; chang;ip; shi;wg; yong;et; 	1
 如何使用	ru;vk; he;ws; shi;wg; yong;et; 	0
+设计解读	she;ym; ji;yf; jie;qe; du;yf; 	1
+说的那个	shuo;yu; de;r,rq; na;vf; ge;wh; 	0
 四个按键	si;lh; ge;wh; an;rp; jian;qv; 	1
 吞噬星空	tun;gd; shi;kt; xing;jt; kong;pw; 	1
 我都换成	wo;q,tr; dou;ft; huan;rq; cheng;dn; 	1
 系统原因	xi;tx; tong;xy; yuan;dr; yin;ld; 	0
 显卡驱动	xian;jo; ka;hh; qu;ca; dong;fc; 	1
+小鹤双拼	xiao;ih; he;pw; shuang;cc; pin;ru; 	4
 性感热舞	xing;nt; gan;dg; re;rv; wu;rl; 	1
 学习学习	xue;ip; xi;nu; xue;ip; xi;nu; 	1
 学校放假	xue;ip; xiao;su; fang;yt; jia;wn; 	1
@@ -261,18 +404,25 @@ use_preset_vocabulary: false
 之前整合	zhi;pp; qian;ue; zheng;gk; he;wg; 	1
 版本不好用	ban;th; ben;sg; bu;i,gi; hao;vb; yong;et; 	1
 不行就重装	bu;i,gi; xing;tf; jiu;yi; chong;tg; zhuang;uf; 	1
+部署的时候	bu;uk; shu;lf; de;r,rq; shi;jf; hou;wh; 	1
 初步拟定的	chu;pu; bu;hi; ni;rn; ding;pg; de;r,rq; 	1
 发生什么事	fa;v,nt; sheng;tg; shen;wf; me;tc; shi;gk; 	0
 改改更健康	gai;nt; gai;nt; geng;gj; jian;wv; kang;yv; 	1
 感觉不好用	gan;dg; jue;ip; bu;i,gi; hao;vb; yong;et; 	1
+更暴力一点	geng;gj; bao;ja; li;lt; yi;g,gg; dian;hk; 	1
+寒风中加油	han;pf; feng;mq; zhong;k,kh; jia;lk; you;im; 	1
 好几个词典	hao;vb; ji;mt; ge;wh; ci;yn; dian;ma; 	1
 妓女的母狗	ji;vf; nv;vv; de;r,rq; mu;xg; gou;qt; 	1
 家人都在这	jia;pe; ren;w,ww; dou;ft; zai;d,dh; zhe;p,yp; 	0
 空明码键位	kong;pw; ming;je; ma;dc; jian;qv; wei;wu; 	1
+练习自定义	lian;xa; xi;nu; zi;th; ding;pg; yi;yq; 	1
 慢慢地调整	man;nj; man;nj; de;f,fb; tiao;ym; zheng;gk; 	1
+命令只能在	ming;wg; ling;wy; zhi;kw; neng;ce; zai;d,dh; 	1
 能不能一次	neng;ce; bu;i,gi; neng;ce; yi;g,gg; ci;uq; 	1
+你到哪儿啦	ni;wq; dao;gc; na;kv; er;qt; la;kr; 	1
 你方案地址	ni;wq; fang;yy; an;pv; di;f,fb; zhi;fh; 	1
 取出并替换	qu;bc; chu;bm; bing;ua; ti;fw; huan;rq; 	1
+突然想起来	tu;pw; ran;qd; xiang;sh; qi;fh; lai;go; 	1
 问题解决了	wen;uk; ti;jg; jie;qe; jue;un; le;b,bn; 	0
 这个稳定点	zhe;p,yp; ge;wh; wen;tq; ding;pg; dian;hk; 	1
 这样多方案	zhe;p,yp; yang;su; duo;qq; fang;yy; an;pv; 	1
@@ -288,17 +438,30 @@ use_preset_vocabulary: false
 如何使用正则	ru;vk; he;ws; shi;wg; yong;et; zheng;gh; ze;mj; 	1
 需要全部匹配	xu;fd; yao;s,sv; quan;wg; bu;uk; pi;aq; pei;sg; 	1
 眼镜娘是无敌	yan;hv; jing;qu; niang;vy; shi;j,jg; wu;fq; di;td; 	1
+一些词语比较	yi;g,gg; xie;hx; ci;yn; yu;yg; bi;xx; jiao;lu; 	1
 应该没啥影响	ying;yi; gai;yy; mei;im; sha;kw; ying;jy; xiang;kt; 	1
 主要是自己用	zhu;y,yg; yao;s,sv; shi;j,jg; zi;th; ji;nn; yong;et; 	1
+自己做了一个	zi;th; ji;nn; zuo;wd; le;b,bn; yi;g,gg; ge;wh; 	1
+反正有时候就是	fan;rc; zheng;gh; you;e,de; shi;jf; hou;wh; jiu;yi; shi;j,jg; 	1
+改了个键位映射	gai;nt; le;b,bn; ge;wh; jian;qv; wei;wu; ying;jm; she;tm; 	1
+就是你说的那个	jiu;yi; shi;j,jg; ni;wq; shuo;yu; de;r,rq; na;vf; ge;wh; 	1
+来呀一起并击啊	lai;go; ya;ka; yi;g,gg; qi;fh; bing;ua; ji;fm; a;kb; 	1
 去除匹配的部分	qu;fc; chu;bw; pi;aq; pei;sg; de;r,rq; bu;uk; fen;wv; 	1
 玩电脑有控制下	wan;gf; dian;jn; nao;ey; you;e,de; kong;rp; zhi;rm; xia;gh; 	1
 小心你崽的眼睛	xiao;ih; xin;ny; ni;wq; zai;ml; de;r,rq; yan;hv; jing;hg; 	1
 眼镜娘是无敌的	yan;hv; jing;qu; niang;vy; shi;j,jg; wu;fq; di;td; de;r,rq; 	1
+用几天看看效果	yong;et; ji;mt; tian;gd; kan;rh; kan;rh; xiao;uq; guo;js; 	1
 字符前后加空格	zi;pb; fu;tw; qian;ue; hou;rg; jia;lk; kong;pw; ge;st; 	1
 今年过年不回去了	jin;wy; nian;rh; guo;fp; nian;rh; bu;i,gi; hui;lk; qu;fc; le;b,bn; 	1
+就是它本身的意思	jiu;yi; shi;j,jg; ta;px; ben;sg; shen;tm; de;r,rq; yi;uj; si;ln; 	1
+有个可操蛋的地方	you;e,de; ge;wh; ke;sk; cao;rk; dan;nh; de;r,rq; di;f,fb; fang;yy; 	1
 只要问题解决了就	zhi;kw; yao;s,sv; wen;uk; ti;jg; jie;qe; jue;un; le;b,bn; jiu;yi; 	1
 给你看个极端一点的	gei;xw; ni;wq; kan;rh; ge;wh; ji;se; duan;um; yi;g,gg; dian;hk; de;r,rq; 	1
 也基本上有别的功能	ye;bn; ji;ad; ben;sg; shang;h,hh; you;e,de; bie;kl; de;r,rq; gong;al; neng;ce; 	1
 这两个只能安装一个	zhe;p,yp; liang;gm; ge;wh; zhi;kw; neng;ce; an;pv; zhuang;uf; yi;g,gg; ge;wh; 	1
 那天灵光一闪就解决了	na;vf; tian;gd; ling;vo; guang;iq; yi;g,gg; shan;uw; jiu;yi; jie;qe; jue;un; le;b,bn; 	1
+最前面的汉字长度排序	zui;jb; qian;ue; mian;dm; de;r,rq; han;ic; zi;pb; chang;ta; du;ya; pai;rd; xu;yc; 	1
+其实英文词汇翻译过来多少	qi;ad; shi;pu; ying;am; wen;yy; ci;yn; hui;ia; fan;to; yi;yc; guo;fp; lai;go; duo;qq; shao;it; 	1
 估计是我的那个并击方案的问题	gu;wd; ji;yf; shi;j,jg; wo;q,tr; de;r,rq; na;vf; ge;wh; bing;ua; ji;fm; fang;yy; an;pv; de;r,rq; wen;uk; ti;jg; 	1
+这样就不得不用鼠标单独点一下	zhe;p,yp; yang;su; jiu;yi; bu;i,gi; de;tj; bu;i,gi; yong;et; shu;vn; biao;sf; dan;uj; du;qt; dian;hk; yi;g,gg; xia;gh; 	1
+英文词汇翻译过来后有些表意不清	ying;am; wen;yy; ci;yn; hui;ia; fan;to; yi;yc; guo;fp; lai;go; hou;rg; you;e,de; xie;hx; biao;ge; yi;uj; bu;i,gi; qing;ig; 	1

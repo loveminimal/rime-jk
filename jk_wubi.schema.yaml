@@ -177,8 +177,8 @@ chaifen:
     # - "xform/&nbsp;/ /"
   tags:     
     - abc
-    - wubi86
-    - reverse_lookup
+    # - wubi86
+    # - reverse_lookup
     - pinyin
   # char←字 词→all
   tips: all                              

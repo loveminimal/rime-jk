@@ -8,9 +8,9 @@ switches:
   - name: ascii_mode
     reset: 0 
     states: [ 中文, 英文 ]
-  # - name: emoji
-  #   reset: 1
-  #   states: [ 💀, 😄 ]
+  - name: emoji
+    reset: 1
+    states: [ 💀, 😄 ]
   - name: zh2en
     reset: 0
     states: [ ☷译, ☰译 ]

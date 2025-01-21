@@ -2,15 +2,15 @@
 # encoding: utf-8
 
 schema:
-  schema_id: pinyin
-  name: 简化字拼音
+  schema_id: jk_pinyin
+  name: 拼音·知心
   version: '0.1'
   author:
     - Jack Liu
-  description: |
-    源自 Android 拼音
+  description:
+    - 基于袖珍简化字拼音及自制通规8105单字表
   dependencies:
-    # - stroke
+    - stroke
 
 switches:
   - name: ascii_mode
@@ -64,7 +64,7 @@ speller:
     - derive/([iu])a(o|ng?)$/a$1$2/
 
 translator:
-  dictionary: pinyin
+  dictionary: jk_pinyin
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/

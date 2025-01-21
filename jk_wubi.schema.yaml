@@ -185,7 +185,7 @@ chaifen:
 
 pinyin:
   tag: pinyin
-  dictionary: pinyin
+  dictionary: jk_pinyin
   prefix: "P"
   suffix: "'"
   tips: 〔拼音·反查〕

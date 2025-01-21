@@ -14,7 +14,7 @@
 # - https://github.com/rime/rime-pinyin-simp
 # 
 ---
-name: pinyin
+name: jk_pinyin
 version: '2025.01'
 sort: by_weight
 use_preset_vocabulary: false

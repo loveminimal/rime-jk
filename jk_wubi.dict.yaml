@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 ---
-name: wubi
+name: jk_wubi
 version: 6.0.0
 sort: by_weight
 columns:

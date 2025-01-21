@@ -15,7 +15,7 @@ schema:
     - https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
     - jk_ascii
-    - pinyin_simp
+    - pinyin
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
   version: 6.2.0
@@ -112,7 +112,7 @@ chord_composer:
 
 # === 每个方案都有一个主 translator ===
 translator:
-  dictionary: wubi                    # 与 wubi86 共用词典，设定 table_translator 使用的词典名
+  dictionary: jk_wubi                    # 与 wubi86 共用词典，设定 table_translator 使用的词典名
   prism: jk_wubi                         # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
   enable_completion: false
   enable_charset_filter: true            # 是否开启字符集过滤
@@ -185,7 +185,7 @@ chaifen:
 
 pinyin:
   tag: pinyin
-  dictionary: pinyin_simp
+  dictionary: pinyin
   prefix: "P"
   suffix: "'"
   tips: 〔拼音·反查〕

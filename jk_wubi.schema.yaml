@@ -15,7 +15,7 @@ schema:
     - https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
     - jk_ascii
-    - pinyin
+    - jk_pinyin
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
   version: 6.2.0

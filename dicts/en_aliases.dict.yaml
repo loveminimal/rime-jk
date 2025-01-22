@@ -67,8 +67,11 @@ git add . && git commit -m 'perf: dicts|symbols update' && git push	grr	0
 git add . && git commit -m 'perf: some updates' && git push	gpp	0
 
 # --- Python ---
-winpty python	python	0
-winpty python	py	0
+# alias python="winpty python"
+# alias py="winpty python"
+python3	py	0
+python3	py3	0
+python3	python	0
 pip3	pip	0
 
 # --- 镜像 ---
@@ -89,19 +92,15 @@ cd ~/AppData/Roaming/Rime	cdr	0
 cd ~/AppData/Roaming/site	cds	0
 cd ~/AppData/Roaming/site/themes/virgo	cdt	0
 cd ~/AppData/Roaming/site/content/.obsidian/themes/Virgo	cdo	0
-cd D:/sourcecode/sc_rime/rime-utils	cdu	0
+cd D:/sourcecode/sc_rime/rime_utils	cdu	0
 # --- Linux ---
 cd ~/.emacs.d	cdee	0
 cd ~/.shell	cdsh	0
 cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
-cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py && py scripts/sync_py_user_dict.py	uud	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	uwbud	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_py_user_dict.py	upyud	0
-cd ~/AppData/Roaming/Rime && source scripts/update-en_aliases_dict.sh	uea	0
-cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_wx.sh	uwxd	0
-cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_frost.sh	ufrostd	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	uud	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_en_aliases_dict.py	uea	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && scp -r public/* aituyaa.com:/home/jack/blog/ && rm -rf public	sscp	0
 

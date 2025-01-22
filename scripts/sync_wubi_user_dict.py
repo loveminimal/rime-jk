@@ -10,7 +10,6 @@
 # src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack\\jk_wubi.userdb.txt
 # out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\wubi86_user.dict.yaml
 # 
-import sys
 import re
 from pathlib import Path
 from collections import defaultdict

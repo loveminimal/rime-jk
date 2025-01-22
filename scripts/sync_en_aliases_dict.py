@@ -10,10 +10,7 @@
 # src - C:\\Users\\jack\\.bash_aliases
 # out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\en_aliases.dict.yaml
 # 
-import os
-import sys
 import re
-import shutil
 from pathlib import Path
 from data.header import get_en_aliases_header
 from timer import timer

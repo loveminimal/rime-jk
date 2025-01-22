@@ -36,7 +36,7 @@ chord_composer:
   # 字母表，包含用并击按键
   # 击键一律以字母表顺序排列
   # alphabet: "qwertasdfgzxcvbnmhkjklyuiop"
-  alphabet: ";'"
+  alphabet: ",.;'"
   algebra:
     # --- 修改为JK键位 ---
     # - "xform/^,$/,/"
@@ -55,8 +55,8 @@ chord_composer:
     # - xform/uo(?![左右])$/r右/
     # - xform/up(?![左右])$/t右/
 
-    # - xform/,.(?![左右])$/Z右/
-    - xform/;'(?![左右])$/Z右/
+    - xform/,.(?![左右])$/Z右/
+    - xform/;'(?![左右])$/%右/
 
  # 并击过程中套用式样  
   prompt_format:

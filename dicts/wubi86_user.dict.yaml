@@ -1,1 +1,125 @@
+# Rime dictionary - wubi86_user.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于官方自动同步的用户词典合并排序生成
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+# 运行脚本：
+# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_wubi_user_dict.py
+# - py scripts/sync_wubi_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# 
+---
+name: wubi86_user
+version: '2025.01'
+sort: by_weight
+use_preset_vocabulary: false
+...
+以	c 	3
+能	ce 	1
+在	d 	3
+大	dd 	1
+万	dnv 	4
+有	e 	1
+用	et 	5
+地	f 	2
+运	fcp 	2
+都	ftjb 	1
+一	g 	1
+下	gh 	1
+不	gi 	3
+带	gkp 	1
+曹	gmaj 	1
+是	j 	3
+时	jf 	1
+中	k 	1
+呢	knx 	1
+为	o 	2
+娄	ov 	1
+这	p 	2
+我	q 	3
+名	qk 	1
+的	r 	5
+操	rkks 	1
+气	rnb 	2
+想	shn 	2
+可	sk 	1
+要	sv 	2
+和	t 	1
+么	tc 	1
+每	txg 	1
+并	ua 	1
+郑	udb 	1
+那	vfb 	1
+会	wf 	1
+值	wfhg 	1
+个	wh 	2
+但	wjg 	2
+们	wu 	2
+夜	ywt 	1
+基础	addb 	1
+项目	adhh 	1
+某些	afhx 	1
+匹配	aqsg 	1
+共计	awyf 	1
+药厂	axdg 	1
+参数	cdov 	1
+验证	cwyg 	1
+码表	dcge 	1
+确保	dqwk 	1
+碰见	dumq 	1
+脚本	efsg 	1
+超级	fhxe 	1
+过滤	fpih 	1
+无论	fqyw 	1
+表示	gefi 	1
+环境	ggfu 	1
+正则	ghmj 	2
+末尾	gsnt 	1
+虚拟	harn 	1
+目录	hhvi 	3
+江湖	iaid 	1
+添加	iglk 	1
+激活	irit 	1
+时候	jfwh 	2
+显示	jofi 	1
+临时	jtjf 	1
+默认	lfyw 	2
+输出	lwbm 	2
+输入	lwty 	1
+删除	mmbw 	1
+情况	nguk 	1
+之子	ppbb 	1
+补充	puyc 	1
+空格	pwst 	1
+后续	rgxf 	1
+气运	rnfc 	1
+配置	sglf 	2
+相关	shud 	1
+禁用	sset 	3
+生成	tgdn 	3
+怎么	thtc 	1
+状态	uddy 	1
+单字	ujpb 	4
+如何	vkws 	3
+创建	wbvf 	1
+什么	wftc 	1
+使用	wget 	3
+全局	wgnn 	1
+个人	whww 	1
+比如	xxvk 	1
+编辑	xylk 	1
+主机	ygsm 	1
+设置	ymlf 	1
+启用	ynet 	1
+词频	ynhi 	1
+词条	ynts 	1
+词库	ynyl 	2
+玄学	yxip 	1
+方法	yyif 	3
+方便	yywg 	1
+文件	yywr 	4
+诸葛亮	yayp 	1
+虚拟环境	hrgf 	5
 江湖夜雨十年灯	iiyo 	1

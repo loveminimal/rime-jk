@@ -44,38 +44,38 @@ def convert(src_dir, out_dir, file_endswith_filter):
     # 设定最大统计字长列表 - 15个字
     word_len_list = list(range(26))
     has_header = False
-    for word_len in word_len_list:
-        res = ''
-        # 以下几行为原始同步词典格式
-        # ---------------------------------------------------
-        # yywg 	方便	c=3 d=0.187308 t=1959
-        # yywr 	文件	c=1 d=0.826959 t=1959
-        # encabb 	萍聊了	c=0 d=0.0201897 t=1959
-        # encabbk 	萍聊了吗	c=0 d=0.0202909 t=1959
-        # encabbn 	萍聊了	c=0 d=0.0201897 t=1959
-        # ---------------------------------------------------
-        for line in lines_total:
-            if not line[0] in '# ':  # 忽略注释和特殊行
-                line_list = re.split(r'\t+', line.strip())
-                code = line_list[0]
-                word = line_list[1]
-                weight = line_list[2].split(' ')[0].split('=')[1]
+    with open(out_dir / f'{out_file}', 'a', encoding='utf-8') as o:
+        for word_len in word_len_list:
+            res = ''
+            # 以下几行为原始同步词典格式
+            # ---------------------------------------------------
+            # yywg 	方便	c=3 d=0.187308 t=1959
+            # yywr 	文件	c=1 d=0.826959 t=1959
+            # encabb 	萍聊了	c=0 d=0.0201897 t=1959
+            # encabbk 	萍聊了吗	c=0 d=0.0202909 t=1959
+            # encabbn 	萍聊了	c=0 d=0.0201897 t=1959
+            # ---------------------------------------------------
+            for line in lines_total:
+                if not line[0] in '# ':  # 忽略注释和特殊行
+                    line_list = re.split(r'\t+', line.strip())
+                    code = line_list[0]
+                    word = line_list[1]
+                    weight = line_list[2].split(' ')[0].split('=')[1]
 
-                # 处理特殊编码
-                if '' in code:
-                    code = code.split('')[1]
+                    # 处理特殊编码
+                    if '' in code:
+                        code = code.split('')[1]
 
-                # 按字长顺序过滤依次处理 1, 2, 3, 4 ...
-                if len(word) == word_len and all(w in char_8105 for w in word):
-                    # 按字长过滤并确保词条唯一性
-                    # 仅处理已合成词典中 不存在 或 已存在但编码不同的字词
+                    # 按字长顺序过滤依次处理 1, 2, 3, 4 ...
                     if len(word) == word_len and all(w in char_8105 for w in word):
-                        if word not in res_dict or code not in res_dict[word]:
-                            res += f'{word}\t{code}\t{weight}\n'
-                            res_dict[word].add(code)
+                        # 按字长过滤并确保词条唯一性
+                        # 仅处理已合成词典中 不存在 或 已存在但编码不同的字词
+                        if len(word) == word_len and all(w in char_8105 for w in word):
+                            if word not in res_dict or code not in res_dict[word]:
+                                res += f'{word}\t{code}\t{weight}\n'
+                                res_dict[word].add(code)
 
-        if len(res.strip()) > 0:
-            with open(out_dir / f'{out_file}', 'w', encoding='utf-8') as o:
+            if len(res.strip()) > 0:
                 print('✅  » 已合并处理生成 %s 字词语' % word_len)
                 if (not has_header and res[0] in char_8105):
                     o.write(get_header_sync(f'{out_file}'))

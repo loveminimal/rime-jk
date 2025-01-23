@@ -54,7 +54,8 @@ patch:
       '*' : '*'
       '#' : '#'
       '/' : '/'
-      '%' : ['%']
+      '%' : '%'
+      '~' : ['~']
       # 在中文状态下输出一些常用的半角英文标点
       '<' : [ '<',《 , « ,  ‹ ]
       '>' : [ '>', 》, » ,  › ]
@@ -97,6 +98,6 @@ patch:
 
       # - { when: always, accept: Control+b, send: '!' }
       # - { when: always, accept: Control+n, send: '?' }
-      - { when: always, accept: Control+apostrophe, send: '%' }
+      - { when: always, accept: Control+apostrophe, send: '~' }
       - { when: always, accept: Control+m, send: 'Z' }
 

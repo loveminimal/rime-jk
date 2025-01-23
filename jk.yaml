@@ -22,21 +22,19 @@ switches:
 reverse_lookup:
   dictionary: jk_ascii
   # prefix: "`"
-  prefix: "%"
+  prefix: "~"
   suffix: ":"
   tips: 〔字符·反查〕
   enable_completion: true
   preedit_format:
-    - "xlit|%| |"
-  # comment_format:
-  #   - xform/%//
+    - "xlit|~| |"
 
 # === 并击 ===
 chord_composer:
   # 字母表，包含用并击按键
   # 击键一律以字母表顺序排列
   # alphabet: "qwertasdfgzxcvbnmhkjklyuiop"
-  alphabet: zr;"
+  # alphabet: zr;"
   algebra:
     # --- 修改为JK键位 ---
     # - "xform/^,$/,/"
@@ -56,7 +54,7 @@ chord_composer:
     # - xform/up(?![左右])$/t右/
 
     - xform/z;(?![左右])$/Z右/
-    - xform/r;(?![左右])$/%右/
+    - xform/r;(?![左右])$/~右/
 
 
  # 并击过程中套用式样  

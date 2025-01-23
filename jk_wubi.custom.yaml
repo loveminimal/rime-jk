@@ -2,10 +2,10 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/pujk
+  __include: style.yaml:/dkjk
   __patch:
     style/+:
-      color_scheme: pujk
+      color_scheme: dkjk
       font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       label_font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       comment_font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根

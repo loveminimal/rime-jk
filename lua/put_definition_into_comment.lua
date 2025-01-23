@@ -17,6 +17,15 @@ local function logg(text)
     log.warning(text)
 end
 
+local function parse_definitions(text)
+    local definitions = {}
+    for pos_def in string.gmatch(text, "([%a%.]+%.[^%a%.]+)") do
+        table.insert(definitions, pos_def)
+    end
+    return definitions
+end
+
+
 local function filter(input)
     -- logg('--- 开始测试 FILTER ---')
     local l = {}
@@ -49,9 +58,19 @@ local function filter(input)
             cand.text = word
             cand.comment = pos .. meaning
 
-            local new_cand = Candidate(cand.type, cand.start, cand._end, word, cand.comment)
-            -- 使用 yield 替换原始候选项
-            yield(new_cand)
+            -- 按词性分词，避免有些词释义过长，导致候选框太长
+            -- 解析词典条目
+            local definitions = parse_definitions(cand.comment)
+            -- 输出结果
+            for _, pos_def in ipairs(definitions) do
+                local new_cand = Candidate(cand.type, cand.start, cand._end, word .. string.rep(' ', _ - 1), pos_def)
+                yield(new_cand)
+            end
+
+            -- local new_cand = Candidate(cand.type, cand.start, cand._end, word, cand.comment)
+            -- -- 使用 yield 替换原始候选项
+            -- yield(new_cand)
+            -- yield(cand)
             goto continue
         end
 

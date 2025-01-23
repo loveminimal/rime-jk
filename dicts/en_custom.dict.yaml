@@ -14,26 +14,27 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 
-js	js	0
-javascript	js	0
-JavaScript	js	0
-JS	js	0
+js	js	10000
+javascript	js	10000
+JavaScript	js	10000
+JS	js	10000
 
-es	es	0
-ECMAScript	es	0
+es	es	10000
+ECMAScript	es	10000
 
-utf	utf	0
-utf8	utf	0
-utf-8	utf	0
-UTF	utf	0
-UTF8	utf	0
-UTF-8	utf	0
-UTF-16	utf	0
-UTF-32	utf	0
+utf	utf	10000
+utf8	utf	10000
+utf-8	utf	10000
+UTF	utf	10000
+UTF8	utf	10000
+UTF-8	utf	10000
+UTF-16	utf	10000
+UTF-32	utf	10000
 
-py	py	0
-python	py	0
-python3	py	0
-Python	py	0
-winpty python	py	0
-pip3	pip	0
+py	py	10000
+python	py	10000
+python3	py	10000
+Python	py	10000
+winpty python	py	10000
+pip3	pip	10000
+

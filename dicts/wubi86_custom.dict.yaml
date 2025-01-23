@@ -14,30 +14,30 @@ version: '2024.12'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-被	p	9999
-视	p	9999
-道	u	9999
-键	q	9999
-都	f	9999
-选	t	9999
-例	w	9999
-该	y	9999
+被	p	10000
+视	p	10000
+道	u	10000
+键	q	10000
+都	f	10000
+选	t	10000
+例	w	10000
+该	y	10000
 
-朙	lwke	9999
+朙	lwke	10000
 
-去	fcuq	9999
-云	fcuy	9999
-支	fcuv	9999
+去	fcuq	10000
+云	fcuy	10000
+支	fcuv	10000
 
-增玺	fuqi	9999
-奕遥	yoer	9999
-秋萍	toai	9999
-满意	iauj	9999
-刘增玺	yfqi	9999
-刘奕遥	yyer	9999
-姚秋萍	vtai	9999
-小满意	iiuj	9999
+增玺	fuqi	10000
+奕遥	yoer	10000
+秋萍	toai	10000
+满意	iauj	10000
+刘增玺	yfqi	10000
+刘奕遥	yyer	10000
+姚秋萍	vtai	10000
+小满意	iiuj	10000
 
 
-自有大儒帮我辩经	tddx	9999
+自有大儒帮我辩经	tddx	10000
 

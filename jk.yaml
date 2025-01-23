@@ -27,7 +27,7 @@ reverse_lookup:
   tips: 〔字符·反查〕
   enable_completion: true
   preedit_format:
-    - "xlit|~| |"
+    - xlit|~| |
 
 # === 并击 ===
 chord_composer:

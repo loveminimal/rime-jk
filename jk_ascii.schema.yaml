@@ -41,7 +41,7 @@ engine:
     - punct_translator
     - table_translator
     - reverse_lookup_translator
-    - lua_translator@*test_translator
+    # - lua_translator@*test_translator
     - lua_translator@*force_gc
   filters:
     # - lua_filter@*test/test_filter

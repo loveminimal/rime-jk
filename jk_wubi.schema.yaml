@@ -215,4 +215,4 @@ recognizer:
     reverse_lookup: "^~[a-z]*:?$"
     punct: "^~~([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
     # pinyin: "^P[A-Za-z]*$"
-    pinyin: "^[Xa-z]*$"                  # 取消引导词，直接五笔拼音混输
+    pinyin: "^[Xa-z]*$"                   # 取消引导词，直接五笔拼音混输（用任意大写字母隔开，防止反查混入）

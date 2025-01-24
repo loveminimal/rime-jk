@@ -130,4 +130,4 @@ recognizer:
   # import_preset: default
   patterns:
     reverse_lookup: "^~[a-z]*:?$"
-    punct: "^Z([0-9]|10|[A-Za-z]+)$"
+    punct: "^~~([0-9]|10|[A-Za-z]+)$"

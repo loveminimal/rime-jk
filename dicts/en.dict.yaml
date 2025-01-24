@@ -9296,7 +9296,7 @@ customary  a.习惯的;惯常的;原来的	customary
 customer  n.消费者	customer
 customhouse  n.海关	customhouse
 customise vt.依照顾客具体要求而制造	customise
-customization n.定制；[计] 用户化；客制化服务	customization
+customization n.定制;[计] 用户化;客制化服务	customization
 customize v.订制，改制	customize
 customs  n.关税(风俗)	customs
 cut  n.切口;割伤;降低;切;割;砍;削;伤口;削减;缩短;删节;近路 a.经切割的;缩减的 vt.切;割;减少;刺痛;开辟;雕刻;削减;删节;缩短;停止;排斥;切断;关;不理睬;显出 vi.切;割;砍;刺痛;相交;抄近路;剪辑 vbl.cut的过去式和过去分词 v.剪切	cut
@@ -11923,7 +11923,7 @@ easting  n.东行航程;朝东方	easting
 eastward  n.东方 a.东方的;向东方的 ad.东方地	eastward
 eastwardly  ad.向东;从东方 a.向东的;从东方的	eastwardly
 eastwards  ad.东方地;向东方地	eastwards
-easy  adj.1.容易的。2.舒服的，安樂的，大方的；寬裕的；(衣服等)寬松的；懶散	easy
+easy  adj.1.容易的;2.舒服的，安樂的，大方的;寬裕的;(衣服等)寬松的;懶散	easy
 easygoing  a.逍遥自在的;悠闲的;懒散的	easygoing
 eat  vt. vi.吃;腐蚀	eat
 eatable  a.可以吃的 n.食物	eatable
@@ -16368,7 +16368,7 @@ gramme  n.克	gramme
 Grammy  n.格兰美奖	grammy
 gramophone  n.留声机	gramophone
 granary  n.谷仓;谷物仓;谷产丰富的地区	granary
-grand  adj.1.盛大的，宏大的；堂皇的，雄偉的。2.〔口語〕富麗的，漂亮的，豪華	grand
+grand  adj.1.盛大的，宏大的;堂皇的，雄偉的;2.〔口語〕富麗的，漂亮的，豪華	grand
 grandaunt  n.姑婆	grandaunt
 grandchildren  n.孙子	grandchildren
 grandducal  a.大公的;大公国的;帝俄的;皇子的	grandducal
@@ -21978,6 +21978,7 @@ longtimer  n.老资格;长期刑囚犯	longtimer
 loo  n.一种牌戏	loo
 looby  n.傻大个;笨蛋	looby
 look  n.一看;神色;样子;面容 vi.看;注意;朝着;显得 vt.打量;注视;注意;期待	look
+lookup  n.查找;检查	lookup
 lookout  n.注意;前途;了望台;景色	lookout
 looks  n.容貌; v.看	looks
 lookthrough  n.透过	lookthrough
@@ -22412,7 +22413,7 @@ majordomo  n.管家;总监;大管家	majordomo
 majoritarian  n.多数主义者	majoritarian
 majority  n.多数;大半	majority
 majuscule  n.大字;大写字母 a.大字的;大写的	majuscule
-make  vt.做，作，造，制造，做成，造成，建設；創作，著作，擬，起草；制定，設置；征收。	make
+make  vt.做，作，造，制造，做成，造成，建設;創作，著作，擬，起草;制定，設置;征收;	make
 makefast  n.系船的柱;浮标等物	makefast
 maker  n.制造者;上帝;发期票的人	maker
 makeshift  n.权宜之计;临时代用品 a.权宜的;临时代用的	makeshift
@@ -22676,7 +22677,7 @@ marish  n.沼泽 a.沼泽的	marish
 marital  a.丈夫的;婚姻的;夫妇间的	marital
 maritime  a.海的;海上的;海事的;沿海的;海员的	maritime
 marjoram  n.一种牛至属植物	marjoram
-mark  n.印，記號，符號，標記 vt.加記號于，加符號于，作記號于，記上，標記上，記錄。	mark
+mark  n.印，記號，符號，標記 vt.加記號于，加符號于，作記號于，記上，標記上，記錄;	mark
 markdown  n.标低价	markdown
 marked  a.有记号的;显著的;醒目的	marked
 markedly  ad.显著地;醒目地;明显地	markedly
@@ -32194,7 +32195,7 @@ ruddily  ad.红;红润地	ruddily
 ruddiness  n.红色;带红色	ruddiness
 ruddle  n.红土;代赭石;赭色 vt.用红土做记号;涂红土	ruddle
 ruddy  a.红的;红润的 vt. vi.(使)变红	ruddy
-rude  adj.1.粗陋的，粗笨的；未加工的。2.原始的，蒙昧的；野蠻的。3.粗暴的	rude
+rude  adj.1.粗陋的，粗笨的;未加工的;2.原始的，蒙昧的;野蠻的;3.粗暴的	rude
 rudely  ad.无礼地;粗鲁地;粗陋地	rudely
 ruder  a.无礼的;粗糙的	ruder
 rudest  a.无礼的;粗糙的	rudest
@@ -32689,7 +32690,7 @@ scalable  a.可攀登的;可用秤子称的;可剥掉的	scalable
 scalar  n.数量 a.数量的;分等级的;梯状的	scalar
 scalariform  a.梯状的;阶纹的	scalariform
 scald  n.烫伤;烫洗 vt. vi.烫伤;烫洗	scald
-scale  n.(尺、秤等上刻劃的)分度，度數，標，標度，刻度；尺寸；尺，尺度。 vt.用梯子爬上；爬越，攀登(山等)。用縮尺制圖；(用比例尺)設計[測量]，按比例排列[繪制，制造]	scale
+scale  n.(尺、秤等上刻劃的)分度，度數，標，標度，刻度;尺寸;尺，尺度; vt.用梯子爬上;爬越，攀登(山等);用縮尺制圖;(用比例尺)設計[測量]，按比例排列[繪制，制造]	scale
 scalene  a.不等边的;倾轴的;斜角肌的 n.不等边三角形;斜角肌	scalene
 scaler  n.定标器;攀登者;刮除器;过秤者;刮鳞的人	scaler
 scales  n.尺度	scales
@@ -33453,7 +33454,7 @@ sessional  a.开会的;开庭的;会期的	sessional
 sesterce  n.古代罗马的货币单位	sesterce
 sestet  n.六重唱曲;十四行诗	sestet
 sestina  n.六节诗	sestina
-set  vt.1.放；擱；貼；靠。安置；布置；安排；設置；裝置。使固定。	set
+set  vt.1.放;擱;貼;靠;安置;布置;安排;設置;裝置;使固定;	set
 setaceous  a.刚毛一般的;长有刚毛的	setaceous
 setback  n.顿挫;挫折;退步	setback
 setline  n.有一排钩子的长钓鱼线	setline
@@ -35797,7 +35798,7 @@ straitly  ad.狭窄地;严格地	straitly
 straits  n.海峡	straits
 strand  n.绳索之一股;绳;串;海滨;河岸 vi.搁浅 vt.使搁浅;使落后;使陷于困境;弄断;搓	strand
 stranding  n.搁浅	stranding
-strange  adj.1.奇怪的，古怪的，不可思議的。2.不認識的，陌生的；不熟悉的	strange
+strange  adj.1.奇怪的，古怪的，不可思議的;2.不認識的，陌生的;不熟悉的	strange
 strangely  ad.奇妙地;奇怪地;不可思议地	strangely
 strangeness  n.奇妙;不可思议;陌生	strangeness
 stranger  n.陌生人;门外汉	stranger
@@ -38775,7 +38776,7 @@ turkey  n.火鸡;无用的东西;土耳其	turkey
 Turkmen  n.土库曼;土库曼语 a.土库曼共和国的	turkmen
 turmeric  n.沉金;沉金根之粉末	turmeric
 turmoil  n.骚动;混乱	turmoil
-turn  vt..轉，轉動，旋轉，使轉彎；移動，撥動，觸動。	turn
+turn  vt.转;转动;旋转;使转弯;移动;发动;触动	turn
 turnabout  n.旋转;回旋;转变	turnabout
 turnaround  n.回车场;转变	turnaround
 turnbuckle  n.螺丝扣;套筒螺母	turnbuckle

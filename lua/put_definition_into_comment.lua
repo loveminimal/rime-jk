@@ -19,7 +19,8 @@ end
 
 local function parse_definitions(text)
     local definitions = {}
-    for pos_def in string.gmatch(text, "([%a%.]+%.[^%a%.]+)") do
+    -- for pos_def in string.gmatch(text, "([%a%.]+%.[^%a%.]+)") do
+    for pos_def in string.gmatch(text, "([%a]+%.[^%a]+)") do
         table.insert(definitions, pos_def)
     end
     return definitions

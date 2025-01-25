@@ -15,6 +15,7 @@ layout:
   candidate_spacing: 5
   hilite_spacing: 4
   hilite_padding: 2
+  hilite_padding_x: 8                           # 候选项横向 X 间距
   round_corner: 4                               # 别名 hilited_corner_radius
   corner_radius: 4
   shadow_radius: 0

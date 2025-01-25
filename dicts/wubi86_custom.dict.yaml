@@ -14,14 +14,14 @@ version: '2024.12'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-被	p	10000
-视	p	10000
-道	u	10000
-键	q	10000
-都	f	10000
-选	t	10000
-例	w	10000
-该	y	10000
+被	pu	10000
+视	py	10000
+道	ut	10000
+键	qv	10000
+都	ft	10000
+选	tf	10000
+例	wg	10000
+该	yy	10000
 
 朙	lwke	10000
 

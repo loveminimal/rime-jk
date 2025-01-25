@@ -61,7 +61,13 @@ local function filter(input)
 
             -- 按词性分词，避免有些词释义过长，导致候选框太长
             -- 解析词典条目
-            local definitions = parse_definitions(cand.comment)
+            local definitions = {}
+            -- 仅注释词长超过 26 的进行分词展示
+            if (utf8.len(cand.comment) > 26) then
+                definitions = parse_definitions(cand.comment)
+            else
+                definitions = {cand.comment}
+            end
             -- 输出结果
             for _, pos_def in ipairs(definitions) do
                 local new_cand = Candidate(cand.type, cand.start, cand._end, word .. string.rep(' ', _ - 1), pos_def)

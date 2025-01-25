@@ -15,6 +15,6 @@ patch:
       font_point: 12 
       label_font_point: 10
       comment_font_point: 10
-      horizontal: true 
+      horizontal: false 
       layout:
         __include: style.yaml:/layout

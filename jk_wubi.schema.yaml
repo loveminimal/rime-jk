@@ -81,7 +81,7 @@ engine:
   filters:
     # lua 的 filter：
     - lua_filter@*put_definition_into_comment
-    # - lua_filter@*keep_one_level_simplified_code
+    - lua_filter@*keep_one_level_simplified_code
     - lua_filter@*is_in_user_dict        # 用户词典的词加上一个*
     # 反查的 filter
     - simplifier                         # 用字转换，？默认繁转简
@@ -187,7 +187,7 @@ chaifen:
 pinyin:
   tag: pinyin
   dictionary: jk_pinyin
-  prefix: " "
+  prefix: "Z"
   suffix: "'"
   tips: 〔拼音·反查〕
   preedit_format:
@@ -215,5 +215,5 @@ recognizer:
     # reverse_lookup: "`[a-z]*'?$"
     reverse_lookup: "^~[a-z]*:?$"
     punct: "^~~([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
-    # pinyin: "^P[A-Za-z]*$"
-    pinyin: "^[Xa-z]*$"                   # 取消引导词，直接五笔拼音混输（用任意大写字母隔开，防止反查混入）
+    pinyin: "^Z[A-Za-z]*$"
+    # pinyin: "^[Xa-z]*$"                 # 取消引导词，直接五笔拼音混输（用任意大写字母隔开，防止反查混入）

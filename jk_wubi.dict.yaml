@@ -21,8 +21,8 @@ encoder:
     - length_in_range: [4, 10]
       formula: "AaBaCaZa"
 import_tables:
-  - dicts/wubi86                                  # 8105 通规单字词库
-  # - dicts/wubi86_custom                         # 用来自定义常用的字词
+  - dicts/wubi86                                  # 8105 通规精炼词库
+  - dicts/wubi86_custom                           # 用来自定义常用的字词
   - dicts/wubi86_user                             # 引入自定义词库
 
 # 编译输入方案期间是否引入 Rime 预设的〔八股文〕词汇——及词频资料

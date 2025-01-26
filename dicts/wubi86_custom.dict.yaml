@@ -14,20 +14,20 @@ version: '2024.12'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-被	pu	10000
-视	py	10000
-道	ut	10000
-键	qv	10000
-都	ft	10000
-选	tf	10000
-例	wg	10000
-该	yy	10000
+# 被	pu	10000
+# 视	py	10000
+# 道	ut	10000
+# 键	qv	10000
+# 都	ft	10000
+# 选	tf	10000
+# 例	wg	10000
+# 该	yy	10000
 
 朙	lwke	10000
 
-去	fcuq	10000
-云	fcuy	10000
-支	fcuv	10000
+# 去	fcuq	10000
+# 云	fcuy	10000
+# 支	fcuv	10000
 
 增玺	fuqi	10000
 奕遥	yoer	10000

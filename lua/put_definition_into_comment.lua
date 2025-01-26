@@ -41,7 +41,7 @@ local function filter(input)
         -- 此类字符基本源自 en_aliases 的命令别名
         -- 如 cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_wx.sh
         if string.find(cand_text, "^[%a%d%&%-%_%~%/%.%s%:%=%*]+$") then
-            cand:get_genuine().comment = ''
+            -- cand:get_genuine().comment = ''
             yield(cand)
             goto continue
         end
@@ -84,7 +84,7 @@ local function filter(input)
         -- --- emoji 及标点符号 ---
         local emoji_pattern = "[\xE2\x98\x80-\xE2\x9F\xBF\xF0\x9F\x8C\x80-\xF0\x9F\xA4\x9F%p\xE2\x80\x80-\xE2\x81\xBF\xE2\xB8\x80-\xE2\xB9\xBF\xE3\x80\x80-\xE3\x80\xBF]"
         if string.find(cand_text, emoji_pattern) then
-            cand:get_genuine().comment = ''
+            -- cand:get_genuine().comment = ''
             yield(cand)
             goto continue
         end

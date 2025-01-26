@@ -82,6 +82,7 @@ engine:
     # lua 的 filter：
     - lua_filter@*put_definition_into_comment
     # - lua_filter@*keep_one_level_simplified_code
+    # - lua_filter@*pro_comment_format     # 超级注释模块
     - lua_filter@*is_in_user_dict        # 用户词典的词加上一个*
     # 反查的 filter
     - simplifier                         # 用字转换，？默认繁转简
@@ -120,7 +121,7 @@ translator:
   enable_completion: true                # 是否开启自动补全
   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
   # db_class: stabledb                   # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
-
+  comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===
 date_translator:

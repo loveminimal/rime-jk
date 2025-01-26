@@ -103,28 +103,23 @@ speller:
 
 chord_composer:
   __include: jk.yaml:/chord_composer
-    
-
-# === segmentor ===
-# abc_segmentor:
-#   extra_tags:                            # 为此 segmentor 所标记的段落插上其它 tag
-#     - reverse_lookup
 
 
 # === 每个方案都有一个主 translator ===
 translator:
   dictionary: jk_wubi                    # 与 wubi86 共用词典，设定 table_translator 使用的词典名
   prism: jk_wubi                         # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
-  enable_completion: false
   enable_charset_filter: true            # 是否开启字符集过滤
+  enable_sentence: true                  # 是否开启自动造句
+  enable_encoder: true                   # 是否启用特定的编码规则或功能
   encode_commit_history: true            # 是否对已上屏词自动成词
   max_phrase_length: 4                   # 最大自动成词词长
   disable_user_dict_for_patterns:        # 禁止某些编码录入用户词典
     - "^z.*$"
-  enable_sentence: true                  # 是否开启自动造句
+  # ---  
+  enable_completion: true                # 是否开启自动补全
   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
-  enable_encoder: true                   # 是否开启自动造词
-  comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置
+  # db_class: stabledb                   # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
 
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===
@@ -133,18 +128,9 @@ date_translator:
 
 
 # === 反查 ===
-# reverse_lookup:
-#   dictionary: jk_flypy
-#   # prefix: "`"
-#   prefix: "%"
-#   suffix: "'"
-#   tips: 〔小鹤·反查〕
-#   preedit_format:
-#     - xform/([nl])v/$1ü/
-#     - xform/([nl])ue/$1üe/
-#     - xform/([jqxy])v/$1u/
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
+
 
 # === 自定义短语：custom_phrase.txt ===
 custom_phrase:
@@ -156,7 +142,7 @@ custom_phrase:
   initial_quality: 99                    # custom_phrase 的权重应该比 pinyin 和 melt_eng 大
 
 
-# === Emoji ===
+# === OpenCC ===
 emoji:
   option_name: emoji
   opencc_config: emoji.json
@@ -167,18 +153,14 @@ zh2en:
   opencc_config: zh2en.json
   inherit_comment: false
 
-
-# === 五笔拆分滤镜 ===
 chaifen:
   opencc_config: wb_cf.json
   option_name: chaifen
   show_in_comment: true 
   comment_format:     
     - "xform/-/ /"
-    # - "xform/&nbsp;/ /"
   tags:     
     - abc
-    # - wubi86
     # - reverse_lookup
     - pinyin
   # char←字 词→all
@@ -212,8 +194,6 @@ key_binder:
 recognizer:
   # import_preset: default
   patterns:
-    # reverse_lookup: "`[a-z]*'?$"
     reverse_lookup: "^~[a-z]*:?$"
     punct: "^~~([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
-    # pinyin: "^Z[A-Za-z]*$"
-    pinyin: "^[Xa-z]*$"                 # 取消引导词，直接五笔拼音混输（用任意大写字母隔开，防止反查混入）
+    pinyin: "^Z[Xa-z]*$"                 # 取消引导词，直接五笔拼音混输（用任意大写字母隔开，防止反查混入）

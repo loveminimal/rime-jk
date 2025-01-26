@@ -15,8 +15,8 @@ customization:
 
 patch:
   schema_list:
-    - {schema: jk_ascii}
     - {schema: jk_wubi}
+    - {schema: jk_ascii}
 
 
   # === 候选相关 ===

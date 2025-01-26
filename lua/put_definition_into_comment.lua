@@ -84,7 +84,12 @@ local function filter(input)
         -- --- emoji 及标点符号 ---
         local emoji_pattern = "[\xE2\x98\x80-\xE2\x9F\xBF\xF0\x9F\x8C\x80-\xF0\x9F\xA4\x9F%p\xE2\x80\x80-\xE2\x81\xBF\xE2\xB8\x80-\xE2\xB9\xBF\xE3\x80\x80-\xE3\x80\xBF]"
         if string.find(cand_text, emoji_pattern) then
-            -- cand:get_genuine().comment = ''
+
+            -- 移除那令人讨厌的 ☯ 注释
+            if cand.comment:find('☯') then
+                cand:get_genuine().comment = ''
+            end
+
             yield(cand)
             goto continue
         end

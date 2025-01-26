@@ -10,8 +10,8 @@ patch:
     style/+:
       color_scheme: aqjk
       font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
-      label_font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
-      comment_font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       font_point: 13 
       label_font_point: 11
       comment_font_point: 11

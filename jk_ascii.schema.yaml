@@ -41,10 +41,10 @@ engine:
     - punct_translator
     - table_translator
     - reverse_lookup_translator
-    # - lua_translator@*test_translator
+    # - lua_translator@*inbox/test_translator
     - lua_translator@*force_gc
   filters:
-    # - lua_filter@*test/test_filter
+    # - lua_filter@*inbox/test_filter
     - lua_filter@*put_definition_into_comment
     - lua_filter@*is_in_user_dict
     - uniquifier

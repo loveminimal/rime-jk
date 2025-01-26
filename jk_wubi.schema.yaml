@@ -23,10 +23,10 @@ schema:
 
 # === 初始化 ===
 # --- 超级注释 ---
-pro_comment_format:
-  fuzhu_code: true                       # 启用辅助码提醒
-  candidate_length: 0                    # 候选词辅助码提醒的生效长度，0 为关闭
-  fuzhu_type: wubi                       # 用于匹配对应的辅助码注释显示
+# pro_comment_format:
+#   fuzhu_code: true                       # 启用辅助码提醒
+#   candidate_length: 0                    # 候选词辅助码提醒的生效长度，0 为关闭
+#   fuzhu_type: wubi                       # 用于匹配对应的辅助码注释显示
 
 
 # === 候选 ===
@@ -121,7 +121,7 @@ translator:
   enable_completion: true                # 是否开启自动补全
   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
   # db_class: stabledb                   # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
-  comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置
+  # comment_format: {comment}              # 将注释以词典字符串形式完全暴露，通过pro_comment_format.lua完全接管，灵活配置
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===
 date_translator:

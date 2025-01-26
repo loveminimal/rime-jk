@@ -10,15 +10,10 @@
 --   fuzhu_code: true                    # 启用辅助码提醒，用于辅助输入练习辅助码，成熟后可关闭
 --   candidate_length: 1                 # 候选词辅助码提醒的生效长度，0为关闭  但同时清空其它，应当使用上面开关来处理    
 --   fuzhu_type: flypy                   # 用于匹配对应的辅助码注释显示，可选显示类型有：en、wubi、flypy，选择一个填入，应与上面辅助码类型一致
+--
 
-
--- #########################
--- # 辅助码提示模块 (Fuzhu)
--- #########################
-
-local FZ = {}
-
-function FZ.run(cand, env, initial_comment)
+-- 获取辅助码注释
+local function get_fuzhuma_comment(cand, env, initial_comment)
     local length = utf8.len(cand.text)
     local final_comment = nil
 
@@ -52,7 +47,7 @@ function FZ.run(cand, env, initial_comment)
             end
         else
             -- 如果类型不匹配，返回空字符串
-            return ""
+            return ''
         end
 
         -- 将提取的拼音片段用空格连接起来
@@ -61,19 +56,17 @@ function FZ.run(cand, env, initial_comment)
         end
     else
         -- 如果候选词长度超过指定值，返回空字符串
-        final_comment = ""
+        final_comment = ''
     end
 
-    return final_comment or ""  -- 确保返回最终值
+    return final_comment or ''  -- 确保返回最终值
 end
 
 
--- #########################
--- 主函数：根据优先级处理候选词的注释
--- #########################
-local C = {}
+-- === 辅助码提示 ===
+local M = {}
 
-function C.init(env)
+function M.init(env)
     local config = env.engine.schema.config
 
     if (config:get_map("pro_comment_format") ~= nil) then
@@ -81,7 +74,7 @@ function C.init(env)
         env.settings = {
             fuzhu_code_enabled = config:get_bool("pro_comment_format/fuzhu_code") or false,              -- 辅助码提醒功能
             candidate_length = tonumber(config:get_string("pro_comment_format/candidate_length")) or 1,  -- 候选词长度
-            fuzhu_type = config:get_string("pro_comment_format/fuzhu_type") or ""                        -- 辅助码类型
+            fuzhu_type = config:get_string("pro_comment_format/fuzhu_type") or ''                        -- 辅助码类型
         }
     else
         log.info("env.settings = nil")
@@ -89,11 +82,10 @@ function C.init(env)
     end
 end 
 
-function C.func(input, env)
+function M.func(input, env)
     -- 调用全局初始共享环境
-    C.init(env)
+    -- M.init(env)
 
-    local processed_candidates = {}               -- 用于存储处理后的候选词
     local deal_count = 1
     if (env.settings == nil) then
         for cand in input:iter() do
@@ -102,24 +94,18 @@ function C.func(input, env)
     else
         -- 遍历输入的候选词
         for cand in input:iter() do
-            if cand.type == 'completion' then
-                yield(cand)
-                goto continue
-            end
             deal_count = deal_count + 1
-            -- log.info(cand.type)
-            -- log.info(cand.text)
             local initial_comment = cand.comment   -- 保存候选词的初始注释
             local final_comment = initial_comment  -- 初始化最终注释为初始注释
             -- 处理辅助码提示
             if env.settings.fuzhu_code_enabled then
-                local fz_comment = FZ.run(cand, env, initial_comment)
+                local fz_comment = get_fuzhuma_comment(cand, env, initial_comment)
                 if fz_comment then
                     final_comment = fz_comment
                 end
             else
                 -- 如果辅助码显示被关闭，则清空注释
-                final_comment = ""
+                final_comment = ''
             end
 
             -- 更新最终注释
@@ -133,9 +119,4 @@ function C.func(input, env)
     end
 end
 
-
-return {
-    FZ = FZ,
-    C = C,
-    func = C.func
-}
+return M

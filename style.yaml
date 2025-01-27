@@ -30,30 +30,35 @@ pujk:
     name: "知心／PU紫JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
-    # --- 默认配色 ---
-    text_color: 0x48466d                        # 文字
-    shadow_color: 0x000000b4                    # 阴影
-    label_color: 0x48466d99                     # 标签
-    comment_text_color: 0x48466d99              # 注释
+    # ---〔背景设置〕---
     border_color: 0xEEEEFF                      # 边框
     back_color: 0xEEEEFF                        # 背景
-    # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4            # 背景
-    # candidate_border_color:                   # 边框
-    # candidate_shadow_color:                   # 阴影
-    candidate_text_color: 0x48466d              # 文字
-    # --- 高亮区域配色 ---
-    hilited_text_color: 0xFFFFFF                # 文字
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x48466d                        # 文字
+    hilited_text_color: 0xFFFFFF                # 编码
     hilited_back_color: 0x48466d99              # 背景
-    # --- 选中的候选区域配色 ---
+    
+    label_color: 0x48466d99                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xFFFFFF      # 文字
+    hilited_candidate_back_color: 0x48466dCC    # 背景
+
     # hilited_mark_color: 0xBF616A              # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
-    # hilited_candidate_text_color: 0x2E3440    # 文字
     # hilited_candidate_border_color: 0x8FBCBB  # 边框
-    hilited_candidate_back_color: 0x48466dCC    # 背景
-    nextpage_color: 0x48466d99                  # 下一页
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x48466d              # 文字
+    comment_text_color: 0x48466d99              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
     prevpage_color: 0x48466dDD                  # 上一页
+    nextpage_color: 0x48466d99                  # 下一页
 
 # --- 天蓝色 Sky ----
 skjk:
@@ -61,30 +66,35 @@ skjk:
     name: "知心／SK蓝JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
-    # --- 默认配色 ---
-    text_color: 0x1B4F72                        # 文字
-    shadow_color: 0x000000b4                    # 阴影
-    label_color: 0x1B4F7299                     # 标签
-    comment_text_color: 0x1B4F7299              # 注释
+    # ---〔背景设置〕---
     border_color: 0xD6EAF8                      # 边框
     back_color: 0xD6EAF8                        # 背景
-    # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4            # 背景
-    # candidate_border_color:                   # 边框
-    # candidate_shadow_color:                   # 阴影
-    candidate_text_color: 0x1B4F72              # 文字
-    # --- 高亮区域配色 ---
-    hilited_text_color: 0xFFFFFF                # 文字
+    
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x1B4F72                        # 文字
+    hilited_text_color: 0xFFFFFF                # 编码
     hilited_back_color: 0x1B4F7299              # 背景
-    # --- 选中的候选区域配色 ---
+    
+    label_color: 0x1B4F7299                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xFFFFFF      # 文字
+    hilited_candidate_back_color: 0x1B4F72CC    # 背景
+
     # hilited_mark_color: 0xBF616A              # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
-    # hilited_candidate_text_color: 0x2E3440    # 文字
     # hilited_candidate_border_color: 0x8FBCBB  # 边框
-    hilited_candidate_back_color: 0x1B4F72CC    # 背景
-    nextpage_color: 0x1B4F7299                  # 下一页
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x1B4F72              # 文字
+    comment_text_color: 0x1B4F7299              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
     prevpage_color: 0x1B4F72DD                  # 上一页
+    nextpage_color: 0x1B4F7299                  # 下一页
 
 # --- Primary Color---
 prjk:
@@ -92,30 +102,71 @@ prjk:
     name: "知心／PR蓝JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
-    # --- 默认配色 ---
-    text_color: 0x0a58ca                        # 文字
-    shadow_color: 0x000000b4                    # 阴影
-    label_color: 0x0a58ca99                     # 标签
-    comment_text_color: 0x0a58ca99              # 注释
+    # ---〔背景设置〕---
     border_color: 0xcfe2ff                      # 边框
     back_color: 0xcfe2ff                        # 背景
-    # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4            # 背景
-    # candidate_border_color:                   # 边框
-    # candidate_shadow_color:                   # 阴影
-    candidate_text_color: 0x0a58ca              # 文字
-    # --- 高亮区域配色 ---
-    hilited_text_color: 0xFFFFFF                # 文字
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x0a58ca                        # 文字
+    hilited_text_color: 0xFFFFFF                # 编码
     hilited_back_color: 0x0a58ca99              # 背景
-    # --- 选中的候选区域配色 ---
+
+    label_color: 0x0a58ca99                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xFFFFFF      # 文字
+    hilited_candidate_back_color: 0x0a58caCC    # 背景
+
     # hilited_mark_color: 0xBF616A              # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
-    # hilited_candidate_text_color: 0x2E3440    # 文字
     # hilited_candidate_border_color: 0x8FBCBB  # 边框
-    hilited_candidate_back_color: 0x0a58caCC    # 背景
-    nextpage_color: 0x0a58ca99                  # 下一页
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x0a58ca              # 文字
+    comment_text_color: 0x0a58ca99              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
     prevpage_color: 0x0a58caDD                  # 上一页
+    nextpage_color: 0x0a58ca99                  # 下一页
+
+# --- MS Color---
+msjk:
+  preset_color_schemes/msjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／MS微JK"                        # 方案设置中显示的配色名称
+    author: Jack Liu                            # 配色作者名称
+    color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
+    # ---〔背景设置〕---
+    border_color: 0xe9e9e9                      # 边框
+    back_color: 0xf9f9f9                        # 背景
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x191919AA                      # 文字
+    hilited_text_color: 0x191919AA              # 编码
+    hilited_back_color: 0xf3f3f3                # 背景
+
+    label_color: 0x19191966                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0x191919      # 文字
+    hilited_candidate_back_color: 0xf3f3f3      # 背景
+
+    hilited_mark_color: 0x4c4ea7                # 标签前的标记
+    hilited_label_color: 0xaaaaaa               # 标签
+    hilited_comment_text_color: 0xaaaaaa        # 注释
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x191919CC            # 文字
+    comment_text_color: 0x19191966              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
+    prevpage_color: 0x191919                    # 上一页
+    nextpage_color: 0xaaaaaa                    # 下一页
 
 # --- Aqua 碧水〔改〕---
 aqjk:
@@ -123,27 +174,32 @@ aqjk:
     name: "知心／AQ碧JK"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
-    # --- 默认配色 ---
-    text_color: 0x2E3440                        # 文字
-    shadow_color: 0x000000b4                    # 阴影
-    label_color: 0x0A3AFA99                     # 标签
-    comment_text_color: 0x0A3AFA99              # 注释
+    # ---〔背景设置〕---
     border_color: 0xECEFF4                      # 边框
     back_color: 0xECEFF4                        # 背景
-    # --- 候选项配色 ---
-    # candidate_back_color: 0xECEFF4            # 背景
-    # candidate_border_color:                   # 边框
-    # candidate_shadow_color:                   # 阴影
-    candidate_text_color: 0x000000DD            # 文字
-    # --- 高亮区域配色 ---
-    hilited_text_color: 0xFFFFFF                # 文字
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x2E3440                        # 文字
+    hilited_text_color: 0xFFFFFF                # 编码
     hilited_back_color: 0x0A3AFA99              # 背景
-    # --- 选中的候选区域配色 ---
+
+    label_color: 0x0A3AFA99                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xFFFFFF      # 文字
+    hilited_candidate_back_color: 0x0A3AFACC    # 背景
+
     # hilited_mark_color: 0xBF616A              # 标签前的标记
     hilited_label_color: 0xCCCCCC               # 标签
     hilited_comment_text_color: 0xCCCCCC        # 注释
-    # hilited_candidate_text_color: 0x2E3440    # 文字
     # hilited_candidate_border_color: 0x8FBCBB  # 边框
-    hilited_candidate_back_color: 0x0A3AFACC    # 背景
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x000000DD            # 文字
+    comment_text_color: 0x0A3AFA99              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
     nextpage_color: 0x0A3AFA99                  # 下一页
     prevpage_color: 0x000000DD                  # 上一页

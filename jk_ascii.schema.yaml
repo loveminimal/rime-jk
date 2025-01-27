@@ -45,8 +45,8 @@ engine:
     - lua_translator@*force_gc
   filters:
     # - lua_filter@*inbox/test_filter
-    - lua_filter@*put_definition_into_comment
-    - lua_filter@*is_in_user_dict
+    - lua_filter@*prettify_comment
+    # - lua_filter@*is_in_user_dict
     - uniquifier
 
 # === speller ===

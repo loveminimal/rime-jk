@@ -71,10 +71,11 @@ def convert(src_dir, out_dir, file_endswith_filter):
                         code = code.split('')[1]
 
                     # 按字长顺序过滤依次处理 1, 2, 3, 4 ...
-                    if len(word) == word_len and all(w in char_8105 for w in word):
+                    # if len(word) == word_len and all(w in char_8105 for w in word):
+                    # 此外不再过滤非 8105 字词（源码表已做过滤 & 加载超范字词）
+                    if len(word) == word_len:
                         # 按字长过滤并确保词条唯一性
                         # 仅处理已合成词典中 不存在 或 已存在但编码不同的字词
-                        if len(word) == word_len and all(w in char_8105 for w in word):
                             if word not in res_dict or code not in res_dict[word]:
                                 res += f'{word}\t{code}\t{weight}\n'
                                 res_dict[word].add(code)

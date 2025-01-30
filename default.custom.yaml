@@ -98,6 +98,6 @@ patch:
 
       # - { when: always, accept: Control+b, send: '!' }
       # - { when: always, accept: Control+n, send: '?' }
-      - { when: always, accept: Control+apostrophe, send: '%' }
+      - { when: always, accept: Control+apostrophe, send: 'Z' }
       - { when: always, accept: Control+m, send: '~' }
 

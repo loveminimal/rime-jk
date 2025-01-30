@@ -17,6 +17,7 @@ patch:
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_wubi}
+    - {schema: jk_pinyin}
 
 
   # === 候选相关 ===
@@ -25,7 +26,7 @@ patch:
     # hotkeys/+:
     #   - Control+i
     hotkeys:
-      # - Control+m
+      - Control+m
     option_list_separator: ' | ' 
   menu/page_size: 4
 
@@ -98,6 +99,6 @@ patch:
 
       # - { when: always, accept: Control+b, send: '!' }
       # - { when: always, accept: Control+n, send: '?' }
-      - { when: always, accept: Control+apostrophe, send: 'Z' }
-      - { when: always, accept: Control+m, send: '~' }
+      - { when: always, accept: Control+apostrophe, send: '~' }
+      # - { when: always, accept: Control+m, send: '~' }
 

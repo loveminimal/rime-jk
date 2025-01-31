@@ -4,7 +4,6 @@
 schema:
   schema_id: jk_pinyin
   name: 拼音·知心
-  version: '0.1'
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |
@@ -15,12 +14,18 @@ schema:
   icon: 'assets/fly_b.ico'
   ascii_icon: 'assets/ascii.ico'
 
+pro_comment_format:
+  fuzhu_code: true
+  candidate_length: 1
+  fuzhu_type: flypy
+
 switches:
   __include: jk.yaml:/switches
 
 engine:
   processors:
     - ascii_composer
+    - chord_composer
     - recognizer
     - key_binder
     - speller
@@ -36,12 +41,13 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - script_translator
     - table_translator@custom_phrase
+    - script_translator
     - reverse_lookup_translator
     - lua_translator@*date_translator
     - lua_translator@*force_gc
   filters:
+    - lua_filter@*pro_comment_format
     - lua_filter@*prettify_comment
     - simplifier
     - simplifier@emoji
@@ -50,13 +56,19 @@ engine:
     - simplifier@chaifen
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba~
+  max_code_length: 5
+  auto_select: false
+  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
+  # [ ✗上屏 ]
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
+  # [ ✓上屏 ]
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " '"
   # 支持：
   # ① 全拼 algebra_pinyin 
   # ② 小鹤 algebra_flypy
   algebra:
-    __include: algebra_flypy 
+    __include: algebra_flypy_wb 
 
 algebra_pinyin:
   - erase/^hm$/
@@ -109,6 +121,54 @@ algebra_flypy:
   - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
   #- abbrev/^(.).+$/$1/
 
+algebra_flypy_wb:
+  # - erase/^xx$/
+  - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+  - derive/^([jqxy])u(;.*)$/$1v$2/
+  - derive/^([aoe])([ioun])(;.*)$/$1$1$2$3/
+  - xform/^([aoe])(ng)?(;.*)$/$1$1$2$3/
+  - xform/^(\w+?)iu(;.*)/$1Ⓠ$2/
+  - xform/^(\w+?)ei(;.*)/$1Ⓦ$2/
+  - xform/^(\w+?)uan(;.*)/$1Ⓡ$2/
+  - xform/^(\w+?)[uv]e(;.*)/$1Ⓣ$2/
+  - xform/^(\w+?)un(;.*)/$1Ⓨ$2/
+  - xform/^(\w+?)uo(;.*)/$1Ⓞ$2/
+  - xform/^(\w+?)ie(;.*)/$1Ⓟ$2/
+  - xform/^(\w+?)i?ong(;.*)/$1Ⓢ$2/
+  - xform/^(\w+?)ing(;.*)/$1Ⓚ$2/
+  - xform/^(\w+?)uai(;.*)/$1Ⓚ$2/
+  - xform/^(\w+?)ai(;.*)/$1Ⓓ$2/
+  - xform/^(\w+?)eng(;.*)/$1Ⓖ$2/
+  - xform/^(\w+?)en(;.*)/$1Ⓕ$2/
+  - xform/^(\w+?)[iu]ang(;.*)/$1Ⓛ$2/
+  - xform/^(\w+?)ang(;.*)/$1Ⓗ$2/
+  - xform/^(\w+?)ian(;.*)/$1Ⓜ$2/
+  - xform/^(\w+?)an(;.*)/$1Ⓙ$2/
+  - xform/^(\w+?)ou(;.*)/$1Ⓩ$2/
+  - xform/^(\w+?)iao(;.*)/$1Ⓝ$2/
+  - xform/^(\w+?)[iu]a(;.*)/$1Ⓧ$2/
+  - xform/^(\w+?)ao(;.*)/$1Ⓒ$2/
+  - xform/^(\w+?)ui(;.*)/$1Ⓥ$2/
+  - xform/^(\w+?)in(;.*)/$1Ⓑ$2/
+  - xform/^sh/Ⓤ/
+  - xform/^ch/Ⓘ/
+  - xform/^zh/Ⓥ/
+  - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
+  - abbrev/^([a-z]).+$/$1/
+  # --- 辅助码 ---
+  - derive|^(.{2});.*$|$1|                                          # 纯双拼的情况
+  - derive|^(.{2});(\w)(\w).*$|$1$2|                                # 双拼+一位辅助码的情况
+  - derive|^(.{2});(\w)(\w).*$|$1[$2|                               # 双拼+[一位辅助码的情况
+  - derive|^(.{2});.*?,(\w)(\w).*$|$1$2|                            # 双拼+一位辅助码的情况
+  - derive|^(.{2});.*?,(\w)(\w).*$|$1[$2|                           # 双拼+[一位辅助码的情况
+  - abbrev|^(.{2});(\w)(\w).*$|$1$2$3|                              # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o或/
+  - abbrev|^(.{2});.*?,(\w)(\w).*$|$1$2$3|                          # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o或/
+  - derive|^(.{2});(\w)(\w).*$|$1$2$3o|                             # 整句模式下，输入syffo 出单字 增强单字性能
+  - derive|^(.{2});(\w)(\w).*$|$1$2$3/|                             # 整句模式下，输入syff/ 出单字 增强单字性能
+  - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3o|                          # 整句模式下，输入syffo 出单字 增强单字性能
+  - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3/|                          # 整句模式下，输入syff/ 出单字 增强单字性能
+
+
 chord_composer:
   __include: jk.yaml:/chord_composer
 
@@ -123,10 +183,47 @@ translator:
   max_phrase_length: 4
   enable_completion: true
   enable_user_dict: true
-  preedit_format:
-    - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
-    - xform/([jqxy])v/$1u/
+  spelling_hints: 1
+  # preedit_format:
+  #   - xform/([nl])v/$1ü/
+  #   - xform/([nl])ue/$1üe/
+  #   - xform/([jqxy])v/$1u/
+  comment_format: {comment}
+  # preedit_format 影响到输入框的显示和“ Shift+⏎” 上屏的字符
+  # preedit_format:                        
+  #   - xform/([bpmfdtnljqx])n/$1iao/
+  #   - xform/(\w)g/$1eng/
+  #   - xform/(\w)q/$1iu/
+  #   - xform/(\w)w/$1ei/
+  #   - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
+  #   - xform/(\w)t/$1ve/
+  #   - xform/(\w)y/$1un/
+  #   - xform/([dtnlgkhvuirzcs])o/$1uo/
+  #   - xform/(\w)p/$1ie/
+  #   - xform/([jqx])s/$1iong/
+  #   - xform/(\w)s/$1ong/
+  #   - xform/(\w)d/$1ai/
+  #   - xform/(\w)f/$1en/
+  #   - xform/(\w)h/$1ang/
+  #   - xform/(\w)j/$1an/
+  #   - xform/([gkhvuirzcs])k/$1uai/
+  #   - xform/(\w)k/$1ing/
+  #   - xform/([jqxnlb])l/$1iang/
+  #   - xform/(\w)l/$1uang/
+  #   - xform/(\w)z/$1ou/
+  #   - xform/([gkhvuirzcs])x/$1ua/
+  #   - xform/(\w)x/$1ia/
+  #   - xform/(\w)c/$1ao/
+  #   - xform/([dtgkhvuirzcs])v/$1ui/
+  #   - xform/(\w)b/$1in/
+  #   - xform/(\w)m/$1ian/
+  #   - xform/([aoe])\1(\w)/$1$2/
+  #   - "xform/(^|[ '])v/$1zh/"
+  #   - "xform/(^|[ '])i/$1ch/"
+  #   - "xform/(^|[ '])u/$1sh/"
+  #   - xform/([jqxy])v/$1u/
+  #   - xform/([nl])v/$1ü/
+  #   - xform/ü/v/
 
 date_translator:
   jk_datetime: iii

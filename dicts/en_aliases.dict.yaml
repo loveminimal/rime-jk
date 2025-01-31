@@ -30,7 +30,7 @@ vim ~/.vim/vimrc	vvc	0
 vim ~/.bash_aliases	va	0
 source ~/.bash_aliases	sa	0
 
-cp ~/.bash_aliases ~/.shell/ && source ~/.bash_aliases	cphs	0
+cp ~/.bash_aliases ~/.shell/ && source ~/.bash_aliases && cd ~/.shell	cphs	0
 cp ~/.shell/.bash_aliases ~/ && source ~/.bash_aliases	cpsh	0
 
 sudo apt-get install	sai	0
@@ -93,13 +93,14 @@ cd ~/AppData/Roaming/site	cds	0
 cd ~/AppData/Roaming/site/themes/virgo	cdt	0
 cd ~/AppData/Roaming/site/content/.obsidian/themes/Virgo	cdo	0
 cd D:/sourcecode/sc_rime/rime_utils	cdu	0
+cd D:/sourcecode/sc_rime	cdsc	0
 # --- Linux ---
 cd ~/.emacs.d	cdee	0
 cd ~/.shell	cdsh	0
 cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
-cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	uud	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py && py scripts/sync_pinyin_user_dict.py	uud	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_en_aliases_dict.py	uea	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && scp -r public/* aituyaa.com:/home/jack/blog/ && rm -rf public	sscp	0

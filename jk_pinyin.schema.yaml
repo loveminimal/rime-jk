@@ -8,16 +8,12 @@ schema:
     - by Jack Liu <https://aituyaa.com>
   description: |
     - 基于袖珍简化字拼音及自制通规8105单字表
-    - 支持全拼和小鹤双拼
+    - 支持全拼
+    - 小鹤双拼+五笔前二增强版「 默认 」
   dependencies:
     - jk_ascii
   icon: 'assets/fly_b.ico'
   ascii_icon: 'assets/ascii.ico'
-
-pro_comment_format:
-  fuzhu_code: true
-  candidate_length: 1
-  fuzhu_type: flypy
 
 switches:
   __include: jk.yaml:/switches
@@ -55,6 +51,11 @@ engine:
     - uniquifier
     - simplifier@chaifen
 
+pro_comment_format:
+  fuzhu_code: true
+  candidate_length: 1
+  fuzhu_type: flypy
+
 speller:
   max_code_length: 5
   auto_select: false
@@ -65,18 +66,17 @@ speller:
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " '"
   # 支持：
-  # ① 全拼 algebra_pinyin 
-  # ② 小鹤 algebra_flypy
+  # ① 全拼          algebra_pinyin 
+  # ② 小鹤/五笔前二 algebra_flypy
   algebra:
     __include: algebra_flypy
 
 algebra_pinyin: 
-  __append: 
-    # - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    #- erase/^xx;.*$/
-    - derive/(;.*)$//
-    - derive/;//
-    - abbrev/^([a-z]).+$/$1/
+  # - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+  #- erase/^xx;.*$/
+  - derive/(;.*)$//
+  - derive/;//
+  - abbrev/^([a-z]).+$/$1/
 
 algebra_flypy:
   # - erase/^xx$/
@@ -113,17 +113,17 @@ algebra_flypy:
   - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
   - abbrev/^([a-z]).+$/$1/
   # --- 辅助码 ---
-  - derive|^(.{2});.*$|$1|                                          # 纯双拼的情况
-  - derive|^(.{2});(\w)(\w).*$|$1$2|                                # 双拼+一位辅助码的情况
-  - derive|^(.{2});(\w)(\w).*$|$1[$2|                               # 双拼+[一位辅助码的情况
-  - derive|^(.{2});.*?,(\w)(\w).*$|$1$2|                            # 双拼+一位辅助码的情况
-  - derive|^(.{2});.*?,(\w)(\w).*$|$1[$2|                           # 双拼+[一位辅助码的情况
-  - abbrev|^(.{2});(\w)(\w).*$|$1$2$3|                              # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o或/
-  - abbrev|^(.{2});.*?,(\w)(\w).*$|$1$2$3|                          # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o或/
-  - derive|^(.{2});(\w)(\w).*$|$1$2$3o|                             # 整句模式下，输入syffo 出单字 增强单字性能
-  - derive|^(.{2});(\w)(\w).*$|$1$2$3/|                             # 整句模式下，输入syff/ 出单字 增强单字性能
-  - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3o|                          # 整句模式下，输入syffo 出单字 增强单字性能
-  - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3/|                          # 整句模式下，输入syff/ 出单字 增强单字性能
+  - derive|^(.{2});.*$|$1|                
+  - derive|^(.{2});(\w)(\w).*$|$1$2|      
+  - derive|^(.{2});(\w)(\w).*$|$1[$2|     
+  - derive|^(.{2});.*?,(\w)(\w).*$|$1$2|  
+  - derive|^(.{2});.*?,(\w)(\w).*$|$1[$2| 
+  - abbrev|^(.{2});(\w)(\w).*$|$1$2$3|    
+  - abbrev|^(.{2});.*?,(\w)(\w).*$|$1$2$3|
+  - derive|^(.{2});(\w)(\w).*$|$1$2$3o|   
+  - derive|^(.{2});(\w)(\w).*$|$1$2$3/|   
+  - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3o|
+  - derive|^(.{2});.*,(\w)(\w).*$|$1$2$3/|
 
 
 chord_composer:

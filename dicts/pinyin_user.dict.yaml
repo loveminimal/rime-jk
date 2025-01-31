@@ -1,0 +1,37 @@
+# Rime dictionary - pinyin_user.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于官方自动同步的用户词典合并排序生成
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+# 运行脚本：
+# - --- 五笔 ---
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
+# - py scripts/sync_wubi_user_dict.py
+# - --- 拼音 ---
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_pinyin_user_dict.py
+# - py scripts/sync_pinyin_user_dict.py
+# 
+---
+name: pinyin_user
+version: '2025.01'
+sort: by_weight
+use_preset_vocabulary: false
+...
+灯	deng;os 	0
+码	ma;dc 	0
+辅助	fu;lg zhu;eg 	0
+江湖	jiang;ia hu;id 	1
+脚本	jiao;ef ben;sg 	0
+拼音	pin;ru yin;uj 	3
+前二	qian;ue er;fg 	1
+十年	shi;fg nian;rh 	0
+五笔	wu;gg bi;tt 	3
+夜雨	ye;yw yu;fg 	1
+指令	zhi;rx ling;wy 	0
+辅助码	fu;lg zhu;eg ma;dc 	2
+十年灯	shi;fg nian;rh deng;os 	1
+自定义	zi;th ding;pg yi;yq 	1
+脚本指令	jiao;ef ben;sg zhi;rx ling;wy 	1

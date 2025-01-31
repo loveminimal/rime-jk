@@ -7,8 +7,12 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-utils/blob/master/scripts/sync_wubi_user_dict.py
-# - py scripts/sync_wubi_user_dict.py [-i src] [-o out] [-f file_endswith_filter] [-m multifile_out_mode]
+# - --- 五笔 ---
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
+# - py scripts/sync_wubi_user_dict.py
+# - --- 拼音 ---
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_pinyin_user_dict.py
+# - py scripts/sync_pinyin_user_dict.py
 # 
 ---
 name: wubi86_user

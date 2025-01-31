@@ -31,7 +31,7 @@ local function get_fuzhuma_comment(cand, env, initial_comment)
         local patterns = {
             en = "[^a-z]*$)",
             wubi = "[^a-z]*$)",
-            flypy = "[^;]*;([^;]*);"
+            flypy = "[^;]*;([^;]*)"
         }
 
         -- 获取当前 fuzhu_type 对应的模式

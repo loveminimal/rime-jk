@@ -20,52 +20,71 @@ version: '2025.01'
 sort: by_weight
 use_preset_vocabulary: false
 ...
+哎	ai;ka 	1
 吧	ba;kc 	1
-宝	bao;pg 	1
+宝	bao;pg 	2
 别	bie;kl 	0
 不	bu;i,gi 	1
 打	da;rs 	1
-的	de;r,rq 	11
+到	dao;gc 	0
+的	de;r,rq 	14
+得	de;tj 	1
 灯	deng;os 	0
+顶	ding;sd 	0
+都	dou;ft 	1
 饿	e;qn 	1
 嗯	en;kl 	2
+浮	fu;ie 	1
+刚	gang;mq 	1
 高	gao;ym 	0
 个	ge;wh 	1
 给	gei;xw 	2
 还	hai;gi 	1
 行	hang;tf 	1
 鹤	he;pw 	1
+很	hen;tv 	0
 话	hua;yt 	1
 坏	huai;fg 	1
+慌	huang;na 	0
+活	huo;it 	0
 加	jia;lk 	1
 就	jiu;yi 	4
 快	kuai;nn 	1
 来	lai;go 	0
-了	le;b,bn 	4
+了	le;b,bn 	5
 嘞	lei;ka 	1
 码	ma;dc 	0
 吗	ma;kc 	2
 没	mei;im 	1
 面	mian;dm 	1
-你	ni;wq 	1
-上	shang;h,hh 	0
+你	ni;wq 	3
+瓢	piao;sf 	1
+飘	piao;sf 	1
+上	shang;h,hh 	1
 是	shi;j,jg 	3
+死	si;gq 	0
 搜	sou;rv 	0
-她	ta;vb 	1
+她	ta;vb 	2
 添	tian;ig 	1
 万	wan;dn 	2
 我	wo;q,tr 	0
 小	xiao;ih 	1
 形	xing;ga 	1
+要	yao;s,sv 	0
 也	ye;bn 	1
+一	yi;g,gg 	0
 音	yin;uj 	1
 用	yong;et 	2
+有	you;e,de 	0
+在	zai;d,dh 	1
 早	zao;jh 	0
 这	zhe;p,yp 	1
-中	zhong;k,kh 	2
+中	zhong;k,kh 	3
 住	zhu;wy 	1
 安全	an;pv quan;wg 	1
+按下	an;rp xia;gh 	1
 俺宝	an;wd bao;pg 	3
+宝子	bao;pg zi;bb 	2
 本来	ben;sg lai;go 	3
 变成	bian;yo cheng;dn 	1
 别走	bie;kl zou;fh 	1
@@ -75,7 +94,7 @@ use_preset_vocabulary: false
 不过	bu;i,gi guo;fp 	1
 不就	bu;i,gi jiu;yi 	1
 不能	bu;i,gi neng;ce 	1
-不少	bu;i,gi shao;it 	1
+不少	bu;i,gi shao;it 	2
 不是	bu;i,gi shi;j,jg 	1
 测试	ce;im shi;ya 	2
 长句	chang;ta ju;qk 	1
@@ -86,29 +105,36 @@ use_preset_vocabulary: false
 错误	cuo;qa wu;yk 	1
 单独	dan;uj du;qt 	0
 到家	dao;gc jia;pe 	1
+典型	dian;ma xing;ga 	1
 定长	ding;pg chang;ta 	1
+都是	dou;ft shi;j,jg 	1
+独立	du;qt li;uu 	1
 短句	duan;td ju;qk 	1
 多加	duo;qq jia;lk 	0
+发现	fa;v,nt xian;gm 	1
 反查	fan;rc cha;sj 	1
 方便	fang;yy bian;wg 	1
 否则	fou;gi ze;mj 	0
 辅助	fu;lg zhu;eg 	0
 感觉	gan;dg jue;ip 	0
 高速	gao;ym su;gk 	0
+个体	ge;wh ti;ws 	1
 够用	gou;qk yong;et 	0
 固定	gu;ld ding;pg 	1
 估计	gu;wd ji;yf 	1
 怪怪	guai;nc guai;nc 	1
 规范	gui;fw fan;ai 	0
 过年	guo;fp nian;rh 	1
-哈哈	ha;kw ha;kw 	2
+哈哈	ha;kw ha;kw 	4
 还行	hai;gi xing;tf 	0
 好嘛	hao;vb ma;ky 	1
 很小	hen;tv xiao;ih 	1
 后来	hou;rg lai;go 	1
+葫芦	hu;ad lu;ay 	1
 糊糊	hu;od hu;od 	1
 回家	hui;lk jia;pe 	1
 回去	hui;lk qu;fc 	0
+基本	ji;ad ben;sg 	1
 鸡腿	ji;cq tui;ev 	1
 加上	jia;lk shang;h,hh 	1
 家里	jia;pe li;jf 	1
@@ -116,26 +142,35 @@ use_preset_vocabulary: false
 简单	jian;tu dan;uj 	0
 江湖	jiang;ia hu;id 	1
 脚本	jiao;ef ben;sg 	0
+接触	jie;ru chu;qe 	1
 接你	jie;ru ni;wq 	1
-就会	jiu;yi hui;wf 	0
-就是	jiu;yi shi;j,jg 	0
+就会	jiu;yi hui;wf 	1
+就是	jiu;yi shi;j,jg 	1
 句子	ju;qk zi;bb 	1
 看看	kan;rh kan;rh 	2
+吭哧	keng;ky chi;kf 	2
 了吗	le;b,bn ma;kc 	0
 里面	li;jf mian;dm 	1
 码表	ma;dc biao;ge 	1
-满意	man;ia yi;uj 	0
+满意	man;ia yi;uj 	1
+毛病	mao;tf bing;ug 	1
 没有	mei;im you;e,de 	1
+每个	mei;tx ge;wh 	1
+面子	mian;dm zi;bb 	0
+哪儿	na;kv er;qt 	0
+那儿	na;vf er;qt 	1
 那么	na;vf me;tc 	0
 那些	na;vf xie;hx 	1
 你俩	ni;wq lia;wg 	1
 你们	ni;wq men;wu 	2
+你说	ni;wq shuo;yu 	1
 年后	nian;rh hou;rg 	1
 弄个	nong;ga ge;wh 	1
 泡成	pao;iq cheng;dn 	1
 拼音	pin;ru yin;uj 	3
 骑车	qi;cd che;lg 	1
 奇奇	qi;ds qi;ds 	1
+起来	qi;fh lai;go 	1
 前二	qian;ue er;fg 	1
 人气	ren;w,ww qi;rn 	1
 如果	ru;vk guo;js 	0
@@ -144,43 +179,54 @@ use_preset_vocabulary: false
 十年	shi;fg nian;rh 	0
 是吧	shi;j,jg ba;kc 	0
 时候	shi;jf hou;wh 	2
+受罪	shou;ep zui;ld 	0
 收拾	shou;nh shi;rw 	0
 双拼	shuang;cc pin;ru 	2
+睡了	shui;ht le;b,bn 	1
 顺便	shun;kd bian;wg 	1
+说话	shuo;yu hua;yt 	0
 提成	ti;rj cheng;dn 	0
+听见	ting;kr jian;mq 	1
 万象	wan;dn xiang;qj 	2
 为了	wei;o,yl le;b,bn 	1
 我去	wo;q,tr qu;fc 	1
+我又	wo;q,tr you;cc 	1
 无解	wu;fq jie;qe 	1
 五笔	wu;gg bi;tt 	3
 嘻嘻	xi;kf xi;kf 	1
 下班	xia;gh ban;gy 	1
 下雪	xia;gh xue;fv 	1
-现在	xian;gm zai;d,dh 	0
+现在	xian;gm zai;d,dh 	1
 小鹤	xiao;ih he;pw 	1
+心里	xin;ny li;jf 	0
 休息	xiu;ws xi;th 	0
 选重	xuan;tf chong;tg 	1
+样子	yang;su zi;bb 	0
 要是	yao;s,sv shi;j,jg 	1
 也是	ye;bn shi;j,jg 	1
 也中	ye;bn zhong;k,kh 	1
 夜雨	ye;yw yu;fg 	1
+一笔	yi;g,gg bi;tt 	1
 一个	yi;g,gg ge;wh 	1
 一下	yi;g,gg xia;gh 	1
 早点	zao;jh dian;hk 	0
 这个	zhe;p,yp ge;wh 	1
+真正	zhen;fh zheng;gh 	1
 只打	zhi;kw da;rs 	0
-之后	zhi;pp hou;rg 	1
+之后	zhi;pp hou;rg 	2
 指令	zhi;rx ling;wy 	0
 中间	zhong;k,kh jian;uj 	0
 转换	zhuan;lf huan;rq 	1
 作为	zuo;wt wei;o,yl 	1
 别回去	bie;kl hui;lk qu;fc 	1
 不规范	bu;i,gi gui;fw fan;ai 	1
+长时间	chang;ta shi;jf jian;uj 	1
 吃饱了	chi;kt bao;qn le;b,bn 	0
 辅助码	fu;lg zhu;eg ma;dc 	2
 高速上	gao;ym su;gk shang;h,hh 	1
 很舒服	hen;tv shu;wf fu;eb 	1
 回家来	hui;lk jia;pe lai;go 	1
+基本上	ji;ad ben;sg shang;h,hh 	1
 加起来	jia;lk qi;fh lai;go 	1
 就够用	jiu;yi gou;qk yong;et 	1
 就会用	jiu;yi hui;wf yong;et 	1
@@ -196,8 +242,13 @@ use_preset_vocabulary: false
 下雪了	xia;gh xue;fv le;b,bn 	1
 小词库	xiao;ih ci;yn ku;yl 	2
 小满意	xiao;ih man;ia yi;uj 	1
+心里慌	xin;ny li;jf huang;na 	1
+一会儿	yi;g,gg hui;wf er;qt 	0
+一说话	yi;g,gg shuo;yu hua;yt 	1
 自定义	zi;th ding;pg yi;yq 	1
 单独出来	dan;uj du;qt chu;bm lai;go 	1
+到哪儿了	dao;gc na;kv er;qt le;b,bn 	1
+都是这样	dou;ft shi;j,jg zhe;p,yp yang;su 	0
 感觉还行	gan;dg jue;ip hai;gi xing;tf 	1
 脚本指令	jiao;ef ben;sg zhi;rx ling;wy 	1
 就会出现	jiu;yi hui;wf chu;bm xian;gm 	0
@@ -206,13 +257,18 @@ use_preset_vocabulary: false
 历史记录	li;dl shi;kq ji;yn lu;vi 	0
 没有时间	mei;im you;e,de shi;jf jian;uj 	1
 没有休息	mei;im you;e,de xiu;ws xi;th 	1
+面子很顶	mian;dm zi;bb hen;tv ding;sd 	1
 你多加个	ni;wq duo;qq jia;lk ge;wh 	1
 拼音词库	pin;ru yin;uj ci;yn ku;yl 	1
 如果只打	ru;vk guo;js zhi;kw da;rs 	1
 收拾一下	shou;nh shi;rw yi;g,gg xia;gh 	1
 我吃饱了	wo;q,tr chi;kt bao;qn le;b,bn 	1
+下班了吗	xia;gh ban;gy le;b,bn ma;kc 	1
 也是不错	ye;bn shi;j,jg bu;i,gi cuo;qa 	1
 一段时间	yi;g,gg duan;wd shi;jf jian;uj 	1
+有一会儿	you;e,de yi;g,gg hui;wf er;qt 	1
+这个样子	zhe;p,yp ge;wh yang;su zi;bb 	1
+都是这样的	dou;ft shi;j,jg zhe;p,yp yang;su de;r,rq 	1
 过年提成高	guo;fp nian;rh ti;rj cheng;dn gao;ym 	1
 早点休息吧	zao;jh dian;hk xiu;ws xi;th ba;kc 	1
 到家了吗你们	dao;gc jia;pe le;b,bn ma;kc ni;wq men;wu 	1
@@ -220,4 +276,5 @@ use_preset_vocabulary: false
 没有监控是吧	mei;im you;e,de jian;jt kong;rp shi;j,jg ba;kc 	1
 拼音的小词库	pin;ru yin;uj de;r,rq xiao;ih ci;yn ku;yl 	1
 江湖夜雨十年灯	jiang;ia hu;id ye;yw yu;fg shi;fg nian;rh deng;os 	1
+死要面子活受罪	si;gq yao;s,sv mian;dm zi;bb huo;it shou;ep zui;ld 	1
 否则中间就会出现	fou;gi ze;mj zhong;k,kh jian;uj jiu;yi hui;wf chu;bm xian;gm 	1

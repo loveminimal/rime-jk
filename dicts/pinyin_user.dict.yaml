@@ -23,7 +23,7 @@ use_preset_vocabulary: false
 吧	ba;kc 	1
 宝	bao;pg 	1
 不	bu;i,gi 	1
-的	de;r,rq 	3
+的	de;r,rq 	4
 灯	deng;os 	0
 饿	e;qn 	1
 个	ge;wh 	0
@@ -38,16 +38,19 @@ use_preset_vocabulary: false
 你	ni;wq 	0
 我	wo;q,tr 	0
 这	zhe;p,yp 	1
+中	zhong;k,kh 	2
 俺宝	an;wd bao;pg 	3
 不对	bu;i,gi dui;cf 	1
 长句	chang;ta ju;qk 	1
 吃饭	chi;kt fan;qn 	1
 词库	ci;yn ku;yl 	1
+到家	dao;gc jia;pe 	0
 短句	duan;td ju;qk 	1
 多加	duo;qq jia;lk 	0
 辅助	fu;lg zhu;eg 	0
 够用	gou;qk yong;et 	0
 估计	gu;wd ji;yf 	1
+怪怪	guai;nc guai;nc 	1
 规范	gui;fw fan;ai 	0
 哈哈	ha;kw ha;kw 	2
 好嘛	hao;vb ma;ky 	1
@@ -58,11 +61,17 @@ use_preset_vocabulary: false
 江湖	jiang;ia hu;id 	1
 脚本	jiao;ef ben;sg 	0
 接你	jie;ru ni;wq 	1
+就是	jiu;yi shi;j,jg 	0
+句子	ju;qk zi;bb 	1
+了吗	le;b,bn ma;kc 	0
 里面	li;jf mian;dm 	1
 没有	mei;im you;e,de 	0
+那些	na;vf xie;hx 	1
+你们	ni;wq men;wu 	0
 泡成	pao;iq cheng;dn 	1
 拼音	pin;ru yin;uj 	3
 骑车	qi;cd che;lg 	1
+奇奇	qi;ds qi;ds 	1
 前二	qian;ue er;fg 	1
 如果	ru;vk guo;js 	0
 十年	shi;fg nian;rh 	0
@@ -81,12 +90,15 @@ use_preset_vocabulary: false
 就够用	jiu;yi gou;qk yong;et 	1
 你不是	ni;wq bu;i,gi shi;j,jg 	1
 你下班	ni;wq xia;gh ban;gy 	1
-十年灯	shi;fg nian;rh deng;os 	1
+十年灯	shi;fg nian;rh deng;os 	2
 自定义	zi;th ding;pg yi;yq 	1
 脚本指令	jiao;ef ben;sg zhi;rx ling;wy 	1
+历史记录	li;dl shi;kq ji;yn lu;vi 	0
 没有时间	mei;im you;e,de shi;jf jian;uj 	1
 你多加个	ni;wq duo;qq jia;lk ge;wh 	1
 如果只打	ru;vk guo;js zhi;kw da;rs 	1
 我吃饱了	wo;q,tr chi;kt bao;qn le;b,bn 	1
+到家了吗你们	dao;gc jia;pe le;b,bn ma;kc ni;wq men;wu 	1
+就是历史记录	jiu;yi shi;j,jg li;dl shi;kq ji;yn lu;vi 	1
 没有监控是吧	mei;im you;e,de jian;jt kong;rp shi;j,jg ba;kc 	1
 江湖夜雨十年灯	jiang;ia hu;id ye;yw yu;fg shi;fg nian;rh deng;os 	1

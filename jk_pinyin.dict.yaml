@@ -2,6 +2,7 @@
 # encoding: utf-8
 #
 # --- 说明 ---
+# --- 拼音+五笔前二辅助码增强版 ---
 # 该字典是基于袖珍简化字拼音及自制通规8105单字表合并排序生成
 # - https://github.com/loveminimal/rime-jk
 # - Jack Liu <https://aituyaa.com>
@@ -9,6 +10,7 @@
 # 修改内容：
 # - 删除非国标 8105-2023 单字及其所组词语
 # - 按字长进行排序处理
+# - 增加五笔前二辅助码支持
 #
 # 运行脚本：
 # - https://github.com/loveminimal/rime_utils/blob/master/rime_utils/pkg_8105/filter_pinyin_8105.py

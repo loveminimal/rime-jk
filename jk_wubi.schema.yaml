@@ -18,15 +18,6 @@ schema:
     - jk_pinyin
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
-  version: 6.2.0
-
-
-# === 初始化 ===
-# --- 超级注释 ---
-# pro_comment_format:
-#   fuzhu_code: true                       # 启用辅助码提醒
-#   candidate_length: 0                    # 候选词辅助码提醒的生效长度，0 为关闭
-#   fuzhu_type: wubi                       # 用于匹配对应的辅助码注释显示
 
 
 # === 候选 ===
@@ -81,8 +72,7 @@ engine:
   filters:
     # lua 的 filter：
     - lua_filter@*prettify_comment
-    # - lua_filter@*keep_primary_code_first
-    # - lua_filter@*inbox/pro_comment_format     # 超级注释模块
+    - lua_filter@*keep_primary_code_first
     # 反查的 filter
     - simplifier                         # 用字转换，？默认繁转简
     - simplifier@emoji                   # Emoji

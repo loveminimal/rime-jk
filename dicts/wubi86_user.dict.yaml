@@ -66,6 +66,7 @@ use_preset_vocabulary: false
 右	dk 	1
 成	dn 	7
 万	dnv 	2
+奇	dskf 	1
 帮	dt 	1
 春	dw 	1
 太	dy 	7
@@ -110,7 +111,7 @@ use_preset_vocabulary: false
 者	ftj 	1
 都	ftjb 	12
 煮	ftjo 	1
-雾	ftl 	1
+雾	ftl 	2
 老	ftx 	3
 雪	fv 	1
 一	g 	27
@@ -156,7 +157,7 @@ use_preset_vocabulary: false
 裳	ipke 	1
 深	ipws 	1
 光	iq 	1
-淞	iswc 	1
+淞	iswc 	2
 当	iv 	1
 举	iwf 	1
 流	iyc 	1
@@ -208,6 +209,7 @@ use_preset_vocabulary: false
 嘛	kyss 	1
 国	l 	2
 畯	lcwt 	1
+罢	lfc 	1
 辅	lgey 	3
 四	lh 	1
 加	lk 	2
@@ -220,6 +222,7 @@ use_preset_vocabulary: false
 图	ltu 	2
 囧	lwm 	3
 累	lxi 	2
+典	maw 	2
 同	mg 	1
 同	mgk 	1
 则	mj 	1
@@ -301,6 +304,7 @@ use_preset_vocabulary: false
 桐	smgk 	1
 板	src 	2
 栗	ssu 	1
+梅	stx 	1
 样	su 	2
 要	sv 	9
 和	t 	5
@@ -314,6 +318,7 @@ use_preset_vocabulary: false
 航	teym 	1
 行	tf 	2
 待	tffy 	1
+靠	tfkd 	1
 先	tfq 	2
 选	tfqp 	3
 算	tha 	2
@@ -333,11 +338,15 @@ use_preset_vocabulary: false
 符	twf 	4
 第	tx 	1
 入	ty 	1
+往	tyg 	1
+稿	tym 	1
+篇	tyna 	1
 并	ua 	2
 郑	udb 	2
 着	udh 	5
 头	udi 	1
 送	udp 	1
+善	uduk 	1
 半	uf 	1
 装	ufy 	1
 单	ujfj 	1
@@ -387,9 +396,11 @@ use_preset_vocabulary: false
 健	wvfp 	1
 伊	wvt 	3
 从	ww 	4
+化	wx 	1
 货	wxm 	1
 信	wy 	1
 住	wygg 	1
+经	x 	1
 线	xg 	2
 纯	xgb 	3
 绩	xgm 	1
@@ -521,12 +532,15 @@ use_preset_vocabulary: false
 过去	fpfc 	1
 过滤	fpih 	3
 索性	fpnt 	1
+过年	fprh 	1
 无语	fqyg 	1
 老大	ftdd 	1
+雾淞	ftis 	2
 教程	fttk 	2
 老妈	ftvc 	2
 教主	ftyg 	1
 垃圾	fufe 	1
+规范	fwai 	1
 规劝	fwcl 	1
 零食	fwwy 	1
 形式	gaaa 	1
@@ -605,6 +619,7 @@ use_preset_vocabulary: false
 睡着	htud 	2
 此外	hxqh 	1
 此处	hxth 	1
+洪荒	iaay 	1
 满足	iakh 	1
 江山	iamm 	1
 满意	iauj 	4
@@ -619,6 +634,7 @@ use_preset_vocabulary: false
 没有	imde 	2
 尚未	imfi 	1
 测试	imya 	1
+常用	ipet 	1
 学校	ipsu 	1
 觉得	iptj 	1
 尝试	ipya 	1
@@ -655,6 +671,7 @@ use_preset_vocabulary: false
 踢打	khrs 	1
 路径	khtc 	2
 中文	khyy 	1
+口语	kkyg 	1
 嘿嘿	klkl 	1
 别人	klww 	1
 吹嘘	kqkh 	1
@@ -745,6 +762,7 @@ use_preset_vocabulary: false
 然而	qddm 	1
 外面	qhdm 	2
 乐趣	qifh 	1
+句子	qkbb 	1
 包围	qnlf 	1
 包括	qnrt 	1
 多爽	qqdq 	1
@@ -797,6 +815,7 @@ use_preset_vocabulary: false
 可能	skce 	2
 可以	skny 	1
 格式	staa 	1
+样子	subb 	1
 要求	svfi 	1
 根本	svsg 	2
 检验	swcw 	1
@@ -807,6 +826,7 @@ use_preset_vocabulary: false
 行内	tfmw 	1
 先生	tftg 	3
 等价	tfww 	2
+毛线	tfxg 	2
 重点	tghk 	1
 生活	tgit 	1
 重逢	tgtd 	3
@@ -885,6 +905,7 @@ use_preset_vocabulary: false
 公子	wcbb 	3
 俺宝	wdpg 	1
 舒服	wfeb 	2
+舒心	wfny 	1
 什么	wftc 	15
 值得	wftj 	1
 使用	wget 	6
@@ -907,6 +928,7 @@ use_preset_vocabulary: false
 八月	wtee 	3
 余生	wttg 	1
 任何	wtws 	1
+傻比	wtxx 	1
 分隔	wvbg 	1
 分钟	wvqk 	1
 伊织	wvxk 	1
@@ -980,6 +1002,7 @@ use_preset_vocabulary: false
 辅助码	ledc 	1
 逻辑学	llip 	1
 输入法	ltif 	4
+典中典	mkma 	3
 数据库	oryl 	1
 字符串	ptkk 	5
 多巴胺	qcep 	1
@@ -999,6 +1022,7 @@ use_preset_vocabulary: false
 七月流火	aeio 	2
 辽宁卫视	bpbp 	1
 古川伊织	dkwx 	5
+雾淞拼音	firu 	1
 开天辟地	ggnf 	1
 吞噬星空	gkjp 	1
 不得好死	gtvg 	1

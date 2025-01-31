@@ -16,7 +16,7 @@
 # 
 ---
 name: wubi86_user
-version: '2025.01'
+version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...

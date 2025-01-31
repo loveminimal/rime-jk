@@ -16,228 +16,443 @@
 # 
 ---
 name: pinyin_user
-version: '2025.01'
+version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...
+啊	a;kb 	1
 哎	ai;ka 	1
-吧	ba;kc 	1
-宝	bao;pg 	2
+吧	ba;kc 	4
+把	ba;rc 	2
+宝	bao;pg 	3
+被	bei;pu 	1
+比	bi;xx 	1
 别	bie;kl 	0
-不	bu;i,gi 	1
+并	bing;ua 	0
+不	bu;i,gi 	2
+重	chong;tg 	1
+厨	chu;dg 	1
+床	chuang;ys 	1
+从	cong;ww 	1
+大	da;dd 	0
 打	da;rs 	1
-到	dao;gc 	0
-的	de;r,rq 	14
+但	dan;wj 	1
+到	dao;gc 	2
+地	de;f,fb 	0
+的	de;r,rq 	32
 得	de;tj 	1
 灯	deng;os 	0
 顶	ding;sd 	0
-都	dou;ft 	1
+都	dou;ft 	4
+对	dui;cf 	0
+多	duo;qq 	3
 饿	e;qn 	1
 嗯	en;kl 	2
 浮	fu;ie 	1
+改	gai;nt 	1
 刚	gang;mq 	1
 高	gao;ym 	0
-个	ge;wh 	1
+个	ge;wh 	2
 给	gei;xw 	2
+哈	ha;kw 	1
 还	hai;gi 	1
 行	hang;tf 	1
+好	hao;vb 	3
+喝	he;kj 	1
 鹤	he;pw 	1
-很	hen;tv 	0
+很	hen;tv 	1
 话	hua;yt 	1
 坏	huai;fg 	1
 慌	huang;na 	0
+会	hui;wf 	3
 活	huo;it 	0
 加	jia;lk 	1
-就	jiu;yi 	4
+接	jie;ru 	1
+就	jiu;yi 	9
+看	kan;rh 	1
+可	ke;sk 	1
+库	ku;yl 	1
 快	kuai;nn 	1
+拉	la;ru 	1
 来	lai;go 	0
-了	le;b,bn 	5
-嘞	lei;ka 	1
+了	le;b,bn 	16
+嘞	lei;ka 	2
+两	liang;gm 	2
 码	ma;dc 	0
-吗	ma;kc 	2
+吗	ma;kc 	3
 没	mei;im 	1
 面	mian;dm 	1
-你	ni;wq 	3
+呢	ne;kn 	1
+能	neng;ce 	1
+你	ni;wq 	9
+弄	nong;ga 	1
 瓢	piao;sf 	1
 飘	piao;sf 	1
+起	qi;fh 	1
+浅	qian;ig 	2
+人	ren;w,ww 	1
 上	shang;h,hh 	1
-是	shi;j,jg 	3
+烧	shao;oa 	1
+是	shi;j,jg 	13
+时	shi;jf 	1
+水	shui;ii 	1
 死	si;gq 	0
 搜	sou;rv 	0
 她	ta;vb 	2
+他	ta;wb 	1
 添	tian;ig 	1
 万	wan;dn 	2
-我	wo;q,tr 	0
+我	wo;q,tr 	6
+乌	wu;qn 	1
+下	xia;gh 	2
+咸	xian;dg 	1
+先	xian;tf 	1
+想	xiang;sh 	1
 小	xiao;ih 	1
+些	xie;hx 	1
+新	xin;us 	1
 形	xing;ga 	1
 要	yao;s,sv 	0
 也	ye;bn 	1
 一	yi;g,gg 	0
 音	yin;uj 	1
-用	yong;et 	2
-有	you;e,de 	0
-在	zai;d,dh 	1
+用	yong;et 	7
+有	you;e,de 	1
+源	yuan;id 	1
+在	zai;d,dh 	3
 早	zao;jh 	0
-这	zhe;p,yp 	1
-中	zhong;k,kh 	3
+站	zhan;uh 	0
+这	zhe;p,yp 	7
+中	zhong;k,kh 	4
 住	zhu;wy 	1
+做	zuo;wd 	1
 安全	an;pv quan;wg 	1
 按下	an;rp xia;gh 	1
 俺宝	an;wd bao;pg 	3
-宝子	bao;pg zi;bb 	2
+百度	bai;dj du;ya 	0
+办法	ban;lw fa;if 	1
+宝子	bao;pg zi;bb 	4
 本来	ben;sg lai;go 	3
-变成	bian;yo cheng;dn 	1
+比较	bi;xx jiao;lu 	0
+比如	bi;xx ru;vk 	1
+变成	bian;yo cheng;dn 	2
+变更	bian;yo geng;gj 	1
 别走	bie;kl zou;fh 	1
 不错	bu;i,gi cuo;qa 	0
 不到	bu;i,gi dao;gc 	1
 不对	bu;i,gi dui;cf 	1
-不过	bu;i,gi guo;fp 	1
+不过	bu;i,gi guo;fp 	3
 不就	bu;i,gi jiu;yi 	1
 不能	bu;i,gi neng;ce 	1
 不少	bu;i,gi shao;it 	2
 不是	bu;i,gi shi;j,jg 	1
+不同	bu;i,gi tong;m,mg 	1
+不行	bu;i,gi xing;tf 	1
+不用	bu;i,gi yong;et 	1
+仓库	cang;wb ku;yl 	1
 测试	ce;im shi;ya 	2
+差别	cha;ud bie;kl 	1
+产生	chan;u,ut sheng;tg 	0
 长句	chang;ta ju;qk 	1
+成个	cheng;dn ge;wh 	1
 吃饭	chi;kt fan;qn 	1
+吃个	chi;kt ge;wh 	0
+重置	chong;tg zhi;lf 	1
+出发	chu;bm fa;v,nt 	1
 出来	chu;bm lai;go 	0
+出现	chu;bm xian;gm 	3
+床前	chuang;ys qian;ue 	1
 词库	ci;yn ku;yl 	2
 词条	ci;yn tiao;ts 	1
+从小	cong;ww xiao;ih 	1
+存在	cun;dh zai;d,dh 	1
 错误	cuo;qa wu;yk 	1
+大哥	da;dd ge;sk 	1
+打脸	da;rs lian;ew 	1
 单独	dan;uj du;qt 	0
+但是	dan;wj shi;j,jg 	1
 到家	dao;gc jia;pe 	1
 典型	dian;ma xing;ga 	1
 定长	ding;pg chang;ta 	1
-都是	dou;ft shi;j,jg 	1
+都是	dou;ft shi;j,jg 	2
+都有	dou;ft you;e,de 	1
 独立	du;qt li;uu 	1
 短句	duan;td ju;qk 	1
+对对	dui;cf dui;cf 	0
 多加	duo;qq jia;lk 	0
+二辉	er;fg hui;iq 	1
 发现	fa;v,nt xian;gm 	1
 反查	fan;rc cha;sj 	1
 方便	fang;yy bian;wg 	1
+方法	fang;yy fa;if 	2
+方式	fang;yy shi;aa 	0
 否则	fou;gi ze;mj 	0
 辅助	fu;lg zhu;eg 	0
+改完	gai;nt wan;pf 	1
 感觉	gan;dg jue;ip 	0
+刚才	gang;mq cai;ft 	1
 高速	gao;ym su;gk 	0
 个体	ge;wh ti;ws 	1
+跟我	gen;kh wo;q,tr 	0
+更新	geng;gj xin;us 	4
 够用	gou;qk yong;et 	0
 固定	gu;ld ding;pg 	1
 估计	gu;wd ji;yf 	1
 怪怪	guai;nc guai;nc 	1
+乖乖	guai;tf guai;tf 	1
 规范	gui;fw fan;ai 	0
+规则	gui;fw ze;mj 	1
 过年	guo;fp nian;rh 	1
-哈哈	ha;kw ha;kw 	4
+哈哈	ha;kw ha;kw 	12
 还行	hai;gi xing;tf 	0
+好的	hao;vb de;r,rq 	2
+好了	hao;vb le;b,bn 	0
 好嘛	hao;vb ma;ky 	1
+合并	he;wg bing;ua 	2
+合适	he;wg shi;td 	0
 很小	hen;tv xiao;ih 	1
 后来	hou;rg lai;go 	1
 葫芦	hu;ad lu;ay 	1
 糊糊	hu;od hu;od 	1
+划算	hua;aj suan;th 	0
 回家	hui;lk jia;pe 	1
+回来	hui;lk lai;go 	2
 回去	hui;lk qu;fc 	0
 基本	ji;ad ben;sg 	1
 鸡腿	ji;cq tui;ev 	1
+几次	ji;mt ci;uq 	0
+继续	ji;xo xu;xf 	0
+记录	ji;yn lu;vi 	1
 加上	jia;lk shang;h,hh 	1
 家里	jia;pe li;jf 	1
 监控	jian;jt kong;rp 	0
 简单	jian;tu dan;uj 	0
+兼容	jian;uv rong;pw 	1
 江湖	jiang;ia hu;id 	1
 脚本	jiao;ef ben;sg 	0
+教育	jiao;ft yu;yc 	0
+截断	jie;fa duan;on 	1
+解决	jie;qe jue;un 	1
 接触	jie;ru chu;qe 	1
 接你	jie;ru ni;wq 	1
+介绍	jie;wj shao;xv 	1
+结合	jie;xf he;wg 	1
+经常	jing;x,xc chang;ip 	1
 就会	jiu;yi hui;wf 	1
 就是	jiu;yi shi;j,jg 	1
 句子	ju;qk zi;bb 	1
-看看	kan;rh kan;rh 	2
+拒绝	ju;ra jue;xq 	1
+看看	kan;rh kan;rh 	3
+克隆	ke;dq long;bt 	2
+可能	ke;sk neng;ce 	0
+可以	ke;sk yi;c,ny 	4
 吭哧	keng;ky chi;kf 	2
+空间	kong;pw jian;uj 	0
+快照	kuai;nn zhao;jv 	1
+扩展	kuo;ry zhan;na 	1
+拉取	la;ru qu;bc 	1
+来写	lai;go xie;pg 	1
 了吗	le;b,bn ma;kc 	0
+类似	lei;od si;wn 	1
+历史	li;dl shi;kq 	1
 里面	li;jf mian;dm 	1
+连着	lian;lp zhe;ud 	1
+两种	liang;gm zhong;tk 	1
 码表	ma;dc biao;ge 	1
 满意	man;ia yi;uj 	1
+慢慢	man;nj man;nj 	0
 毛病	mao;tf bing;ug 	1
-没有	mei;im you;e,de 	1
+没有	mei;im you;e,de 	3
 每个	mei;tx ge;wh 	1
+面条	mian;dm tiao;ts 	1
 面子	mian;dm zi;bb 	0
+明明	ming;je ming;je 	1
+明月	ming;je yue;ee 	1
+命令	ming;wg ling;wy 	1
+磨合	mo;ys he;wg 	0
+目前	mu;hh qian;ue 	1
 哪儿	na;kv er;qt 	0
+哪一	na;kv yi;g,gg 	0
 那儿	na;vf er;qt 	1
 那么	na;vf me;tc 	0
+那是	na;vf shi;j,jg 	1
 那些	na;vf xie;hx 	1
+那种	na;vf zhong;tk 	0
+男女	nan;ll nv;vv 	1
+你的	ni;wq de;r,rq 	2
 你俩	ni;wq lia;wg 	1
-你们	ni;wq men;wu 	2
+你们	ni;wq men;wu 	3
 你说	ni;wq shuo;yu 	1
 年后	nian;rh hou;rg 	1
 弄个	nong;ga ge;wh 	1
+女孩	nv;vv hai;by 	1
+啪啪	pa;kr pa;kr 	1
 泡成	pao;iq cheng;dn 	1
 拼音	pin;ru yin;uj 	3
 骑车	qi;cd che;lg 	1
+奇怪	qi;ds guai;nc 	0
 奇奇	qi;ds qi;ds 	1
 起来	qi;fh lai;go 	1
+嵌入	qian;ma ru;ty 	1
 前二	qian;ue er;fg 	1
+强制	qiang;xk zhi;rm 	1
+青年	qing;ge nian;rh 	1
+情况	qing;ng kuang;uk 	2
+去吧	qu;fc ba;kc 	1
+权重	quan;sc zhong;tg 	1
+确定	que;dq ding;pg 	0
 人气	ren;w,ww qi;rn 	1
+入口	ru;ty kou;kk 	1
 如果	ru;vk guo;js 	0
 嫂子	sao;vv zi;bb 	1
 啥事	sha;kw shi;gk 	0
+删库	shan;mm ku;yl 	1
+上去	shang;h,hh qu;fc 	1
+什么	shen;wf me;tc 	1
 十年	shi;fg nian;rh 	0
 是吧	shi;j,jg ba;kc 	0
-时候	shi;jf hou;wh 	2
+是吗	shi;j,jg ma;kc 	1
+时候	shi;jf hou;wh 	4
+时间	shi;jf jian;uj 	1
+适合	shi;td he;wg 	1
+使用	shi;wg yong;et 	4
+试试	shi;ya shi;ya 	1
 受罪	shou;ep zui;ld 	0
 收拾	shou;nh shi;rw 	0
+叔叔	shu;hi shu;hi 	1
 双拼	shuang;cc pin;ru 	2
 睡了	shui;ht le;b,bn 	1
 顺便	shun;kd bian;wg 	1
 说话	shuo;yu hua;yt 	0
+太长	tai;dy chang;ta 	1
+特定	te;tr ding;pg 	1
 提成	ti;rj cheng;dn 	0
+体积	ti;ws ji;tk 	1
 听见	ting;kr jian;mq 	1
+推送	tui;rw song;ud 	2
 万象	wan;dn xiang;qj 	2
+完全	wan;pf quan;wg 	1
+往后	wang;ty hou;rg 	0
 为了	wei;o,yl le;b,bn 	1
-我去	wo;q,tr qu;fc 	1
+问题	wen;uk ti;jg 	1
+我去	wo;q,tr qu;fc 	2
+我用	wo;q,tr yong;et 	1
 我又	wo;q,tr you;cc 	1
 无解	wu;fq jie;qe 	1
 五笔	wu;gg bi;tt 	3
 嘻嘻	xi;kf xi;kf 	1
 下班	xia;gh ban;gy 	1
 下雪	xia;gh xue;fv 	1
-现在	xian;gm zai;d,dh 	1
-小鹤	xiao;ih he;pw 	1
+现在	xian;gm zai;d,dh 	3
+相关	xiang;sh guan;ud 	0
+想用	xiang;sh yong;et 	1
+小鹤	xiao;ih he;pw 	3
+宵夜	xiao;pi ye;yw 	1
 心里	xin;ny li;jf 	0
+修改	xiu;wh gai;nt 	0
 休息	xiu;ws xi;th 	0
+需要	xu;fd yao;s,sv 	0
 选重	xuan;tf chong;tg 	1
 样子	yang;su zi;bb 	0
 要是	yao;s,sv shi;j,jg 	1
 也是	ye;bn shi;j,jg 	1
 也中	ye;bn zhong;k,kh 	1
 夜雨	ye;yw yu;fg 	1
+以后	yi;c,ny hou;rg 	1
 一笔	yi;g,gg bi;tt 	1
-一个	yi;g,gg ge;wh 	1
-一下	yi;g,gg xia;gh 	1
+一个	yi;g,gg ge;wh 	2
+一手	yi;g,gg shou;rt 	0
+一天	yi;g,gg tian;gd 	2
+一下	yi;g,gg xia;gh 	2
+一些	yi;g,gg xie;hx 	0
+一直	yi;g,gg zhi;fh 	1
+一组	yi;g,gg zu;xe 	1
+已经	yi;nn jing;x,xc 	1
+意思	yi;uj si;ln 	0
+因为	yin;ld wei;o,yl 	1
+印度	yin;qg du;ya 	1
+引用	yin;xh yong;et 	1
+应该	ying;yi gai;yy 	0
+用来	yong;et lai;go 	0
+有点	you;e,de dian;hk 	0
+语言	yu;yg yan;yy 	0
+运行	yun;fc xing;tf 	0
 早点	zao;jh dian;hk 	0
-这个	zhe;p,yp ge;wh 	1
+怎么	zen;th me;tc 	1
+章节	zhang;uj jie;ab 	1
+这个	zhe;p,yp ge;wh 	5
+这是	zhe;p,yp shi;j,jg 	1
+这样	zhe;p,yp yang;su 	1
+这种	zhe;p,yp zhong;tk 	1
+折腾	zhe;rr teng;eu 	1
+真的	zhen;fh de;r,rq 	2
 真正	zhen;fh zheng;gh 	1
+正则	zheng;gh ze;mj 	1
+直接	zhi;fh jie;ru 	0
 只打	zhi;kw da;rs 	0
-之后	zhi;pp hou;rg 	2
+只能	zhi;kw neng;ce 	1
+只要	zhi;kw yao;s,sv 	1
+只用	zhi;kw yong;et 	1
+之后	zhi;pp hou;rg 	4
+之类	zhi;pp lei;od 	0
+之前	zhi;pp qian;ue 	0
 指令	zhi;rx ling;wy 	0
+知道	zhi;td dao;ut 	0
 中间	zhong;k,kh jian;uj 	0
 转换	zhuan;lf huan;rq 	1
+准备	zhun;uw bei;tl 	0
+自己	zi;th ji;nn 	1
+自然	zi;th ran;qd 	0
+最新	zui;jb xin;us 	1
 作为	zuo;wt wei;o,yl 	1
+作用	zuo;wt yong;et 	1
 别回去	bie;kl hui;lk qu;fc 	1
+并没有	bing;ua mei;im you;e,de 	1
 不规范	bu;i,gi gui;fw fan;ai 	1
+不划算	bu;i,gi hua;aj suan;th 	1
+不相关	bu;i,gi xiang;sh guan;ud 	1
 长时间	chang;ta shi;jf jian;uj 	1
 吃饱了	chi;kt bao;qn le;b,bn 	0
-辅助码	fu;lg zhu;eg ma;dc 	2
+第三次	di;tx san;dg ci;uq 	1
+第一种	di;tx yi;g,gg zhong;tk 	1
+对对对	dui;cf dui;cf dui;cf 	1
+而不是	er;dm bu;i,gi shi;j,jg 	1
+辅助码	fu;lg zhu;eg ma;dc 	3
 高速上	gao;ym su;gk shang;h,hh 	1
+更新吗	geng;gj xin;us ma;kc 	1
+好几次	hao;vb ji;mt ci;uq 	1
+好奇怪	hao;vb qi;ds guai;nc 	1
 很舒服	hen;tv shu;wf fu;eb 	1
 回家来	hui;lk jia;pe lai;go 	1
 基本上	ji;ad ben;sg shang;h,hh 	1
 加起来	jia;lk qi;fh lai;go 	1
+教育好	jiao;ft yu;yc hao;vb 	1
 就够用	jiu;yi gou;qk yong;et 	1
 就会用	jiu;yi hui;wf yong;et 	1
+可行性	ke;sk xing;tf xing;nt 	1
+可以有	ke;sk yi;c,ny you;e,de 	1
+李彦宏	li;sb yan;ut hong;pd 	1
+慢慢地	man;nj man;nj de;f,fb 	1
 没啥事	mei;im sha;kw shi;gk 	1
+哪一站	na;kv yi;g,gg zhan;uh 	1
+那么多	na;vf me;tc duo;qq 	1
 那么早	na;vf me;tc zao;jh 	1
+能不能	neng;ce bu;i,gi neng;ce 	1
 你不是	ni;wq bu;i,gi shi;j,jg 	1
+你继续	ni;wq ji;xo xu;xf 	1
+你可能	ni;wq ke;sk neng;ce 	1
 你嫂子	ni;wq sao;vv zi;bb 	1
 你下班	ni;wq xia;gh ban;gy 	1
+你现在	ni;wq xian;gm zai;d,dh 	1
+其他人	qi;ad ta;wb ren;w,ww 	0
+起作用	qi;fh zuo;wt yong;et 	1
 身份证	shen;tm fen;ww zheng;yg 	1
 十年灯	shi;fg nian;rh deng;os 	2
 搜一下	sou;rv yi;g,gg xia;gh 	1
+玩意儿	wan;gf yi;uj er;qt 	0
+往后面	wang;ty hou;rg mian;dm 	1
+为什么	wei;o,yl shen;wf me;tc 	2
+我都是	wo;q,tr dou;ft shi;j,jg 	1
 我现在	wo;q,tr xian;gm zai;d,dh 	1
 下雪了	xia;gh xue;fv le;b,bn 	1
 小词库	xiao;ih ci;yn ku;yl 	2
@@ -245,36 +460,72 @@ use_preset_vocabulary: false
 心里慌	xin;ny li;jf huang;na 	1
 一会儿	yi;g,gg hui;wf er;qt 	0
 一说话	yi;g,gg shuo;yu hua;yt 	1
+一些库	yi;g,gg xie;hx ku;yl 	1
+意思是	yi;uj si;ln shi;j,jg 	1
+应该是	ying;yi gai;yy shi;j,jg 	1
+用不用	yong;et bu;i,gi yong;et 	1
+有点大	you;e,de dian;hk da;dd 	1
+有一手	you;e,de yi;g,gg shou;rt 	1
+运行时	yun;fc xing;tf shi;jf 	1
+这就是	zhe;p,yp jiu;yi shi;j,jg 	1
+只不过	zhi;kw bu;i,gi guo;fp 	1
 自定义	zi;th ding;pg yi;yq 	1
+自然码	zi;th ran;qd ma;dc 	1
+百度现在	bai;dj du;ya xian;gm zai;d,dh 	1
 单独出来	dan;uj du;qt chu;bm lai;go 	1
 到哪儿了	dao;gc na;kv er;qt le;b,bn 	1
+都是用来	dou;ft shi;j,jg yong;et lai;go 	1
 都是这样	dou;ft shi;j,jg zhe;p,yp yang;su 	0
 感觉还行	gan;dg jue;ip hai;gi xing;tf 	1
+跟我一个	gen;kh wo;q,tr yi;g,gg ge;wh 	1
+既然如此	ji;vc ran;qd ru;vk ci;hx 	1
 脚本指令	jiao;ef ben;sg zhi;rx ling;wy 	1
+就会产生	jiu;yi hui;wf chan;u,ut sheng;tg 	1
 就会出现	jiu;yi hui;wf chu;bm xian;gm 	0
 就是简单	jiu;yi shi;j,jg jian;tu dan;uj 	1
 就是一个	jiu;yi shi;j,jg yi;g,gg ge;wh 	1
 历史记录	li;dl shi;kq ji;yn lu;vi 	0
+慢慢磨合	man;nj man;nj mo;ys he;wg 	1
+没有必要	mei;im you;e,de bi;nt yao;s,sv 	1
 没有时间	mei;im you;e,de shi;jf jian;uj 	1
 没有休息	mei;im you;e,de xiu;ws xi;th 	1
 面子很顶	mian;dm zi;bb hen;tv ding;sd 	1
+那种情况	na;vf zhong;tk qing;ng kuang;uk 	1
 你多加个	ni;wq duo;qq jia;lk ge;wh 	1
 拼音词库	pin;ru yin;uj ci;yn ku;yl 	1
 如果只打	ru;vk guo;js zhi;kw da;rs 	1
+嫂子下班	sao;vv zi;bb xia;gh ban;gy 	1
+什么合适	shen;wf me;tc he;wg shi;td 	1
+什么语言	shen;wf me;tc yu;yg yan;yy 	1
+使用方法	shi;wg yong;et fang;yy fa;if 	1
+收拾好了	shou;nh shi;rw hao;vb le;b,bn 	1
 收拾一下	shou;nh shi;rw yi;g,gg xia;gh 	1
 我吃饱了	wo;q,tr chi;kt bao;qn le;b,bn 	1
+我去吃个	wo;q,tr qu;fc chi;kt ge;wh 	1
 下班了吗	xia;gh ban;gy le;b,bn ma;kc 	1
 也是不错	ye;bn shi;j,jg bu;i,gi cuo;qa 	1
 一段时间	yi;g,gg duan;wd shi;jf jian;uj 	1
+已经准备	yi;nn jing;x,xc zhun;uw bei;tl 	1
 有一会儿	you;e,de yi;g,gg hui;wf er;qt 	1
+原来如此	yuan;dr lai;go ru;vk ci;hx 	1
+早点休息	zao;jh dian;hk xiu;ws xi;th 	1
 这个样子	zhe;p,yp ge;wh yang;su zi;bb 	1
+之前几次	zhi;pp qian;ue ji;mt ci;uq 	1
 都是这样的	dou;ft shi;j,jg zhe;p,yp yang;su de;r,rq 	1
 过年提成高	guo;fp nian;rh ti;rj cheng;dn gao;ym 	1
+什么玩意儿	shen;wf me;tc wan;gf yi;uj er;qt 	1
 早点休息吧	zao;jh dian;hk xiu;ws xi;th ba;kc 	1
+这个可以有	zhe;p,yp ge;wh ke;sk yi;c,ny you;e,de 	1
+不知道其他人	bu;i,gi zhi;td dao;ut qi;ad ta;wb ren;w,ww 	1
 到家了吗你们	dao;gc jia;pe le;b,bn ma;kc ni;wq men;wu 	1
 就是历史记录	jiu;yi shi;j,jg li;dl shi;kq ji;yn lu;vi 	1
+空间比较独立	kong;pw jian;uj bi;xx jiao;lu du;qt li;uu 	1
 没有监控是吧	mei;im you;e,de jian;jt kong;rp shi;j,jg ba;kc 	1
 拼音的小词库	pin;ru yin;uj de;r,rq xiao;ih ci;yn ku;yl 	1
+什么方式推送	shen;wf me;tc fang;yy shi;aa tui;rw song;ud 	1
+为什么不直接	wei;o,yl shen;wf me;tc bu;i,gi zhi;fh jie;ru 	1
+修改词库之类	xiu;wh gai;nt ci;yn ku;yl zhi;pp lei;od 	1
+需要确定一下	xu;fd yao;s,sv que;dq ding;pg yi;g,gg xia;gh 	1
 江湖夜雨十年灯	jiang;ia hu;id ye;yw yu;fg shi;fg nian;rh deng;os 	1
 死要面子活受罪	si;gq yao;s,sv mian;dm zi;bb huo;it shou;ep zui;ld 	1
 否则中间就会出现	fou;gi ze;mj zhong;k,kh jian;uj jiu;yi hui;wf chu;bm xian;gm 	1

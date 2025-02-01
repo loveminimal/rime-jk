@@ -1,0 +1,327 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jk_bingji
+  name: 并击·知心
+  author:
+    - by Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心并击，并击·小鹤+五笔前二辅助码，小啊小并击
+    - 基于袖珍简化字拼音及自制通规8105单字表
+    - 支持全拼
+    - 小鹤双拼+五笔前二增强版「 默认 」
+  dependencies:
+    - jk_ascii
+  icon: 'assets/fly_m.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk.yaml:/switches
+
+engine:
+  processors:
+    - ascii_composer
+    - chord_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@custom_phrase
+    - script_translator
+    - reverse_lookup_translator
+    - lua_translator@*date_translator
+    - lua_translator@*force_gc
+  filters:
+    - lua_filter@*pro_comment_format
+    - lua_filter@*prettify_comment
+    - simplifier
+    - simplifier@emoji
+    - simplifier@zh2en
+    - uniquifier
+    - simplifier@chaifen
+
+pro_comment_format:
+  fuzhu_code: true
+  candidate_length: 1
+  fuzhu_type: flypy
+
+speller:
+  max_code_length: 5
+  auto_select: false
+  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
+  # [ ✗上屏 ]
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
+  # [ ✓上屏 ]
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  delimiter: " '"
+  # 支持：
+  # ① 全拼          algebra_pinyin 
+  # ② 小鹤/五笔前二 algebra_flypy
+  algebra:
+    __include: algebra_flypy
+
+algebra_pinyin: 
+  # - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+  #- erase/^xx;.*$/
+  - derive/(;.*)$//
+  - derive/;//
+  - abbrev/^([a-z]).+$/$1/
+
+algebra_flypy:
+  # - erase/^xx$/
+  # - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+  - derive/^([jqxy])u(;.*)$/$1v$2/
+  - derive/^([aoe])([ioun])(;.*)$/$1$1$2$3/
+  - xform/^([aoe])(ng)?(;.*)$/$1$1$2$3/
+  - xform/^(\w+?)iu(;.*)/$1Ⓠ$2/
+  - xform/^(\w+?)ei(;.*)/$1Ⓦ$2/
+  - xform/^(\w+?)uan(;.*)/$1Ⓡ$2/
+  - xform/^(\w+?)[uv]e(;.*)/$1Ⓣ$2/
+  - xform/^(\w+?)un(;.*)/$1Ⓨ$2/
+  - xform/^(\w+?)uo(;.*)/$1Ⓞ$2/
+  - xform/^(\w+?)ie(;.*)/$1Ⓟ$2/
+  - xform/^(\w+?)i?ong(;.*)/$1Ⓢ$2/
+  - xform/^(\w+?)ing(;.*)/$1Ⓚ$2/
+  - xform/^(\w+?)uai(;.*)/$1Ⓚ$2/
+  - xform/^(\w+?)ai(;.*)/$1Ⓓ$2/
+  - xform/^(\w+?)eng(;.*)/$1Ⓖ$2/
+  - xform/^(\w+?)en(;.*)/$1Ⓕ$2/
+  - xform/^(\w+?)[iu]ang(;.*)/$1Ⓛ$2/
+  - xform/^(\w+?)ang(;.*)/$1Ⓗ$2/
+  - xform/^(\w+?)ian(;.*)/$1Ⓜ$2/
+  - xform/^(\w+?)an(;.*)/$1Ⓙ$2/
+  - xform/^(\w+?)ou(;.*)/$1Ⓩ$2/
+  - xform/^(\w+?)iao(;.*)/$1Ⓝ$2/
+  - xform/^(\w+?)[iu]a(;.*)/$1Ⓧ$2/
+  - xform/^(\w+?)ao(;.*)/$1Ⓒ$2/
+  - xform/^(\w+?)ui(;.*)/$1Ⓥ$2/
+  - xform/^(\w+?)in(;.*)/$1Ⓑ$2/
+  - xform/^sh/Ⓤ/
+  - xform/^ch/Ⓘ/
+  - xform/^zh/Ⓥ/
+  - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
+  - abbrev/^([a-z]).+$/$1/
+  # --- 辅助码 ---
+  - derive|^(.+);.*$|$1|                                          # 纯双拼的情况
+  - derive|^(.+);(\w)(\w).*$|$1$2|                                # 双拼+一位辅助码的情况
+  - abbrev|^(.+);(\w)(\w).*$|$1$2$3|                              # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
+  - derive|^(.+);(\w)(\w).*$|$1$2$3o|                             # 整句模式下，输入syffo 出单字 增强单字性能
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2|                            # 双拼+一位辅助码的情况
+  - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3|                          # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|                         # 整句模式下，输入syffo 出单字 增强单字性能
+
+
+# chord_composer:
+#   __include: jk.yaml:/chord_composer
+chord_composer:
+  # 字母表，包含用并击按键
+  # 击键一律以字母表顺序排列
+  # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p',./"
+  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
+  algebra:
+    # --- 修改为JK键位 ---
+    # - "xform/^,$/,/"
+    # - "xform/^\.$/./"
+    # 定义左手11键       
+    - xform/^ef(?![左右])/y左/
+    - xform/^wf(?![左右])/u左/
+    - xform/^wef(?![左右])/i左/
+    - xform/^we(?![左右])/o左/
+    - xform/^wr(?![左右])/p左/
+
+    - xform/^df(?![左右])/h左/
+    - xform/^sf(?![左右])/j左/
+    - xform/^sdf(?![左右])/k左/
+    # - xform/^sd(?![左右])/l左/
+    - xform/^af(?![左右])/;左/
+
+    - xform/^dv(?![左右])/n左/
+    - xform/^sv(?![左右])/m左/ 
+    - xform/^sdv(?![左右])/,左/ 
+    - xform/^dc(?![左右])/.左/ 
+    - xform/^sc(?![左右])/?左/ 
+
+
+    - xform/^sd(?![左右])/l左/ # 原 150
+
+    # 定义右手15键
+    - xform/ji(?![左右])$/q右/
+    - xform/jo(?![左右])$/w右/
+    - xform/jio(?![左右])$/e右/
+    - xform/io(?![左右])$/r右/
+    - xform/uo(?![左右])$/t右/
+
+    - xform/jk(?![左右])$/a右/
+    - xform/jl(?![左右])$/s右/
+    - xform/jkl(?![左右])$/d右/
+    # - xform/kl(?![左右])$/f右/
+    - xform/j;(?![左右])$/g右/    
+
+    - xform/nk(?![左右])$/z右/
+    - xform/nl(?![左右])$/x右/
+    - xform/nkl(?![左右])$/c右/
+    - xform/mk(?![左右])$/v右/
+    - xform/ml(?![左右])$/b右/
+
+    - xform/kl(?![左右])$/f右/ # 173
+
+    - xform/,.(?![左右])$/Z右/
+    - xform/;'(?![左右])$/%右/
+    # --- 原运算规则 ---
+    # # - "xform/^,$/,/"
+    # # - "xform/^\.$/./"
+    # # 定义左手11键       
+    # - xform/^at(?![左右])/y左/
+    # - xform/^ar(?![左右])/u左/
+    # - xform/^ae(?![左右])/i左/
+    # - xform/^aw(?![左右])/o左/
+    # - xform/^qf(?![左右])/p左/
+    # - xform/^as(?![左右])/l左/
+    # - xform/^ad(?![左右])/k左/
+    # - xform/^af(?![左右])/j左/
+    # - xform/^ag(?![左右])/h左/
+    # - xform/^ac(?![左右])/m左/
+    # - xform/^av(?![左右])/n左/
+
+    # # 定义右手15键
+    # - xform/jp(?![左右])$/q右/
+    # - xform/jo(?![左右])$/w右/
+    # - xform/ji(?![左右])$/e右/
+    # - xform/ul(?![左右])$/r右/
+    # - xform/yl(?![左右])$/t右/
+    # - xform/l;(?![左右])$/s右/
+    # - xform/kl(?![左右])$/d右/
+    # - xform/jk(?![左右])$/f右/
+    # - xform/hl(?![左右])$/g右/    
+    # - xform/mk(?![左右])$/z右/
+    # - xform/nk(?![左右])$/x右/
+    # - xform/ml(?![左右])$/c右/
+    # - xform/nl(?![左右])$/v右/
+    # - xform/ni(?![左右])$/b右/
+    # - xform/;(?![左右])$/a右/
+ # 并击过程中套用式样  
+  prompt_format:
+    # 加方括号
+    - "xform/^(.*)$/[$1]/" 
+  # 并击完成后套用式样
+  output_format:
+    - "xform/^(.*)左/$1/"
+    - "xform/^(.*)右$/$1/"
+    - "xform/^(.*)左(.*)右$/$1$2/"
+
+
+translator:
+  dictionary: jk_pinyin
+  prism: jk_pinyin
+  enable_charset_filter: true
+  enable_sentence: false
+  enable_encoder: true
+  encode_commit_history: true
+  max_phrase_length: 4
+  enable_completion: true
+  enable_user_dict: true
+  spelling_hints: 1
+  # preedit_format:
+  #   - xform/([nl])v/$1ü/
+  #   - xform/([nl])ue/$1üe/
+  #   - xform/([jqxy])v/$1u/
+  comment_format: {comment}
+  # preedit_format 影响到输入框的显示和“ Shift+⏎” 上屏的字符
+  # preedit_format:                        
+  #   - xform/([bpmfdtnljqx])n/$1iao/
+  #   - xform/(\w)g/$1eng/
+  #   - xform/(\w)q/$1iu/
+  #   - xform/(\w)w/$1ei/
+  #   - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
+  #   - xform/(\w)t/$1ve/
+  #   - xform/(\w)y/$1un/
+  #   - xform/([dtnlgkhvuirzcs])o/$1uo/
+  #   - xform/(\w)p/$1ie/
+  #   - xform/([jqx])s/$1iong/
+  #   - xform/(\w)s/$1ong/
+  #   - xform/(\w)d/$1ai/
+  #   - xform/(\w)f/$1en/
+  #   - xform/(\w)h/$1ang/
+  #   - xform/(\w)j/$1an/
+  #   - xform/([gkhvuirzcs])k/$1uai/
+  #   - xform/(\w)k/$1ing/
+  #   - xform/([jqxnlb])l/$1iang/
+  #   - xform/(\w)l/$1uang/
+  #   - xform/(\w)z/$1ou/
+  #   - xform/([gkhvuirzcs])x/$1ua/
+  #   - xform/(\w)x/$1ia/
+  #   - xform/(\w)c/$1ao/
+  #   - xform/([dtgkhvuirzcs])v/$1ui/
+  #   - xform/(\w)b/$1in/
+  #   - xform/(\w)m/$1ian/
+  #   - xform/([aoe])\1(\w)/$1$2/
+  #   - "xform/(^|[ '])v/$1zh/"
+  #   - "xform/(^|[ '])i/$1ch/"
+  #   - "xform/(^|[ '])u/$1sh/"
+  #   - xform/([jqxy])v/$1u/
+  #   - xform/([nl])v/$1ü/
+  #   - xform/ü/v/
+
+date_translator:
+  jk_datetime: iii
+
+reverse_lookup:
+  __include: jk.yaml:/reverse_lookup
+
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 99
+
+emoji:
+  option_name: emoji
+  opencc_config: emoji.json
+  inherit_comment: false
+
+zh2en:
+  option_name: zh2en
+  opencc_config: zh2en.json
+  inherit_comment: false
+
+chaifen:
+  opencc_config: wb_cf.json
+  option_name: chaifen
+  show_in_comment: true 
+  comment_format:     
+    - "xform/-/ /"
+  tags:     
+    - abc
+  tips: all
+
+
+punctuator:
+  import_preset: default
+  symbols:
+    __include: symbols_z:/symbols
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    # hack: to enable "/fh" style symbols, '/' must be mapped to a [list].
+    # so those who have customized '/' for direct commit won't be affected by
+    # this change.
+    reverse_lookup: "^~[a-z]*:?$"
+    punct: "^~~([0-9]|10|[A-Za-z]+)$"

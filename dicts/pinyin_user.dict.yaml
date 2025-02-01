@@ -20,7 +20,7 @@ version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-啊	a;kb 	1
+啊	a;kb 	2
 哎	ai;ka 	1
 吧	ba;kc 	4
 把	ba;rc 	2
@@ -78,7 +78,7 @@ use_preset_vocabulary: false
 了	le;b,bn 	16
 嘞	lei;ka 	2
 两	liang;gm 	2
-码	ma;dc 	0
+码	ma;dc 	1
 吗	ma;kc 	3
 没	mei;im 	1
 面	mian;dm 	1
@@ -102,13 +102,13 @@ use_preset_vocabulary: false
 他	ta;wb 	1
 添	tian;ig 	1
 万	wan;dn 	2
-我	wo;q,tr 	6
+我	wo;q,tr 	7
 乌	wu;qn 	1
 下	xia;gh 	2
 咸	xian;dg 	1
 先	xian;tf 	1
 想	xiang;sh 	1
-小	xiao;ih 	1
+小	xiao;ih 	3
 些	xie;hx 	1
 新	xin;us 	1
 形	xing;ga 	1
@@ -187,7 +187,7 @@ use_preset_vocabulary: false
 方法	fang;yy fa;if 	2
 方式	fang;yy shi;aa 	0
 否则	fou;gi ze;mj 	0
-辅助	fu;lg zhu;eg 	0
+辅助	fu;lg zhu;eg 	1
 改完	gai;nt wan;pf 	1
 感觉	gan;dg jue;ip 	0
 刚才	gang;mq cai;ft 	1
@@ -288,18 +288,19 @@ use_preset_vocabulary: false
 女孩	nv;vv hai;by 	1
 啪啪	pa;kr pa;kr 	1
 泡成	pao;iq cheng;dn 	1
-拼音	pin;ru yin;uj 	3
+拼音	pin;ru yin;uj 	5
 骑车	qi;cd che;lg 	1
 奇怪	qi;ds guai;nc 	0
 奇奇	qi;ds qi;ds 	1
 起来	qi;fh lai;go 	1
 嵌入	qian;ma ru;ty 	1
-前二	qian;ue er;fg 	1
+前二	qian;ue er;fg 	2
 强制	qiang;xk zhi;rm 	1
 青年	qing;ge nian;rh 	1
 情况	qing;ng kuang;uk 	2
 去吧	qu;fc ba;kc 	1
 权重	quan;sc zhong;tg 	1
+全拼	quan;wg pin;ru 	1
 确定	que;dq ding;pg 	0
 人气	ren;w,ww qi;rn 	1
 入口	ru;ty kou;kk 	1
@@ -339,14 +340,14 @@ use_preset_vocabulary: false
 我用	wo;q,tr yong;et 	1
 我又	wo;q,tr you;cc 	1
 无解	wu;fq jie;qe 	1
-五笔	wu;gg bi;tt 	3
+五笔	wu;gg bi;tt 	4
 嘻嘻	xi;kf xi;kf 	1
 下班	xia;gh ban;gy 	1
 下雪	xia;gh xue;fv 	1
 现在	xian;gm zai;d,dh 	3
 相关	xiang;sh guan;ud 	0
 想用	xiang;sh yong;et 	1
-小鹤	xiao;ih he;pw 	3
+小鹤	xiao;ih he;pw 	4
 宵夜	xiao;pi ye;yw 	1
 心里	xin;ny li;jf 	0
 修改	xiu;wh gai;nt 	0
@@ -398,6 +399,7 @@ use_preset_vocabulary: false
 之前	zhi;pp qian;ue 	0
 指令	zhi;rx ling;wy 	0
 知道	zhi;td dao;ut 	0
+知心	zhi;td xin;ny 	1
 中间	zhong;k,kh jian;uj 	0
 转换	zhuan;lf huan;rq 	1
 准备	zhun;uw bei;tl 	0
@@ -472,6 +474,7 @@ use_preset_vocabulary: false
 自定义	zi;th ding;pg yi;yq 	1
 自然码	zi;th ran;qd ma;dc 	1
 百度现在	bai;dj du;ya xian;gm zai;d,dh 	1
+大开眼界	da;dd kai;ga yan;hv jie;lw 	1
 单独出来	dan;uj du;qt chu;bm lai;go 	1
 到哪儿了	dao;gc na;kv er;qt le;b,bn 	1
 都是用来	dou;ft shi;j,jg yong;et lai;go 	1

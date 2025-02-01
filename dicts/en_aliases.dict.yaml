@@ -14,7 +14,7 @@
 #
 ---
 name: en_aliases
-version: '2025.01'
+version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -26,6 +26,9 @@ ls -a	la	0
 rm -rf	rr	0
 vim	vv	0
 vim ~/.vim/vimrc	vvc	0
+nvim	nv	0
+nvim ~/AppData/Local/nvim/init.lua	nvi	0
+cd ~/AppData/Local/nvim	cdn	0
 
 vim ~/.bash_aliases	va	0
 source ~/.bash_aliases	sa	0

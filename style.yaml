@@ -132,6 +132,42 @@ prjk:
     prevpage_color: 0x0a58caDD                  # 上一页
     nextpage_color: 0x0a58ca99                  # 下一页
 
+# --- TeaInk 茶墨 ---
+tkjk:
+  preset_color_schemes/tkjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／LT淡JK"                        # 方案设置中显示的配色名称
+    author: Jack Liu                            # 配色作者名称
+    color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
+    # ---〔背景设置〕---
+    border_color: 0xe8f3f5                      # 边框
+    back_color: 0xe8f3f5                        # 背景
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x1150af                        # 文字
+    hilited_text_color: 0xFFFFFF                # 编码
+    hilited_back_color: 0x1150af99              # 背景
+
+    label_color: 0x1150af99                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xFFFFFF      # 文字
+    hilited_candidate_back_color: 0x1150afCC    # 背景
+
+    # hilited_mark_color: 0xBF616A              # 标签前的标记
+    hilited_label_color: 0xCCCCCC               # 标签
+    hilited_comment_text_color: 0xCCCCCC        # 注释
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x1150af              # 文字
+    comment_text_color: 0x1150af99              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
+    prevpage_color: 0x1150afDD                  # 上一页
+    nextpage_color: 0x1150af99                  # 下一页
+
 # --- Aqua 碧水〔改〕---
 aqjk:
   preset_color_schemes/aqjk:                    # 在 `style/color_schema` 指定的配色方案值

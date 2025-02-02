@@ -40,7 +40,7 @@ local function filter(input)
         -- 排除包含路径字符或命令符号的字符串 - 全部放候选
         -- 此类字符基本源自 en_aliases 的命令别名
         -- 如 cd ~/AppData/Roaming/Rime && source scripts/update-cn_dicts_wx.sh
-        if string.find(cand_text, "^[%a%d%&%-%_%~%/%.%s%:%=%*]+$") then
+        if string.find(cand_text, "^[%a%d%&%-%_%~%/%.%s%:%=%*\"%'%|]+$") then
             -- cand:get_genuine().comment = ''
             yield(cand)
             goto continue

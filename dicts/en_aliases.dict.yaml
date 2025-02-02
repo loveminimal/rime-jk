@@ -32,9 +32,10 @@ cd ~/AppData/Local/nvim	cdn	0
 cd ~/AppData/Local	cdl	0
 
 vim ~/.bash_aliases	va	0
+nvim ~/.bash_aliases	nva	0
 source ~/.bash_aliases	sa	0
 
-cp ~/.bash_aliases ~/.shell/ && source ~/.bash_aliases && cd ~/.shell	cphs	0
+cp ~/.bash_aliases ~/.shell/ && source ~/.bash_aliases && cd ~/.shell && git add . && git commit -m 'feat: some updates' && git push	cphs	0
 cp ~/.shell/.bash_aliases ~/ && source ~/.bash_aliases	cpsh	0
 
 sudo apt-get install	sai	0
@@ -112,7 +113,6 @@ cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py && py scripts/syn
 cd ~/AppData/Roaming/Rime && py scripts/sync_en_aliases_dict.py	uea	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && scp -r public/* aituyaa.com:/home/jack/blog/ && rm -rf public	sscp	0
-
 
 hugo server -Dw	hs	0
 hugo server -Dw -p 1314	hso	0

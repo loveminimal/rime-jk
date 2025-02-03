@@ -74,7 +74,7 @@ use_preset_vocabulary: false
 帮	dt 	1
 春	dw 	1
 太	dy 	7
-有	e 	29
+有	e 	30
 月	eee 	1
 豹	eeqy 	1
 貉	eetk 	1
@@ -252,6 +252,7 @@ use_preset_vocabulary: false
 快	nnw 	2
 屎	noi 	1
 发	ntc 	1
+性	ntg 	1
 属	ntk 	1
 改	nty 	2
 买	nudu 	2
@@ -286,14 +287,14 @@ use_preset_vocabulary: false
 馌	qnfl 	1
 饱	qnqn 	1
 饭	qnr 	2
-多	qq 	4
+多	qq 	5
 儿	qt 	16
 猗	qtdk 	1
 狮	qtjh 	1
 狗	qtq 	1
 键	qvfp 	1
 留	qyvl 	1
-的	r 	119
+的	r 	120
 找	ra 	1
 抠	raq 	1
 把	rcn 	5
@@ -438,7 +439,7 @@ use_preset_vocabulary: false
 缵	xtfm 	1
 给	xwg 	12
 给	xwgk 	1
-比	xx 	1
+比	xx 	2
 试	yaa 	3
 郭	ybb 	1
 充	yc 	1
@@ -495,7 +496,8 @@ use_preset_vocabulary: false
 阶级	bwxe 	1
 矛盾	cbrf 	1
 预约	cbxq 	1
-双拼	ccru 	5
+双拼	ccru 	6
+通用	ceet 	1
 通天	cegd 	1
 通吃	cekt 	1
 能力	celt 	1
@@ -583,7 +585,7 @@ use_preset_vocabulary: false
 形式	gaaa 	1
 开幕	gaaj 	1
 武功	gaal 	1
-形码	gadc 	1
+形码	gadc 	2
 开源	gaid 	1
 开始	gavc 	2
 开设	gaym 	1
@@ -613,7 +615,7 @@ use_preset_vocabulary: false
 一晃	ggji 	1
 一味	ggkf 	1
 一生	ggtg 	3
-五笔	ggtt 	9
+五笔	ggtt 	11
 一首	ggut 	1
 一个	ggwh 	1
 一份	ggww 	2
@@ -628,10 +630,12 @@ use_preset_vocabulary: false
 不过	gifp 	2
 不下	gigh 	1
 不是	gijg 	2
+还是	gijg 	1
 不加	gilk 	2
 不想	gish 	1
 不要	gisv 	2
 还要	gisv 	1
+不差	giud 	1
 不冷	giuw 	1
 不分	giwv 	1
 不信	giwy 	1
@@ -644,7 +648,7 @@ use_preset_vocabulary: false
 再来	gmgo 	1
 刺猬	gmqt 	1
 来自	goth 	1
-来说	goyu 	1
+来说	goyu 	2
 熬过	gqfp 	1
 列表	gqge 	1
 肯定	hepg 	3
@@ -691,6 +695,7 @@ use_preset_vocabulary: false
 注意	iyuj 	2
 最初	jbpu 	1
 最新	jbus 	1
+最好	jbvb 	1
 最终	jbxt 	2
 紧凑	jcud 	1
 明确	jedq 	1
@@ -728,7 +733,7 @@ use_preset_vocabulary: false
 哪儿	kvqt 	3
 哪个	kvwh 	2
 唯一	kwgg 	1
-哈哈	kwkw 	8
+哈哈	kwkw 	9
 哈欠	kwqw 	1
 只要	kwsv 	1
 因为	ldyl 	3
@@ -931,7 +936,7 @@ use_preset_vocabulary: false
 问题	ukjg 	2
 部署	uklf 	1
 总之	ukpp 	1
-总体	ukws 	1
+总体	ukws 	2
 普通	uoce 	1
 普及	uoey 	1
 将来	uqgo 	1
@@ -955,7 +960,7 @@ use_preset_vocabulary: false
 那是	vfjg 	1
 那儿	vfqt 	1
 那样	vfsu 	1
-那么	vftc 	1
+那么	vftc 	2
 那种	vftk 	1
 如下	vkgh 	1
 如果	vkjs 	1
@@ -1068,7 +1073,7 @@ use_preset_vocabulary: false
 沃尔玛	iqgc 	1
 小狼毫	iqyp 	1
 冒失鬼	jrrq 	1
-辅助码	ledc 	1
+辅助码	ledc 	2
 逻辑学	llip 	1
 输入法	ltif 	4
 典中典	mkma 	3

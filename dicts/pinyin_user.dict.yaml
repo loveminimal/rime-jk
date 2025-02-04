@@ -226,6 +226,7 @@ use_preset_vocabulary: false
 形	xing;ga 	1
 性	xing;nt 	0
 醒	xing;sg 	1
+选	xuan;tf 	0
 学	xue;ip 	1
 演	yan;ip 	1
 样	yang;su 	1
@@ -684,6 +685,7 @@ use_preset_vocabulary: false
 确定	que;dq ding;pg 	0
 确实	que;dq shi;pu 	3
 人家	ren;w,ww jia;pe 	0
+人民	ren;w,ww min;n,na 	0
 人呢	ren;w,ww ne;kn 	0
 人气	ren;w,ww qi;rn 	1
 认识	ren;yw shi;yk 	0
@@ -971,6 +973,7 @@ use_preset_vocabulary: false
 知心	zhi;td xin;ny 	1
 纸面	zhi;xq mian;dm 	1
 中的	zhong;k,kh de;r,rq 	1
+中华	zhong;k,kh hua;wx 	0
 中间	zhong;k,kh jian;uj 	0
 重点	zhong;tg dian;hk 	1
 终端	zhong;xt duan;um 	3
@@ -1060,6 +1063,7 @@ use_preset_vocabulary: false
 高速上	gao;ym su;gk shang;h,hh 	1
 更新吗	geng;gj xin;us ma;kc 	1
 工具链	gong;a,aa ju;hw lian;ql 	1
+共和国	gong;aw he;t,tk guo;l,lg 	0
 光标的	guang;iq biao;sf de;r,rq 	1
 广东佬	guang;yy dong;ai lao;wf 	1
 还不错	hai;gi bu;i,gi cuo;qa 	2
@@ -1296,6 +1300,7 @@ use_preset_vocabulary: false
 你是不是	ni;wq shi;j,jg bu;i,gi shi;j,jg 	1
 庞然大物	pang;yd ran;qd da;dd wu;tr 	1
 拼音词库	pin;ru yin;uj ci;yn ku;yl 	1
+奇奇怪怪	qi;ds qi;ds guai;nc guai;nc 	1
 情况的吗	qing;ng kuang;uk de;r,rq ma;kc 	1
 全军覆没	quan;wg jun;pl fu;st mo;im 	1
 让词库包	rang;yh ci;yn ku;yl bao;qn 	1
@@ -1319,7 +1324,7 @@ use_preset_vocabulary: false
 铜皮铁骨	tong;qm pi;hc tie;qr gu;me 	1
 突破限制	tu;pw po;dh xian;bv zhi;rm 	1
 推荐一些	tui;rw jian;ad yi;g,gg xie;hx 	1
-吞噬星空	tun;gd shi;kt xing;jt kong;pw 	10000
+吞噬星空	tun;gd shi;kt xing;jt kong;pw 	1
 问题日志	wen;uk ti;jg ri;jj zhi;fn 	1
 我吃饱了	wo;q,tr chi;kt bao;qn le;b,bn 	1
 我们需要	wo;q,tr men;wu xu;fd yao;s,sv 	1
@@ -1407,7 +1412,9 @@ use_preset_vocabulary: false
 江湖夜雨十年灯	jiang;ia hu;id ye;yw yu;fg shi;fg nian;rh deng;os 	1
 死要面子活受罪	si;gq yao;s,sv mian;dm zi;bb huo;it shou;ep zui;ld 	1
 有多少专业人士	you;e,de duo;qq shao;it zhuan;fn ye;og ren;w,ww shi;fg 	1
+中华人民共和国	zhong;k,kh hua;wx ren;w,ww min;n,na gong;aw he;t,tk guo;l,lg 	1
 不过也是没有办法	bu;i,gi guo;fp ye;bn shi;j,jg mei;im you;e,de ban;lw fa;if 	1
+不然还是选不出来	bu;i,gi ran;qd hai;gi shi;j,jg xuan;tf bu;i,gi chu;bm lai;go 	1
 大家都是一样的人	da;dd jia;pe dou;ft shi;j,jg yi;g,gg yang;su de;r,rq ren;w,ww 	1
 否则中间就会出现	fou;gi ze;mj zhong;k,kh jian;uj jiu;yi hui;wf chu;bm xian;gm 	1
 开源的多数是为了	kai;ga yuan;id de;r,rq duo;qq shu;ov shi;j,jg wei;o,yl le;b,bn 	1

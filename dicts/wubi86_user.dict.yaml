@@ -1,0 +1,26 @@
+# Rime dictionary - wubi86_user.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于官方自动同步的用户词典合并排序生成
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+# 运行脚本：
+# - --- 五笔 ---
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
+# - py scripts/sync_wubi_user_dict.py
+# - --- 拼音 ---
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_pinyin_user_dict.py
+# - py scripts/sync_pinyin_user_dict.py
+# 
+---
+name: wubi86_user
+version: '2025.02'
+sort: by_weight
+use_preset_vocabulary: false
+...
+星	jtg 	1
+空	pw 	1
+吞噬	gdkt 	1
+吞噬星空	gkjp 	1

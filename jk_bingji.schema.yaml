@@ -125,6 +125,7 @@ algebra_flypy:
 
 # chord_composer:
 #   __include: jk.yaml:/chord_composer
+# https://github.com/gaboolic/rime-shuangpin-fuzhuma
 chord_composer:
   # 字母表，包含用并击按键
   # 击键一律以字母表顺序排列

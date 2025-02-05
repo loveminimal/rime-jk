@@ -256,7 +256,7 @@ algebra_zhixin:
 
 translator:
   dictionary: jk_pinyin
-  prism: jk_pinyin
+  prism: jk_bingji
   enable_charset_filter: true
   enable_sentence: false
   enable_encoder: true

@@ -66,7 +66,7 @@ engine:
                                          # ... 需要一个词库「 dictionary 」，在 translator 配置中指定
     - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
     - script_translator@pinyin
-    - completion_translator              # 自动补全，在 translator 配置中指定 enable_completion: true 激活
+    # - completion_translator            # ❓自动补全，在 translator 配置中指定 enable_completion: true 激活
     - reverse_lookup_translator          # 反查翻译器，用另一种编码方案查码
     - lua_translator@*date_translator    # 时间、日期、星期
     - lua_translator@*force_gc           # 暴力 GC 降低内存

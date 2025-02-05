@@ -132,6 +132,114 @@ prjk:
     prevpage_color: 0x0a58caDD                  # 上一页
     nextpage_color: 0x0a58ca99                  # 下一页
 
+# --- Emerald 翠绿 ---
+emjk:
+  preset_color_schemes/emjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／EM翠JK"                        # 方案设置中显示的配色名称
+    author: Jack Liu                            # 配色作者名称
+    color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
+    # ---〔背景设置〕---
+    border_color: 0xD0ECE7                      # 边框
+    back_color: 0xD0ECE7                        # 背景
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x0B5345                        # 文字
+    hilited_text_color: 0xFFFFFF                # 编码
+    hilited_back_color: 0x0B534599              # 背景
+
+    label_color: 0x0B534599                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xFFFFFF      # 文字
+    hilited_candidate_back_color: 0x0B5345CC    # 背景
+
+    # hilited_mark_color: 0xBF616A              # 标签前的标记
+    hilited_label_color: 0xCCCCCC               # 标签
+    hilited_comment_text_color: 0xCCCCCC        # 注释
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x0B5345              # 文字
+    comment_text_color: 0x0B534599              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
+    prevpage_color: 0x0B5345DD                  # 上一页
+    nextpage_color: 0x0B534599                  # 下一页
+
+# --- Orange 暖橙 ---
+orjk:
+  preset_color_schemes/orjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／OR橙JK"                        # 方案设置中显示的配色名称
+    author: Jack Liu                            # 配色作者名称
+    color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
+    # ---〔背景设置〕---
+    border_color: 0xFFF8F3                      # 边框
+    back_color: 0xFFF8F3                        # 背景
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x666361                        # 文字
+    hilited_text_color: 0xFFFFFF                # 编码
+    hilited_back_color: 0x66636199              # 背景
+
+    label_color: 0x66636199                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xFFFFFF      # 文字
+    hilited_candidate_back_color: 0x666361CC    # 背景
+
+    # hilited_mark_color: 0xBF616A              # 标签前的标记
+    hilited_label_color: 0xCCCCCC               # 标签
+    hilited_comment_text_color: 0xCCCCCC        # 注释
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x666361              # 文字
+    comment_text_color: 0x66636199              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
+    prevpage_color: 0x666361DD                  # 上一页
+    nextpage_color: 0x66636199                  # 下一页
+
+# --- Slate 岩灰 ---
+sljk:
+  preset_color_schemes/sljk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／SL岩JK"                        # 方案设置中显示的配色名称
+    author: Jack Liu                            # 配色作者名称
+    color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
+    # ---〔背景设置〕---
+    border_color: 0xe2e8f0                      # 边框
+    back_color: 0xe2e8f0                        # 背景
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0x334155                        # 文字
+    hilited_text_color: 0xFFFFFF                # 编码
+    hilited_back_color: 0x33415599              # 背景
+
+    label_color: 0x33415599                     # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xFFFFFF      # 文字
+    hilited_candidate_back_color: 0x334155CC    # 背景
+
+    # hilited_mark_color: 0xBF616A              # 标签前的标记
+    hilited_label_color: 0xCCCCCC               # 标签
+    hilited_comment_text_color: 0xCCCCCC        # 注释
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0x334155              # 文字
+    comment_text_color: 0x33415599              # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
+    prevpage_color: 0x334155DD                  # 上一页
+    nextpage_color: 0x33415599                  # 下一页
+
 # --- TeaInk 茶墨 ---
 tkjk:
   preset_color_schemes/tkjk:                    # 在 `style/color_schema` 指定的配色方案值

@@ -18,6 +18,7 @@ patch:
     - {schema: jk_ascii}
     - {schema: jk_wubi}
     - {schema: jk_pinyin}
+    - {schema: jk_flypy}
     - {schema: jk_bingji}
 
 

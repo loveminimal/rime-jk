@@ -2,16 +2,16 @@
 # encoding: utf-8
 
 schema:
-  schema_id: jk_pinyin
-  name: 拼音·知心
+  schema_id: jk_flypy
+  name: 小鹤·知心
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |
-    - 知心拼音，全拼+五笔前二辅助码，小啊小拼音
+    - 知心小鹤，小鹤+五笔前二辅助码，小啊小小鹤
     - 基于袖珍简化字拼音及自制通规8105单字表
   dependencies:
     - jk_ascii
-  icon: 'assets/fly_m.ico'
+  icon: 'assets/fly_b.ico'
   ascii_icon: 'assets/ascii.ico'
 
 switches:
@@ -71,20 +71,50 @@ speller:
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " '"
   algebra:
+    # - erase/^xx$/
     # - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    # - erase/^xx;.*$/
-    - derive/(;.*)$//
+    - derive/^([jqxy])u(;.*)$/$1v$2/
+    - derive/^([aoe])([ioun])(;.*)$/$1$1$2$3/
+    - xform/^([aoe])(ng)?(;.*)$/$1$1$2$3/
+    - xform/^(\w+?)iu(;.*)/$1Ⓠ$2/
+    - xform/^(\w+?)ei(;.*)/$1Ⓦ$2/
+    - xform/^(\w+?)uan(;.*)/$1Ⓡ$2/
+    - xform/^(\w+?)[uv]e(;.*)/$1Ⓣ$2/
+    - xform/^(\w+?)un(;.*)/$1Ⓨ$2/
+    - xform/^(\w+?)uo(;.*)/$1Ⓞ$2/
+    - xform/^(\w+?)ie(;.*)/$1Ⓟ$2/
+    - xform/^(\w+?)i?ong(;.*)/$1Ⓢ$2/
+    - xform/^(\w+?)ing(;.*)/$1Ⓚ$2/
+    - xform/^(\w+?)uai(;.*)/$1Ⓚ$2/
+    - xform/^(\w+?)ai(;.*)/$1Ⓓ$2/
+    - xform/^(\w+?)eng(;.*)/$1Ⓖ$2/
+    - xform/^(\w+?)en(;.*)/$1Ⓕ$2/
+    - xform/^(\w+?)[iu]ang(;.*)/$1Ⓛ$2/
+    - xform/^(\w+?)ang(;.*)/$1Ⓗ$2/
+    - xform/^(\w+?)ian(;.*)/$1Ⓜ$2/
+    - xform/^(\w+?)an(;.*)/$1Ⓙ$2/
+    - xform/^(\w+?)ou(;.*)/$1Ⓩ$2/
+    - xform/^(\w+?)iao(;.*)/$1Ⓝ$2/
+    - xform/^(\w+?)[iu]a(;.*)/$1Ⓧ$2/
+    - xform/^(\w+?)ao(;.*)/$1Ⓒ$2/
+    - xform/^(\w+?)ui(;.*)/$1Ⓥ$2/
+    - xform/^(\w+?)in(;.*)/$1Ⓑ$2/
+    - xform/^sh/Ⓤ/
+    - xform/^ch/Ⓘ/
+    - xform/^zh/Ⓥ/
+    - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
     - abbrev/^([a-z]).+$/$1/
     - derive/^([a-z])$/$1/
     # --- 辅助码 ---
-    # - abbrev|^(.+);.*$|$1|                 
-    - derive|^(.+);.*$|$1|                 
-    - derive|^(.+);(\w)(\w).*$|$1$2|       
-    - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
-    - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
-    - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
-    - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
-    - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
+    # - abbrev|^(.+);.*$|$1|                                          # 纯双拼的情况
+    - derive|^(.+);.*$|$1|                                        # 纯双拼的情况
+    - derive|^(.+);(\w)(\w).*$|$1$2|                                # 双拼+一位辅助码的情况
+    - abbrev|^(.+);(\w)(\w).*$|$1$2$3|                              # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
+    - derive|^(.+);(\w)(\w).*$|$1$2$3o|                             # 整句模式下，输入syffo 出单字 增强单字性能
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2|                            # 双拼+一位辅助码的情况
+    - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3|                          # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|                         # 整句模式下，输入syffo 出单字 增强单字性能
+
 
 chord_composer:
   __include: jk.yaml:/chord_composer
@@ -96,7 +126,7 @@ punctuator:
 
 translator:
   dictionary: jk_pinyin
-  prism: jk_pinyin
+  prism: jk_flypy
   enable_charset_filter: true
   enable_sentence: false
   enable_encoder: true

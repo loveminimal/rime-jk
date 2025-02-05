@@ -11,7 +11,7 @@ schema:
     - 基于袖珍简化字拼音及自制通规8105单字表
   dependencies:
     - jk_ascii
-  icon: 'assets/fly_m.ico'
+  icon: 'assets/brush.ico'
   ascii_icon: 'assets/ascii.ico'
 
 switches:

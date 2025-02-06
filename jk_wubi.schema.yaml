@@ -36,10 +36,10 @@ engine:
   # --- 处理各类按键消息 ---
   # -------------------------------------
   # - ascii_composer                       # 处理中英文输入模式切换
+  # - chord_composer                       # 多键组合输入
   # - key_binder                           # 键位绑定「放在其他 processor 之前判定」
   # - recognizer                           # 识别器，识别特定格式的输入「打上标签」供后续处理
   # - speller                              # 拼写处理器「处理输入字母，解析为编码，与词典匹配」
-  # - chord_composer                       # 多键组合输入
   # - punctuator                           # 标点符号处理器
   # - selector                             # 选字处理器「候选词的选择和翻页」
   # - navigator                            # 光标移动处理器「处理栏内左右移动光标」
@@ -47,10 +47,10 @@ engine:
   # -------------------------------------
   processors:
     - ascii_composer
+    - chord_composer
     - key_binder    
     - recognizer    
     - speller       
-    - chord_composer
     - punctuator    
     - selector      
     - navigator     

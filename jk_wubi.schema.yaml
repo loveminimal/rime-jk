@@ -131,6 +131,7 @@ chord_composer:
   __include: jk.yaml:/chord_composer_mini
 
 
+# === 主翻译器 ===
 # -------------------------------------
 # dictionary                      使用词典
 # prism                           唯一标识，避免拼写算法冲突
@@ -157,6 +158,7 @@ date_translator:
   jk_datetime: iii
 
 
+# === 反查 ===
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
@@ -167,6 +169,7 @@ custom_phrase:
   __include: jk.yaml:/custom_phrase
 
 
+# === OpenCC ===
 emoji:
   __include: jk.yaml:/emoji
 

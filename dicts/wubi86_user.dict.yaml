@@ -20,4 +20,7 @@ version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...
+人	w 	1
 你好	wqvb 	1
+中国	khlg 	2
+中华人民共和国	kwwl 	1

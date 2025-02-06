@@ -18,7 +18,6 @@ from data.char_8105 import char_8105
 from timer import timer
 
 
-@timer
 def convert(src_dir, out_dir, file_endswith_filter):
     """
     将用户同步的词典文件合并、排序并生成适用于 Rime 输入法的用户词典文件。
@@ -43,8 +42,7 @@ def convert(src_dir, out_dir, file_endswith_filter):
 
     # 设定最大统计字长列表 - 15个字
     word_len_list = list(range(26))
-    has_header = False
-    with open(out_dir / f'{out_file}', 'a', encoding='utf-8') as o:
+    with open(out_dir / f'{out_file_temp}', 'a', encoding='utf-8') as o:
         for word_len in word_len_list:
             res = ''
             # 以下几行为原始同步词典格式
@@ -82,10 +80,54 @@ def convert(src_dir, out_dir, file_endswith_filter):
 
             if len(res.strip()) > 0:
                 print('✅  » 已合并处理生成 %s 字词语' % word_len)
-                if (not has_header and res[0] in char_8105):
-                    o.write(get_header_sync(f'{out_file}'))
-                    has_header = True
                 o.write(res)
+
+def is_chinese_char(char: str) -> bool:
+    code = ord(char)
+    return (0x4E00 <= code <= 0x9FFF)
+
+@timer
+def combine(out_dir):
+    dict_num = 0
+    res_dict = {}
+    lines_total = []
+    print('☑️  === 合并到用户词典 ===')
+    for file_path in out_dir.iterdir():
+        if file_path.is_file() and file_path.name.startswith('pinyin_user'):
+            dict_num = dict_num + 1
+            print('☑️  已加载第 %d 份码表 » %s' % (dict_num, file_path))
+
+            with open(file_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+                lines_total.extend(lines)
+
+    # 去重未变动行
+    lines_total = list(dict.fromkeys(lines_total))
+
+    # 设定最大统计字长列表 - 15个字
+    word_len_list = list(range(26))
+    has_header = False
+    with open(out_dir / f'{out_file}', 'w', encoding='utf-8') as o:
+        for word_len in word_len_list:
+            res = ''
+            for line in lines_total:
+                if not is_chinese_char(line[0]):  # 忽略注释和特殊行
+                    continue
+
+                word, code, weight = line.strip().split('\t')
+
+                # 按字长顺序过滤依次处理 1, 2, 3, 4 ...
+                # 此外不再过滤非 8105 字词（源码表已做过滤 & 加载超范字词）
+                if len(word) == word_len:
+                    res_dict[word] = f'{code}\t{weight}'
+        res = ''
+        for key, value in res_dict.items():
+            res += f'{key}\t{value}\n'
+
+        if len(res.strip()) > 0:
+            print('✅  » 已合并生成用户词典')
+            o.write(get_header_sync(f'{out_file}'))
+            o.write(res)
 
 
 if __name__ == '__main__':
@@ -96,10 +138,16 @@ if __name__ == '__main__':
     file_endswith_filter = 'jk_pinyin.userdb.txt'
 
     out_file = 'pinyin_user.dict.yaml'
+    out_file_temp = out_file + '.temp'
 
     # 如果存在输出文件，先删除
-    current_out_file = out_dir / out_file
-    if current_out_file.exists():
-        current_out_file.unlink()
+    current_out_file_temp = out_dir / out_file_temp
+    if current_out_file_temp.exists():
+        current_out_file_temp.unlink()
+        
     print('☑️  === 开始同步转换用户自定义词库文件 ===')
     convert(src_dir, out_dir, file_endswith_filter)
+    # 合并至用户文件
+    combine(out_dir)
+    # 清理掉临时文件 *.temp
+    current_out_file_temp.unlink()

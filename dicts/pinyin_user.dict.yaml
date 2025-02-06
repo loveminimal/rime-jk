@@ -22,49 +22,236 @@ use_preset_vocabulary: false
 ...
 吧	ba;kc 	1
 表	biao;ge 	0
-并	bing;ua 	1
+并	bing;ua 	2
 不	bu;i,gi 	0
+才	cai;ft 	1
 词	ci;yn 	0
+打	da;rs 	1
 但	dan;wj 	1
-的	de;r,rq 	3
-高	gao;ym 	0
+到	dao;gc 	1
+的	de;r,rq 	21
+都	dou;ft 	0
+对	dui;cf 	2
+高	gao;ym 	1
+个	ge;wh 	1
+给	gei;xw 	2
+跟	gen;kh 	1
+行	hang;tf 	1
 后	hou;rg 	1
 键	jian;qv 	1
-了	le;b,bn 	1
+看	kan;rh 	1
+快	kuai;nn 	1
+懒	lan;ng 	1
+了	le;b,bn 	4
 吗	ma;kc 	1
+你	ni;wq 	0
 偶	ou;wj 	1
+碰	peng;du 	2
 让	rang;yh 	1
-是	shi;j,jg 	1
+人	ren;w,ww 	1
+卅	sa;gk 	1
+啥	sha;kw 	0
+是	shi;j,jg 	8
 说	shuo;yu 	0
+淞	song;is 	1
+他	ta;wb 	1
+挺	ting;rt 	1
+未	wei;fi 	1
 为	wei;o,yl 	1
+我	wo;q,tr 	2
+无	wu;fq 	1
+雾	wu;ft 	1
+写	xie;pg 	0
+新	xin;us 	1
+养	yang;ud 	1
 也	ye;bn 	1
+用	yong;et 	6
+有	you;e,de 	1
+于	yu;gf 	0
+在	zai;d,dh 	2
+找	zhao;ra 	0
+这	zhe;p,yp 	1
+之	zhi;pp 	1
+中	zhong;k,kh 	4
+转	zhuan;lf 	1
+掉	diao;rh 	0
+已	yi;nn 	1
+至	zhi;gc 	0
+按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	1
 宝安	bao;pg an;pv 	0
+宝子	bao;pg zi;bb 	1
+本来	ben;sg lai;go 	1
+比较	bi;xx jiao;lu 	2
+毕竟	bi;xx jing;uj 	1
 编码	bian;xy ma;dc 	1
+遍历	bian;yn li;dl 	1
+变动	bian;yo dong;fc 	1
+并击	bing;ua ji;fm 	1
 不高	bu;i,gi gao;ym 	1
+不过	bu;i,gi guo;fp 	1
+不会	bu;i,gi hui;wf 	0
+不是	bu;i,gi shi;j,jg 	1
+不准	bu;i,gi zhun;uw 	1
+操蛋	cao;rk dan;nh 	1
+测试	ce;im shi;ya 	0
+插件	cha;rt jian;wr 	3
+成熟	cheng;dn shu;yb 	1
 重新	chong;tg xin;us 	1
+词典	ci;yn dian;ma 	2
+词库	ci;yn ku;yl 	0
 词频	ci;yn pin;hi 	1
+大的	da;dd de;r,rq 	1
+大概	da;dd gai;sv 	1
+当时	dang;iv shi;jf 	1
+倒是	dao;wg shi;j,jg 	1
+定义	ding;pg yi;yq 	1
+东东	dong;ai dong;ai 	1
+对吧	dui;cf ba;kc 	1
+反正	fan;rc zheng;gh 	1
+方案	fang;yy an;pv 	0
+方向	fang;yy xiang;tm 	1
+分隔	fen;wv ge;bg 	1
+符号	fu;tw hao;kg 	0
+刚需	gang;mq xu;fd 	1
 给我	gei;xw wo;q,tr 	0
+关系	guan;ud xi;tx 	0
 过来	guo;fp lai;go 	0
+哈哈	ha;kw ha;kw 	2
+还得	hai;gi de;tj 	1
+还是	hai;gi shi;j,jg 	1
 好的	hao;vb de;r,rq 	1
+好久	hao;vb jiu;qy 	0
+合并	he;wg bing;ua 	2
+很久	hen;tv jiu;qy 	0
+获取	huo;aq qu;bc 	0
+活跃	huo;it yue;kh 	1
+几个	ji;mt ge;wh 	1
+加一	jia;lk yi;g,gg 	1
+键位	jian;qv wei;wu 	1
+就是	jiu;yi shi;j,jg 	3
+可能	ke;sk neng;ce 	1
+可以	ke;sk yi;c,ny 	2
+快速	kuai;nn su;gk 	1
+论坛	lun;yw tan;ff 	2
+慢慢	man;nj man;nj 	1
+没有	mei;im you;e,de 	1
+模型	mo;sa xing;ga 	0
+魔然	mo;ys ran;qd 	1
+那个	na;vf ge;wh 	0
 那么	na;vf me;tc 	0
+能用	neng;ce yong;et 	1
 你到	ni;wq dao;gc 	1
 你好	ni;wq hao;vb 	1
+拼音	pin;ru yin;uj 	2
+起来	qi;fh lai;go 	0
+嵌入	qian;ma ru;ty 	1
+前二	qian;ue er;fg 	1
+前面	qian;ue mian;dm 	0
 清除	qing;ig chu;bw 	1
+去重	qu;fc chong;tg 	3
+去玩	qu;fc wan;gf 	1
 权重	quan;sc zhong;tg 	1
+如何	ru;vk he;ws 	1
 上屏	shang;h,hh ping;nu 	1
-用户	yong;et hu;yn 	0
+社区	she;py qu;aq 	1
+声调	sheng;fn diao;ym 	2
+是个	shi;j,jg ge;wh 	1
+是要	shi;j,jg yao;s,sv 	1
+时候	shi;jf hou;wh 	1
+时间	shi;jf jian;uj 	0
+属于	shu;nt yu;gf 	1
+数组	shu;ov zu;xe 	1
+顺序	shun;kd xu;yc 	1
+他写	ta;wb xie;pg 	1
+特意	te;tr yi;uj 	1
+万象	wan;dn xiang;qj 	1
+王勇	wang;gg yong;ce 	2
+我看	wo;q,tr kan;rh 	1
+我是	wo;q,tr shi;j,jg 	1
+我也	wo;q,tr ye;bn 	1
+五笔	wu;gg bi;tt 	1
+想在	xiang;sh zai;d,dh 	0
+形码	xing;ga ma;dc 	0
+也就	ye;bn jiu;yi 	1
+以前	yi;c,ny qian;ue 	1
+一次	yi;g,gg ci;uq 	2
+一个	yi;g,gg ge;wh 	2
+用过	yong;et guo;fp 	1
+用户	yong;et hu;yn 	2
+用来	yong;et lai;go 	1
+有个	you;e,de ge;wh 	1
+有了	you;e,de le;b,bn 	1
+这个	zhe;p,yp ge;wh 	4
+正常	zheng;gh chang;ip 	1
 直接	zhi;fh jie;ru 	0
+止步	zhi;hh bu;hi 	0
 只能	zhi;kw neng;ce 	1
+之处	zhi;pp chu;th 	1
+之后	zhi;pp hou;rg 	1
+之前	zhi;pp qian;ue 	2
+知道	zhi;td dao;ut 	0
 中心	zhong;k,kh xin;ny 	0
+注册	zhu;iy ce;mm 	0
+主力	zhu;y,yg li;lt 	0
+转成	zhuan;lf cheng;dn 	1
 转换	zhuan;lf huan;rq 	0
+字典	zi;pb dian;ma 	1
+最初	zui;jb chu;pu 	0
+清理	qing;ig li;gj 	0
+生成	sheng;tg cheng;dn 	1
+文件	wen;yy jian;wr 	0
 必须的	bi;nt xu;ed de;r,rq 	1
+编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
+不知道	bu;i,gi zhi;td dao;ut 	2
+打句子	da;rs ju;qk zi;bb 	1
+点个赞	dian;hk ge;wh zan;tf 	1
+都不会	dou;ft bu;i,gi hui;wf 	1
+辅助码	fu;lg zhu;eg ma;dc 	3
 给我说	gei;xw wo;q,tr shuo;yu 	1
+空明码	kong;pw ming;je ma;dc 	1
 那么高	na;vf me;tc gao;ym 	1
+你想在	ni;wq xiang;sh zai;d,dh 	1
+你注册	ni;wq zhu;iy ce;mm 	1
+啥社区	sha;kw she;py qu;aq 	1
+输入法	shu;lw ru;ty fa;if 	1
+他主力	ta;wb zhu;y,yg li;lt 	1
 为什么	wei;o,yl shen;wf me;tc 	1
+我前面	wo;q,tr qian;ue mian;dm 	1
+我也是	wo;q,tr ye;bn shi;j,jg 	2
+我一直	wo;q,tr yi;g,gg zhi;fh 	1
+我自己	wo;q,tr zi;th ji;nn 	1
+无声调	wu;fq sheng;fn diao;ym 	1
+小词库	xiao;ih ci;yn ku;yl 	2
+写起来	xie;pg qi;fh lai;go 	1
+也不是	ye;bn bu;i,gi shi;j,jg 	1
 用户词	yong;et hu;yn ci;yn 	1
+用形码	yong;et xing;ga ma;dc 	1
+有词库	you;e,de ci;yn ku;yl 	1
+有关系	you;e,de guan;ud xi;tx 	1
+有模型	you;e,de mo;sa xing;ga 	1
+有声调	you;e,de sheng;fn diao;ym 	1
+怎么样	zen;th me;tc yang;su 	1
+这个是	zhe;p,yp ge;wh shi;j,jg 	1
+止步于	zhi;hh bu;hi yu;gf 	1
 转了下	zhuan;lf le;b,bn xia;gh 	1
+准确性	zhun;uw que;dq xing;nt 	1
+自定义	zi;th ding;pg yi;yq 	1
+清理掉	qing;ig li;gj diao;rh 	1
+合并至	he;wg bing;ua zhi;gc 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
+测试方案	ce;im shi;ya fang;yy an;pv 	1
+很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
+获取时间	huo;aq qu;bc shi;jf jian;uj 	1
+可以直接	ke;sk yi;c,ny zhi;fh jie;ru 	1
+那个论坛	na;vf ge;wh lun;yw tan;ff 	1
+奇奇怪怪	qi;ds qi;ds guai;nc guai;nc 	1
 用户词表	yong;et hu;yn ci;yn biao;ge 	1
+找了好久	zhao;ra le;b,bn hao;vb jiu;qy 	1
+这个符号	zhe;p,yp ge;wh fu;tw hao;kg 	1
+正常使用	zheng;gh chang;ip shi;wg yong;et 	1
 转换过来	zhuan;lf huan;rq guo;fp lai;go 	1
+最初知道	zui;jb chu;pu zhi;td dao;ut 	3
+临时文件	lin;jt shi;jf wen;yy jian;wr 	1
+用户文件	yong;et hu;yn wen;yy jian;wr 	1

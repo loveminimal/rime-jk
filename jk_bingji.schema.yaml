@@ -47,8 +47,6 @@ chord_composer:
 
 algebra_kongming:
   # --- 修改为空明码键位 ---
-  # - "xform/^,$/,/"
-  # - "xform/^\.$/./"
   # 定义左手15键       
   - xform/^ef(?![左右])/y左/
   - xform/^er(?![左右])/u左/
@@ -107,8 +105,6 @@ algebra_kongming:
 
 algebra_zhixin:
   # --- 修改为知心键位 ---
-  # - "xform/^,$/,/"
-  # - "xform/^\.$/./"
   # 定义左手15键       
   - xform/^ef(?![左右])/y左/
   - xform/^wf(?![左右])/u左/
@@ -129,7 +125,7 @@ algebra_zhixin:
   - xform/^sc(?![左右])/?左/ 
 
 
-  - xform/^sd(?![左右])/l左/ # 原 150
+  - xform/^sd(?![左右])/l左/
 
   # 定义右手15键
   - xform/ji(?![左右])$/q右/
@@ -150,7 +146,7 @@ algebra_zhixin:
   - xform/mk(?![左右])$/v右/
   - xform/ml(?![左右])$/b右/
 
-  - xform/kl(?![左右])$/f右/ # 173
+  - xform/kl(?![左右])$/f右/
 
 
 translator:

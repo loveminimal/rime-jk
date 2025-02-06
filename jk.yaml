@@ -80,12 +80,9 @@ pinyin:
 # --- 自定义码表 ---
 # -------------------------------------
 # custom_phrase:
-#   dictionary: ""
-#   user_dict: custom_phrase
-#   db_class: stabledb        # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
-#   enable_completion: false  # 补全提示
-#   enable_sentence: false    # 禁止造句
-#   initial_quality: 99
+#   db_class: stabledb        只读数据库，无法动态调频；设为 tabledb 可以动态调频
+#   enable_completion: false  补全提示
+#   enable_sentence: false    禁止造句
 # -------------------------------------
 custom_phrase:
   dictionary: ""

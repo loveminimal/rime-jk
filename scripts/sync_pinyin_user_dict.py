@@ -14,7 +14,6 @@ import re
 from pathlib import Path
 from collections import defaultdict
 from data.header import get_header_sync
-from data.char_8105 import char_8105
 from timer import timer
 
 
@@ -90,6 +89,7 @@ def is_chinese_char(char: str) -> bool:
 def combine(out_dir):
     dict_num = 0
     res_dict = {}
+    res_dict_weight = defaultdict(set)
     lines_total = []
     print('☑️  === 合并到用户词典 ===')
     for file_path in out_dir.iterdir():
@@ -119,7 +119,10 @@ def combine(out_dir):
                 # 按字长顺序过滤依次处理 1, 2, 3, 4 ...
                 # 此外不再过滤非 8105 字词（源码表已做过滤 & 加载超范字词）
                 if len(word) == word_len:
-                    res_dict[word] = f'{code}\t{weight}'
+                    if word not in res_dict or weight > max(res_dict_weight[word]):
+                        res_dict[word] = f'{code}\t{weight}'
+                        res_dict_weight[word].add(weight)
+
         res = ''
         for key, value in res_dict.items():
             res += f'{key}\t{value}\n'

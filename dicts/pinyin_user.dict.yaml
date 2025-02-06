@@ -20,8 +20,8 @@ version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-吧	ba;kc 	1
-表	biao;ge 	0
+吧	ba;kc 	3
+表	biao;ge 	1
 并	bing;ua 	2
 不	bu;i,gi 	0
 才	cai;ft 	1

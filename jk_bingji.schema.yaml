@@ -36,24 +36,18 @@ speller:
 
 # https://github.com/gaboolic/rime-shuangpin-fuzhuma
 chord_composer:
-  # 字母表，包含用并击按键
-  # 击键一律以字母表顺序排列
-  # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p',./"
+  prompt_format:
+    - "xform/^(.*)$/[$1]/" 
+  output_format:
+    - "xform/^(.*)左/$1/"
+    - "xform/^(.*)右$/$1/"
+    - "xform/^(.*)左(.*)右$/$1$2/"
   alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
   # 支持：
   # ① 知心键位      algebra_zhixin 「兼容正常串击键位 ✓」
   # ② 空明码键位  algebra_kongming 「兼容正常串击键位 ✗」
   algebra:
     __include: algebra_kongming
- # 并击过程中套用式样  
-  prompt_format:
-    # 加方括号
-    - "xform/^(.*)$/[$1]/" 
-  # 并击完成后套用式样
-  output_format:
-    - "xform/^(.*)左/$1/"
-    - "xform/^(.*)右$/$1/"
-    - "xform/^(.*)左(.*)右$/$1$2/"
 
 algebra_kongming:
   # --- 修改为空明码键位 ---

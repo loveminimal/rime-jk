@@ -179,29 +179,13 @@ reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
 custom_phrase:
-  dictionary: ""
-  user_dict: custom_phrase
-  db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 99
+  __include: jk.yaml:/custom_phrase
 
 emoji:
-  option_name: emoji
-  opencc_config: emoji.json
-  inherit_comment: false
+  __include: jk.yaml:/emoji
 
 zh2en:
-  option_name: zh2en
-  opencc_config: zh2en.json
-  inherit_comment: false
+  __include: jk.yaml:/zh2en
 
 chaifen:
-  opencc_config: wb_cf.json
-  option_name: chaifen
-  show_in_comment: true 
-  comment_format:     
-    - "xform/-/ /"
-  tags:     
-    - abc
-  tips: all
+  __include: jk.yaml:/chaifen

@@ -124,7 +124,6 @@ algebra_zhixin:
   - xform/^dc(?![左右])/.左/ 
   - xform/^sc(?![左右])/?左/ 
 
-
   - xform/^sd(?![左右])/l左/
 
   # 定义右手15键

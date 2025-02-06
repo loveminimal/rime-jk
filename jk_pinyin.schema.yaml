@@ -52,11 +52,11 @@ engine:
     - uniquifier
     - simplifier@chaifen
 
+
 pro_comment_format:
   fuzhu_code: true
   candidate_length: 1
   fuzhu_type: flypy
-
 
 
 speller:
@@ -143,6 +143,7 @@ algebra_flypy:
   - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
   - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
   - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
+
 
 chord_composer:
   __include: jk.yaml:/chord_composer_mini

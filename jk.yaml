@@ -77,7 +77,6 @@ pinyin:
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
 
-# --- 自定义码表 ---
 # -------------------------------------
 # custom_phrase:
 #   db_class: stabledb        只读数据库，无法动态调频；设为 tabledb 可以动态调频

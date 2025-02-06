@@ -56,7 +56,6 @@ chord_composer:
     - xform/z;(?![左右])$/Z右/
     - xform/r;(?![左右])$/~右/
 
-
  # 并击过程中套用式样  
   prompt_format:
     # 加方括号

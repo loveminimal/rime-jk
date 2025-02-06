@@ -20,4 +20,51 @@ version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...
+吧	ba;kc 	1
+表	biao;ge 	0
+并	bing;ua 	1
+不	bu;i,gi 	0
+词	ci;yn 	0
+但	dan;wj 	1
+的	de;r,rq 	3
+高	gao;ym 	0
+后	hou;rg 	1
+键	jian;qv 	1
+了	le;b,bn 	1
+吗	ma;kc 	1
+偶	ou;wj 	1
+让	rang;yh 	1
+是	shi;j,jg 	1
+说	shuo;yu 	0
+为	wei;o,yl 	1
+也	ye;bn 	1
+俺宝	an;wd bao;pg 	1
+宝安	bao;pg an;pv 	0
+编码	bian;xy ma;dc 	1
+不高	bu;i,gi gao;ym 	1
+重新	chong;tg xin;us 	1
+词频	ci;yn pin;hi 	1
+给我	gei;xw wo;q,tr 	0
+过来	guo;fp lai;go 	0
+好的	hao;vb de;r,rq 	1
+那么	na;vf me;tc 	0
+你到	ni;wq dao;gc 	1
 你好	ni;wq hao;vb 	1
+清除	qing;ig chu;bw 	1
+权重	quan;sc zhong;tg 	1
+上屏	shang;h,hh ping;nu 	1
+用户	yong;et hu;yn 	0
+直接	zhi;fh jie;ru 	0
+只能	zhi;kw neng;ce 	1
+中心	zhong;k,kh xin;ny 	0
+转换	zhuan;lf huan;rq 	0
+必须的	bi;nt xu;ed de;r,rq 	1
+不直接	bu;i,gi zhi;fh jie;ru 	1
+给我说	gei;xw wo;q,tr shuo;yu 	1
+那么高	na;vf me;tc gao;ym 	1
+为什么	wei;o,yl shen;wf me;tc 	1
+用户词	yong;et hu;yn ci;yn 	1
+转了下	zhuan;lf le;b,bn xia;gh 	1
+宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
+用户词表	yong;et hu;yn ci;yn biao;ge 	1
+转换过来	zhuan;lf huan;rq guo;fp lai;go 	1

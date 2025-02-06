@@ -158,7 +158,7 @@ speller:
 
 
 chord_composer:
-  __include: jk.yaml:/chord_composer
+  __include: jk.yaml:/chord_composer_mini
 
 
 # -------------------------------------

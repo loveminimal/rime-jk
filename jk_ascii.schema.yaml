@@ -9,7 +9,6 @@ schema:
   description: |
     - 知心字符，一款快速输入数字和预设字符的键盘式输入法方案
     - https://github.com/loveminimal/rime-jk
-  version: "0.0.1"
   icon: "assets/pr.ico"
   ascii_icon: 'assets/ascii.ico'
 
@@ -41,12 +40,9 @@ engine:
     - punct_translator
     - table_translator
     - reverse_lookup_translator
-    # - lua_translator@*inbox/test_translator
     - lua_translator@*force_gc
   filters:
-    # - lua_filter@*inbox/test_filter
     - lua_filter@*prettify_comment
-    # - lua_filter@*is_in_user_dict
     - uniquifier
 
 # === speller ===
@@ -65,9 +61,6 @@ speller:
 chord_composer:
   __include: jk.yaml:/chord_composer
 
-abc_segmentor:
-  extra_tags:
-    # - reverse_lookup
 
 translator:
   dictionary: jk_ascii
@@ -77,8 +70,6 @@ translator:
   initial_quality: 1.1    
   comment_format: {comment}      
 
-reverse_lookup:
-  __include: jk.yaml:/reverse_lookup
 
 punctuator:
   import_preset: default
@@ -127,7 +118,7 @@ key_binder:
   #   - { when: always, accept: Control+o, send: '=' }
 
 recognizer:
-  # import_preset: default
-  patterns:
-    reverse_lookup: "^~[a-z]*:?$"
-    punct: "^~~([0-9]|10|[A-Za-z]+)$"
+  __include: jk.yaml:/recognizer
+
+reverse_lookup:
+  __include: jk.yaml:/reverse_lookup

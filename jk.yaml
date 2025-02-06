@@ -27,7 +27,7 @@ switches:
 
 # === 识别器 ===
 # -------------------------------------
-# 下设 patterns 主要用于匹配特定的输入模式，并给它们打上特定的标签，以便后续的 segmentors 和 translators 处理
+# 匹配特定的输入模式，并给它们打上标签，以便后续切分、翻译处理
 # reverse_lookup  反查标签
 # punct           自定义符号映射，响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
 # pinyin          拼音反查，取消引导词，直接五笔拼音混输「用任意大写字母隔开，防止反查混入」
@@ -105,14 +105,13 @@ custom_phrase:
 # 
 # https://github.com/gaboolic/rime-shuangpin-fuzhuma
 # -------------------------------------
-chord_composer:
+chord_composer_mini:
   prompt_format:
     - "xform/^(.*)$/[$1]/" 
   output_format:
     - "xform/^(.*)左/$1/"
     - "xform/^(.*)右$/$1/"
     - "xform/^(.*)左(.*)右$/$1$2/"
-  # alphabet: "qwertasdfgzxcvbnmhkjklyuiop"
   # alphabet: zr;"
   algebra:
     # --- 修改为JK键位 ---
@@ -120,10 +119,6 @@ chord_composer:
     # - "xform/^\.$/./"
     # 定义左手键 - yuiop hjkl nm
     # - xform/^er(?![左右])/y左/
-    # - xform/^we(?![左右])/u左/
-    # - xform/^qw(?![左右])/i左/
-    # - xform/^wr(?![左右])/o左/
-    # - xform/^qr(?![左右])/p左/
     # 定义右手键 - qwert asdfg zxcvb
     - xform/z;(?![左右])$/Z右/
     - xform/r;(?![左右])$/~右/

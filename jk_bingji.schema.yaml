@@ -28,7 +28,12 @@ pro_comment_format:
 speller:
   __include: jk_pinyin.schema.yaml:/speller
 
-# https://github.com/gaboolic/rime-shuangpin-fuzhuma
+
+# === 并击 - 多键 ===
+# -------------------------------------
+# ① 知心键位      algebra_zhixin 「兼容正常串击键位 ✓」
+# ② 空明码键位  algebra_kongming 「兼容正常串击键位 ✗」
+# -------------------------------------
 chord_composer:
   prompt_format:
     - "xform/^(.*)$/[$1]/" 
@@ -37,9 +42,6 @@ chord_composer:
     - "xform/^(.*)右$/$1/"
     - "xform/^(.*)左(.*)右$/$1$2/"
   alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
-  # 支持：
-  # ① 知心键位      algebra_zhixin 「兼容正常串击键位 ✓」
-  # ② 空明码键位  algebra_kongming 「兼容正常串击键位 ✗」
   algebra:
     __include: algebra_kongming
 

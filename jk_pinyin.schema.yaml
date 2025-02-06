@@ -13,7 +13,7 @@ schema:
     - 小鹤双拼+五笔前二增强版「 默认 」
   dependencies:
     - jk_ascii
-  icon: 'assets/brush.ico'
+  icon: 'assets/fly_b.ico'
   ascii_icon: 'assets/ascii.ico'
 
 switches:
@@ -73,8 +73,8 @@ speller:
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " '"
   # 支持：
-  # ① 全拼          algebra_pinyin 
-  # ② 小鹤/五笔前二 algebra_flypy
+  # ① 全拼            algebra_pinyin 
+  # ② 小鹤/五笔前二    algebra_flypy
   algebra:
     __include: algebra_flypy
 
@@ -132,14 +132,24 @@ algebra_flypy:
   - abbrev/^([a-z]).+$/$1/
   - derive/^([a-z])$/$1/
   # --- 辅助码 ---
+  # -------------------------------------
   # - abbrev|^(.+);.*$|$1|                                        # 纯双拼的情况「✓ 简拼」
-  - derive|^(.+);.*$|$1|                                          # 纯双拼的情况「✗ 简拼」
-  - derive|^(.+);(\w)(\w).*$|$1$2|                                # 双拼+一位辅助码的情况
-  - abbrev|^(.+);(\w)(\w).*$|$1$2$3|                              # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
-  - derive|^(.+);(\w)(\w).*$|$1$2$3o|                             # 整句模式下，输入syffo 出单字 增强单字性能
-  - derive|^(.+);.*?,(\w)(\w).*$|$1$2|                            # 双拼+一位辅助码的情况
-  - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3|                          # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
-  - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|                         # 整句模式下，输入syffo 出单字 增强单字性能
+  # - derive|^(.+);.*$|$1|                                        # 纯双拼的情况「✗ 简拼」
+  # - derive|^(.+);(\w)(\w).*$|$1$2|                              # 双拼+一位辅助码的情况
+  # - abbrev|^(.+);(\w)(\w).*$|$1$2$3|                            # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
+  # - derive|^(.+);(\w)(\w).*$|$1$2$3o|                           # 整句模式下，输入syffo 出单字 增强单字性能
+  # - derive|^(.+);.*?,(\w)(\w).*$|$1$2|                          # 双拼+一位辅助码的情况
+  # - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3|                        # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
+  # - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|                       # 整句模式下，输入syffo 出单字 增强单字性能
+  # -------------------------------------
+  # - abbrev|^(.+);.*$|$1|               
+  - derive|^(.+);.*$|$1|                 
+  - derive|^(.+);(\w)(\w).*$|$1$2|       
+  - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+  - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+  - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
 
 chord_composer:
   __include: jk.yaml:/chord_composer

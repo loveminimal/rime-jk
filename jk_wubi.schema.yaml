@@ -34,54 +34,96 @@ switches:
 # === 引擎 ===
 engine:
   # --- 处理各类按键消息 ---
+  # -------------------------------------
+  # - ascii_composer                       # 处理中英文输入模式切换
+  # - key_binder                           # 键位绑定「放在其他 processor 之前判定」
+  # - recognizer                           # 识别器，识别特定格式的输入「打上标签」供后续处理
+  # - speller                              # 拼写处理器「处理输入字母，解析为编码，与词典匹配」
+  # - chord_composer                       # 多键组合输入
+  # - punctuator                           # 标点符号处理器
+  # - selector                             # 选字处理器「候选词的选择和翻页」
+  # - navigator                            # 光标移动处理器「处理栏内左右移动光标」
+  # - express_editor                       # 编辑器处理器，处理「空格、回车确认输入、回退删除、候选上屏、其他字符直接上屏」
+  # -------------------------------------
   processors:
-    - ascii_composer                     # 处理中英文输入模式切换
-    - key_binder                         # 键位绑定「放在其他 processor 之前判定」
-    - recognizer                         # 识别器，识别特定格式的输入「打上标签」供后续处理
-    - speller                            # 拼写处理器「处理输入字母，解析为编码，与词典匹配」
-    - chord_composer                     # 多键组合输入
-    - punctuator                         # 标点符号处理器
-    - selector                           # 选字处理器「候选词的选择和翻页」
-    - navigator                          # 光标移动处理器「处理栏内左右移动光标」
-    - express_editor                     # 编辑器处理器，处理「空格、回车确认输入、回退删除、候选上屏、其他字符直接上屏」
+    - ascii_composer
+    - key_binder    
+    - recognizer    
+    - speller       
+    - chord_composer
+    - punctuator    
+    - selector      
+    - navigator     
+    - express_editor
 
   # --- 负责对输入内容进行切分「分段」，为后续的 translators 翻译做准备 ---
+  # -------------------------------------
   # 决定了 Rime 如何把你的输入按不同的模式拆分「如：拼音、形码、标点等」
+  # segmentors:
+  #   - ascii_segmentor                    # 处理 ASCII「英文字母、数字、常见符号」的输入，确保它们直接上屏
+  #   - matcher                            # 配合「 recognizer.patterns 」规则，为网址、邮箱、反查等输入加上标签
+  #   - abc_segmentor                      # 将用户输入的「拼音」或「形码编码」分割成独立的段落，并将其标记为拼音类型「 tag: abc 」
+  #   - punct_segmentor                    # 将输入中的标点符号部分与其他输入内容分割开，并标记为特定类型的段落「 tag: punct 」
+  #   - affix_segmentor                    # 用户自定义 tag - 此项可加载多个实例，后接 @+tag名，为后续的翻译或匹配等操作提供额外的灵活性
+  #   - affix_segmentor@pinyin
+  #   - lua_segmentor                      # 使用 lua 自定义切分，后接 @+lua 函数名
+  #   - fallback_segmentor                 # 在其他 segmentors 无法处理的情况下，将输入的文本当作普通文本进行处理
+  # -------------------------------------
   segmentors:
-    - ascii_segmentor                    # 处理 ASCII「英文字母、数字、常见符号」的输入，确保它们直接上屏
-    - matcher                            # 配合「 recognizer.patterns 」规则，为网址、邮箱、反查等输入加上标签
-    - abc_segmentor                      # 将用户输入的「拼音」或「形码编码」分割成独立的段落，并将其标记为拼音类型「 tag: abc 」
-    - punct_segmentor                    # 将输入中的标点符号部分与其他输入内容分割开，并标记为特定类型的段落「 tag: punct 」
-    # - affix_segmentor                  # 用户自定义 tag - 此项可加载多个实例，后接 @+tag名，为后续的翻译或匹配等操作提供额外的灵活性
+    - ascii_segmentor        
+    - matcher                
+    - abc_segmentor          
+    - punct_segmentor        
+    # - affix_segmentor      
     - affix_segmentor@pinyin
-    # - lua_segmentor                    # 使用 lua 自定义切分，后接 @+lua 函数名
-    - fallback_segmentor                 # 在其他 segmentors 无法处理的情况下，将输入的文本当作普通文本进行处理
+    # - lua_segmentor        
+    - fallback_segmentor     
 
   # --- 翻译器，负责将输入的编码转换为候选项 --- 
+  # -------------------------------------
+  # translators:
+  #   # - echo_translator                  # 没有其他候选字时，回显输入码，创建一个与编码串相同的候选项
+  #   - punct_translator                   # 配合 punct_segmentor ，负责将输入的标点符号转换为相应的符号或字符
+  #   - table_translator                   # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
+  #                                        # ... 此项可以加载多个实例，后接 @+翻译器名「 如 cangjie、wubi 等」
+  #                                        # ... 需要一个词库「 dictionary 」，在 translator 配置中指定
+  #   - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
+  #   - script_translator@pinyin
+  #   # - completion_translator            # ❓自动补全，在 translator 配置中指定 enable_completion: true 激活
+  #   - reverse_lookup_translator          # 反查翻译器，用另一种编码方案查码
+  #   - lua_translator@*date_translator    # 时间、日期、星期
+  #   - lua_translator@*force_gc           # 暴力 GC 降低内存
+  # -------------------------------------
   translators:
-    # - echo_translator                  # 没有其他候选字时，回显输入码，创建一个与编码串相同的候选项
-    - punct_translator                   # 配合 punct_segmentor ，负责将输入的标点符号转换为相应的符号或字符
-    - table_translator                   # 码表翻译器，用于仓颉、五笔等基于码表的输入方案，
-                                         # ... 此项可以加载多个实例，后接 @+翻译器名「 如 cangjie、wubi 等」
-                                         # ... 需要一个词库「 dictionary 」，在 translator 配置中指定
-    - table_translator@custom_phrase     # 自定义短语 custom_phrase.txt
+    # - echo_translator               
+    - punct_translator                
+    - table_translator
+    - table_translator@custom_phrase  
     - script_translator@pinyin
-    # - completion_translator            # ❓自动补全，在 translator 配置中指定 enable_completion: true 激活
-    - reverse_lookup_translator          # 反查翻译器，用另一种编码方案查码
-    - lua_translator@*date_translator    # 时间、日期、星期
-    - lua_translator@*force_gc           # 暴力 GC 降低内存
+    # - completion_translator         
+    - reverse_lookup_translator       
+    - lua_translator@*date_translator 
+    - lua_translator@*force_gc        
   
   # --- 处理候选词列表「调整、修改、排序、筛选、转换」候选词 ---
+  # -------------------------------------
+  # filters:
+  # - lua_filter@*prettify_comment
+  # - lua_filter@*keep_primary_code_first
+  # - simplifier                           # 简繁自动转换
+  # - simplifier@emoji                     # Emoji
+  # - simplifier@zh2en
+  # - uniquifier                           # 过滤重复的候选字
+  # - simplifier@chaifen                   # 五笔的拆分滤镜
+  # -------------------------------------
   filters:
-    # lua 的 filter：
     - lua_filter@*prettify_comment
     - lua_filter@*keep_primary_code_first
-    # 反查的 filter
-    - simplifier                         # 简繁自动转换
-    - simplifier@emoji                   # Emoji
+    - simplifier         
+    - simplifier@emoji   
     - simplifier@zh2en
-    - uniquifier                         # 过滤重复的候选字
-    - simplifier@chaifen                 # 五笔的拆分滤镜
+    - uniquifier          
+    - simplifier@chaifen  
 
 
 # === 键位绑定 ===
@@ -90,25 +132,45 @@ key_binder:
 
 
 # === 识别器 ===
+# -------------------------------------
 # 下设 patterns 主要用于匹配特定的输入模式，并给它们打上特定的标签，
 # ... 以便后续的 segmentors 和 translators 处理
+# recognizer:
+#   # import_preset: default
+#   patterns:
+#     reverse_lookup: "^~[a-z]*:?$"
+#     punct: "^~~([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
+#     pinyin: "^Z[Xa-z]*$"                  # 取消引导词，直接五笔拼音混输（用任意大写字母隔开，防止反查混入）
+# -------------------------------------
 recognizer:
   # import_preset: default
   patterns:
     reverse_lookup: "^~[a-z]*:?$"
-    punct: "^~~([0-9]|10|[A-Za-z]+)$"     # 响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
-    pinyin: "^Z[Xa-z]*$"                  # 取消引导词，直接五笔拼音混输（用任意大写字母隔开，防止反查混入）
+    punct: "^~~([0-9]|10|[A-Za-z]+)$"
+    pinyin: "^Z[Xa-z]*$"             
 
 
 # === 拼写处理器 ===
+# -------------------------------------
 # 负责处理输入的字母，将其解析为编码，并与词典匹配
+# speller:
+#   #「✗上屏」允许的输入字符
+#   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
+#   #「✓上屏」只允许做始码的字符，排除 ` 让单个的 ` 可以直接上屏
+#   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+#   delimiter: " z"                        #「分隔符」` ` 空格用于拼音分隔，`z` 可手动分隔拼音
+#   # max_code_length: 4                   # 形码最大码长，超过则顶字上屏，四码顶字上屏
+#   # --- 自动选词及匹配规则「 符合规则的自动上屏 」---
+#   # auto_select: false
+#   # auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
+# -------------------------------------
 speller:
   #「✗上屏」允许的输入字符
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   #「✓上屏」只允许做始码的字符，排除 ` 让单个的 ` 可以直接上屏
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  delimiter: " z"                        #「分隔符」` ` 空格用于拼音分隔，`z` 可手动分隔拼音
-  # max_code_length: 4                   # 形码最大码长，超过则顶字上屏，四码顶字上屏
+  delimiter: " z"     
+  # max_code_length: 4
   # --- 自动选词及匹配规则「 符合规则的自动上屏 」---
   # auto_select: false
   # auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
@@ -119,29 +181,53 @@ chord_composer:
 
 
 # === 标点符号处理器 ===
+# -------------------------------------
 # 负责处理标点符号输入，可导入符号映射「如 symbols」
+# punctuator:
+#   import_preset: default
+#   symbols:
+#     __include: symbols_z:/symbols        # 从 symbols_z.yaml 导入配置
+# -------------------------------------
 punctuator:
   import_preset: default
   symbols:
-    __include: symbols_z:/symbols        # 从 symbols_z.yaml 导入配置
+    __include: symbols_z:/symbols
 
 
 # === 每个方案都有一个主 translator ===
+# -------------------------------------
+# translator:
+#   dictionary: jk_wubi                    # 与 wubi86 共用词典，设定 table_translator 使用的词典名
+#   prism: jk_wubi                         # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+#   enable_charset_filter: true            # 是否开启字符集过滤
+#   enable_sentence: true                  # 是否开启自动造句
+#   enable_encoder: true                   # 是否启用特定的编码规则或功能
+#   encode_commit_history: true            # 是否对已上屏词自动成词
+#   # max_phrase_length: 4                 # 候选词的最大长度「对形码无效，形码的词组长度是由码表决定的」
+#   disable_user_dict_for_patterns:        # 禁止某些编码录入用户词典
+#     - "^z.*$"
+#   # ---  
+#   enable_completion: true                # 是否开启自动补全
+#   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
+#   # db_class: stabledb                   # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
+#   comment_format: "{comment}"            # 使用 {} 作为占位符，可以结合 xform 进行格式转换
+# -------------------------------------
 translator:
-  dictionary: jk_wubi                    # 与 wubi86 共用词典，设定 table_translator 使用的词典名
-  prism: jk_wubi                         # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
-  enable_charset_filter: true            # 是否开启字符集过滤
-  enable_sentence: true                  # 是否开启自动造句
-  enable_encoder: true                   # 是否启用特定的编码规则或功能
-  encode_commit_history: true            # 是否对已上屏词自动成词
-  # max_phrase_length: 4                 # 候选词的最大长度「对形码无效，形码的词组长度是由码表决定的」
-  disable_user_dict_for_patterns:        # 禁止某些编码录入用户词典
+  dictionary: jk_wubi             
+  prism: jk_wubi                  
+  enable_charset_filter: true     
+  enable_sentence: true           
+  enable_encoder: true            
+  encode_commit_history: true     
+  # max_phrase_length: 4          
+  disable_user_dict_for_patterns: 
     - "^z.*$"
   # ---  
-  enable_completion: true                # 是否开启自动补全
-  enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
-  # db_class: stabledb                   # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
-  comment_format: "{comment}"            # 使用 {} 作为占位符，可以结合 xform 进行格式转换
+  enable_completion: true     
+  enable_user_dict: true      
+  # db_class: stabledb        
+  comment_format: "{comment}" 
+
 
 # === Lua 配置: 日期时间(整合版)的触发关键字 ===
 date_translator:
@@ -154,12 +240,21 @@ reverse_lookup:
 
 
 # === 自定义短语：custom_phrase.txt ===
+# -------------------------------------
+# custom_phrase:
+#   dictionary: ""
+#   user_dict: custom_phrase
+#   db_class: stabledb                     # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
+#   enable_completion: false               # 补全提示
+#   enable_sentence: false                 # 禁止造句
+#   initial_quality: 99
+# -------------------------------------
 custom_phrase:
   dictionary: ""
   user_dict: custom_phrase
-  db_class: stabledb                     # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
-  enable_completion: false               # 补全提示
-  enable_sentence: false                 # 禁止造句
+  db_class: stabledb      
+  enable_completion: false
+  enable_sentence: false  
   initial_quality: 99
 
 

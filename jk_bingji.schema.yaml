@@ -57,27 +57,44 @@ pro_comment_format:
   candidate_length: 1
   fuzhu_type: flypy
 
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "^~[a-z]*:?$"
+    punct: "^~~([0-9]|10|[A-Za-z]+)$"
+
 speller:
-  max_code_length: 5
-  auto_select: false
-  auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
   # [ ✗上屏 ]
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   # [ ✓上屏 ]
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " '"
   # 支持：
-  # ① 全拼          algebra_pinyin 
-  # ② 小鹤/五笔前二  algebra_flypy
+  # ① 全拼            algebra_pinyin 
+  # ② 小鹤/五笔前二    algebra_flypy
   algebra:
     __include: algebra_flypy
 
 algebra_pinyin: 
   # - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
   #- erase/^xx;.*$/
+  # - xform/(;.*)$//
   - derive/(;.*)$//
-  - derive/;//
+  # - derive/;//
   - abbrev/^([a-z]).+$/$1/
+  - derive/^([a-z])$/$1/
+  # --- 辅助码 ---
+  # - abbrev|^(.+);.*$|$1|                 
+  - derive|^(.+);.*$|$1|                 
+  - derive|^(.+);(\w)(\w).*$|$1$2|       
+  - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+  - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+  - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
 
 algebra_flypy:
   # - erase/^xx$/
@@ -113,15 +130,26 @@ algebra_flypy:
   - xform/^zh/Ⓥ/
   - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
   - abbrev/^([a-z]).+$/$1/
+  - derive/^([a-z])$/$1/
   # --- 辅助码 ---
-  - derive|^(.+);.*$|$1|                                          # 纯双拼的情况
-  - derive|^(.+);(\w)(\w).*$|$1$2|                                # 双拼+一位辅助码的情况
-  - abbrev|^(.+);(\w)(\w).*$|$1$2$3|                              # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
-  - derive|^(.+);(\w)(\w).*$|$1$2$3o|                             # 整句模式下，输入syffo 出单字 增强单字性能
-  - derive|^(.+);.*?,(\w)(\w).*$|$1$2|                            # 双拼+一位辅助码的情况
-  - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3|                          # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
-  - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|                         # 整句模式下，输入syffo 出单字 增强单字性能
-
+  # -------------------------------------
+  # - abbrev|^(.+);.*$|$1|                                        # 纯双拼的情况「✓ 简拼」
+  # - derive|^(.+);.*$|$1|                                        # 纯双拼的情况「✗ 简拼」
+  # - derive|^(.+);(\w)(\w).*$|$1$2|                              # 双拼+一位辅助码的情况
+  # - abbrev|^(.+);(\w)(\w).*$|$1$2$3|                            # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
+  # - derive|^(.+);(\w)(\w).*$|$1$2$3o|                           # 整句模式下，输入syffo 出单字 增强单字性能
+  # - derive|^(.+);.*?,(\w)(\w).*$|$1$2|                          # 双拼+一位辅助码的情况
+  # - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3|                        # 双拼+2位辅助码的情况，abbrev类型不可以整句内输入2位辅助码，必须加o
+  # - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|                       # 整句模式下，输入syffo 出单字 增强单字性能
+  # -------------------------------------
+  # - abbrev|^(.+);.*$|$1|               
+  - derive|^(.+);.*$|$1|                 
+  - derive|^(.+);(\w)(\w).*$|$1$2|       
+  - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+  - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+  - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
 
 # chord_composer:
 #   __include: jk.yaml:/chord_composer
@@ -253,6 +281,10 @@ algebra_zhixin:
 
   - xform/kl(?![左右])$/f右/ # 173
 
+punctuator:
+  import_preset: default
+  symbols:
+    __include: symbols_z:/symbols
 
 translator:
   dictionary: jk_pinyin
@@ -265,46 +297,7 @@ translator:
   enable_completion: true
   enable_user_dict: true
   spelling_hints: 1
-  # preedit_format:
-  #   - xform/([nl])v/$1ü/
-  #   - xform/([nl])ue/$1üe/
-  #   - xform/([jqxy])v/$1u/
-  comment_format: {comment}
-  # preedit_format 影响到输入框的显示和“ Shift+⏎” 上屏的字符
-  # preedit_format:                        
-  #   - xform/([bpmfdtnljqx])n/$1iao/
-  #   - xform/(\w)g/$1eng/
-  #   - xform/(\w)q/$1iu/
-  #   - xform/(\w)w/$1ei/
-  #   - xform/([dtnlgkhjqxyvuirzcs])r/$1uan/
-  #   - xform/(\w)t/$1ve/
-  #   - xform/(\w)y/$1un/
-  #   - xform/([dtnlgkhvuirzcs])o/$1uo/
-  #   - xform/(\w)p/$1ie/
-  #   - xform/([jqx])s/$1iong/
-  #   - xform/(\w)s/$1ong/
-  #   - xform/(\w)d/$1ai/
-  #   - xform/(\w)f/$1en/
-  #   - xform/(\w)h/$1ang/
-  #   - xform/(\w)j/$1an/
-  #   - xform/([gkhvuirzcs])k/$1uai/
-  #   - xform/(\w)k/$1ing/
-  #   - xform/([jqxnlb])l/$1iang/
-  #   - xform/(\w)l/$1uang/
-  #   - xform/(\w)z/$1ou/
-  #   - xform/([gkhvuirzcs])x/$1ua/
-  #   - xform/(\w)x/$1ia/
-  #   - xform/(\w)c/$1ao/
-  #   - xform/([dtgkhvuirzcs])v/$1ui/
-  #   - xform/(\w)b/$1in/
-  #   - xform/(\w)m/$1ian/
-  #   - xform/([aoe])\1(\w)/$1$2/
-  #   - "xform/(^|[ '])v/$1zh/"
-  #   - "xform/(^|[ '])i/$1ch/"
-  #   - "xform/(^|[ '])u/$1sh/"
-  #   - xform/([jqxy])v/$1u/
-  #   - xform/([nl])v/$1ü/
-  #   - xform/ü/v/
+  comment_format: "{comment}"
 
 date_translator:
   jk_datetime: iii
@@ -339,21 +332,3 @@ chaifen:
   tags:     
     - abc
   tips: all
-
-
-punctuator:
-  import_preset: default
-  symbols:
-    __include: symbols_z:/symbols
-
-key_binder:
-  import_preset: default
-
-recognizer:
-  import_preset: default
-  patterns:
-    # hack: to enable "/fh" style symbols, '/' must be mapped to a [list].
-    # so those who have customized '/' for direct commit won't be affected by
-    # this change.
-    reverse_lookup: "^~[a-z]*:?$"
-    punct: "^~~([0-9]|10|[A-Za-z]+)$"

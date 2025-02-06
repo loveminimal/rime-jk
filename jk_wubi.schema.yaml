@@ -113,11 +113,11 @@ engine:
   # -------------------------------------
   # lua_filter@*prettify_comment
   # lua_filter@*keep_primary_code_first
-  # simplifier                          简繁自动转换
-  # simplifier@emoji                    Emoji
+  # simplifier          简繁自动转换
+  # simplifier@emoji    Emoji
   # simplifier@zh2en
-  # uniquifier                          过滤重复的候选字
-  # simplifier@chaifen                  五笔的拆分滤镜
+  # uniquifier          过滤重复的候选字
+  # simplifier@chaifen  五笔的拆分滤镜
   # -------------------------------------
   filters:
     - lua_filter@*prettify_comment
@@ -129,68 +129,51 @@ engine:
     - simplifier@chaifen  
 
 
-# === 键位绑定 ===
 key_binder:
   import_preset: default
 
-
-# === 识别器 ===
 recognizer:
   __include: jk.yaml:/recognizer
+
+punctuator:
+  __include: jk.yaml:/punctuator
 
 
 # === 拼写处理器 ===
 # -------------------------------------
 # 负责处理输入的字母，将其解析为编码，并与词典匹配
-# speller:
-#   #「✗上屏」允许的输入字符
-#   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
-#   #「✓上屏」只允许做始码的字符，排除 ` 让单个的 ` 可以直接上屏
-#   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-#   delimiter: " z"                        #「分隔符」` ` 空格用于拼音分隔，`z` 可手动分隔拼音
-#   # max_code_length: 4                   # 形码最大码长，超过则顶字上屏，四码顶字上屏
-#   # --- 自动选词及匹配规则「 符合规则的自动上屏 」---
-#   # auto_select: false
-#   # auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
+# alphabet          「✗上屏」允许的输入字符
+# initials          「✓上屏」只允许做始码的字符，排除 ` 让单个的 ` 可以直接上屏
+# delimiter         「分隔符」` ` 空格用于拼音分隔，`z` 可手动分隔拼音
+# max_code_length 形码最大码长，超过则顶字上屏，四码顶字上屏
+# ---
+# 自动选词及匹配规则「 符合规则的自动上屏 」
+# auto_select
+# auto_select_pattern
 # -------------------------------------
 speller:
-  #「✗上屏」允许的输入字符
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
-  #「✓上屏」只允许做始码的字符，排除 ` 让单个的 ` 可以直接上屏
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " z"     
-  # max_code_length: 4
-  # --- 自动选词及匹配规则「 符合规则的自动上屏 」---
-  # auto_select: false
-  # auto_select_pattern: ^[a-z]+/|^[a-df-zA-DF-Z]\w{3}|^e\w{4}|;[a-z]
 
-# === 组合键位 ===
+
 chord_composer:
   __include: jk.yaml:/chord_composer
 
 
-# === 标点符号处理器 ===
-punctuator:
-  __include: jk.yaml:/punctuator
-
-
-# === 每个方案都有一个主 translator ===
 # -------------------------------------
-# translator:
-#   dictionary: jk_wubi                    # 与 wubi86 共用词典，设定 table_translator 使用的词典名
-#   prism: jk_wubi                         # prism 要以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
-#   enable_charset_filter: true            # 是否开启字符集过滤
-#   enable_sentence: true                  # 是否开启自动造句
-#   enable_encoder: true                   # 是否启用特定的编码规则或功能
-#   encode_commit_history: true            # 是否对已上屏词自动成词
-#   # max_phrase_length: 4                 # 候选词的最大长度「对形码无效，形码的词组长度是由码表决定的」
-#   disable_user_dict_for_patterns:        # 禁止某些编码录入用户词典
-#     - "^z.*$"
-#   # ---  
-#   enable_completion: true                # 是否开启自动补全
-#   enable_user_dict: true                 # 是否开启用户词典（用户词典记录动态字词频、用户词）
-#   # db_class: stabledb                   # 只读数据库，无法动态调频；设为 tabledb 可以动态调频
-#   comment_format: "{comment}"            # 使用 {} 作为占位符，可以结合 xform 进行格式转换
+# dictionary                      设定 table_translator 使用的词典名
+# prism                           以本输入方案的名称来命名，以免把 wubi86 的拼写映射覆盖掉
+# enable_charset_filter           是否开启字符集过滤
+# enable_sentence                 是否开启自动造句
+# enable_encoder                  是否启用特定的编码规则或功能
+# encode_commit_history           是否对已上屏词自动成词
+# max_phrase_length               候选词的最大长度「对形码无效，形码的词组长度是由码表决定的」
+# disable_user_dict_for_patterns  禁止某些编码录入用户词典
+# enable_completion               是否开启自动补全
+# enable_user_dict: true          是否开启用户词典（用户词典记录动态字词频、用户词）
+# # db_class: stabledb            只读数据库，无法动态调频；设为 tabledb 可以动态调频
+# comment_format: "{comment}"     使用 {} 作为占位符，可以结合 xform 进行格式转换
 # -------------------------------------
 translator:
   dictionary: jk_wubi             
@@ -209,12 +192,10 @@ translator:
   comment_format: "{comment}" 
 
 
-# === Lua 配置: 日期时间(整合版)的触发关键字 ===
 date_translator:
   jk_datetime: iii
 
 
-# === 反查 ===
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
@@ -225,7 +206,6 @@ custom_phrase:
   __include: jk.yaml:/custom_phrase
 
 
-# === OpenCC ===
 emoji:
   __include: jk.yaml:/emoji
 

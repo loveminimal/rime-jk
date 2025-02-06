@@ -25,12 +25,6 @@ engine:
 pro_comment_format:
   __include: jk_pinyin.schema.yaml:/pro_comment_format
 
-key_binder:
-  __include: jk_pinyin.schema.yaml:/key_binder
-
-recognizer:
-  __include: jk_pinyin.schema.yaml:/recognizer
-
 speller:
   __include: jk_pinyin.schema.yaml:/speller
 
@@ -156,27 +150,34 @@ algebra_zhixin:
 
   - xform/kl(?![左右])$/f右/ # 173
 
-punctuator:
-  __include: jk_pinyin.schema.yaml:/punctuator
 
 translator:
   __include: jk_pinyin.schema.yaml:/translator
   prism: jk_bingji
 
 date_translator:
-  __include: jk_pinyin.schema.yaml:/date_translator
+  jk_datetime: iii
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  __include: jk.yaml:/recognizer
+
+punctuator:
+  __include: jk.yaml:/punctuator
 
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
 custom_phrase:
-  __include: jk_pinyin.schema.yaml:/custom_phrase
+  __include: jk.yaml:/custom_phrase
 
 emoji:
-  __include: jk_pinyin.schema.yaml:/emoji
+  __include: jk.yaml:/emoji
 
 zh2en:
-  __include: jk_pinyin.schema.yaml:/zh2en
+  __include: jk.yaml:/zh2en
 
 chaifen:
-  __include: jk_pinyin.schema.yaml:/chaifen
+  __include: jk.yaml:/chaifen

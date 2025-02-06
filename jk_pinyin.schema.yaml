@@ -57,14 +57,7 @@ pro_comment_format:
   candidate_length: 1
   fuzhu_type: flypy
 
-key_binder:
-  import_preset: default
 
-recognizer:
-  import_preset: default
-  patterns:
-    reverse_lookup: "^~[a-z]*:?$"
-    punct: "^~~([0-9]|10|[A-Za-z]+)$"
 
 speller:
   # [ ✗上屏 ]
@@ -154,10 +147,6 @@ algebra_flypy:
 chord_composer:
   __include: jk.yaml:/chord_composer
 
-punctuator:
-  import_preset: default
-  symbols:
-    __include: symbols_z:/symbols
 
 translator:
   dictionary: jk_pinyin
@@ -175,6 +164,15 @@ translator:
 date_translator:
   jk_datetime: iii
 
+key_binder:
+  import_preset: default
+
+recognizer:
+  __include: jk.yaml:/recognizer
+
+punctuator:
+  __include: jk.yaml:/punctuator
+  
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 

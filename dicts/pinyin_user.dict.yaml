@@ -29,7 +29,7 @@ use_preset_vocabulary: false
 打	da;rs 	1
 但	dan;wj 	1
 到	dao;gc 	1
-的	de;r,rq 	21
+的	de;r,rq 	25
 都	dou;ft 	0
 对	dui;cf 	2
 高	gao;ym 	1
@@ -42,7 +42,7 @@ use_preset_vocabulary: false
 看	kan;rh 	1
 快	kuai;nn 	1
 懒	lan;ng 	1
-了	le;b,bn 	4
+了	le;b,bn 	5
 吗	ma;kc 	1
 你	ni;wq 	0
 偶	ou;wj 	1
@@ -51,7 +51,7 @@ use_preset_vocabulary: false
 人	ren;w,ww 	1
 卅	sa;gk 	1
 啥	sha;kw 	0
-是	shi;j,jg 	8
+是	shi;j,jg 	9
 说	shuo;yu 	0
 淞	song;is 	1
 他	ta;wb 	1
@@ -66,9 +66,9 @@ use_preset_vocabulary: false
 养	yang;ud 	1
 也	ye;bn 	1
 用	yong;et 	6
-有	you;e,de 	1
+有	you;e,de 	2
 于	yu;gf 	0
-在	zai;d,dh 	2
+在	zai;d,dh 	3
 找	zhao;ra 	0
 这	zhe;p,yp 	1
 之	zhi;pp 	1
@@ -77,10 +77,17 @@ use_preset_vocabulary: false
 掉	diao;rh 	0
 已	yi;nn 	1
 至	zhi;gc 	0
+嗯	en;kl 	1
+很	hen;tv 	1
+上	shang;h,hh 	0
+那	na;vf 	0
+位	wei;wu 	0
+云	yun;fc 	0
+早	zao;jh 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	1
 宝安	bao;pg an;pv 	0
-宝子	bao;pg zi;bb 	1
+宝子	bao;pg zi;bb 	3
 本来	ben;sg lai;go 	1
 比较	bi;xx jiao;lu 	2
 毕竟	bi;xx jing;uj 	1
@@ -99,7 +106,7 @@ use_preset_vocabulary: false
 成熟	cheng;dn shu;yb 	1
 重新	chong;tg xin;us 	1
 词典	ci;yn dian;ma 	2
-词库	ci;yn ku;yl 	0
+词库	ci;yn ku;yl 	2
 词频	ci;yn pin;hi 	1
 大的	da;dd de;r,rq 	1
 大概	da;dd gai;sv 	1
@@ -119,8 +126,8 @@ use_preset_vocabulary: false
 过来	guo;fp lai;go 	0
 哈哈	ha;kw ha;kw 	2
 还得	hai;gi de;tj 	1
-还是	hai;gi shi;j,jg 	1
-好的	hao;vb de;r,rq 	1
+还是	hai;gi shi;j,jg 	2
+好的	hao;vb de;r,rq 	2
 好久	hao;vb jiu;qy 	0
 合并	he;wg bing;ua 	2
 很久	hen;tv jiu;qy 	0
@@ -135,7 +142,7 @@ use_preset_vocabulary: false
 快速	kuai;nn su;gk 	1
 论坛	lun;yw tan;ff 	2
 慢慢	man;nj man;nj 	1
-没有	mei;im you;e,de 	1
+没有	mei;im you;e,de 	2
 模型	mo;sa xing;ga 	0
 魔然	mo;ys ran;qd 	1
 那个	na;vf ge;wh 	0
@@ -154,7 +161,7 @@ use_preset_vocabulary: false
 权重	quan;sc zhong;tg 	1
 如何	ru;vk he;ws 	1
 上屏	shang;h,hh ping;nu 	1
-社区	she;py qu;aq 	1
+社区	she;py qu;aq 	2
 声调	sheng;fn diao;ym 	2
 是个	shi;j,jg ge;wh 	1
 是要	shi;j,jg yao;s,sv 	1
@@ -165,7 +172,7 @@ use_preset_vocabulary: false
 顺序	shun;kd xu;yc 	1
 他写	ta;wb xie;pg 	1
 特意	te;tr yi;uj 	1
-万象	wan;dn xiang;qj 	1
+万象	wan;dn xiang;qj 	2
 王勇	wang;gg yong;ce 	2
 我看	wo;q,tr kan;rh 	1
 我是	wo;q,tr shi;j,jg 	1
@@ -201,6 +208,49 @@ use_preset_vocabulary: false
 清理	qing;ig li;gj 	0
 生成	sheng;tg cheng;dn 	1
 文件	wen;yy jian;wr 	0
+不用	bu;i,gi yong;et 	1
+电脑	dian;jn nao;ey 	1
+还行	hai;gi xing;tf 	1
+欢迎	huan;cq ying;qb 	1
+回家	hui;lk jia;pe 	0
+加入	jia;lk ru;ty 	1
+精神	jing;og shen;py 	1
+来了	lai;go le;b,bn 	0
+日常	ri;jj chang;ip 	0
+使用	shi;wg yong;et 	1
+手机	shou;rt ji;sm 	0
+系统	xi;tx tong;xy 	0
+现在	xian;gm zai;d,dh 	0
+一直	yi;g,gg zhi;fh 	0
+自带	zi;th dai;gk 	0
+昨天	zuo;jt tian;gd 	1
+作者	zuo;wt zhe;ft 	1
+不到	bu;i,gi dao;gc 	0
+不然	bu;i,gi ran;qd 	1
+不行	bu;i,gi xing;tf 	1
+不在	bu;i,gi zai;d,dh 	1
+单独	dan;uj du;qt 	0
+导入	dao;nf ru;ty 	1
+对了	dui;cf le;b,bn 	1
+二毛	er;fg mao;tf 	1
+够用	gou;qk yong;et 	1
+好帅	hao;vb shuai;jm 	1
+坚果	jian;jc guo;js 	0
+简纯	jian;tu chun;xg 	1
+哪个	na;kv ge;wh 	1
+你们	ni;wq men;wu 	1
+确实	que;dq shi;pu 	0
+省事	sheng;it shi;gk 	0
+手动	shou;rt dong;fc 	1
+速度	su;gk du;ya 	1
+同步	tong;m,mg bu;hi 	1
+同文	tong;m,mg wen;yy 	1
+我再	wo;q,tr zai;gm 	1
+一套	yi;g,gg tao;dd 	0
+用的	yong;et de;r,rq 	1
+这里	zhe;p,yp li;jf 	1
+只好	zhi;kw hao;vb 	1
+总是	zong;uk shi;j,jg 	0
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -232,7 +282,7 @@ use_preset_vocabulary: false
 有关系	you;e,de guan;ud xi;tx 	1
 有模型	you;e,de mo;sa xing;ga 	1
 有声调	you;e,de sheng;fn diao;ym 	1
-怎么样	zen;th me;tc yang;su 	1
+怎么样	zen;th me;tc yang;su 	2
 这个是	zhe;p,yp ge;wh shi;j,jg 	1
 止步于	zhi;hh bu;hi yu;gf 	1
 转了下	zhuan;lf le;b,bn xia;gh 	1
@@ -240,6 +290,13 @@ use_preset_vocabulary: false
 自定义	zi;th ding;pg yi;yq 	1
 清理掉	qing;ig li;gj diao;rh 	1
 合并至	he;wg bing;ua zhi;gc 	1
+电脑上	dian;jn nao;ey shang;h,hh 	2
+手机上	shou;rt ji;sm shang;h,hh 	4
+一整天	yi;g,gg zheng;gk tian;gd 	1
+不到位	bu;i,gi dao;gc wei;wu 	1
+充其量	chong;yc qi;ad liang;jg 	1
+坚果云	jian;jc guo;js yun;fc 	1
+一般人	yi;g,gg ban;te ren;w,ww 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -255,3 +312,11 @@ use_preset_vocabulary: false
 最初知道	zui;jb chu;pu zhi;td dao;ut 	3
 临时文件	lin;jt shi;jf wen;yy jian;wr 	1
 用户文件	yong;et hu;yn wen;yy jian;wr 	1
+系统自带	xi;tx tong;xy zi;th dai;gk 	1
+单独一套	dan;uj du;qt yi;g,gg tao;dd 	1
+用户词库	yong;et hu;yn ci;yn ku;yl 	1
+总是同步	zong;uk shi;j,jg tong;m,mg bu;hi 	1
+那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
+现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
+之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
+日常使用还是可以的	ri;jj chang;ip shi;wg yong;et hai;gi shi;j,jg ke;sk yi;c,ny de;r,rq 	1

@@ -29,7 +29,7 @@ use_preset_vocabulary: false
 打	da;rs 	3
 但	dan;wj 	1
 到	dao;gc 	2
-的	de;r,rq 	61
+的	de;r,rq 	63
 都	dou;ft 	5
 对	dui;cf 	2
 高	gao;ym 	1
@@ -72,12 +72,12 @@ use_preset_vocabulary: false
 找	zhao;ra 	0
 这	zhe;p,yp 	4
 之	zhi;pp 	1
-中	zhong;k,kh 	7
+中	zhong;k,kh 	8
 转	zhuan;lf 	1
 掉	diao;rh 	1
 已	yi;nn 	1
 至	zhi;gc 	0
-嗯	en;kl 	2
+嗯	en;kl 	3
 很	hen;tv 	1
 上	shang;h,hh 	4
 那	na;vf 	1
@@ -143,8 +143,22 @@ use_preset_vocabulary: false
 没	mei;im 	1
 弄	nong;ga 	0
 事	shi;gk 	1
+卜	bo;hh 	1
+盗	dao;uq 	1
+多	duo;qq 	0
+耳	er;bg 	1
+功	gong;al 	1
+还	hai;gi 	0
+籍	ji;td 	0
+冷	leng;uw 	1
+礼	li;py 	0
+铃	ling;qw 	1
+马	ma;cn 	0
+呢	ne;kn 	1
+算	suan;th 	0
+掩	yan;rd 	1
 按照	an;rp zhao;jv 	1
-俺宝	an;wd bao;pg 	1
+俺宝	an;wd bao;pg 	2
 宝安	bao;pg an;pv 	0
 宝子	bao;pg zi;bb 	3
 本来	ben;sg lai;go 	1
@@ -159,7 +173,7 @@ use_preset_vocabulary: false
 不会	bu;i,gi hui;wf 	0
 不是	bu;i,gi shi;j,jg 	2
 不准	bu;i,gi zhun;uw 	1
-操蛋	cao;rk dan;nh 	1
+操蛋	cao;rk dan;nh 	2
 测试	ce;im shi;ya 	0
 插件	cha;rt jian;wr 	3
 成熟	cheng;dn shu;yb 	1
@@ -253,7 +267,7 @@ use_preset_vocabulary: false
 直接	zhi;fh jie;ru 	2
 止步	zhi;hh bu;hi 	0
 只能	zhi;kw neng;ce 	2
-之处	zhi;pp chu;th 	1
+之处	zhi;pp chu;th 	2
 之后	zhi;pp hou;rg 	1
 之前	zhi;pp qian;ue 	2
 知道	zhi;td dao;ut 	0
@@ -500,6 +514,17 @@ use_preset_vocabulary: false
 映射	ying;jm she;tm 	0
 永远	yong;yn yuan;fq 	1
 只是	zhi;kw shi;j,jg 	1
+不怪	bu;i,gi guai;nc 	0
+成功	cheng;dn gong;al 	0
+成语	cheng;dn yu;yg 	2
+多人	duo;qq ren;w,ww 	0
+多少	duo;qq shao;it 	0
+无名	wu;fq ming;qk 	2
+无疑	wu;fq yi;xt 	1
+下班	xia;gh ban;gy 	0
+显露	xian;jo lu;fk 	1
+用法	yong;et fa;if 	1
+有点	you;e,de dian;hk 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -522,7 +547,7 @@ use_preset_vocabulary: false
 我一直	wo;q,tr yi;g,gg zhi;fh 	1
 我自己	wo;q,tr zi;th ji;nn 	1
 无声调	wu;fq sheng;fn diao;ym 	1
-小词库	xiao;ih ci;yn ku;yl 	2
+小词库	xiao;ih ci;yn ku;yl 	3
 写起来	xie;pg qi;fh lai;go 	1
 也不是	ye;bn bu;i,gi shi;j,jg 	1
 用户词	yong;et hu;yn ci;yn 	1
@@ -633,6 +658,12 @@ use_preset_vocabulary: false
 测试过了	ce;im shi;ya guo;fp le;b,bn 	1
 单字映射	dan;uj zi;pb ying;jm she;tm 	1
 都是之前	dou;ft shi;j,jg zhi;pp qian;ue 	1
+多少算多	duo;qq shao;it suan;th duo;qq 	1
+籍籍无名	ji;td ji;td wu;fq ming;qk 	2
+马到成功	ma;cn dao;gc cheng;dn gong;al 	2
+贼心不死	zei;ma xin;ny bu;i,gi si;gq 	1
+这个确实	zhe;p,yp ge;wh que;dq shi;pu 	1
+足智多谋	zu;kh zhi;td duo;qq mou;ya 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -640,7 +671,9 @@ use_preset_vocabulary: false
 这个是干啥	zhe;p,yp ge;wh shi;j,jg gan;fg sha;kw 	1
 自己写驱动	zi;th ji;nn xie;pg qu;ca dong;fc 	1
 没有覆盖掉	mei;im you;e,de fu;st gai;ug diao;rh 	1
+礼多人不怪	li;py duo;qq ren;w,ww bu;i,gi guai;nc 	2
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
+还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1
 五笔前二辅助码	wu;gg bi;tt qian;ue er;fg fu;lg zhu;eg ma;dc 	1
 日常使用还是可以的	ri;jj chang;ip shi;wg yong;et hai;gi shi;j,jg ke;sk yi;c,ny de;r,rq 	1

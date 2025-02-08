@@ -10,7 +10,7 @@ def get_header_sync(file_name):
 # encoding: utf-8
 # 
 # --- 说明 ---
-# 该字典是基于官方自动同步的用户词典合并排序生成
+# 该字典是基于官方自动同步的用户词典合并排序生成 - 越来越懂你的「养成系」词库
 # - https://github.com/loveminimal/rime-jk
 # - Jack Liu <https://aituyaa.com>
 # 

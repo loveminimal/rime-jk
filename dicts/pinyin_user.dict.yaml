@@ -2,7 +2,7 @@
 # encoding: utf-8
 # 
 # --- 说明 ---
-# 该字典是基于官方自动同步的用户词典合并排序生成
+# 该字典是基于官方自动同步的用户词典合并排序生成 - 越来越懂你的「养成系」词库
 # - https://github.com/loveminimal/rime-jk
 # - Jack Liu <https://aituyaa.com>
 # 
@@ -110,7 +110,7 @@ use_preset_vocabulary: false
 搞	gao;ry 	1
 和	he;t,tk 	3
 虎	hu;ha 	1
-话	hua;yt 	1
+话	hua;yt 	2
 会	hui;wf 	2
 及	ji;ey 	1
 加	jia;lk 	2
@@ -180,9 +180,13 @@ use_preset_vocabulary: false
 庄	zhuang;yf 	3
 走	zou;fh 	0
 变	bian;yo 	1
-地	de;f,fb 	1
+地	de;f,fb 	2
 花	hua;aw 	1
 值	zhi;wf 	1
+点	dian;hk 	1
+靠	kao;tf 	0
+删	shan;mm 	1
+手	shou;rt 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	6
 宝安	bao;pg an;pv 	0
@@ -222,7 +226,7 @@ use_preset_vocabulary: false
 刚需	gang;mq xu;fd 	1
 给我	gei;xw wo;q,tr 	0
 关系	guan;ud xi;tx 	0
-过来	guo;fp lai;go 	0
+过来	guo;fp lai;go 	1
 哈哈	ha;kw ha;kw 	6
 还得	hai;gi de;tj 	1
 还是	hai;gi shi;j,jg 	3
@@ -315,7 +319,7 @@ use_preset_vocabulary: false
 加入	jia;lk ru;ty 	2
 精神	jing;og shen;py 	1
 来了	lai;go le;b,bn 	0
-日常	ri;jj chang;ip 	0
+日常	ri;jj chang;ip 	1
 使用	shi;wg yong;et 	4
 手机	shou;rt ji;sm 	0
 系统	xi;tx tong;xy 	0
@@ -417,7 +421,7 @@ use_preset_vocabulary: false
 覆盖	fu;st gai;ug 	1
 改成	gai;nt cheng;dn 	0
 干啥	gan;fg sha;kw 	0
-个人	ge;wh ren;w,ww 	0
+个人	ge;wh ren;w,ww 	1
 功能	gong;al neng;ce 	4
 固定	gu;ld ding;pg 	1
 好吧	hao;vb ba;kc 	1
@@ -655,6 +659,36 @@ use_preset_vocabulary: false
 尤其	you;dn qi;ad 	1
 只用	zhi;kw yong;et 	1
 之类	zhi;pp lei;od 	1
+不像	bu;i,gi xiang;wq 	0
+词语	ci;yn yu;yg 	1
+当初	dang;iv chu;pu 	0
+定个	ding;pg ge;wh 	1
+给个	gei;xw ge;wh 	1
+够晚	gou;qk wan;jq 	1
+过去	guo;fp qu;fc 	1
+还说	hai;gi shuo;yu 	1
+好用	hao;vb yong;et 	1
+何必	he;ws bi;nt 	0
+记着	ji;yn zhe;ud 	0
+加班	jia;lk ban;gy 	1
+家伙	jia;pe huo;wo 	0
+江湖	jiang;ia hu;id 	1
+看来	kan;rh lai;go 	1
+看着	kan;rh zhe;ud 	0
+来吧	lai;go ba;kc 	1
+老头	lao;ft tou;ud 	0
+老杨	lao;ft yang;sn 	1
+没事	mei;im shi;gk 	1
+魔法	mo;ys fa;if 	0
+那种	na;vf zhong;tk 	1
+闹钟	nao;uy zhong;qk 	1
+你有	ni;wq you;e,de 	1
+奇怪	qi;ds guai;nc 	0
+网站	wang;mq zhan;uh 	1
+雾凇	wu;ft song;us 	1
+夜雨	ye;yw yu;fg 	1
+这有	zhe;p,yp you;e,de 	1
+正在	zheng;gh zai;d,dh 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -786,6 +820,13 @@ use_preset_vocabulary: false
 测试用	ce;im shi;ya yong;et 	1
 大不大	da;dd bu;i,gi da;dd 	1
 我现在	wo;q,tr xian;gm zai;d,dh 	1
+按一下	an;rp yi;g,gg xia;gh 	1
+好家伙	hao;vb jia;pe huo;wo 	1
+好奇怪	hao;vb qi;ds guai;nc 	1
+记着点	ji;yn zhe;ud dian;hk 	1
+靠感觉	kao;tf gan;dg jue;ip 	1
+你要是	ni;wq yao;s,sv shi;j,jg 	1
+养成系	yang;ud cheng;dn xi;tx 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -864,6 +905,13 @@ use_preset_vocabulary: false
 最新版本	zui;jb xin;us ban;th ben;sg 	1
 感觉提升	gan;dg jue;ip ti;rj sheng;ta 	1
 老老实实	lao;ft lao;ft shi;pu shi;pu 	0
+何必当初	he;ws bi;nt dang;iv chu;pu 	1
+看着不像	kan;rh zhe;ud bu;i,gi xiang;wq 	1
+快马加鞭	kuai;nn ma;cn jia;lk bian;af 	1
+魔法词库	mo;ys fa;if ci;yn ku;yl 	1
+你的老头	ni;wq de;r,rq lao;ft tou;ud 	1
+手动维护	shou;rt dong;fc wei;xw hu;ry 	1
+原来如此	yuan;dr lai;go ru;vk ci;hx 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -884,6 +932,7 @@ use_preset_vocabulary: false
 这个可以有	zhe;p,yp ge;wh ke;sk yi;c,ny you;e,de 	1
 你试了没有	ni;wq shi;ya le;b,bn mei;im you;e,de 	1
 我老老实实	wo;q,tr lao;ft lao;ft shi;pu shi;pu 	1
+我去接你去	wo;q,tr qu;fc jie;ru ni;wq qu;fc 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1

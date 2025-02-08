@@ -10,12 +10,7 @@ schema:
     - 知心字符，一款快速输入数字和预设字符的键盘式输入法方案
     - https://github.com/loveminimal/rime-jk
   icon: "assets/pr.ico"
-  ascii_icon: 'assets/ascii.ico'
-
-pro_comment_format:
-  fuzhu_code: true   
-  candidate_length: 1
-  fuzhu_type: en   
+  ascii_icon: 'assets/ascii.ico' 
 
 switches:
   __include: jk.yaml:/switches

@@ -44,19 +44,12 @@ engine:
     - lua_translator@*date_translator
     - lua_translator@*force_gc
   filters:
-    - lua_filter@*pro_comment_format
     - lua_filter@*prettify_comment
     - simplifier
     - simplifier@emoji
     - simplifier@zh2en
     - uniquifier
     - simplifier@chaifen
-
-
-pro_comment_format:
-  fuzhu_code: true
-  candidate_length: 1
-  fuzhu_type: flypy
 
 
 speller:
@@ -160,7 +153,8 @@ translator:
   enable_completion: true
   enable_user_dict: true
   spelling_hints: 1
-  comment_format: "{comment}"
+  comment_format: 
+    - xform/[^;]*;([^;]*)/$1/
 
 
 date_translator:

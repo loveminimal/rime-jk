@@ -22,9 +22,6 @@ switches:
 engine:
   __include: jk_pinyin.schema.yaml:/engine
 
-pro_comment_format:
-  __include: jk_pinyin.schema.yaml:/pro_comment_format
-
 speller:
   __include: jk_pinyin.schema.yaml:/speller
 

@@ -29,7 +29,7 @@ use_preset_vocabulary: false
 打	da;rs 	3
 但	dan;wj 	1
 到	dao;gc 	2
-的	de;r,rq 	74
+的	de;r,rq 	8
 都	dou;ft 	5
 对	dui;cf 	2
 高	gao;ym 	1
@@ -179,6 +179,10 @@ use_preset_vocabulary: false
 镇	zhen;qf 	1
 庄	zhuang;yf 	3
 走	zou;fh 	0
+变	bian;yo 	1
+地	de;f,fb 	1
+花	hua;aw 	1
+值	zhi;wf 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	6
 宝安	bao;pg an;pv 	0
@@ -324,7 +328,7 @@ use_preset_vocabulary: false
 不然	bu;i,gi ran;qd 	1
 不行	bu;i,gi xing;tf 	1
 不在	bu;i,gi zai;d,dh 	1
-单独	dan;uj du;qt 	0
+单独	dan;uj du;qt 	2
 导入	dao;nf ru;ty 	3
 对了	dui;cf le;b,bn 	1
 二毛	er;fg mao;tf 	1
@@ -551,7 +555,7 @@ use_preset_vocabulary: false
 白霜	bai;rr shuang;fs 	1
 保持	bao;wk chi;rf 	1
 保证	bao;wk zheng;yg 	1
-必须	bi;nt xu;ed 	1
+必须	bi;nt xu;ed 	2
 变过	bian;yo guo;fp 	0
 不炒	bu;i,gi chao;oi 	1
 不掉	bu;i,gi diao;rh 	1
@@ -636,6 +640,21 @@ use_preset_vocabulary: false
 走到	zou;fh dao;gc 	0
 最新	zui;jb xin;us 	0
 作为	zuo;wt wei;o,yl 	1
+比如	bi;xx ru;vk 	1
+变了	bian;yo le;b,bn 	1
+改动	gai;nt dong;fc 	2
+给定	gei;xw ding;pg 	1
+规则	gui;fw ze;mj 	1
+试了	shi;ya le;b,bn 	0
+算了	suan;th le;b,bn 	1
+提交	ti;rj jiao;uq 	1
+提升	ti;rj sheng;ta 	0
+修改	xiu;wh gai;nt 	1
+意思	yi;uj si;ln 	1
+影响	ying;jy xiang;kt 	2
+尤其	you;dn qi;ad 	1
+只用	zhi;kw yong;et 	1
+之类	zhi;pp lei;od 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -763,6 +782,10 @@ use_preset_vocabulary: false
 这样想	zhe;p,yp yang;su xiang;sh 	0
 只是把	zhi;kw shi;j,jg ba;rc 	1
 走回来	zou;fh hui;lk lai;go 	1
+不配合	bu;i,gi pei;sg he;wg 	2
+测试用	ce;im shi;ya yong;et 	1
+大不大	da;dd bu;i,gi da;dd 	1
+我现在	wo;q,tr xian;gm zai;d,dh 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -839,6 +862,8 @@ use_preset_vocabulary: false
 知道了吗	zhi;td dao;ut le;b,bn ma;kc 	1
 走到哪儿	zou;fh dao;gc na;kv er;qt 	1
 最新版本	zui;jb xin;us ban;th ben;sg 	1
+感觉提升	gan;dg jue;ip ti;rj sheng;ta 	1
+老老实实	lao;ft lao;ft shi;pu shi;pu 	0
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -857,6 +882,8 @@ use_preset_vocabulary: false
 现在家里冷	xian;gm zai;d,dh jia;pe li;jf leng;uw 	1
 小词库的话	xiao;ih ci;yn ku;yl de;r,rq hua;yt 	1
 这个可以有	zhe;p,yp ge;wh ke;sk yi;c,ny you;e,de 	1
+你试了没有	ni;wq shi;ya le;b,bn mei;im you;e,de 	1
+我老老实实	wo;q,tr lao;ft lao;ft shi;pu shi;pu 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1
@@ -866,8 +893,10 @@ use_preset_vocabulary: false
 没有启用模型	mei;im you;e,de qi;yn yong;et mo;sa xing;ga 	1
 我不是很喜欢	wo;q,tr bu;i,gi shi;j,jg hen;tv xi;fk huan;cq 	1
 用的机会不多	yong;et de;r,rq ji;sm hui;wf bu;i,gi duo;qq 	1
+其实我自己的	qi;ad shi;pu wo;q,tr zi;th ji;nn de;r,rq 	1
 五笔前二辅助码	wu;gg bi;tt qian;ue er;fg fu;lg zhu;eg ma;dc 	1
 资本真的是垃圾	zi;uq ben;sg zhen;fh de;r,rq shi;j,jg la;fu ji;fe 	1
+你还没有下班吗	ni;wq hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1
 但不是绝对用不到	dan;wj bu;i,gi shi;j,jg jue;xq dui;cf yong;et bu;i,gi dao;gc 	1
 反正现在也没有发	fan;rc zheng;gh xian;gm zai;d,dh ye;bn mei;im you;e,de fa;v,nt 	1
 日常使用还是可以的	ri;jj chang;ip shi;wg yong;et hai;gi shi;j,jg ke;sk yi;c,ny de;r,rq 	1

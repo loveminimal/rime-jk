@@ -188,6 +188,9 @@ use_preset_vocabulary: false
 删	shan;mm 	1
 手	shou;rt 	1
 版	ban;th 	0
+丑	chou;nf 	1
+买	mai;nu 	1
+器	qi;kk 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	6
 宝安	bao;pg an;pv 	0
@@ -231,7 +234,7 @@ use_preset_vocabulary: false
 哈哈	ha;kw ha;kw 	6
 还得	hai;gi de;tj 	1
 还是	hai;gi shi;j,jg 	3
-好的	hao;vb de;r,rq 	2
+好的	hao;vb de;r,rq 	3
 好久	hao;vb jiu;qy 	0
 合并	he;wg bing;ua 	2
 很久	hen;tv jiu;qy 	0
@@ -324,7 +327,7 @@ use_preset_vocabulary: false
 使用	shi;wg yong;et 	4
 手机	shou;rt ji;sm 	0
 系统	xi;tx tong;xy 	0
-现在	xian;gm zai;d,dh 	1
+现在	xian;gm zai;d,dh 	2
 一直	yi;g,gg zhi;fh 	0
 自带	zi;th dai;gk 	0
 昨天	zuo;jt tian;gd 	1
@@ -382,7 +385,7 @@ use_preset_vocabulary: false
 也没	ye;bn mei;im 	0
 也是	ye;bn shi;j,jg 	0
 也要	ye;bn yao;s,sv 	1
-一会	yi;g,gg hui;wf 	0
+一会	yi;g,gg hui;wf 	2
 一下	yi;g,gg xia;gh 	3
 一样	yi;g,gg yang;su 	1
 应该	ying;yi gai;yy 	2
@@ -576,7 +579,7 @@ use_preset_vocabulary: false
 的话	de;r,rq hua;yt 	0
 的吗	de;r,rq ma;kc 	0
 复现	fu;tj xian;gm 	0
-感觉	gan;dg jue;ip 	0
+感觉	gan;dg jue;ip 	1
 干活	gan;fg huo;it 	1
 跟班	gen;kh ban;gy 	1
 怪怪	guai;nc guai;nc 	1
@@ -599,7 +602,7 @@ use_preset_vocabulary: false
 快了	kuai;nn le;b,bn 	1
 辣椒	la;ug jiao;sh 	1
 兰花	lan;uf hua;aw 	0
-老妈	lao;ft ma;vc 	1
+老妈	lao;ft ma;vc 	2
 了吗	le;b,bn ma;kc 	0
 链接	lian;ql jie;ru 	0
 链子	lian;ql zi;bb 	1
@@ -706,6 +709,33 @@ use_preset_vocabulary: false
 以下	yi;c,ny xia;gh 	1
 依托	yi;wy tuo;rt 	1
 杂种	za;vs zhong;tk 	1
+按键	an;rp jian;qv 	0
+不错	bu;i,gi cuo;qa 	0
+部署	bu;uk shu;lf 	1
+长度	chang;ta du;ya 	1
+超过	chao;fh guo;fp 	1
+出现	chu;bm xian;gm 	1
+公平	gong;wc ping;gu 	1
+公正	gong;wc zheng;gh 	1
+还能	hai;gi neng;ce 	1
+好了	hao;vb le;b,bn 	1
+键盘	jian;qv pan;te 	1
+经常	jing;x,xc chang;ip 	0
+经典	jing;x,xc dian;ma 	1
+模拟	mo;sa ni;rn 	1
+设置	she;ym zhi;lf 	1
+是真	shi;j,jg zhen;fh 	0
+试试	shi;ya shi;ya 	1
+识别	shi;yk bie;kl 	1
+手敲	shou;rt qiao;ym 	1
+提示	ti;rj shi;fi 	1
+我们	wo;q,tr men;wu 	0
+效果	xiao;uq guo;js 	1
+谢谢	xie;yt xie;yt 	2
+训练	xun;yk lian;xa 	1
+运算	yun;fc suan;th 	1
+真心	zhen;fh xin;ny 	0
+中文	zhong;k,kh wen;yy 	0
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -836,7 +866,7 @@ use_preset_vocabulary: false
 不配合	bu;i,gi pei;sg he;wg 	2
 测试用	ce;im shi;ya yong;et 	1
 大不大	da;dd bu;i,gi da;dd 	1
-我现在	wo;q,tr xian;gm zai;d,dh 	1
+我现在	wo;q,tr xian;gm zai;d,dh 	2
 按一下	an;rp yi;g,gg xia;gh 	1
 好家伙	hao;vb jia;pe huo;wo 	1
 好奇怪	hao;vb qi;ds guai;nc 	1
@@ -849,6 +879,26 @@ use_preset_vocabulary: false
 有一个	you;e,de yi;g,gg ge;wh 	1
 只保留	zhi;kw bao;wk liu;qy 	1
 最适合	zui;jb shi;td he;wg 	1
+不错啊	bu;i,gi cuo;qa a;kb 	0
+不是说	bu;i,gi shi;j,jg shuo;yu 	1
+大家都	da;dd jia;pe dou;ft 	0
+打不出	da;rs bu;i,gi chu;bm 	0
+还真的	hai;gi zhen;fh de;r,rq 	0
+合适的	he;wg shi;td de;r,rq 	1
+就可以	jiu;yi ke;sk yi;c,ny 	1
+模拟器	mo;sa ni;rn qi;kk 	0
+能达到	neng;ce da;dp dao;gc 	0
+能模拟	neng;ce mo;sa ni;rn 	0
+你好吗	ni;wq hao;vb ma;kc 	4
+什么是	shen;wf me;tc shi;j,jg 	0
+是真的	shi;j,jg zhen;fh de;r,rq 	0
+我试试	wo;q,tr shi;ya shi;ya 	1
+想要的	xiang;sh yao;s,sv de;r,rq 	0
+小键盘	xiao;ih jian;qv pan;te 	1
+这就是	zhe;p,yp jiu;yi shi;j,jg 	0
+真不错	zhen;fh bu;i,gi cuo;qa 	1
+只使用	zhi;kw shi;wg yong;et 	1
+知道的	zhi;td dao;ut de;r,rq 	0
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -943,6 +993,17 @@ use_preset_vocabulary: false
 没有什么	mei;im you;e,de shen;wf me;tc 	2
 那不就是	na;vf bu;i,gi jiu;yi shi;j,jg 	1
 吞噬星空	tun;gd shi;kt xing;jt kong;pw 	2
+按键模拟	an;rp jian;qv mo;sa ni;rn 	1
+都挺好的	dou;ft ting;rt hao;vb de;r,rq 	0
+法治社会	fa;if zhi;ic she;py hui;wf 	1
+你是怎么	ni;wq shi;j,jg zen;th me;tc 	1
+是这样啊	shi;j,jg zhe;p,yp yang;su a;kb 	0
+是这样的	shi;j,jg zhe;p,yp yang;su de;r,rq 	0
+随随便便	sui;bd sui;bd bian;wg bian;wg 	1
+训练出来	xun;yk lian;xa chu;bm lai;go 	0
+应该可以	ying;yi gai;yy ke;sk yi;c,ny 	1
+真心不错	zhen;fh xin;ny bu;i,gi cuo;qa 	1
+只有经常	zhi;kw you;e,de jing;x,xc chang;ip 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -966,6 +1027,14 @@ use_preset_vocabulary: false
 我去接你去	wo;q,tr qu;fc jie;ru ni;wq qu;fc 	1
 同文输入法	tong;m,mg wen;yy shu;lw ru;ty fa;if 	1
 在此基础上	zai;d,dh ci;hx ji;ad chu;db shang;h,hh 	1
+打不出中文	da;rs bu;i,gi chu;bm zhong;k,kh wen;yy 	1
+还能模拟成	hai;gi neng;ce mo;sa ni;rn cheng;dn 	1
+什么是公平	shen;wf me;tc shi;j,jg gong;wc ping;gu 	1
+是真不错啊	shi;j,jg zhen;fh bu;i,gi cuo;qa a;kb 	1
+是真的不错	shi;j,jg zhen;fh de;r,rq bu;i,gi cuo;qa 	1
+我就是这样	wo;q,tr jiu;yi shi;j,jg zhe;p,yp yang;su 	0
+训练出来的	xun;yk lian;xa chu;bm lai;go de;r,rq 	1
+这就是公平	zhe;p,yp jiu;yi shi;j,jg gong;wc ping;gu 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1
@@ -976,9 +1045,20 @@ use_preset_vocabulary: false
 我不是很喜欢	wo;q,tr bu;i,gi shi;j,jg hen;tv xi;fk huan;cq 	1
 用的机会不多	yong;et de;r,rq ji;sm hui;wf bu;i,gi duo;qq 	1
 其实我自己的	qi;ad shi;pu wo;q,tr zi;th ji;nn de;r,rq 	1
+是真的不错啊	shi;j,jg zhen;fh de;r,rq bu;i,gi cuo;qa a;kb 	2
+我们都挺好的	wo;q,tr men;wu dou;ft ting;rt hao;vb de;r,rq 	1
 五笔前二辅助码	wu;gg bi;tt qian;ue er;fg fu;lg zhu;eg ma;dc 	1
 资本真的是垃圾	zi;uq ben;sg zhen;fh de;r,rq shi;j,jg la;fu ji;fe 	1
 你还没有下班吗	ni;wq hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1
+才能达到想要的	cai;ft neng;ce da;dp dao;gc xiang;sh yao;s,sv de;r,rq 	1
+大家都是这样的	da;dd jia;pe dou;ft shi;j,jg zhe;p,yp yang;su de;r,rq 	1
+还有什么想说的	hai;gi you;e,de shen;wf me;tc xiang;sh shuo;yu de;r,rq 	0
+还真的是这样啊	hai;gi zhen;fh de;r,rq shi;j,jg zhe;p,yp yang;su a;kb 	1
+你是怎么知道的	ni;wq shi;j,jg zen;th me;tc zhi;td dao;ut de;r,rq 	1
+这个按键模拟器	zhe;p,yp ge;wh an;rp jian;qv mo;sa ni;rn qi;kk 	1
+这个键盘模拟器	zhe;p,yp ge;wh jian;qv pan;te mo;sa ni;rn qi;kk 	2
 但不是绝对用不到	dan;wj bu;i,gi shi;j,jg jue;xq dui;cf yong;et bu;i,gi dao;gc 	1
 反正现在也没有发	fan;rc zheng;gh xian;gm zai;d,dh ye;bn mei;im you;e,de fa;v,nt 	1
+我就是这样知道的	wo;q,tr jiu;yi shi;j,jg zhe;p,yp yang;su zhi;td dao;ut de;r,rq 	1
 日常使用还是可以的	ri;jj chang;ip shi;wg yong;et hai;gi shi;j,jg ke;sk yi;c,ny de;r,rq 	1
+你还有什么想说的吗	ni;wq hai;gi you;e,de shen;wf me;tc xiang;sh shuo;yu de;r,rq ma;kc 	1

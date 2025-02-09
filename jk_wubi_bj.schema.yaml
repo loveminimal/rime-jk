@@ -1,0 +1,67 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jk_wubi_bj
+  name: 五笔·并击
+  author: 
+    - 修改者 Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心五笔「并击版」，五笔·拼音混输，小啊小女仆
+    - https://github.com/loveminimal/rime-jk
+
+    参考方案及详解：
+    - https://github.com/rime/rime-wubi
+    - https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
+  dependencies:
+    - jk_ascii
+    - jk_pinyin
+  icon: 'assets/jk.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk_wubi.schema.yaml:/switches
+
+engine:
+  __include: jk_wubi.schema.yaml:/engine
+
+speller:
+  __include: jk_wubi.schema.yaml:/speller
+
+
+# === 并击 - 多键 ===
+chord_composer:
+  __include: jk.yaml:/chord_composer
+
+
+translator:
+  __include: jk_wubi.schema.yaml:/translator
+  prism: jk_wubi_bj
+
+
+date_translator:
+  __include: jk_wubi.schema.yaml:/date_translator
+
+key_binder:
+  __include: jk_wubi.schema.yaml:/key_binder
+
+recognizer:
+  __include: jk_wubi.schema.yaml:/recognizer
+
+punctuator:
+  __include: jk_wubi.schema.yaml:/punctuator
+
+reverse_lookup:
+  __include: jk_wubi.schema.yaml:/reverse_lookup
+
+custom_phrase:
+  __include: jk_wubi.schema.yaml:/custom_phrase
+
+emoji:
+  __include: jk_wubi.schema.yaml:/emoji
+
+zh2en:
+  __include: jk_wubi.schema.yaml:/zh2en
+
+chaifen:
+  __include: jk_wubi.schema.yaml:/chaifen

@@ -180,13 +180,14 @@ use_preset_vocabulary: false
 庄	zhuang;yf 	3
 走	zou;fh 	0
 变	bian;yo 	1
-地	de;f,fb 	2
+地	de;f,fb 	3
 花	hua;aw 	1
 值	zhi;wf 	1
 点	dian;hk 	1
 靠	kao;tf 	0
 删	shan;mm 	1
 手	shou;rt 	1
+版	ban;th 	0
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	6
 宝安	bao;pg an;pv 	0
@@ -569,7 +570,7 @@ use_preset_vocabulary: false
 部分	bu;uk fen;wv 	0
 超凡	chao;fh fan;my 	0
 出词	chu;bm ci;yn 	1
-词汇	ci;yn hui;ia 	0
+词汇	ci;yn hui;ia 	1
 葱花	cong;aq hua;aw 	1
 大学	da;dd xue;ip 	1
 的话	de;r,rq hua;yt 	0
@@ -689,6 +690,22 @@ use_preset_vocabulary: false
 夜雨	ye;yw yu;fg 	1
 这有	zhe;p,yp you;e,de 	1
 正在	zheng;gh zai;d,dh 	1
+不断	bu;i,gi duan;on 	1
+才是	cai;ft shi;j,jg 	1
+方式	fang;yy shi;aa 	0
+基础	ji;ad chu;db 	0
+进化	jin;fj hua;wx 	0
+精进	jing;og jin;fj 	1
+口味	kou;kk wei;kf 	0
+炼化	lian;oa hua;wx 	1
+每夜	mei;tx ye;yw 	0
+适合	shi;td he;wg 	0
+吞噬	tun;gd shi;kt 	0
+万能	wan;dn neng;ce 	1
+星空	xing;jt kong;pw 	0
+以下	yi;c,ny xia;gh 	1
+依托	yi;wy tuo;rt 	1
+杂种	za;vs zhong;tk 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -826,8 +843,12 @@ use_preset_vocabulary: false
 记着点	ji;yn zhe;ud dian;hk 	1
 靠感觉	kao;tf gan;dg jue;ip 	1
 你要是	ni;wq yao;s,sv shi;j,jg 	1
-养成系	yang;ud cheng;dn xi;tx 	1
+养成系	yang;ud cheng;dn xi;tx 	2
 用心做	yong;et xin;ny zuo;wd 	0
+每夜版	mei;tx ye;yw ban;th 	1
+有一个	you;e,de yi;g,gg ge;wh 	1
+只保留	zhi;kw bao;wk liu;qy 	1
+最适合	zui;jb shi;td he;wg 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -914,10 +935,18 @@ use_preset_vocabulary: false
 手动维护	shou;rt dong;fc wei;xw hu;ry 	1
 原来如此	yuan;dr lai;go ru;vk ci;hx 	1
 用心做事	yong;et xin;ny zuo;wd shi;gk 	1
+个人口味	ge;wh ren;w,ww kou;kk wei;kf 	1
+基础词库	ji;ad chu;db ci;yn ku;yl 	1
+进化方式	jin;fj hua;wx fang;yy shi;aa 	1
+就是一个	jiu;yi shi;j,jg yi;g,gg ge;wh 	1
+绝对适合	jue;xq dui;cf shi;td he;wg 	1
+没有什么	mei;im you;e,de shen;wf me;tc 	2
+那不就是	na;vf bu;i,gi jiu;yi shi;j,jg 	1
+吞噬星空	tun;gd shi;kt xing;jt kong;pw 	2
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
-越来越懂你	yue;fh lai;go yue;fh dong;na ni;wq 	1
+越来越懂你	yue;fh lai;go yue;fh dong;na ni;wq 	2
 这个是干啥	zhe;p,yp ge;wh shi;j,jg gan;fg sha;kw 	1
 自己写驱动	zi;th ji;nn xie;pg qu;ca dong;fc 	1
 没有覆盖掉	mei;im you;e,de fu;st gai;ug diao;rh 	1
@@ -935,6 +964,8 @@ use_preset_vocabulary: false
 你试了没有	ni;wq shi;ya le;b,bn mei;im you;e,de 	1
 我老老实实	wo;q,tr lao;ft lao;ft shi;pu shi;pu 	1
 我去接你去	wo;q,tr qu;fc jie;ru ni;wq qu;fc 	1
+同文输入法	tong;m,mg wen;yy shu;lw ru;ty fa;if 	1
+在此基础上	zai;d,dh ci;hx ji;ad chu;db shang;h,hh 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1

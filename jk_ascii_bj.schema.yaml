@@ -22,9 +22,9 @@ speller:
   __include: jk_ascii.schema.yaml:/speller
 
 
-# --- 并击指法 ---
+# === 并击 - 多键 ===
 chord_composer:
-  __include: jk_bingji.schema.yaml:/chord_composer
+  __include: jk.yaml:/chord_composer
 
 
 translator:

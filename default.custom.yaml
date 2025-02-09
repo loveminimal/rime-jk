@@ -19,7 +19,7 @@ patch:
     - {schema: jk_ascii_bj}
     # - {schema: jk_wubi}
     # - {schema: jk_pinyin}
-    - {schema: jk_bingji}
+    - {schema: jk_pinyin_bj}
 
 
   # === 候选相关 ===

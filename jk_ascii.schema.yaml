@@ -55,7 +55,7 @@ speller:
 
 chord_composer:
   __include: jk.yaml:/chord_composer_mini
-  # __include: jk_bingji.schema.yaml:/chord_composer
+  # __include: jk_pinyin_bj.schema.yaml:/chord_composer
 
 
 translator:

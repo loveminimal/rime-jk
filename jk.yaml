@@ -104,6 +104,7 @@ custom_phrase:
 # 
 # https://github.com/gaboolic/rime-shuangpin-fuzhuma
 # -------------------------------------
+# --- 迷你版 ---
 chord_composer_mini:
   prompt_format:
     - "xform/^(.*)$/[$1]/" 
@@ -121,6 +122,123 @@ chord_composer_mini:
     - xform/z;(?![左右])$/Z右/
     - xform/r;(?![左右])$/~右/
 
+# --- 完整版 ---
+# -------------------------------------
+# ① 知心键位      algebra_zhixin 「兼容正常串击键位 ✓」
+# ② 空明码键位  algebra_kongming 「兼容正常串击键位 ✗」
+# -------------------------------------
+chord_composer:
+  prompt_format:
+    - "xform/^(.*)$/[$1]/" 
+  output_format:
+    - "xform/^(.*)左/$1/"
+    - "xform/^(.*)右$/$1/"
+    - "xform/^(.*)左(.*)右$/$1$2/"
+  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
+  algebra:
+    __include: algebra_kongming
+
+algebra_kongming:
+  # --- 修改为空明码键位 ---
+  # 定义左手15键       
+  - xform/^ef(?![左右])/y左/
+  - xform/^er(?![左右])/u左/
+  - xform/^we(?![左右])/i左/
+  - xform/^wr(?![左右])/o左/
+  - xform/^qr(?![左右])/p左/
+
+  - xform/^wf(?![左右])/h左/
+  - xform/^df(?![左右])/j左/
+  - xform/^sd(?![左右])/k左/
+  - xform/^sf(?![左右])/l左/
+  - xform/^af(?![左右])/;左/
+
+  - xform|^zv(?![左右])|/左| 
+  - xform/^sc(?![左右])/n左/
+  - xform/^cv(?![左右])/m左/ 
+  - xform/^xc(?![左右])/,左/ 
+  - xform/^xv(?![左右])/.左/ 
+
+  # 定义右手15+15键
+  - xform/ji(?![左右])$/y右/
+  - xform/ui(?![左右])$/u右/
+  - xform/io(?![左右])$/i右/
+  - xform/uo(?![左右])$/o右/
+  - xform/up(?![左右])$/p右/
+
+  - xform/jo(?![左右])$/h右/
+  - xform/jk(?![左右])$/j右/
+  - xform/kl(?![左右])$/k右/
+  - xform/jl(?![左右])$/l右/
+  - xform/j;(?![左右])$/;右/    
+
+  - xform|m/(?![左右])$|/右|
+  - xform/ml(?![左右])$/n右/
+  - xform/m,(?![左右])$/m右/
+  - xform/,.(?![左右])$/,右/
+  - xform/m.(?![左右])$/.右/
+
+  - xform/p(?![左右])$/q右/
+  - xform/o(?![左右])$/w右/
+  - xform/i(?![左右])$/e右/
+  - xform/u(?![左右])$/r右/
+  - xform/y(?![左右])$/t右/
+
+  - xform/;(?![左右])$/a右/
+  - xform/l(?![左右])$/s右/
+  - xform/k(?![左右])$/d右/
+  - xform/j(?![左右])$/f右/
+  - xform/h(?![左右])$/g右/
+
+  - xform|/(?![左右])$|z右|
+  - xform/\.(?![左右])$/x右/
+  - xform/,(?![左右])$/c右/
+  - xform/m(?![左右])$/v右/
+  - xform/n(?![左右])$/b右/
+
+algebra_zhixin:
+  # --- 修改为知心键位 ---
+  # 定义左手15键       
+  - xform/^ef(?![左右])/y左/
+  - xform/^wf(?![左右])/u左/
+  - xform/^wef(?![左右])/i左/
+  - xform/^we(?![左右])/o左/
+  - xform/^wr(?![左右])/p左/
+
+  - xform/^df(?![左右])/h左/
+  - xform/^sf(?![左右])/j左/
+  - xform/^sdf(?![左右])/k左/
+  # - xform/^sd(?![左右])/l左/
+  - xform/^af(?![左右])/;左/
+
+  - xform/^dv(?![左右])/n左/
+  - xform/^sv(?![左右])/m左/ 
+  - xform/^sdv(?![左右])/,左/ 
+  - xform/^dc(?![左右])/.左/ 
+  - xform/^sc(?![左右])/?左/ 
+
+  - xform/^sd(?![左右])/l左/
+
+  # 定义右手15键
+  - xform/ji(?![左右])$/q右/
+  - xform/jo(?![左右])$/w右/
+  - xform/jio(?![左右])$/e右/
+  - xform/io(?![左右])$/r右/
+  - xform/uo(?![左右])$/t右/
+
+  - xform/jk(?![左右])$/a右/
+  - xform/jl(?![左右])$/s右/
+  - xform/jkl(?![左右])$/d右/
+  # - xform/kl(?![左右])$/f右/
+  - xform/j;(?![左右])$/g右/    
+
+  - xform/nk(?![左右])$/z右/
+  - xform/nl(?![左右])$/x右/
+  - xform/nkl(?![左右])$/c右/
+  - xform/mk(?![左右])$/v右/
+  - xform/ml(?![左右])$/b右/
+
+  - xform/kl(?![左右])$/f右/
 
 # === OpenCC ===
 # -------------------------------------

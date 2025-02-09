@@ -1,0 +1,64 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jk_pinyin_bj
+  name: 拼音·并击
+  author:
+    - by Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心拼音「并击版」，并击·小鹤+五笔前二辅助码，小啊小并击
+    - 基于袖珍简化字拼音及自制通规8105单字表
+    - 支持全拼
+    - 小鹤双拼+五笔前二增强版「 默认 」
+  dependencies:
+    - jk_ascii
+  icon: 'assets/fly_m.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk_pinyin.schema.yaml:/switches
+
+engine:
+  __include: jk_pinyin.schema.yaml:/engine
+
+speller:
+  __include: jk_pinyin.schema.yaml:/speller
+
+
+# === 并击 - 多键 ===
+chord_composer:
+  __include: jk.yaml:/chord_composer
+
+
+translator:
+  __include: jk_pinyin.schema.yaml:/translator
+  prism: jk_pinyin_bj
+
+
+date_translator:
+  __include: jk_pinyin.schema.yaml:/date_translator
+
+key_binder:
+  __include: jk_pinyin.schema.yaml:/key_binder
+
+recognizer:
+  __include: jk_pinyin.schema.yaml:/recognizer
+
+punctuator:
+  __include: jk_pinyin.schema.yaml:/punctuator
+
+reverse_lookup:
+  __include: jk_pinyin.schema.yaml:/reverse_lookup
+
+custom_phrase:
+  __include: jk_pinyin.schema.yaml:/custom_phrase
+
+emoji:
+  __include: jk_pinyin.schema.yaml:/emoji
+
+zh2en:
+  __include: jk_pinyin.schema.yaml:/zh2en
+
+chaifen:
+  __include: jk_pinyin.schema.yaml:/chaifen

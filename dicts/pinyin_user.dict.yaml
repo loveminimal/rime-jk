@@ -216,6 +216,14 @@ use_preset_vocabulary: false
 玩	wan;gf 	1
 演	yan;ip 	1
 坠	zhui;bw 	0
+笔	bi;tt 	1
+此	ci;hx 	1
+环	huan;gg 	1
+双	shuang;cc 	1
+图	tu;lt 	1
+五	wu;gg 	1
+形	xing;ga 	1
+圆	yuan;lk 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	6
 宝安	bao;pg an;pv 	0
@@ -263,7 +271,7 @@ use_preset_vocabulary: false
 好久	hao;vb jiu;qy 	0
 合并	he;wg bing;ua 	2
 很久	hen;tv jiu;qy 	0
-获取	huo;aq qu;bc 	0
+获取	huo;aq qu;bc 	1
 活跃	huo;it yue;kh 	1
 几个	ji;mt ge;wh 	2
 加一	jia;lk yi;g,gg 	1
@@ -602,7 +610,7 @@ use_preset_vocabulary: false
 葱花	cong;aq hua;aw 	1
 大学	da;dd xue;ip 	1
 的话	de;r,rq hua;yt 	0
-的吗	de;r,rq ma;kc 	0
+的吗	de;r,rq ma;kc 	1
 复现	fu;tj xian;gm 	0
 感觉	gan;dg jue;ip 	1
 干活	gan;fg huo;it 	1
@@ -671,7 +679,7 @@ use_preset_vocabulary: false
 准确	zhun;uw que;dq 	1
 资本	zi;uq ben;sg 	0
 走到	zou;fh dao;gc 	0
-最新	zui;jb xin;us 	0
+最新	zui;jb xin;us 	1
 作为	zuo;wt wei;o,yl 	1
 比如	bi;xx ru;vk 	1
 变了	bian;yo le;b,bn 	1
@@ -899,6 +907,23 @@ use_preset_vocabulary: false
 这些	zhe;p,yp xie;hx 	0
 殖畜	zhi;gq chu;yx 	3
 字符	zi;pb fu;tw 	1
+白领	bai;rr ling;wy 	1
+不易	bu;i,gi yi;jq 	1
+补卡	bu;pu ka;hh 	0
+查询	cha;sj xun;yq 	1
+回写	hui;lk xie;pg 	2
+简直	jian;tu zhi;fh 	1
+接口	jie;ru kou;kk 	1
+绝配	jue;xq pei;sg 	1
+美女	mei;ug nv;vv 	1
+女仆	nv;vv pu;wh 	2
+前端	qian;ue duan;um 	1
+三国	san;dg guo;l,lg 	2
+同心	tong;m,mg xin;ny 	1
+续期	xu;xf qi;ad 	1
+圆环	yuan;lk huan;gg 	1
+证书	zheng;yg shu;nn 	1
+状态	zhuang;ud tai;dy 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -1135,6 +1160,12 @@ use_preset_vocabulary: false
 挺好看	ting;rt hao;vb kan;rh 	1
 我已经	wo;q,tr yi;nn jing;x,xc 	1
 炸鸡叔	zha;ot ji;cq shu;hi 	1
+不用管	bu;i,gi yong;et guan;tp 	1
+补卡单	bu;pu ka;hh dan;uj 	1
+重码率	chong;tg ma;dc lv;yx 	1
+水冰月	shui;ii bing;ui yue;ee 	1
+以前的	yi;c,ny qian;ue de;r,rq 	0
+有可能	you;e,de ke;sk neng;ce 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -1277,6 +1308,7 @@ use_preset_vocabulary: false
 与众不同	yu;gn zhong;ww bu;i,gi tong;m,mg 	1
 在哪儿了	zai;d,dh na;kv er;qt le;b,bn 	1
 这个东西	zhe;p,yp ge;wh dong;ai xi;sg 	1
+这个也是	zhe;p,yp ge;wh ye;bn shi;j,jg 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -1328,6 +1360,7 @@ use_preset_vocabulary: false
 我们都知道	wo;q,tr men;wu dou;ft zhi;td dao;ut 	1
 一些三字词	yi;g,gg xie;hx san;dg zi;pb ci;yn 	1
 走下操坠贬	zou;fh xia;gh cao;rk zhui;bw bian;mt 	1
+以前的那种	yi;c,ny qian;ue de;r,rq na;vf zhong;tk 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1

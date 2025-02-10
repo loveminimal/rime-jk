@@ -134,13 +134,18 @@ chord_composer:
     - "xform/^(.*)左/$1/"
     - "xform/^(.*)右$/$1/"
     - "xform/^(.*)左(.*)右$/$1$2/"
-  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
+  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p/'1234567890"
   algebra:
     __include: algebra_kongming
 
 algebra_kongming:
   # --- 修改为空明码键位 ---
-  # 定义左手15键       
+  # --- 定义左手15键 + 数字5键 ---
+  # 3个字符组合键需放在最前
+  - xform/^ser(?![左右])/U左/
+  - xform/^wef(?![左右])/I左/
+
+
   - xform/^ef(?![左右])/y左/
   - xform/^er(?![左右])/u左/
   - xform/^we(?![左右])/i左/
@@ -159,7 +164,52 @@ algebra_kongming:
   - xform/^xc(?![左右])/,左/ 
   - xform/^xv(?![左右])/.左/ 
 
-  # 定义右手15+15键
+  # 数字区
+  - xform/^45(?![左右])/6左/ 
+  - xform/^34(?![左右])/7左/ 
+  - xform/^23(?![左右])/8左/ 
+  - xform/^24(?![左右])/9左/ 
+  - xform/^14(?![左右])/0左/ 
+
+  # 大写区
+  - xform/^qv(?![左右])/Q左/
+  - xform/^wv(?![左右])/W左/
+  - xform/^ev(?![左右])/E左/
+  - xform/^et(?![左右])/R左/
+  - xform/^qt(?![左右])/T左/
+  - xform/^wt(?![左右])/Y左/
+  # - xform/^ser(?![左右])/U左/
+  # - xform/^wef(?![左右])/I左/
+  - xform/^aw(?![左右])/O左/
+  - xform/^qf(?![左右])/P左/
+  
+  - xform/^av(?![左右])/A左/
+  - xform/^sv(?![左右])/S左/
+  - xform/^dv(?![左右])/D左/
+  - xform/^sg(?![左右])/F左/
+  - xform/^dg(?![左右])/G左/
+  - xform/^ar(?![左右])/H左/
+  - xform/^xf(?![左右])/J左/
+  - xform/^dr(?![左右])/K左/
+  - xform/^sr(?![左右])/L左/
+  - xform/^as(?![左右])/;左/
+
+  - xform/^zf(?![左右])/Z左/
+  - xform/^xd(?![左右])/X左/
+  - xform/^ac(?![左右])/C左/
+  - xform/^zs(?![左右])/V左/
+  - xform/^qw(?![左右])/B左/
+  - xform/^se(?![左右])/N左/
+  - xform/^wd(?![左右])/M左/
+  - xform/^at(?![左右])/,左/
+  - xform/^ag(?![左右])/.左/
+  - xform|^zx(?![左右])|/左|
+
+  # --- 定义右手15+15键 + 数字10键 ---
+  # 3个字符组合键需放在最前
+  - xform/uil(?![左右])$/U右/
+  - xform/jio(?![左右])$/I右/
+
   - xform/ji(?![左右])$/y右/
   - xform/ui(?![左右])$/u右/
   - xform/io(?![左右])$/i右/
@@ -175,9 +225,57 @@ algebra_kongming:
   - xform|m/(?![左右])$|/右|
   - xform/ml(?![左右])$/n右/
   - xform/m,(?![左右])$/m右/
-  - xform/,.(?![左右])$/,右/
-  - xform/m.(?![左右])$/.右/
+  - xform/,\.(?![左右])$/,右/
+  - xform/m\.(?![左右])$/.右/
 
+  # 数字区
+  - xform/67(?![左右])$/6右/
+  - xform/78(?![左右])$/7右/
+  - xform/89(?![左右])$/8右/
+  - xform/79(?![左右])$/9右/
+  - xform/70(?![左右])$/0右/
+
+  - xform/6(?![左右])$/5右/
+  - xform/7(?![左右])$/4右/
+  - xform/8(?![左右])$/3右/
+  - xform/9(?![左右])$/2右/
+  - xform/0(?![左右])$/1右/
+
+  # 大写区
+  - xform/mp(?![左右])$/Q右/
+  - xform/mo(?![左右])$/W右/
+  - xform/mi(?![左右])$/E右/
+  - xform/yi(?![左右])$/R右/
+  - xform/yp(?![左右])$/T右/
+  - xform/yo(?![左右])$/Y右/
+  # - xform/uil(?![左右])$/U右/
+  # - xform/jio(?![左右])$/I右/
+  - xform/o;(?![左右])$/O右/
+  - xform/jp(?![左右])$/P右/
+  
+  - xform/m;(?![左右])$/A右/
+  - xform/nl(?![左右])$/S右/
+  - xform/mk(?![左右])$/D右/
+  - xform/hl(?![左右])$/F右/
+  - xform/hk(?![左右])$/G右/
+  - xform/u;(?![左右])$/H右/
+  - xform/j\.(?![左右])$/J右/
+  - xform/uk(?![左右])$/K右/
+  - xform/ul(?![左右])$/L右/
+  - xform/l;(?![左右])$/；右/
+
+  - xform|j/(?![左右])$|Z右|
+  - xform/k\.(?![左右])$/X右/
+  - xform/,;(?![左右])$/C右/
+  - xform|l/(?![左右])$|V右|
+  - xform/op(?![左右])$/B右/
+  - xform/il(?![左右])$/N右/
+  - xform/ko(?![左右])$/M右/
+  - xform/y;(?![左右])$/，右/
+  - xform/h;(?![左右])$/。右/
+  - xform|\./(?![左右])$|／右|
+
+  # 镜像15键〔要放在最后〕
   - xform/p(?![左右])$/q右/
   - xform/o(?![左右])$/w右/
   - xform/i(?![左右])$/e右/
@@ -239,6 +337,7 @@ algebra_zhixin:
   - xform/ml(?![左右])$/b右/
 
   - xform/kl(?![左右])$/f右/
+
 
 # === OpenCC ===
 # -------------------------------------

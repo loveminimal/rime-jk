@@ -45,7 +45,7 @@ speller:
   # [ ✗上屏 ]
   # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
   # alphabet: ·
-  alphabet: Z~
+  alphabet: ~ 
   # alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   # alphabet: zZYXWVUTSRQPONMLKJIHGFEDCBA
   # [ ✓上屏 ]

@@ -93,7 +93,7 @@ engine:
   # --- 处理候选词列表「调整、修改、排序、筛选、转换」候选词 ---
   filters:
     - lua_filter@*prettify_comment
-    - lua_filter@*keep_primary_code_first
+    # - lua_filter@*keep_primary_code_first
     - simplifier         
     - simplifier@emoji   
     - simplifier@zh2en

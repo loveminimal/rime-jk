@@ -47,6 +47,8 @@ use_preset_vocabulary: false
 我	q 	1
 送	udp 	1
 让	yh 	1
+宝	pgy 	1
+俺	wdjn 	1
 你好	wqvb 	1
 中国	khlg 	3
 取得	bctj 	1
@@ -58,7 +60,7 @@ use_preset_vocabulary: false
 存在	dhdh 	1
 形码	gadc 	1
 玩意	gfuj 	1
-五笔	ggtt 	1
+五笔	ggtt 	2
 最好	jbvb 	1
 时候	jfwh 	1
 跟进	khfj 	1
@@ -83,6 +85,10 @@ use_preset_vocabulary: false
 燃气	oqrn 	1
 失败	rwmt 	1
 女仆	vvwh 	1
+用去	etfc 	1
+用来	etgo 	1
+还是	gijg 	1
+俺宝	wdpg 	4
 最大值	jdwf 	1
 输入法	ltif 	1
 中华人民共和国	kwwl 	1

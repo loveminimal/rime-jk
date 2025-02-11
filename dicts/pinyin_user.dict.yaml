@@ -488,7 +488,7 @@ use_preset_vocabulary: false
 单字	dan;uj zi;pb 	4
 地方	di;f,fb fang;yy 	1
 敌人	di;td ren;w,ww 	1
-都是	dou;ft shi;j,jg 	5
+都是	dou;ft shi;j,jg 	6
 读取	du;yf qu;bc 	1
 读入	du;yf ru;ty 	0
 对的	dui;cf de;r,rq 	1
@@ -503,7 +503,7 @@ use_preset_vocabulary: false
 功能	gong;al neng;ce 	4
 固定	gu;ld ding;pg 	1
 好吧	hao;vb ba;kc 	1
-好多	hao;vb duo;qq 	1
+好多	hao;vb duo;qq 	2
 好看	hao;vb kan;rh 	2
 好嘛	hao;vb ma;ky 	3
 好像	hao;vb xiang;wq 	1
@@ -1072,6 +1072,8 @@ use_preset_vocabulary: false
 语速	yu;yg su;gk 	1
 元素	yuan;fq su;gx 	1
 这周	zhe;p,yp zhou;mf 	1
+历史	li;dl shi;kq 	0
+项目	xiang;ad mu;hh 	0
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -1369,6 +1371,7 @@ use_preset_vocabulary: false
 年前的	nian;rh qian;ue de;r,rq 	1
 通行证	tong;ce xing;tf zheng;yg 	1
 咋想的	za;kt xiang;sh de;r,rq 	1
+你是谁	ni;wq shi;j,jg shei;yw 	0
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	1
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -1524,6 +1527,8 @@ use_preset_vocabulary: false
 元素定位	yuan;fq su;gx ding;pg wei;wu 	1
 只是一个	zhi;kw shi;j,jg yi;g,gg ge;wh 	1
 自己写的	zi;th ji;nn xie;pg de;r,rq 	1
+历史项目	li;dl shi;kq xiang;ad mu;hh 	4
+你是谁呢	ni;wq shi;j,jg shei;yw ne;kn 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1

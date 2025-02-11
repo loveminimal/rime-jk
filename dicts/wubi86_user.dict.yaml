@@ -32,9 +32,9 @@ use_preset_vocabulary: false
 厂	dgt 	1
 页	dmu 	1
 一	g 	1
-不	gi 	1
+不	gi 	2
 上	h 	1
-是	j 	2
+是	j 	3
 这	p 	1
 儿	qt 	1
 按	rpv 	1
@@ -49,6 +49,11 @@ use_preset_vocabulary: false
 让	yh 	1
 宝	pgy 	1
 俺	wdjn 	1
+在	d 	2
+都	ftjb 	1
+来	go 	2
+呢	knx 	1
+你	wq 	6
 你好	wqvb 	1
 中国	khlg 	3
 取得	bctj 	1
@@ -89,6 +94,12 @@ use_preset_vocabulary: false
 用来	etgo 	1
 还是	gijg 	1
 俺宝	wdpg 	4
+一样	ggsu 	1
+来不	gogi 	2
+知道	tdut 	2
+怎么	thtc 	2
+我们	trwu 	2
 最大值	jdwf 	1
 输入法	ltif 	1
+来不来	gggo 	1
 中华人民共和国	kwwl 	1

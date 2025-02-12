@@ -1,7 +1,7 @@
---[[
-keep_primary_code_first: 保持五笔 86 的一级简码排在最前
+--[[ 
+keep_primary_code_first: 保持五笔 86 的一级简码对应的汉字在候选列表首位
 by Jack Liu <https://aituyaa.com>
---]] 
+--]]
 
 local primary_code_table = {
     ["g"] = "一", ["f"] = "地", ["d"] = "在", ["s"] = "要", ["a"] = "工",
@@ -22,8 +22,10 @@ function keep_primary_code_first(input, env)
         if primary_char then
             local new_candidates = {}
             local found = false
-            -- 遍历原始候选列表
+            local count = 0
+            -- 遍历前 4 个候选项
             for cand in input:iter() do
+                count = count + 1
                 if cand.text == primary_char then
                     -- 若找到一级简码字符，将其置于新候选列表首位
                     table.insert(new_candidates, 1, cand)
@@ -31,6 +33,9 @@ function keep_primary_code_first(input, env)
                 else
                     -- 其他候选词依次添加到新候选列表
                     table.insert(new_candidates, cand)
+                end
+                if count >= 4 then
+                    break
                 end
             end
             -- 若找到一级简码字符，输出新候选列表

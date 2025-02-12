@@ -3187,12 +3187,14 @@ preset_keyboards:
         }
       - {
           click: 'f',
-          long_click: '{',
+          # long_click: '{',
+          long_click: '-',
           __include: styl/key,
         }
       - {
           click: 'g',
-          long_click: '}',
+          # long_click: '}',
+          long_click: '-',
           swipe_down: kb_edit,
           hint: '<ɪ>',
           __include: styl/key,
@@ -3254,6 +3256,7 @@ preset_keyboards:
       - {
           click: space,                        
 #          long_click: VOICE_ASSIST,
+          long_click: Schema_switch,
           swipe_up: Clear,
           swipe_down: liquid_keyboard_clipboard,
           key_symbol_offset_x: 0,

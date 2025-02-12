@@ -15,12 +15,12 @@ customization:
 
 patch:
   schema_list:
-    - {schema: jk_ascii}
-    # - {schema: jk_ascii_bj}
-    - {schema: jk_pinyin}
-    # - {schema: jk_pinyin_bj}
-    - {schema: jk_wubi}
-    # - {schema: jk_wubi_bj}
+    # - {schema: jk_ascii}
+    # - {schema: jk_pinyin}
+    # - {schema: jk_wubi}
+    - {schema: jk_ascii_bj}
+    - {schema: jk_pinyin_bj}
+    - {schema: jk_wubi_bj}
 
 
   # === 候选相关 ===

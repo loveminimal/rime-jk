@@ -21,7 +21,7 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 人	w 	1
-中	kh 	1
+中	k 	2
 的	r 	5
 了	b 	7
 也	bn 	6
@@ -38,9 +38,9 @@ use_preset_vocabulary: false
 这	p 	7
 儿	qt 	2
 按	rpv 	1
-好	vb 	6
+好	vb 	7
 个	wh 	8
-就	yi 	6
+就	yi 	7
 马	cn 	1
 此	hx 	1
 没	im 	3
@@ -150,7 +150,7 @@ use_preset_vocabulary: false
 发	ntc 	1
 家	pe 	3
 福	pyg 	2
-找	ra 	3
+找	ra 	4
 把	rcn 	1
 摆	rlf 	1
 抱	rqn 	1
@@ -173,6 +173,8 @@ use_preset_vocabulary: false
 张	xt 	3
 比	xx 	1
 说	yu 	1
+多	qq 	1
+么	tc 	1
 你好	wqvb 	1
 中国	khlg 	3
 取得	bctj 	1
@@ -182,7 +184,7 @@ use_preset_vocabulary: false
 基本	adsg 	1
 东西	aisg 	1
 存在	dhdh 	1
-形码	gadc 	3
+形码	gadc 	4
 玩意	gfuj 	2
 五笔	ggtt 	4
 最好	jbvb 	2
@@ -332,7 +334,7 @@ use_preset_vocabulary: false
 尝试	ipya 	1
 省事	itgk 	1
 当时	ivjf 	3
-时间	jfuj 	2
+时间	jfuj 	3
 照片	jvth 	2
 别说	klyu 	1
 哪儿	kvqt 	1
@@ -354,7 +356,7 @@ use_preset_vocabulary: false
 拖动	rtfc 	1
 手机	rtsm 	7
 搞笑	rytt 	2
-可以	skny 	5
+可以	skny 	6
 要用	svet 	1
 短词	tdyn 	1
 秋萍	toai 	2
@@ -367,13 +369,17 @@ use_preset_vocabulary: false
 你俩	wqwg 	2
 你们	wqwu 	2
 位置	wulf 	1
-今天	wygd 	2
+今天	wygd 	3
 偏差	wyud 	1
 衣服	yeeb 	1
 应战	yihk 	1
 就会	yiwf 	1
 应该	yiyy 	1
 放大	ytdd 	1
+拍了	rrb 	1
+拼音	ruuj 	1
+符号	twkg 	1
+冰雪	uifv 	1
 最大值	jdwf 	1
 输入法	ltif 	2
 来不来	gggo 	1
@@ -382,6 +388,7 @@ use_preset_vocabulary: false
 听起来	kfgo 	1
 申公豹	jwee 	2
 还不错	ggqa 	1
+大一统	dgxy 	1
 吞噬星空	gkjp 	2
 不可或缺	gsar 	1
 人定胜天	wpeg 	1

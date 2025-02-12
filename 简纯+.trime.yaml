@@ -3140,14 +3140,14 @@ preset_keyboards:
     keys:
       # 数字行
       - {click: num1, __include: conf/num_line}
-      - {click: num2}
+      - {click: num2, long_click: '~', swipe_down: 2, __include: conf/num_line }
       - {click: num3}
       - {click: num4}
       - {click: num5}
       - {click: num6}
       - {click: num7}
       - {click: num8}
-      - {click: num9}
+      - {click: num9, long_click: '=', swipe_down: 2, __include: conf/num_line }
       - {click: num0}
       # 第 1 行
       - { click: 'q', long_click: '!', swipe_down: 1, __include: styl/key }

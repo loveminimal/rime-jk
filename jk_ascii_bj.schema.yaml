@@ -9,7 +9,7 @@ schema:
   description: |
     - 知心字符「并击版」，一款快速输入数字和预设字符的键盘式输入法方案
     - https://github.com/loveminimal/rime-jk
-  icon: "assets/pr_mg.ico"
+  icon: "assets/pr_m.ico"
   ascii_icon: 'assets/ascii.ico' 
 
 switches:

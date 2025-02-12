@@ -29,7 +29,7 @@ use_preset_vocabulary: false
 打	da;rs 	3
 但	dan;wj 	4
 到	dao;gc 	2
-的	de;r,rq 	90
+的	de;r,rq 	93
 都	dou;ft 	6
 对	dui;cf 	7
 高	gao;ym 	1
@@ -79,7 +79,7 @@ use_preset_vocabulary: false
 至	zhi;gc 	0
 嗯	en;kl 	4
 很	hen;tv 	1
-上	shang;h,hh 	6
+上	shang;h,hh 	7
 那	na;vf 	2
 位	wei;wu 	0
 云	yun;fc 	0
@@ -272,6 +272,9 @@ use_preset_vocabulary: false
 全	quan;wg 	1
 纹	wen;xy 	1
 吆	yao;kx 	1
+强	qiang;xk 	0
+瓦	wa;gn 	0
+砖	zhuan;df 	0
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	6
 宝安	bao;pg an;pv 	0
@@ -383,7 +386,7 @@ use_preset_vocabulary: false
 止步	zhi;hh bu;hi 	0
 只能	zhi;kw neng;ce 	3
 之处	zhi;pp chu;th 	2
-之后	zhi;pp hou;rg 	3
+之后	zhi;pp hou;rg 	4
 之前	zhi;pp qian;ue 	2
 知道	zhi;td dao;ut 	2
 中心	zhong;k,kh xin;ny 	0
@@ -717,7 +720,7 @@ use_preset_vocabulary: false
 消耗	xiao;ii hao;di 	1
 修词	xiu;wh ci;yn 	1
 以为	yi;c,ny wei;o,yl 	1
-一些	yi;g,gg xie;hx 	0
+一些	yi;g,gg xie;hx 	1
 音形	yin;uj xing;ga 	1
 用到	yong;et dao;gc 	0
 有些	you;e,de xie;hx 	3
@@ -857,7 +860,7 @@ use_preset_vocabulary: false
 平的	ping;gu de;r,rq 	0
 起床	qi;fh chuang;ys 	1
 前缀	qian;ue zhui;xc 	1
-如此	ru;vk ci;hx 	1
+如此	ru;vk ci;hx 	2
 上传	shang;h,hh chuan;wf 	1
 神器	shen;py qi;kk 	1
 添加	tian;ig jia;lk 	0
@@ -1070,14 +1073,14 @@ use_preset_vocabulary: false
 拍照	pai;rr zhao;jv 	1
 甚至	shen;ad zhi;gc 	1
 失效	shi;rw xiao;uq 	1
-缩放	suo;xp fang;yt 	2
+缩放	suo;xp fang;yt 	3
 脱稿	tuo;eu gao;ty 	1
 尾巴	wei;nt ba;cn 	1
 系数	xi;tx shu;ov 	1
 想的	xiang;sh de;r,rq 	0
 影子	ying;jy zi;bb 	1
 语速	yu;yg su;gk 	1
-元素	yuan;fq su;gx 	1
+元素	yuan;fq su;gx 	2
 这周	zhe;p,yp zhou;mf 	1
 历史	li;dl shi;kq 	0
 项目	xiang;ad mu;hh 	0
@@ -1113,6 +1116,17 @@ use_preset_vocabulary: false
 小敏	xiao;ih min;tx 	1
 一切	yi;g,gg qie;av 	2
 有用	you;e,de yong;et 	1
+堆砌	dui;fw qi;da 	0
+还好	hai;gi hao;vb 	1
+加了	jia;lk le;b,bn 	0
+开发	kai;ga fa;v,nt 	1
+垃圾	la;fu ji;fe 	2
+你也	ni;wq ye;bn 	0
+耦合	ou;di he;wg 	0
+让人	rang;yh ren;w,ww 	0
+添了	tian;ig le;b,bn 	0
+问你	wen;uk ni;wq 	1
+这堆	zhe;p,yp dui;fw 	2
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -1187,7 +1201,7 @@ use_preset_vocabulary: false
 同一个	tong;m,mg yi;g,gg ge;wh 	1
 我个人	wo;q,tr ge;wh ren;w,ww 	1
 我目前	wo;q,tr mu;hh qian;ue 	1
-有时候	you;e,de shi;jf hou;wh 	2
+有时候	you;e,de shi;jf hou;wh 	3
 越来越	yue;fh lai;go yue;fh 	0
 这个表	zhe;p,yp ge;wh biao;ge 	1
 真抽象	zhen;fh chou;rm xiang;qj 	1
@@ -1421,6 +1435,13 @@ use_preset_vocabulary: false
 完整版	wan;pf zheng;gk ban;th 	1
 这样的	zhe;p,yp yang;su de;r,rq 	1
 真的是	zhen;fh de;r,rq shi;j,jg 	1
+不得不	bu;i,gi de;tj bu;i,gi 	0
+更傻逼	geng;gj sha;wt bi;gk 	1
+加了瓦	jia;lk le;b,bn wa;gn 	1
+你也为	ni;wq ye;bn wei;o,yl 	1
+强耦合	qiang;xk ou;di he;wg 	1
+添了砖	tian;ig le;b,bn zhuan;df 	1
+新功能	xin;us gong;al neng;ce 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -1576,7 +1597,7 @@ use_preset_vocabulary: false
 元素定位	yuan;fq su;gx ding;pg wei;wu 	1
 只是一个	zhi;kw shi;j,jg yi;g,gg ge;wh 	1
 自己写的	zi;th ji;nn xie;pg de;r,rq 	1
-历史项目	li;dl shi;kq xiang;ad mu;hh 	4
+历史项目	li;dl shi;kq xiang;ad mu;hh 	5
 你是谁呢	ni;wq shi;j,jg shei;yw ne;kn 	1
 本来就是	ben;sg lai;go jiu;yi shi;j,jg 	1
 摧枯拉朽	cui;rm ku;sd la;ru xiu;sg 	1
@@ -1585,6 +1606,12 @@ use_preset_vocabulary: false
 元始天尊	yuan;fq shi;vc tian;gd zun;us 	1
 这个文件	zhe;p,yp ge;wh wen;yy jian;wr 	1
 挣不到钱	zheng;rq bu;i,gi dao;gc qian;qg 	1
+开不开心	kai;ga bu;i,gi kai;ga xin;ny 	1
+垃圾堆砌	la;fu ji;fe dui;fw qi;da 	1
+你不得不	ni;wq bu;i,gi de;tj bu;i,gi 	1
+日常维护	ri;jj chang;ip wei;xw hu;ry 	1
+欲哭无泪	yu;ww ku;kk wu;fq lei;ih 	1
+真的让人	zhen;fh de;r,rq rang;yh ren;w,ww 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1

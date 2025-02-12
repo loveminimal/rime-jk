@@ -21,9 +21,9 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 人	w 	1
-中	k 	2
+中	k 	3
 的	r 	5
-了	b 	7
+了	b 	8
 也	bn 	6
 能	ce 	2
 对	cf 	2
@@ -33,7 +33,7 @@ use_preset_vocabulary: false
 页	dmu 	1
 一	g 	7
 不	gi 	5
-上	h 	4
+上	h 	5
 是	j 	3
 这	p 	7
 儿	qt 	2
@@ -44,7 +44,7 @@ use_preset_vocabulary: false
 马	cn 	1
 此	hx 	1
 没	im 	3
-我	q 	7
+我	q 	8
 送	udp 	1
 让	yh 	3
 宝	pgy 	2
@@ -64,7 +64,7 @@ use_preset_vocabulary: false
 太	dy 	3
 有	e 	8
 豹	eeqy 	1
-用	et 	4
+用	et 	5
 超	fhv 	1
 真	fhw 	3
 才	ft 	1
@@ -132,10 +132,10 @@ use_preset_vocabulary: false
 成	dn 	1
 帮	dt 	1
 墙	ffuk 	1
-到	gc 	2
+到	gc 	3
 天	gd 	2
 卅	gkk 	1
-现	gm 	1
+现	gm 	2
 点	hko 	4
 小	ih 	1
 消	iie 	1
@@ -171,15 +171,19 @@ use_preset_vocabulary: false
 她	vbn 	1
 候	whn 	1
 张	xt 	3
-比	xx 	1
-说	yu 	1
+比	xx 	2
+说	yu 	2
 多	qq 	1
 么	tc 	1
+环	ggi 	1
+加	lk 	1
+圆	lkmi 	2
+纹	xyy 	1
 你好	wqvb 	1
 中国	khlg 	3
 取得	bctj 	1
 一个	ggwh 	2
-如何	vkws 	1
+如何	vkws 	2
 集合	wywg 	1
 基本	adsg 	1
 东西	aisg 	1
@@ -199,7 +203,7 @@ use_preset_vocabulary: false
 音码	ujdc 	1
 问题	ukjg 	1
 如果	vkjs 	1
-使用	wget 	3
+使用	wget 	4
 从来	wwgo 	1
 比较	xxlu 	1
 原因	drld 	1
@@ -207,7 +211,7 @@ use_preset_vocabulary: false
 过来	fpgo 	2
 老妈	ftvc 	4
 师傅	jgwg 	1
-哈哈	kwkw 	4
+哈哈	kwkw 	5
 燃气	oqrn 	1
 失败	rwmt 	1
 女仆	vvwh 	1
@@ -317,7 +321,7 @@ use_preset_vocabulary: false
 原图	drlt 	2
 脚本	efsg 	1
 干净	fguq 	1
-元素	fqgx 	1
+元素	fqgx 	2
 到时	gcjf 	2
 到家	gcpe 	1
 天码	gddc 	2
@@ -356,7 +360,7 @@ use_preset_vocabulary: false
 拖动	rtfc 	1
 手机	rtsm 	7
 搞笑	rytt 	2
-可以	skny 	6
+可以	skny 	7
 要用	svet 	1
 短词	tdyn 	1
 秋萍	toai 	2
@@ -380,6 +384,23 @@ use_preset_vocabulary: false
 拼音	ruuj 	1
 符号	twkg 	1
 冰雪	uifv 	1
+对着	cfud 	1
+百分	djwv 	1
+无法	fqif 	1
+现在	gmdh 	1
+水波	iiih 	1
+哪里	kvjf 	1
+回到	lkgc 	1
+同心	mgny 	2
+内联	mwbu 	1
+改变	ntyo 	2
+按下	rpgh 	1
+指针	rxqf 	2
+查询	sjyq 	1
+样式	suaa 	3
+鼠标	vnsf 	1
+估计	wdyf 	1
+缩放	xpyt 	1
 最大值	jdwf 	1
 输入法	ltif 	2
 来不来	gggo 	1
@@ -389,6 +410,8 @@ use_preset_vocabulary: false
 申公豹	jwee 	2
 还不错	ggqa 	1
 大一统	dgxy 	1
+滚动条	ifts 	1
+浏览器	ijkk 	1
 吞噬星空	gkjp 	2
 不可或缺	gsar 	1
 人定胜天	wpeg 	1

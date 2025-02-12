@@ -94,7 +94,8 @@ engine:
   filters:
     - lua_filter@*prettify_comment
     - lua_filter@*keep_primary_code_first
-    - simplifier         
+    - lua_filter@*keep_secondary_code_first
+    - simplifier
     - simplifier@emoji   
     - simplifier@zh2en
     - uniquifier          

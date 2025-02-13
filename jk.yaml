@@ -193,7 +193,7 @@ algebra_kongming:
   - xform/^xf(?![左右])/J左/
   - xform/^dr(?![左右])/K左/
   - xform/^sr(?![左右])/L左/
-  - xform/^as(?![左右])/;左/
+  - xform/^as(?![左右])/；左/
 
   - xform/^zf(?![左右])/Z左/
   - xform/^xd(?![左右])/X左/
@@ -202,9 +202,9 @@ algebra_kongming:
   - xform/^qw(?![左右])/B左/
   - xform/^se(?![左右])/N左/
   - xform/^wd(?![左右])/M左/
-  - xform/^at(?![左右])/,左/
-  - xform/^ag(?![左右])/.左/
-  - xform|^zx(?![左右])|/左|
+  - xform/^at(?![左右])/，左/
+  - xform/^ag(?![左右])/。左/
+  - xform|^zx(?![左右])|／左|
 
   # --- 定义右手15+15键 + 数字10键 ---
   # 3个字符组合键需放在最前

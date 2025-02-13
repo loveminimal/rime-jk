@@ -25,7 +25,7 @@ use_preset_vocabulary: false
 并	bing;ua 	2
 不	bu;i,gi 	3
 才	cai;ft 	3
-词	ci;yn 	3
+词	ci;yn 	4
 打	da;rs 	3
 但	dan;wj 	4
 到	dao;gc 	2
@@ -104,7 +104,7 @@ use_preset_vocabulary: false
 成	cheng;dn 	3
 单	dan;uj 	1
 懂	dong;na 	0
-放	fang;yt 	1
+放	fang;yt 	2
 废	fei;yn 	1
 该	gai;yy 	1
 搞	gao;ry 	1
@@ -281,9 +281,11 @@ use_preset_vocabulary: false
 傻	sha;wt 	0
 搜	sou;rv 	1
 天	tian;gd 	1
-指	zhi;rx 	1
+指	zhi;rx 	3
 撩	liao;rd 	1
 味	wei;kf 	1
+脸	lian;ew 	1
+锥	zhui;qw 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	6
 宝安	bao;pg an;pv 	0
@@ -383,7 +385,7 @@ use_preset_vocabulary: false
 也就	ye;bn jiu;yi 	1
 以前	yi;c,ny qian;ue 	2
 一次	yi;g,gg ci;uq 	3
-一个	yi;g,gg ge;wh 	8
+一个	yi;g,gg ge;wh 	9
 用过	yong;et guo;fp 	1
 用户	yong;et hu;yn 	6
 用来	yong;et lai;go 	1
@@ -932,7 +934,7 @@ use_preset_vocabulary: false
 阵法	zhen;bl fa;if 	1
 足够	zu;kh gou;qk 	1
 编辑	bian;xy ji;lk 	1
-不要	bu;i,gi yao;s,sv 	0
+不要	bu;i,gi yao;s,sv 	1
 大佬	da;dd lao;wf 	3
 东西	dong;ai xi;sg 	1
 短句	duan;td ju;qk 	0
@@ -1000,7 +1002,7 @@ use_preset_vocabulary: false
 下面	xia;gh mian;dm 	1
 选定	xuan;tf ding;pg 	1
 组合	zu;xe he;wg 	1
-最后	zui;jb hou;rg 	1
+最后	zui;jb hou;rg 	2
 最前	zui;jb qian;ue 	1
 吧友	ba;kc you;dc 	1
 把它	ba;rc ta;px 	1
@@ -1181,6 +1183,17 @@ use_preset_vocabulary: false
 小孩	xiao;ih hai;by 	1
 演讲	yan;ip jiang;yf 	1
 渣男	zha;is nan;ll 	1
+公知	gong;wc zhi;td 	1
+坏我	huai;fg wo;q,tr 	1
+几秒	ji;mt miao;ti 	1
+开头	kai;ga tou;ud 	1
+滤镜	lv;ih jing;qu 	1
+算是	suan;th shi;j,jg 	1
+下次	xia;gh ci;uq 	1
+序幕	xu;yc mu;aj 	1
+一年	yi;g,gg nian;rh 	1
+正式	zheng;gh shi;aa 	1
+专打	zhuan;fn da;rs 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -1528,6 +1541,8 @@ use_preset_vocabulary: false
 一直是	yi;g,gg zhi;fh shi;j,jg 	1
 英文诗	ying;am wen;yy shi;yf 	1
 真是个	zhen;fh shi;j,jg ge;wh 	1
+拉开了	la;ru kai;ga le;b,bn 	1
+马督工	ma;cn du;hi gong;a,aa 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -1707,6 +1722,10 @@ use_preset_vocabulary: false
 欲仙欲死	yu;ww xian;wm yu;ww si;gq 	1
 这个名称	zhe;p,yp ge;wh ming;qk cheng;tq 	1
 这个设计	zhe;p,yp ge;wh she;ym ji;yf 	2
+不要相信	bu;i,gi yao;s,sv xiang;sh xin;wy 	1
+迷迷瞪瞪	mi;op mi;op deng;hw deng;hw 	1
+新的一年	xin;us de;r,rq yi;g,gg nian;rh 	1
+又过去了	you;cc guo;fp qu;fc le;b,bn 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1

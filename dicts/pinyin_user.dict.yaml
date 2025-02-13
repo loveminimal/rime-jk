@@ -429,7 +429,7 @@ use_preset_vocabulary: false
 精神	jing;og shen;py 	1
 来了	lai;go le;b,bn 	1
 日常	ri;jj chang;ip 	2
-使用	shi;wg yong;et 	6
+使用	shi;wg yong;et 	7
 手机	shou;rt ji;sm 	0
 系统	xi;tx tong;xy 	0
 现在	xian;gm zai;d,dh 	5
@@ -619,12 +619,12 @@ use_preset_vocabulary: false
 战鹰	zhan;hk ying;yw 	1
 长成	zhang;ta cheng;dn 	1
 找了	zhao;ra le;b,bn 	1
-这样	zhe;p,yp yang;su 	4
+这样	zhe;p,yp yang;su 	5
 真的	zhen;fh de;r,rq 	3
 整个	zheng;gk ge;wh 	0
 整句	zheng;gk ju;qk 	2
 支持	zhi;fc chi;rf 	3
-只有	zhi;kw you;e,de 	4
+只有	zhi;kw you;e,de 	5
 置顶	zhi;lf ding;sd 	2
 制作	zhi;rm zuo;wt 	1
 指法	zhi;rx fa;if 	3
@@ -1232,6 +1232,9 @@ use_preset_vocabulary: false
 中国	zhong;k,kh guo;l,lg 	1
 中间	zhong;k,kh jian;uj 	1
 作用	zuo;wt yong;et 	1
+害羞	hai;pd xiu;ud 	1
+美队	mei;ug dui;bw 	1
+有次	you;e,de ci;uq 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -1385,7 +1388,7 @@ use_preset_vocabulary: false
 模拟器	mo;sa ni;rn qi;kk 	0
 能达到	neng;ce da;dp dao;gc 	0
 能模拟	neng;ce mo;sa ni;rn 	0
-你好吗	ni;wq hao;vb ma;kc 	4
+你好吗	ni;wq hao;vb ma;kc 	5
 什么是	shen;wf me;tc shi;j,jg 	0
 是真的	shi;j,jg zhen;fh de;r,rq 	0
 我试试	wo;q,tr shi;ya shi;ya 	1
@@ -1792,6 +1795,8 @@ use_preset_vocabulary: false
 什么词库	shen;wf me;tc ci;yn ku;yl 	1
 一塌糊涂	yi;g,gg ta;fj hu;od tu;iw 	1
 怎么这么	zen;th me;tc zhe;p,yp me;tc 	1
+斗破苍穹	dou;uf po;dh cang;aw qiong;pw 	1
+截至目前	jie;fa zhi;gc mu;hh qian;ue 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -1840,7 +1845,7 @@ use_preset_vocabulary: false
 理想主义者	li;gj xiang;sh zhu;y,yg yi;yq zhe;ft 	1
 你还有什么	ni;wq hai;gi you;e,de shen;wf me;tc 	1
 太大的用处	tai;dy da;dd de;r,rq yong;et chu;th 	1
-我们都知道	wo;q,tr men;wu dou;ft zhi;td dao;ut 	1
+我们都知道	wo;q,tr men;wu dou;ft zhi;td dao;ut 	2
 一些三字词	yi;g,gg xie;hx san;dg zi;pb ci;yn 	1
 走下操坠贬	zou;fh xia;gh cao;rk zhui;bw bian;mt 	1
 以前的那种	yi;c,ny qian;ue de;r,rq na;vf zhong;tk 	1

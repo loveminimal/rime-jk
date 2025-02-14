@@ -7,10 +7,11 @@ schema:
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |
-    - 知心拼音「并击版」，并击·小鹤+五笔前二辅助码，小啊小并击
+    - 知心拼音「并击版」，并击·拼音+五笔前二辅助码，小啊小并击
     - 基于袖珍简化字拼音及自制通规8105单字表
-    - 支持全拼
-    - 小鹤双拼+五笔前二增强版「 默认 」
+    - 支持全拼   + 五笔前二增强版
+    - 小鹤双拼   + 五笔前二增强版「 默认 」
+    - 自然码双拼 + 五笔前二增强版
   dependencies:
     - jk_ascii
   icon: 'assets/fly_m.ico'

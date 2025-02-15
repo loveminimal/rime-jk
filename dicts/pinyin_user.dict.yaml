@@ -841,7 +841,7 @@ use_preset_vocabulary: false
 炼化	lian;oa hua;wx 	1
 每夜	mei;tx ye;yw 	0
 适合	shi;td he;wg 	1
-吞噬	tun;gd shi;kt 	0
+吞噬	tun;gd shi;kt 	1
 万能	wan;dn neng;ce 	1
 星空	xing;jt kong;pw 	0
 以下	yi;c,ny xia;gh 	2
@@ -2138,6 +2138,7 @@ use_preset_vocabulary: false
 哈哈哈哈哈哈哈	ha;kw ha;kw ha;kw ha;kw ha;kw ha;kw ha;kw 	2
 通过不断地练习	tong;ce guo;fp bu;i,gi duan;on de;f,fb lian;xa xi;nu 	1
 这老板也不知道	zhe;p,yp lao;ft ban;sr ye;bn bu;i,gi zhi;td dao;ut 	1
+我们都是一样的	wo;q,tr men;wu dou;ft shi;j,jg yi;g,gg yang;su de;r,rq 	1
 但不是绝对用不到	dan;wj bu;i,gi shi;j,jg jue;xq dui;cf yong;et bu;i,gi dao;gc 	1
 反正现在也没有发	fan;rc zheng;gh xian;gm zai;d,dh ye;bn mei;im you;e,de fa;v,nt 	1
 我就是这样知道的	wo;q,tr jiu;yi shi;j,jg zhe;p,yp yang;su zhi;td dao;ut de;r,rq 	1

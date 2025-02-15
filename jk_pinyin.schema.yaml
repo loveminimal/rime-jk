@@ -65,7 +65,8 @@ speller:
   # ③ 自然码/五笔前二    algebra_zrm
   algebra:
     __include: algebra.yaml:/algebra_pinyin
-    __include: algebra.yaml:/algebra_fuzhuma
+    __append:
+      __include: algebra.yaml:/algebra_fuzhuma
 
 
 chord_composer:

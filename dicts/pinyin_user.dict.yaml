@@ -23,7 +23,7 @@ use_preset_vocabulary: false
 吧	ba;kc 	6
 表	biao;ge 	3
 并	bing;ua 	2
-不	bu;i,gi 	5
+不	bu;i,gi 	6
 才	cai;ft 	3
 词	ci;yn 	4
 打	da;rs 	4
@@ -38,7 +38,7 @@ use_preset_vocabulary: false
 跟	gen;kh 	1
 行	hang;tf 	2
 后	hou;rg 	2
-键	jian;qv 	6
+键	jian;qv 	7
 看	kan;rh 	3
 快	kuai;nn 	2
 懒	lan;ng 	1
@@ -106,7 +106,7 @@ use_preset_vocabulary: false
 懂	dong;na 	0
 放	fang;yt 	2
 废	fei;yn 	1
-该	gai;yy 	2
+该	gai;yy 	3
 搞	gao;ry 	1
 和	he;t,tk 	4
 虎	hu;ha 	1
@@ -178,7 +178,7 @@ use_preset_vocabulary: false
 再	zai;gm 	2
 镇	zhen;qf 	1
 庄	zhuang;yf 	3
-走	zou;fh 	0
+走	zou;fh 	1
 变	bian;yo 	1
 地	de;f,fb 	5
 花	hua;aw 	1
@@ -232,7 +232,7 @@ use_preset_vocabulary: false
 爱	ai;ep 	1
 车	che;lg 	1
 发	fa;v,nt 	1
-烦	fan;od 	1
+烦	fan;od 	2
 反	fan;rc 	1
 更	geng;gj 	1
 共	gong;aw 	1
@@ -249,7 +249,7 @@ use_preset_vocabulary: false
 办	ban;lw 	2
 带	dai;gk 	2
 调	diao;ym 	1
-非	fei;dj 	2
+非	fei;dj 	3
 稿	gao;ty 	1
 滚	gun;iu 	1
 户	hu;yn 	1
@@ -279,7 +279,7 @@ use_preset_vocabulary: false
 号	hao;kg 	1
 啦	la;kr 	2
 傻	sha;wt 	0
-搜	sou;rv 	1
+搜	sou;rv 	2
 天	tian;gd 	2
 指	zhi;rx 	4
 撩	liao;rd 	1
@@ -329,6 +329,8 @@ use_preset_vocabulary: false
 隆	long;bt 	1
 七	qi;ag 	0
 胸	xiong;eq 	1
+纷	fen;xw 	2
+左	zuo;da 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -507,7 +509,7 @@ use_preset_vocabulary: false
 更新	geng;gj xin;us 	2
 华裔	hua;wx yi;ye 	0
 基于	ji;ad yu;gf 	0
-镜像	jing;qu xiang;wq 	3
+镜像	jing;qu xiang;wq 	7
 列表	lie;gq biao;ge 	1
 另说	ling;kl shuo;yu 	1
 美国	mei;ug guo;l,lg 	0
@@ -524,7 +526,7 @@ use_preset_vocabulary: false
 也是	ye;bn shi;j,jg 	3
 也要	ye;bn yao;s,sv 	1
 一会	yi;g,gg hui;wf 	2
-一下	yi;g,gg xia;gh 	6
+一下	yi;g,gg xia;gh 	7
 一样	yi;g,gg yang;su 	3
 应该	ying;yi gai;yy 	4
 这种	zhe;p,yp zhong;tk 	5
@@ -717,7 +719,7 @@ use_preset_vocabulary: false
 的话	de;r,rq hua;yt 	0
 的吗	de;r,rq ma;kc 	1
 复现	fu;tj xian;gm 	0
-感觉	gan;dg jue;ip 	4
+感觉	gan;dg jue;ip 	5
 干活	gan;fg huo;it 	1
 跟班	gen;kh ban;gy 	1
 怪怪	guai;nc guai;nc 	1
@@ -847,7 +849,7 @@ use_preset_vocabulary: false
 以下	yi;c,ny xia;gh 	2
 依托	yi;wy tuo;rt 	1
 杂种	za;vs zhong;tk 	1
-按键	an;rp jian;qv 	0
+按键	an;rp jian;qv 	1
 不错	bu;i,gi cuo;qa 	0
 部署	bu;uk shu;lf 	1
 长度	chang;ta du;ya 	1
@@ -937,7 +939,7 @@ use_preset_vocabulary: false
 查查	cha;sj cha;sj 	1
 成字	cheng;dn zi;pb 	1
 串击	chuan;kk ji;fm 	1
-大写	da;dd xie;pg 	4
+大写	da;dd xie;pg 	5
 打字	da;rs zi;pb 	1
 当地	dang;iv di;f,fb 	1
 定长	ding;pg chang;ta 	1
@@ -1103,7 +1105,7 @@ use_preset_vocabulary: false
 只会	zhi;kw hui;wf 	1
 只剩	zhi;kw sheng;tu 	1
 尊重	zun;us zhong;tg 	1
-左右	zuo;da you;dk 	1
+左右	zuo;da you;dk 	2
 标识	biao;sf shi;yk 	1
 不惊	bu;i,gi jing;ny 	0
 不上	bu;i,gi shang;h,hh 	0
@@ -1382,6 +1384,11 @@ use_preset_vocabulary: false
 讯飞	xun;yn fei;nu 	1
 原版	yuan;dr ban;th 	1
 咱俩	zan;kt lia;wg 	1
+共用	gong;aw yong;et 	1
+很好	hen;tv hao;vb 	0
+空明	kong;pw ming;je 	1
+调整	tiao;ym zheng;gk 	1
+走吗	zou;fh ma;kc 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -1391,7 +1398,7 @@ use_preset_vocabulary: false
 都不会	dou;ft bu;i,gi hui;wf 	1
 辅助码	fu;lg zhu;eg ma;dc 	8
 给我说	gei;xw wo;q,tr shuo;yu 	2
-空明码	kong;pw ming;je ma;dc 	6
+空明码	kong;pw ming;je ma;dc 	7
 那么高	na;vf me;tc gao;ym 	1
 你想在	ni;wq xiang;sh zai;d,dh 	1
 你注册	ni;wq zhu;iy ce;mm 	1
@@ -1535,7 +1542,7 @@ use_preset_vocabulary: false
 模拟器	mo;sa ni;rn qi;kk 	0
 能达到	neng;ce da;dp dao;gc 	0
 能模拟	neng;ce mo;sa ni;rn 	0
-你好吗	ni;wq hao;vb ma;kc 	5
+你好吗	ni;wq hao;vb ma;kc 	6
 什么是	shen;wf me;tc shi;j,jg 	0
 是真的	shi;j,jg zhen;fh de;r,rq 	0
 我试试	wo;q,tr shi;ya shi;ya 	1
@@ -1801,6 +1808,8 @@ use_preset_vocabulary: false
 唐卡七	tang;yv ka;hh qi;ag 	1
 小写键	xiao;ih xie;pg jian;qv 	1
 也行吧	ye;bn xing;tf ba;kc 	1
+很好按	hen;tv hao;vb an;rp 	1
+走啊走	zou;fh a;kb zou;fh 	3
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -2139,6 +2148,7 @@ use_preset_vocabulary: false
 通过不断地练习	tong;ce guo;fp bu;i,gi duan;on de;f,fb lian;xa xi;nu 	1
 这老板也不知道	zhe;p,yp lao;ft ban;sr ye;bn bu;i,gi zhi;td dao;ut 	1
 我们都是一样的	wo;q,tr men;wu dou;ft shi;j,jg yi;g,gg yang;su de;r,rq 	1
+我们都是好孩子	wo;q,tr men;wu dou;ft shi;j,jg hao;vb hai;by zi;bb 	1
 但不是绝对用不到	dan;wj bu;i,gi shi;j,jg jue;xq dui;cf yong;et bu;i,gi dao;gc 	1
 反正现在也没有发	fan;rc zheng;gh xian;gm zai;d,dh ye;bn mei;im you;e,de fa;v,nt 	1
 我就是这样知道的	wo;q,tr jiu;yi shi;j,jg zhe;p,yp yang;su zhi;td dao;ut de;r,rq 	1

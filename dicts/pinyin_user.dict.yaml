@@ -38,7 +38,7 @@ use_preset_vocabulary: false
 跟	gen;kh 	1
 行	hang;tf 	2
 后	hou;rg 	2
-键	jian;qv 	7
+键	jian;qv 	8
 看	kan;rh 	3
 快	kuai;nn 	2
 懒	lan;ng 	1
@@ -88,7 +88,7 @@ use_preset_vocabulary: false
 从	cong;ww 	1
 而	er;dm 	1
 改	gai;nt 	3
-刚	gang;mq 	3
+刚	gang;mq 	4
 好	hao;vb 	7
 试	shi;ya 	2
 下	xia;gh 	3
@@ -190,7 +190,7 @@ use_preset_vocabulary: false
 版	ban;th 	5
 丑	chou;nf 	1
 买	mai;nu 	1
-器	qi;kk 	1
+器	qi;kk 	2
 擦	ca;rp 	1
 二	er;fg 	1
 谁	shei;yw 	1
@@ -211,7 +211,7 @@ use_preset_vocabulary: false
 感	gan;dg 	0
 库	ku;yl 	1
 面	mian;dm 	2
-死	si;gq 	1
+死	si;gq 	2
 她	ta;vb 	3
 玩	wan;gf 	1
 演	yan;ip 	1
@@ -228,7 +228,7 @@ use_preset_vocabulary: false
 可	ke;sk 	0
 区	qu;aq 	2
 需	xu;fd 	1
-右	you;dk 	6
+右	you;dk 	7
 爱	ai;ep 	1
 车	che;lg 	1
 发	fa;v,nt 	1
@@ -249,7 +249,7 @@ use_preset_vocabulary: false
 办	ban;lw 	2
 带	dai;gk 	2
 调	diao;ym 	1
-非	fei;dj 	3
+非	fei;dj 	5
 稿	gao;ty 	1
 滚	gun;iu 	1
 户	hu;yn 	1
@@ -331,6 +331,7 @@ use_preset_vocabulary: false
 胸	xiong;eq 	1
 纷	fen;xw 	2
 左	zuo;da 	1
+种	zhong;tk 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -366,7 +367,7 @@ use_preset_vocabulary: false
 方案	fang;yy an;pv 	4
 方向	fang;yy xiang;tm 	1
 分隔	fen;wv ge;bg 	2
-符号	fu;tw hao;kg 	0
+符号	fu;tw hao;kg 	1
 刚需	gang;mq xu;fd 	1
 给我	gei;xw wo;q,tr 	0
 关系	guan;ud xi;tx 	0
@@ -869,7 +870,7 @@ use_preset_vocabulary: false
 识别	shi;yk bie;kl 	2
 手敲	shou;rt qiao;ym 	1
 提示	ti;rj shi;fi 	1
-我们	wo;q,tr men;wu 	4
+我们	wo;q,tr men;wu 	5
 效果	xiao;uq guo;js 	1
 谢谢	xie;yt xie;yt 	4
 训练	xun;yk lian;xa 	2
@@ -987,7 +988,7 @@ use_preset_vocabulary: false
 跟它	gen;kh ta;px 	0
 狗粮	gou;qt liang;oy 	1
 好处	hao;vb chu;th 	1
-好吗	hao;vb ma;kc 	2
+好吗	hao;vb ma;kc 	3
 很爽	hen;tv shuang;dq 	1
 解释	jie;qe shi;to 	1
 里奇	li;jf qi;ds 	1
@@ -1105,7 +1106,7 @@ use_preset_vocabulary: false
 只会	zhi;kw hui;wf 	1
 只剩	zhi;kw sheng;tu 	1
 尊重	zun;us zhong;tg 	1
-左右	zuo;da you;dk 	2
+左右	zuo;da you;dk 	3
 标识	biao;sf shi;yk 	1
 不惊	bu;i,gi jing;ny 	0
 不上	bu;i,gi shang;h,hh 	0
@@ -1389,6 +1390,8 @@ use_preset_vocabulary: false
 空明	kong;pw ming;je 	1
 调整	tiao;ym zheng;gk 	1
 走吗	zou;fh ma;kc 	1
+斗破	dou;uf po;dh 	1
+异分	yi;na fen;wv 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -1809,7 +1812,7 @@ use_preset_vocabulary: false
 小写键	xiao;ih xie;pg jian;qv 	1
 也行吧	ye;bn xing;tf ba;kc 	1
 很好按	hen;tv hao;vb an;rp 	1
-走啊走	zou;fh a;kb zou;fh 	3
+走啊走	zou;fh a;kb zou;fh 	4
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1

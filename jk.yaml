@@ -124,9 +124,9 @@ chord_composer_mini:
 
 # --- 完整版 ---
 # -------------------------------------
-# ① 知心键位         algebra_zhixin 「兼容正常串击键位 ✓     」
-# ② 空明码键位     algebra_kongming 「兼容正常串击键位 ✗     」
-# ③ 空明码键位  algebra_kongming_jk 「兼容正常串击键位 ✗ JK改」
+# ① 知心键位         algebra_zhixin 「兼容正常串击键位 ✓       」
+# ② 空明码键位     algebra_kongming 「兼容正常串击键位 ✗       」
+# ③ 镜像键位         algebra_mirror 「兼容正常串击键位 ✗ 空明改」
 # -------------------------------------
 chord_composer:
   prompt_format:
@@ -137,7 +137,7 @@ chord_composer:
     - "xform/^(.*)左(.*)右$/$1$2/"
   alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p/'1234567890"
   algebra:
-    __include: algebra.yaml:/algebra_kongming_jk
+    __include: algebra.yaml:/algebra_mirror
 
 
 # === OpenCC ===

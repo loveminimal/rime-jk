@@ -38,8 +38,8 @@ switches:
 recognizer:
   # import_preset: default
   patterns:
-    reverse_lookup: "^~[a-z]*:?$"
-    punct: "^~~(~|[0-9]|10|[A-Za-z]+)$"
+    reverse_lookup: "^~~[a-z]*:?$"
+    punct: "^~(~|[0-9]|10|[A-Za-z]+)$"
     pinyin: "^Z[Xa-z]*$"    
 
 
@@ -62,12 +62,13 @@ punctuator:
 reverse_lookup:
   dictionary: jk_ascii
   # prefix: "`"
-  prefix: "~"
+  prefix: "~~"
   suffix: ":"
   tips: 〔字符·反查〕
   enable_completion: true
   preedit_format:
-    - xlit|~| |
+    # - xlit|~| |
+    - xlint|(~+)| |
 
 pinyin:
   tag: pinyin

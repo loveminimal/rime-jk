@@ -170,12 +170,12 @@ style:
   candidate_padding: 5 #候选项内边距
   candidate_spacing: 0.5 #候选间距
   candidate_font: han.ttf #候选字型
-  candidate_text_size: 21 #候选字号
+  candidate_text_size: 20 #候选字号
   ## 编码
   comment_on_top: false #编码提示在上方或右侧
   comment_height: 18 #编码提示区高度
   comment_font: comment.ttf #编码提示字型
-  comment_text_size: 18 #编码提示字号
+  comment_text_size: 12 #编码提示字号
 
   # 按键区
   proximity_correction: true #按键纠错
@@ -3147,7 +3147,7 @@ preset_keyboards:
       - {click: num6}
       - {click: num7}
       - {click: num8}
-      - {click: num9, long_click: '=', swipe_down: 2, __include: conf/num_line }
+      - {click: num9,  long_click: '=', swipe_down: 9, __include: conf/num_line}
       - {click: num0}
       # 第 1 行
       - { click: 'q', long_click: '!', swipe_down: 1, __include: styl/key }
@@ -3188,7 +3188,7 @@ preset_keyboards:
       - {
           click: 'f',
           # long_click: '{',
-          long_click: '-',
+          long_click: '_',
           __include: styl/key,
         }
       - {

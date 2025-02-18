@@ -20,7 +20,7 @@ version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-吧	ba;kc 	7
+吧	ba;kc 	8
 表	biao;ge 	3
 并	bing;ua 	2
 不	bu;i,gi 	6
@@ -180,7 +180,7 @@ use_preset_vocabulary: false
 庄	zhuang;yf 	3
 走	zou;fh 	1
 变	bian;yo 	1
-地	de;f,fb 	5
+地	de;f,fb 	6
 花	hua;aw 	1
 值	zhi;wf 	1
 点	dian;hk 	4
@@ -545,7 +545,7 @@ use_preset_vocabulary: false
 前后	qian;ue hou;rg 	1
 全量	quan;wg liang;jg 	1
 煞笔	sha;qv bi;tt 	1
-什么	shen;wf me;tc 	4
+什么	shen;wf me;tc 	5
 实现	shi;pu xian;gm 	1
 说错	shuo;yu cuo;qa 	0
 下来	xia;gh lai;go 	1
@@ -683,7 +683,7 @@ use_preset_vocabulary: false
 长成	zhang;ta cheng;dn 	1
 找了	zhao;ra le;b,bn 	1
 这样	zhe;p,yp yang;su 	6
-真的	zhen;fh de;r,rq 	5
+真的	zhen;fh de;r,rq 	6
 整个	zheng;gk ge;wh 	0
 整句	zheng;gk ju;qk 	2
 支持	zhi;fc chi;rf 	3
@@ -933,7 +933,7 @@ use_preset_vocabulary: false
 次数	ci;uq shu;ov 	1
 词句	ci;yn ju;qk 	1
 对应	dui;cf ying;yi 	2
-符合	fu;tw he;wg 	1
+符合	fu;tw he;wg 	2
 干废	gan;fg fei;yn 	1
 建议	jian;vf yi;yy 	1
 就会	jiu;yi hui;wf 	2
@@ -1026,7 +1026,7 @@ use_preset_vocabulary: false
 你就	ni;wq jiu;yi 	1
 你能	ni;wq neng;ce 	0
 鸟面	niao;qy mian;dm 	1
-起码	qi;fh ma;dc 	1
+起码	qi;fh ma;dc 	2
 切成	qie;av cheng;dn 	1
 丝滑	si;xx hua;im 	0
 速录	su;gk lu;vi 	0
@@ -1443,7 +1443,7 @@ use_preset_vocabulary: false
 表弟	biao;ge di;ux 	1
 表现	biao;ge xian;gm 	0
 表征	biao;ge zheng;tg 	2
-不管	bu;i,gi guan;tp 	1
+不管	bu;i,gi guan;tp 	2
 橙色	cheng;sw se;qc 	2
 尺度	chi;ny du;ya 	0
 出来	chu;bm lai;go 	1
@@ -1495,7 +1495,7 @@ use_preset_vocabulary: false
 推动	tui;rw dong;fc 	1
 王道	wang;gg dao;ut 	1
 唯有	wei;kw you;e,de 	1
-无损	wu;fq sun;rk 	1
+无损	wu;fq sun;rk 	2
 物质	wu;tr zhi;rf 	1
 喜欢	xi;fk huan;cq 	1
 现有	xian;gm you;e,de 	1
@@ -1530,7 +1530,7 @@ use_preset_vocabulary: false
 二凤	er;fg feng;mc 	1
 发力	fa;v,nt li;lt 	1
 发现	fa;v,nt xian;gm 	1
-方面	fang;yy mian;dm 	0
+方面	fang;yy mian;dm 	1
 疯了	feng;um le;b,bn 	1
 公园	gong;wc yuan;lf 	1
 关注	guan;ud zhu;iy 	0
@@ -1565,6 +1565,14 @@ use_preset_vocabulary: false
 稍微	shao;ti wei;tm 	1
 修复	xiu;wh fu;tj 	1
 川岛	chuan;kt dao;qy 	0
+反省	fan;rc xing;it 	1
+好好	hao;vb hao;vb 	1
+朋友	peng;ee you;dc 	1
+人物	ren;w,ww wu;tr 	1
+特征	te;tr zheng;tg 	1
+肖邦	xiao;ie bang;dt 	1
+选角	xuan;tf jue;qe 	1
+这为	zhe;p,yp wei;o,yl 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2322,6 +2330,7 @@ use_preset_vocabulary: false
 只要时间	zhi;kw yao;s,sv shi;jf jian;uj 	1
 我测试过	wo;q,tr ce;im shi;ya guo;fp 	1
 优化一下	you;wd hua;wx yi;g,gg xia;gh 	1
+一下自己	yi;g,gg xia;gh zi;th ji;nn 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -2400,6 +2409,7 @@ use_preset_vocabulary: false
 到底是什么	dao;gc di;yq shi;j,jg shen;wf me;tc 	1
 时间是一个	shi;jf jian;uj shi;j,jg yi;g,gg ge;wh 	1
 同步了几次	tong;m,mg bu;hi le;b,bn ji;mt ci;uq 	1
+我是应该要	wo;q,tr shi;j,jg ying;yi gai;yy yao;s,sv 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1

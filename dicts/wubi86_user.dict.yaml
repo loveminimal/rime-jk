@@ -52,7 +52,7 @@ use_preset_vocabulary: false
 在	d 	7
 都	ftjb 	6
 来	go 	6
-呢	knx 	2
+呢	knx 	3
 你	wq 	66
 工	a 	1
 项	adm 	3
@@ -121,7 +121,7 @@ use_preset_vocabulary: false
 度	yac 	1
 高	ym 	2
 词	yngk 	8
-话	ytd 	7
+话	ytd 	8
 谁	ywyg 	2
 只	kw 	9
 搭	rawk 	1
@@ -223,7 +223,7 @@ use_preset_vocabulary: false
 诸	yftj 	1
 库	ylk 	2
 底	yqa 	1
-方	yy 	1
+方	yy 	2
 出	bm 	3
 戏	ca 	1
 邓	cb 	1
@@ -376,7 +376,7 @@ use_preset_vocabulary: false
 达	dp 	1
 克	dq 	1
 爱	epd 	1
-地	f 	1
+地	f 	2
 填	ffh 	1
 趣	fhb 	1
 翰	fjw 	1
@@ -547,6 +547,8 @@ use_preset_vocabulary: false
 爸	wqc 	1
 放	yt 	1
 款	ffi 	1
+戈	a 	2
+文	yygy 	1
 你好	wqvb 	2
 中国	khlg 	3
 取得	bctj 	2
@@ -611,10 +613,10 @@ use_preset_vocabulary: false
 开源	gaid 	3
 吞噬	gdkt 	3
 一直	ggfh 	3
-正常	ghip 	2
+正常	ghip 	3
 不过	gifp 	8
 整句	gkqk 	3
-肯定	hepg 	7
+肯定	hepg 	8
 目前	hhue 	4
 灌水	iaii 	1
 小众	ihww 	2
@@ -649,7 +651,7 @@ use_preset_vocabulary: false
 可用	sket 	1
 重度	tgya 	1
 重试	tgya 	1
-处理	thgj 	1
+处理	thgj 	3
 自由	thmh 	1
 自己	thnn 	9
 笑声	ttfn 	1
@@ -702,7 +704,7 @@ use_preset_vocabulary: false
 上面	hhdm 	3
 满意	iauj 	2
 添加	iglk 	2
-没有	imde 	3
+没有	imde 	4
 尝试	ipya 	3
 省事	itgk 	1
 当时	ivjf 	3
@@ -834,7 +836,7 @@ use_preset_vocabulary: false
 阳光	bjiq 	1
 除了	bwbn 	1
 附加	bwlk 	1
-友好	dcvb 	1
+友好	dcvb 	2
 大件	ddwr 	1
 百度	djya 	2
 原样	drsu 	1
@@ -853,7 +855,7 @@ use_preset_vocabulary: false
 一点	gghk 	2
 一级	ggxe 	1
 下面	ghdm 	2
-正确	ghdq 	3
+正确	ghdq 	4
 不能	gice 	3
 还有	gide 	1
 不中	gikh 	1
@@ -1000,7 +1002,7 @@ use_preset_vocabulary: false
 发现	ntgm 	3
 习惯	nunx 	2
 类似	odwn 	2
-字典	pbma 	3
+字典	pbma 	4
 字词	pbyn 	9
 错词	qayn 	2
 免得	qktj 	1
@@ -1270,7 +1272,7 @@ use_preset_vocabulary: false
 模型	saga 	1
 本来	sggo 	1
 重写	tgpg 	1
-程序	tkyc 	1
+程序	tkyc 	2
 竟然	ujqd 	1
 商标	umsf 	1
 那么	vftc 	3
@@ -1283,7 +1285,7 @@ use_preset_vocabulary: false
 应用	yiet 	1
 词条	ynts 	1
 底层	yqnf 	1
-方便	yywg 	2
+方便	yywg 	3
 节奏	abdw 	1
 基础	addb 	2
 其中	adkh 	1
@@ -1443,6 +1445,9 @@ use_preset_vocabulary: false
 启用	ynet 	2
 词频	ynhi 	2
 词序	ynyc 	1
+显示	jofi 	2
+提示	rjfi 	1
+批量	rxjg 	1
 最大值	jdwf 	1
 输入法	ltif 	4
 来不来	gggo 	1

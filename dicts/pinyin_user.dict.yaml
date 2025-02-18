@@ -20,7 +20,7 @@ version: '2025.02'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-吧	ba;kc 	6
+吧	ba;kc 	7
 表	biao;ge 	3
 并	bing;ua 	2
 不	bu;i,gi 	6
@@ -132,7 +132,7 @@ use_preset_vocabulary: false
 先	xian;tf 	1
 像	xiang;wq 	4
 要	yao;s,sv 	9
-一	yi;g,gg 	2
+一	yi;g,gg 	3
 约	yue;xq 	1
 真	zhen;fh 	1
 直	zhi;fh 	1
@@ -356,6 +356,7 @@ use_preset_vocabulary: false
 帅	shuai;jm 	1
 兄	xiong;kq 	1
 夜	ye;yw 	1
+拉	la;ru 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -501,7 +502,7 @@ use_preset_vocabulary: false
 不然	bu;i,gi ran;qd 	1
 不行	bu;i,gi xing;tf 	2
 不在	bu;i,gi zai;d,dh 	1
-单独	dan;uj du;qt 	2
+单独	dan;uj du;qt 	3
 导入	dao;nf ru;ty 	3
 对了	dui;cf le;b,bn 	1
 二毛	er;fg mao;tf 	1
@@ -707,7 +708,7 @@ use_preset_vocabulary: false
 说是	shuo;yu shi;j,jg 	0
 所有	suo;rn you;e,de 	1
 替换	ti;fw huan;rq 	3
-问题	wen;uk ti;jg 	5
+问题	wen;uk ti;jg 	6
 写好	xie;pg hao;vb 	1
 已经	yi;nn jing;x,xc 	3
 映射	ying;jm she;tm 	4
@@ -822,11 +823,11 @@ use_preset_vocabulary: false
 算了	suan;th le;b,bn 	3
 提交	ti;rj jiao;uq 	1
 提升	ti;rj sheng;ta 	0
-修改	xiu;wh gai;nt 	3
+修改	xiu;wh gai;nt 	4
 意思	yi;uj si;ln 	1
 影响	ying;jy xiang;kt 	2
 尤其	you;dn qi;ad 	1
-只用	zhi;kw yong;et 	1
+只用	zhi;kw yong;et 	2
 之类	zhi;pp lei;od 	2
 不像	bu;i,gi xiang;wq 	0
 词语	ci;yn yu;yg 	2
@@ -1556,6 +1557,11 @@ use_preset_vocabulary: false
 整容	zheng;gk rong;pw 	1
 只要	zhi;kw yao;s,sv 	0
 做个	zuo;wd ge;wh 	1
+帮我	bang;dt wo;q,tr 	1
+分开	fen;wv kai;ga 	1
+好上	hao;vb shang;h,hh 	0
+稍微	shao;ti wei;tm 	1
+修复	xiu;wh fu;tj 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2044,6 +2050,8 @@ use_preset_vocabulary: false
 有影响	you;e,de ying;jy xiang;kt 	1
 只关注	zhi;kw guan;ud zhu;iy 	1
 侏罗纪	zhu;wr luo;lq ji;xn 	1
+测试过	ce;im shi;ya guo;fp 	0
+好上手	hao;vb shang;h,hh shou;rt 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -2307,6 +2315,8 @@ use_preset_vocabulary: false
 一席之地	yi;g,gg xi;ya zhi;pp di;f,fb 	1
 这部电影	zhe;p,yp bu;uk dian;jn ying;jy 	1
 只要时间	zhi;kw yao;s,sv shi;jf jian;uj 	1
+我测试过	wo;q,tr ce;im shi;ya guo;fp 	1
+优化一下	you;wd hua;wx yi;g,gg xia;gh 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1

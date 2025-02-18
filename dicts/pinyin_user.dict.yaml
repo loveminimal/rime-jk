@@ -95,7 +95,7 @@ use_preset_vocabulary: false
 又	you;cc 	3
 啊	a;kb 	7
 按	an;rp 	0
-把	ba;rc 	3
+把	ba;rc 	4
 比	bi;xx 	4
 边	bian;lp 	2
 插	cha;rt 	1
@@ -357,6 +357,7 @@ use_preset_vocabulary: false
 兄	xiong;kq 	1
 夜	ye;yw 	1
 拉	la;ru 	1
+药	yao;ax 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -422,7 +423,7 @@ use_preset_vocabulary: false
 那么	na;vf me;tc 	1
 能用	neng;ce yong;et 	1
 你到	ni;wq dao;gc 	1
-你好	ni;wq hao;vb 	1
+你好	ni;wq hao;vb 	2
 拼音	pin;ru yin;uj 	8
 起来	qi;fh lai;go 	0
 嵌入	qian;ma ru;ty 	1
@@ -2052,6 +2053,8 @@ use_preset_vocabulary: false
 侏罗纪	zhu;wr luo;lq ji;xn 	1
 测试过	ce;im shi;ya guo;fp 	0
 好上手	hao;vb shang;h,hh shou;rt 	1
+挑出来	tiao;ri chu;bm lai;go 	1
+我昨天	wo;q,tr zuo;jt tian;gd 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -2449,4 +2452,3 @@ use_preset_vocabulary: false
 日常使用还是可以的	ri;jj chang;ip shi;wg yong;et hai;gi shi;j,jg ke;sk yi;c,ny de;r,rq 	1
 你还有什么想说的吗	ni;wq hai;gi you;e,de shen;wf me;tc xiang;sh shuo;yu de;r,rq ma;kc 	1
 只用最基本的就行了	zhi;kw yong;et zui;jb ji;ad ben;sg de;r,rq jiu;yi xing;tf le;b,bn 	1
-使用过程中上平的词汇	shi;wg yong;et guo;fp cheng;tk zhong;k,kh shang;h,hh ping;gu de;r,rq ci;yn hui;ia 	1

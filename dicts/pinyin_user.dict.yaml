@@ -26,8 +26,8 @@ use_preset_vocabulary: false
 不	bu;i,gi 	7
 才	cai;ft 	3
 词	ci;yn 	4
-打	da;rs 	4
-但	dan;wj 	6
+打	da;rs 	5
+但	dan;wj 	7
 到	dao;gc 	3
 的	de;r,rq 	93
 都	dou;ft 	9
@@ -54,7 +54,7 @@ use_preset_vocabulary: false
 是	shi;j,jg 	9
 说	shuo;yu 	2
 淞	song;is 	1
-他	ta;wb 	2
+他	ta;wb 	3
 挺	ting;rt 	1
 未	wei;fi 	1
 为	wei;o,yl 	3
@@ -137,7 +137,7 @@ use_preset_vocabulary: false
 真	zhen;fh 	1
 直	zhi;fh 	1
 只	zhi;kw 	1
-字	zi;pb 	2
+字	zi;pb 	3
 最	zui;jb 	2
 链	lian;ql 	0
 没	mei;im 	8
@@ -275,7 +275,7 @@ use_preset_vocabulary: false
 强	qiang;xk 	0
 瓦	wa;gn 	0
 砖	zhuan;df 	0
-大	da;dd 	2
+大	da;dd 	3
 号	hao;kg 	1
 啦	la;kr 	3
 傻	sha;wt 	0
@@ -363,6 +363,10 @@ use_preset_vocabulary: false
 名	ming;qk 	1
 存	cun;dh 	1
 且	qie;eg 	1
+次	ci;uq 	1
+伪	wei;wy 	0
+卸	xie;rh 	1
+鹰	ying;yw 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -406,7 +410,7 @@ use_preset_vocabulary: false
 哈哈	ha;kw ha;kw 	8
 还得	hai;gi de;tj 	1
 还是	hai;gi shi;j,jg 	9
-好的	hao;vb de;r,rq 	7
+好的	hao;vb de;r,rq 	8
 好久	hao;vb jiu;qy 	0
 合并	he;wg bing;ua 	2
 很久	hen;tv jiu;qy 	0
@@ -425,7 +429,7 @@ use_preset_vocabulary: false
 模型	mo;sa xing;ga 	4
 魔然	mo;ys ran;qd 	1
 那个	na;vf ge;wh 	7
-那么	na;vf me;tc 	2
+那么	na;vf me;tc 	3
 能用	neng;ce yong;et 	1
 你到	ni;wq dao;gc 	1
 你好	ni;wq hao;vb 	3
@@ -652,12 +656,12 @@ use_preset_vocabulary: false
 生物	sheng;tg wu;tr 	1
 输入	shu;lw ru;ty 	2
 舒服	shu;wf fu;eb 	0
-双拼	shuang;cc pin;ru 	4
+双拼	shuang;cc pin;ru 	5
 水痘	shui;ii dou;ug 	1
 说过	shuo;yu guo;fp 	1
 所以	suo;rn yi;c,ny 	4
 他妈	ta;wb ma;vc 	1
-体验	ti;ws yan;cw 	2
+体验	ti;ws yan;cw 	3
 甜蜜	tian;td mi;pn 	1
 调频	tiao;ym pin;hi 	6
 听你	ting;kr ni;wq 	0
@@ -687,7 +691,7 @@ use_preset_vocabulary: false
 长成	zhang;ta cheng;dn 	1
 找了	zhao;ra le;b,bn 	1
 这样	zhe;p,yp yang;su 	7
-真的	zhen;fh de;r,rq 	6
+真的	zhen;fh de;r,rq 	7
 整个	zheng;gk ge;wh 	2
 整句	zheng;gk ju;qk 	2
 支持	zhi;fc chi;rf 	3
@@ -882,7 +886,7 @@ use_preset_vocabulary: false
 依托	yi;wy tuo;rt 	1
 杂种	za;vs zhong;tk 	1
 按键	an;rp jian;qv 	1
-不错	bu;i,gi cuo;qa 	2
+不错	bu;i,gi cuo;qa 	3
 部署	bu;uk shu;lf 	1
 长度	chang;ta du;ya 	1
 超过	chao;fh guo;fp 	1
@@ -972,7 +976,7 @@ use_preset_vocabulary: false
 成字	cheng;dn zi;pb 	1
 串击	chuan;kk ji;fm 	1
 大写	da;dd xie;pg 	5
-打字	da;rs zi;pb 	1
+打字	da;rs zi;pb 	2
 当地	dang;iv di;f,fb 	1
 定长	ding;pg chang;ta 	1
 很强	hen;tv qiang;xk 	1
@@ -1088,7 +1092,7 @@ use_preset_vocabulary: false
 不好	bu;i,gi hao;vb 	0
 不难	bu;i,gi nan;cw 	0
 不学	bu;i,gi xue;ip 	1
-大家	da;dd jia;pe 	1
+大家	da;dd jia;pe 	2
 的吧	de;r,rq ba;kc 	1
 电力	dian;jn li;lt 	1
 都读	dou;ft du;yf 	2
@@ -1154,7 +1158,7 @@ use_preset_vocabulary: false
 尽量	jin;ny liang;jg 	2
 看看	kan;rh kan;rh 	2
 扩展	kuo;ry zhan;na 	2
-来说	lai;go shuo;yu 	1
+来说	lai;go shuo;yu 	2
 老板	lao;ft ban;sr 	0
 另外	ling;kl wai;qh 	2
 你去	ni;wq qu;fc 	1
@@ -1224,7 +1228,7 @@ use_preset_vocabulary: false
 改了	gai;nt le;b,bn 	1
 歌曲	ge;sk qu;ma 	1
 很棒	hen;tv bang;sd 	1
-简拼	jian;tu pin;ru 	3
+简拼	jian;tu pin;ru 	4
 空格	kong;pw ge;st 	2
 拉取	la;ru qu;bc 	0
 码长	ma;dc chang;ta 	1
@@ -1291,7 +1295,7 @@ use_preset_vocabulary: false
 五年	wu;gg nian;rh 	1
 休息	xiu;ws xi;th 	0
 有效	you;e,de xiao;uq 	0
-这是	zhe;p,yp shi;j,jg 	4
+这是	zhe;p,yp shi;j,jg 	5
 真是	zhen;fh shi;j,jg 	1
 正道	zheng;gh dao;ut 	1
 正解	zheng;gh jie;qe 	1
@@ -1373,7 +1377,7 @@ use_preset_vocabulary: false
 后娘	hou;rg niang;vy 	0
 护照	hu;ry zhao;jv 	1
 加钱	jia;lk qian;qg 	1
-节奏	jie;ab zou;dw 	1
+节奏	jie;ab zou;dw 	2
 连接	lian;lp jie;ru 	1
 了解	liao;b,bn jie;qe 	1
 路径	lu;kh jing;tc 	1
@@ -1487,7 +1491,7 @@ use_preset_vocabulary: false
 人类	ren;w,ww lei;od 	1
 身上	shen;tm shang;h,hh 	1
 生命	sheng;tg ming;wg 	1
-事实	shi;gk shi;pu 	0
+事实	shi;gk shi;pu 	1
 时空	shi;jf kong;pw 	1
 实诚	shi;pu cheng;yd 	1
 实验	shi;pu yan;cw 	1
@@ -1534,7 +1538,7 @@ use_preset_vocabulary: false
 二凤	er;fg feng;mc 	1
 发力	fa;v,nt li;lt 	1
 发现	fa;v,nt xian;gm 	1
-方面	fang;yy mian;dm 	1
+方面	fang;yy mian;dm 	2
 疯了	feng;um le;b,bn 	1
 公园	gong;wc yuan;lf 	1
 关注	guan;ud zhu;iy 	0
@@ -1636,6 +1640,23 @@ use_preset_vocabulary: false
 越好	yue;fh hao;vb 	1
 这边	zhe;p,yp bian;lp 	1
 之间	zhi;pp jian;uj 	1
+参考	can;cd kao;ft 	0
+长句	chang;ta ju;qk 	1
+处于	chu;th yu;gf 	1
+读音	du;yf yin;uj 	1
+击键	ji;fm jian;qv 	1
+尽管	jin;ny guan;tp 	1
+就要	jiu;yi yao;s,sv 	1
+看见	kan;rh jian;mq 	1
+劣势	lie;it shi;rv 	0
+马上	ma;cn shang;h,hh 	1
+每个	mei;tx ge;wh 	1
+头大	tou;ud da;dd 	1
+相当	xiang;sh dang;iv 	1
+星爷	xing;jt ye;wq 	2
+用了	yong;et le;b,bn 	0
+优势	you;wd shi;rv 	1
+整体	zheng;gk ti;ws 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -1829,11 +1850,11 @@ use_preset_vocabulary: false
 忘记了	wang;yn ji;yn le;b,bn 	0
 我比较	wo;q,tr bi;xx jiao;lu 	1
 我没有	wo;q,tr mei;im you;e,de 	1
-相当于	xiang;sh dang;iv yu;gf 	2
+相当于	xiang;sh dang;iv yu;gf 	3
 一部分	yi;g,gg bu;uk fen;wv 	1
 引导词	yin;xh dao;nf ci;yn 	1
 直接转	zhi;fh jie;ru zhuan;lf 	1
-只需要	zhi;kw xu;fd yao;s,sv 	2
+只需要	zhi;kw xu;fd yao;s,sv 	3
 只知道	zhi;kw zhi;td dao;ut 	1
 自己的	zi;th ji;nn de;r,rq 	1
 北斗阵	bei;ux dou;uf zhen;bl 	1
@@ -2143,6 +2164,11 @@ use_preset_vocabulary: false
 我出发	wo;q,tr chu;bm fa;v,nt 	1
 洗完澡	xi;it wan;pf zao;ik 	1
 中国区	zhong;k,kh guo;l,lg qu;aq 	1
+都知道	dou;ft zhi;td dao;ut 	1
+好东西	hao;vb dong;ai xi;sg 	1
+两个键	liang;gm ge;wh jian;qv 	1
+伪概念	wei;wy gai;sv nian;wy 	1
+在节奏	zai;d,dh jie;ab zou;dw 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -2424,6 +2450,10 @@ use_preset_vocabulary: false
 就能出来	jiu;yi neng;ce chu;bm lai;go 	1
 上一版本	shang;h,hh yi;g,gg ban;th ben;sg 	1
 我是电信	wo;q,tr shi;j,jg dian;jn xin;wy 	1
+好长时间	hao;vb chang;ta shi;jf jian;uj 	1
+一些劣势	yi;g,gg xie;hx lie;it shi;rv 	1
+用了五笔	yong;et le;b,bn wu;gg bi;tt 	1
+真的有范	zhen;fh de;r,rq you;e,de fan;ai 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -2533,6 +2563,7 @@ use_preset_vocabulary: false
 时间只是一个	shi;jf jian;uj zhi;kw shi;j,jg yi;g,gg ge;wh 	1
 现在都不着急	xian;gm zai;d,dh dou;ft bu;i,gi zhao;ud ji;qv 	1
 效果相当不错	xiao;uq guo;js xiang;sh dang;iv bu;i,gi cuo;qa 	1
+参考万象方案	can;cd kao;ft wan;dn xiang;qj fang;yy an;pv 	1
 五笔前二辅助码	wu;gg bi;tt qian;ue er;fg fu;lg zhu;eg ma;dc 	1
 资本真的是垃圾	zi;uq ben;sg zhen;fh de;r,rq shi;j,jg la;fu ji;fe 	1
 你还没有下班吗	ni;wq hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1

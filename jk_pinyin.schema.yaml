@@ -55,10 +55,10 @@ engine:
 
 speller:
   # [ ✗上屏 ]
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
+  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~"
   # [ ✓上屏 ]
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  delimiter: " '"
+  delimiter: " ~"
   # 支持：
   # ① 全拼/五笔前二   algebra_pinyin 
   # ② 小鹤/五笔前二    algebra_flypy

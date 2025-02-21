@@ -88,7 +88,7 @@ use_preset_vocabulary: false
 从	cong;ww 	1
 而	er;dm 	1
 改	gai;nt 	4
-刚	gang;mq 	4
+刚	gang;mq 	5
 好	hao;vb 	8
 试	shi;ya 	2
 下	xia;gh 	4
@@ -350,7 +350,7 @@ use_preset_vocabulary: false
 麦	mai;gt 	1
 内	nei;mw 	1
 前	qian;ue 	1
-日	ri;jj 	1
+日	ri;jj 	2
 润	run;iu 	4
 士	shi;fg 	0
 帅	shuai;jm 	1
@@ -1710,6 +1710,7 @@ use_preset_vocabulary: false
 傻傻	sha;wt sha;wt 	1
 帖子	tie;mh zi;bb 	0
 一按	yi;g,gg an;rp 	1
+这不	zhe;p,yp bu;i,gi 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2647,7 +2648,7 @@ use_preset_vocabulary: false
 同步这个之后	tong;m,mg bu;hi zhe;p,yp ge;wh zhi;pp hou;rg 	1
 这就是我一直	zhe;p,yp jiu;yi shi;j,jg wo;q,tr yi;g,gg zhi;fh 	1
 只不过用时候	zhi;kw bu;i,gi guo;fp yong;et shi;jf hou;wh 	1
-哈哈哈哈哈哈	ha;kw ha;kw ha;kw ha;kw ha;kw ha;kw 	1
+哈哈哈哈哈哈	ha;kw ha;kw ha;kw ha;kw ha;kw ha;kw 	2
 你今天要洗澡	ni;wq jin;wy tian;gd yao;s,sv xi;it zao;ik 	1
 这个皮肤不赖	zhe;p,yp ge;wh pi;hc fu;ef bu;i,gi lai;gk 	1
 看结果是有效	kan;rh jie;xf guo;js shi;j,jg you;e,de xiao;uq 	1

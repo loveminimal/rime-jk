@@ -70,6 +70,7 @@ git push --tags	gtt	0
 
 git add . && git commit -m 'perf: dicts|symbols update' && git push	grr	0
 git add . && git commit -m 'perf: some updates' && git push	gpp	0
+git add . && git commit -m 'perf: some updates'	gcc	0
 
 # --- Python ---
 # alias python="winpty python"

@@ -76,17 +76,18 @@ patch:
   key_binder/+:
     bindings/+:
       # --- 自定义键位 ---
-      - { when: always, accept: "Control+backslash", toggle: chaifen } # C-\ 切换拆隐折显
-      - { when: always, accept: "Control+period", toggle: zh2en }      # C-. 切换中英翻译
-      # - { when: always, accept: Control+comma, toggle: ascii_mode }  # C-, 切换中英状态
-      - { when: always, accept: Control+comma, select: .next }         # C-, 切换下一方案
-      - { when: has_menu, accept: semicolon, send: 2 }                 # ; 2 候选
-      - { when: has_menu, accept: apostrophe, send: 3 }                # ' 3 候选
-      - { when: has_menu, accept: slash, send: 4 }                     # / 4 候选
-      - { when: paging, accept: comma, send: Page_Up }                 # , 向上翻页
-      - { when: has_menu, accept: period, send: Page_Down }            # . 向下翻页
-      - { when: composing, accept: Control+k, send: Up }               # C-k 向上移动选词
-      - { when: composing, accept: Control+j, send: Down }             # C-j 向下移动选词
+      - { when: always, accept: "Control+backslash", toggle: chaifen }  # C-\ 切换拆隐折显
+      # - { when: always, accept: "Control+period", toggle: zh2en }     # C-. 切换中英翻译
+      - { when: always, accept: "Control+bracketright", toggle: zh2en } # C-] 切换中英翻译
+      # - { when: always, accept: Control+comma, toggle: ascii_mode }   # C-, 切换中英状态
+      - { when: always, accept: Control+comma, select: .next }          # C-, 切换下一方案
+      - { when: has_menu, accept: semicolon, send: 2 }                  # ; 2 候选
+      - { when: has_menu, accept: apostrophe, send: 3 }                 # ' 3 候选
+      - { when: has_menu, accept: slash, send: 4 }                      # / 4 候选
+      - { when: paging, accept: comma, send: Page_Up }                  # , 向上翻页
+      - { when: has_menu, accept: period, send: Page_Down }             # . 向下翻页
+      - { when: composing, accept: Control+k, send: Up }                # C-k 向上移动选词
+      - { when: composing, accept: Control+j, send: Down }              # C-j 向下移动选词
 
       # - { when: composing, accept: Control+semicolon, send: Return }
       - { when: composing, accept: Control+u, send: Return }

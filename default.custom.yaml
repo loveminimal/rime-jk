@@ -93,6 +93,7 @@ patch:
       - { when: composing, accept: Control+u, send: Return }
       - { when: composing, accept: Control+i, send: Return }
       - { when: composing, accept: Control+l, send: Return }
+      - { when: composing, accept: Control+comma, send: Return }
 
       - { when: always, accept: Control+u, send: '_' }
       - { when: always, accept: Control+i, send: '-' }

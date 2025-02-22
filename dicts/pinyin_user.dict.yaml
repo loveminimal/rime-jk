@@ -209,7 +209,7 @@ use_preset_vocabulary: false
 彻	che;ta 	1
 怼	dui;cf 	2
 感	gan;dg 	0
-库	ku;yl 	3
+库	ku;yl 	4
 面	mian;dm 	2
 死	si;gq 	2
 她	ta;vb 	3
@@ -275,9 +275,9 @@ use_preset_vocabulary: false
 强	qiang;xk 	0
 瓦	wa;gn 	0
 砖	zhuan;df 	0
-大	da;dd 	3
+大	da;dd 	4
 号	hao;kg 	1
-啦	la;kr 	3
+啦	la;kr 	4
 傻	sha;wt 	0
 搜	sou;rv 	3
 天	tian;gd 	2
@@ -316,7 +316,7 @@ use_preset_vocabulary: false
 哈	ha;kw 	0
 河	he;is 	1
 家	jia;pe 	0
-块	kuai;fn 	1
+块	kuai;fn 	2
 连	lian;lp 	1
 喽	lou;ko 	2
 能	neng;ce 	1
@@ -376,6 +376,9 @@ use_preset_vocabulary: false
 骂	ma;kk 	1
 拿	na;wg 	1
 骑	qi;cd 	0
+三	san;dg 	1
+葬	zang;ag 	1
+总	zong;uk 	0
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -435,7 +438,7 @@ use_preset_vocabulary: false
 论坛	lun;yw tan;ff 	2
 慢慢	man;nj man;nj 	3
 没有	mei;im you;e,de 	8
-模型	mo;sa xing;ga 	4
+模型	mo;sa xing;ga 	7
 魔然	mo;ys ran;qd 	1
 那个	na;vf ge;wh 	7
 那么	na;vf me;tc 	3
@@ -483,7 +486,7 @@ use_preset_vocabulary: false
 有了	you;e,de le;b,bn 	2
 这个	zhe;p,yp ge;wh 	8
 正常	zheng;gh chang;ip 	3
-直接	zhi;fh jie;ru 	5
+直接	zhi;fh jie;ru 	6
 止步	zhi;hh bu;hi 	0
 只能	zhi;kw neng;ce 	3
 之处	zhi;pp chu;th 	2
@@ -497,7 +500,7 @@ use_preset_vocabulary: false
 转换	zhuan;lf huan;rq 	1
 字典	zi;pb dian;ma 	2
 最初	zui;jb chu;pu 	0
-清理	qing;ig li;gj 	0
+清理	qing;ig li;gj 	1
 生成	sheng;tg cheng;dn 	2
 文件	wen;yy jian;wr 	9
 不用	bu;i,gi yong;et 	2
@@ -677,7 +680,7 @@ use_preset_vocabulary: false
 通规	tong;ce gui;fw 	1
 为了	wei;o,yl le;b,bn 	3
 习惯	xi;nu guan;nx 	0
-显示	xian;jo shi;fi 	1
+显示	xian;jo shi;fi 	2
 小鹤	xiao;ih he;pw 	3
 心脏	xin;ny zang;ey 	1
 修正	xiu;wh zheng;gh 	1
@@ -718,7 +721,7 @@ use_preset_vocabulary: false
 总有	zong;uk you;e,de 	1
 最快	zui;jb kuai;nn 	1
 做成	zuo;wd cheng;dn 	1
-给你	gei;xw ni;wq 	3
+给你	gei;xw ni;wq 	4
 工具	gong;a,aa ju;hw 	0
 过了	guo;fp le;b,bn 	1
 还多	hai;gi duo;qq 	1
@@ -839,7 +842,7 @@ use_preset_vocabulary: false
 给定	gei;xw ding;pg 	1
 规则	gui;fw ze;mj 	2
 试了	shi;ya le;b,bn 	0
-算了	suan;th le;b,bn 	3
+算了	suan;th le;b,bn 	4
 提交	ti;rj jiao;uq 	2
 提升	ti;rj sheng;ta 	0
 修改	xiu;wh gai;nt 	4
@@ -961,7 +964,7 @@ use_preset_vocabulary: false
 平的	ping;gu de;r,rq 	0
 起床	qi;fh chuang;ys 	1
 前缀	qian;ue zhui;xc 	1
-如此	ru;vk ci;hx 	3
+如此	ru;vk ci;hx 	5
 上传	shang;h,hh chuan;wf 	2
 神器	shen;py qi;kk 	1
 添加	tian;ig jia;lk 	0
@@ -1008,7 +1011,7 @@ use_preset_vocabulary: false
 梯子	ti;su zi;bb 	3
 听说	ting;kr shuo;yu 	1
 统一	tong;xy yi;g,gg 	1
-限制	xian;bv zhi;rm 	0
+限制	xian;bv zhi;rm 	1
 小写	xiao;ih xie;pg 	2
 严格	yan;go ge;st 	1
 演示	yan;ip shi;fi 	1
@@ -1160,7 +1163,7 @@ use_preset_vocabulary: false
 都要	dou;ft yao;s,sv 	1
 港澳	gang;ia ao;it 	1
 刚刚	gang;mq gang;mq 	0
-还有	hai;gi you;e,de 	1
+还有	hai;gi you;e,de 	2
 很紧	hen;tv jin;jc 	0
 红包	hong;xa bao;qn 	0
 回去	hui;lk qu;fc 	1
@@ -1190,7 +1193,7 @@ use_preset_vocabulary: false
 点击	dian;hk ji;fm 	2
 兜底	dou;qr di;yq 	1
 番茄	fan;to qie;al 	2
-方便	fang;yy bian;wg 	2
+方便	fang;yy bian;wg 	3
 国力	guo;l,lg li;lt 	1
 护士	hu;ry shi;fg 	2
 换图	huan;rq tu;lt 	1
@@ -1437,7 +1440,7 @@ use_preset_vocabulary: false
 斗破	dou;uf po;dh 	1
 异分	yi;na fen;wv 	1
 出发	chu;bm fa;v,nt 	0
-大小	da;dd xiao;ih 	1
+大小	da;dd xiao;ih 	2
 电影	dian;jn ying;jy 	1
 佛陀	fo;wx tuo;bp 	1
 干预	gan;fg yu;cb 	1
@@ -1593,7 +1596,7 @@ use_preset_vocabulary: false
 采用	cai;es yong;et 	1
 独立	du;qt li;uu 	1
 分号	fen;wv hao;kg 	1
-管理	guan;tp li;gj 	2
+管理	guan;tp li;gj 	3
 归档	gui;jv dang;si 	2
 绘制	hui;xw zhi;rm 	1
 机制	ji;sm zhi;rm 	2
@@ -1612,7 +1615,7 @@ use_preset_vocabulary: false
 软件	ruan;lq jian;wr 	1
 首页	shou;ut ye;dm 	1
 搜索	sou;rv suo;fp 	5
-推荐	tui;rw jian;ad 	0
+推荐	tui;rw jian;ad 	1
 托管	tuo;rt guan;tp 	2
 文档	wen;yy dang;si 	1
 先按	xian;tf an;rp 	1
@@ -1711,6 +1714,27 @@ use_preset_vocabulary: false
 帖子	tie;mh zi;bb 	0
 一按	yi;g,gg an;rp 	1
 这不	zhe;p,yp bu;i,gi 	1
+饼图	bing;qn tu;lt 	1
+此去	ci;hx qu;fc 	0
+打包	da;rs bao;qn 	0
+非常	fei;dj chang;ip 	0
+冯骥	feng;uc ji;cu 	1
+郭帆	guo;yb fan;mh 	1
+幻神	huan;xn shen;py 	1
+饺子	jiao;qn zi;bb 	1
+了吧	le;b,bn ba;kc 	1
+两百	liang;gm bai;dj 	1
+流量	liu;iy liang;jg 	0
+免费	mian;qk fei;xj 	1
+你才	ni;wq cai;ft 	0
+群里	qun;vt li;jf 	0
+容量	rong;pw liang;jg 	2
+上次	shang;h,hh ci;uq 	0
+数据	shu;ov ju;rn 	1
+天天	tian;gd tian;gd 	1
+贴吧	tie;mh ba;kc 	1
+外部	wai;qh bu;uk 	1
+小时	xiao;ih shi;jf 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2213,7 +2237,7 @@ use_preset_vocabulary: false
 几分钟	ji;mt fen;wv zhong;qk 	1
 就睡了	jiu;yi shui;ht le;b,bn 	1
 没试过	mei;im shi;ya guo;fp 	1
-你好啊	ni;wq hao;vb a;kb 	1
+你好啊	ni;wq hao;vb a;kb 	2
 上一版	shang;h,hh yi;g,gg ban;th 	0
 我出发	wo;q,tr chu;bm fa;v,nt 	1
 洗完澡	xi;it wan;pf zao;ik 	1
@@ -2250,6 +2274,18 @@ use_preset_vocabulary: false
 我是想	wo;q,tr shi;j,jg xiang;sh 	1
 有些字	you;e,de xie;hx zi;pb 	1
 这个吗	zhe;p,yp ge;wh ma;kc 	1
+饼状图	bing;qn zhuang;ud tu;lt 	1
+不够下	bu;i,gi gou;qk xia;gh 	1
+不用买	bu;i,gi yong;et mai;nu 	1
+打包去	da;rs bao;qn qu;fc 	1
+加起来	jia;lk qi;fh lai;go 	1
+烂番茄	lan;ou fan;to qie;al 	1
+上此去	shang;h,hh ci;hx qu;fc 	1
+上次去	shang;h,hh ci;uq qu;fc 	1
+有道理	you;e,de dao;ut li;gj 	0
+鱼腥草	yu;qg xing;ej cao;aj 	1
+这就去	zhe;p,yp jiu;yi qu;fc 	0
+总使用	zong;uk shi;wg yong;et 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -2546,6 +2582,12 @@ use_preset_vocabulary: false
 搜索好友	sou;rv suo;fp hao;vb you;dc 	1
 我也记得	wo;q,tr ye;bn ji;yn de;tj 	1
 有的时候	you;e,de de;r,rq shi;jf hou;wh 	1
+发群里吧	fa;v,nt qun;vt li;jf ba;kc 	1
+流量限制	liu;iy liang;jg xian;bv zhi;rm 	1
+如何实现	ru;vk he;ws shi;pu xian;gm 	1
+我这就去	wo;q,tr zhe;p,yp jiu;yi qu;fc 	1
+压缩一下	ya;df suo;xp yi;g,gg xia;gh 	1
+应该有吧	ying;yi gai;yy you;e,de ba;kc 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -2629,6 +2671,8 @@ use_preset_vocabulary: false
 起码对于我	qi;fh ma;dc dui;cf yu;gf wo;q,tr 	1
 怎么想的呢	zen;th me;tc xiang;sh de;r,rq ne;kn 	1
 那可能功能	na;vf ke;sk neng;ce gong;al neng;ce 	1
+非常有道理	fei;dj chang;ip you;e,de dao;ut li;gj 	1
+你才下班吗	ni;wq cai;ft xia;gh ban;gy ma;kc 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1

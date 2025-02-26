@@ -19,7 +19,7 @@ switches:
     states: [ 中文, 英文 ]
   - name: traditionalization
     states: [ 简体, 繁体 ]  
-    reset: 1
+    reset: 0
   - name: emoji
     reset: 1
     states: [ 💀, 😄 ]
@@ -206,6 +206,6 @@ chaifen:
 # -------------------------------------
 traditionalize:
   option_name: traditionalization
-  opencc_config: s2t.json
+  opencc_config: s2tw.json
   tips: char
   tags: [ abc, number, gregorian_to_lunar ]

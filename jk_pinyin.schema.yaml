@@ -49,8 +49,9 @@ engine:
     - simplifier
     - simplifier@emoji
     - simplifier@zh2en
-    - uniquifier
     - simplifier@chaifen
+    - simplifier@traditionalize
+    - uniquifier
 
 
 speller:

@@ -63,3 +63,6 @@ zh2en:
 
 chaifen:
   __include: jk_pinyin.schema.yaml:/chaifen
+
+traditionalize:
+  __include: jk_pinyin.schema.yaml:/traditionalize

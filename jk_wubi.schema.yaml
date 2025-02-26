@@ -179,3 +179,6 @@ zh2en:
 
 chaifen:
   __include: jk.yaml:/chaifen
+
+traditionalize:
+  __include: jk.yaml:/traditionalize

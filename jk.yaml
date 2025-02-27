@@ -45,6 +45,8 @@ recognizer:
     punct: "^~(~|[0-9]|10|[A-Za-z]+)$"
     pinyin: "^Z[Xa-z]*$"    
     history: "^(~hs|hH)$"
+    # quick_symbol: "^'.*$" 
+    # quick_text: "^;.*$"
 
 # === 标点符号处理器 ===
 # -------------------------------------

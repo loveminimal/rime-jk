@@ -52,6 +52,9 @@ punctuator:
 reverse_lookup:
   __include: jk_pinyin.schema.yaml:/reverse_lookup
 
+history:
+  __include: jk_pinyin.schema.yaml:/history
+
 custom_phrase:
   __include: jk_pinyin.schema.yaml:/custom_phrase
 

@@ -43,6 +43,7 @@ engine:
   # express_editor  编辑器处理器，处理「空格、回车确认输入、回退删除、候选上屏、其他字符直接上屏」
   # -------------------------------------
   processors:
+    - lua_processor@*commit_history*processor
     - ascii_composer
     - chord_composer
     - key_binder    
@@ -75,6 +76,7 @@ engine:
   # --- 翻译器，负责将输入的编码转换为候选项 --- 
   # -------------------------------------
   # translators:
+  # lua_translator@*commit_history*translator         上屏历史
   # echo_translator                 无候选时回显输入码为候选项
   # punct_translator                将「 tag: punct 」标识的标点符号转换为相应的符号或字符
   # table_translator                形码翻译器，可以加载多个实例，后接 @+翻译器名「 如 cangjie、wubi 等」
@@ -83,7 +85,8 @@ engine:
   # -------------------------------------
   translators:
     # - echo_translator               
-    - punct_translator                
+    - punct_translator        
+    - lua_translator@*commit_history*translator
     - table_translator
     - table_translator@custom_phrase  
     - script_translator@pinyin
@@ -166,6 +169,9 @@ reverse_lookup:
 
 pinyin:
   __include: jk.yaml:/pinyin
+
+history:
+  __include: jk.yaml:/history
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase

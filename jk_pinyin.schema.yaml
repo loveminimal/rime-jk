@@ -22,6 +22,7 @@ switches:
 
 engine:
   processors:
+    - lua_processor@*commit_history*processor
     - ascii_composer
     - chord_composer
     - recognizer
@@ -40,6 +41,7 @@ engine:
   translators:
     - punct_translator
     - table_translator@custom_phrase
+    - lua_translator@*commit_history*translator
     - script_translator
     - reverse_lookup_translator
     - lua_translator@*date_translator
@@ -103,6 +105,9 @@ punctuator:
 
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
+
+history:
+  __include: jk.yaml:/history
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase

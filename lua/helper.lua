@@ -5,7 +5,7 @@ local T = {}
 function T.func(input, seg, env)
     local composition = env.engine.context.composition
     local segment = composition:back()
-    if seg:has_tag("helper") or (input == "/oh") or (input == "oH") then
+    if seg:has_tag("helper") or (input == "~hh") or (input == "hH") then
         local table = {
             { "帮助菜单", "→ ~hh | hH" },
             { "历史上屏", "→ ~hs | hS" },

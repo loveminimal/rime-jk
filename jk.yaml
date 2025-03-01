@@ -74,7 +74,7 @@ reverse_lookup:
   # prefix: "`"
   prefix: "~~"
   suffix: ":"
-  tips: 〔字符·反查〕
+  tips: 〔英文·释义〕
   enable_completion: true
   preedit_format:
     # - xlit|~| |
@@ -93,7 +93,7 @@ pinyin:
 
 history:
   tag: history
-  tips: 〔历史·反查〕
+  tips: 〔上屏·历史〕
   prifix: "~hs"
   initial_quality: 99
   comment_max_length: 9

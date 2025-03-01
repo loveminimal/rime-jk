@@ -61,10 +61,14 @@ punctuator:
 
 # === 反查 ===
 # -------------------------------------
+# date_translator 日期时间输入
 # reverse_lookup  英文翻译字典
 # pinyin          拼音反查
 # custom_phrase   自定义码表
 # -------------------------------------
+date_translator:
+  jk_datetime: ~d
+
 reverse_lookup:
   dictionary: jk_ascii
   # prefix: "`"

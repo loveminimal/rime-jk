@@ -37,10 +37,7 @@ chord_composer:
 translator:
   __include: jk_wubi.schema.yaml:/translator
   prism: jk_wubi_bj
-
-
-date_translator:
-  __include: jk_wubi.schema.yaml:/date_translator
+  
 
 key_binder:
   __include: jk_wubi.schema.yaml:/key_binder
@@ -50,6 +47,9 @@ recognizer:
 
 punctuator:
   __include: jk_wubi.schema.yaml:/punctuator
+
+date_translator:
+  __include: jk_wubi.schema.yaml:/date_translator
 
 reverse_lookup:
   __include: jk_wubi.schema.yaml:/reverse_lookup

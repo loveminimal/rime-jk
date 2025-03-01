@@ -37,6 +37,7 @@ engine:
     - table_translator
     - reverse_lookup_translator
     - lua_translator@*helper
+    - lua_translator@*date_translator
     - lua_translator@*force_gc
   filters:
     - lua_filter@*prettify_comment
@@ -117,6 +118,9 @@ key_binder:
 
 recognizer:
   __include: jk.yaml:/recognizer
+
+date_translator:
+  __include: jk.yaml:/date_translator
 
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup

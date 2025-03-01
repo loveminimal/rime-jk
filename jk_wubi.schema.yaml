@@ -161,11 +161,10 @@ translator:
   comment_format: "{comment}" 
 
 
-date_translator:
-  jk_datetime: iii
-
-
 # === 反查 ===
+date_translator:
+  __include: jk.yaml:/date_translator
+
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 

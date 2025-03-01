@@ -45,6 +45,7 @@ engine:
     - lua_translator@*commit_history*translator
     - script_translator
     - reverse_lookup_translator
+    - lua_translator@*helper
     - lua_translator@*date_translator
     - lua_translator@*force_gc
   filters:
@@ -91,10 +92,6 @@ translator:
   comment_format: 
     - xform/[^;]*;([^;]*)/$1/
 
-
-date_translator:
-  jk_datetime: iii
-
 key_binder:
   import_preset: default
 
@@ -103,6 +100,9 @@ recognizer:
 
 punctuator:
   __include: jk.yaml:/punctuator
+
+date_translator:
+  __include: jk.yaml:/date_translator
 
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup

@@ -37,9 +37,6 @@ translator:
   prism: jk_pinyin_bj
 
 
-date_translator:
-  __include: jk_pinyin.schema.yaml:/date_translator
-
 key_binder:
   __include: jk_pinyin.schema.yaml:/key_binder
 
@@ -48,6 +45,9 @@ recognizer:
 
 punctuator:
   __include: jk_pinyin.schema.yaml:/punctuator
+
+date_translator:
+  __include: jk_pinyin.schema.yaml:/date_translator
 
 reverse_lookup:
   __include: jk_pinyin.schema.yaml:/reverse_lookup

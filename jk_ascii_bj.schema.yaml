@@ -29,6 +29,8 @@ chord_composer:
 
 translator:
   __include: jk_ascii.schema.yaml:/translator
+  prism: jk_ascii_bj
+
    
 punctuator:
   __include: jk_ascii.schema.yaml:/punctuator
@@ -38,6 +40,9 @@ key_binder:
 
 recognizer:
   __include: jk_ascii.schema.yaml:/recognizer
+
+date_translator:
+  __include: jk_ascii.schema.yaml:/date_translator
 
 reverse_lookup:
   __include: jk_ascii.schema.yaml:/reverse_lookup

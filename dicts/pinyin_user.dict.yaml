@@ -16,7 +16,7 @@
 # 
 ---
 name: pinyin_user
-version: '2025.02'
+version: '2025.03'
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -388,6 +388,7 @@ use_preset_vocabulary: false
 墨	mo;lf 	1
 奇	qi;ds 	1
 睿	rui;hp 	1
+符	fu;tw 	1
 按照	an;rp zhao;jv 	1
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -557,7 +558,7 @@ use_preset_vocabulary: false
 总是	zong;uk shi;j,jg 	0
 被骂	bei;pu ma;kk 	1
 不小	bu;i,gi xiao;ih 	1
-插入	cha;rt ru;ty 	0
+插入	cha;rt ru;ty 	1
 多多	duo;qq duo;qq 	0
 反华	fan;rc hua;wx 	1
 改完	gai;nt wan;pf 	1
@@ -1771,6 +1772,10 @@ use_preset_vocabulary: false
 怎们	zen;th men;wu 	1
 抓狂	zhua;rr kuang;qt 	1
 资源	zi;uq yuan;id 	1
+年糕	nian;rh gao;ou 	1
+向上	xiang;tm shang;h,hh 	1
+向下	xiang;tm xia;gh 	1
+移动	yi;tq dong;fc 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2643,6 +2648,7 @@ use_preset_vocabulary: false
 国内镜像	guo;l,lg nei;mw jing;qu xiang;wq 	1
 苦思冥想	ku;ad si;ln ming;pj xiang;sh 	1
 尤其是形	you;dn qi;ad shi;j,jg xing;ga 	1
+花拳绣腿	hua;aw quan;ud xiu;xt tui;ev 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1

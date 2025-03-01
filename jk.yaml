@@ -85,7 +85,7 @@ pinyin:
   dictionary: jk_pinyin
   prefix: "Z"
   suffix: "'"
-  tips: 〔拼音·反查〕
+  tips: 〔拼音·临时〕
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
@@ -93,7 +93,7 @@ pinyin:
 
 history:
   tag: history
-  tips: 〔上屏·历史〕
+  tips: 〔历史·上屏〕
   prifix: "~hs"
   initial_quality: 99
   comment_max_length: 9

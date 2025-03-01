@@ -40,12 +40,13 @@ function P.func(key, env)
     return 2
 end
 
-function P.fini(env)
-    if env.mem then
-        env.mem:disconnect()
-        env.mem = nil
-    end
-end
+-- JK::此处报错，暂时注释
+-- function P.fini(env)
+--     if env.mem then
+--         env.mem:disconnect()
+--         env.mem = nil
+--     end
+-- end
 
 function T.init(env)
     env.history_list = {}

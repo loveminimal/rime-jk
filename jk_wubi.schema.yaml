@@ -92,6 +92,7 @@ engine:
     - table_translator@custom_phrase  
     - script_translator@pinyin
     - reverse_lookup_translator       
+    - lua_translator@*helper
     - lua_translator@*date_translator 
     - lua_translator@*force_gc        
   # --- 处理候选词列表「调整、修改、排序、筛选、转换」候选词 ---
@@ -129,7 +130,7 @@ punctuator:
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  delimiter: " z"     
+  delimiter: " ~"     
   # max_code_length: 4
 
 

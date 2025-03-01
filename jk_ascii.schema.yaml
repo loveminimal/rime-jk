@@ -36,6 +36,7 @@ engine:
     - punct_translator
     - table_translator
     - reverse_lookup_translator
+    - lua_translator@*helper
     - lua_translator@*force_gc
   filters:
     - lua_filter@*prettify_comment

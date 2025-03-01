@@ -44,7 +44,8 @@ recognizer:
     reverse_lookup: "^~~[a-z]*:?$"
     punct: "^~(~|[0-9]|10|[A-Za-z]+)$"
     pinyin: "^Z[Xa-z]*$"    
-    history: "^(~hs|hH)$"
+    history: "^(~hs|hS)$"
+    helper: "^(~hh|hH)$"
     # quick_symbol: "^'.*$" 
     # quick_text: "^;.*$"
 
@@ -73,7 +74,7 @@ reverse_lookup:
   enable_completion: true
   preedit_format:
     # - xlit|~| |
-    - xlint|(~+)| |
+    # - xlint|(~+)| |
 
 pinyin:
   tag: pinyin

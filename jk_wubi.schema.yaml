@@ -44,7 +44,7 @@ engine:
   # -------------------------------------
   processors:
     - lua_processor@*commit_history*processor
-    - lua_processor@*quick_symbol_text
+    - lua_processor@*quick_symbol
     - ascii_composer
     - chord_composer
     - key_binder    

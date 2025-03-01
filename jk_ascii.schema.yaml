@@ -17,6 +17,7 @@ switches:
 
 engine:
   processors:
+    - lua_processor@*quick_symbol_text
     - ascii_composer
     - chord_composer
     - key_binder

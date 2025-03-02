@@ -5,11 +5,23 @@
 -- 使用方式加入到函数 - lua_processor@*quick_symbol
 -- recognizer/patterns/quick_symbol: "^;.*$"
 -- -------------------------------------
--- 定义符号映射表
+-- 定义符号映射表（支持双字母组合）
 local mapping = {
-    q = "!" ,  w = "@"   , e = "#"     , r = "$"     , t = "%"   , y = "^"      ,  u = "_"  , i = "-"   , o = "="   , p = "\\"  ,
-    a = "&" ,  s = "("   , d = "{"     , f = "["     , g = "?"   , h = "*"      ,  j = "+"  , k = "."   , l = ";"   ,
-    z = "|" ,  x = ")"   , c = "}"     , v = "]"     , b = "`"   , n = "<"      ,  m = ">"  
+    -- qq = "!", ww = "@", ee = "#", rr = "$", tt = "%", yy = "^", uu = "_", ii = "-", oo = "=", pp = "+",
+    -- aa = "&", ss = "(", dd = ")", ff = "{", gg = "}", hh = "=", jj = ",", kk = ".", ll = ";", 
+    -- zz = "|", xx = "[", cc = "]", vv = "*", bb = "`", nn = "〔", mm = "〕"
+    
+    qq = "!"    , ww = "@"  , ee = "#"  , rr = "$"  , tt = "%"  , yy = "^"  , uu = "&"  , ii = "*"  , oo = "`"  , pp = "~"  ,
+        aa = "-", ss = "_"  , dd = "="  , ff = "+"  , gg = "|"  , hh = ";"  , jj = ":"  , kk = "'"  , ll = '"'  ,
+                  zz = "\\" , xx = ","  , cc = "."  , vv = "<"  , bb = ">"  , nn = "/"  , mm = "?"  ,
+
+    qa = "！"   , ws = " "  , ed = " "  , rf = "¥"  , tg = "％" , yh = "……", uj = " "  , ik = "×"  , ol = "・",
+    az = "——" , sx = " "  , dc = " "  , fv = " "  , gb = "·"  , hn = "；"  , jm = "：" ,
+      za = "、" , xs = "，" , cd = "。" , vf = "《" , bg = "》" , nh = "÷"   , mj = "？" ,
+
+    qw = "1"    , wq = "2"  , we = "3"  , ew = "4"  , er = "5"  , re = "6"  , rt = " "  , tr = " "  , ty = " "  , yt = " "  , yu = ' '  , uy = " "  , ui = " "  , iu = " "  , io = " "  , oi = " "  , op = " "  , po = " "  ,
+        as = "7", sa = "8"  , sd = "("  , ds = ")"  , df = "["  , fd = "]"  , fg = "{"  , gf = "}"  , gh = '【 ', hg = ' 】', hj = "『 ", jh = " 』", jk = "‘"  , kj = "’"  , kl = "“"  , lk = "”"  ,
+        zx = "9", xz = "0"  , xc = "（ ", cx = " ）", cv = "「 ", vc = " 」", vb = "〔 ", bv = " 〕", bn = ' '  , nb = " "  , nm = " "  , mn = " "  ,
 }
 
 -- 初始化符号输入的状态
@@ -20,8 +32,8 @@ local function init(env)
     local quick_symbol_pattern = config:get_string("recognizer/patterns/quick_symbol") or "^;.*$"
     -- 提取配置值中的第二个字符作为引导符
     local quick_symbol = string.sub(quick_symbol_pattern, 2, 2) or ";"
-    -- 生成单引导符和双引导符模式
-    env.single_symbol_pattern = "^" .. quick_symbol .. "([a-zA-Z])$"
+    -- 生成双字母组合模式，匹配 ; 加两个字母
+    env.double_symbol_pattern = "^" .. quick_symbol .. "([a-zA-Z])([a-zA-Z])$"
 end
 
 -- 处理符号和文本的重复上屏逻辑
@@ -30,12 +42,15 @@ local function processor(key_event, env)
     local context = engine.context
     local input = context.input -- 当前输入的字符串
 
-    -- 检查当前输入是否匹配单引导符符号模式 ;q、;w 等
-    local match = string.match(input, env.single_symbol_pattern)
-    if match then
-        local symbol = mapping[match] -- 获取匹配的符号
+    -- 检查当前输入是否匹配双字母组合模式 ;qq、;qw 等
+    local first_char, second_char = string.match(input, env.double_symbol_pattern)
+    if first_char and second_char then
+        -- 将两个字母组合成键（如 "qq"、"qw"）
+        local key = first_char .. second_char
+        -- 从映射表中获取对应的符号
+        local symbol = mapping[key]
         if symbol then
-            -- 将符号直接上屏并保存到符号历史
+            -- 将符号直接上屏
             engine:commit_text(symbol)
             context:clear() -- 清空输入
             return 1 -- 捕获事件，处理完成
@@ -49,4 +64,3 @@ return {
     init = init,
     func = processor
 }
-

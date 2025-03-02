@@ -36,6 +36,7 @@ function T.func(input, seg, env)
             { "快符——", "→ ',  并击" },
             { "快符   +", "→ '.  并击" },
             { "快符   !", "→ ,/  并击" },
+            { "快符脚本", "→ ……    " },
             -- { "项目地址", "→ " .. "loveminimal/rime-jk" },
         }
         segment.prompt = "〔帮助·菜单〕"

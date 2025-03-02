@@ -46,9 +46,8 @@ recognizer:
     pinyin: "^Z[Xa-z]*$"    
     history: "^(~hs|hS)$"
     helper: "^(~hh|hH)$"
-    # quick_symbol: "^'.*$" 
     quick_symbol: "^;.*$" 
-    # quick_text: "^;.*$"
+
 
 # === 标点符号处理器 ===
 # -------------------------------------

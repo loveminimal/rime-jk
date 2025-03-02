@@ -618,7 +618,7 @@ use_preset_vocabulary: false
 对的	dui;cf de;r,rq 	3
 发布	fa;v,nt bu;dm 	1
 反而	fan;rc er;dm 	1
-放在	fang;yt zai;d,dh 	1
+放在	fang;yt zai;d,dh 	3
 分行	fen;wv hang;tf 	1
 覆盖	fu;st gai;ug 	1
 改成	gai;nt cheng;dn 	2
@@ -767,7 +767,7 @@ use_preset_vocabulary: false
 不掉	bu;i,gi diao;rh 	1
 不多	bu;i,gi duo;qq 	0
 不见	bu;i,gi jian;mq 	0
-不能	bu;i,gi neng;ce 	3
+不能	bu;i,gi neng;ce 	5
 部分	bu;uk fen;wv 	1
 超凡	chao;fh fan;my 	0
 出词	chu;bm ci;yn 	1
@@ -979,7 +979,7 @@ use_preset_vocabulary: false
 神器	shen;py qi;kk 	1
 添加	tian;ig jia;lk 	0
 通过	tong;ce guo;fp 	1
-同样	tong;m,mg yang;su 	1
+同样	tong;m,mg yang;su 	2
 位置	wei;wu zhi;lf 	1
 一张	yi;g,gg zhang;xt 	1
 引导	yin;xh dao;nf 	0
@@ -1776,6 +1776,8 @@ use_preset_vocabulary: false
 向上	xiang;tm shang;h,hh 	1
 向下	xiang;tm xia;gh 	1
 移动	yi;tq dong;fc 	1
+鸡蛋	ji;cq dan;nh 	2
+瘆人	shen;uc ren;w,ww 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2338,6 +2340,7 @@ use_preset_vocabulary: false
 一般般	yi;g,gg ban;te ban;te 	1
 一样的	yi;g,gg yang;su de;r,rq 	1
 尤其是	you;dn qi;ad shi;j,jg 	0
+篮子里	lan;tj zi;bb li;jf 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1

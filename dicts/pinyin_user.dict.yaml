@@ -449,6 +449,7 @@ use_preset_vocabulary: false
 装	zhuang;uf 	1
 自	zi;th 	1
 时	shi;jf 	0
+聂	nie;bc 	0
 按照	an;rp zhao;jv 	2
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -604,7 +605,7 @@ use_preset_vocabulary: false
 简纯	jian;tu chun;xg 	1
 哪个	na;kv ge;wh 	4
 你们	ni;wq men;wu 	2
-确实	que;dq shi;pu 	8
+确实	que;dq shi;pu 	9
 省事	sheng;it shi;gk 	0
 手动	shou;rt dong;fc 	2
 速度	su;gk du;ya 	1
@@ -2221,6 +2222,7 @@ use_preset_vocabulary: false
 午休	wu;tf xiu;ws 	0
 有你	you;e,de ni;wq 	0
 这的	zhe;p,yp de;r,rq 	0
+操控	cao;rk kong;rp 	0
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2951,6 +2953,12 @@ use_preset_vocabulary: false
 怎么会	zen;th me;tc hui;wf 	0
 这种人	zhe;p,yp zhong;tk ren;w,ww 	0
 只能是	zhi;kw neng;ce shi;j,jg 	0
+超级长	chao;fh ji;xe chang;ta 	0
+打多了	da;rs duo;qq le;b,bn 	0
+会给你	hui;wf gei;xw ni;wq 	0
+开了头	kai;ga le;b,bn tou;ud 	0
+如果你	ru;vk guo;js ni;wq 	0
+是的卅	shi;j,jg de;r,rq sa;gk 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -3359,6 +3367,7 @@ use_preset_vocabulary: false
 真的是卅	zhen;fh de;r,rq shi;j,jg sa;gk 	1
 真他妈的	zhen;fh ta;wb ma;vc de;r,rq 	1
 自己身上	zi;th ji;nn shen;tm shang;h,hh 	0
+这种情况	zhe;p,yp zhong;tk qing;ng kuang;uk 	0
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -3463,6 +3472,7 @@ use_preset_vocabulary: false
 已经无数次	yi;nn jing;x,xc wu;fq shu;ov ci;uq 	1
 应该是群主	ying;yi gai;yy shi;j,jg qun;vt zhu;y,yg 	1
 都没有看到	dou;ft mei;im you;e,de kan;rh dao;gc 	0
+长句打多了	chang;ta ju;qk da;rs duo;qq le;b,bn 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1
@@ -3534,6 +3544,7 @@ use_preset_vocabulary: false
 是不是能升级成	shi;j,jg bu;i,gi shi;j,jg neng;ce sheng;ta ji;xe cheng;dn 	1
 一点脑子都没有	yi;g,gg dian;hk nao;ey zi;bb dou;ft mei;im you;e,de 	1
 只能是经常打的	zhi;kw neng;ce shi;j,jg jing;x,xc chang;ip da;rs de;r,rq 	1
+短词好操控一下	duan;td ci;yn hao;vb cao;rk kong;rp yi;g,gg xia;gh 	1
 但不是绝对用不到	dan;wj bu;i,gi shi;j,jg jue;xq dui;cf yong;et bu;i,gi dao;gc 	1
 反正现在也没有发	fan;rc zheng;gh xian;gm zai;d,dh ye;bn mei;im you;e,de fa;v,nt 	1
 我就是这样知道的	wo;q,tr jiu;yi shi;j,jg zhe;p,yp yang;su zhi;td dao;ut de;r,rq 	1
@@ -3553,6 +3564,9 @@ use_preset_vocabulary: false
 给脸不要脸的玩意儿	gei;xw lian;ew bu;i,gi yao;s,sv lian;ew de;r,rq wan;gf yi;uj er;qt 	1
 拼音打长句是这样的	pin;ru yin;uj da;rs chang;ta ju;qk shi;j,jg zhe;p,yp yang;su de;r,rq 	1
 一点脑子都没有的吗	yi;g,gg dian;hk nao;ey zi;bb dou;ft mei;im you;e,de de;r,rq ma;kc 	1
+很容易出现这种情况	hen;tv rong;pw yi;jq chu;bm xian;gm zhe;p,yp zhong;tk qing;ng kuang;uk 	1
+如果你开了调频的话	ru;vk guo;js ni;wq kai;ga le;b,bn tiao;ym pin;hi de;r,rq hua;yt 	1
+如果你开了头聂的话	ru;vk guo;js ni;wq kai;ga le;b,bn tou;ud nie;bc de;r,rq hua;yt 	1
 使用过程中上平的词汇	shi;wg yong;et guo;fp cheng;tk zhong;k,kh shang;h,hh ping;gu de;r,rq ci;yn hui;ia 	1
 不一定到时候有你现在	bu;i,gi yi;g,gg ding;pg dao;gc shi;jf hou;wh you;e,de ni;wq xian;gm zai;d,dh 	1
 或者清理一些僵尸群友	huo;ak zhe;ft qing;ig li;gj yi;g,gg xie;hx jiang;wg shi;nn qun;vt you;dc 	1
@@ -3562,6 +3576,7 @@ use_preset_vocabulary: false
 想要给这些傻逼一些教训	xiang;sh yao;s,sv gei;xw zhe;p,yp xie;hx sha;wt bi;gk yi;g,gg xie;hx jiao;ft xun;yk 	1
 怎么会有这么傻逼的货色	zen;th me;tc hui;wf you;e,de zhe;p,yp me;tc sha;wt bi;gk de;r,rq huo;wx se;qc 	1
 学习的话就用常用的发行版	xue;ip xi;nu de;r,rq hua;yt jiu;yi yong;et chang;ip yong;et de;r,rq fa;v,nt xing;tf ban;th 	1
+会给你同步一些超级长的句子	hui;wf gei;xw ni;wq tong;m,mg bu;hi yi;g,gg xie;hx chao;fh ji;xe chang;ta de;r,rq ju;qk zi;bb 	1
 今天真的是有被一个傻逼给气到	jin;wy tian;gd zhen;fh de;r,rq shi;j,jg you;e,de bei;pu yi;g,gg ge;wh sha;wt bi;gk gei;xw qi;rn dao;gc 	1
 落到自己身上更狠不能当时就爆掉	luo;ai dao;gc zi;th ji;nn shen;tm shang;h,hh geng;gj hen;qt bu;i,gi neng;ce dang;iv shi;jf jiu;yi bao;oj diao;rh 	1
 这种人对于傻逼的容忍度是很低的	zhe;p,yp zhong;tk ren;w,ww dui;cf yu;gf sha;wt bi;gk de;r,rq rong;pw ren;vy du;ya shi;j,jg hen;tv di;wq de;r,rq 	1

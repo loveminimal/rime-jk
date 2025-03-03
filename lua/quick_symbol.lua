@@ -1,11 +1,12 @@
--- Created by @amzxyz <https://github.com/amzxyz/rime_wanxiang_pro>
--- -------------------------------------
--- Simplified by Jack Liu <https://aituyaa.com>
---
--- 使用方式加入到函数 - lua_processor@*quick_symbol
--- recognizer/patterns/quick_symbol: "^;.*$"
--- -------------------------------------
+-- Created by Jack Liu <https://aituyaa.com>
+-- 
+-- 主键区符号映射，如：
+-- ;qq → ！  ss → _ ...
+-- 使用 ; 作引导符结合两个主键位映射出全部半角字符及常用全角字符
+-- ---------------------------------
+
 -- 定义符号映射表（支持双字母组合）
+-- 仍然有大量组合及空位未列出，可按照个人需求自定义添加、添加
 local mapping = {
     -- qq = "!", ww = "@", ee = "#", rr = "$", tt = "%", yy = "^", uu = "_", ii = "-", oo = "=", pp = "+",
     -- aa = "&", ss = "(", dd = ")", ff = "{", gg = "}", hh = "=", jj = ",", kk = ".", ll = ";", 

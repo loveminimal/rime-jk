@@ -76,10 +76,10 @@ patch:
   key_binder/+:
     bindings/+:
       # --- 自定义键位 ---
-      # - { when: always, accept: "Control+backslash", toggle: chaifen }              # C-\ 切换拆隐折显
+      - { when: always, accept: "Control+bracketleft", toggle: traditionalization }   # C-[ 切换简繁切换
       # - { when: always, accept: "Control+period", toggle: zh2en }                   # C-. 切换中英翻译
-      # - { when: always, accept: "Control+bracketleft", toggle: traditionalization } # C-[ 切换简繁切换
-      # - { when: always, accept: "Control+bracketright", toggle: zh2en }             # C-] 切换中英翻译
+      - { when: always, accept: "Control+bracketright", toggle: zh2en }               # C-] 切换中英翻译
+      - { when: always, accept: "Control+backslash", toggle: chaifen }                # C-\ 切换拆隐折显
       - { when: always, accept: Control+space, toggle: ascii_mode }                   # C-␣ 切换中英状态
       - { when: always, accept: Control+comma, select: .next }                        # C-, 切换下一方案
       - { when: has_menu, accept: semicolon, send: 2 }                                # ; 2 候选
@@ -96,23 +96,14 @@ patch:
       - { when: composing, accept: Control+l, send: Return }
       - { when: composing, accept: Control+comma, send: Return }
 
-      # - { when: always, accept: Control+u, send: '_' }
-      # - { when: always, accept: Control+i, send: '-' }
-      # - { when: always, accept: Control+o, send: '=' }
-      # - { when: always, accept: Control+p, send: '+' }
+      - { when: always, accept: Control+u, send: '_' }
+      - { when: always, accept: Control+i, send: '-' }
+      - { when: always, accept: Control+o, send: '=' }
+      - { when: always, accept: Control+p, send: '+' }
 
-      - { when: always, accept: Control+u, toggle: traditionalization }
-      - { when: always, accept: Control+i, toggle: zh2en }
-      - { when: always, accept: Control+o, toggle: chaifen }
+      # - { when: always, accept: Control+u, toggle: traditionalization }
+      # - { when: always, accept: Control+i, toggle: zh2en }
+      # - { when: always, accept: Control+o, toggle: chaifen }
       
-
-      # - { when: always, accept: Control+h, send: '#' }
-      # - { when: always, accept: Control+j, send: '+' }
-      # - { when: always, accept: Control+k, send: '(' }
-      # - { when: always, accept: Control+l, send: '*' }
-
-      # - { when: always, accept: Control+b, send: '!' }
-      # - { when: always, accept: Control+n, send: '?' }
       - { when: always, accept: Control+apostrophe, send: '~' }
-      # - { when: always, accept: Control+m, send: '~' }
 

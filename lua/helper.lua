@@ -8,7 +8,6 @@ function T.func(input, seg, env)
     if seg:has_tag("helper") or (input == "~hh") or (input == "hH") then
         local table = {
             { "帮助菜单", "→ ~hh | hH" },
-            { "历史上屏", "→ ~hs | hS" },
             { "二三四选", "→ ; ' / 键" },
             { "上下翻页", "→ , .   键" },
             { "临时拼音", "→ Z     键" },

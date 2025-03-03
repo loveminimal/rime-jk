@@ -44,7 +44,6 @@ recognizer:
     reverse_lookup: "^~~[a-z]*:?$"
     punct: "^~(~|[0-9]|10|[A-Za-z]+)$"
     pinyin: "^Z[Xa-z]*$"    
-    history: "^(~hs|hS)$"
     helper: "^(~hh|hH)$"
     quick_symbol: "^;.*$" 
 
@@ -90,14 +89,6 @@ pinyin:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
-
-history:
-  tag: history
-  tips: 〔历史·上屏〕
-  prifix: "~hs"
-  initial_quality: 99
-  comment_max_length: 9
-  max_count: 12
 
 # -------------------------------------
 # custom_phrase:

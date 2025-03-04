@@ -42,7 +42,7 @@ recognizer:
   # import_preset: default
   patterns:
     reverse_lookup: "^~~[a-z]*:?$"
-    punct: "^~(~|[0-9]|10|[A-Za-z]+)$"
+    punct: "^~([0-9]|10|[A-Za-z]+)$"
     pinyin: "^Z[Xa-z]*$"    
     helper: "^(~hh|hH)$"
     quick_symbol: "^;.*$" 
@@ -76,8 +76,7 @@ reverse_lookup:
   tips: 〔英文·释义〕
   enable_completion: true
   preedit_format:
-    # - xlit|~| |
-    # - xlint|(~+)| |
+    - xlit|~| |
 
 pinyin:
   tag: pinyin
@@ -123,11 +122,9 @@ chord_composer_mini:
     - "xform/^(.*)右$/$1/"
     - "xform/^(.*)左(.*)右$/$1$2/"
   # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
-  # alphabet: zr;"
-  # alphabet: "1234567890\\;',./"
   alphabet: ",."
   algebra:
-    # --- 修改为JK键位 ---
+    # --- 修改为并击键位 ---
     # 定义左手键
     # - xform/^er(?![左右])/y左/
     # 定义右手键
@@ -136,30 +133,8 @@ chord_composer_mini:
     # ---------------------------------
     # 仅保留〔 ,. ➭ ~ 〕，其余使用快符
     # ---------------------------------
-    # - xform/15(?![左右])$/`右/
-    # - xform/14(?![左右])$/!右/
-    # - xform/24(?![左右])$/@右/
-    # - xform/23(?![左右])$/#右/
-    # - xform/34(?![左右])$/$右/
-    # - xform/45(?![左右])$/%右/
-
-    # - xform/67(?![左右])$/^右/
-    # - xform/78(?![左右])$/&右/
-    # - xform/89(?![左右])$/*右/
-    # - xform/79(?![左右])$/(右/
-    # - xform/70(?![左右])$/)右/
-
     - xform/,\.(?![左右])$/~右/
-    # - xform|\./(?![左右])$|}右|
-    # - xform|,/(?![左右])$|!右|
 
-    # - xform/;,(?![左右])$/|右/
-    # - xform/;\.(?![左右])$/&右/
-
-    # - xform/',(?![左右])$/——右/
-    # - xform/'\.(?![左右])$/+右/
-
-    # - xform/;'(?![左右])$/{右/
 
 # --- 完整版 ---
 # -------------------------------------

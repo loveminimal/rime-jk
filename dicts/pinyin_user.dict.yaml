@@ -545,7 +545,7 @@ use_preset_vocabulary: false
 我是	wo;q,tr shi;j,jg 	6
 我也	wo;q,tr ye;bn 	1
 五笔	wu;gg bi;tt 	5
-想在	xiang;sh zai;d,dh 	0
+想在	xiang;sh zai;d,dh 	1
 形码	xing;ga ma;dc 	5
 也就	ye;bn jiu;yi 	1
 以前	yi;c,ny qian;ue 	3
@@ -2247,6 +2247,10 @@ use_preset_vocabulary: false
 愉悦	yu;nw yue;nu 	1
 脏话	zang;ey hua;yt 	1
 中年	zhong;k,kh nian;rh 	0
+本地	ben;sg di;f,fb 	1
+码表	ma;dc biao;ge 	1
+相同	xiang;sh tong;m,mg 	1
+字长	zi;pb chang;ta 	1
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2998,6 +3002,7 @@ use_preset_vocabulary: false
 一大堆	yi;g,gg da;dd dui;fw 	0
 隐藏掉	yin;bq cang;ad diao;rh 	1
 这对于	zhe;p,yp dui;cf yu;gf 	0
+服务器	fu;eb wu;tl qi;kk 	1
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -3417,6 +3422,8 @@ use_preset_vocabulary: false
 这种神作	zhe;p,yp zhong;tk shen;py zuo;wt 	1
 自己来说	zi;th ji;nn lai;go shuo;yu 	1
 昨天晚上	zuo;jt tian;gd wan;jq shang;h,hh 	0
+进行排序	jin;fj xing;tf pai;rd xu;yc 	1
+添加提示	tian;ig jia;lk ti;rj shi;fi 	1
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -3528,6 +3535,7 @@ use_preset_vocabulary: false
 还是这样的	hai;gi shi;j,jg zhe;p,yp yang;su de;r,rq 	1
 突破了以往	tu;pw po;dh le;b,bn yi;c,ny wang;ty 	0
 这种玩意儿	zhe;p,yp zhong;tk wan;gf yi;uj er;qt 	0
+我需要按照	wo;q,tr xu;fd yao;s,sv an;rp zhao;jv 	1
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1

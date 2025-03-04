@@ -940,13 +940,6 @@ function GetNowTimeJq(date)
   return JQtable2
 end
 
-local function main()
-  print(GetNowTimeJq("20210101"))
-  -- print(JQtest("20210323")) --测试函数
-  -- print(table.concat(GetNextJQ("20210101")))
-end
-
--- main()
 -- *******农历节气计算部分结束
 
 -- 公历转干支历实现
@@ -1529,7 +1522,7 @@ function Date2LunarDate(Gregorian)
   end
   -- print(LDay)
   LunarYear = cTianGan[math.fmod(LYear - 4, 10) + 1] .. cDiZhi[math.fmod(LYear - 4, 12) + 1] .. "年(" ..
-                cShuXiang[math.fmod(LYear - 4, 12) + 1] .. ")" .. LunarMonth .. cDayName[LDay]
+                cShuXiang[math.fmod(LYear - 4, 12) + 1] .. ") " .. LunarMonth .. cDayName[LDay]
   -- print(LunarYear)
   return LunarYear
 end
@@ -1661,18 +1654,6 @@ function LunarDate2Date(Gregorian, IsLeap)
   return GDate
 end
 
-local function main()
-  print(LunarDate2Date(20210101, 0))
-  -- print(19660808 .. "-" ..Date2LunarDate(19660808))
-  -- print(20001218 .. "-" ..Date2LunarDate(20001218))
-  print(os.date("%Y%m%d") .. "-" .. Date2LunarDate(os.date("%Y%m%d")))
-  -- print(20200525 .. "-" ..Date2LunarDate(20200525))
-  -- print(20220105 .. "-" ..Date2LunarDate(20220105))
-  -- print(20350129 .. "-" ..Date2LunarDate(20350129))
-end
-
--- main()
-
 ------------农历转换函数结束--------------
 
 --[[
@@ -1788,44 +1769,7 @@ local function QueryLunarInfo(date)
 
   return result
 end
---[[ ---------------测试----------------
-local n=QueryLunarInfo(199105)
-for i=1,#n do
-    print(n[i][1]..n[i][2])
-end
---]] ----------------------------------
 
-
---[[
--- 农历倒计时
-local function nl_shengri(y, m, d)
-  nlsrsj = y .. m .. d -- 农历时间
-  date1 = os.date("%Y%m%d")
-  date2 = LunarDate2Date(nlsrsj, 0)
-  m = string.match(date2, "年(.-)月")
-  if #m == "2" then
-    date2 = string.gsub(date2, "年", "", "1")
-  else
-    date2 = string.gsub(date2, "年", "0", "1")
-  end
-  d = string.match(date2, "月(.-)日")
-  if #d == "2" then
-    date2 = string.gsub(date2, "月", "", "1")
-  else
-    date2 = string.gsub(date2, "月", "0", "1")
-  end
-  date2 = string.gsub(date2, "日", "", "1")
-
-end
-
-local function nl_shengri2(y, m, d)
-  while nl_shengri(y, m, d) == -1 do
-    y = tointeger(y + 1)
-  end
-  result = nl_shengri(y, m, d)
-  return result
-end
--- 农历倒计时结束]]--
 --万象修改的新的农历倒计时模块
 -- 定义一个月映射表，采用明确的字符串键
 local month_map = {
@@ -1894,6 +1838,7 @@ local function nl_shengri(y, m, d)
   result = diffDate(date1, date2)
   return result
 end
+
 --二次循环跨年调用
 local function nl_shengri2(y, m, d)
   while nl_shengri(y, m, d) == -1 do
@@ -1968,6 +1913,7 @@ local function get_nth_weekday(year, month, weekday, n)
   end
   return nil  -- 如果没有找到，返回nil
 end
+
 -- 计算目标日期和当前日期的天数差
 local function days_until(target_date)
   local current_date = os.date("%Y%m%d")  -- 获取当前日期 (yyyyMMdd)
@@ -1976,7 +1922,7 @@ local function days_until(target_date)
   local diff = diffDate(current_date, target_date)  -- 计算当前日期与目标日期的天数差
   return diff  -- 返回天数差
 end
--- 获取即将到来的节日（公历和农历）
+
 -- 获取即将到来的节日（公历和农历）
 local function get_upcoming_holidays()
   local upcoming_holidays = {}
@@ -2086,81 +2032,13 @@ local function generate_candidates(input, seg, candidates)
       yield(candidate)
   end
 end
-local function translator(input, seg, env)
+
+-- --- 主函数 ---
+local function schedule(input, seg, env)
     local engine = env.engine
     local context = engine.context
-
-    -- **日期候选项**
-    if (input == "/rq" or input == "orq") then
-        local num_year = os.date("%j/") .. IsLeap(os.date("%Y"))
-        local date_variants = {
-            {os.date("%Y-%m-%d"), num_year},
-            {os.date("%Y/%m/%d"), num_year},
-            {os.date("%Y.%m.%d"), num_year},
-            {os.date("%Y年%m月%d日"), num_year},
-            {string.gsub(os.date("%m/%d/%Y"), "([^%d])0+", "%1"), num_year},
-            {CnDate_translator(os.date("%Y%m%d")), num_year},
-            {lunarJzl(os.date("%Y%m%d%H")), " "},
-            {Date2LunarDate(os.date("%Y%m%d")) .. JQtest(os.date("%Y%m%d")), ""},
-            {Date2LunarDate(os.date("%Y%m%d")) .. GetLunarSichen(os.date("%H"), 1), ""}
-        }
-        generate_candidates("date", seg, date_variants)
-
-    -- **时间候选项**
-    elseif (input == "/sj" or input == "osj" or input == "ouj") then
-        local time_discrpt = GetLunarSichen(os.date("%H"), 1)
-        local time_variants = {
-            {os.date("%H:%M"), time_discrpt},
-            {format_Time() .. os.date("%I:%M"), time_discrpt},
-            {os.date("%H:%M:%S"), time_discrpt},
-            {string.gsub(os.date("%H点%M分%S秒"), "^0", ""), time_discrpt}
-        }
-        generate_candidates("time", seg, time_variants)
-    -- **农历候选项**
-    elseif (input == "/nl" or input == "onl") then
-        local lunar_variants = {
-            {Date2LunarDate(os.date("%Y%m%d")) .. JQtest(os.date("%Y%m%d")), ""},
-            {lunarJzl(os.date("%Y%m%d%H")), " "},
-            {Date2LunarDate(os.date("%Y%m%d")) .. GetLunarSichen(os.date("%H"), 1), ""}
-        }
-        generate_candidates("date", seg, lunar_variants)
-    -- **星期候选项**
-    elseif (input == "/xq" or input == "oxq") then
-        local num_weekday = os.date("第%W周")
-        local week_variants = {
-            {chinese_weekday(os.date("%w")), num_weekday},
-            {chinese_weekday2(os.date("%w")), num_weekday},
-            {os.date("%a"), num_weekday},
-            {os.date("%A"), num_weekday}
-        }
-        generate_candidates("xq", seg, week_variants)
-    -- **第几周**
-    elseif (input == "oww" or input == "/ww") then
-        local weekno = tostring(tonumber(os.date("%W")) + 1)
-        local week_variants = {
-            {"W" .. weekno, "周"},
-            {"第" .. weekno .. "周", "周"}
-        }
-        generate_candidates("oww", seg, week_variants)
-
-    -- **节气候选项**
-    elseif (input == "/jq" or input == "ojq") then
-        local jqs = GetNowTimeJq(os.date("%Y%m%d", os.time() - 3600 * 24 * 15))
-        for _, jq in ipairs(jqs) do
-            local candidate = Candidate("jwql", seg.start, seg._end, jq, "〔节气〕")
-            candidate.quality = 1000000
-            yield(candidate)
-        end
-
-    -- **时间戳**
-    elseif (input == "/tt" or input == "ott") then
-        local current_time = os.time()
-        local timestamp_variants = {
-            {string.format('%d', current_time), "Unix Timestamp"}
-        }
-        generate_candidates("time", seg, timestamp_variants)
     -- **N日期**
-    elseif string.sub(input, 1, 1) == "N" then
+    if string.sub(input, 1, 1) == "N" then
         local n = string.sub(input, 2)
         if tonumber(n) ~= nil and (string.match(n, "^(20)%d%d+$") ~= nil or string.match(n, "^(19)%d%d+$") ~= nil) then
             local lunar = QueryLunarInfo(n)
@@ -2172,36 +2050,7 @@ local function translator(input, seg, env)
                 end
             end
         end
-    -- **日期+时间**
-    elseif (input == "/rs" or input == "ors") then
-        local current_time = os.time()
-        local time_variants = {
-            {os.date('%Y-%m-%d %H:%M:%S', current_time), "年-月-日 时:分:秒"},
-            {os.date('%Y-%m-%dT%H:%M:%S+08:00', current_time), "年-月-日T时:分:秒+时区"},
-            {os.date('%Y%m%d%H%M%S', current_time), "年月日时分秒"}
-        }
-        generate_candidates("time", seg, time_variants)
-    -- **节日查询**
-    elseif (input == "/jr" or input == "ojr") then
-        local upcoming_holidays = get_upcoming_holidays()  -- 获取所有即将到来的节日
-        local candidates = {}
-        -- 格式化输出节日信息
-        for _, holiday in ipairs(upcoming_holidays) do
-            -- 提取公历日期中的月份和日期部分（假设日期格式为 "yyyy年mm月dd日"）
-            local year, month, day = holiday[2]:match("^(%d+)年(%d+)月(%d+)日")
-            -- 格式化为 "mm月dd日"
-            if month and day then
-                local formatted_date = string.format("%02d月%02d日", tonumber(month), tonumber(day))
-                -- 输出格式：节日名称（格式化后的公历日期） 还有多少天
-                local holiday_summary = string.format("%s (%s) < %d 天", holiday[1], formatted_date, holiday[3])
-                -- 将节日信息加入候选项列表
-                table.insert(candidates, {holiday_summary, "节日信息"})
-            end
-        end
-        -- 使用 generate_candidates 函数生成候选项
-        generate_candidates("holiday_summary", seg, candidates)
-      -- 日历信息整合处理 `/day`
-    elseif (input == ";jc" or input == "/day" or input == "oday") then
+    elseif (input == "~jc" or input == "/day" or input == "oday") then
         -- 获取当前时间
         local now = os.time()
         local year = tonumber(os.date("%Y", now))
@@ -2210,6 +2059,9 @@ local function translator(input, seg, env)
         local day_of_year = tonumber(os.date("%j", now))  -- 今年的第几天
         local week_of_year = tonumber(os.date("%W", now)) + 1  -- 今年的第几周
         local week_of_month = math.ceil(tonumber(os.date("%d", now)) / 7)  -- 当月的第几周
+
+
+
     
         -- 计算一年的总天数，判断是否为闰年
         local days_in_year = IsLeap(year) == "闰年" and 366 or 365  -- 判断是否为闰年
@@ -2293,30 +2145,31 @@ local function translator(input, seg, env)
         local progress_bar = generate_progress_bar(year_progress)
         -- 生成自定义长度的符号线
         local function generate_line(length)
-          return string.rep("—", length)
+          -- return string.rep("—", length)
+          return string.rep("--", length)
         end
         
         -- 你可以根据需要调整长度
-        local line = generate_line(15)  -- 控制符号线的宽度为 15
+        local line = generate_line(29)  -- 控制符号线的宽度为 15
         -- 生成最终信息字符串
         local summary = 
-            string.format("嗨，我是万象拼音小助手，%s\n", greeting) ..
-            line .. "\n" ..
-            string.format("今天是：%d年%02d月%02d日 %s\n", year, month, day, week_day_str) ..
-            string.format("农历  ：%s\n", lunar_info_str) ..
-            line .. "\n" ..
-            string.format("%d年进度  :   %s\n", year, progress_bar) ..
-            string.format("距离 %d 年: 还有 [ %d ]天\n", next_year, diff_days_next_year) ..
-            line .. "\n" ..
-            string.format("今天是%d年的第[ %d ]周，%02d月第[ %d ]周\n", year, week_of_year, month, week_of_month) ..
-            string.format("今年已度过[ %d ]天，今天是第[ %d ]天\n", day_of_year - 1, day_of_year) ..
-            line .. "\n" ..
-            string.format("距离: %s %s < [ %d ]天\n", holiday_data[1][1], holiday_data[1][2], holiday_data[1][3]) .. 
-            string.format("距离: %s %s < [ %d ]天\n", holiday_data[2][1], holiday_data[2][2], holiday_data[2][3]) ..
-            line .. "\n" ..
-            string.format("距离: %s < [ %d ]天\n", upcoming_jqs[1], jieqi_days[1]) ..
-            string.format("距离: %s < [ %d ]天", upcoming_jqs[2], jieqi_days[2]) --..
-         --   string.format("距离: %s 还有 [ %d ]天\n", upcoming_jqs[3], jieqi_days[3])
+            string.format("\n嗨，我是您的日程小助手，%s  \n", greeting) ..
+            line .. "  \n" ..
+            string.format("今天：%d年%02d月%02d日 %s  \n", year, month, day, week_day_str) ..
+            string.format("农历：%s  \n", lunar_info_str) ..
+            string.format("时间：%s  \n", os.date('%H点%M分%S秒', now)) ..
+            line .. "  \n" ..
+            string.format("%d  年进度：%s  \n", year, progress_bar) ..
+            string.format("距离 %d 年：还有 [ %d ]天  \n", next_year, diff_days_next_year) ..
+            line .. "  \n" ..
+            string.format("今天是%d年的第[ %d ]周，%02d月第[ %d ]周  \n", year, week_of_year, month, week_of_month) ..
+            string.format("今年已度过[ %d ]天，今天是第[ %d ]天  \n", day_of_year - 1, day_of_year) ..
+            line .. "  \n" ..
+            string.format("距离: %s %s < [ %d ]天  \n", holiday_data[1][1], holiday_data[1][2], holiday_data[1][3]) .. 
+            string.format("距离: %s %s < [ %d ]天  \n", holiday_data[2][1], holiday_data[2][2], holiday_data[2][3]) ..
+            line .. "  \n" ..
+            string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[1], jieqi_days[1]) ..
+            string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[2], jieqi_days[2]) --..
     
         -- 使用 generate_candidates 函数生成候选项
         local candidates = {
@@ -2327,6 +2180,4 @@ local function translator(input, seg, env)
         generate_candidates("day_summary", seg, candidates)
     end
 end
-return translator
-
-
+return schedule

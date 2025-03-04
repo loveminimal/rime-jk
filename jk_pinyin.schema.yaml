@@ -43,7 +43,7 @@ engine:
     - table_translator@custom_phrase
     - script_translator
     - reverse_lookup_translator
-    - lua_translator@*shijian
+    - lua_translator@*schedule
     - lua_translator@*helper
     - lua_translator@*date_translator
     - lua_translator@*force_gc

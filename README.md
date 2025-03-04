@@ -2,6 +2,11 @@ RIME_JK ，指尖上的旋律 ～ [🍕 指南](https://aituyaa.com/rime_jk-%E6%
 
 ![配色方案](./assets/color.png)
 
+‼🪧 [**Release Version 6.6.0.lts+**](https://github.com/loveminimal/rime-jk/releases/tag/v6.6.0.lts+)
+
+该版本可以看成是 `v6.1.0` 版本的升级版 〔 辅助码仅保留五笔前二  〕。
+
+
 ‼🪧 [**Release Version 6.1.0**](https://github.com/loveminimal/rime-jk/releases/tag/v6.1.0)
 
 该版本是一个功能完善的版本：

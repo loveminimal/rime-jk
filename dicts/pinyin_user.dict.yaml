@@ -42,7 +42,7 @@ use_preset_vocabulary: false
 看	kan;rh 	8
 快	kuai;nn 	4
 懒	lan;ng 	1
-了	le;b,bn 	96
+了	le;b,bn 	98
 吗	ma;kc 	8
 你	ni;wq 	9
 偶	ou;wj 	1
@@ -145,7 +145,7 @@ use_preset_vocabulary: false
 事	shi;gk 	1
 卜	bo;hh 	1
 盗	dao;uq 	1
-多	duo;qq 	4
+多	duo;qq 	5
 耳	er;bg 	1
 功	gong;al 	1
 还	hai;gi 	8
@@ -175,7 +175,7 @@ use_preset_vocabulary: false
 县	xian;eg 	1
 小	xiao;ih 	3
 原	yuan;dr 	0
-再	zai;gm 	6
+再	zai;gm 	7
 镇	zhen;qf 	1
 庄	zhuang;yf 	3
 走	zou;fh 	3
@@ -187,7 +187,7 @@ use_preset_vocabulary: false
 靠	kao;tf 	0
 删	shan;mm 	4
 手	shou;rt 	2
-版	ban;th 	5
+版	ban;th 	6
 丑	chou;nf 	1
 买	mai;nu 	1
 器	qi;kk 	3
@@ -450,6 +450,7 @@ use_preset_vocabulary: false
 自	zi;th 	1
 时	shi;jf 	0
 聂	nie;bc 	0
+神	shen;py 	1
 按照	an;rp zhao;jv 	2
 俺宝	an;wd bao;pg 	9
 宝安	bao;pg an;pv 	0
@@ -805,7 +806,7 @@ use_preset_vocabulary: false
 写好	xie;pg hao;vb 	1
 已经	yi;nn jing;x,xc 	3
 映射	ying;jm she;tm 	9
-永远	yong;yn yuan;fq 	3
+永远	yong;yn yuan;fq 	4
 只是	zhi;kw shi;j,jg 	5
 不怪	bu;i,gi guai;nc 	0
 成功	cheng;dn gong;al 	0
@@ -843,7 +844,7 @@ use_preset_vocabulary: false
 跟班	gen;kh ban;gy 	1
 怪怪	guai;nc guai;nc 	1
 关键	guan;ud jian;qv 	1
-过滤	guo;fp lv;ih 	0
+过滤	guo;fp lv;ih 	1
 好长	hao;vb chang;ta 	1
 鹤形	he;pw xing;ga 	1
 后面	hou;rg mian;dm 	3
@@ -973,7 +974,7 @@ use_preset_vocabulary: false
 部署	bu;uk shu;lf 	2
 长度	chang;ta du;ya 	2
 超过	chao;fh guo;fp 	1
-出现	chu;bm xian;gm 	1
+出现	chu;bm xian;gm 	2
 公平	gong;wc ping;gu 	1
 公正	gong;wc zheng;gh 	1
 还能	hai;gi neng;ce 	2
@@ -1130,7 +1131,7 @@ use_preset_vocabulary: false
 用处	yong;et chu;th 	0
 又是	you;cc shi;j,jg 	2
 有范	you;e,de fan;ai 	0
-这些	zhe;p,yp xie;hx 	4
+这些	zhe;p,yp xie;hx 	5
 殖畜	zhi;gq chu;yx 	3
 字符	zi;pb fu;tw 	4
 白领	bai;rr ling;wy 	1
@@ -1230,7 +1231,7 @@ use_preset_vocabulary: false
 不上	bu;i,gi shang;h,hh 	0
 不少	bu;i,gi shao;it 	1
 充裕	chong;yc yu;pu 	0
-导致	dao;nf zhi;gc 	4
+导致	dao;nf zhi;gc 	5
 都要	dou;ft yao;s,sv 	1
 港澳	gang;ia ao;it 	1
 刚刚	gang;mq gang;mq 	0
@@ -1367,7 +1368,7 @@ use_preset_vocabulary: false
 擦擦	ca;rp ca;rp 	1
 点映	dian;hk ying;jm 	1
 改过	gai;nt guo;fp 	1
-很难	hen;tv nan;cw 	0
+很难	hen;tv nan;cw 	1
 贱货	jian;mg huo;wx 	1
 看人	kan;rh ren;w,ww 	0
 票房	piao;sf fang;yn 	2
@@ -1456,7 +1457,7 @@ use_preset_vocabulary: false
 定制	ding;pg zhi;rm 	0
 根本	gen;sv ben;sg 	1
 果然	guo;js ran;qd 	2
-后来	hou;rg lai;go 	1
+后来	hou;rg lai;go 	2
 后娘	hou;rg niang;vy 	0
 护照	hu;ry zhao;jv 	1
 加钱	jia;lk qian;qg 	1
@@ -1519,7 +1520,7 @@ use_preset_vocabulary: false
 估计	gu;wd ji;yf 	2
 规律	gui;fw lv;tv 	3
 几次	ji;mt ci;uq 	3
-讲真	jiang;yf zhen;fh 	1
+讲真	jiang;yf zhen;fh 	2
 开了	kai;ga le;b,bn 	2
 类似	lei;od si;wn 	2
 你开	ni;wq kai;ga 	1
@@ -1990,7 +1991,7 @@ use_preset_vocabulary: false
 俊杰	jun;wc jie;so 	1
 开启	kai;ga qi;yn 	0
 看个	kan;rh ge;wh 	0
-考虑	kao;ft lv;ha 	1
+考虑	kao;ft lv;ha 	2
 可爱	ke;sk ai;ep 	0
 可乐	ke;sk le;qi 	1
 空调	kong;pw tiao;ym 	1
@@ -2224,6 +2225,28 @@ use_preset_vocabulary: false
 这的	zhe;p,yp de;r,rq 	0
 操控	cao;rk kong;rp 	0
 也挺	ye;bn ting;rt 	0
+步入	bu;hi ru;ty 	0
+不说	bu;i,gi shuo;yu 	0
+大大	da;dd da;dd 	0
+导演	dao;nf yan;ip 	0
+多喝	duo;qq he;kj 	0
+发达	fa;v,nt da;dp 	0
+感到	gan;dg dao;gc 	0
+惯性	guan;nx xing;nt 	0
+好到	hao;vb dao;gc 	0
+红楼	hong;xa lou;so 	1
+令人	ling;wy ren;w,ww 	0
+神作	shen;py zuo;wt 	0
+体重	ti;ws zhong;tg 	1
+醒得	xing;sg de;tj 	0
+演员	yan;ip yuan;km 	0
+一件	yi;g,gg jian;wr 	0
+一搜	yi;g,gg sou;rv 	0
+隐藏	yin;bq cang;ad 	0
+预约	yu;cb yue;xq 	0
+愉悦	yu;nw yue;nu 	1
+脏话	zang;ey hua;yt 	1
+中年	zhong;k,kh nian;rh 	0
 必须的	bi;nt xu;ed de;r,rq 	1
 编辑器	bian;xy ji;lk qi;kk 	2
 不直接	bu;i,gi zhi;fh jie;ru 	1
@@ -2289,7 +2312,7 @@ use_preset_vocabulary: false
 会不会	hui;wf bu;i,gi hui;wf 	1
 就这样	jiu;yi zhe;p,yp yang;su 	1
 可以有	ke;sk yi;c,ny you;e,de 	1
-快捷键	kuai;nn jie;rg jian;qv 	2
+快捷键	kuai;nn jie;rg jian;qv 	3
 每个人	mei;tx ge;wh ren;w,ww 	1
 每一行	mei;tx yi;g,gg hang;tf 	2
 是不是	shi;j,jg bu;i,gi shi;j,jg 	9
@@ -2552,7 +2575,7 @@ use_preset_vocabulary: false
 就需要	jiu;yi xu;fd yao;s,sv 	1
 拉取中	la;ru qu;bc zhong;k,kh 	1
 没反应	mei;im fan;rc ying;yi 	1
-能不能	neng;ce bu;i,gi neng;ce 	2
+能不能	neng;ce bu;i,gi neng;ce 	3
 情人节	qing;ng ren;w,ww jie;ab 	1
 文件夹	wen;yy jian;wr jia;gu 	3
 我那次	wo;q,tr na;vf ci;uq 	1
@@ -2960,6 +2983,21 @@ use_preset_vocabulary: false
 开了头	kai;ga le;b,bn tou;ud 	0
 如果你	ru;vk guo;js ni;wq 	0
 是的卅	shi;j,jg de;r,rq sa;gk 	1
+半只脚	ban;uf zhi;kw jiao;ef 	1
+不节制	bu;i,gi jie;ab zhi;rm 	0
+吃东西	chi;kt dong;ai xi;sg 	0
+的状态	de;r,rq zhuang;ud tai;dy 	0
+还觉得	hai;gi jue;ip de;tj 	0
+喝了点	he;kj le;b,bn dian;hk 	0
+禁止掉	jin;ss zhi;hh diao;rh 	1
+可不是	ke;sk bu;i,gi shi;j,jg 	1
+哪里去	na;kv li;jf qu;fc 	0
+嗖嗖地	sou;kv sou;kv de;f,fb 	0
+往上升	wang;ty shang;h,hh sheng;ta 	0
+要不要	yao;s,sv bu;i,gi yao;s,sv 	1
+一大堆	yi;g,gg da;dd dui;fw 	0
+隐藏掉	yin;bq cang;ad diao;rh 	1
+这对于	zhe;p,yp dui;cf yu;gf 	0
 宝安中心	bao;pg an;pv zhong;k,kh xin;ny 	2
 测试方案	ce;im shi;ya fang;yy an;pv 	1
 很久之前	hen;tv jiu;qy zhi;pp qian;ue 	1
@@ -3369,6 +3407,16 @@ use_preset_vocabulary: false
 真他妈的	zhen;fh ta;wb ma;vc de;r,rq 	1
 自己身上	zi;th ji;nn shen;tm shang;h,hh 	0
 这种情况	zhe;p,yp zhong;tk qing;ng kuang;uk 	0
+还是不能	hai;gi shi;j,jg bu;i,gi neng;ce 	0
+空前绝后	kong;pw qian;ue jue;xq hou;rg 	0
+没有必要	mei;im you;e,de bi;nt yao;s,sv 	0
+体重惯性	ti;ws zhong;tg guan;nx xing;nt 	1
+显然不会	xian;jo ran;qd bu;i,gi hui;wf 	0
+一件那么	yi;g,gg jian;wr na;vf me;tc 	1
+这段时间	zhe;p,yp duan;wd shi;jf jian;uj 	0
+这种神作	zhe;p,yp zhong;tk shen;py zuo;wt 	1
+自己来说	zi;th ji;nn lai;go shuo;yu 	1
+昨天晚上	zuo;jt tian;gd wan;jq shang;h,hh 	0
 那确实省事	na;vf que;dq shi;pu sheng;it shi;gk 	1
 多多输入法	duo;qq duo;qq shu;lw ru;ty fa;if 	1
 你也没说错	ni;wq ye;bn mei;im shuo;yu cuo;qa 	1
@@ -3475,6 +3523,11 @@ use_preset_vocabulary: false
 都没有看到	dou;ft mei;im you;e,de kan;rh dao;gc 	0
 长句打多了	chang;ta ju;qk da;rs duo;qq le;b,bn 	1
 也挺操蛋的	ye;bn ting;rt cao;rk dan;nh de;r,rq 	1
+白天的状态	bai;rr tian;gd de;r,rq zhuang;ud tai;dy 	1
+本来还觉得	ben;sg lai;go hai;gi jue;ip de;tj 	1
+还是这样的	hai;gi shi;j,jg zhe;p,yp yang;su de;r,rq 	1
+突破了以往	tu;pw po;dh le;b,bn yi;c,ny wang;ty 	0
+这种玩意儿	zhe;p,yp zhong;tk wan;gf yi;uj er;qt 	0
 现在回家来了	xian;gm zai;d,dh hui;lk jia;pe lai;go le;b,bn 	1
 之前一直使用	zhi;pp qian;ue yi;g,gg zhi;fh shi;wg yong;et 	1
 还没有下班吗	hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1
@@ -3515,6 +3568,10 @@ use_preset_vocabulary: false
 只认识字符的	zhi;kw ren;yw shi;yk zi;pb fu;tw de;r,rq 	1
 字体不影响吧	zi;pb ti;ws bu;i,gi ying;jy xiang;kt ba;kc 	1
 真他妈的服了	zhen;fh ta;wb ma;vc de;r,rq fu;eb le;b,bn 	1
+从导演到演员	cong;ww dao;nf yan;ip dao;gc yan;ip yuan;km 	1
+还是不能多喝	hai;gi shi;j,jg bu;i,gi neng;ce duo;qq he;kj 	1
+完全没有必要	wan;pf quan;wg mei;im you;e,de bi;nt yao;s,sv 	1
+早晨醒得好早	zao;jh chen;jd xing;sg de;tj hao;vb zao;jh 	1
 五笔前二辅助码	wu;gg bi;tt qian;ue er;fg fu;lg zhu;eg ma;dc 	1
 资本真的是垃圾	zi;uq ben;sg zhen;fh de;r,rq shi;j,jg la;fu ji;fe 	1
 你还没有下班吗	ni;wq hai;gi mei;im you;e,de xia;gh ban;gy ma;kc 	1
@@ -3547,6 +3604,10 @@ use_preset_vocabulary: false
 一点脑子都没有	yi;g,gg dian;hk nao;ey zi;bb dou;ft mei;im you;e,de 	1
 只能是经常打的	zhi;kw neng;ce shi;j,jg jing;x,xc chang;ip da;rs de;r,rq 	1
 短词好操控一下	duan;td ci;yn hao;vb cao;rk kong;rp yi;g,gg xia;gh 	1
+可乐这种玩意儿	ke;sk le;qi zhe;p,yp zhong;tk wan;gf yi;uj er;qt 	1
+空前绝后的那种	kong;pw qian;ue jue;xq hou;rg de;r,rq na;vf zhong;tk 	1
+这对于步入中年	zhe;p,yp dui;cf yu;gf bu;hi ru;ty zhong;k,kh nian;rh 	1
+昨天晚上喝了点	zuo;jt tian;gd wan;jq shang;h,hh he;kj le;b,bn dian;hk 	1
 但不是绝对用不到	dan;wj bu;i,gi shi;j,jg jue;xq dui;cf yong;et bu;i,gi dao;gc 	1
 反正现在也没有发	fan;rc zheng;gh xian;gm zai;d,dh ye;bn mei;im you;e,de fa;v,nt 	1
 我就是这样知道的	wo;q,tr jiu;yi shi;j,jg zhe;p,yp yang;su zhi;td dao;ut de;r,rq 	1
@@ -3558,6 +3619,8 @@ use_preset_vocabulary: false
 妥妥地臭傻逼一个	tuo;ev tuo;ev de;f,fb chou;th sha;wt bi;gk yi;g,gg ge;wh 	1
 一点眼力劲都没有	yi;g,gg dian;hk yan;hv li;lt jin;ca dou;ft mei;im you;e,de 	1
 有时候打一个长句	you;e,de shi;jf hou;wh da;rs yi;g,gg ge;wh chang;ta ju;qk 	1
+词库里一搜一大堆	ci;yn ku;yl li;jf yi;g,gg sou;rv yi;g,gg da;dd dui;fw 	1
+尽管技术更加发达	jin;ny guan;tp ji;rf shu;sy geng;gj jia;lk fa;v,nt da;dp 	1
 日常使用还是可以的	ri;jj chang;ip shi;wg yong;et hai;gi shi;j,jg ke;sk yi;c,ny de;r,rq 	1
 你还有什么想说的吗	ni;wq hai;gi you;e,de shen;wf me;tc xiang;sh shuo;yu de;r,rq ma;kc 	1
 只用最基本的就行了	zhi;kw yong;et zui;jb ji;ad ben;sg de;r,rq jiu;yi xing;tf le;b,bn 	1
@@ -3569,15 +3632,20 @@ use_preset_vocabulary: false
 很容易出现这种情况	hen;tv rong;pw yi;jq chu;bm xian;gm zhe;p,yp zhong;tk qing;ng kuang;uk 	1
 如果你开了调频的话	ru;vk guo;js ni;wq kai;ga le;b,bn tiao;ym pin;hi de;r,rq hua;yt 	1
 如果你开了头聂的话	ru;vk guo;js ni;wq kai;ga le;b,bn tou;ud nie;bc de;r,rq hua;yt 	1
+显然不会好到哪里去	xian;jo ran;qd bu;i,gi hui;wf hao;vb dao;gc na;kv li;jf qu;fc 	1
 使用过程中上平的词汇	shi;wg yong;et guo;fp cheng;tk zhong;k,kh shang;h,hh ping;gu de;r,rq ci;yn hui;ia 	1
 不一定到时候有你现在	bu;i,gi yi;g,gg ding;pg dao;gc shi;jf hou;wh you;e,de ni;wq xian;gm zai;d,dh 	1
 或者清理一些僵尸群友	huo;ak zhe;ft qing;ig li;gj yi;g,gg xie;hx jiang;wg shi;nn qun;vt you;dc 	1
 老子天天都在那里午休	lao;ft zi;bb tian;gd tian;gd dou;ft zai;d,dh na;vf li;jf wu;tf xiu;ws 	1
+不说是嗖嗖地往上升吧	bu;i,gi shuo;yu shi;j,jg sou;kv sou;kv de;f,fb wang;ty shang;h,hh sheng;ta ba;kc 	1
 去机场的都是去坐飞机的	qu;fc ji;sm chang;fn de;r,rq dou;ft shi;j,jg qu;fc zuo;ww fei;nu ji;sm de;r,rq 	1
 慢慢养起来才能得到满足	man;nj man;nj yang;ud qi;fh lai;go cai;ft neng;ce de;tj dao;gc man;ia zu;kh 	1
 想要给这些傻逼一些教训	xiang;sh yao;s,sv gei;xw zhe;p,yp xie;hx sha;wt bi;gk yi;g,gg xie;hx jiao;ft xun;yk 	1
 怎么会有这么傻逼的货色	zen;th me;tc hui;wf you;e,de zhe;p,yp me;tc sha;wt bi;gk de;r,rq huo;wx se;qc 	1
+令人可以感到预约的事情	ling;wy ren;w,ww ke;sk yi;c,ny gan;dg dao;gc yu;cb yue;xq de;r,rq shi;gk qing;ng 	1
+也是大大地突破了以往的	ye;bn shi;j,jg da;dd da;dd de;f,fb tu;pw po;dh le;b,bn yi;c,ny wang;ty de;r,rq 	1
 学习的话就用常用的发行版	xue;ip xi;nu de;r,rq hua;yt jiu;yi yong;et chang;ip yong;et de;r,rq fa;v,nt xing;tf ban;th 	1
+这段时间吃东西太不节制了	zhe;p,yp duan;wd shi;jf jian;uj chi;kt dong;ai xi;sg tai;dy bu;i,gi jie;ab zhi;rm le;b,bn 	1
 会给你同步一些超级长的句子	hui;wf gei;xw ni;wq tong;m,mg bu;hi yi;g,gg xie;hx chao;fh ji;xe chang;ta de;r,rq ju;qk zi;bb 	1
 今天真的是有被一个傻逼给气到	jin;wy tian;gd zhen;fh de;r,rq shi;j,jg you;e,de bei;pu yi;g,gg ge;wh sha;wt bi;gk gei;xw qi;rn dao;gc 	1
 落到自己身上更狠不能当时就爆掉	luo;ai dao;gc zi;th ji;nn shen;tm shang;h,hh geng;gj hen;qt bu;i,gi neng;ce dang;iv shi;jf jiu;yi bao;oj diao;rh 	1

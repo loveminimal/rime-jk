@@ -37,6 +37,7 @@ engine:
     - punct_translator
     - table_translator
     - reverse_lookup_translator
+    - lua_translator@*shijian
     - lua_translator@*helper
     - lua_translator@*date_translator
     - lua_translator@*force_gc

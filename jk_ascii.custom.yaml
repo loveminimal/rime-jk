@@ -6,4 +6,4 @@ patch:
   __patch:
     style/+:
       color_scheme: prjk
-      font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      # font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根

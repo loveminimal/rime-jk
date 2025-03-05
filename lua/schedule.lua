@@ -4,232 +4,231 @@
 ------------------------------------
 ------wirting by 98wubi Group-------
 ------http://98wb.ys168.com/--------
-
 -- +++ 农历节气计算部分 +++
 -- 角度变换
 local rad = 180 * 3600 / math.pi -- 每弧度的角秒数
 local RAD = 180 / math.pi -- 每弧度的角度数
 function int2(v) -- 取整数部分
-  v = math.floor(v)
-  if v < 0 then
-    return v + 1
-  else
-    return v
-  end
+    v = math.floor(v)
+    if v < 0 then
+        return v + 1
+    else
+        return v
+    end
 end
 
 function rad2mrad(v) -- 对超过0-2PI的角度转为0-2PI
-  v = math.fmod(v, 2 * math.pi)
-  if v < 0 then
-    return v + 2 * math.pi
-  else
-    return v
-  end
+    v = math.fmod(v, 2 * math.pi)
+    if v < 0 then
+        return v + 2 * math.pi
+    else
+        return v
+    end
 end
 
 -- ================日历计算===============
 local J2000 = 2451545 -- 2000年前儒略日数(2000-1-1 12:00:00格林威治平时)
 
 local JDate = { -- 日期元件
-  Y = 2000,
-  M = 1,
-  D = 1,
-  h = 12,
-  m = 0,
-  s = 0,
-  dts = { -- 世界时与原子时之差计算表
-  -4000, 108371.7, -13036.80, 392.000, 0.0000, -500, 17201.0, -627.82, 16.170, -0.3413, -150, 12200.6, -346.41, 5.403,
-  -0.1593, 150, 9113.8, -328.13, -1.647, 0.0377, 500, 5707.5, -391.41, 0.915, 0.3145, 900, 2203.4, -283.45, 13.034,
-  -0.1778, 1300, 490.1, -57.35, 2.085, -0.0072, 1600, 120.0, -9.81, -1.532, 0.1403, 1700, 10.2, -0.91, 0.510, -0.0370,
-  1800, 13.4, -0.72, 0.202, -0.0193, 1830, 7.8, -1.81, 0.416, -0.0247, 1860, 8.3, -0.13, -0.406, 0.0292, 1880, -5.4,
-  0.32, -0.183, 0.0173, 1900, -2.3, 2.06, 0.169, -0.0135, 1920, 21.2, 1.69, -0.304, 0.0167, 1940, 24.2, 1.22, -0.064,
-  0.0031, 1960, 33.2, 0.51, 0.231, -0.0109, 1980, 51.0, 1.29, -0.026, 0.0032, 2000, 64.7, -1.66, 5.224, -0.2905, 2150,
-  279.4, 732.95, 429.579, 0.0158, 6000},
-  deltatT = function(JDate, y) -- 计算世界时与原子时之差,传入年
-    local i
-    local d = JDate.dts
-    for x = 1, 100, 5 do
-      if y < d[x + 5] or x == 96 then
-        i = x
-        break
-      end
-    end
+    Y = 2000,
+    M = 1,
+    D = 1,
+    h = 12,
+    m = 0,
+    s = 0,
+    dts = { -- 世界时与原子时之差计算表
+    -4000, 108371.7, -13036.80, 392.000, 0.0000, -500, 17201.0, -627.82, 16.170, -0.3413, -150, 12200.6, -346.41, 5.403,
+    -0.1593, 150, 9113.8, -328.13, -1.647, 0.0377, 500, 5707.5, -391.41, 0.915, 0.3145, 900, 2203.4, -283.45, 13.034,
+    -0.1778, 1300, 490.1, -57.35, 2.085, -0.0072, 1600, 120.0, -9.81, -1.532, 0.1403, 1700, 10.2, -0.91, 0.510, -0.0370,
+    1800, 13.4, -0.72, 0.202, -0.0193, 1830, 7.8, -1.81, 0.416, -0.0247, 1860, 8.3, -0.13, -0.406, 0.0292, 1880, -5.4,
+    0.32, -0.183, 0.0173, 1900, -2.3, 2.06, 0.169, -0.0135, 1920, 21.2, 1.69, -0.304, 0.0167, 1940, 24.2, 1.22, -0.064,
+    0.0031, 1960, 33.2, 0.51, 0.231, -0.0109, 1980, 51.0, 1.29, -0.026, 0.0032, 2000, 64.7, -1.66, 5.224, -0.2905, 2150,
+    279.4, 732.95, 429.579, 0.0158, 6000},
+    deltatT = function(JDate, y) -- 计算世界时与原子时之差,传入年
+        local i
+        local d = JDate.dts
+        for x = 1, 100, 5 do
+            if y < d[x + 5] or x == 96 then
+                i = x
+                break
+            end
+        end
 
-    local t1 = (y - d[i]) / (d[i + 5] - d[i]) * 10
-    local t2 = t1 * t1
-    local t3 = t2 * t1
-    return d[i + 1] + d[i + 2] * t1 + d[i + 3] * t2 + d[i + 4] * t3
-  end,
-  deltatT2 = function(JDate, jd) -- 传入儒略日(J2000起算),计算UTC与原子时的差(单位:日)
-    return JDate:deltatT(jd / 365.2425 + 2000) / 86400.0
-  end,
-  toJD = function(JDate, UTC) -- 公历转儒略日,UTC=1表示原日期是UTC
-    local y = JDate.Y
-    m = JDate.M
-    n = 0 -- 取出年月
-    if m <= 2 then
-      m = m + 12
-      y = y - 1
-    end
-    if JDate.Y * 372 + JDate.M * 31 + JDate.D >= 588829 then -- 判断是否为格里高利历日1582*372+10*31+15
-      n = int2(y / 100)
-      n = 2 - n + int2(n / 4) -- 加百年闰
-    end
-    n = n + int2(365.2500001 * (y + 4716)) -- 加上年引起的偏移日数
-    n = n + int2(30.6 * (m + 1)) + JDate.D -- 加上月引起的偏移日数及日偏移数
-    n = n + ((JDate.s / 60 + JDate.m) / 60 + JDate.h) / 24 - 1524.5
-    if (UTC == 1) then
-      return n + JDate.deltatT2(n - J2000)
-    end
-    return n
-  end,
-  setFromJD = function(JDate, jd, UTC) -- 儒略日数转公历,UTC=1表示目标公历是UTC
-    if UTC == 1 then
-      jd = jd - JDate:deltatT2(jd - J2000)
-    end
-    jd = jd + 0.5
-    local A = int2(jd)
-    F = jd - A, D -- 取得日数的整数部份A及小数部分F
-    if A > 2299161 then
-      D = int2((A - 1867216.25) / 36524.25)
-      A = A + 1 + D - int2(D / 4)
-    end
-    A = A + 1524 -- 向前移4年零2个月
-    JDate.Y = int2((A - 122.1) / 365.25) -- 年
-    D = A - int2(365.25 * JDate.Y) -- 去除整年日数后余下日数
-    JDate.M = int2(D / 30.6001) -- 月数
-    JDate.D = D - int2(JDate.M * 30.6001) -- 去除整月日数后余下日数
-    JDate.Y = JDate.Y - 4716
-    JDate.M = JDate.M - 1
-    if JDate.M > 12 then
-      JDate.M = JDate.M - 12
-    end
-    if JDate.M <= 2 then
-      JDate.Y = JDate.Y + 1
-    end
-    -- 日的小数转为时分秒
-    F = F * 24
-    JDate.h = int2(F)
-    F = F - JDate.h
-    F = F * 60
-    JDate.m = int2(F)
-    F = F - JDate.m
-    F = F * 60
-    JDate.s = F
-  end,
+        local t1 = (y - d[i]) / (d[i + 5] - d[i]) * 10
+        local t2 = t1 * t1
+        local t3 = t2 * t1
+        return d[i + 1] + d[i + 2] * t1 + d[i + 3] * t2 + d[i + 4] * t3
+    end,
+    deltatT2 = function(JDate, jd) -- 传入儒略日(J2000起算),计算UTC与原子时的差(单位:日)
+        return JDate:deltatT(jd / 365.2425 + 2000) / 86400.0
+    end,
+    toJD = function(JDate, UTC) -- 公历转儒略日,UTC=1表示原日期是UTC
+        local y = JDate.Y
+        m = JDate.M
+        n = 0 -- 取出年月
+        if m <= 2 then
+            m = m + 12
+            y = y - 1
+        end
+        if JDate.Y * 372 + JDate.M * 31 + JDate.D >= 588829 then -- 判断是否为格里高利历日1582*372+10*31+15
+            n = int2(y / 100)
+            n = 2 - n + int2(n / 4) -- 加百年闰
+        end
+        n = n + int2(365.2500001 * (y + 4716)) -- 加上年引起的偏移日数
+        n = n + int2(30.6 * (m + 1)) + JDate.D -- 加上月引起的偏移日数及日偏移数
+        n = n + ((JDate.s / 60 + JDate.m) / 60 + JDate.h) / 24 - 1524.5
+        if (UTC == 1) then
+            return n + JDate.deltatT2(n - J2000)
+        end
+        return n
+    end,
+    setFromJD = function(JDate, jd, UTC) -- 儒略日数转公历,UTC=1表示目标公历是UTC
+        if UTC == 1 then
+            jd = jd - JDate:deltatT2(jd - J2000)
+        end
+        jd = jd + 0.5
+        local A = int2(jd)
+        F = jd - A, D -- 取得日数的整数部份A及小数部分F
+        if A > 2299161 then
+            D = int2((A - 1867216.25) / 36524.25)
+            A = A + 1 + D - int2(D / 4)
+        end
+        A = A + 1524 -- 向前移4年零2个月
+        JDate.Y = int2((A - 122.1) / 365.25) -- 年
+        D = A - int2(365.25 * JDate.Y) -- 去除整年日数后余下日数
+        JDate.M = int2(D / 30.6001) -- 月数
+        JDate.D = D - int2(JDate.M * 30.6001) -- 去除整月日数后余下日数
+        JDate.Y = JDate.Y - 4716
+        JDate.M = JDate.M - 1
+        if JDate.M > 12 then
+            JDate.M = JDate.M - 12
+        end
+        if JDate.M <= 2 then
+            JDate.Y = JDate.Y + 1
+        end
+        -- 日的小数转为时分秒
+        F = F * 24
+        JDate.h = int2(F)
+        F = F - JDate.h
+        F = F * 60
+        JDate.m = int2(F)
+        F = F - JDate.m
+        F = F * 60
+        JDate.s = F
+    end,
 
-  setFromStr = function(JDate, s) -- 设置时间,参数例:"20000101 120000"或"20000101"
-    JDate.Y = string.sub(s, 1, 4)
-    JDate.M = string.sub(s, 5, 6)
-    JDate.D = string.sub(s, 7, 8)
-    JDate.h = string.sub(s, 10, 11)
-    JDate.m = string.sub(s, 12, 13)
-    JDate.s = string.sub(s, 14, 18)
-  end,
-  toStr = function(JDate) -- 日期转为串
-    local Y = "     " .. JDate.Y
-    local M = "0" .. JDate.M
-    local D = "0" .. JDate.D
-    local h = JDate.h
-    local m = JDate.m
-    local s = math.floor(JDate.s + .5)
-    if s >= 60 then
-      s = s - 60
-      m = m + 1
-    end
-    if m >= 60 then
-      m = m - 60
-      h = h + 1
-    end
-    h = "0" .. h
-    m = "0" .. m
-    s = "0" .. s
-    local Ylen = string.len(Y)
-    local Mlen = string.len(M)
-    local Dlen = string.len(D)
-    local hlen = string.len(h)
-    local mlen = string.len(m)
-    local slen = string.len(s)
-    Y = string.sub(Y, Ylen - 4, Ylen)
-    M = string.sub(M, Mlen - 1, Mlen)
-    D = string.sub(D, Dlen - 1, Dlen)
-    h = string.sub(h, hlen - 1, hlen)
-    m = string.sub(m, mlen - 1, mlen)
-    s = string.sub(s, slen - 1, slen)
-    return Y .. "-" .. M .. "-" .. D .. " " .. h .. ":" .. m .. ":" .. s
-  end,
+    setFromStr = function(JDate, s) -- 设置时间,参数例:"20000101 120000"或"20000101"
+        JDate.Y = string.sub(s, 1, 4)
+        JDate.M = string.sub(s, 5, 6)
+        JDate.D = string.sub(s, 7, 8)
+        JDate.h = string.sub(s, 10, 11)
+        JDate.m = string.sub(s, 12, 13)
+        JDate.s = string.sub(s, 14, 18)
+    end,
+    toStr = function(JDate) -- 日期转为串
+        local Y = "     " .. JDate.Y
+        local M = "0" .. JDate.M
+        local D = "0" .. JDate.D
+        local h = JDate.h
+        local m = JDate.m
+        local s = math.floor(JDate.s + .5)
+        if s >= 60 then
+            s = s - 60
+            m = m + 1
+        end
+        if m >= 60 then
+            m = m - 60
+            h = h + 1
+        end
+        h = "0" .. h
+        m = "0" .. m
+        s = "0" .. s
+        local Ylen = string.len(Y)
+        local Mlen = string.len(M)
+        local Dlen = string.len(D)
+        local hlen = string.len(h)
+        local mlen = string.len(m)
+        local slen = string.len(s)
+        Y = string.sub(Y, Ylen - 4, Ylen)
+        M = string.sub(M, Mlen - 1, Mlen)
+        D = string.sub(D, Dlen - 1, Dlen)
+        h = string.sub(h, hlen - 1, hlen)
+        m = string.sub(m, mlen - 1, mlen)
+        s = string.sub(s, slen - 1, slen)
+        return Y .. "-" .. M .. "-" .. D .. " " .. h .. ":" .. m .. ":" .. s
+    end,
 
-  JQ = function(JDate) -- 输出节气日期的秒数
-    local t = {}
-    t.year = JDate.Y
-    t.month = JDate.M
-    t.day = JDate.D
-    t.hour = JDate.h
-    t.min = JDate.m
-    t.sec = math.floor(JDate.s + .5)
-    if t.sec >= 60 then
-      t.sec = t.sec - 60
-      t.min = t.min + 1
-    end
-    if t.min >= 60 then
-      t.min = t.min - 60
-      t.hour = t.hour + 1
-    end
-    return os.time(t)
-  end,
+    JQ = function(JDate) -- 输出节气日期的秒数
+        local t = {}
+        t.year = JDate.Y
+        t.month = JDate.M
+        t.day = JDate.D
+        t.hour = JDate.h
+        t.min = JDate.m
+        t.sec = math.floor(JDate.s + .5)
+        if t.sec >= 60 then
+            t.sec = t.sec - 60
+            t.min = t.min + 1
+        end
+        if t.min >= 60 then
+            t.min = t.min - 60
+            t.hour = t.hour + 1
+        end
+        return os.time(t)
+    end,
 
-  Dint_dec = function(JDate, jd, shiqu, int_dec) -- 算出:jd转到当地UTC后,UTC日数的整数部分或小数部分
-    -- 基于J2000力学时jd的起算点是12:00:00时,所以跳日时刻发生在12:00:00,这与日历计算发生矛盾
-    -- 把jd改正为00:00:00起算,这样儒略日的跳日动作就与日期的跳日同步
-    -- 改正方法为jd=jd+0.5-deltatT+shiqu/24
-    -- 把儒略日的起点移动-0.5(即前移12小时)
-    -- 式中shiqu是时区,北京的起算点是-8小时,shiqu取8
-    local u = jd + 0.5 - JDate.deltatT2(jd) + shiqu / 24
-    if int_dec ~= 0 then
-      return math.floor(u) -- 返回整数部分
-    else
-      return u - math.floor(u) -- 返回小数部分
-    end
-  end,
+    Dint_dec = function(JDate, jd, shiqu, int_dec) -- 算出:jd转到当地UTC后,UTC日数的整数部分或小数部分
+        -- 基于J2000力学时jd的起算点是12:00:00时,所以跳日时刻发生在12:00:00,这与日历计算发生矛盾
+        -- 把jd改正为00:00:00起算,这样儒略日的跳日动作就与日期的跳日同步
+        -- 改正方法为jd=jd+0.5-deltatT+shiqu/24
+        -- 把儒略日的起点移动-0.5(即前移12小时)
+        -- 式中shiqu是时区,北京的起算点是-8小时,shiqu取8
+        local u = jd + 0.5 - JDate.deltatT2(jd) + shiqu / 24
+        if int_dec ~= 0 then
+            return math.floor(u) -- 返回整数部分
+        else
+            return u - math.floor(u) -- 返回小数部分
+        end
+    end,
 
-  d1_d2 = function(JDate, d1, d2) -- 计算两个日期的相差的天数,输入字串格式日期,如:"20080101"
-    local Y = JDate.Y
-    M = JDate.M
-    D = JDate.D
-    h = JDate.h
-    m = JDate.m
-    s = JDate.s -- 备份原来的数据
-    JDate.setFromStr(string.sub(d1, 1, 8) + " 120000")
-    local jd1 = JDate.toJD(0)
-    JDate.setFromStr(string.sub(d2, 1, 8) + " 120000")
-    local jd2 = JDate.toJD(0)
+    d1_d2 = function(JDate, d1, d2) -- 计算两个日期的相差的天数,输入字串格式日期,如:"20080101"
+        local Y = JDate.Y
+        M = JDate.M
+        D = JDate.D
+        h = JDate.h
+        m = JDate.m
+        s = JDate.s -- 备份原来的数据
+        JDate.setFromStr(string.sub(d1, 1, 8) + " 120000")
+        local jd1 = JDate.toJD(0)
+        JDate.setFromStr(string.sub(d2, 1, 8) + " 120000")
+        local jd2 = JDate.toJD(0)
 
-    JDate.Y = Y
-    JDate.M = M
-    JDate.D = D
-    JDate.h = h
-    JDate.m = m
-    JDate.s = s -- 还原
-    if jd1 > jd2 then
-      return math.floor(jd1 - jd2 + .0001)
-    else
-      return -Math.floor(jd2 - jd1 + .0001)
+        JDate.Y = Y
+        JDate.M = M
+        JDate.D = D
+        JDate.h = h
+        JDate.m = m
+        JDate.s = s -- 还原
+        if jd1 > jd2 then
+            return math.floor(jd1 - jd2 + .0001)
+        else
+            return -Math.floor(jd2 - jd1 + .0001)
+        end
     end
-  end
 }
 -- =========黄赤交角及黄赤坐标变换===========
 local preceB = {0, 50287.92262, 111.24406, 0.07699, -0.23479, -0.00178, 0.00018, 0.00001} -- Date黄道上的岁差p
 
 function addPrece(jd, zb) -- 补岁差
-  local i
-  t = 1
-  v = 0
-  t1 = jd / 365250
-  for i = 2, 8 do
-    t = t * t1
-    v = v + preceB[i] * t
-  end
-  zb[1] = rad2mrad(zb[1] + (v + 2.9965 * t1) / rad)
+    local i
+    t = 1
+    v = 0
+    t1 = jd / 365250
+    for i = 2, 8 do
+        t = t * t1
+        v = v + preceB[i] * t
+    end
+    zb[1] = rad2mrad(zb[1] + (v + 2.9965 * t1) / rad)
 end
 
 -- ===============光行差==================
@@ -238,19 +237,19 @@ local GXC_p = {102.93735 / RAD, 1.71946 / RAD, 0.00046 / RAD} -- 近点
 local GXC_l = {280.4664567 / RAD, 36000.76982779 / RAD, 0.0003032028 / RAD, 1 / 49931000 / RAD, -1 / 153000000 / RAD} -- 太平黄经
 local GXC_k = 20.49552 / rad -- 光行差常数
 function addGxc(t, zb) -- 恒星周年光行差计算(黄道坐标中)
-  local t1 = t / 36525
-  local t2 = t1 * t1
-  local t3 = t2 * t1
-  local t4 = t3 * t1
-  local L = GXC_l[1] + GXC_l[2] * t1 + GXC_l[3] * t2 + GXC_l[4] * t3 + GXC_l[5] * t4
-  local p = GXC_p[1] + GXC_p[2] * t1 + GXC_p[3] * t2
-  local e = GXC_e[1] + GXC_e[2] * t1 + GXC_e[3] * t2
-  local dL = L - zb[1]
-  local dP = p - zb[1]
-  zb[1] = zb[1] - (GXC_k * (math.cos(dL) - e * math.cos(dP)) / math.cos(zb[2]))
-  zb[2] = zb[2] - (GXC_k * math.sin(zb[2]) * (math.sin(dL) - e * math.sin(dP)))
-  -- print('aa', L,p,e,dL,dP,zb[1], zb[2])
-  zb[1] = rad2mrad(zb[1])
+    local t1 = t / 36525
+    local t2 = t1 * t1
+    local t3 = t2 * t1
+    local t4 = t3 * t1
+    local L = GXC_l[1] + GXC_l[2] * t1 + GXC_l[3] * t2 + GXC_l[4] * t3 + GXC_l[5] * t4
+    local p = GXC_p[1] + GXC_p[2] * t1 + GXC_p[3] * t2
+    local e = GXC_e[1] + GXC_e[2] * t1 + GXC_e[3] * t2
+    local dL = L - zb[1]
+    local dP = p - zb[1]
+    zb[1] = zb[1] - (GXC_k * (math.cos(dL) - e * math.cos(dP)) / math.cos(zb[2]))
+    zb[2] = zb[2] - (GXC_k * math.sin(zb[2]) * (math.sin(dL) - e * math.sin(dP)))
+    -- print('aa', L,p,e,dL,dP,zb[1], zb[2])
+    zb[1] = rad2mrad(zb[1])
 end
 
 -- ===============章动计算==================
@@ -265,26 +264,25 @@ local nutB = { -- 章动表
 3.5500658664, 628.361975567, 0.0000132664, 1.3575E-09, -1.7245E-10, 217, -5, -95, 3}
 
 function nutation(t) -- 计算黄经章动及交角章动
-  local d = {}
-  d.Lon = 0
-  d.Obl = 0
-  t = t / 36525
-  local i, c
-  local t1 = t
-  local t2 = t1 * t1
-  local t3 = t2 * t1
-  local t4 = t3 * t1
-  local t5 = t4 * t1
-  for i = 1, #nutB, 9 do
-    c = nutB[i] + nutB[i + 1] * t1 + nutB[i + 2] * t2 + nutB[i + 3] * t3 + nutB[i + 4] * t4
-    d.Lon = d.Lon + (nutB[i + 5] + nutB[i + 6] * t / 10) * math.sin(c) -- 黄经章动
-    d.Obl = d.Obl + (nutB[i + 7] + nutB[i + 8] * t / 10) * math.cos(c) -- 交角章动
-  end
-  d.Lon = d.Lon / (rad * 10000) -- 黄经章动
-  d.Obl = d.Obl / (rad * 10000) -- 交角章动
-  return d
+    local d = {}
+    d.Lon = 0
+    d.Obl = 0
+    t = t / 36525
+    local i, c
+    local t1 = t
+    local t2 = t1 * t1
+    local t3 = t2 * t1
+    local t4 = t3 * t1
+    local t5 = t4 * t1
+    for i = 1, #nutB, 9 do
+        c = nutB[i] + nutB[i + 1] * t1 + nutB[i + 2] * t2 + nutB[i + 3] * t3 + nutB[i + 4] * t4
+        d.Lon = d.Lon + (nutB[i + 5] + nutB[i + 6] * t / 10) * math.sin(c) -- 黄经章动
+        d.Obl = d.Obl + (nutB[i + 7] + nutB[i + 8] * t / 10) * math.cos(c) -- 交角章动
+    end
+    d.Lon = d.Lon / (rad * 10000) -- 黄经章动
+    d.Obl = d.Obl / (rad * 10000) -- 交角章动
+    return d
 end
-
 
 -- =================以下是月球及地球运动参数表===================
 --[[***************************************
@@ -544,128 +542,128 @@ local M1n = {3.81034392032, 8.39968473021E+03, -3.31919929753E-05, -- 月球平�
 -- ==================日位置计算===================
 local EnnT = 0 -- 调用Enn前先设置EnnT时间变量
 function Enn(F) -- 计算E10,E11,E20等,即:某一组周期项或泊松项算出,计算前先设置EnnT时间
-  local i
-  local v = 0
-  for i = 1, #F, 3 do
-    v = v + F[i] * math.cos(F[i + 1] + EnnT * F[i + 2])
-    -- print('Fsize=' .. #F, 'i=' .. i, 'v='..v, 'F[i]='..F[i], 'm='..math.cos(F[i+1]+EnnT*F[i+2]))
-  end
-  return v
+    local i
+    local v = 0
+    for i = 1, #F, 3 do
+        v = v + F[i] * math.cos(F[i + 1] + EnnT * F[i + 2])
+        -- print('Fsize=' .. #F, 'i=' .. i, 'v='..v, 'F[i]='..F[i], 'm='..math.cos(F[i+1]+EnnT*F[i+2]))
+    end
+    return v
 end
 
 function earCal(jd) -- 返回地球位置,日心Date黄道分点坐标
-  EnnT = jd / 365250
-  -- print('EnnT=' .. EnnT)
-  local llr = {}
-  local t1 = EnnT
-  local t2 = t1 * t1
-  local t3 = t2 * t1
-  local t4 = t3 * t1
-  local t5 = t4 * t1
-  -- print('t1='..t1, 't2='..t2, 't3='..t3, 't4='..t4, 't5='..t5)
-  llr[1] = Enn(E10) + Enn(E11) * t1 + Enn(E12) * t2 + Enn(E13) * t3 + Enn(E14) * t4 + Enn(E15) * t5
-  -- print('sppp')
-  llr[2] = Enn(E20) + Enn(E21) * t1
-  -- print('eppp')
-  llr[3] = Enn(E30) + Enn(E31) * t1 + Enn(E32) * t2 + Enn(E33) * t3
-  llr[1] = rad2mrad(llr[1])
-  -- print('llr[0]='..llr[1], 'llr[1]='..llr[2], 'llr[2]='..llr[3])
-  return llr
+    EnnT = jd / 365250
+    -- print('EnnT=' .. EnnT)
+    local llr = {}
+    local t1 = EnnT
+    local t2 = t1 * t1
+    local t3 = t2 * t1
+    local t4 = t3 * t1
+    local t5 = t4 * t1
+    -- print('t1='..t1, 't2='..t2, 't3='..t3, 't4='..t4, 't5='..t5)
+    llr[1] = Enn(E10) + Enn(E11) * t1 + Enn(E12) * t2 + Enn(E13) * t3 + Enn(E14) * t4 + Enn(E15) * t5
+    -- print('sppp')
+    llr[2] = Enn(E20) + Enn(E21) * t1
+    -- print('eppp')
+    llr[3] = Enn(E30) + Enn(E31) * t1 + Enn(E32) * t2 + Enn(E33) * t3
+    llr[1] = rad2mrad(llr[1])
+    -- print('llr[0]='..llr[1], 'llr[1]='..llr[2], 'llr[2]='..llr[3])
+    return llr
 end
 
 -- ==================月位置计算===================
 local MnnT = 0 -- 调用Mnn前先设置MnnT时间变量
 function Mnn(F) -- 计算M10,M11,M20等,计算前先设置MnnT时间
-  local i
-  local v = 0
-  local t1 = MnnT
-  local t2 = t1 * t1
-  local t3 = t2 * t1
-  local t4 = t3 * t1
-  for i = 1, #F, 6 do
-    v = v + F[i] * math.sin(F[i + 1] + t1 * F[i + 2] + t2 * F[i + 3] + t3 * F[i + 4] + t4 * F[i + 5])
-  end
-  return v
+    local i
+    local v = 0
+    local t1 = MnnT
+    local t2 = t1 * t1
+    local t3 = t2 * t1
+    local t4 = t3 * t1
+    for i = 1, #F, 6 do
+        v = v + F[i] * math.sin(F[i + 1] + t1 * F[i + 2] + t2 * F[i + 3] + t3 * F[i + 4] + t4 * F[i + 5])
+    end
+    return v
 end
 
 function moonCal(jd) -- 返回月球位置,返回地心Date黄道坐标
-  MnnT = jd / 36525
-  local t1 = MnnT
-  local t2 = t1 * t1
-  local t3 = t2 * t1
-  local t4 = t3 * t1
-  local llr = {}
-  llr[1] = (Mnn(M10) + Mnn(M11) * t1 + Mnn(M12) * t2) / rad
-  llr[2] = (Mnn(M20) + Mnn(M21) * t1) / rad
-  llr[3] = (Mnn(M30) + Mnn(M31) * t1) * 0.999999949827
-  llr[1] = llr[1] + M1n[1] + M1n[2] * t1 + M1n[3] * t2 + M1n[4] * t3 + M1n[5] * t4
-  llr[1] = rad2mrad(llr[1]) -- 地心Date黄道原点坐标(不含岁差)
-  addPrece(jd, llr) -- 补岁差
-  return llr
+    MnnT = jd / 36525
+    local t1 = MnnT
+    local t2 = t1 * t1
+    local t3 = t2 * t1
+    local t4 = t3 * t1
+    local llr = {}
+    llr[1] = (Mnn(M10) + Mnn(M11) * t1 + Mnn(M12) * t2) / rad
+    llr[2] = (Mnn(M20) + Mnn(M21) * t1) / rad
+    llr[3] = (Mnn(M30) + Mnn(M31) * t1) * 0.999999949827
+    llr[1] = llr[1] + M1n[1] + M1n[2] * t1 + M1n[3] * t2 + M1n[4] * t3 + M1n[5] * t4
+    llr[1] = rad2mrad(llr[1]) -- 地心Date黄道原点坐标(不含岁差)
+    addPrece(jd, llr) -- 补岁差
+    return llr
 end
 
 -- ==================地心坐标中的日月位置计算===================
 function jiaoCai(lx, t, jiao)
-  -- lx=1时计算t时刻日月角距与jiao的差, lx=0计算t时刻太阳黄经与jiao的差
-  local sun = earCal(t) -- 计算太阳真位置(先算出日心坐标中地球的位置)
-  sun[1] = sun[1] + math.pi
-  sun[2] = -sun[2] -- 转为地心坐标
-  addGxc(t, sun) -- 补周年光行差
-  -- print('sun[1]=' .. sun[1], 'sun[2]=' .. sun[2])
-  if lx == 0 then
-    local d = nutation(t)
-    sun[1] = sun[1] + d.Lon -- 补黄经章动
-    return rad2mrad(jiao - sun[1])
-  end
-  local moon = moonCal(t) -- 日月角差与章动无关
-  return rad2mrad(jiao - (moon[1] - sun[1]))
+    -- lx=1时计算t时刻日月角距与jiao的差, lx=0计算t时刻太阳黄经与jiao的差
+    local sun = earCal(t) -- 计算太阳真位置(先算出日心坐标中地球的位置)
+    sun[1] = sun[1] + math.pi
+    sun[2] = -sun[2] -- 转为地心坐标
+    addGxc(t, sun) -- 补周年光行差
+    -- print('sun[1]=' .. sun[1], 'sun[2]=' .. sun[2])
+    if lx == 0 then
+        local d = nutation(t)
+        sun[1] = sun[1] + d.Lon -- 补黄经章动
+        return rad2mrad(jiao - sun[1])
+    end
+    local moon = moonCal(t) -- 日月角差与章动无关
+    return rad2mrad(jiao - (moon[1] - sun[1]))
 end
 
 -- ==================已知位置反求时间===================
 function jiaoCal(t1, jiao, lx) -- t1是J2000起算儒略日数
-  -- 已知角度(jiao)求时间(t)
-  -- lx=0是太阳黄经达某角度的时刻计算(用于节气计算)
-  -- lx=1是日月角距达某角度的时刻计算(用于定朔望等)
-  -- 传入的t1是指定角度对应真时刻t的前一些天
-  -- 对于节气计算,应满足t在t1到t1+360天之间,对于Y年第n个节气(n=0是春分),t1可取值Y*365.2422+n*15.2
-  -- 对于朔望计算,应满足t在t1到t1+25天之间,在此范围之外,求右边的根
-  local t2 = t1
-  local t = 0
-  local v
-  if lx == 0 then
-    t2 = t2 + 360 -- 在t1到t2范围内求解(范气360天范围),结果置于t
-  else
-    t2 = t2 + 25
-  end
-  jiao = jiao * math.pi / 180 -- 待搜索目标角
-  -- 利用截弦法计算
-  -- print('lx=' .. lx .. ', t1=' .. t1 .. ', t2=' .. t2 .. ', jiao=' .. jiao)
-  local v1 = jiaoCai(lx, t1, jiao) -- v1,v2为t1,t2时对应的黄经
-  local v2 = jiaoCai(lx, t2, jiao)
-  -- print('v1=' .. v1 .. ', v2=' ..v2)
-  if v1 < v2 then
-    v2 = v2 - 2 * math.pi
-  end -- 减2pi作用是将周期性角度转为连续角度
-  local k = 1, k2, i -- k是截弦的斜率
-  for i = 1, 10 do -- 快速截弦求根,通常截弦三四次就已达所需精度
-    k2 = (v2 - v1) / (t2 - t1) -- 算出斜率
-    if math.abs(k2) > 1e-15 then
-      k = k2
-    end -- 差商可能为零,应排除
-    t = t1 - v1 / k
-    v = jiaoCai(lx, t, jiao) -- 直线逼近法求根(直线方程的根)
-    if v > 1 then
-      v = v - 2 * math.pi
-    end -- 一次逼近后,v1就已接近0,如果很大,则应减1周
-    if math.abs(v) < 1e-8 then
-      break
-    end -- 已达精度
-    t1 = t2
-    v1 = v2
-    t2 = t
-    v2 = v -- 下一次截弦
-  end
-  return t
+    -- 已知角度(jiao)求时间(t)
+    -- lx=0是太阳黄经达某角度的时刻计算(用于节气计算)
+    -- lx=1是日月角距达某角度的时刻计算(用于定朔望等)
+    -- 传入的t1是指定角度对应真时刻t的前一些天
+    -- 对于节气计算,应满足t在t1到t1+360天之间,对于Y年第n个节气(n=0是春分),t1可取值Y*365.2422+n*15.2
+    -- 对于朔望计算,应满足t在t1到t1+25天之间,在此范围之外,求右边的根
+    local t2 = t1
+    local t = 0
+    local v
+    if lx == 0 then
+        t2 = t2 + 360 -- 在t1到t2范围内求解(范气360天范围),结果置于t
+    else
+        t2 = t2 + 25
+    end
+    jiao = jiao * math.pi / 180 -- 待搜索目标角
+    -- 利用截弦法计算
+    -- print('lx=' .. lx .. ', t1=' .. t1 .. ', t2=' .. t2 .. ', jiao=' .. jiao)
+    local v1 = jiaoCai(lx, t1, jiao) -- v1,v2为t1,t2时对应的黄经
+    local v2 = jiaoCai(lx, t2, jiao)
+    -- print('v1=' .. v1 .. ', v2=' ..v2)
+    if v1 < v2 then
+        v2 = v2 - 2 * math.pi
+    end -- 减2pi作用是将周期性角度转为连续角度
+    local k = 1, k2, i -- k是截弦的斜率
+    for i = 1, 10 do -- 快速截弦求根,通常截弦三四次就已达所需精度
+        k2 = (v2 - v1) / (t2 - t1) -- 算出斜率
+        if math.abs(k2) > 1e-15 then
+            k = k2
+        end -- 差商可能为零,应排除
+        t = t1 - v1 / k
+        v = jiaoCai(lx, t, jiao) -- 直线逼近法求根(直线方程的根)
+        if v > 1 then
+            v = v - 2 * math.pi
+        end -- 一次逼近后,v1就已接近0,如果很大,则应减1周
+        if math.abs(v) < 1e-8 then
+            break
+        end -- 已达精度
+        t1 = t2
+        v1 = v2
+        t2 = t
+        v2 = v -- 下一次截弦
+    end
+    return t
 end
 
 -- ==================节气计算===================
@@ -673,57 +671,55 @@ local jqB = { -- 节气表
 "春分", "清明", "谷雨", "立夏", "小满", "芒种", "夏至", "小暑", "大暑", "立秋", "处暑", "白露",
 "秋分", "寒露", "霜降", "立冬", "小雪", "大雪", "冬至", "小寒", "大寒", "立春", "雨水", "惊蛰"}
 
-
 function GetNextJQ(y) -- 节气使计算范例,y是年分,这是个测试函数
-  local i, obj, q, s1, s2
-  y = tostring(y)
-  local jd = 365.2422 * (tonumber(y.sub(y, 1, 4)) - 2000)
-  obj = {}
-  for i = 0, 23 do
-    q = jiaoCal(jd + i * 15.2, i * 15, 0) + J2000 + 8 / 24 -- 计算第i个节气(i=0是春风),结果转为北京时
-    -- print('q=' .. q)
-    JDate:setFromJD(q, 1)
-    s1 = JDate:toStr() -- 将儒略日转成世界时
-    JDate:setFromJD(q, 0)
-    s2 = JDate:toStr() -- 将儒略日转成日期格式(输出日期形式的力学时)
-    jqData = s1.sub(s1.gsub(s1, "^( )", ""), 1, 10)
-    jqData = jqData.gsub(jqData, "-", "")
-    if (jqData >= y) then
-      table.insert(obj, jqB[i + 1] .. " " .. s1.sub(s1.gsub(s1, "^( )", ""), 1, 10))
-      -- print(i .. s1.sub(s1.gsub(s1, "^( )", ""),1,10))
-    end
+    local i, obj, q, s1, s2
+    y = tostring(y)
+    local jd = 365.2422 * (tonumber(y.sub(y, 1, 4)) - 2000)
+    obj = {}
+    for i = 0, 23 do
+        q = jiaoCal(jd + i * 15.2, i * 15, 0) + J2000 + 8 / 24 -- 计算第i个节气(i=0是春风),结果转为北京时
+        -- print('q=' .. q)
+        JDate:setFromJD(q, 1)
+        s1 = JDate:toStr() -- 将儒略日转成世界时
+        JDate:setFromJD(q, 0)
+        s2 = JDate:toStr() -- 将儒略日转成日期格式(输出日期形式的力学时)
+        jqData = s1.sub(s1.gsub(s1, "^( )", ""), 1, 10)
+        jqData = jqData.gsub(jqData, "-", "")
+        if (jqData >= y) then
+            table.insert(obj, jqB[i + 1] .. " " .. s1.sub(s1.gsub(s1, "^( )", ""), 1, 10))
+            -- print(i .. s1.sub(s1.gsub(s1, "^( )", ""),1,10))
+        end
 
-  end
-  return obj
+    end
+    return obj
 end
 
 function getJQ(y) -- 返回一年中各个节气的时间表，从春分开始
-  local i
-  local jd = 365.2422 * (y - 2000)
-  local q
-  local jq = {}
-  for i = 0, 23 do
-    q = jiaoCal(jd + i * 15.2, i * 15, 0) + J2000 + 8 / 24 -- 计算第i个节气(i=0是春分),结果转为北京时
-    JDate:setFromJD(q, 1)
-    jq[i + 1] = JDate:JQ() -- 将儒略日转成世界时
-  end
-  return jq
+    local i
+    local jd = 365.2422 * (y - 2000)
+    local q
+    local jq = {}
+    for i = 0, 23 do
+        q = jiaoCal(jd + i * 15.2, i * 15, 0) + J2000 + 8 / 24 -- 计算第i个节气(i=0是春分),结果转为北京时
+        JDate:setFromJD(q, 1)
+        jq[i + 1] = JDate:JQ() -- 将儒略日转成世界时
+    end
+    return jq
 end
 
 -- 返回一年的二十四个节气,从立春开始
 function getYearJQ(y)
-  local jq1 = getJQ(y - 1) -- 上一年
-  local jq2 = getJQ(y) -- 当年
-  local jq = {}
-  for i = 1, 3 do
-    jq[i] = jq1[i + 21]
-  end
-  for i = 1, 21 do
-    jq[i + 3] = jq2[i]
-  end
-  return jq
+    local jq1 = getJQ(y - 1) -- 上一年
+    local jq2 = getJQ(y) -- 当年
+    local jq = {}
+    for i = 1, 3 do
+        jq[i] = jq1[i + 21]
+    end
+    for i = 1, 21 do
+        jq[i + 3] = jq2[i]
+    end
+    return jq
 end
-
 
 -- =================农历计算========================
 --[[*****
@@ -764,37 +760,37 @@ end
 -- end
 
 function GetNowTimeJq(date)
-  local JQtable1, JQtable2
-  date = tostring(date)
-  if string.len(date) < 8 then
-    return "无效日期"
-  end
-  JQtable2 = GetNextJQ(date)
-  if tonumber(string.sub(date, 5, 8)) < 322 then
-    JQtable1 = GetNextJQ(tonumber(string.sub(date, 1, 4)) - 1 .. string.sub(date, 5, 8))
-    -- print(#JQtable1)
-    if tonumber(string.sub(date, 5, 8)) < 108 then
-      for i = 20, 24 do
-        table.insert(JQtable2, i - 19, JQtable1[i])
-      end
-    elseif tonumber(string.sub(date, 5, 8)) < 122 then
-      for i = 21, 24 do
-        table.insert(JQtable2, i - 20, JQtable1[i])
-      end
-    elseif tonumber(string.sub(date, 5, 8)) < 206 then
-      for i = 22, 24 do
-        table.insert(JQtable2, i - 21, JQtable1[i])
-      end
-    elseif tonumber(string.sub(date, 5, 8)) < 221 then
-      for i = 23, 24 do
-        table.insert(JQtable2, i - 22, JQtable1[i])
-      end
-    else
-      table.insert(JQtable2, 1, JQtable1[24])
+    local JQtable1, JQtable2
+    date = tostring(date)
+    if string.len(date) < 8 then
+        return "无效日期"
     end
-    -- print(table.concat(JQtable2))
-  end
-  return JQtable2
+    JQtable2 = GetNextJQ(date)
+    if tonumber(string.sub(date, 5, 8)) < 322 then
+        JQtable1 = GetNextJQ(tonumber(string.sub(date, 1, 4)) - 1 .. string.sub(date, 5, 8))
+        -- print(#JQtable1)
+        if tonumber(string.sub(date, 5, 8)) < 108 then
+            for i = 20, 24 do
+                table.insert(JQtable2, i - 19, JQtable1[i])
+            end
+        elseif tonumber(string.sub(date, 5, 8)) < 122 then
+            for i = 21, 24 do
+                table.insert(JQtable2, i - 20, JQtable1[i])
+            end
+        elseif tonumber(string.sub(date, 5, 8)) < 206 then
+            for i = 22, 24 do
+                table.insert(JQtable2, i - 21, JQtable1[i])
+            end
+        elseif tonumber(string.sub(date, 5, 8)) < 221 then
+            for i = 23, 24 do
+                table.insert(JQtable2, i - 22, JQtable1[i])
+            end
+        else
+            table.insert(JQtable2, 1, JQtable1[24])
+        end
+        -- print(table.concat(JQtable2))
+    end
+    return JQtable2
 end
 
 -- *******农历节气计算部分结束
@@ -806,155 +802,155 @@ GanZhiLi = {}
 
 -- 创建干支历对象
 function GanZhiLi:new()
-  local o = {}
-  setmetatable(o, self)
-  self.__index = self
-  o:setTime(os.time())
-  return o
+    local o = {}
+    setmetatable(o, self)
+    self.__index = self
+    o:setTime(os.time())
+    return o
 end
 
 -- 将offset的数值转化为特定偏移下的周期数，起始数，偏移量，周期
 function GanZhiLi:calRound(start, offset, round)
-  if start > round or start <= 0 then
-    return nil
-  end -- 参数不对
-  offset = math.floor(math.fmod(start + offset, round))
-  if offset >= 0 then
-    if offset == 0 then
-      offset = round
+    if start > round or start <= 0 then
+        return nil
+    end -- 参数不对
+    offset = math.floor(math.fmod(start + offset, round))
+    if offset >= 0 then
+        if offset == 0 then
+            offset = round
+        end
+        return offset
+    else
+        return round + offset
     end
-    return offset
-  else
-    return round + offset
-  end
 end
 
 -- 设置用于转换干支历的公历时间
 function GanZhiLi:setTime(t)
-  self.ttime = t
-  self.tday = os.date('*t', t)
-  -- for k,v in pairs(self.tday) do
-  --    print(k,v)
-  -- end
-  -- 先取公历今年的干支
-  self.jqs = getYearJQ(self.tday.year)
-  self.ganZhiYearNum = self:calGanZhiYearNum()
-  if self.ganZhiYearNum ~= self.tday.year then
-    -- 如果在节气上还没到今年的立春，则还没到干支历的今年，需要取干支历的年份的24节气
-    self.jqs = getYearJQ(self.ganZhiYearNum)
-  end
-  self.ganZhiMonNum = self:calGanZhiMonthNum()
-  self.curJq = self:getCurJQ()
+    self.ttime = t
+    self.tday = os.date('*t', t)
+    -- for k,v in pairs(self.tday) do
+    --    print(k,v)
+    -- end
+    -- 先取公历今年的干支
+    self.jqs = getYearJQ(self.tday.year)
+    self.ganZhiYearNum = self:calGanZhiYearNum()
+    if self.ganZhiYearNum ~= self.tday.year then
+        -- 如果在节气上还没到今年的立春，则还没到干支历的今年，需要取干支历的年份的24节气
+        self.jqs = getYearJQ(self.ganZhiYearNum)
+    end
+    self.ganZhiMonNum = self:calGanZhiMonthNum()
+    self.curJq = self:getCurJQ()
 
 end
 
 function GanZhiLi:getCurJQ()
-  -- for i=1,24 do
-  --    local x = os.date('*t', self.jqs[i])
-  --    print(x.year, x.month, x.day, x.hour, x.min, x.sec)
-  -- end
-  local x = 0
-  if self.ttime < self.jqs[1] then
-    return nil
-  end -- 出错，计算错年了？
-  for i = 1, 23 do
-    if self.jqs[i] <= self.ttime and self.jqs[i + 1] > self.ttime then
-      x = i
-      break
+    -- for i=1,24 do
+    --    local x = os.date('*t', self.jqs[i])
+    --    print(x.year, x.month, x.day, x.hour, x.min, x.sec)
+    -- end
+    local x = 0
+    if self.ttime < self.jqs[1] then
+        return nil
+    end -- 出错，计算错年了？
+    for i = 1, 23 do
+        if self.jqs[i] <= self.ttime and self.jqs[i + 1] > self.ttime then
+            x = i
+            break
+        end
     end
-  end
-  if x == 0 then
-    x = 24
-  end
-  return x -- 返回以立春为起始序号1的节气
+    if x == 0 then
+        x = 24
+    end
+    return x -- 返回以立春为起始序号1的节气
 end
 
 -- 根据公历年份和节气计算干支历的年份
 function GanZhiLi:calGanZhiYearNum()
-  if (self.ttime < self.jqs[1]) then
-    return self.tday.year - 1
-  else
-    return self.tday.year
-  end
+    if (self.ttime < self.jqs[1]) then
+        return self.tday.year - 1
+    else
+        return self.tday.year
+    end
 end
 
 -- 获取干支月份
 function GanZhiLi:calGanZhiMonthNum()
-  if self.ttime < self.jqs[1] then
-    return nil
-  end
-  local x = 0
-  if self.ttime < self.jqs[1] then
-    return nil
-  end -- 出错，计算错年了？
-  for i = 1, 23 do
-    if self.jqs[i] <= self.ttime and self.jqs[i + 1] > self.ttime then
-      x = i
+    if self.ttime < self.jqs[1] then
+        return nil
     end
-  end
-  if x == 0 then
-    x = 24
-  end
-  return math.floor((x + 1) / 2)
+    local x = 0
+    if self.ttime < self.jqs[1] then
+        return nil
+    end -- 出错，计算错年了？
+    for i = 1, 23 do
+        if self.jqs[i] <= self.ttime and self.jqs[i + 1] > self.ttime then
+            x = i
+        end
+    end
+    if x == 0 then
+        x = 24
+    end
+    return math.floor((x + 1) / 2)
 end
 
 -- 返回年的干支序号，1为甲子。。。
 function GanZhiLi:getYearGanZhi()
-  local jiaziYear = 1984 -- 甲子年
-  -- print(self.ganZhiYearNum)
-  local yeardiff = self.ganZhiYearNum - jiaziYear
-  return self:calRound(1, yeardiff, 60)
+    local jiaziYear = 1984 -- 甲子年
+    -- print(self.ganZhiYearNum)
+    local yeardiff = self.ganZhiYearNum - jiaziYear
+    return self:calRound(1, yeardiff, 60)
 end
 
 -- 返回月的干支号
 function GanZhiLi:getMonGanZhi()
-  local ck = {
-    year = 2010,
-    month = 2,
-    day = 4,
-    hour = 6,
-    min = 42,
-    sec = 0
-  }
-  local x = os.time(ck) -- 参考月，立春时间2010-2-4 6:42:00对应的干支序号为15
-  local ydiff = self.ganZhiYearNum - ck.year
-  local mdiff = self.ganZhiMonNum - 1
-  if ydiff >= 0 then
-    mdiff = ydiff * 12 + mdiff
-  else
-    mdiff = (ydiff + 1) * 12 + mdiff - 12
-  end
-  return self:calRound(15, mdiff, 60)
+    local ck = {
+        year = 2010,
+        month = 2,
+        day = 4,
+        hour = 6,
+        min = 42,
+        sec = 0
+    }
+    local x = os.time(ck) -- 参考月，立春时间2010-2-4 6:42:00对应的干支序号为15
+    local ydiff = self.ganZhiYearNum - ck.year
+    local mdiff = self.ganZhiMonNum - 1
+    if ydiff >= 0 then
+        mdiff = ydiff * 12 + mdiff
+    else
+        mdiff = (ydiff + 1) * 12 + mdiff - 12
+    end
+    return self:calRound(15, mdiff, 60)
 end
 
 -- 返回日的干支号，甲子从1开始
 function GanZhiLi:getDayGanZhi()
-  local DAYSEC = 24 * 3600
-  local jiaziDayTime = os.time({
-    year = 2012,
-    month = 8,
-    day = 30,
-    hour = 23,
-    min = 0,
-    sec = 0
-  })
-  local daydiff = math.floor((self.ttime - jiaziDayTime) / DAYSEC)
-  return self:calRound(1, daydiff, 60)
+    local DAYSEC = 24 * 3600
+    local jiaziDayTime = os.time({
+        year = 2012,
+        month = 8,
+        day = 30,
+        hour = 23,
+        min = 0,
+        sec = 0
+    })
+    local daydiff = math.floor((self.ttime - jiaziDayTime) / DAYSEC)
+    return self:calRound(1, daydiff, 60)
 end
 
 -- 返回时辰的干支号
 function GanZhiLi:getHourGanZhi()
-  local SHICHENSEC = 3600 * 2
-  local jiaziShiTime = os.time({
-    year = 2012,
-    month = 8,
-    day = 30,
-    hour = 23,
-    min = 0,
-    sec = 0
-  })
-  local shiDiff = math.floor((self.ttime - jiaziShiTime) / SHICHENSEC)
-  return self:calRound(1, shiDiff, 60)
+    local SHICHENSEC = 3600 * 2
+    local jiaziShiTime = os.time({
+        year = 2012,
+        month = 8,
+        day = 30,
+        hour = 23,
+        min = 0,
+        sec = 0
+    })
+    local shiDiff = math.floor((self.ttime - jiaziShiTime) / SHICHENSEC)
+    return self:calRound(1, shiDiff, 60)
 end
 
 -- ====================以下是测试代码=============
@@ -970,437 +966,439 @@ local dizhi = {'子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '�
 
 -- 根据六十甲子序号，返回六十甲子字符串,甲子从1开始
 local function get60JiaZiStr(i)
-  local gan = i % 10
-  if gan == 0 then
-    gan = 10
-  end
-  local zhi = i % 12
-  if zhi == 0 then
-    zhi = 12
-  end
-  return tiangan[gan] .. dizhi[zhi]
+    local gan = i % 10
+    if gan == 0 then
+        gan = 10
+    end
+    local zhi = i % 12
+    if zhi == 0 then
+        zhi = 12
+    end
+    return tiangan[gan] .. dizhi[zhi]
 end
 
 function lunarJzl(y)
-  local x, yidx, midx, didx, hidx
-  y = tostring(y)
-  x = GanZhiLi:new()
-  x:setTime(os.time({
-    year = tonumber(y.sub(y, 1, 4)),
-    month = tonumber(y.sub(y, 5, -5)),
-    day = tonumber(y.sub(y, 7, -3)),
-    hour = tonumber(y.sub(y, 9, -1)),
-    min = 4,
-    sec = 5
-  }))
-  yidx = x:getYearGanZhi()
-  midx = x:getMonGanZhi()
-  didx = x:getDayGanZhi()
-  hidx = x:getHourGanZhi()
-  GzData = get60JiaZiStr(yidx) .. '年' .. get60JiaZiStr(midx) .. '月' .. get60JiaZiStr(didx) .. '日' ..
-             get60JiaZiStr(hidx) .. '时'
-  -- print('干支:'  .. GzData)
-  return GzData
+    local x, yidx, midx, didx, hidx
+    y = tostring(y)
+    x = GanZhiLi:new()
+    x:setTime(os.time({
+        year = tonumber(y.sub(y, 1, 4)),
+        month = tonumber(y.sub(y, 5, -5)),
+        day = tonumber(y.sub(y, 7, -3)),
+        hour = tonumber(y.sub(y, 9, -1)),
+        min = 4,
+        sec = 5
+    }))
+    yidx = x:getYearGanZhi()
+    midx = x:getMonGanZhi()
+    didx = x:getDayGanZhi()
+    hidx = x:getHourGanZhi()
+    GzData = get60JiaZiStr(yidx) .. '年' .. get60JiaZiStr(midx) .. '月' .. get60JiaZiStr(didx) .. '日' ..
+                 get60JiaZiStr(hidx) .. '时'
+    -- print('干支:'  .. GzData)
+    return GzData
 end
-
 
 ------------农历转换函数--------------
 
 local function chinese_weekday2(wday)
-  wday_num = tonumber(wday) + 1
-  chinese_weekdays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"}
-  return chinese_weekdays[wday_num]
+    wday_num = tonumber(wday) + 1
+    chinese_weekdays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"}
+    return chinese_weekdays[wday_num]
 end
-
 
 -- 十进制转二进制
 function Dec2bin(n)
-  local t, t1, t2
-  local tables = {""}
-  t = tonumber(n)
-  while math.floor(t / 2) >= 1 do
-    t1 = math.fmod(t, 2)
-    if t1 > 0 then
-      if #tables > 0 then
-        table.insert(tables, 1, 1)
-      else
-        tables[1] = 1
-      end
-    else
-      if #tables > 0 then
-        table.insert(tables, 1, 0)
-      else
-        tables[1] = 0
-      end
+    local t, t1, t2
+    local tables = {""}
+    t = tonumber(n)
+    while math.floor(t / 2) >= 1 do
+        t1 = math.fmod(t, 2)
+        if t1 > 0 then
+            if #tables > 0 then
+                table.insert(tables, 1, 1)
+            else
+                tables[1] = 1
+            end
+        else
+            if #tables > 0 then
+                table.insert(tables, 1, 0)
+            else
+                tables[1] = 0
+            end
+        end
+        t = math.floor(t / 2)
+        if t == 1 then
+            if #tables > 0 then
+                table.insert(tables, 1, 1)
+            else
+                tables[1] = 1
+            end
+        end
     end
-    t = math.floor(t / 2)
-    if t == 1 then
-      if #tables > 0 then
-        table.insert(tables, 1, 1)
-      else
-        tables[1] = 1
-      end
-    end
-  end
-  return string.gsub(table.concat(tables), "^[0]+", "")
+    return string.gsub(table.concat(tables), "^[0]+", "")
 end
 
 -- 2/10/16进制互转
 local function system(x, inPuttype, outputtype)
-  local r
-  if (tonumber(inPuttype) == 2) then
-    if (tonumber(outputtype) == 10) then -- 2进制-->10进制
-      r = tonumber(tostring(x), 2)
-    elseif (tonumber(outputtype) == 16) then -- 2进制-->16进制
-      r = bin2hex(tostring(x))
+    local r
+    if (tonumber(inPuttype) == 2) then
+        if (tonumber(outputtype) == 10) then -- 2进制-->10进制
+            r = tonumber(tostring(x), 2)
+        elseif (tonumber(outputtype) == 16) then -- 2进制-->16进制
+            r = bin2hex(tostring(x))
+        end
+    elseif (tonumber(inPuttype) == 10) then
+        if (tonumber(outputtype) == 2) then -- 10进制-->2进制
+            r = Dec2bin(tonumber(x))
+        elseif (tonumber(outputtype) == 16) then -- 10进制-->16进制
+            r = string.format("%x", x)
+        end
+    elseif (tonumber(inPuttype) == 16) then
+        if (tonumber(outputtype) == 2) then -- 16进制-->2进制
+            r = Dec2bin(tonumber(tostring(x), 16))
+        elseif (tonumber(outputtype) == 10) then -- 16进制-->10进制
+            r = tonumber(tostring(x), 16)
+        end
     end
-  elseif (tonumber(inPuttype) == 10) then
-    if (tonumber(outputtype) == 2) then -- 10进制-->2进制
-      r = Dec2bin(tonumber(x))
-    elseif (tonumber(outputtype) == 16) then -- 10进制-->16进制
-      r = string.format("%x", x)
-    end
-  elseif (tonumber(inPuttype) == 16) then
-    if (tonumber(outputtype) == 2) then -- 16进制-->2进制
-      r = Dec2bin(tonumber(tostring(x), 16))
-    elseif (tonumber(outputtype) == 10) then -- 16进制-->10进制
-      r = tonumber(tostring(x), 16)
-    end
-  end
-  return r
+    return r
 end
 
 -- 农历16进制数据分解
 local function Analyze(Data)
-  local rtn1, rtn2, rtn3, rtn4
-  rtn1 = system(string.sub(Data, 1, 3), 16, 2)
-  if string.len(rtn1) < 12 then
-    rtn1 = "0" .. rtn1
-  end
-  rtn2 = string.sub(Data, 4, 4)
-  rtn3 = system(string.sub(Data, 5, 5), 16, 10)
-  rtn4 = system(string.sub(Data, -2, -1), 16, 10)
-  if string.len(rtn4) == 3 then
-    rtn4 = "0" .. system(string.sub(Data, -2, -1), 16, 10)
-  end
-  -- string.gsub(rtn1, "^[0]*", "")
-  return {rtn1, rtn2, rtn3, rtn4}
+    local rtn1, rtn2, rtn3, rtn4
+    rtn1 = system(string.sub(Data, 1, 3), 16, 2)
+    if string.len(rtn1) < 12 then
+        rtn1 = "0" .. rtn1
+    end
+    rtn2 = string.sub(Data, 4, 4)
+    rtn3 = system(string.sub(Data, 5, 5), 16, 10)
+    rtn4 = system(string.sub(Data, -2, -1), 16, 10)
+    if string.len(rtn4) == 3 then
+        rtn4 = "0" .. system(string.sub(Data, -2, -1), 16, 10)
+    end
+    -- string.gsub(rtn1, "^[0]*", "")
+    return {rtn1, rtn2, rtn3, rtn4}
 end
 
 -- 年天数判断
 local function IsLeap(y)
-  local year = tonumber(y)
-  if math.fmod(year, 400) ~= 0 and math.fmod(year, 4) == 0 or math.fmod(year, 400) == 0 then
-    return 366
-  else
-    return 365
-  end
+    local year = tonumber(y)
+    if math.fmod(year, 400) ~= 0 and math.fmod(year, 4) == 0 or math.fmod(year, 400) == 0 then
+        return 366
+    else
+        return 365
+    end
 end
 
 -- 计算日期差，两个8位数日期之间相隔的天数，date2>date1
 function diffDate(date1, date2)
-  local t1, t2, n, total
-  total = 0
-  date1 = tostring(date1)
-  date2 = tostring(date2)
-  if tonumber(date2) > tonumber(date1) then
-    n = tonumber(string.sub(date2, 1, 4)) - tonumber(string.sub(date1, 1, 4))
-    if n > 1 then
-      for i = 1, n - 1 do
-        total = total + IsLeap(tonumber(string.sub(date1, 1, 4)) + i)
-      end
-      total = total + leaveDate(tonumber(string.sub(date2, 1, 8))) + IsLeap(tonumber(string.sub(date1, 1, 4))) -
-                leaveDate(tonumber(string.sub(date1, 1, 8)))
-    elseif n == 1 then
-      total = IsLeap(tonumber(string.sub(date1, 1, 4))) - leaveDate(tonumber(string.sub(date1, 1, 8))) +
-                leaveDate(tonumber(string.sub(date2, 1, 8)))
+    local t1, t2, n, total
+    total = 0
+    date1 = tostring(date1)
+    date2 = tostring(date2)
+    if tonumber(date2) > tonumber(date1) then
+        n = tonumber(string.sub(date2, 1, 4)) - tonumber(string.sub(date1, 1, 4))
+        if n > 1 then
+            for i = 1, n - 1 do
+                total = total + IsLeap(tonumber(string.sub(date1, 1, 4)) + i)
+            end
+            total = total + leaveDate(tonumber(string.sub(date2, 1, 8))) + IsLeap(tonumber(string.sub(date1, 1, 4))) -
+                        leaveDate(tonumber(string.sub(date1, 1, 8)))
+        elseif n == 1 then
+            total = IsLeap(tonumber(string.sub(date1, 1, 4))) - leaveDate(tonumber(string.sub(date1, 1, 8))) +
+                        leaveDate(tonumber(string.sub(date2, 1, 8)))
+        else
+            total = leaveDate(tonumber(string.sub(date2, 1, 8))) - leaveDate(tonumber(string.sub(date1, 1, 8)))
+            -- print(date1 .. "-" .. date2)
+        end
+    elseif tonumber(date2) == tonumber(date1) then
+        return 0
     else
-      total = leaveDate(tonumber(string.sub(date2, 1, 8))) - leaveDate(tonumber(string.sub(date1, 1, 8)))
-      -- print(date1 .. "-" .. date2)
+        return -1
     end
-  elseif tonumber(date2) == tonumber(date1) then
-    return 0
-  else
-    return -1
-  end
-  return total
+    return total
 end
-
 
 -- 返回当年过了多少天
 function leaveDate(y)
-  local day, total
-  total = 0
-  if IsLeap(tonumber(string.sub(y, 1, 4))) > 365 then
-    day = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-  else
-    day = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-  end
-  if tonumber(string.sub(y, 5, 6)) > 1 then
-    for i = 1, tonumber(string.sub(y, 5, 6)) - 1 do
-      total = total + day[i]
+    local day, total
+    total = 0
+    if IsLeap(tonumber(string.sub(y, 1, 4))) > 365 then
+        day = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+    else
+        day = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
     end
-    total = total + tonumber(string.sub(y, 7, 8))
-  else
-    return tonumber(string.sub(y, 7, 8))
-  end
-  return tonumber(total)
+    if tonumber(string.sub(y, 5, 6)) > 1 then
+        for i = 1, tonumber(string.sub(y, 5, 6)) - 1 do
+            total = total + day[i]
+        end
+        total = total + tonumber(string.sub(y, 7, 8))
+    else
+        return tonumber(string.sub(y, 7, 8))
+    end
+    return tonumber(total)
 end
 
+--- +++ 获取农历的天干地支和生肖等 +++
 -- 公历转农历，支持转化范围公元1900-2100年
 -- 公历日期 Gregorian:格式 YYYYMMDD
 -- <返回值>农历日期 中文 天干地支属相
 function Date2LunarDate(Gregorian)
-  -- 天干名称
-  local cTianGan = {"甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"}
-  -- 地支名称
-  local cDiZhi = {"子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"}
-  -- 属相名称
-  local cShuXiang = {"鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"}
-  -- 农历日期名
-  local cDayName = {"初一", "初二", "初三", "初四", "初五", "初六", "初七", "初八", "初九", "初十",
-                    "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十",
-                    "廿一", "廿二", "廿三", "廿四", "廿五", "廿六", "廿七", "廿八", "廿九", "三十"}
-  -- 农历月份名
-  local cMonName = {"正月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月",
-                    "冬月", "腊月"}
+    -- 天干名称
+    local cTianGan = {"甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"}
+    -- 地支名称
+    local cDiZhi = {"子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"}
+    -- 属相名称
+    local cShuXiang = {"鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"}
+    -- 农历日期名
+    local cDayName = {"初一", "初二", "初三", "初四", "初五", "初六", "初七", "初八", "初九",
+                      "初十", "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八",
+                      "十九", "二十", "廿一", "廿二", "廿三", "廿四", "廿五", "廿六", "廿七",
+                      "廿八", "廿九", "三十"}
+    -- 农历月份名
+    local cMonName = {"正月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月",
+                      "十月", "冬月", "腊月"}
 
-  -- 农历数据
-  local wNongliData = {"AB500D2", "4BD0883", "4AE00DB", "A5700D0", "54D0581", "D2600D8", "D9500CC", "655147D",
-                       "56A00D5", "9AD00CA", "55D027A", "4AE00D2", "A5B0682", "A4D00DA", "D2500CE", "D25157E",
-                       "B5500D6", "56A00CC", "ADA027B", "95B00D3", "49717C9", "49B00DC", "A4B00D0", "B4B0580",
-                       "6A500D8", "6D400CD", "AB5147C", "2B600D5", "95700CA", "52F027B", "49700D2", "6560682",
-                       "D4A00D9", "EA500CE", "6A9157E", "5AD00D6", "2B600CC", "86E137C", "92E00D3", "C8D1783",
-                       "C9500DB", "D4A00D0", "D8A167F", "B5500D7", "56A00CD", "A5B147D", "25D00D5", "92D00CA",
-                       "D2B027A", "A9500D2", "B550781", "6CA00D9", "B5500CE", "535157F", "4DA00D6", "A5B00CB",
-                       "457037C", "52B00D4", "A9A0883", "E9500DA", "6AA00D0", "AEA0680", "AB500D7", "4B600CD",
-                       "AAE047D", "A5700D5", "52600CA", "F260379", "D9500D1", "5B50782", "56A00D9", "96D00CE",
-                       "4DD057F", "4AD00D7", "A4D00CB", "D4D047B", "D2500D3", "D550883", "B5400DA", "B6A00CF",
-                       "95A1680", "95B00D8", "49B00CD", "A97047D", "A4B00D5", "B270ACA", "6A500DC", "6D400D1",
-                       "AF40681", "AB600D9", "93700CE", "4AF057F", "49700D7", "64B00CC", "74A037B", "EA500D2",
-                       "6B50883", "5AC00DB", "AB600CF", "96D0580", "92E00D8", "C9600CD", "D95047C", "D4A00D4",
-                       "DA500C9", "755027A", "56A00D1", "ABB0781", "25D00DA", "92D00CF", "CAB057E", "A9500D6",
-                       "B4A00CB", "BAA047B", "AD500D2", "55D0983", "4BA00DB", "A5B00D0", "5171680", "52B00D8",
-                       "A9300CD", "795047D", "6AA00D4", "AD500C9", "5B5027A", "4B600D2", "96E0681", "A4E00D9",
-                       "D2600CE", "EA6057E", "D5300D5", "5AA00CB", "76A037B", "96D00D3", "4AB0B83", "4AD00DB",
-                       "A4D00D0", "D0B1680", "D2500D7", "D5200CC", "DD4057C", "B5A00D4", "56D00C9", "55B027A",
-                       "49B00D2", "A570782", "A4B00D9", "AA500CE", "B25157E", "6D200D6", "ADA00CA", "4B6137B",
-                       "93700D3", "49F08C9", "49700DB", "64B00D0", "68A1680", "EA500D7", "6AA00CC", "A6C147C",
-                       "AAE00D4", "92E00CA", "D2E0379", "C9600D1", "D550781", "D4A00D9", "DA400CD", "5D5057E",
-                       "56A00D6", "A6C00CB", "55D047B", "52D00D3", "A9B0883", "A9500DB", "B4A00CF", "B6A067F",
-                       "AD500D7", "55A00CD", "ABA047C", "A5A00D4", "52B00CA", "B27037A", "69300D1", "7330781",
-                       "6AA00D9", "AD500CE", "4B5157E", "4B600D6", "A5700CB", "54E047C", "D1600D2", "E960882",
-                       "D5200DA", "DAA00CF", "6AA167F", "56D00D7", "4AE00CD", "A9D047D", "A2D00D4", "D1500C9",
-                       "F250279", "D5200D1"}
-  Gregorian = tostring(Gregorian)
-  local Year, Month, Day, Pos, Data0, Data1, MonthInfo, LeapInfo, Leap, Newyear, Data2, Data3, LYear, thisMonthInfo
-  Year = tonumber(Gregorian.sub(Gregorian, 1, 4))
-  Month = tonumber(Gregorian.sub(Gregorian, 5, 6))
-  Day = tonumber(Gregorian.sub(Gregorian, 7, 8))
-  if (Year > 2100 or Year < 1899 or Month > 12 or Month < 1 or Day < 1 or Day > 31 or string.len(Gregorian) < 8) then
-    return "无效日期"
-  end
-  -- print(Year .. "-" .. Month .. "-" .. Day)
-  -- 获取两百年内的农历数据
-  Pos = Year - 1900 + 2
-  Data0 = wNongliData[Pos - 1]
-  Data1 = wNongliData[Pos]
-  -- 判断农历年份
-  local tb1 = Analyze(Data1)
-  MonthInfo = tb1[1]
-  LeapInfo = tb1[2]
-  Leap = tb1[3]
-  Newyear = tb1[4]
-  Date1 = Year .. Newyear
-  Date2 = Gregorian
-  Date3 = diffDate(Date1, Date2) -- 和当年农历新年相差的天数
-  -- print(Date3 .. "-11")
-  if (Date3 < 0) then
-    -- print(Data0 .. "-2")
-    tb1 = Analyze(Data0)
-    Year = Year - 1
+    -- 农历数据
+    local wNongliData = {"AB500D2", "4BD0883", "4AE00DB", "A5700D0", "54D0581", "D2600D8", "D9500CC", "655147D",
+                         "56A00D5", "9AD00CA", "55D027A", "4AE00D2", "A5B0682", "A4D00DA", "D2500CE", "D25157E",
+                         "B5500D6", "56A00CC", "ADA027B", "95B00D3", "49717C9", "49B00DC", "A4B00D0", "B4B0580",
+                         "6A500D8", "6D400CD", "AB5147C", "2B600D5", "95700CA", "52F027B", "49700D2", "6560682",
+                         "D4A00D9", "EA500CE", "6A9157E", "5AD00D6", "2B600CC", "86E137C", "92E00D3", "C8D1783",
+                         "C9500DB", "D4A00D0", "D8A167F", "B5500D7", "56A00CD", "A5B147D", "25D00D5", "92D00CA",
+                         "D2B027A", "A9500D2", "B550781", "6CA00D9", "B5500CE", "535157F", "4DA00D6", "A5B00CB",
+                         "457037C", "52B00D4", "A9A0883", "E9500DA", "6AA00D0", "AEA0680", "AB500D7", "4B600CD",
+                         "AAE047D", "A5700D5", "52600CA", "F260379", "D9500D1", "5B50782", "56A00D9", "96D00CE",
+                         "4DD057F", "4AD00D7", "A4D00CB", "D4D047B", "D2500D3", "D550883", "B5400DA", "B6A00CF",
+                         "95A1680", "95B00D8", "49B00CD", "A97047D", "A4B00D5", "B270ACA", "6A500DC", "6D400D1",
+                         "AF40681", "AB600D9", "93700CE", "4AF057F", "49700D7", "64B00CC", "74A037B", "EA500D2",
+                         "6B50883", "5AC00DB", "AB600CF", "96D0580", "92E00D8", "C9600CD", "D95047C", "D4A00D4",
+                         "DA500C9", "755027A", "56A00D1", "ABB0781", "25D00DA", "92D00CF", "CAB057E", "A9500D6",
+                         "B4A00CB", "BAA047B", "AD500D2", "55D0983", "4BA00DB", "A5B00D0", "5171680", "52B00D8",
+                         "A9300CD", "795047D", "6AA00D4", "AD500C9", "5B5027A", "4B600D2", "96E0681", "A4E00D9",
+                         "D2600CE", "EA6057E", "D5300D5", "5AA00CB", "76A037B", "96D00D3", "4AB0B83", "4AD00DB",
+                         "A4D00D0", "D0B1680", "D2500D7", "D5200CC", "DD4057C", "B5A00D4", "56D00C9", "55B027A",
+                         "49B00D2", "A570782", "A4B00D9", "AA500CE", "B25157E", "6D200D6", "ADA00CA", "4B6137B",
+                         "93700D3", "49F08C9", "49700DB", "64B00D0", "68A1680", "EA500D7", "6AA00CC", "A6C147C",
+                         "AAE00D4", "92E00CA", "D2E0379", "C9600D1", "D550781", "D4A00D9", "DA400CD", "5D5057E",
+                         "56A00D6", "A6C00CB", "55D047B", "52D00D3", "A9B0883", "A9500DB", "B4A00CF", "B6A067F",
+                         "AD500D7", "55A00CD", "ABA047C", "A5A00D4", "52B00CA", "B27037A", "69300D1", "7330781",
+                         "6AA00D9", "AD500CE", "4B5157E", "4B600D6", "A5700CB", "54E047C", "D1600D2", "E960882",
+                         "D5200DA", "DAA00CF", "6AA167F", "56D00D7", "4AE00CD", "A9D047D", "A2D00D4", "D1500C9",
+                         "F250279", "D5200D1"}
+    Gregorian = tostring(Gregorian)
+    local Year, Month, Day, Pos, Data0, Data1, MonthInfo, LeapInfo, Leap, Newyear, Data2, Data3, LYear, thisMonthInfo
+    Year = tonumber(Gregorian.sub(Gregorian, 1, 4))
+    Month = tonumber(Gregorian.sub(Gregorian, 5, 6))
+    Day = tonumber(Gregorian.sub(Gregorian, 7, 8))
+    if (Year > 2100 or Year < 1899 or Month > 12 or Month < 1 or Day < 1 or Day > 31 or string.len(Gregorian) < 8) then
+        return "无效日期"
+    end
+    -- print(Year .. "-" .. Month .. "-" .. Day)
+    -- 获取两百年内的农历数据
+    Pos = Year - 1900 + 2
+    Data0 = wNongliData[Pos - 1]
+    Data1 = wNongliData[Pos]
+    -- 判断农历年份
+    local tb1 = Analyze(Data1)
     MonthInfo = tb1[1]
     LeapInfo = tb1[2]
     Leap = tb1[3]
     Newyear = tb1[4]
     Date1 = Year .. Newyear
     Date2 = Gregorian
-    Date3 = diffDate(Date1, Date2)
-    -- print(Date2 .. "--" .. Date1 .. "--" .. Date3)
-  end
-  -- print(MonthInfo .. "-" .. LeapInfo .. "-" .. Leap .. "-" .. Newyear .. "-" .. Year)
-  Date3 = Date3 + 1
-  LYear = Year -- 农历年份，就是上面计算后的值
-  if Leap > 0 then -- 有闰月
-    thisMonthInfo = string.sub(MonthInfo, 1, Leap) .. LeapInfo .. string.sub(MonthInfo, Leap + 1)
-  else
-    thisMonthInfo = MonthInfo
-  end
-  local thisMonth, thisDays, LDay, Isleap, LunarYear, LunarMonth
-  for i = 1, 13 do
-    thisMonth = string.sub(thisMonthInfo, i, i)
-    thisDays = 29 + thisMonth
-    if (Date3 > thisDays) then
-      Date3 = Date3 - thisDays
-    else
-      if (Leap > 0) then
-        if (Leap >= i) then
-          LMonth = i
-          Isleap = 0
-        else
-          LMonth = i - 1
-          if i - Leap == 1 then
-            Isleap = 1
-          else
-            Isleap = 0
-          end
-        end
-      else
-        LMonth = i
-        Isleap = 0
-      end
-      LDay = math.floor(Date3)
-      break
+    Date3 = diffDate(Date1, Date2) -- 和当年农历新年相差的天数
+    -- print(Date3 .. "-11")
+    if (Date3 < 0) then
+        -- print(Data0 .. "-2")
+        tb1 = Analyze(Data0)
+        Year = Year - 1
+        MonthInfo = tb1[1]
+        LeapInfo = tb1[2]
+        Leap = tb1[3]
+        Newyear = tb1[4]
+        Date1 = Year .. Newyear
+        Date2 = Gregorian
+        Date3 = diffDate(Date1, Date2)
+        -- print(Date2 .. "--" .. Date1 .. "--" .. Date3)
     end
-  end
-  -- print(LYear .. "-" .. LMonth .. "-" .. LDay)
-  if Isleap > 0 then
-    LunarMonth = "闰" .. cMonName[LMonth]
-  else
-    LunarMonth = cMonName[LMonth]
-  end
-  -- print(LDay)
-  LunarYear = cTianGan[math.fmod(LYear - 4, 10) + 1] .. cDiZhi[math.fmod(LYear - 4, 12) + 1] .. "年(" ..
-                cShuXiang[math.fmod(LYear - 4, 12) + 1] .. ") " .. LunarMonth .. cDayName[LDay]
-  -- print(LunarYear)
-  return LunarYear
+    -- print(MonthInfo .. "-" .. LeapInfo .. "-" .. Leap .. "-" .. Newyear .. "-" .. Year)
+    Date3 = Date3 + 1
+    LYear = Year -- 农历年份，就是上面计算后的值
+    if Leap > 0 then -- 有闰月
+        thisMonthInfo = string.sub(MonthInfo, 1, Leap) .. LeapInfo .. string.sub(MonthInfo, Leap + 1)
+    else
+        thisMonthInfo = MonthInfo
+    end
+    local thisMonth, thisDays, LDay, Isleap, LunarYear, LunarMonth
+    for i = 1, 13 do
+        thisMonth = string.sub(thisMonthInfo, i, i)
+        thisDays = 29 + thisMonth
+        if (Date3 > thisDays) then
+            Date3 = Date3 - thisDays
+        else
+            if (Leap > 0) then
+                if (Leap >= i) then
+                    LMonth = i
+                    Isleap = 0
+                else
+                    LMonth = i - 1
+                    if i - Leap == 1 then
+                        Isleap = 1
+                    else
+                        Isleap = 0
+                    end
+                end
+            else
+                LMonth = i
+                Isleap = 0
+            end
+            LDay = math.floor(Date3)
+            break
+        end
+    end
+    -- print(LYear .. "-" .. LMonth .. "-" .. LDay)
+    if Isleap > 0 then
+        LunarMonth = "闰" .. cMonName[LMonth]
+    else
+        LunarMonth = cMonName[LMonth]
+    end
+    -- print(LDay)
+    LunarYear = cTianGan[math.fmod(LYear - 4, 10) + 1] .. cDiZhi[math.fmod(LYear - 4, 12) + 1] .. "年(" ..
+                    cShuXiang[math.fmod(LYear - 4, 12) + 1] .. ") " .. LunarMonth .. cDayName[LDay]
+    -- print(LunarYear)
+    return LunarYear
 end
 
 -- Date日期参数格式YYMMDD，dayCount累加的天数--修复了可能为6月00日的可能性,回退到5月31日
 -- 返回值：公历日期
 local function GettotalDay(Date, dayCount)
-  local Year, Month, Day, days, total, t
-  Date = tostring(Date)
-  Year = tonumber(Date.sub(Date, 1, 4))
-  Month = tonumber(Date.sub(Date, 5, 6))
-  Day = tonumber(Date.sub(Date, 7, 8))
-  
-  -- 根据是否是闰年设置天数表
-  if IsLeap(Year) > 365 then
-    days = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-  else
-    days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
-  end
+    local Year, Month, Day, days, total, t
+    Date = tostring(Date)
+    Year = tonumber(Date.sub(Date, 1, 4))
+    Month = tonumber(Date.sub(Date, 5, 6))
+    Day = tonumber(Date.sub(Date, 7, 8))
 
-  -- 判断天数是否超过当前月份的剩余天数
-  if dayCount > days[Month] - Day then
-    total = dayCount - (days[Month] - Day)  -- 减去当前月份剩余的天数
-    Month = Month + 1  -- 移动到下个月
-    if Month > 12 then
-      Month = 1  -- 如果超过12月，跳转到1月
-      Year = Year + 1  -- 增加一年
+    -- 根据是否是闰年设置天数表
+    if IsLeap(Year) > 365 then
+        days = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
+    else
+        days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
     end
 
-    -- 继续加上余下的天数，跨月处理
-    while total > days[Month] do
-      total = total - days[Month]  -- 减去当前月份的天数
-      Month = Month + 1  -- 移动到下个月
-      if Month > 12 then
-        Month = 1  -- 如果超过12月，跳转到1月
-        Year = Year + 1  -- 增加一年
-      end
-    end
-  else
-    total = Day + dayCount  -- 如果不跨月，直接累加
-  end
+    -- 判断天数是否超过当前月份的剩余天数
+    if dayCount > days[Month] - Day then
+        total = dayCount - (days[Month] - Day) -- 减去当前月份剩余的天数
+        Month = Month + 1 -- 移动到下个月
+        if Month > 12 then
+            Month = 1 -- 如果超过12月，跳转到1月
+            Year = Year + 1 -- 增加一年
+        end
 
-  -- 确保月份和日期都是两位数格式
-  if string.len(Month) == 1 then Month = "0" .. Month end
-  if string.len(total) == 1 then total = "0" .. total end
-  
-  -- 返回格式化的日期
-  return Year .. "年" .. Month .. "月" .. total .. "日"
+        -- 继续加上余下的天数，跨月处理
+        while total > days[Month] do
+            total = total - days[Month] -- 减去当前月份的天数
+            Month = Month + 1 -- 移动到下个月
+            if Month > 12 then
+                Month = 1 -- 如果超过12月，跳转到1月
+                Year = Year + 1 -- 增加一年
+            end
+        end
+    else
+        total = Day + dayCount -- 如果不跨月，直接累加
+    end
+
+    -- 确保月份和日期都是两位数格式
+    if string.len(Month) == 1 then
+        Month = "0" .. Month
+    end
+    if string.len(total) == 1 then
+        total = "0" .. total
+    end
+
+    -- 返回格式化的日期
+    return Year .. "年" .. Month .. "月" .. total .. "日"
 end
-
 
 -- 农历转公历
 -- 农历 Gregorian:数字格式 YYYYMMDD
 -- <返回值>公历日期 格式YYYY年MM月DD日
 -- 农历日期月份为闰月需指定参数IsLeap为1，非闰月需指定参数IsLeap为0
 function LunarDate2Date(Gregorian, IsLeap)
-  LunarData = {"AB500D2", "4BD0883", "4AE00DB", "A5700D0", "54D0581", "D2600D8", "D9500CC", "655147D", "56A00D5",
-               "9AD00CA", "55D027A", "4AE00D2", "A5B0682", "A4D00DA", "D2500CE", "D25157E", "B5500D6", "56A00CC",
-               "ADA027B", "95B00D3", "49717C9", "49B00DC", "A4B00D0", "B4B0580", "6A500D8", "6D400CD", "AB5147C",
-               "2B600D5", "95700CA", "52F027B", "49700D2", "6560682", "D4A00D9", "EA500CE", "6A9157E", "5AD00D6",
-               "2B600CC", "86E137C", "92E00D3", "C8D1783", "C9500DB", "D4A00D0", "D8A167F", "B5500D7", "56A00CD",
-               "A5B147D", "25D00D5", "92D00CA", "D2B027A", "A9500D2", "B550781", "6CA00D9", "B5500CE", "535157F",
-               "4DA00D6", "A5B00CB", "457037C", "52B00D4", "A9A0883", "E9500DA", "6AA00D0", "AEA0680", "AB500D7",
-               "4B600CD", "AAE047D", "A5700D5", "52600CA", "F260379", "D9500D1", "5B50782", "56A00D9", "96D00CE",
-               "4DD057F", "4AD00D7", "A4D00CB", "D4D047B", "D2500D3", "D550883", "B5400DA", "B6A00CF", "95A1680",
-               "95B00D8", "49B00CD", "A97047D", "A4B00D5", "B270ACA", "6A500DC", "6D400D1", "AF40681", "AB600D9",
-               "93700CE", "4AF057F", "49700D7", "64B00CC", "74A037B", "EA500D2", "6B50883", "5AC00DB", "AB600CF",
-               "96D0580", "92E00D8", "C9600CD", "D95047C", "D4A00D4", "DA500C9", "755027A", "56A00D1", "ABB0781",
-               "25D00DA", "92D00CF", "CAB057E", "A9500D6", "B4A00CB", "BAA047B", "AD500D2", "55D0983", "4BA00DB",
-               "A5B00D0", "5171680", "52B00D8", "A9300CD", "795047D", "6AA00D4", "AD500C9", "5B5027A", "4B600D2",
-               "96E0681", "A4E00D9", "D2600CE", "EA6057E", "D5300D5", "5AA00CB", "76A037B", "96D00D3", "4AB0B83",
-               "4AD00DB", "A4D00D0", "D0B1680", "D2500D7", "D5200CC", "DD4057C", "B5A00D4", "56D00C9", "55B027A",
-               "49B00D2", "A570782", "A4B00D9", "AA500CE", "B25157E", "6D200D6", "ADA00CA", "4B6137B", "93700D3",
-               "49F08C9", "49700DB", "64B00D0", "68A1680", "EA500D7", "6AA00CC", "A6C147C", "AAE00D4", "92E00CA",
-               "D2E0379", "C9600D1", "D550781", "D4A00D9", "DA400CD", "5D5057E", "56A00D6", "A6C00CB", "55D047B",
-               "52D00D3", "A9B0883", "A9500DB", "B4A00CF", "B6A067F", "AD500D7", "55A00CD", "ABA047C", "A5A00D4",
-               "52B00CA", "B27037A", "69300D1", "7330781", "6AA00D9", "AD500CE", "4B5157E", "4B600D6", "A5700CB",
-               "54E047C", "D1600D2", "E960882", "D5200DA", "DAA00CF", "6AA167F", "56D00D7", "4AE00CD", "A9D047D",
-               "A2D00D4", "D1500C9", "F250279", "D5200D1"}
-  Gregorian = tostring(Gregorian)
-  local Year, Month, Day, Pos, Data, MonthInfo, LeapInfo, Leap, Newyear, Sum, thisMonthInfo, GDate
-  Year = tonumber(Gregorian.sub(Gregorian, 1, 4))
-  Month = tonumber(Gregorian.sub(Gregorian, 5, 6))
-  Day = tonumber(Gregorian.sub(Gregorian, 7, 8))
-  if (Year > 2100 or Year < 1900 or Month > 12 or Month < 1 or Day > 30 or Day < 1 or string.len(Gregorian) < 8) then
-    return "无效日期"
-  end
-
-  -- 获取当年农历数据
-  Pos = (Year - 1899) + 1
-  Data = LunarData[Pos]
-  -- print(Data)
-  -- 判断公历日期
-  local tb1 = Analyze(Data)
-  MonthInfo = tb1[1]
-  LeapInfo = tb1[2]
-  Leap = tb1[3]
-  Newyear = tb1[4]
-  -- 计算到当天到当年农历新年的天数
-  Sum = 0
-
-  if Leap > 0 then -- 有闰月
-    thisMonthInfo = string.sub(MonthInfo, 1, Leap) .. LeapInfo .. string.sub(MonthInfo, Leap + 1)
-    if (Leap ~= Month and tonumber(IsLeap) == 1) then
-      return "该月不是闰月！"
+    LunarData = {"AB500D2", "4BD0883", "4AE00DB", "A5700D0", "54D0581", "D2600D8", "D9500CC", "655147D", "56A00D5",
+                 "9AD00CA", "55D027A", "4AE00D2", "A5B0682", "A4D00DA", "D2500CE", "D25157E", "B5500D6", "56A00CC",
+                 "ADA027B", "95B00D3", "49717C9", "49B00DC", "A4B00D0", "B4B0580", "6A500D8", "6D400CD", "AB5147C",
+                 "2B600D5", "95700CA", "52F027B", "49700D2", "6560682", "D4A00D9", "EA500CE", "6A9157E", "5AD00D6",
+                 "2B600CC", "86E137C", "92E00D3", "C8D1783", "C9500DB", "D4A00D0", "D8A167F", "B5500D7", "56A00CD",
+                 "A5B147D", "25D00D5", "92D00CA", "D2B027A", "A9500D2", "B550781", "6CA00D9", "B5500CE", "535157F",
+                 "4DA00D6", "A5B00CB", "457037C", "52B00D4", "A9A0883", "E9500DA", "6AA00D0", "AEA0680", "AB500D7",
+                 "4B600CD", "AAE047D", "A5700D5", "52600CA", "F260379", "D9500D1", "5B50782", "56A00D9", "96D00CE",
+                 "4DD057F", "4AD00D7", "A4D00CB", "D4D047B", "D2500D3", "D550883", "B5400DA", "B6A00CF", "95A1680",
+                 "95B00D8", "49B00CD", "A97047D", "A4B00D5", "B270ACA", "6A500DC", "6D400D1", "AF40681", "AB600D9",
+                 "93700CE", "4AF057F", "49700D7", "64B00CC", "74A037B", "EA500D2", "6B50883", "5AC00DB", "AB600CF",
+                 "96D0580", "92E00D8", "C9600CD", "D95047C", "D4A00D4", "DA500C9", "755027A", "56A00D1", "ABB0781",
+                 "25D00DA", "92D00CF", "CAB057E", "A9500D6", "B4A00CB", "BAA047B", "AD500D2", "55D0983", "4BA00DB",
+                 "A5B00D0", "5171680", "52B00D8", "A9300CD", "795047D", "6AA00D4", "AD500C9", "5B5027A", "4B600D2",
+                 "96E0681", "A4E00D9", "D2600CE", "EA6057E", "D5300D5", "5AA00CB", "76A037B", "96D00D3", "4AB0B83",
+                 "4AD00DB", "A4D00D0", "D0B1680", "D2500D7", "D5200CC", "DD4057C", "B5A00D4", "56D00C9", "55B027A",
+                 "49B00D2", "A570782", "A4B00D9", "AA500CE", "B25157E", "6D200D6", "ADA00CA", "4B6137B", "93700D3",
+                 "49F08C9", "49700DB", "64B00D0", "68A1680", "EA500D7", "6AA00CC", "A6C147C", "AAE00D4", "92E00CA",
+                 "D2E0379", "C9600D1", "D550781", "D4A00D9", "DA400CD", "5D5057E", "56A00D6", "A6C00CB", "55D047B",
+                 "52D00D3", "A9B0883", "A9500DB", "B4A00CF", "B6A067F", "AD500D7", "55A00CD", "ABA047C", "A5A00D4",
+                 "52B00CA", "B27037A", "69300D1", "7330781", "6AA00D9", "AD500CE", "4B5157E", "4B600D6", "A5700CB",
+                 "54E047C", "D1600D2", "E960882", "D5200DA", "DAA00CF", "6AA167F", "56D00D7", "4AE00CD", "A9D047D",
+                 "A2D00D4", "D1500C9", "F250279", "D5200D1"}
+    Gregorian = tostring(Gregorian)
+    local Year, Month, Day, Pos, Data, MonthInfo, LeapInfo, Leap, Newyear, Sum, thisMonthInfo, GDate
+    Year = tonumber(Gregorian.sub(Gregorian, 1, 4))
+    Month = tonumber(Gregorian.sub(Gregorian, 5, 6))
+    Day = tonumber(Gregorian.sub(Gregorian, 7, 8))
+    if (Year > 2100 or Year < 1900 or Month > 12 or Month < 1 or Day > 30 or Day < 1 or string.len(Gregorian) < 8) then
+        return "无效日期"
     end
-    if (Month <= Leap and tonumber(IsLeap) == 0) then
-      for i = 1, Month - 1 do
-        Sum = Sum + 29 + string.sub(thisMonthInfo, i, i)
-      end
+
+    -- 获取当年农历数据
+    Pos = (Year - 1899) + 1
+    Data = LunarData[Pos]
+    -- print(Data)
+    -- 判断公历日期
+    local tb1 = Analyze(Data)
+    MonthInfo = tb1[1]
+    LeapInfo = tb1[2]
+    Leap = tb1[3]
+    Newyear = tb1[4]
+    -- 计算到当天到当年农历新年的天数
+    Sum = 0
+
+    if Leap > 0 then -- 有闰月
+        thisMonthInfo = string.sub(MonthInfo, 1, Leap) .. LeapInfo .. string.sub(MonthInfo, Leap + 1)
+        if (Leap ~= Month and tonumber(IsLeap) == 1) then
+            return "该月不是闰月！"
+        end
+        if (Month <= Leap and tonumber(IsLeap) == 0) then
+            for i = 1, Month - 1 do
+                Sum = Sum + 29 + string.sub(thisMonthInfo, i, i)
+            end
+        else
+            for i = 1, Month do
+                Sum = Sum + 29 + string.sub(thisMonthInfo, i, i)
+            end
+        end
     else
-      for i = 1, Month do
-        Sum = Sum + 29 + string.sub(thisMonthInfo, i, i)
-      end
+        if (tonumber(IsLeap) == 1) then
+            return "该年没有闰月！"
+        end
+        for i = 1, Month - 1 do
+            thisMonthInfo = MonthInfo
+            Sum = Sum + 29 + string.sub(thisMonthInfo, i, i)
+        end
     end
-  else
-    if (tonumber(IsLeap) == 1) then
-      return "该年没有闰月！"
-    end
-    for i = 1, Month - 1 do
-      thisMonthInfo = MonthInfo
-      Sum = Sum + 29 + string.sub(thisMonthInfo, i, i)
-    end
-  end
-  Sum = math.floor(Sum + Day - 1)
-  GDate = Year .. Newyear
-  GDate = GettotalDay(GDate, Sum)
+    Sum = math.floor(Sum + Day - 1)
+    GDate = Year .. Newyear
+    GDate = GettotalDay(GDate, Sum)
 
-  return GDate
+    return GDate
 end
 
 ------------农历转换函数结束--------------
@@ -1423,383 +1421,484 @@ end
 --]]
 
 -- 年天数判断
-function IsLeap(y)
-  local year = tonumber(y)
-  if math.floor(year % 400) ~= 0 and math.floor(year % 4) == 0 or math.floor(year % 400) == 0 then
-    return 366
-  else
-    return 365
-  end
-end
+-- function IsLeap(y)
+--   local year = tonumber(y)
+--   if math.floor(year % 400) ~= 0 and math.floor(year % 4) == 0 or math.floor(year % 400) == 0 then
+--     return 366
+--   else
+--     return 365
+--   end
+-- end
 
 -- 日历查询
 local function QueryLunarInfo(date)
-  local str, LunarDate, LunarGz, result, DateTime
-  date = tostring(date)
-  result = {}
-  str = date:gsub("^(%u+)", "")
-  if string.match(str, "^(20)%d%d+$") ~= nil or string.match(str, "^(19)%d%d+$") ~= nil then
-    if string.len(str) == 4 then
-      str = str .. "010101"
-    elseif string.len(str) == 5 then
-      str = str .. "10101"
-    elseif string.len(str) == 6 then
-      str = str .. "0101"
-    elseif string.len(str) == 7 then
-      str = str .. "101"
-    elseif string.len(str) == 8 then
-      str = str .. "01"
-    elseif string.len(str) == 9 then
-      str = str .. "0"
-    else
-      str = string.sub(str, 1, 10)
-    end
-    if tonumber(string.sub(str, 5, 6)) > 12 or tonumber(string.sub(str, 5, 6)) < 1 or tonumber(string.sub(str, 7, 8)) >
-      31 or tonumber(string.sub(str, 7, 8)) < 1 or tonumber(string.sub(str, 9, 10)) > 24 then
-      return result
-    end
-    LunarDate = Date2LunarDate(str)
-    LunarGz = lunarJzl(str)
-    DateTime = LunarDate2Date(str, 0)
-    dateRQ = string.sub(str, 1, 4) .. "年" .. string.sub(str, 5, 6) .. "月" .. string.sub(str, 7, 8) .. "日"
-    if LunarGz ~= nil then
-      result = {{dateRQ, "〔公历〕"}, {LunarDate, "〔公历⇉农历〕"}, {LunarGz, "〔公历⇉干支〕"}}
-      if tonumber(string.sub(str, 7, 8)) < 31 then
-        table.insert(result, {DateTime, "〔农历⇉公历〕"})
-        local leapDate = {LunarDate2Date(str, 1) .. "（闰）", "〔农历⇉公历〕"} 
-        if string.match(leapDate[1], "^(%d+)") ~= nil then
-          table.insert(result, leapDate)
+    local str, LunarDate, LunarGz, result, DateTime
+    date = tostring(date)
+    result = {}
+    str = date:gsub("^(%u+)", "")
+    if string.match(str, "^(20)%d%d+$") ~= nil or string.match(str, "^(19)%d%d+$") ~= nil then
+        if string.len(str) == 4 then
+            str = str .. "010101"
+        elseif string.len(str) == 5 then
+            str = str .. "10101"
+        elseif string.len(str) == 6 then
+            str = str .. "0101"
+        elseif string.len(str) == 7 then
+            str = str .. "101"
+        elseif string.len(str) == 8 then
+            str = str .. "01"
+        elseif string.len(str) == 9 then
+            str = str .. "0"
+        else
+            str = string.sub(str, 1, 10)
         end
-      end
+        if tonumber(string.sub(str, 5, 6)) > 12 or tonumber(string.sub(str, 5, 6)) < 1 or
+            tonumber(string.sub(str, 7, 8)) > 31 or tonumber(string.sub(str, 7, 8)) < 1 or
+            tonumber(string.sub(str, 9, 10)) > 24 then
+            return result
+        end
+        LunarDate = Date2LunarDate(str)
+        LunarGz = lunarJzl(str)
+        DateTime = LunarDate2Date(str, 0)
+        dateRQ = string.sub(str, 1, 4) .. "年" .. string.sub(str, 5, 6) .. "月" .. string.sub(str, 7, 8) .. "日"
+        if LunarGz ~= nil then
+            result =
+                {{dateRQ, "〔公历〕"}, {LunarDate, "〔公历⇉农历〕"}, {LunarGz, "〔公历⇉干支〕"}}
+            if tonumber(string.sub(str, 7, 8)) < 31 then
+                table.insert(result, {DateTime, "〔农历⇉公历〕"})
+                local leapDate = {LunarDate2Date(str, 1) .. "（闰）", "〔农历⇉公历〕"}
+                if string.match(leapDate[1], "^(%d+)") ~= nil then
+                    table.insert(result, leapDate)
+                end
+            end
+        end
     end
-  end
 
-  return result
+    return result
 end
 
---万象修改的新的农历倒计时模块
+-- 万象修改的新的农历倒计时模块
 -- 定义一个月映射表，采用明确的字符串键
 local month_map = {
-  ["正月"] = "01", ["二月"] = "02", ["三月"] = "03", ["四月"] = "04", 
-  ["五月"] = "05", ["六月"] = "06", ["七月"] = "07", ["八月"] = "08", 
-  ["九月"] = "09", ["十月"] = "10", ["冬月"] = "11", ["腊月"] = "12"
+    ["正月"] = "01",
+    ["二月"] = "02",
+    ["三月"] = "03",
+    ["四月"] = "04",
+    ["五月"] = "05",
+    ["六月"] = "06",
+    ["七月"] = "07",
+    ["八月"] = "08",
+    ["九月"] = "09",
+    ["十月"] = "10",
+    ["冬月"] = "11",
+    ["腊月"] = "12"
 }
 
 -- 功能：将农历日期转换为公历日期
 local function nl_shengri(y, m, d)
-  -- 获取当前日期
-  local date1 = os.date("%Y%m%d")
-  nlsrsj = y .. m .. d -- 农历时间
-  -- 提取农历日期的年份
-  local year = string.sub(nlsrsj, 1, 4)  -- 提取“2015”从“20150621”
-  
-  -- 第二步：扩展为该年份的所有可能日期（每月15号）
-  local dates = {}
-  for month = 1, 12 do
-    local date = year .. string.format("%02d", month) .. "15"  -- 例如：20150115, 20150215...20151215取15日保险
-    table.insert(dates, date)
-  end
-  
-  -- 第三步：调用 Date2LunarDate 验证这些日期，检查是否为闰月
-  local leap_month = nil  -- 默认没有闰月
-  for _, date in ipairs(dates) do
-    local lunar_date = Date2LunarDate(os.date(date))  --返回:乙巳年(蛇)正月三十/
-    
-    if string.match(lunar_date, "闰") then
-      local lunar_month = string.match(lunar_date, "(.-)月")  -- 提取“闰”后面的月份
-      leap_month = month_map[lunar_month]  -- 闰月对应的数字（例如“闰二月” -> "02"）
+    -- 获取当前日期
+    local date1 = os.date("%Y%m%d")
+    nlsrsj = y .. m .. d -- 农历时间
+    -- 提取农历日期的年份
+    local year = string.sub(nlsrsj, 1, 4) -- 提取“2015”从“20150621”
+
+    -- 第二步：扩展为该年份的所有可能日期（每月15号）
+    local dates = {}
+    for month = 1, 12 do
+        local date = year .. string.format("%02d", month) .. "15" -- 例如：20150115, 20150215...20151215取15日保险
+        table.insert(dates, date)
     end
-  end
-  
-  -- 第四步：从数字日期（如“20250607”）中提取月份06
-  local lunar_month_str = string.sub(nlsrsj, 5, 6)  -- 提取月份部分（如“02”）
 
-  -- 第五步：根据已识别的闰月进行判断
-  local lunar_month = lunar_month_str  -- 直接使用提取的月份（例如“02”）
+    -- 第三步：调用 Date2LunarDate 验证这些日期，检查是否为闰月
+    local leap_month = nil -- 默认没有闰月
+    for _, date in ipairs(dates) do
+        local lunar_date = Date2LunarDate(os.date(date)) -- 返回:乙巳年(蛇)正月三十/
 
-  -- 第六步：检查输入的农历月份是否为闰月
-  local date2 = nil
-  if leap_month and lunar_month == leap_month then
-    -- 如果是闰月，传递1
-    date2 = LunarDate2Date(nlsrsj, 1)  -- 闰月传递1
-  else
-    -- 非闰月，传递0
-    date2 = LunarDate2Date(nlsrsj, 0)  -- 非闰月传递0
-  end
-  -- 继续处理年份和月份，格式化为公历格式
-  m = string.match(date2, "年(.-)月")
-  if #m == 2 then
-    date2 = string.gsub(date2, "年", "", "1")
-  else
-    date2 = string.gsub(date2, "年", "0", "1")
-  end
-  d = string.match(date2, "月(.-)日")
-  if #d == 2 then
-    date2 = string.gsub(date2, "月", "", "1")
-  else
-    date2 = string.gsub(date2, "月", "0", "1")
-  end
-  date2 = string.gsub(date2, "日", "", "1")
+        if string.match(lunar_date, "闰") then
+            local lunar_month = string.match(lunar_date, "(.-)月") -- 提取“闰”后面的月份
+            leap_month = month_map[lunar_month] -- 闰月对应的数字（例如“闰二月” -> "02"）
+        end
+    end
 
-  -- 计算日期差异
-  result = diffDate(date1, date2)
-  return result
+    -- 第四步：从数字日期（如“20250607”）中提取月份06
+    local lunar_month_str = string.sub(nlsrsj, 5, 6) -- 提取月份部分（如“02”）
+
+    -- 第五步：根据已识别的闰月进行判断
+    local lunar_month = lunar_month_str -- 直接使用提取的月份（例如“02”）
+
+    -- 第六步：检查输入的农历月份是否为闰月
+    local date2 = nil
+    if leap_month and lunar_month == leap_month then
+        -- 如果是闰月，传递1
+        date2 = LunarDate2Date(nlsrsj, 1) -- 闰月传递1
+    else
+        -- 非闰月，传递0
+        date2 = LunarDate2Date(nlsrsj, 0) -- 非闰月传递0
+    end
+    -- 继续处理年份和月份，格式化为公历格式
+    m = string.match(date2, "年(.-)月")
+    if #m == 2 then
+        date2 = string.gsub(date2, "年", "", "1")
+    else
+        date2 = string.gsub(date2, "年", "0", "1")
+    end
+    d = string.match(date2, "月(.-)日")
+    if #d == 2 then
+        date2 = string.gsub(date2, "月", "", "1")
+    else
+        date2 = string.gsub(date2, "月", "0", "1")
+    end
+    date2 = string.gsub(date2, "日", "", "1")
+
+    -- 计算日期差异
+    result = diffDate(date1, date2)
+    return result
 end
 
---二次循环跨年调用
+-- 二次循环跨年调用
 local function nl_shengri2(y, m, d)
-  while nl_shengri(y, m, d) == -1 do
-    y = math.floor(y + 1)
-  end
-  result = nl_shengri(y, m, d)
-  return result
+    while nl_shengri(y, m, d) == -1 do
+        y = math.floor(y + 1)
+    end
+    result = nl_shengri(y, m, d)
+    return result
 end
 
 -- 公历节日表（国际节日+中国传统公历节日）
 local solar_holidays = {
-  -- 国际节日
-  ["元旦"] = "0101",
-  ["情人节"] = "0214",
-  ["妇女节"] = "0308",
-  ["植树节"] = "0312",
-  ["劳动节"] = "0501",
-  ["青年节"] = "0504",
-  ["儿童节"] = "0601",
-  ["建党节"] = "0701",
-  ["建军节"] = "0801",
-  ["教师节"] = "0910",
-  ["国庆节"] = "1001",
-  -- 国际通用节日
-  ["平安夜"] = "1224",
-  ["圣诞节"] = "1225"
+    -- 国际节日
+    ["元旦"] = "0101",
+    ["情人节"] = "0214",
+    ["妇女节"] = "0308",
+    ["植树节"] = "0312",
+    ["劳动节"] = "0501",
+    ["青年节"] = "0504",
+    ["儿童节"] = "0601",
+    ["建党节"] = "0701",
+    ["建军节"] = "0801",
+    ["教师节"] = "0910",
+    ["国庆节"] = "1001",
+    -- 国际通用节日
+    ["平安夜"] = "1224",
+    ["圣诞节"] = "1225"
 }
 
 -- 农历节日表（中国传统节日）
 local lunar_holidays = {
-  ["春节"] = "0101",    -- 正月初一
-  ["元宵节"] = "0115",  -- 正月十五
-  ["龙抬头"] = "0202",  -- 二月初二
-  ["端午节"] = "0505",  -- 五月初五
-  ["七夕节"] = "0707",  -- 七月初七
-  ["中元节"] = "0715",  -- 七月十五
-  ["中秋节"] = "0815",  -- 八月十五
-  ["重阳节"] = "0909",  -- 九月初九
-  ["腊八节"] = "1208",  -- 腊月初八
-  ["小年"] = "1223",    -- 腊月廿三
+    ["春节"] = "0101", -- 正月初一
+    ["元宵节"] = "0115", -- 正月十五
+    ["龙抬头"] = "0202", -- 二月初二
+    ["端午节"] = "0505", -- 五月初五
+    ["七夕节"] = "0707", -- 七月初七
+    ["中元节"] = "0715", -- 七月十五
+    ["中秋节"] = "0815", -- 八月十五
+    ["重阳节"] = "0909", -- 九月初九
+    ["腊八节"] = "1208", -- 腊月初八
+    ["小年"] = "1223" -- 腊月廿三
 }
 
 -- 获取中文星期（例如 "星期一"）都是为了利用现有函数
 local function chinese_weekday2(week_day_num)
-  local weekdays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"}
-  return weekdays[week_day_num + 1]
+    local weekdays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"}
+    return weekdays[week_day_num + 1]
 end
 
 -- 获取指定月的第n个指定星期几
 local function get_nth_weekday(year, month, weekday, n)
-  -- 遍历1到31号日期
-  for day = 1, 31 do
-    -- 获取该日期
-    local current_date = os.time({year=year, month=month, day=day})
-    
-    -- 如果超出当前月的天数，则结束
-    if os.date("%m", current_date) ~= string.format("%02d", month) then
-      break
-    end
-    -- 获取该日期是星期几
-    local week_day_str = chinese_weekday2(tonumber(os.date("%w", current_date)))
+    -- 遍历1到31号日期
+    for day = 1, 31 do
+        -- 获取该日期
+        local current_date = os.time({
+            year = year,
+            month = month,
+            day = day
+        })
 
-    -- 判断是否是目标星期几
-    if week_day_str == weekday then
-      -- 减去1，因为要获取的是第n个目标星期几
-      n = n - 1
-      -- 如果找到了第n个目标星期几，返回该日期
-      if n == 0 then
-        return os.date("%Y%m%d", current_date)  -- 返回日期的格式为 "YYYYMMDD"
-      end
+        -- 如果超出当前月的天数，则结束
+        if os.date("%m", current_date) ~= string.format("%02d", month) then
+            break
+        end
+        -- 获取该日期是星期几
+        local week_day_str = chinese_weekday2(tonumber(os.date("%w", current_date)))
+
+        -- 判断是否是目标星期几
+        if week_day_str == weekday then
+            -- 减去1，因为要获取的是第n个目标星期几
+            n = n - 1
+            -- 如果找到了第n个目标星期几，返回该日期
+            if n == 0 then
+                return os.date("%Y%m%d", current_date) -- 返回日期的格式为 "YYYYMMDD"
+            end
+        end
     end
-  end
-  return nil  -- 如果没有找到，返回nil
+    return nil -- 如果没有找到，返回nil
 end
 
 -- 计算目标日期和当前日期的天数差
 local function days_until(target_date)
-  local current_date = os.date("%Y%m%d")  -- 获取当前日期 (yyyyMMdd)
-  -- 去除返回值中的汉字，只保留数字部分
-  target_date = target_date:gsub("%D", "")  -- 去除所有非数字字符
-  local diff = diffDate(current_date, target_date)  -- 计算当前日期与目标日期的天数差
-  return diff  -- 返回天数差
+    local current_date = os.date("%Y%m%d") -- 获取当前日期 (yyyyMMdd)
+    -- 去除返回值中的汉字，只保留数字部分
+    target_date = target_date:gsub("%D", "") -- 去除所有非数字字符
+    local diff = diffDate(current_date, target_date) -- 计算当前日期与目标日期的天数差
+    return diff -- 返回天数差
 end
 
--- 获取即将到来的节日（公历和农历）
+-- +++ 获取即将到来的节日（公历和农历）+++
 local function get_upcoming_holidays()
-  local upcoming_holidays = {}
-  local current_year = os.date("%Y")
+    local upcoming_holidays = {}
+    local current_year = os.date("%Y")
 
-  -- 处理公历节日
-  for holiday, date in pairs(solar_holidays) do
-    local target_date = current_year .. date  -- 当前年份的公历节日
-    local days_left = days_until(target_date)
-    if days_left >= 0 then
-      -- 直接获取完整日期，格式为 "yyyy年mm月dd日"
-      local m, d = target_date:sub(5, 6), target_date:sub(7, 8)
-      local formatted_date = string.format("%s年%s月%s日", current_year, m, d)
-      table.insert(upcoming_holidays, {holiday, formatted_date, days_left})
+    -- 处理公历节日
+    for holiday, date in pairs(solar_holidays) do
+        local target_date = current_year .. date -- 当前年份的公历节日
+        local days_left = days_until(target_date)
+        if days_left >= 0 then
+            -- 直接获取完整日期，格式为 "yyyy年mm月dd日"
+            local m, d = target_date:sub(5, 6), target_date:sub(7, 8)
+            local formatted_date = string.format("%s年%s月%s日", current_year, m, d)
+            table.insert(upcoming_holidays, {holiday, formatted_date, days_left})
+        end
     end
-  end
 
-  -- 处理农历节日
-  -- 处理农历节日
-  for holiday, lunar_date in pairs(lunar_holidays) do
-    local days_ymd = os.date("%Y%m%d")  -- 获取当前年月日
-    -- 使用农历倒计时
-    local countdown = nl_shengri2(os.date("%Y"), lunar_date:sub(1, 2), lunar_date:sub(3, 4))
-  
-    -- 如果倒计时为负，说明节日已过，需要加一年
-    if countdown < 0 then
-        countdown = nl_shengri2(os.date("%Y") + 1, lunar_date:sub(1, 2), lunar_date:sub(3, 4))
+    -- 处理农历节日
+    -- 处理农历节日
+    for holiday, lunar_date in pairs(lunar_holidays) do
+        local days_ymd = os.date("%Y%m%d") -- 获取当前年月日
+        -- 使用农历倒计时
+        local countdown = nl_shengri2(os.date("%Y"), lunar_date:sub(1, 2), lunar_date:sub(3, 4))
+
+        -- 如果倒计时为负，说明节日已过，需要加一年
+        if countdown < 0 then
+            countdown = nl_shengri2(os.date("%Y") + 1, lunar_date:sub(1, 2), lunar_date:sub(3, 4))
+        end
+
+        -- 使用倒计时和GettotalDay函数计算农历节日的公历日期
+        local solar_date = GettotalDay(days_ymd, countdown)
+
+        -- 直接使用完整的公历日期格式（假设 GettotalDay 返回 "yyyy年mm月dd日"）
+        table.insert(upcoming_holidays, {holiday, solar_date, countdown})
+
+        -- 如果是春节，计算除夕
+        if holiday == "春节" then
+            -- 计算春节的公历日期
+            local year, month, day = solar_date:match("^(%d+)年(%d+)月(%d+)日")
+            -- 将日期减去一天来获得除夕的日期
+            local previous_day = os.time {
+                year = tonumber(year),
+                month = tonumber(month),
+                day = tonumber(day)
+            } - 24 * 60 * 60
+            -- 格式化除夕的日期为 "yyyy年mm月dd日"
+            local eve_date = os.date("%Y年%m月%d日", previous_day)
+            -- 将除夕的日期插入到节日列表中
+            table.insert(upcoming_holidays, {"除夕", eve_date, countdown - 1})
+        end
     end
-  
-    -- 使用倒计时和GettotalDay函数计算农历节日的公历日期
-    local solar_date = GettotalDay(days_ymd, countdown)
-    
-    -- 直接使用完整的公历日期格式（假设 GettotalDay 返回 "yyyy年mm月dd日"）
-    table.insert(upcoming_holidays, {holiday, solar_date, countdown})
-  
-    -- 如果是春节，计算除夕
-    if holiday == "春节" then
-        -- 计算春节的公历日期
-        local year, month, day = solar_date:match("^(%d+)年(%d+)月(%d+)日")
-        -- 将日期减去一天来获得除夕的日期
-        local previous_day = os.time{year=tonumber(year), month=tonumber(month), day=tonumber(day)} - 24 * 60 * 60
-        -- 格式化除夕的日期为 "yyyy年mm月dd日"
-        local eve_date = os.date("%Y年%m月%d日", previous_day)
-        -- 将除夕的日期插入到节日列表中
-        table.insert(upcoming_holidays, {"除夕", eve_date, countdown - 1})
+
+    -- 感恩节：每年11月的第四个星期四
+    local thanksgiving_date = get_nth_weekday(current_year, 11, "星期四", 4) -- 获取11月第四个星期四
+    local thanksgiving_days_left = days_until(thanksgiving_date)
+    if thanksgiving_days_left and thanksgiving_days_left >= 0 then
+        -- 直接使用完整日期
+        local formatted_date = thanksgiving_date:sub(1, 4) .. "年" .. thanksgiving_date:sub(5, 6) .. "月" ..
+                                   thanksgiving_date:sub(7, 8) .. "日"
+        table.insert(upcoming_holidays, {"感恩节", formatted_date, thanksgiving_days_left})
     end
-  end
 
+    -- 母亲节：每年5月的第二个星期日
+    local mothers_day_date = get_nth_weekday(current_year, 5, "星期日", 2) -- 获取5月第二个星期日
+    local mothers_day_days_left = days_until(mothers_day_date)
+    if mothers_day_days_left and mothers_day_days_left >= 0 then
+        -- 直接使用完整日期
+        local formatted_date = mothers_day_date:sub(1, 4) .. "年" .. mothers_day_date:sub(5, 6) .. "月" ..
+                                   mothers_day_date:sub(7, 8) .. "日"
+        table.insert(upcoming_holidays, {"母亲节", formatted_date, mothers_day_days_left})
+    end
 
-  -- 感恩节：每年11月的第四个星期四
-  local thanksgiving_date = get_nth_weekday(current_year, 11, "星期四", 4)  -- 获取11月第四个星期四
-  local thanksgiving_days_left = days_until(thanksgiving_date)
-  if thanksgiving_days_left and thanksgiving_days_left >= 0 then
-    -- 直接使用完整日期
-    local formatted_date = thanksgiving_date:sub(1, 4) .. "年" .. thanksgiving_date:sub(5, 6) .. "月" .. thanksgiving_date:sub(7, 8) .. "日"
-    table.insert(upcoming_holidays, {"感恩节", formatted_date, thanksgiving_days_left})
-  end
-  
-  -- 母亲节：每年5月的第二个星期日
-  local mothers_day_date = get_nth_weekday(current_year, 5, "星期日", 2)  -- 获取5月第二个星期日
-  local mothers_day_days_left = days_until(mothers_day_date)
-  if mothers_day_days_left and mothers_day_days_left >= 0 then
-    -- 直接使用完整日期
-    local formatted_date = mothers_day_date:sub(1, 4) .. "年" .. mothers_day_date:sub(5, 6) .. "月" .. mothers_day_date:sub(7, 8) .. "日"
-    table.insert(upcoming_holidays, {"母亲节", formatted_date, mothers_day_days_left})
-  end
-  
-  -- 父亲节：每年6月的第三个星期日
-  local fathers_day_date = get_nth_weekday(current_year, 6, "星期日", 3)  -- 获取6月第三个星期日
-  local fathers_day_days_left = days_until(fathers_day_date)
-  if fathers_day_days_left and fathers_day_days_left >= 0 then
-    -- 直接使用完整日期
-    local formatted_date = fathers_day_date:sub(1, 4) .. "年" .. fathers_day_date:sub(5, 6) .. "月" .. fathers_day_date:sub(7, 8) .. "日"
-    table.insert(upcoming_holidays, {"父亲节", formatted_date, fathers_day_days_left})
-  end
+    -- 父亲节：每年6月的第三个星期日
+    local fathers_day_date = get_nth_weekday(current_year, 6, "星期日", 3) -- 获取6月第三个星期日
+    local fathers_day_days_left = days_until(fathers_day_date)
+    if fathers_day_days_left and fathers_day_days_left >= 0 then
+        -- 直接使用完整日期
+        local formatted_date = fathers_day_date:sub(1, 4) .. "年" .. fathers_day_date:sub(5, 6) .. "月" ..
+                                   fathers_day_date:sub(7, 8) .. "日"
+        table.insert(upcoming_holidays, {"父亲节", formatted_date, fathers_day_days_left})
+    end
 
-  -- 获取所有节气
-  local jqs = GetNowTimeJq(os.date("%Y%m%d", os.time()))  -- 获取节气
-  -- 遍历所有节气
-  for _, jq_info in ipairs(jqs) do
-      -- 使用正则匹配节气名称和日期（假设日期格式为 yyyy-mm-dd）
-      local jq_name, jq_date = jq_info:match("^(%S+)%s+(%d+%-%d+%-%d+)$")  -- 匹配节气名称和日期
-      -- 如果是清明节
-      if jq_name == "清明" then
-          -- 直接使用完整日期
-          local formatted_date = jq_date:gsub("%-", "")  -- 去掉日期中的"-"
-          local days_left = days_until(formatted_date)  -- 获取距离清明节的天数
-          -- 格式化为 "yyyy年mm月dd日"
-          formatted_date = jq_date:sub(1, 4) .. "年" .. jq_date:sub(6, 7) .. "月" .. jq_date:sub(9, 10) .. "日"
-          table.insert(upcoming_holidays, {"清明节", formatted_date, days_left})
-      end
-  end
+    -- 获取所有节气
+    local jqs = GetNowTimeJq(os.date("%Y%m%d", os.time())) -- 获取节气
+    -- 遍历所有节气
+    for _, jq_info in ipairs(jqs) do
+        -- 使用正则匹配节气名称和日期（假设日期格式为 yyyy-mm-dd）
+        local jq_name, jq_date = jq_info:match("^(%S+)%s+(%d+%-%d+%-%d+)$") -- 匹配节气名称和日期
+        -- 如果是清明节
+        if jq_name == "清明" then
+            -- 直接使用完整日期
+            local formatted_date = jq_date:gsub("%-", "") -- 去掉日期中的"-"
+            local days_left = days_until(formatted_date) -- 获取距离清明节的天数
+            -- 格式化为 "yyyy年mm月dd日"
+            formatted_date = jq_date:sub(1, 4) .. "年" .. jq_date:sub(6, 7) .. "月" .. jq_date:sub(9, 10) .. "日"
+            table.insert(upcoming_holidays, {"清明节", formatted_date, days_left})
+        end
+    end
 
-  -- 按照距离最近的天数排序
-  table.sort(upcoming_holidays, function(a, b)
-    return a[3] < b[3]
-  end)
+    -- 按照距离最近的天数排序
+    table.sort(upcoming_holidays, function(a, b)
+        return a[3] < b[3]
+    end)
 
-  return upcoming_holidays
+    return upcoming_holidays
 end
 
---下面这个用于统一生成候选的逻辑
+-- 下面这个用于统一生成候选的逻辑
 local function generate_candidates(input, seg, candidates)
-  for _, item in ipairs(candidates) do
-      local candidate = Candidate(input, seg.start, seg._end, item[1], item[2])
-      candidate.quality = 1000000  -- 设定高优先级
-      yield(candidate)
-  end
+    for _, item in ipairs(candidates) do
+        local candidate = Candidate(input, seg.start, seg._end, item[1], item[2])
+        candidate.quality = 1000000 -- 设定高优先级
+        yield(candidate)
+    end
 end
 
 -- +++ 主函数 +++
 local function schedule(input, seg, env)
     local engine = env.engine
     local context = engine.context
-    -- **N日期**
-    if string.sub(input, 1, 1) == "N" then
-        local n = string.sub(input, 2)
-        if tonumber(n) ~= nil and (string.match(n, "^(20)%d%d+$") ~= nil or string.match(n, "^(19)%d%d+$") ~= nil) then
-            local lunar = QueryLunarInfo(n)
-            if #lunar > 0 then
-                for i = 1, #lunar do
-                    local candidate = Candidate(input, seg.start, seg._end, lunar[i][1], lunar[i][2])
-                    candidate.quality = 1000000
-                    yield(candidate)
-                end
+
+    if (input == "~jc" or input == "/day" or input == "oday") then
+
+        -- ---〔 ❶ 问候语 〕---
+        local function get_greeting()
+            local current_hour = tonumber(os.date("%H"))
+            local greeting = ""
+
+            if current_hour >= 0 and current_hour < 6 then
+                greeting = "晚安!"
+            elseif current_hour >= 6 and current_hour < 12 then
+                greeting = "早上好!"
+            elseif current_hour >= 12 and current_hour < 14 then
+                greeting = "午安!"
+            elseif current_hour >= 14 and current_hour < 18 then
+                greeting = "下午好!"
+            else
+                greeting = "晚上好!"
             end
+
+            return greeting
         end
-    elseif (input == "~jc" or input == "/day" or input == "oday") then
-        -- 获取当前时间
+        local greeting = get_greeting()
+
+
+        -- ---〔 ❷ 获取当前时间 〕---
+        -- 今天
         local now = os.time()
         local year = tonumber(os.date("%Y", now))
         local month = tonumber(os.date("%m", now))
         local day = tonumber(os.date("%d", now))
-        local day_of_year = tonumber(os.date("%j", now))  -- 今年的第几天
-        local week_of_year = tonumber(os.date("%W", now)) + 1  -- 今年的第几周
-        local week_of_month = math.ceil(tonumber(os.date("%d", now)) / 7)  -- 当月的第几周
+        local week_day_str = chinese_weekday2(os.date("%w"))                -- 获取中文星期（例如 "星期三"）
+        -- 农历
+        local lunar_info_str = Date2LunarDate(os.date("%Y%m%d"))            -- 获取农历的天干地支和生肖等
+        -- 时间 ... 
 
 
+        -- ---〔 ❸ 时间进度 〕---
+        local day_of_year = tonumber(os.date("%j", now))                    -- 今年的第几天
+        local days_in_year = IsLeap(year)                                   -- 若为闰年 - 366
+        local year_progress = (day_of_year / days_in_year) * 100            -- 今年进度
 
-    
-        -- 计算一年的总天数，判断是否为闰年
-        local days_in_year = IsLeap(year) == "闰年" and 366 or 365  -- 判断是否为闰年
-        local year_progress = (day_of_year / days_in_year) * 100  -- 今年进度
-        -- 获取星期数据
-        local week_day_str = chinese_weekday2(os.date("%w"))  -- 获取中文星期（例如 "星期三"）
-        -- 获取农历数据
-        local lunar_info_str = Date2LunarDate(os.date("%Y%m%d"))  -- 获取农历的天干地支和生肖等
-    
-        -- 获取最近的三个节气
+        -- 进度条格式化
+        local function generate_progress_bar(percentage)
+            local filled_blocks = math.floor(percentage / 10)
+            local empty_blocks = 10 - filled_blocks
+            return string.rep("▒", filled_blocks) .. string.rep("░", empty_blocks) ..
+                       string.format(" %.1f%%", percentage)
+        end
+        local progress_bar = generate_progress_bar(year_progress)
+
+
+        -- ---〔 ❹ 周天倒计时 〕---
+        -- 倒计周
+        local week_of_year = tonumber(os.date("%W", now)) + 1               -- 今年的第几周
+        local week_of_month = math.ceil(tonumber(os.date("%d", now)) / 7)   -- 当月的第几周
+        -- 计算距离下一年1月1日的天数
+        local next_year = year + 1
+        local new_year_time = os.time({
+            year = next_year,
+            month = 1,
+            day = 1
+        })
+        local diff_days_next_year = math.floor((new_year_time - now) / (24 * 3600))
+
+
+        -- ---〔 ❺ 节日倒计时 〕---
+        -- --- 遍历前三个节日并返回节日名称、日期、倒计时天数 ---
+        local upcoming_holidays = get_upcoming_holidays() or {}
+        local holiday_data = {}
+
+        local filtered_holidays = {}
+        -- 当今天就是节日时
+        local zero_holiday = '' 
+        local zero_found = false
+
+        for i = 1, math.min(3, #upcoming_holidays) do
+            local holiday = upcoming_holidays[i]
+
+            if holiday[3] == 0 then
+                -- 记录当天的节日名称
+                zero_holiday = holiday[1] 
+                zero_found = true
+            else
+                table.insert(filtered_holidays, holiday)
+            end
+        end
+
+        if zero_found then
+            -- 当今天是节日时，顺排存储后两个节日
+            for i = math.max(1, #filtered_holidays - 1), #filtered_holidays do
+                local holiday = filtered_holidays[i]
+                local year, month, day = holiday[2]:match("^(%d+)年(%d+)月(%d+)日")
+
+                if year and month and day then
+                    local formatted_date = string.format("%04d-%02d-%02d", tonumber(year), tonumber(month),
+                        tonumber(day))
+                    table.insert(holiday_data, {holiday[1], formatted_date, holiday[3]})
+                end
+            end
+        else
+            -- 今天不是节日时，存储前两个节日
+            for i = 1, math.min(2, #filtered_holidays) do
+                local holiday = filtered_holidays[i]
+                local year, month, day = holiday[2]:match("^(%d+)年(%d+)月(%d+)日")
+
+                if year and month and day then
+                    local formatted_date = string.format("%04d-%02d-%02d", tonumber(year), tonumber(month),
+                        tonumber(day))
+                    table.insert(holiday_data, {holiday[1], formatted_date, holiday[3]})
+                end
+            end
+        end
+
+
+        -- ---〔 ❻ 节气倒计时 〕---
+        -- --- 获取最近的三个节气 ---
         local jqs = GetNowTimeJq(os.date("%Y%m%d", now))
         local upcoming_jqs = {}
-        local zero_jieqi = nil  -- 记录今天的节气
+        local zero_jieqi = nil                                              -- 记录今天的节气
 
         -- 计算距离某个节气的天数
         local function days_until_jieqi(jieqi)
-            local jieqi_date = jieqi:match("(%d+-%d+-%d+)$")  -- 提取节气日期部分
+            local jieqi_date = jieqi:match("(%d+-%d+-%d+)$")                -- 提取节气日期部分
             local target_time = os.time({
-                year = tonumber(jieqi_date:sub(1, 4)), 
-                month = tonumber(jieqi_date:sub(6, 7)), 
+                year = tonumber(jieqi_date:sub(1, 4)),
+                month = tonumber(jieqi_date:sub(6, 7)),
                 day = tonumber(jieqi_date:sub(9, 10))
             })
 
-            local diff_days = math.floor((target_time - now) / (24 * 3600)) + 1
-
-            -- 确保今天是节气时 diff_days == 0
+            -- 当今天就是节气时
             if os.date("%Y%m%d", target_time) == os.date("%Y%m%d", now) then
-                return 0  -- 今天正好是节气
+                return 0
             end
 
-            return diff_days
+            return math.floor((target_time - now) / (24 * 3600)) + 1
         end
 
         -- 遍历最近的 3 个节气
@@ -1808,19 +1907,18 @@ local function schedule(input, seg, env)
             local diff_days = days_until_jieqi(jieqi)
 
             if diff_days == 0 then
-                local jieqi_name = jieqi:match("^(%S+)")
-                zero_jieqi = jieqi_name  -- 记录今天的节气
+                -- 记录今天的节气
+                zero_jieqi = jieqi:match("^(%S+)")
             elseif diff_days > 0 then
                 table.insert(upcoming_jqs, jieqi)
             end
         end
 
-        -- 处理 upcoming_jqs 选取逻辑
         if zero_jieqi then
-            -- **今天是节气，取后两个节气**
+            -- 今天是节气时，取后两个节气
             upcoming_jqs = {upcoming_jqs[1], upcoming_jqs[2]}
         else
-            -- **今天不是节气，取前两个节气**
+            -- 今天不是节气，取前两个节气
             upcoming_jqs = {jqs[1], jqs[2]}
         end
 
@@ -1829,121 +1927,47 @@ local function schedule(input, seg, env)
         for _, jieqi in ipairs(upcoming_jqs) do
             table.insert(jieqi_days, days_until_jieqi(jieqi))
         end
-
-
-    
-        -- 计算距离下一年1月1日的天数
-        local next_year = year + 1
-        local new_year_time = os.time({year = next_year, month = 1, day = 1})
-        local diff_days_next_year = math.floor((new_year_time - now) / (24 * 3600))
-
-
-        -- 遍历前三个节日并返回节日名称、日期、倒计时天数
-        local upcoming_holidays = get_upcoming_holidays() or {}
-        local holiday_data = {}
-        local zero_holiday = ''  -- 独立存储 holiday[3] == 0 的节日名称
-
-        local filtered_holidays = {}
-        local zero_found = false
-
-        for i = 1, math.min(3, #upcoming_holidays) do
-            local holiday = upcoming_holidays[i]
-            
-            if holiday[3] == 0 then
-                zero_holiday = holiday[1]  -- 记录这个节日名称
-                zero_found = true
-            else
-                table.insert(filtered_holidays, holiday)
-            end
-        end
-
-        if zero_found then
-            -- 只存储后两个节日
-            for i = math.max(1, #filtered_holidays - 1), #filtered_holidays do
-                local holiday = filtered_holidays[i]
-                local year, month, day = holiday[2]:match("^(%d+)年(%d+)月(%d+)日")
-                
-                if year and month and day then
-                    local formatted_date = string.format("%04d-%02d-%02d", tonumber(year), tonumber(month), tonumber(day))
-                    table.insert(holiday_data, {holiday[1], formatted_date, holiday[3]})
-                end
-            end
-        else
-            -- 存储前两个节日
-            for i = 1, math.min(2, #filtered_holidays) do
-                local holiday = filtered_holidays[i]
-                local year, month, day = holiday[2]:match("^(%d+)年(%d+)月(%d+)日")
-                
-                if year and month and day then
-                    local formatted_date = string.format("%04d-%02d-%02d", tonumber(year), tonumber(month), tonumber(day))
-                    table.insert(holiday_data, {holiday[1], formatted_date, holiday[3]})
-                end
-            end
-        end
         
-        -- 生成问候语函数
-        local function get_greeting()
-          local current_hour = tonumber(os.date("%H"))
-          local greeting = ""
-          
-          if current_hour >= 0 and current_hour < 6 then
-              greeting = "晚安!"
-          elseif current_hour >= 6 and current_hour < 12 then
-              greeting = "早上好!"
-          elseif current_hour >= 12 and current_hour < 14 then
-              greeting = "午安!"
-          elseif current_hour >= 14 and current_hour < 18 then
-              greeting = "下午好!"
-          else
-              greeting = "晚上好!"
-          end
-        
-          return greeting
-        end
-        
-        local greeting = get_greeting()  -- 获取问候语
-        -- 进度条格式化
-        local function generate_progress_bar(percentage)
-            local filled_blocks = math.floor(percentage / 10)
-            local empty_blocks = 10 - filled_blocks
-            return string.rep("▒", filled_blocks) .. string.rep("░", empty_blocks) .. string.format(" %.1f%%", percentage)
-        end
-        local progress_bar = generate_progress_bar(year_progress)
-        -- 生成自定义长度的符号线
+
+        -- --- 生成自定义长度的符号线 ---
         local function generate_line(length)
-          -- return string.rep("—", length)
-          return string.rep("--", length)
+            -- return string.rep("—", length)
+            return string.rep("--", length)
         end
+        -- 控制符号线的宽度为 15
+        local line = generate_line(29) 
 
-        -- 你可以根据需要调整长度
-        local line = generate_line(29)  -- 控制符号线的宽度为 15
-        -- 生成最终信息字符串
+
+        -- ---〔 ⓿ 信息串 〕--- 
+        -- --- 生成最终信息字符串 ---
         local summary = 
-            string.format("\n嗨，我是您的日程小助手，%s  \n", greeting) ..
+            string.format("\n嗨，我是您的日程小助手，%s  \n", greeting) .. 
             line .. "  \n" ..
             string.format("今天：%d年%02d月%02d日 %s  \n", year, month, day, week_day_str) ..
             string.format("农历：%s %s %s  \n", lunar_info_str, zero_jieqi, zero_holiday) ..
-            string.format("时间：%s  \n", os.date('%H点%M分%S秒', now)) ..
+            string.format("时间：%s  \n", os.date('%H点%M分%S秒', now)) .. 
             line .. "  \n" ..
             string.format("%d  年进度：%s  \n", year, progress_bar) ..
-            string.format("距离 %d 年：还有 %d 天  \n", next_year, diff_days_next_year) ..
+            string.format("距离 %d 年：还有 %d 天  \n", next_year, diff_days_next_year) .. 
             line .. "  \n" ..
             string.format("今天是 %d 年的第 %d 周，%d 月的第 %d 周  \n", year, week_of_year, month, week_of_month) ..
-            string.format("今年已度过 %d 天，今天是第 %d 天  \n", day_of_year - 1, day_of_year) ..
+            string.format("今年已度过 %d 天，今天是第 %d 天  \n", day_of_year - 1, day_of_year) .. 
             line .. "  \n" ..
-            string.format("距离: %s %s < [ %d ]天  \n", holiday_data[1][1], holiday_data[1][2], holiday_data[1][3]) .. 
-            string.format("距离: %s %s < [ %d ]天  \n", holiday_data[2][1], holiday_data[2][2], holiday_data[2][3]) ..
+            string.format("距离: %s %s < [ %d ]天  \n", holiday_data[1][1], holiday_data[1][2], holiday_data[1][3]) ..
+            string.format("距离: %s %s < [ %d ]天  \n", holiday_data[2][1], holiday_data[2][2], holiday_data[2][3]) .. 
             line .. "  \n" ..
             string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[1], jieqi_days[1]) ..
-            string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[2], jieqi_days[2]) ..
+            string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[2], jieqi_days[2]) .. 
             ''
+
         -- 使用 generate_candidates 函数生成候选项
-        local candidates = {
+        local candidates = { 
             -- {summary, "日期信息整合"}
             {summary, ""}
         }
-        -- 调用 generate_candidates 来提交候选项
+
         generate_candidates("day_summary", seg, candidates)
     end
 end
+
 return schedule

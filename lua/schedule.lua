@@ -1,11 +1,12 @@
 -- Modified by ksqsf for Project Moran
-
+-- AMZ 万象新增节日候选,格式化问候语,重写农历倒计时 
+-- Simplified by Jack Liu <https://aituyaa.com>
 ------------------------------------
 ------wirting by 98wubi Group-------
 ------http://98wb.ys168.com/--------
------万象新增节日候选,格式化问候语,重写农历倒计时---------
--- *******农历节气计算部分
--- ========角度变换===============
+
+-- +++ 农历节气计算部分 +++
+-- 角度变换
 local rad = 180 * 3600 / math.pi -- 每弧度的角秒数
 local RAD = 180 / math.pi -- 每弧度的角度数
 function int2(v) -- 取整数部分
@@ -26,58 +27,6 @@ function rad2mrad(v) -- 对超过0-2PI的角度转为0-2PI
   end
 end
 
-function rad2str(d, tim) -- 将弧度转为字串
-  ---tim=0输出格式示例: -23°59' 48.23"
-  ---tim=1输出格式示例:  18h 29m 44.52s
-  local s = "+"
-  local w1 = "°"
-  w2 = "’"
-  w3 = "”"
-  if d < 0 then
-    d = -d
-    s = '-'
-  end
-  if tim ~= 0 then
-    d = d * 12 / math.pi
-    w1 = "h "
-    w2 = "m "
-    w3 = "s "
-  else
-    d = d * 180 / math.pi
-  end
-  local a = math.floor(d)
-  d = (d - a) * 60
-  local b = math.floor(d)
-  d = (d - b) * 60
-  local c = math.floor(d)
-  d = (d - c) * 100
-  d = math.floor(d + 0.5)
-  if d >= 100 then
-    d = d - 100
-    c = c + 1
-  end
-  if c >= 60 then
-    c = c - 60
-    b = b + 1
-  end
-  if b >= 60 then
-    b = b - 60
-    a = a + 1
-  end
-  a = "   " + a
-  b = "0" + b
-  c = "0" + c
-  d = "0" + d
-  local alen = string.len(a)
-  local blen = string.len(b)
-  local clen = string.len(c)
-  local dlen = string.len(d)
-  s = s .. string.sub(a, alen - 3, alen) + w1
-  s = s .. string.sub(b, blen - 2, blen) + w2
-  s = s .. string.sub(c, clen - 2, clen) + "."
-  s = s .. string.sub(d, dlen - 2, dlen) + w3
-  return s
-end
 -- ================日历计算===============
 local J2000 = 2451545 -- 2000年前儒略日数(2000-1-1 12:00:00格林威治平时)
 
@@ -269,27 +218,7 @@ local JDate = { -- 日期元件
   end
 }
 -- =========黄赤交角及黄赤坐标变换===========
-local hcjjB = {84381.448, -46.8150, -0.00059, 0.001813} -- 黄赤交角系数表
 local preceB = {0, 50287.92262, 111.24406, 0.07699, -0.23479, -0.00178, 0.00018, 0.00001} -- Date黄道上的岁差p
-
-function hcjj1(t) -- 返回黄赤交角(常规精度),短期精度很高
-  local t1 = t / 36525
-  t2 = t1 * t1
-  t3 = t2 * t1
-  return (hcjjB[1] + hcjjB[2] * t1 + hcjjB[3] * t2 + hcjjB[4] * t3) / rad
-end
-
-function HCconv(JW, E) -- 黄赤转换(黄赤坐标旋转)
-  -- 黄道赤道坐标变换,赤到黄E取负
-  local HJ = rad2mrad(JW[1])
-  HW = JW[2]
-  local sinE = math.sin(E)
-  cosE = math.cos(E)
-  local sinW = cosE * math.sin(HW) + sinE * math.cos(HW) * math.sin(HJ)
-  local J = math.atan2(math.sin(HJ) * cosE - math.tan(HW) * sinE, math.cos(HJ))
-  JW[1] = rad2mrad(J)
-  JW[2] = math.asin(sinW)
-end
 
 function addPrece(jd, zb) -- 补岁差
   local i
@@ -356,20 +285,6 @@ function nutation(t) -- 计算黄经章动及交角章动
   return d
 end
 
-function nutationRaDec(t, zb) -- 本函数计算赤经章动及赤纬章动
-  local Ra = zb[1]
-  local Dec = zb[2]
-  local E = hcjj1(t)
-  local sinE = math.sin(E)
-  local cosE = math.cos(E) -- 计算黄赤交角
-  local d = nutation(t) -- 计算黄经章动及交角章动
-  local cosRa = math.cos(Ra)
-  local sinRa = math.sin(Ra)
-  local tanDec = math.tan(Dec)
-  zb[1] = zb[1] + (cosE + sinE * sinRa * tanDec) * d.Lon - cosRa * tanDec * d.Obl -- 赤经章动
-  zb[2] = zb[2] + sinE * cosRa * d.Lon + sinRa * d.Obl -- 赤纬章动
-  zb[1] = rad2mrad(zb[1])
-end
 
 -- =================以下是月球及地球运动参数表===================
 --[[***************************************
@@ -658,16 +573,6 @@ function earCal(jd) -- 返回地球位置,日心Date黄道分点坐标
   return llr
 end
 
-function sunCal2(jd) -- 传回jd时刻太阳的地心视黄经及黄纬
-  local sun = earCal(jd)
-  sun[1] = sun[1] + math.pi
-  sun[2] = -sun[2] -- 计算太阳真位置
-  local d = nutation(jd)
-  sun[1] = rad2mrad(sun[1] + d.Lon) -- 补章动
-  addGxc(jd, sun) -- 补周年黄经光行差
-  return sun -- 返回太阳视位置
-end
-
 -- ==================月位置计算===================
 local MnnT = 0 -- 调用Mnn前先设置MnnT时间变量
 function Mnn(F) -- 计算M10,M11,M20等,计算前先设置MnnT时间
@@ -697,21 +602,6 @@ function moonCal(jd) -- 返回月球位置,返回地心Date黄道坐标
   llr[1] = rad2mrad(llr[1]) -- 地心Date黄道原点坐标(不含岁差)
   addPrece(jd, llr) -- 补岁差
   return llr
-end
-
-function moonCal2(jd) -- 传回月球的地心视黄经及视黄纬
-  local moon = moonCal(jd)
-  local d = nutation(jd)
-  moon[1] = rad2mrad(moon[1] + d.Lon) -- 补章动
-  return moon
-end
-
-function moonCal3(jd) -- 传回月球的地心视赤经及视赤纬
-  local moon = moonCal(jd)
-  HCconv(moon, hcjj1(jd))
-  nutationRaDec(jd, moon) -- 补赤经及赤纬章动
-  -- 如果黄赤转换前补了黄经章动及交章动,就不能再补赤经赤纬章动
-  return moon
 end
 
 -- ==================地心坐标中的日月位置计算===================
@@ -783,26 +673,6 @@ local jqB = { -- 节气表
 "春分", "清明", "谷雨", "立夏", "小满", "芒种", "夏至", "小暑", "大暑", "立秋", "处暑", "白露",
 "秋分", "寒露", "霜降", "立冬", "小雪", "大雪", "冬至", "小寒", "大寒", "立春", "雨水", "惊蛰"}
 
-function JQtest(y) -- 节气使计算范例,y是年分,这是个测试函数
-  local i, q, s1, s2
-  y = tostring(y)
-  local jd = 365.2422 * (tonumber(y.sub(y, 1, 4)) - 2000)
-  for i = 0, 23 do
-    q = jiaoCal(jd + i * 15.2, i * 15, 0) + J2000 + 8 / 24 -- 计算第i个节气(i=0是春分),结果转为北京时
-    -- print('q=' .. q)
-    JDate:setFromJD(q, 1)
-    s1 = JDate:toStr() -- 将儒略日转成世界时
-    JDate:setFromJD(q, 0)
-    s2 = JDate:toStr() -- 将儒略日转成日期格式(输出日期形式的力学时)
-    jqData = s1.sub(s1.gsub(s1, "^( )", ""), 1, 10)
-    jqData = jqData.gsub(jqData, "-", "")
-    -- print(jqB[i+1] .. " : " .. jqData .. " " .. jqData.len(jqData) ) --显示
-    if (jqData == y) then
-      return "-" .. jqB[i + 1]
-    end
-  end
-  return ""
-end
 
 function GetNextJQ(y) -- 节气使计算范例,y是年分,这是个测试函数
   local i, obj, q, s1, s2
@@ -854,19 +724,6 @@ function getYearJQ(y)
   return jq
 end
 
--- =================定朔弦望计算========================
-function dingSuo(y, arc) -- 这是个测试函数
-  local i, jd = 365.2422 * (y - 2000), q, s1, s2
-  print("月份:世界时  原子时<br>")
-  for i = 0, 11 do
-    q = jiaoCal(jd + 29.5 * i, arc, 1) + J2000 + 8 / 24 -- 计算第i个节气(i=0是春风),结果转为北京时
-    JDate.setFromJD(q, 1)
-    s1 = JDate:toStr() -- 将儒略日转成世界时
-    JDate.setFromJD(q, 0)
-    s2 = JDate:toStr() -- 将儒略日转成日期格式(输出日期形式的力学时)
-    print((i + 1) .. "月 : " .. s1 .. " " .. s2) -- 显示
-  end
-end
 
 -- =================农历计算========================
 --[[*****
@@ -972,15 +829,6 @@ function GanZhiLi:calRound(start, offset, round)
   end
 end
 
--- 周期循环数
-function calR2(n, round)
-  local x = math.floor(math.fmod(n, round))
-  if x == 0 then
-    x = round
-  end
-  return x
-end
-
 -- 设置用于转换干支历的公历时间
 function GanZhiLi:setTime(t)
   self.ttime = t
@@ -1058,18 +906,6 @@ function GanZhiLi:getYearGanZhi()
   return self:calRound(1, yeardiff, 60)
 end
 
--- 返回年的天干号，1为甲
-function GanZhiLi:getYearGan()
-  local idx = self:getYearGanZhi()
-  return self:calR2(idx, 10)
-end
-
--- 返回年的地支号，1为子
-function GanZhiLi:getYearZhi()
-  local idx = self:getYearGanZhi()
-  return self:calR2(idx, 12)
-end
-
 -- 返回月的干支号
 function GanZhiLi:getMonGanZhi()
   local ck = {
@@ -1091,16 +927,6 @@ function GanZhiLi:getMonGanZhi()
   return self:calRound(15, mdiff, 60)
 end
 
-function GanZhiLi:getMonGan()
-  local idx = self:getMonGanZhi()
-  return self:calR2(idx, 10)
-end
-
-function GanZhiLi:getMonZhi()
-  local idx = self:getMonGanZhi()
-  return self:calR2(idx, 12)
-end
-
 -- 返回日的干支号，甲子从1开始
 function GanZhiLi:getDayGanZhi()
   local DAYSEC = 24 * 3600
@@ -1116,18 +942,6 @@ function GanZhiLi:getDayGanZhi()
   return self:calRound(1, daydiff, 60)
 end
 
--- 返回日的天干号
-function GanZhiLi:getDayGan()
-  local idx = self:getDayGanZhi()
-  return self:calR2(idx, 10)
-end
-
--- 返回日的地支号
-function GanZhiLi:getDayZhi()
-  local idx = self:getDayGanZhi()
-  return self:calR2(idx, 12)
-end
-
 -- 返回时辰的干支号
 function GanZhiLi:getHourGanZhi()
   local SHICHENSEC = 3600 * 2
@@ -1141,18 +955,6 @@ function GanZhiLi:getHourGanZhi()
   })
   local shiDiff = math.floor((self.ttime - jiaziShiTime) / SHICHENSEC)
   return self:calRound(1, shiDiff, 60)
-end
-
--- 返回时干号
-function GanZhiLi:getShiGan()
-  local idx = self:getHourGanZhi()
-  return self:calR2(idx, 10)
-end
-
--- 返回时支号
-function GanZhiLi:getShiZhi()
-  local idx = self:getHourGanZhi()
-  return self:calR2(idx, 12)
 end
 
 -- ====================以下是测试代码=============
@@ -1201,60 +1003,15 @@ function lunarJzl(y)
   return GzData
 end
 
--- 测试
--- print(lunarJzl(os.date("%Y%m%d%H")))
--- 公历转干支历实现结束
 
 ------------农历转换函数--------------
 
-local function chinese_weekday(wday)
-  wday_num = tonumber(wday) + 1
-  chinese_weekdays = {"周日", "周一", "周二", "周三", "周四", "周五", "周六"}
-  return chinese_weekdays[wday_num]
-end
 local function chinese_weekday2(wday)
   wday_num = tonumber(wday) + 1
   chinese_weekdays = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"}
   return chinese_weekdays[wday_num]
 end
 
-local function time_to_num(time)
-  pattern = "(%d+):(%d+) +([AP]M)"
-  if string.match(time, pattern) ~= nil then
-    hours, minutes, am = string.match(time, pattern)
-    if ((am == "AM") and (tonumber(hours) >= 12)) then
-      hours = hours - 12
-    elseif ((am == "PM") and (tonumber(hours) < 12)) then
-      hours = hours + 12
-    end
-  else
-    pattern = "(%d+):(%d+)"
-    hours, minutes = string.match(time, pattern)
-  end
-  return (hours * 60) + minutes
-end
-
-local GetLunarSichen = function(time, t)
-  local time = tonumber(time)
-  local LunarSichen = {"子时(夜半｜三更)", "丑时(鸡鸣｜四更)", "寅时(平旦｜五更)",
-                       "卯时(日出)", "辰时(食时)", "巳时(隅中)", "午时(日中)", "未时(日昳)",
-                       "申时(晡时)", "酉时(日入)", "戌时(黄昏｜一更)", "亥时(人定｜二更)"}
-  if tonumber(t) == 1 then
-    sj = math.floor((time + 1) / 2) + 1
-  elseif tonumber(t) == 0 then
-    sj = math.floor((time + 13) / 2) + 1
-  end
-  if sj > 12 then
-    return LunarSichen[sj - 12]
-  else
-    return LunarSichen[sj]
-  end
-end
-
-------------------------------------
-------wirting by 98wubi Group-------
-------http://98wb.ys168.com/--------
-------------------------------------
 
 -- 十进制转二进制
 function Dec2bin(n)
@@ -1368,15 +1125,7 @@ function diffDate(date1, date2)
   end
   return total
 end
--- 公历倒计时(每年)
-local function diffDate2(date1, date2)
-  while diffDate(date1, date2) == -1 do
-    date2 = tointeger(date2 + 1000000)
-  end
-  result = diffDate(date1, date2)
-  return result
-end
--- 公历倒计时结束
+
 
 -- 返回当年过了多少天
 function leaveDate(y)
@@ -1672,48 +1421,6 @@ end
     --os.date() 把时间戳转化成可显示的时间字符串
     --os.time ([table])
 --]]
-
-local format_Time = function()
-  if os.date("%p") == "AM" then
-    return "上午"
-  else
-    return "下午"
-  end
-end
-
-function CnDate_translator(y)
-  local t, cstr, t2
-  cstr = {"〇", "一", "二", "三", "四", "五", "六", "七", "八", "九"}
-  t = ""
-  for i = 1, y.len(y) do
-    t2 = cstr[tonumber(y.sub(y, i, i)) + 1]
-    if i == 5 and t2 ~= "〇" then
-      t2 = "年十"
-    elseif i == 5 and t2 == "〇" then
-      t2 = "年"
-    end
-    if i == 6 and t2 ~= "〇" then
-      t2 = t2 .. "月"
-    elseif i == 6 and t2 == "〇" then
-      t2 = "月"
-    end
-    -- if t.sub(t,t.len(t)-1)=="年" then t2=t2 .. "月" end
-    if i == 7 and tonumber(y.sub(y, 7, 7)) > 1 then
-      t2 = t2 .. "十"
-    elseif i == 7 and t2 == "〇" then
-      t2 = ""
-    elseif i == 7 and tonumber(y.sub(y, 7, 7)) == 1 then
-      t2 = "十"
-    end
-    if i == 8 and t2 ~= "〇" then
-      t2 = t2 .. "日"
-    elseif i == 8 and t2 == "〇" then
-      t2 = "日"
-    end
-    t = t .. t2
-  end
-  return t
-end
 
 -- 年天数判断
 function IsLeap(y)
@@ -2033,7 +1740,7 @@ local function generate_candidates(input, seg, candidates)
   end
 end
 
--- --- 主函数 ---
+-- +++ 主函数 +++
 local function schedule(input, seg, env)
     local engine = env.engine
     local context = engine.context
@@ -2074,47 +1781,106 @@ local function schedule(input, seg, env)
         -- 获取最近的三个节气
         local jqs = GetNowTimeJq(os.date("%Y%m%d", now))
         local upcoming_jqs = {}
-        for i = 1, 2 do
-            if jqs[i] then
-                table.insert(upcoming_jqs, jqs[i])
-            end
-        end
-        -- 计算距离这些节气的天数
+        local zero_jieqi = nil  -- 记录今天的节气
+
+        -- 计算距离某个节气的天数
         local function days_until_jieqi(jieqi)
             local jieqi_date = jieqi:match("(%d+-%d+-%d+)$")  -- 提取节气日期部分
-            local target_time = os.time({year = tonumber(jieqi_date:sub(1, 4)), month = tonumber(jieqi_date:sub(6, 7)), day = tonumber(jieqi_date:sub(9, 10))})
-            local diff_days = math.floor((target_time - now) / (24 * 3600))
-            return diff_days >= 0 and diff_days or (diff_days + days_in_year)
+            local target_time = os.time({
+                year = tonumber(jieqi_date:sub(1, 4)), 
+                month = tonumber(jieqi_date:sub(6, 7)), 
+                day = tonumber(jieqi_date:sub(9, 10))
+            })
+
+            local diff_days = math.floor((target_time - now) / (24 * 3600)) + 1
+
+            -- 确保今天是节气时 diff_days == 0
+            if os.date("%Y%m%d", target_time) == os.date("%Y%m%d", now) then
+                return 0  -- 今天正好是节气
+            end
+
+            return diff_days
         end
+
+        -- 遍历最近的 3 个节气
+        for i = 1, math.min(3, #jqs) do
+            local jieqi = jqs[i]
+            local diff_days = days_until_jieqi(jieqi)
+
+            if diff_days == 0 then
+                local jieqi_name = jieqi:match("^(%S+)")
+                zero_jieqi = jieqi_name  -- 记录今天的节气
+            elseif diff_days > 0 then
+                table.insert(upcoming_jqs, jieqi)
+            end
+        end
+
+        -- 处理 upcoming_jqs 选取逻辑
+        if zero_jieqi then
+            -- **今天是节气，取后两个节气**
+            upcoming_jqs = {upcoming_jqs[1], upcoming_jqs[2]}
+        else
+            -- **今天不是节气，取前两个节气**
+            upcoming_jqs = {jqs[1], jqs[2]}
+        end
+
         -- 获取每个节气的距离天数
         local jieqi_days = {}
         for _, jieqi in ipairs(upcoming_jqs) do
             table.insert(jieqi_days, days_until_jieqi(jieqi))
         end
+
+
     
         -- 计算距离下一年1月1日的天数
         local next_year = year + 1
         local new_year_time = os.time({year = next_year, month = 1, day = 1})
         local diff_days_next_year = math.floor((new_year_time - now) / (24 * 3600))
 
-        -- 遍历前两个节日并返回节日名称、日期、倒计时天数
+
+        -- 遍历前三个节日并返回节日名称、日期、倒计时天数
         local upcoming_holidays = get_upcoming_holidays() or {}
         local holiday_data = {}
-        
-        for i = 1, math.min(2, #upcoming_holidays) do
+        local zero_holiday = ''  -- 独立存储 holiday[3] == 0 的节日名称
+
+        local filtered_holidays = {}
+        local zero_found = false
+
+        for i = 1, math.min(3, #upcoming_holidays) do
             local holiday = upcoming_holidays[i]
             
-            -- 提取公历日期的年份、月份和日期部分（假设格式为 "yyyy年mm月dd日"）
-            local year, month, day = holiday[2]:match("^(%d+)年(%d+)月(%d+)日")
-            
-            -- 将日期格式化为 "yyyy-mm-dd"
-            if year and month and day then
-                local formatted_date = string.format("%04d-%02d-%02d", tonumber(year), tonumber(month), tonumber(day))
-                
-                -- 插入格式化后的节日数据
-                table.insert(holiday_data, {holiday[1], formatted_date, holiday[3]})
+            if holiday[3] == 0 then
+                zero_holiday = holiday[1]  -- 记录这个节日名称
+                zero_found = true
+            else
+                table.insert(filtered_holidays, holiday)
             end
         end
+
+        if zero_found then
+            -- 只存储后两个节日
+            for i = math.max(1, #filtered_holidays - 1), #filtered_holidays do
+                local holiday = filtered_holidays[i]
+                local year, month, day = holiday[2]:match("^(%d+)年(%d+)月(%d+)日")
+                
+                if year and month and day then
+                    local formatted_date = string.format("%04d-%02d-%02d", tonumber(year), tonumber(month), tonumber(day))
+                    table.insert(holiday_data, {holiday[1], formatted_date, holiday[3]})
+                end
+            end
+        else
+            -- 存储前两个节日
+            for i = 1, math.min(2, #filtered_holidays) do
+                local holiday = filtered_holidays[i]
+                local year, month, day = holiday[2]:match("^(%d+)年(%d+)月(%d+)日")
+                
+                if year and month and day then
+                    local formatted_date = string.format("%04d-%02d-%02d", tonumber(year), tonumber(month), tonumber(day))
+                    table.insert(holiday_data, {holiday[1], formatted_date, holiday[3]})
+                end
+            end
+        end
+        
         -- 生成问候语函数
         local function get_greeting()
           local current_hour = tonumber(os.date("%H"))
@@ -2148,7 +1914,7 @@ local function schedule(input, seg, env)
           -- return string.rep("—", length)
           return string.rep("--", length)
         end
-        
+
         -- 你可以根据需要调整长度
         local line = generate_line(29)  -- 控制符号线的宽度为 15
         -- 生成最终信息字符串
@@ -2156,21 +1922,21 @@ local function schedule(input, seg, env)
             string.format("\n嗨，我是您的日程小助手，%s  \n", greeting) ..
             line .. "  \n" ..
             string.format("今天：%d年%02d月%02d日 %s  \n", year, month, day, week_day_str) ..
-            string.format("农历：%s  \n", lunar_info_str) ..
+            string.format("农历：%s %s %s  \n", lunar_info_str, zero_jieqi, zero_holiday) ..
             string.format("时间：%s  \n", os.date('%H点%M分%S秒', now)) ..
             line .. "  \n" ..
             string.format("%d  年进度：%s  \n", year, progress_bar) ..
-            string.format("距离 %d 年：还有 [ %d ]天  \n", next_year, diff_days_next_year) ..
+            string.format("距离 %d 年：还有 %d 天  \n", next_year, diff_days_next_year) ..
             line .. "  \n" ..
-            string.format("今天是%d年的第[ %d ]周，%02d月第[ %d ]周  \n", year, week_of_year, month, week_of_month) ..
-            string.format("今年已度过[ %d ]天，今天是第[ %d ]天  \n", day_of_year - 1, day_of_year) ..
+            string.format("今天是 %d 年的第 %d 周，%d 月的第 %d 周  \n", year, week_of_year, month, week_of_month) ..
+            string.format("今年已度过 %d 天，今天是第 %d 天  \n", day_of_year - 1, day_of_year) ..
             line .. "  \n" ..
             string.format("距离: %s %s < [ %d ]天  \n", holiday_data[1][1], holiday_data[1][2], holiday_data[1][3]) .. 
             string.format("距离: %s %s < [ %d ]天  \n", holiday_data[2][1], holiday_data[2][2], holiday_data[2][3]) ..
             line .. "  \n" ..
             string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[1], jieqi_days[1]) ..
-            string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[2], jieqi_days[2]) --..
-    
+            string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[2], jieqi_days[2]) ..
+            ''
         -- 使用 generate_candidates 函数生成候选项
         local candidates = {
             -- {summary, "日期信息整合"}

@@ -1,9 +1,5 @@
 # Rime's symbols
 # encoding: utf-8
-# 
-# 原「/」模式 改为了「z[Z]」模式
-# 精简仅保留文档中常用符号
-# version: 2024-12-21
 
 symbols:
   # --- 上下标 ---

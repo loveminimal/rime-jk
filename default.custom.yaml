@@ -71,6 +71,7 @@ patch:
       - { when: always, accept: "Control+backslash", toggle: chaifen }             
       - { when: always, accept: Control+space, toggle: ascii_mode }                
       - { when: always, accept: Control+comma, select: .next }                     
+      - { when: always, accept: Control+period, send: '~' }
       - { when: has_menu, accept: semicolon, send: 2 }                             
       - { when: has_menu, accept: apostrophe, send: 3 }                            
       - { when: has_menu, accept: slash, send: 4 }                                 
@@ -88,5 +89,3 @@ patch:
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
       - { when: always, accept: Control+p, send: '+' }
-      
-      - { when: always, accept: Control+apostrophe, send: '~' }

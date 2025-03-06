@@ -88,7 +88,8 @@ local JDate = { -- 日期元件
         end
         jd = jd + 0.5
         local A = int2(jd)
-        F = jd - A, D -- 取得日数的整数部份A及小数部分F
+        local F = jd - A
+        local D = nil -- 取得日数的整数部份A及小数部分F
         if A > 2299161 then
             D = int2((A - 1867216.25) / 36524.25)
             A = A + 1 + D - int2(D / 4)
@@ -644,7 +645,9 @@ function jiaoCal(t1, jiao, lx) -- t1是J2000起算儒略日数
     if v1 < v2 then
         v2 = v2 - 2 * math.pi
     end -- 减2pi作用是将周期性角度转为连续角度
-    local k = 1, k2, i -- k是截弦的斜率
+    local k = 1
+    local k2 = nil
+    local i = nil -- k是截弦的斜率
     for i = 1, 10 do -- 快速截弦求根,通常截弦三四次就已达所需精度
         k2 = (v2 - v1) / (t2 - t1) -- 算出斜率
         if math.abs(k2) > 1e-15 then

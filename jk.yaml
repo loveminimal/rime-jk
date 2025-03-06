@@ -1,17 +1,9 @@
 # Rime JK model
 # encoding: utf-8
 
+version: v6.6.0.lite
 
-version: v6.6.0.lts
-
-
-# === 开关 ===
-# -------------------------------------
-# ascii_mode  中英切换
-# emoji       显隐表情
-# zh2en       显隐中英
-# chaifen     显隐拆分
-# -------------------------------------
+# --- 开关 ---
 # reset: ← 0 1 →
 switches:
   - name: ascii_mode
@@ -31,7 +23,7 @@ switches:
     states: [ 隐拆, 显拆 ]
 
 
-# === 识别器 ===
+# --- 识别器 ---
 # -------------------------------------
 # 匹配特定的输入模式，并给它们打上标签，以便后续切分、翻译处理
 # reverse_lookup  反查标签
@@ -48,7 +40,7 @@ recognizer:
     quick_symbol: "^;.*$" 
 
 
-# === 标点符号处理器 ===
+# --- 标点符号处理器 --
 # -------------------------------------
 # 负责处理标点符号输入，可导入符号映射「如 symbols_z」
 # -------------------------------------
@@ -58,7 +50,7 @@ punctuator:
     __include: symbols_z:/symbols
 
 
-# === 反查 ===
+# --- 反查 ---
 # -------------------------------------
 # date_translator 日期时间输入
 # reverse_lookup  英文翻译字典
@@ -73,7 +65,7 @@ reverse_lookup:
   # prefix: "`"
   prefix: "~~"
   suffix: ":"
-  tips: 〔英文·释义〕
+  tips: 〔英文·反查〕
   enable_completion: true
   preedit_format:
     - xlit|~| |
@@ -83,7 +75,7 @@ pinyin:
   dictionary: jk_pinyin
   prefix: "Z"
   suffix: "'"
-  tips: 〔拼音·临时〕
+  tips: 〔拼音·反查〕
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
@@ -104,14 +96,12 @@ custom_phrase:
   initial_quality: 99
 
 
-# === 并击 ===
+# --- 并击 ---
 # -------------------------------------
 # prompt_format 并击过程中套用式样「加方括号」
 # output_format 并击完成后套用式样
 # alphabet      击键一律以字母表顺序排列「字母表，包含用并击按键」
 # algebra       运算规则
-# 
-# https://github.com/gaboolic/rime-shuangpin-fuzhuma
 # -------------------------------------
 # --- 迷你版 ---
 chord_composer_mini:
@@ -135,7 +125,7 @@ chord_composer_mini:
     - xform/,\.(?![左右])$/~右/
 
 
-# === OpenCC ===
+# --- OpenCC ---
 # -------------------------------------
 # emoji 
 # zh2en   中译英

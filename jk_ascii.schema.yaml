@@ -7,7 +7,7 @@ schema:
   author: 
     - 发明人 Jack Liu <https://aituyaa.com>
   description: |
-    - 知心字符，一款快速输入数字和预设字符的键盘式输入法方案
+    - 知心英文，一款快速输入数字和预设字符的键盘式输入法方案
     - https://github.com/loveminimal/rime-jk
   icon: "assets/pr.ico"
   ascii_icon: 'assets/ascii.ico' 
@@ -45,22 +45,13 @@ engine:
     - lua_filter@*prettify_comment
     - uniquifier
 
-# === speller ===
+
 speller:
-  # [ ✗上屏 ]
-  # 如果不想让什么标点直接上屏，可以加在 alphabet，或者编辑标点符号为两个及以上的映射
-  alphabet: ·~
-  # alphabet: Z~ 
-  # alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
-  # alphabet: zZYXWVUTSRQPONMLKJIHGFEDCBA
-  # [ ✓上屏 ]
-  # initials 定义仅作为始码的按键，排除 ` 让单个的 ` 可以直接上屏
+  alphabet: ~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  # initials: zyxwvutsrqponmlkjihgfedcba`
 
 chord_composer:
   __include: jk.yaml:/chord_composer_mini
-  # __include: jk_pinyin_bj.schema.yaml:/chord_composer
 
 
 translator:
@@ -111,12 +102,9 @@ punctuator:
     '}' : '}'
   full_shape: *symtable
 
+
 key_binder:
   import_preset: default
-  # bindings/+:
-  #   - { when: always, accept: Control+u, send: '_' }
-  #   - { when: always, accept: Control+i, send: '-' }
-  #   - { when: always, accept: Control+o, send: '=' }
 
 recognizer:
   __include: jk.yaml:/recognizer

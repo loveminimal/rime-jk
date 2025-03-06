@@ -19,10 +19,15 @@ encoder:
       formula: "AaBaCaCb"
     - length_in_range: [4, 10]
       formula: "AaBaCaZa"
+# -------------------------------------
+# wubi86      「 8105 通规字 」精炼词库
+# wubi86_user      「 养成系 」用户词库
+# wubi86_district      全国行政区域词库
+# -------------------------------------
 import_tables:
-  - dicts/wubi86                                  # 8105 通规精炼词库
-  - dicts/wubi86_user                             # 引入养成系用户词库 🔥
-  - dicts/wubi86_district                         # 全国行政区域词库
+  - dicts/wubi86         
+  - dicts/wubi86_user    
+  - dicts/wubi86_district
 use_preset_vocabulary: false
 ...
 朙	lwme	1

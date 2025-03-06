@@ -1882,27 +1882,19 @@ local function schedule(input, seg, env)
         -- --- 获取最近的三个节气 ---
         local jqs = GetNowTimeJq(os.date("%Y%m%d", now))
         local upcoming_jqs = {}
-        local zero_jieqi = nil                                              -- 记录今天的节气
+        local zero_jieqi = ''                                               -- 记录今天的节气
 
         -- 计算距离某个节气的天数
         local function days_until_jieqi(jieqi)
             local jieqi_date = jieqi:match("(%d+-%d+-%d+)$")                -- 提取节气日期部分
-            local target_time = os.time({
-                year = tonumber(jieqi_date:sub(1, 4)),
-                month = tonumber(jieqi_date:sub(6, 7)),
-                day = tonumber(jieqi_date:sub(9, 10))
-            })
+            local target_time = jieqi_date:gsub("-", "")
+			local diff_days = days_until(target_time)
 
-            -- 当今天就是节气时
-            if os.date("%Y%m%d", target_time) == os.date("%Y%m%d", now) then
-                return 0
-            end
-
-            return math.floor((target_time - now) / (24 * 3600)) + 1
+            return diff_days
         end
 
-        -- 遍历最近的 3 个节气
-        for i = 1, math.min(3, #jqs) do
+        -- 遍历最近的 4 个节气
+        for i = 1, math.min(4, #jqs) do
             local jieqi = jqs[i]
             local diff_days = days_until_jieqi(jieqi)
 
@@ -1914,12 +1906,12 @@ local function schedule(input, seg, env)
             end
         end
 
-        if zero_jieqi then
+        if zero_jieqi and zero_jieqi ~= '' then
             -- 今天是节气时，取后两个节气
-            upcoming_jqs = {upcoming_jqs[1], upcoming_jqs[2]}
+            upcoming_jqs = {upcoming_jqs[3], upcoming_jqs[4]}
         else
             -- 今天不是节气，取前两个节气
-            upcoming_jqs = {jqs[1], jqs[2]}
+            upcoming_jqs = {jqs[2], jqs[3]}
         end
 
         -- 获取每个节气的距离天数
@@ -1953,11 +1945,11 @@ local function schedule(input, seg, env)
             string.format("今天是 %d 年的第 %d 周，%d 月的第 %d 周  \n", year, week_of_year, month, week_of_month) ..
             string.format("今年已度过 %d 天，今天是第 %d 天  \n", day_of_year - 1, day_of_year) .. 
             line .. "  \n" ..
-            string.format("距离: %s %s < [ %d ]天  \n", holiday_data[1][1], holiday_data[1][2], holiday_data[1][3]) ..
-            string.format("距离: %s %s < [ %d ]天  \n", holiday_data[2][1], holiday_data[2][2], holiday_data[2][3]) .. 
+            string.format("距离: %s %s \t< [ %02d ]天  \n", holiday_data[1][1], holiday_data[1][2], holiday_data[1][3]) ..
+            string.format("距离: %s %s \t< [ %02d ]天  \n", holiday_data[2][1], holiday_data[2][2], holiday_data[2][3]) .. 
             line .. "  \n" ..
-            string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[1], jieqi_days[1]) ..
-            string.format("距离: %s < [ %d ]天  \n", upcoming_jqs[2], jieqi_days[2]) .. 
+            string.format("距离: %s \t< [ %02d ]天  \n", upcoming_jqs[1], jieqi_days[1]) ..
+            string.format("距离: %s \t< [ %02d ]天  \n", upcoming_jqs[2], jieqi_days[2]) .. 
             ''
 
         -- 使用 generate_candidates 函数生成候选项

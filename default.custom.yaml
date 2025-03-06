@@ -1,37 +1,33 @@
 # Rime default custom settings
 # encoding: utf-8
 #
-# 用来放置一些方案共享的配置，注意 - 
-# 并不是所有的配置项都可以在这里生效，
-# 这里只会覆盖程序文件夹中 default.yaml 中包含的配置项
+# 覆盖程序预设的配置项「 default.yaml 」
 
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.16.0
+  distribution_version: 0.16.3
   generator: "Rime::SwitcherSettings"
   modified_time: "Tue Jun  4 16:17:26 2024"
   rime_version: 1.11.2
 
 
 patch:
+  # --- 方案列表 ---
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_wubi}
-    
 
-  # === 候选相关 ===
+  # --- 选单设置 ---
   switcher/+:
     caption: 〔方案选单〕
-    # hotkeys/+:
-    #   - Control+i
-    hotkeys:
-      - Control+m
+    # hotkeys:
+    #   - Control+m
     option_list_separator: ' | ' 
+
+  # --- 候选项数 --- 
   menu/page_size: 4
 
-
-  # === 标点符号控制 ===
-  # 下设 full_shape: 和 half_shape: 分别控制全角、半角模式下的符号
+  # --- 标点符号 --
   punctuator/+:
     half_shape/+:
       ',' : { commit: ， }
@@ -67,26 +63,22 @@ patch:
       '{' : '{'
       '}' : '}'
 
-
-  # === 键位绑定 ===
+  # --- 键位绑定 ---
   key_binder/+:
     bindings/+:
-      # --- 自定义键位 ---
-      - { when: always, accept: "Control+bracketleft", toggle: traditionalization }   # C-[ 切换简繁切换
-      # - { when: always, accept: "Control+period", toggle: zh2en }                   # C-. 切换中英翻译
-      - { when: always, accept: "Control+bracketright", toggle: zh2en }               # C-] 切换中英翻译
-      - { when: always, accept: "Control+backslash", toggle: chaifen }                # C-\ 切换拆隐折显
-      - { when: always, accept: Control+space, toggle: ascii_mode }                   # C-␣ 切换中英状态
-      - { when: always, accept: Control+comma, select: .next }                        # C-, 切换下一方案
-      - { when: has_menu, accept: semicolon, send: 2 }                                # ; 2 候选
-      - { when: has_menu, accept: apostrophe, send: 3 }                               # ' 3 候选
-      - { when: has_menu, accept: slash, send: 4 }                                    # / 4 候选
-      - { when: paging, accept: comma, send: Page_Up }                                # , 向上翻页
-      - { when: has_menu, accept: period, send: Page_Down }                           # . 向下翻页
-      - { when: composing, accept: Control+k, send: Up }                              # C-k 向上移动选词
-      - { when: composing, accept: Control+j, send: Down }                            # C-j 向下移动选词
+      - { when: always, accept: "Control+bracketleft", toggle: traditionalization }
+      - { when: always, accept: "Control+bracketright", toggle: zh2en }            
+      - { when: always, accept: "Control+backslash", toggle: chaifen }             
+      - { when: always, accept: Control+space, toggle: ascii_mode }                
+      - { when: always, accept: Control+comma, select: .next }                     
+      - { when: has_menu, accept: semicolon, send: 2 }                             
+      - { when: has_menu, accept: apostrophe, send: 3 }                            
+      - { when: has_menu, accept: slash, send: 4 }                                 
+      - { when: paging, accept: comma, send: Page_Up }                             
+      - { when: has_menu, accept: period, send: Page_Down }                        
+      - { when: composing, accept: Control+k, send: Up }                           
+      - { when: composing, accept: Control+j, send: Down }                         
 
-      # - { when: composing, accept: Control+semicolon, send: Return }
       - { when: composing, accept: Control+u, send: Return }
       - { when: composing, accept: Control+i, send: Return }
       - { when: composing, accept: Control+l, send: Return }
@@ -96,10 +88,5 @@ patch:
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
       - { when: always, accept: Control+p, send: '+' }
-
-      # - { when: always, accept: Control+u, toggle: traditionalization }
-      # - { when: always, accept: Control+i, toggle: zh2en }
-      # - { when: always, accept: Control+o, toggle: chaifen }
       
       - { when: always, accept: Control+apostrophe, send: '~' }
-

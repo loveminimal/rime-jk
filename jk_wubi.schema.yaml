@@ -1,47 +1,25 @@
 # Rime schema settings
 # encoding: utf-8
 
-# === 描述档 ===
 schema:
   schema_id: jk_wubi
   name: 五笔·知心
   author: 
-    - 修改者 Jack Liu <https://aituyaa.com>
+    - Jack Liu <https://aituyaa.com>
   description: |
-    - 知心五笔，五笔·拼音混输，小啊小女仆
+    - 知心五笔，五笔·拼音反查，小啊小女仆
     - https://github.com/loveminimal/rime-jk
-
-    参考方案及详解：
-    - https://github.com/rime/rime-wubi
-    - https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md
   dependencies:
     - jk_ascii
     - jk_pinyin
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
 
-
-# === 候选 ===
-# menu:
-#   page_size: 10
-
-
-# === 开关 ===
 switches:
   __include: jk.yaml:/switches
 
 
-# === 引擎 ===
 engine:
-  # --- 处理各类按键消息 ---
-  # -------------------------------------
-  # chord_composer  多键组合输入
-  # key_binder      键位绑定「放在其他 processor 之前判定」
-  # recognizer      识别器，识别特定格式的输入「打上标签」供后续处理
-  # speller         拼写处理器「处理输入字母，解析为编码，与词典匹配」
-  # punctuator      标点符号处理器
-  # express_editor  编辑器处理器，处理「空格、回车确认输入、回退删除、候选上屏、其他字符直接上屏」
-  # -------------------------------------
   processors:
     - lua_processor@*quick_symbol
     - ascii_composer
@@ -53,19 +31,6 @@ engine:
     - selector      
     - navigator     
     - express_editor
-  # --- 分段器 ---
-  # -------------------------------------
-  # 负责对输入内容进行切分「分段」，为后续翻译做准备
-  # 决定了 Rime 如何把你的输入按不同的模式拆分「如：拼音、形码、标点等」
-  # ------
-  # ascii_segmentor     处理 ASCII 输入「直接上屏」
-  # matcher             配合「 recognizer.patterns 」规则，为网址、邮箱、反查等输入加上标签
-  # abc_segmentor       标识「拼音」或「形码编码」为「 tag: abc 」
-  # punct_segmentor     标识标点符号部分为「 tag: punct 」
-  # affix_segmentor     用户自定义 tag - 此项可加载多个实例，后接 @+tag名，为后续的翻译或匹配等操作提供额外的灵活性
-  # lua_segmentor       使用 lua 自定义切分，后接 @+lua 函数名
-  # fallback_segmentor  在其他 segmentors 无法处理的情况下，将输入的文本当作普通文本进行处理
-  # -------------------------------------
   segmentors:
     - ascii_segmentor        
     - matcher                
@@ -73,16 +38,6 @@ engine:
     - punct_segmentor        
     - affix_segmentor@pinyin
     - fallback_segmentor     
-  # --- 翻译器，负责将输入的编码转换为候选项 --- 
-  # -------------------------------------
-  # translators:
-  # lua_translator@*commit_history*translator         上屏历史
-  # echo_translator                 无候选时回显输入码为候选项
-  # punct_translator                将「 tag: punct 」标识的标点符号转换为相应的符号或字符
-  # table_translator                形码翻译器，可以加载多个实例，后接 @+翻译器名「 如 cangjie、wubi 等」
-  # table_translator@custom_phrase  自定义码表「 custom_phrase.txt 」
-  # script_translator@pinyin        拼音翻译器，可以加载多个实例，后接 @+翻译器名「 如 pinyin 等」
-  # -------------------------------------
   translators:
     # - echo_translator               
     - punct_translator        
@@ -94,7 +49,6 @@ engine:
     - lua_translator@*helper
     - lua_translator@*date_translator 
     - lua_translator@*force_gc        
-  # --- 处理候选词列表「调整、修改、排序、筛选、转换」候选词 ---
   filters:
     - lua_filter@*prettify_comment
     - lua_filter@*keep_primary_code_first
@@ -116,36 +70,16 @@ recognizer:
 punctuator:
   __include: jk.yaml:/punctuator
 
-
-# === 拼写处理器 ===
-# -------------------------------------
-# 负责处理输入的字母，将其解析为编码，并与词典匹配
-# ------
-# alphabet        「✗上屏」允许的输入字符
-# initials        「✓上屏」只允许做始码的字符，让单个的 ` 可以直接上屏
-# delimiter       「分隔符」① 空格用于拼音分隔 ② z 可手动分隔拼音
-# max_code_length  形码最大码长，超过则顶字上屏，四码顶字上屏
-# -------------------------------------
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
   # max_code_length: 4
 
-
 chord_composer:
   __include: jk.yaml:/chord_composer_mini
 
 
-# === 主翻译器 ===
-# -------------------------------------
-# dictionary                      使用词典
-# prism                           唯一标识，避免拼写算法冲突
-# encode_commit_history           是否对已上屏词自动成词
-# disable_user_dict_for_patterns  禁止某些编码录入用户词典
-# enable_completion               是否开启自动补全
-# enable_user_dict: true          是否开启用户词典「 用户词典记录动态字词频、用户词 」
-# -------------------------------------
 translator:
   dictionary: jk_wubi             
   prism: jk_wubi                  
@@ -160,7 +94,6 @@ translator:
   comment_format: "{comment}" 
 
 
-# === 反查 ===
 date_translator:
   __include: jk.yaml:/date_translator
 
@@ -173,8 +106,6 @@ pinyin:
 custom_phrase:
   __include: jk.yaml:/custom_phrase
 
-
-# === OpenCC ===
 emoji:
   __include: jk.yaml:/emoji
 

@@ -1,30 +1,18 @@
-# Rime schema
+# Rime schema - jk_pinyin.schema.yaml
 # encoding: utf-8
 
 schema:
   schema_id: jk_pinyin
-  name: 拼音·知心
+  name: 拼音·反查
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |
-    - 知心拼音，拼音+五笔前二辅助码，小啊小拼音
-    - 基于袖珍简化字拼音及自制通规8105单字表
-    - 支持全拼   + 五笔前二增强版
-    - 小鹤双拼   + 五笔前二增强版「 默认 」
-    - 自然码双拼 + 五笔前二增强版
-  dependencies:
-    - jk_ascii
-  icon: 'assets/fly_b.ico'
-  ascii_icon: 'assets/ascii.ico'
-
-switches:
-  __include: jk.yaml:/switches
+    - 拼音反查，拼音+五笔前二辅助码增强
+    - 仅用于拼音反查，不再作为独立的输入方案
 
 engine:
   processors:
-    - lua_processor@*quick_symbol
     - ascii_composer
-    - chord_composer
     - recognizer
     - key_binder
     - speller
@@ -40,42 +28,28 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@custom_phrase
     - script_translator
     - reverse_lookup_translator
-    - lua_translator@*schedule
-    - lua_translator@*helper
-    - lua_translator@*date_translator
     - lua_translator@*force_gc
   filters:
-    - lua_filter@*prettify_comment
     - simplifier
-    - simplifier@emoji
-    - simplifier@zh2en
-    - simplifier@chaifen
-    - simplifier@traditionalize
     - uniquifier
 
-
 speller:
-  # [ ✗上屏 ]
-  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~"
-  # [ ✓上屏 ]
-  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  delimiter: " ~"
-  # 支持：
-  # ① 全拼/五笔前二   algebra_pinyin 
-  # ② 小鹤/五笔前二    algebra_flypy
-  # ③ 自然码/五笔前二    algebra_zrm
   algebra:
-    __include: algebra.yaml:/algebra_flypy
-    __append:
-      __include: algebra.yaml:/algebra_fuzhuma
-
-
-chord_composer:
-  __include: jk.yaml:/chord_composer_mini
-
+    # --- 全拼 ---
+    - derive/(;.*)$//
+    - abbrev/^([a-z]).+$/$1/
+    - derive/^([a-z])$/$1/
+    # --- 辅助码 ---
+    - derive|^(.+);.*$|$1|                 
+    - derive|^(.+);(\w)(\w).*$|$1$2|       
+    - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+    - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+    - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
+    - erase/^(.+);(.+)$/
 
 translator:
   dictionary: jk_pinyin
@@ -90,33 +64,3 @@ translator:
   spelling_hints: 1
   comment_format: 
     - xform/[^;]*;([^;]*)/$1/
-
-key_binder:
-  import_preset: default
-
-recognizer:
-  __include: jk.yaml:/recognizer
-
-punctuator:
-  __include: jk.yaml:/punctuator
-
-date_translator:
-  __include: jk.yaml:/date_translator
-
-reverse_lookup:
-  __include: jk.yaml:/reverse_lookup
-
-custom_phrase:
-  __include: jk.yaml:/custom_phrase
-
-emoji:
-  __include: jk.yaml:/emoji
-
-zh2en:
-  __include: jk.yaml:/zh2en
-
-chaifen:
-  __include: jk.yaml:/chaifen
-
-traditionalize:
-  __include: jk.yaml:/traditionalize

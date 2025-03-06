@@ -121,7 +121,6 @@ chord_composer_mini:
     - "xform/^(.*)左/$1/"
     - "xform/^(.*)右$/$1/"
     - "xform/^(.*)左(.*)右$/$1$2/"
-  # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
   alphabet: ",."
   algebra:
     # --- 修改为并击键位 ---
@@ -134,24 +133,6 @@ chord_composer_mini:
     # 仅保留〔 ,. ➭ ~ 〕，其余使用快符
     # ---------------------------------
     - xform/,\.(?![左右])$/~右/
-
-
-# --- 完整版 ---
-# -------------------------------------
-# ① 知心键位         algebra_zhixin 「兼容正常串击键位 ✓       」
-# ② 空明码键位     algebra_kongming 「兼容正常串击键位 ✗       」
-# ③ 镜像键位         algebra_mirror 「兼容正常串击键位 ✗ 空明改」
-# -------------------------------------
-chord_composer:
-  prompt_format:
-    - "xform/^(.*)$/[$1]/" 
-  output_format:
-    - "xform/^(.*)左/$1/"
-    - "xform/^(.*)右$/$1/"
-    - "xform/^(.*)左(.*)右$/$1$2/"
-  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p/'1234567890"
-  algebra:
-    __include: algebra.yaml:/algebra_mirror
 
 
 # === OpenCC ===

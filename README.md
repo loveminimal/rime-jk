@@ -1,8 +1,7 @@
 RIME_JK ，指尖上的旋律 ～ [🍕 指南](https://aituyaa.com/rime_jk-%E6%8C%87%E5%B0%96%E4%B8%8A%E7%9A%84%E6%97%8B%E5%BE%8B/)
 
-![输入法](./assets/click.gif)
+<img src='./assets/color.png' width='76%' /><img src='./assets/click.gif' width='16%' />
 
-![配色方案](./assets/color.png)
 
 ‼🪧 [**Release Version 6.1.0**](https://github.com/loveminimal/rime-jk/releases/tag/v6.1.0)
 

@@ -7,12 +7,8 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - --- 五笔 ---
 # - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
 # - py scripts/sync_wubi_user_dict.py
-# - --- 拼音 ---
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_pinyin_user_dict.py
-# - py scripts/sync_pinyin_user_dict.py
 # 
 ---
 name: wubi86_user
@@ -3077,8 +3073,5 @@ use_preset_vocabulary: false
 简入繁出	tttb 	3
 文件来源	ywgi 	1
 忙里偷闲	njwu 	1
-素手把芙蓉	grra 	1
-垃圾玩意儿	ffgq 	1
 凡人修仙传	mwww 	2
 中华人民共和国	kwwl 	3
-花木成畦手自栽	asdf 	2

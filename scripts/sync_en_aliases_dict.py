@@ -12,7 +12,7 @@
 # 
 import re
 from pathlib import Path
-from data.header import get_en_aliases_header
+from header import get_en_aliases_header
 from timer import timer
 
 

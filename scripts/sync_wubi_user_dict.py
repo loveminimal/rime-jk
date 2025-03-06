@@ -13,7 +13,7 @@
 import re
 from pathlib import Path
 from collections import defaultdict
-from data.header import get_header_sync
+from header import get_header_sync
 from timer import timer
 
 

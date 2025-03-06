@@ -47,7 +47,7 @@ engine:
 
 
 speller:
-  alphabet: ~
+  alphabet: ·~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
 
 chord_composer:

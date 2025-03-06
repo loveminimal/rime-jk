@@ -1,8 +1,6 @@
 from datetime import datetime
 
 # --- 用户词典同步表头 ---
-# ① 五笔
-# ② 拼音+五笔前二辅助码
 # 
 def get_header_sync(file_name):
     header = f'''
@@ -15,12 +13,8 @@ def get_header_sync(file_name):
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - --- 五笔 ---
 # - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
 # - py scripts/sync_wubi_user_dict.py
-# - --- 拼音 ---
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_pinyin_user_dict.py
-# - py scripts/sync_pinyin_user_dict.py
 # 
 ---
 name: {'.'.join(file_name.split('.')[:-2])}

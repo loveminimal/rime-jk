@@ -334,8 +334,8 @@ mljk:
     hilited_candidate_back_color: 0xF3F3F3      # 背景
 
     hilited_mark_color: 0x0067c0                # 标签前的标记
-    hilited_label_color: 0xCCCCCC               # 标签
-    hilited_comment_text_color: 0xCCCCCC        # 注释
+    hilited_label_color: 0x191919CC             # 标签
+    hilited_comment_text_color: 0x1A1A1A99      # 注释
     # hilited_candidate_border_color: 0x8FBCBB  # 边框
     # ---〔未激活的候选项〕---
     candidate_text_color: 0x1A1A1A              # 文字

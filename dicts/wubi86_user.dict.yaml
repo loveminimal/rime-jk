@@ -18,10 +18,10 @@ use_preset_vocabulary: false
 ...
 人	w 	5
 中	kh 	9
-的	r 	75
+的	r 	96
 了	b 	82
 也	bn 	74
-能	ce 	53
+能	ce 	6
 对	cf 	9
 码	dcg 	9
 大	dd 	6
@@ -47,7 +47,7 @@ use_preset_vocabulary: false
 俺	wdjn 	4
 在	d 	84
 都	ftjb 	69
-来	go 	6
+来	go 	7
 呢	knx 	9
 你	wq 	97
 工	a 	1
@@ -67,7 +67,7 @@ use_preset_vocabulary: false
 老	ftx 	9
 弄	gaj 	7
 下	gh 	8
-还	gip 	75
+还	gip 	8
 速	gkip 	1
 些	hxf 	6
 水	ii 	8
@@ -169,7 +169,7 @@ use_preset_vocabulary: false
 张	xt 	6
 比	xx 	9
 说	yu 	9
-多	qq 	6
+多	qq 	7
 么	tc 	8
 环	ggi 	2
 加	lk 	9
@@ -429,7 +429,7 @@ use_preset_vocabulary: false
 盆	wvl 	1
 坐	wwf 	3
 华	wxf 	3
-仿	wyt 	1
+仿	wyn 	2
 练	xan 	6
 费	xjm 	3
 熟	ybv 	5
@@ -538,7 +538,7 @@ use_preset_vocabulary: false
 简	tuj 	9
 关	ud 	3
 凌	ufw 	1
-冰	ui 	1
+冰	ui 	2
 传	wfny 	3
 爸	wqc 	1
 放	yt 	5
@@ -936,6 +936,15 @@ use_preset_vocabulary: false
 数	ovt 	1
 宫	pk 	1
 榴	sqy 	1
+威	dgv 	1
+确	dqe 	1
+暗	juj 	3
+照	jvko 	1
+色	qc 	1
+摄	rbcc 	1
+翻	toln 	1
+舍	wfk 	2
+齐	yjj 	1
 你好	wqvb 	8
 中国	khlg 	4
 取得	bctj 	2
@@ -958,7 +967,7 @@ use_preset_vocabulary: false
 翻页	todm 	3
 痛点	uchk 	1
 音码	ujdc 	1
-问题	ukjg 	7
+问题	ukjg 	9
 如果	vkjs 	9
 使用	wget 	8
 从来	wwgo 	5
@@ -1768,7 +1777,7 @@ use_preset_vocabulary: false
 搜索	rvfp 	9
 指法	rxif 	2
 擅长	ryta 	1
-标识	sfyk 	1
+标识	sfyk 	2
 哥们	skwu 	1
 梯子	subb 	3
 根本	svsg 	5
@@ -1851,7 +1860,7 @@ use_preset_vocabulary: false
 增加	fulk 	2
 下午	ghtf 	2
 不变	giyo 	2
-理论	gjyw 	2
+理论	gjyw 	3
 末尾	gsnt 	4
 上层	hhnf 	1
 清醒	igsg 	2
@@ -2150,7 +2159,7 @@ use_preset_vocabulary: false
 华明	wxje 	6
 经济	xciy 	4
 细看	xlrh 	1
-主题	ygjg 	3
+主题	ygjg 	4
 高级	ymxe 	5
 说说	yuyu 	2
 也不	bngi 	2
@@ -2516,7 +2525,7 @@ use_preset_vocabulary: false
 超出	fhbm 	1
 趋势	fhrv 	1
 超前	fhue 	2
-进度	fjya 	1
+进度	fjya 	2
 专利	fntj 	1
 才华	ftwx 	1
 零头	fwud 	1
@@ -2587,7 +2596,7 @@ use_preset_vocabulary: false
 木得	sstj 	2
 复制	tjrm 	1
 利息	tjth 	1
-微软	tmlq 	1
+微软	tmlq 	3
 翻倍	towu 	1
 简要	tusv 	1
 减小	udih 	1
@@ -2690,7 +2699,7 @@ use_preset_vocabulary: false
 是不	jggi 	1
 日历	jjdl 	2
 日志	jjfn 	1
-日程	jjtk 	1
+日程	jjtk 	2
 归来	jvgo 	2
 足以	khny 	1
 兄弟	kqux 	1
@@ -2981,6 +2990,24 @@ use_preset_vocabulary: false
 费时	xjjf 	1
 语法	ygif 	2
 变量	yojg 	1
+助手	egrt 	1
+五入	ggty 	1
+渐近	ilrp 	1
+深色	ipqc 	1
+最前	jbue 	1
+跟随	khbd 	1
+哪种	kvtk 	1
+加个	lkwh 	1
+飞鹤	nupw 	1
+错失	qarw 	1
+反应	rcyi 	1
+近似	rpwn 	1
+接受	ruep 	1
+失效	rwuq 	1
+模拟	sarn 	1
+配色	sgqc 	3
+重复	tgtj 	1
+识别	ykkl 	1
 最大值	jdwf 	1
 输入法	ltif 	7
 来不来	gggo 	1
@@ -3072,6 +3099,10 @@ use_preset_vocabulary: false
 资本家	uspe 	1
 修不完	wgpf 	1
 通规字	cfpb 	1
+用得着	etud 	1
+小狼毫	iqyp 	1
+日程表	jtge 	1
+找不到	rggc 	1
 吞噬星空	gkjp 	9
 不可或缺	gsar 	1
 人定胜天	wpeg 	1
@@ -3110,5 +3141,6 @@ use_preset_vocabulary: false
 简入繁出	tttb 	3
 文件来源	ywgi 	1
 忙里偷闲	njwu 	1
+四舍五入	lwgt 	1
 凡人修仙传	mwww 	2
 中华人民共和国	kwwl 	3

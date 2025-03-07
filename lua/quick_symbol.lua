@@ -37,7 +37,7 @@ local mapping = {
 
 
     -- 常用 Emoji「 只放常用 」
-    dx = "😄", xk = "🤣", lz = "😎", sq = "😤", fn = "😡", wy = "😓", zm = "😴", 
+    kx = "😄", xk = "🤣", lz = "😎", sq = "😤", fn = "😡", wy = "😓", zm = "😴", dk = "😭", gx = "🥳",
     yl = "👻", jq = "🤖", hx = "💖",
     ok = "👌", lh = "👍", qd = "💰",
     ls = "📘", hs = "📕", ks = "📖", zb = "📒",

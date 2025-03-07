@@ -18,10 +18,10 @@ use_preset_vocabulary: false
 ...
 人	w 	5
 中	kh 	9
-的	r 	96
+的	r 	98
 了	b 	82
 也	bn 	74
-能	ce 	6
+能	ce 	7
 对	cf 	9
 码	dcg 	9
 大	dd 	6
@@ -67,7 +67,7 @@ use_preset_vocabulary: false
 老	ftx 	9
 弄	gaj 	7
 下	gh 	8
-还	gip 	8
+还	gip 	9
 速	gkip 	1
 些	hxf 	6
 水	ii 	8
@@ -945,6 +945,7 @@ use_preset_vocabulary: false
 翻	toln 	1
 舍	wfk 	2
 齐	yjj 	1
+素	gxi 	1
 你好	wqvb 	8
 中国	khlg 	4
 取得	bctj 	2
@@ -2596,7 +2597,7 @@ use_preset_vocabulary: false
 木得	sstj 	2
 复制	tjrm 	1
 利息	tjth 	1
-微软	tmlq 	3
+微软	tmlq 	4
 翻倍	towu 	1
 简要	tusv 	1
 减小	udih 	1
@@ -3005,9 +3006,10 @@ use_preset_vocabulary: false
 接受	ruep 	1
 失效	rwuq 	1
 模拟	sarn 	1
-配色	sgqc 	3
+配色	sgqc 	4
 重复	tgtj 	1
 识别	ykkl 	1
+色块	qcfn 	1
 最大值	jdwf 	1
 输入法	ltif 	7
 来不来	gggo 	1

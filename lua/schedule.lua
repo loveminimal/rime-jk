@@ -31,7 +31,7 @@ local function schedule(input, seg, env)
     local engine = env.engine
     local context = engine.context
 
-    if (input == "~jc" or input == "/day" or input == "oday") then
+    if (input == "~jc") then
 
         -- ---〔 ❶ 问候语 〕---
         local function get_greeting()

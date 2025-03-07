@@ -30,7 +30,7 @@ use_preset_vocabulary: false
 一	g 	97
 不	gi 	94
 上	h 	7
-是	j 	79
+是	j 	81
 这	p 	98
 儿	qt 	8
 按	rpv 	9
@@ -47,7 +47,7 @@ use_preset_vocabulary: false
 俺	wdjn 	4
 在	d 	84
 都	ftjb 	69
-来	go 	7
+来	go 	8
 呢	knx 	9
 你	wq 	97
 工	a 	1
@@ -76,7 +76,7 @@ use_preset_vocabulary: false
 申	jhk 	1
 哎	kaq 	6
 啊	kbs 	9
-吗	kcg 	8
+吗	kcg 	9
 号	kgn 	7
 啥	kwfk 	7
 圈	lud 	1
@@ -787,7 +787,7 @@ use_preset_vocabulary: false
 控	rpw 	1
 剪	uejv 	1
 丫	uhk 	1
-音	ujf 	2
+音	ujf 	4
 背	uxe 	1
 祭	wfi 	1
 盲	ynh 	1
@@ -817,7 +817,7 @@ use_preset_vocabulary: false
 木	ssss 	1
 柱	syg 	1
 私	tcy 	1
-秀	te 	1
+秀	te 	2
 复	tjt 	1
 童	ujff 	1
 资	uqwm 	1
@@ -948,6 +948,10 @@ use_preset_vocabulary: false
 素	gxi 	1
 英	amd 	1
 歇	jqw 	1
+咦	kgx 	1
+嗡	kwcn 	1
+角	qe 	1
+链	qlp 	1
 你好	wqvb 	8
 中国	khlg 	4
 取得	bctj 	2
@@ -1150,7 +1154,7 @@ use_preset_vocabulary: false
 应该	yiyy 	9
 放大	ytdd 	1
 拍了	rrb 	1
-拼音	ruuj 	5
+拼音	ruuj 	7
 符号	twkg 	9
 冰雪	uifv 	1
 对着	cfud 	1
@@ -1314,7 +1318,7 @@ use_preset_vocabulary: false
 闹钟	uyqk 	1
 女儿	vvqt 	2
 代表	wage 	1
-什么	wftc 	6
+什么	wftc 	8
 全球	wggf 	1
 修复	whtj 	1
 介绍	wjxv 	1
@@ -1374,7 +1378,7 @@ use_preset_vocabulary: false
 稍微	titm 	3
 签署	twlf 	1
 签章	twuj 	3
-系统	txxy 	16
+系统	txxy 	2
 关系	udtx 	3
 仓库	wbyl 	8
 修正	whgh 	4
@@ -2504,7 +2508,7 @@ use_preset_vocabulary: false
 放弃	ytyc 	4
 基数	adov 	1
 劳力	aplt 	1
-匹配	aqsg 	1
+匹配	aqsg 	2
 切成	avdn 	1
 切片	avth 	1
 取代	bcwa 	1
@@ -3015,6 +3019,28 @@ use_preset_vocabulary: false
 房价	ynww 	2
 放心	ytny 	1
 八荒	wtay 	1
+克制	dqrm 	1
+无损	fqrk 	1
+不定	gipg 	1
+与其	gnad 	1
+激活	irit 	1
+当真	ivfh 	1
+最怕	jbnr 	1
+哪有	kvde 	1
+转为	lfyl 	1
+视为	pyyl 	1
+解释	qeto 	1
+乐园	qilf 	1
+兔子	qkbb 	1
+白色	rrqc 	1
+手工	rtaa 	1
+透明	teje 	1
+前线	uexg 	1
+全套	wgdd 	1
+偶尔	wjqi 	1
+编辑	xylk 	1
+序号	yckg 	1
+紊乱	yxtd 	1
 最大值	jdwf 	1
 输入法	ltif 	7
 来不来	gggo 	1
@@ -3056,7 +3082,7 @@ use_preset_vocabulary: false
 阿凡达	bmdp 	2
 蜘蛛侠	jjwg 	1
 好不好	vgvb 	1
-辅助码	ledc 	7
+辅助码	ledc 	8
 康师傅	yjwg 	1
 怎么样	ttsu 	2
 表情包	gnqn 	1
@@ -3105,7 +3131,7 @@ use_preset_vocabulary: false
 初中生	pktg 	1
 资本家	uspe 	1
 修不完	wgpf 	1
-通规字	cfpb 	1
+通规字	cfpb 	2
 用得着	etud 	1
 小狼毫	iqyp 	1
 日程表	jtge 	1
@@ -3150,5 +3176,5 @@ use_preset_vocabulary: false
 忙里偷闲	njwu 	1
 四舍五入	lwgt 	1
 凡人修仙传	mwww 	2
-山海八荒录	miwv 	2
+山海八荒录	miwv 	3
 中华人民共和国	kwwl 	3

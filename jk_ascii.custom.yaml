@@ -2,8 +2,8 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/prjk
+  __include: style.yaml:/mdjk
   __patch:
     style/+:
-      color_scheme: prjk
+      color_scheme: mdjk
       # font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根

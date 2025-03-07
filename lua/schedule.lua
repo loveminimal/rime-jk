@@ -72,9 +72,18 @@ local function schedule(input, seg, env)
         local days_in_year = IsLeap(year)                                   -- 若为闰年 - 366
         local year_progress = (day_of_year / days_in_year) * 100            -- 今年进度
 
+        -- 模拟四舍五入
+        local function round(x)
+            if x - math.floor(x) < 0.5 then
+                return math.floor(x)
+            else
+                return math.ceil(x)
+            end
+        end
+
         -- 进度条格式化
         local function generate_progress_bar(percentage)
-            local filled_blocks = math.floor(percentage / 10)
+            local filled_blocks = round(percentage / 10)
             local empty_blocks = 10 - filled_blocks
             return string.rep("▒", filled_blocks) .. string.rep("░", empty_blocks) ..
                        string.format(" %.1f%%", percentage)

@@ -48,7 +48,7 @@ local mapping = {
     xy = "→" , yx = "➭" ,
     
     -- 编辑常用符号
-    sm = "> :: ", sj = "18539282698", mc = "loveminimal", wz = "https://aituyaa.com",
+    sm = "> :: ", sj = "18539282698", mc = "loveminimal", wz = "https://aituyaa.com", ai = "aituyaa",
 
 }
 

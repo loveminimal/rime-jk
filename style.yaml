@@ -347,3 +347,39 @@ mljk:
     # ---〔翻页选项〕---
     prevpage_color: 0x19191999                  # 上一页
     nextpage_color: 0x19191999                  # 下一页
+
+# --- Dark 微暗 ---
+mdjk:
+  preset_color_schemes/mdjk:                    # 在 `style/color_schema` 指定的配色方案值
+    name: "知心／MS暗JK"                        # 方案设置中显示的配色名称
+    author: Jack Liu                            # 配色作者名称
+    color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
+    # ---〔背景设置〕---
+    border_color: 0x1b1b1b                      # 边框
+    back_color: 0x2c2c2c                        # 背景
+
+    shadow_color: 0x000000b4                    # 阴影
+    # ---〔内选区域·顶部〕---
+    text_color: 0xffffff                        # 文字
+    hilited_text_color: 0xffffff                # 编码
+    hilited_back_color: 0x383838                # 背景
+    
+    label_color: 0xd1d1d1                       # 标签
+    # ---〔激活的候选项·高亮〕---
+    hilited_candidate_text_color: 0xffffff      # 文字
+    hilited_candidate_back_color: 0x383838      # 背景
+
+    hilited_mark_color: 0x4cc2ff                # 标签前的标记
+    hilited_label_color: 0xcfcfcf               # 标签
+    hilited_comment_text_color: 0xcfcfcf        # 注释
+    # hilited_candidate_border_color: 0x8FBCBB  # 边框
+    # ---〔未激活的候选项〕---
+    candidate_text_color: 0xffffff              # 文字
+    comment_text_color: 0xd1d1d1                # 注释
+
+    # candidate_back_color: 0xECEFF4            # 背景
+    # candidate_border_color:                   # 边框
+    # candidate_shadow_color:                   # 阴影
+    # ---〔翻页选项〕---
+    prevpage_color: 0xffffff99                  # 上一页
+    nextpage_color: 0xffffff99                  # 下一页

@@ -319,7 +319,7 @@ mljk:
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
-    border_color: 0xEEEEFF                      # 边框
+    border_color: 0xF9F9F977                    # 边框
     back_color: 0xF9F9F9                        # 背景
 
     shadow_color: 0x000000b4                    # 阴影

@@ -66,6 +66,8 @@ key_binder:
 
 recognizer:
   __include: jk.yaml:/recognizer
+  patterns/+:
+    pinyin: "^z[Xa-z]*$"    
 
 punctuator:
   __include: jk.yaml:/punctuator

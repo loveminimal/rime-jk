@@ -16,7 +16,7 @@ version: '2025.03'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-人	w 	5
+人	w 	6
 中	kh 	9
 的	r 	98
 了	b 	82
@@ -24,7 +24,7 @@ use_preset_vocabulary: false
 能	ce 	7
 对	cf 	9
 码	dcg 	9
-大	dd 	6
+大	dd 	7
 厂	dgt 	2
 页	dmu 	6
 一	g 	97
@@ -47,7 +47,7 @@ use_preset_vocabulary: false
 俺	wdjn 	4
 在	d 	84
 都	ftjb 	69
-来	go 	8
+来	go 	9
 呢	knx 	9
 你	wq 	97
 工	a 	1
@@ -69,7 +69,7 @@ use_preset_vocabulary: false
 下	gh 	8
 还	gip 	9
 速	gkip 	1
-些	hxf 	6
+些	hxf 	8
 水	ii 	8
 洛	itk 	1
 最	jb 	9
@@ -152,7 +152,7 @@ use_preset_vocabulary: false
 抱	rqn 	1
 拍	rrg 	12
 白	rrrr 	2
-拆	rry 	7
+拆	rry 	8
 挺	rtfp 	8
 可	sk 	8
 要	sv 	8
@@ -782,7 +782,7 @@ use_preset_vocabulary: false
 贴	mhkg 	1
 展	nae 	1
 慢	nj 	1
-久	qy 	1
+久	qy 	2
 留	qyvl 	1
 控	rpw 	1
 剪	uejv 	1
@@ -965,6 +965,11 @@ use_preset_vocabulary: false
 希	qdm 	1
 歌	sksw 	1
 生	tg 	2
+吹	kqw 	1
+抖	ruf 	1
+村	sfy 	1
+语	ygk 	1
+市	ymhj 	2
 你好	wqvb 	8
 中国	khlg 	4
 取得	bctj 	2
@@ -974,7 +979,7 @@ use_preset_vocabulary: false
 基本	adsg 	9
 东西	aisg 	9
 存在	dhdh 	7
-形码	gadc 	6
+形码	gadc 	7
 玩意	gfuj 	8
 五笔	ggtt 	9
 最好	jbvb 	6
@@ -989,7 +994,7 @@ use_preset_vocabulary: false
 音码	ujdc 	1
 问题	ukjg 	9
 如果	vkjs 	9
-使用	wget 	8
+使用	wget 	9
 从来	wwgo 	5
 比较	xxlu 	9
 原因	drld 	2
@@ -1099,7 +1104,7 @@ use_preset_vocabulary: false
 公司	wcng 	8
 就是	yijg 	3
 功能	alce 	9
-功夫	alfw 	1
+功夫	alfw 	2
 左右	dadk 	3
 大小	ddih 	7
 感觉	dgip 	8
@@ -1406,7 +1411,7 @@ use_preset_vocabulary: false
 非常	djip 	2
 替换	fwrq 	3
 不用	giet 	8
-上屏	hhnu 	6
+上屏	hhnu 	9
 点击	hkfm 	9
 测试	imya 	7
 流畅	iyjh 	3
@@ -1696,7 +1701,7 @@ use_preset_vocabulary: false
 体力	wslt 	1
 级别	xekl 	1
 统计	xyyf 	3
-诗词	yfyn 	1
+诗词	yfyn 	2
 语言	ygyy 	4
 应用	yiet 	2
 词条	ynts 	1
@@ -1862,7 +1867,7 @@ use_preset_vocabulary: false
 词频	ynhi 	4
 词序	ynyc 	1
 显示	jofi 	9
-提示	rjfi 	2
+提示	rjfi 	3
 批量	rxjg 	1
 药箱	axts 	1
 降低	btwq 	1
@@ -2494,7 +2499,7 @@ use_preset_vocabulary: false
 链接	qlru 	3
 金丹	qqmy 	1
 急事	qvgk 	1
-留着	qyud 	1
+留着	qyud 	2
 排除	rdbw 	1
 排查	rdsj 	1
 扶梯	rfsu 	1
@@ -2999,7 +3004,7 @@ use_preset_vocabulary: false
 剽窃	sfpw 	1
 想法	shif 	1
 自觉	thip 	1
-科学	tuip 	1
+科学	tuip 	2
 养成	uddn 	1
 善用	udet 	1
 养老	udft 	1
@@ -3051,7 +3056,7 @@ use_preset_vocabulary: false
 前线	uexg 	1
 全套	wgdd 	1
 偶尔	wjqi 	1
-编辑	xylk 	1
+编辑	xylk 	3
 序号	yckg 	1
 紊乱	yxtd 	1
 苹果	agjs 	1
@@ -3067,6 +3072,28 @@ use_preset_vocabulary: false
 新版	usth 	1
 集中	wykh 	2
 变形	yoga 	1
+基于	adgf 	1
+龙珠	dxgr 	1
+水银	iiqv 	1
+浑身	iptm 	1
+省会	itwf 	1
+日语	jjyg 	4
+跨度	khya 	1
+啥用	kwet 	1
+加热	lkrv 	1
+界面	lwdm 	1
+导出	nfbm 	1
+被窝	pupw 	1
+名胜	qket 	1
+多好	qqvb 	1
+质量	rfjg 	1
+行政	tfgh 	1
+等级	tfxe 	1
+寻找	vfra 	1
+会员	wfkm 	1
+强制	xkrm 	1
+试图	yalt 	1
+高频	ymhi 	2
 最大值	jdwf 	1
 输入法	ltif 	7
 来不来	gggo 	1
@@ -3163,6 +3190,8 @@ use_preset_vocabulary: false
 日程表	jtge 	1
 找不到	rggc 	1
 中州韵	kyuj 	1
+石家庄	dpyf 	1
+年轻人	rlww 	1
 吞噬星空	gkjp 	9
 不可或缺	gsar 	1
 人定胜天	wpeg 	1

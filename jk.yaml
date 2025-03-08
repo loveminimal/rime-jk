@@ -35,7 +35,7 @@ recognizer:
   patterns:
     reverse_lookup: "^~~[a-z]*:?$"
     punct: "^~([0-9]|10|[A-Za-z]+)$"
-    pinyin: "^Z[Xa-z]*$"    
+    pinyin: "^[Xa-z]*$"    
     helper: "^(~hh|hH)$"
     quick_symbol: "^;.*$" 
 
@@ -73,7 +73,7 @@ reverse_lookup:
 pinyin:
   tag: pinyin
   dictionary: jk_pinyin
-  prefix: "Z"
+  prefix: "z"
   suffix: "'"
   tips: 〔拼音·反查〕
   preedit_format:

@@ -16,10 +16,10 @@ version: '2025.03'
 sort: by_weight
 use_preset_vocabulary: false
 ...
-人	w 	8
+人	w 	9
 中	kh 	9
 的	r 	98
-了	b 	89
+了	b 	93
 也	bn 	74
 能	ce 	7
 对	cf 	9
@@ -35,7 +35,7 @@ use_preset_vocabulary: false
 儿	qt 	8
 按	rpv 	9
 好	vb 	97
-个	wh 	88
+个	wh 	90
 就	yi 	85
 马	cn 	3
 此	hx 	1
@@ -152,7 +152,7 @@ use_preset_vocabulary: false
 抱	rqn 	1
 拍	rrg 	12
 白	rrrr 	2
-拆	rry 	8
+拆	rry 	9
 挺	rtfp 	8
 可	sk 	8
 要	sv 	8
@@ -298,7 +298,7 @@ use_preset_vocabulary: false
 巡	vp 	1
 婚	vq 	1
 杂	vs 	2
-九	vt 	1
+九	vtn 	2
 嫌	vu 	1
 妇	vv 	1
 姆	vx 	1
@@ -814,7 +814,7 @@ use_preset_vocabulary: false
 密	pnt 	1
 外	qh 	1
 机	sm 	3
-木	ssss 	1
+木	ssss 	2
 柱	syg 	1
 私	tcy 	1
 秀	te 	2
@@ -829,7 +829,7 @@ use_preset_vocabulary: false
 伤	wtl 	1
 集	wys 	2
 房	yny 	1
-魔	yssc 	1
+魔	yssc 	2
 陈	ba 	3
 防	by 	1
 骚	ccyj 	2
@@ -988,6 +988,13 @@ use_preset_vocabulary: false
 件	wrh 	1
 衣	ye 	1
 赢	ynky 	1
+末	gs 	1
+蛙	jff 	2
+嗑	kfcl 	1
+暂	lrjf 	1
+仔	wbg 	1
+衰	ykge 	1
+旗	yta 	1
 你好	wqvb 	8
 中国	khlg 	4
 取得	bctj 	2
@@ -1205,7 +1212,7 @@ use_preset_vocabulary: false
 改变	ntyo 	4
 按下	rpgh 	2
 指针	rxqf 	2
-查询	sjyq 	2
+查询	sjyq 	3
 样式	suaa 	7
 鼠标	vnsf 	3
 估计	wdyf 	5
@@ -1915,7 +1922,7 @@ use_preset_vocabulary: false
 影院	jybp 	1
 思想	lnsh 	2
 乐观	qicm 	1
-键盘	qvte 	3
+键盘	qvte 	4
 看似	rhwn 	2
 操蛋	rknh 	3
 按压	rpdf 	1
@@ -3045,7 +3052,7 @@ use_preset_vocabulary: false
 错失	qarw 	1
 反应	rcyi 	1
 近似	rpwn 	1
-接受	ruep 	1
+接受	ruep 	2
 失效	rwuq 	1
 模拟	sarn 	1
 配色	sgqc 	4
@@ -3148,7 +3155,7 @@ use_preset_vocabulary: false
 几种	mttk 	1
 收到	nhgc 	1
 书友	nndc 	1
-心累	nylx 	1
+心累	nylx 	2
 烧烤	oaof 	1
 宽泛	pait 	1
 家人	peww 	1
@@ -3193,6 +3200,21 @@ use_preset_vocabulary: false
 赢家	ynpe 	1
 这么	yptc 	1
 玄乎	yxtu 	1
+大楼	ddso 	1
+腾讯	euyn 	1
+走向	fhtm 	1
+都是	ftjg 	1
+还行	gitf 	1
+桌面	hjdm 	1
+办公	lwwc 	1
+民国	nalg 	1
+快符	nntw 	1
+发展	ntna 	1
+发言	ntyy 	1
+外长	qhta 	1
+狂魔	qtys 	1
+向量	tmjg 	1
+微量	tmjg 	1
 最大值	jdwf 	1
 输入法	ltif 	7
 来不来	gggo 	1
@@ -3299,6 +3321,8 @@ use_preset_vocabulary: false
 数据库	oryl 	3
 好东西	vasg 	1
 候选栏	wtsu 	1
+国民党	lnip 	1
+金刚钻	qmqh 	1
 吞噬星空	gkjp 	9
 不可或缺	gsar 	1
 人定胜天	wpeg 	1
@@ -3340,6 +3364,7 @@ use_preset_vocabulary: false
 四舍五入	lwgt 	1
 百花齐放	dayy 	1
 精诚所至	oyrg 	1
+锦上添花	qhia 	1
 凡人修仙传	mwww 	2
 山海八荒录	miwv 	3
 中华人民共和国	kwwl 	3

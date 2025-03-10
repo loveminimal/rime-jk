@@ -58,7 +58,7 @@ use_preset_vocabulary: false
 面	dm 	2
 爽	dqq 	5
 太	dy 	8
-有	e 	93
+有	e 	94
 豹	eeqy 	1
 用	et 	9
 超	fhv 	4
@@ -146,7 +146,7 @@ use_preset_vocabulary: false
 发	ntc 	8
 家	pe 	7
 福	pyg 	2
-找	ra 	6
+找	ra 	7
 把	rcn 	9
 摆	rlf 	2
 抱	rqn 	1
@@ -189,7 +189,7 @@ use_preset_vocabulary: false
 表	ge 	7
 于	gf 	9
 五	gg 	5
-理	gj 	1
+理	gj 	2
 事	gkv 	7
 画	gl 	1
 琮	gp 	1
@@ -997,6 +997,11 @@ use_preset_vocabulary: false
 旗	yta 	1
 虚	hao 	1
 牛	rhk 	1
+游	iytb 	1
+糙	otf 	2
+梦	ssq 	2
+北	ux 	1
+庄	yfd 	2
 你好	wqvb 	8
 中国	khlg 	4
 取得	bctj 	2
@@ -1182,7 +1187,7 @@ use_preset_vocabulary: false
 要用	svet 	1
 短词	tdyn 	2
 秋萍	toai 	2
-效果	uqjs 	2
+效果	uqjs 	3
 姿势	uqrv 	1
 好几	vbmt 	2
 嫂子	vvbb 	1
@@ -1214,7 +1219,7 @@ use_preset_vocabulary: false
 改变	ntyo 	4
 按下	rpgh 	2
 指针	rxqf 	2
-查询	sjyq 	3
+查询	sjyq 	4
 样式	suaa 	7
 鼠标	vnsf 	3
 估计	wdyf 	5
@@ -1335,7 +1340,7 @@ use_preset_vocabulary: false
 外面	qhdm 	1
 争气	qvrn 	1
 报道	rbut 	2
-后面	rgdm 	6
+后面	rgdm 	7
 所有	rnde 	1
 接触	ruqe 	2
 扩大	rydd 	1
@@ -2342,7 +2347,7 @@ use_preset_vocabulary: false
 当空	ivpw 	1
 游戏	iyca 	3
 最热	jbrv 	1
-最新	jbus 	3
+最新	jbus 	5
 明天	jegd 	8
 早睡	jhht 	1
 晚安	jqpv 	2
@@ -2470,7 +2475,7 @@ use_preset_vocabulary: false
 各种	tktk 	1
 稳定	tqpg 	3
 着急	udqv 	3
-关闭	uduf 	1
+关闭	uduf 	3
 单击	ujfm 	3
 音形	ujga 	2
 间距	ujkh 	2
@@ -2505,7 +2510,7 @@ use_preset_vocabulary: false
 场景	fnjy 	2
 老板	ftsr 	2
 天元	gdfq 	1
-一简	ggtu 	1
+一简	ggtu 	2
 下次	ghuq 	1
 上去	hhfc 	1
 上级	hhxe 	1
@@ -2547,7 +2552,7 @@ use_preset_vocabulary: false
 创建	wbvf 	2
 侃侃	wkwk 	1
 斜杠	wtsa 	1
-分词	wvyn 	4
+分词	wvyn 	8
 集成	wydn 	1
 引号	xhkg 	1
 放弃	ytyc 	4
@@ -3181,7 +3186,7 @@ use_preset_vocabulary: false
 禁用	sset 	1
 样板	susr 	1
 概率	svyx 	1
-长句	taqk 	1
+长句	taqk 	2
 斗法	ufif 	1
 单选	ujtf 	1
 慈祥	uxpy 	1
@@ -3227,6 +3232,20 @@ use_preset_vocabulary: false
 代理	wagj 	2
 侧边	wmlp 	1
 忘了	ynbn 	1
+预定	cbpg 	1
+城主	fdyg 	1
+静静	gege 	1
+加油	lkim 	1
+网格	mqst 	1
+打架	rslk 	1
+升级	taxe 	2
+彻底	tayq 	1
+自从	thww 	1
+微码	tmdc 	1
+装逼	ufgk 	1
+北京	uxyi 	1
+分开	wvga 	1
+席位	yawu 	1
 最大值	jdwf 	1
 输入法	ltif 	7
 来不来	gggo 	1
@@ -3304,7 +3323,7 @@ use_preset_vocabulary: false
 已归档	njsi 	5
 已发布	nndm 	2
 乌克兰	qduf 	1
-自然码	tqdc 	1
+自然码	tqdc 	2
 关键字	uqpb 	1
 含金量	wqjg 	1
 创建人	wvw 	1
@@ -3336,6 +3355,8 @@ use_preset_vocabulary: false
 国民党	lnip 	1
 金刚钻	qmqh 	1
 身份证	twyg 	1
+自行车	ttlg 	1
+知北游	tuiy 	1
 吞噬星空	gkjp 	9
 不可或缺	gsar 	1
 人定胜天	wpeg 	1
@@ -3380,5 +3401,5 @@ use_preset_vocabulary: false
 锦上添花	qhia 	1
 文档管理	ystg 	1
 凡人修仙传	mwww 	2
-山海八荒录	miwv 	3
+山海八荒录	miwv 	5
 中华人民共和国	kwwl 	3

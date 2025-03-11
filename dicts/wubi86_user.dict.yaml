@@ -36,7 +36,7 @@ use_preset_vocabulary: false
 按	rpv 	9
 好	vb 	97
 个	wh 	90
-就	yi 	88
+就	yi 	90
 马	cn 	3
 此	hx 	1
 没	im 	98
@@ -1075,7 +1075,7 @@ use_preset_vocabulary: false
 原因	drld 	2
 用户	etyn 	9
 过来	fpgo 	6
-老妈	ftvc 	8
+老妈	ftvc 	9
 师傅	jgwg 	1
 哈哈	kwkw 	9
 燃气	oqrn 	1
@@ -1439,7 +1439,7 @@ use_preset_vocabulary: false
 下降	ghbt 	1
 此处	hxth 	3
 滚动	iufc 	6
-当前	ivue 	4
+当前	ivue 	5
 最后	jbrg 	7
 时长	jfta 	1
 电力	jnlt 	2
@@ -2214,7 +2214,7 @@ use_preset_vocabulary: false
 困境	lsfu 	1
 同事	mggk 	3
 贴膜	mhea 	1
-删除	mmbw 	1
+删除	mmbw 	3
 疏导	nhnf 	1
 改过	ntfp 	3
 屏幕	nuaj 	1
@@ -3130,7 +3130,7 @@ use_preset_vocabulary: false
 透明	teje 	1
 前线	uexg 	2
 全套	wgdd 	1
-偶尔	wjqi 	1
+偶尔	wjqi 	2
 编辑	xylk 	4
 序号	yckg 	1
 紊乱	yxtd 	1
@@ -3380,6 +3380,9 @@ use_preset_vocabulary: false
 记住	ynwy 	1
 旋律	yttv 	1
 说句	yuqk 	1
+恶意	gouj 	1
+刷屏	nmnu 	1
+简练	tuxa 	1
 最大值	jdwf 	1
 输入法	ltif 	8
 来不来	gggo 	1
@@ -3410,7 +3413,6 @@ use_preset_vocabulary: false
 大字根	dpsv 	1
 二维码	fxdc 	1
 看不懂	rgna 	1
-杂九嫌	vvvu 	1
 小满意	iiuj 	3
 大幅度	dmya 	1
 精确度	odya 	1
@@ -3472,7 +3474,7 @@ use_preset_vocabulary: false
 修不完	wgpf 	1
 通规字	cfpb 	2
 用得着	etud 	1
-小狼毫	iqyp 	8
+小狼毫	iqyp 	9
 日程表	jtge 	1
 找不到	rggc 	1
 中州韵	kyuj 	1
@@ -3493,6 +3495,7 @@ use_preset_vocabulary: false
 知北游	tuiy 	2
 小科狗	itqt 	3
 发行版	ntth 	1
+候选词	wtyn 	1
 吞噬星空	gkjp 	9
 不可或缺	gsar 	1
 人定胜天	wpeg 	1

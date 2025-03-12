@@ -17,6 +17,7 @@ from header import get_header_sync
 from timer import timer
 
 
+@timer
 def convert(src_dir, out_dir, file_endswith_filter):
     """
     将用户同步的词典文件合并、排序并生成适用于 Rime 输入法的用户词典文件。
@@ -91,7 +92,7 @@ def combine(out_dir):
     res_dict = {}
     res_dict_weight = defaultdict(set)
     lines_total = []
-    print('☑️  === 合并到用户词典 ===')
+    print('\n☑️  === 合并到用户词典 ===')
     for file_path in out_dir.iterdir():
         if file_path.is_file() and file_path.name.startswith('wubi86_user'):
             dict_num = dict_num + 1

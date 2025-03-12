@@ -1334,7 +1334,7 @@ use_preset_vocabulary: false
 美图	uglt 	1
 部分	ukwv 	9
 背景	uxjy 	4
-好看	vbrh 	3
+好看	vbrh 	4
 好评	vbyg 	1
 即可	vcsk 	1
 如此	vkhx 	7
@@ -2354,7 +2354,7 @@ use_preset_vocabulary: false
 味道	kfut 	1
 吓跑	kgkh 	1
 只是	kwjg 	2
-轮子	lwbb 	1
+轮子	lwbb 	2
 办法	lwif 	6
 几点	mthk 	1
 后者	rgft 	1
@@ -3470,7 +3470,8 @@ use_preset_vocabulary: false
 劳模	apsa 	1
 郁闷	deun 	1
 哎呀	kaka 	1
-伙子	wobb 	1
+伙子	wobb 	2
+分享	wvyb 	2
 最大值	jdwf 	1
 输入法	ltif 	9
 来不来	gggo 	1

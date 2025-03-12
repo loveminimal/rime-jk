@@ -22,13 +22,18 @@ def convert(src_dir, out_dir, file_endswith_filter):
     dict_num = 0
     lines = []
 
-    for file_path in src_dir.iterdir():
-        if file_path.is_file() and file_path.name.endswith(file_endswith_filter):
-            dict_num = dict_num + 1
-            print('☑️  已加载第 %d 份码表 » %s' % (dict_num, file_path))
+    # for file_path in src_dir.iterdir():
+    #     if file_path.is_file() and file_path.name.endswith(file_endswith_filter):
+    #         dict_num = dict_num + 1
+    #         print('☑️  已加载第 %d 份码表 » %s' % (dict_num, file_path))
 
-            with open(file_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
+    #         with open(file_path, 'r', encoding='utf-8') as f:
+    #             lines = f.readlines()
+
+    file_path = src_dir / file_endswith_filter
+    print('☑️  已加载快捷别名命令列表 » %s' % (file_path))
+    with open(file_path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
 
     lines_list = []
     res = ''

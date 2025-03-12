@@ -1063,6 +1063,8 @@ use_preset_vocabulary: false
 横	sam 	1
 痒	uud 	1
 弟	uxh 	2
+阿	bs 	1
+氪	rndq 	1
 你好	wqvb 	8
 中国	khlg 	4
 取得	bctj 	2
@@ -3167,7 +3169,7 @@ use_preset_vocabulary: false
 变形	yoga 	1
 基于	adgf 	2
 龙珠	dxgr 	1
-水银	iiqv 	2
+水银	iiqv 	3
 浑身	iptm 	1
 省会	itwf 	1
 日语	jjyg 	4
@@ -3465,6 +3467,10 @@ use_preset_vocabulary: false
 住户	wyyn 	1
 续费	xfxj 	3
 房号	ynkg 	1
+劳模	apsa 	1
+郁闷	deun 	1
+哎呀	kaka 	1
+伙子	wobb 	1
 最大值	jdwf 	1
 输入法	ltif 	9
 来不来	gggo 	1

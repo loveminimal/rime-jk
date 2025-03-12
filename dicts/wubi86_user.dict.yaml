@@ -65,7 +65,7 @@ use_preset_vocabulary: false
 真	fhw 	9
 才	ft 	8
 老	ftx 	9
-弄	gaj 	8
+弄	gaj 	9
 下	gh 	8
 还	gip 	9
 速	gkip 	1
@@ -773,7 +773,7 @@ use_preset_vocabulary: false
 海	itx 	1
 湾	iyo 	1
 跎	khpx 	1
-蹲	khuf 	1
+蹲	khuf 	2
 噪	kkks 	1
 呗	kmy 	3
 哟	kx 	3
@@ -824,7 +824,7 @@ use_preset_vocabulary: false
 嫁	vpe 	1
 君	vtkd 	1
 佳	wffg 	1
-倒	wgc 	1
+倒	wgc 	2
 俱	whw 	1
 伤	wtl 	1
 集	wys 	5
@@ -1336,7 +1336,7 @@ use_preset_vocabulary: false
 范围	ailf 	3
 取码	bcdc 	1
 阳光	bjiq 	1
-除了	bwbn 	1
+除了	bwbn 	2
 附加	bwlk 	1
 友好	dcvb 	3
 大件	ddwr 	1
@@ -2678,7 +2678,7 @@ use_preset_vocabulary: false
 猎取	qtbc 	1
 描述	rasy 	2
 后缀	rgxc 	1
-看来	rhgo 	2
+看来	rhgo 	3
 看懂	rhna 	3
 操守	rkpf 	1
 抽取	rmbc 	1
@@ -3346,7 +3346,7 @@ use_preset_vocabulary: false
 诞生	yttg 	1
 莲台	alck 	1
 耐心	dmny 	1
-截屏	fanu 	2
+截屏	fanu 	3
 起点	fhhk 	1
 进群	fjvt 	1
 增量	fujg 	1
@@ -3358,7 +3358,7 @@ use_preset_vocabulary: false
 同行	mgtf 	1
 异步	nahi 	1
 蛋疼	nhut 	1
-精力	oglt 	1
+精力	oglt 	2
 精练	ogxa 	1
 断电	onjn 	1
 窗口	pwkk 	1
@@ -3402,7 +3402,7 @@ use_preset_vocabulary: false
 前台	ueck 	1
 普及	uoey 	1
 命中	wgkh 	1
-命令	wgwy 	1
+命令	wgwy 	2
 低调	wqym 	1
 食粮	wyoy 	1
 郭靖	ybug 	1
@@ -3413,6 +3413,9 @@ use_preset_vocabulary: false
 谦逊	yubi 	1
 脱离	euyb 	1
 适应	tdyi 	1
+别名	klqk 	1
+等等	tftf 	1
+舒适	wftd 	1
 最大值	jdwf 	1
 输入法	ltif 	9
 来不来	gggo 	1
@@ -3529,6 +3532,7 @@ use_preset_vocabulary: false
 阿根廷	bstf 	1
 注册表	imge 	2
 奥特曼	ttjl 	1
+输入框	ltsa 	1
 吞噬星空	gkjp 	9
 不可或缺	gsar 	1
 人定胜天	wpeg 	1

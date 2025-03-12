@@ -14,7 +14,7 @@
 #
 ---
 name: en_aliases
-version: '2025.02'
+version: '2025.03'
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -101,18 +101,15 @@ cd ~/AppData/Roaming/site/content/.obsidian/themes/Virgo	cdo	0
 cd D:/sourcecode/sc_rime/rime_utils	cdu	0
 cd D:/sourcecode/sc_rime	cdsc	0
 
-"C:/Program Files/Rime/weasel-0.16.3/WeaselDeployer.exe" /deploy	wdd	0
-"C:/Program Files/Rime/weasel-0.16.3/WeaselDeployer.exe" /sync	wds	0
-
 # --- Linux ---
 cd ~/.emacs.d	cdee	0
 cd ~/.shell	cdsh	0
 cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
-cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py && py scripts/sync_pinyin_user_dict.py	uud	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_pinyin_user_dict.py	uup	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	uuw	0
+cd ~/AppData/Roaming/Rime && py scripts/deploy_rime.py	dr	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py	sr	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_dict.py	uud	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_en_aliases_dict.py	uea	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && scp -r public/* aituyaa.com:/home/jack/blog/ && rm -rf public	sscp	0

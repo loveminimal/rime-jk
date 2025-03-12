@@ -92,7 +92,7 @@ def combine(out_dir):
     res_dict = {}
     res_dict_weight = defaultdict(set)
     lines_total = []
-    print('\n☑️  === 合并到用户词典 ===')
+    print('\n🔜  === 合并到用户词典 ===')
     for file_path in out_dir.iterdir():
         if file_path.is_file() and file_path.name.startswith('wubi86_user'):
             dict_num = dict_num + 1
@@ -148,7 +148,7 @@ if __name__ == '__main__':
     if current_out_file_temp.exists():
         current_out_file_temp.unlink()
         
-    print('☑️  === 开始同步转换用户自定义词库文件 ===')
+    print('🔜  === 开始同步转换用户自定义词库文件 ===')
     convert(src_dir, out_dir, file_endswith_filter)
     # 合并至用户文件
     combine(out_dir)

@@ -9,7 +9,6 @@ def deploy_rime():
     try:
         result = subprocess.run([weasel_deployer_path, "/deploy"], capture_output=True, text=True)
         if result.returncode == 0:
-
             print("✅  » Rime 部署成功")
             print(result.stdout)
         else:

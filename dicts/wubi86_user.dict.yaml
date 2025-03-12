@@ -36,14 +36,14 @@ use_preset_vocabulary: false
 按	rpv 	9
 好	vb 	97
 个	wh 	90
-就	yi 	98
+就	yi 	99
 马	cn 	3
 此	hx 	1
 没	im 	98
 我	q 	93
 送	udp 	2
 让	yh 	9
-宝	pgy 	6
+宝	pgy 	7
 俺	wdjn 	4
 在	d 	84
 都	ftjb 	69
@@ -939,7 +939,7 @@ use_preset_vocabulary: false
 威	dgv 	1
 确	dqe 	1
 暗	juj 	3
-照	jvko 	1
+照	jvko 	2
 色	qc 	1
 摄	rbcc 	1
 翻	toln 	1
@@ -1051,6 +1051,7 @@ use_preset_vocabulary: false
 啃	khe 	1
 般	tem 	1
 佐	wda 	1
+孰	ybvy 	1
 你好	wqvb 	8
 中国	khlg 	4
 取得	bctj 	2
@@ -1450,7 +1451,7 @@ use_preset_vocabulary: false
 时长	jfta 	1
 电力	jnlt 	2
 响应	ktyi 	1
-回事	lkgk 	2
+回事	lkgk 	3
 加上	lkhh 	3
 边框	lpsa 	2
 内容	mwpw 	6
@@ -1500,7 +1501,7 @@ use_preset_vocabulary: false
 哪天	kvgd 	3
 转化	lfwx 	1
 累积	lxtk 	2
-同步	mghi 	6
+同步	mghi 	7
 发现	ntgm 	8
 习惯	nunx 	7
 类似	odwn 	4
@@ -1783,7 +1784,7 @@ use_preset_vocabulary: false
 级别	xekl 	1
 统计	xyyf 	3
 诗词	yfyn 	2
-语言	ygyy 	4
+语言	ygyy 	5
 应用	yiet 	2
 词条	ynts 	1
 底层	yqnf 	1
@@ -1959,7 +1960,7 @@ use_preset_vocabulary: false
 砍到	dqgc 	1
 太空	dypw 	1
 地球	fbgf 	1
-地方	fbyy 	7
+地方	fbyy 	8
 震撼	fdrd 	1
 赶快	fhnn 	1
 过分	fpwv 	2
@@ -2465,7 +2466,7 @@ use_preset_vocabulary: false
 前段	uewd 	1
 单独	ujqt 	2
 总理	ukgj 	1
-部署	uklf 	3
+部署	uklf 	4
 那里	vfjf 	2
 杂草	vsaj 	1
 群主	vtyg 	1
@@ -2584,7 +2585,7 @@ use_preset_vocabulary: false
 排除	rdbw 	1
 排查	rdsj 	1
 扶梯	rfsu 	1
-本身	sgtm 	2
+本身	sgtm 	3
 可按	skrp 	1
 禁止	sshh 	1
 检测	swim 	1
@@ -2707,7 +2708,7 @@ use_preset_vocabulary: false
 简要	tusv 	1
 减小	udih 	1
 头发	udnt 	1
-前二	uefg 	3
+前二	uefg 	4
 半天	ufgd 	1
 装修	ufwh 	1
 商场	umfn 	1
@@ -2716,7 +2717,7 @@ use_preset_vocabulary: false
 好的	vbrq 	1
 好处	vbth 	1
 拿来	wggo 	1
-合并	wgua 	1
+合并	wgua 	2
 全部	wguk 	2
 修仙	whwm 	2
 保密	wkpn 	2
@@ -2739,7 +2740,7 @@ use_preset_vocabulary: false
 高度	ymya 	3
 房贷	ynwa 	3
 广西	yysg 	2
-文本	yysg 	3
+文本	yysg 	4
 工商	aaum 	1
 英法	amif 	1
 欧洲	aqiy 	1
@@ -2869,7 +2870,7 @@ use_preset_vocabulary: false
 相信	shwy 	1
 查出	sjbm 	1
 机会	smwf 	1
-选项	tfad 	3
+选项	tfad 	4
 毛线	tfxg 	1
 香港	tjia 	1
 积分	tkwv 	1
@@ -2928,7 +2929,7 @@ use_preset_vocabulary: false
 大致	ddgc 	1
 三枪	dgsw 	1
 布局	dmnn 	2
-原型	drga 	3
+原型	drga 	4
 霸王	fagg 	3
 超级	fhxe 	3
 无双	fqcc 	1
@@ -3283,7 +3284,7 @@ use_preset_vocabulary: false
 忘了	ynbn 	2
 预定	cbpg 	1
 城主	fdyg 	1
-静静	gege 	1
+静静	gege 	2
 加油	lkim 	1
 网格	mqst 	1
 打架	rslk 	1
@@ -3291,7 +3292,7 @@ use_preset_vocabulary: false
 彻底	tayq 	1
 自从	thww 	1
 微码	tmdc 	1
-装逼	ufgk 	1
+装逼	ufgk 	2
 北京	uxyi 	1
 分开	wvga 	1
 席位	yawu 	1
@@ -3402,7 +3403,7 @@ use_preset_vocabulary: false
 前台	ueck 	1
 普及	uoey 	1
 命中	wgkh 	1
-命令	wgwy 	2
+命令	wgwy 	3
 低调	wqym 	1
 食粮	wyoy 	1
 郭靖	ybug 	1
@@ -3416,6 +3417,14 @@ use_preset_vocabulary: false
 别名	klqk 	1
 等等	tftf 	1
 舒适	wftd 	1
+对象	cfqj 	1
+用于	etgf 	1
+模板	sasr 	1
+想到	shgc 	1
+终端	xtum 	1
+天赋	gdmg 	1
+异禀	nayl 	1
+始祖	vcpy 	1
 最大值	jdwf 	1
 输入法	ltif 	9
 来不来	gggo 	1
@@ -3533,6 +3542,8 @@ use_preset_vocabulary: false
 注册表	imge 	2
 奥特曼	ttjl 	1
 输入框	ltsa 	1
+字符串	ptkk 	1
+罗城主	lfy 	1
 吞噬星空	gkjp 	9
 不可或缺	gsar 	1
 人定胜天	wpeg 	1
@@ -3581,6 +3592,7 @@ use_preset_vocabulary: false
 精神抖擞	oprr 	1
 白狐天下	rqgg 	1
 兰亭集序	uywy 	1
+天赋异禀	gmny 	1
 凡人修仙传	mwww 	5
 山海八荒录	miwv 	7
 中华人民共和国	kwwl 	3

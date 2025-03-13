@@ -15,6 +15,8 @@ from pathlib import Path
 from header import get_en_aliases_header
 from timer import timer
 
+from progress import progress
+
 
 @timer
 def convert(src_dir, out_dir, file_endswith_filter):
@@ -56,7 +58,8 @@ def convert(src_dir, out_dir, file_endswith_filter):
                 res = res + line
 
     with open(out_dir / f'{out_file}', 'a', encoding='utf-8') as o:
-        print(f'✅  » 已合并排序去重英文码表 - 共 {len(lines_list)} 条')
+        progress()
+        print(f'\n✅  » 已合并排序去重英文码表 - 共 {len(lines_list)} 条')
         o.write(get_en_aliases_header(f'{out_file}'))
         o.write(res)
 

@@ -13,7 +13,7 @@ def sync_rime():
     try:
         result = subprocess.run([weasel_deployer_path, "/sync"], capture_output=True, text=True)
         if result.returncode == 0:
-            progress('正在同步', 0.1)
+            progress('正在同步', 0.13)
             print("\n✅  » Rime 同步成功")
             print(result.stdout)
         else:

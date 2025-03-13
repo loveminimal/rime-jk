@@ -2,6 +2,7 @@
 # by Jack Liu <https://aituyaa.com>
 # 
 import subprocess
+from progress import progress
 
 # 定义命令路径
 weasel_deployer_path = "C:/Program Files/Rime/weasel-0.16.3/WeaselDeployer.exe"
@@ -12,7 +13,8 @@ def deploy_rime():
     try:
         result = subprocess.run([weasel_deployer_path, "/deploy"], capture_output=True, text=True)
         if result.returncode == 0:
-            print("✅  » Rime 部署成功")
+            progress('正在部署')
+            print("\n✅  » Rime 部署成功")
             print(result.stdout)
         else:
             print("🚫  » Rime 部署失败")

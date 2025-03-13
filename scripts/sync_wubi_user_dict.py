@@ -15,6 +15,7 @@ from pathlib import Path
 from collections import defaultdict
 from header import get_header_sync
 from timer import timer
+from progress import progress
 
 
 @timer
@@ -67,7 +68,8 @@ def convert(src_dir, out_dir):
                     res_dict[word].add(code)
 
         if len(res.strip()) > 0:
-            print('✅  » 已生成用户词库临时文件 %s' % (out_dir / out_file_temp))
+            progress('正在转换')
+            print('\n✅  » 已生成用户词库临时文件 %s' % (out_dir / out_file_temp))
             o.write(res)
 
 def is_chinese_char(char: str) -> bool:

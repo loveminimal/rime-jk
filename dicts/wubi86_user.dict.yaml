@@ -51,7 +51,7 @@ use_preset_vocabulary: false
 花	awx	2
 药	ax	1
 荒	aynq	1
-了	b	227
+了	b	230
 陈	ba	3
 子	bb	8
 取	bc	1
@@ -60,8 +60,8 @@ use_preset_vocabulary: false
 陆	bfm	4
 孙	bi	2
 阵	bl	1
-出	bm	14
-也	bn	78
+出	bm	16
+也	bn	79
 耿	bo	1
 院	bpf	1
 聊	bq	1
@@ -132,6 +132,7 @@ use_preset_vocabulary: false
 页	dmu	8
 成	dn	10
 万	dnv	8
+灰	do	1
 达	dp	2
 克	dq	1
 确	dqe	1
@@ -146,7 +147,7 @@ use_preset_vocabulary: false
 龙	dx	1
 太	dy	23
 碎	dyw	1
-有	e	199
+有	e	201
 盈	ecl	1
 月	eee	9
 鹏	eeq	1
@@ -155,7 +156,7 @@ use_preset_vocabulary: false
 股	emc	1
 受	epc	3
 爱	epd	2
-用	et	154
+用	et	155
 腹	etj	1
 脱	euk	3
 脸	ewg	4
@@ -216,7 +217,7 @@ use_preset_vocabulary: false
 规	fwm	1
 堆	fwyg	6
 坑	fym	5
-一	g	155
+一	g	156
 开	ga	8
 形	gae	5
 武	gah	2
@@ -234,7 +235,7 @@ use_preset_vocabulary: false
 五	gg	7
 王	ggg	1
 环	ggi	2
-下	gh	44
+下	gh	45
 正	ghd	3
 不	gi	179
 甭	gie	1
@@ -257,7 +258,7 @@ use_preset_vocabulary: false
 两	gmww	23
 丽	gmy	1
 与	gn	4
-来	go	32
+来	go	34
 亚	gog	1
 琮	gp	1
 列	gq	2
@@ -347,7 +348,7 @@ use_preset_vocabulary: false
 洲	iyt	1
 游	iytb	1
 浪	iyv	1
-是	j	385
+是	j	387
 日	j	6
 虹	ja	1
 最	jb	9
@@ -583,7 +584,7 @@ use_preset_vocabulary: false
 冠	pfqf	1
 定	pg	3
 宇	pgf	1
-写	pgn	12
+写	pgn	13
 宝	pgy	7
 宫	pk	1
 密	pnt	1
@@ -604,7 +605,7 @@ use_preset_vocabulary: false
 祖	pye	1
 福	pyg	2
 神	pyj	5
-我	q	149
+我	q	150
 金	q	5
 错	qaj	12
 色	qc	1
@@ -647,7 +648,7 @@ use_preset_vocabulary: false
 急	qvn	2
 久	qy	3
 留	qyvl	2
-的	r	551
+的	r	555
 找	ra	10
 搭	rawk	1
 报	rb	5
@@ -1033,7 +1034,7 @@ use_preset_vocabulary: false
 纹	xyy	1
 主	y	7
 度	ya	2
-试	yaa	7
+试	yaa	8
 离	yb	1
 熟	ybv	5
 孰	ybvy	1
@@ -1046,9 +1047,9 @@ use_preset_vocabulary: false
 诸	yftj	1
 请	yge	5
 语	ygk	1
-让	yh	9
+让	yh	10
 店	yhk	1
-就	yi	155
+就	yi	156
 刘	yj	1
 齐	yjj	1
 衰	ykge	1
@@ -1071,7 +1072,7 @@ use_preset_vocabulary: false
 刻	yntj	1
 亡	ynv	1
 房	yny	1
-变	yo	3
+变	yo	4
 亮	ypm	2
 毫	ypt	1
 义	yq	1
@@ -1363,7 +1364,7 @@ use_preset_vocabulary: false
 原生	drtg	2
 原版	drth	1
 原始	drvc	3
-奇怪	dsnc	1
+奇怪	dsnc	2
 帮助	dteg	3
 故事	dtgk	1
 故意	dtuj	1
@@ -1413,7 +1414,7 @@ use_preset_vocabulary: false
 地图	fblt	1
 地名	fbqk	1
 地铁	fbqr	1
-地方	fbyy	8
+地方	fbyy	9
 动态	fcdy	5
 运动	fcfc	1
 动画	fcgl	1
@@ -1466,7 +1467,7 @@ use_preset_vocabulary: false
 真实	fhpu	1
 真的	fhrq	2
 直播	fhrt	1
-直接	fhru	27
+直接	fhru	28
 趋势	fhrv	1
 走向	fhtm	1
 超前	fhue	2
@@ -1502,7 +1503,7 @@ use_preset_vocabulary: false
 过于	fpgf	3
 过来	fpgo	6
 过目	fphh	1
-过滤	fpih	1
+过滤	fpih	2
 过年	fprh	1
 过程	fptk	3
 过分	fpwv	2
@@ -1636,7 +1637,7 @@ use_preset_vocabulary: false
 一般	ggte	9
 一片	ggth	1
 一种	ggtk	7
-五笔	ggtt	36
+五笔	ggtt	37
 一简	ggtu	2
 五入	ggty	1
 一次	gguq	1
@@ -1771,7 +1772,7 @@ use_preset_vocabulary: false
 肯定	hepg	9
 歧义	hfyq	1
 上面	hhdm	7
-上去	hhfc	1
+上去	hhfc	2
 上过	hhfp	1
 卡壳	hhfp	1
 止境	hhfu	1
@@ -2305,6 +2306,7 @@ use_preset_vocabulary: false
 心态	nydy	3
 尺寸	nyfg	1
 心境	nyfu	2
+心里	nyjf	1
 尽量	nyjg	6
 心中	nykh	2
 心田	nyll	1
@@ -2690,7 +2692,7 @@ use_preset_vocabulary: false
 抖音	ruuj	1
 搜索	rvfp	9
 势必	rvnt	1
-搜狗	rvqt	3
+搜狗	rvqt	4
 执行	rvtf	1
 执着	rvud	1
 热闹	rvuy	5
@@ -2905,7 +2907,7 @@ use_preset_vocabulary: false
 得到	tjgc	1
 利于	tjgf	1
 香港	tjia	1
-复制	tjrm	3
+复制	tjrm	4
 利息	tjth	1
 复杂	tjvs	2
 复刻	tjyn	1
@@ -3044,7 +3046,8 @@ use_preset_vocabulary: false
 美图	uglt	1
 美好	ugvb	2
 冰雪	uifv	1
-冰凌	uiuf	11
+冰凌	uiuf	12
+音节	ujab	1
 音码	ujdc	1
 单击	ujfm	3
 音形	ujga	2
@@ -3409,7 +3412,7 @@ use_preset_vocabulary: false
 毕竟	xxuj	8
 比如	xxvk	4
 比例	xxwg	5
-编码	xydc	12
+编码	xydc	13
 统一	xygg	2
 统治	xyic	1
 编辑	xylk	4
@@ -3580,7 +3583,7 @@ use_preset_vocabulary: false
 文献	yyfm	2
 方法	yyif	4
 文字	yypb	7
-方案	yypv	34
+方案	yypv	35
 广西	yysg	2
 文本	yysg	8
 文档	yysi	17

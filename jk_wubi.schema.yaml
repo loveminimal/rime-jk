@@ -85,7 +85,7 @@ chord_composer:
 translator:
   dictionary: jk_wubi             
   prism: jk_wubi                  
-  enable_charset_filter: true     
+  enable_charset_filter: false     
   enable_sentence: true           
   enable_encoder: true            
   encode_commit_history: true     

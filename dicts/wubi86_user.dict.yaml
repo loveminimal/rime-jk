@@ -52,7 +52,7 @@ use_preset_vocabulary: false
 花	awx	2
 药	ax	1
 荒	aynq	1
-了	b	278
+了	b	281
 陈	ba	3
 子	bb	8
 取	bc	1
@@ -69,6 +69,7 @@ use_preset_vocabulary: false
 隐	bq	1
 阿	bs	1
 降	bt	1
+隆	btg	1
 联	bu	1
 队	bw	1
 除	bwt	4
@@ -83,7 +84,7 @@ use_preset_vocabulary: false
 骚	ccyj	2
 参	cd	1
 骑	cds	1
-能	ce	70
+能	ce	71
 勇	cel	1
 通	cep	3
 熊	cexo	2
@@ -158,7 +159,7 @@ use_preset_vocabulary: false
 股	emc	1
 受	epc	3
 爱	epd	2
-用	et	179
+用	et	181
 腹	etj	1
 脱	euk	3
 脸	ewg	4
@@ -187,7 +188,7 @@ use_preset_vocabulary: false
 起	fhn	4
 走	fhu	7
 超	fhv	4
-真	fhw	24
+真	fhw	26
 未	fii	6
 求	fiy	4
 朝	fje	1
@@ -222,7 +223,7 @@ use_preset_vocabulary: false
 规	fwm	1
 堆	fwyg	6
 坑	fym	5
-一	g	192
+一	g	194
 开	ga	10
 形	gae	5
 武	gah	2
@@ -252,7 +253,7 @@ use_preset_vocabulary: false
 整	gkih	3
 赖	gkim	3
 速	gkip	1
-卅	gkk	46
+卅	gkk	47
 带	gkp	5
 逗	gkup	1
 事	gkv	7
@@ -312,6 +313,7 @@ use_preset_vocabulary: false
 泪	ihg	1
 水	ii	8
 消	iie	1
+漫	ijlc	1
 湿	ijo	1
 渴	ijq	1
 混	ijxx	1
@@ -356,7 +358,7 @@ use_preset_vocabulary: false
 洲	iyt	1
 游	iytb	1
 浪	iyv	1
-是	j	464
+是	j	466
 日	j	6
 虹	ja	1
 蝶	jan	1
@@ -554,7 +556,7 @@ use_preset_vocabulary: false
 书	nnh	4
 忆	nnn	1
 已	nnnn	6
-快	nnw	11
+快	nnw	12
 怕	nrg	2
 发	ntc	13
 性	ntg	9
@@ -585,7 +587,7 @@ use_preset_vocabulary: false
 烂	oufg	2
 数	ovt	3
 米	oy	2
-这	p	248
+这	p	249
 宽	pa	1
 字	pb	33
 害	pd	2
@@ -617,10 +619,10 @@ use_preset_vocabulary: false
 祖	pye	1
 福	pyg	2
 神	pyj	5
-我	q	174
+我	q	176
 金	q	5
 氏	qa	1
-错	qaj	16
+错	qaj	17
 色	qc	1
 勾	qci	1
 然	qd	3
@@ -662,7 +664,7 @@ use_preset_vocabulary: false
 久	qy	3
 勺	qyi	1
 留	qyvl	2
-的	r	681
+的	r	683
 找	ra	12
 摸	rajd	1
 搭	rawk	1
@@ -678,7 +680,7 @@ use_preset_vocabulary: false
 质	rfm	1
 后	rg	11
 年	rh	8
-看	rhf	59
+看	rhf	60
 掉	rhj	8
 牛	rhk	2
 爬	rhyc	3
@@ -886,7 +888,7 @@ use_preset_vocabulary: false
 单	ujfj	6
 章	ujj	1
 意	ujn	2
-部	ukb	2
+部	ukb	3
 问	ukd	8
 冲	ukh	3
 总	ukn	5
@@ -989,10 +991,10 @@ use_preset_vocabulary: false
 仙	wm	1
 亿	wn	2
 假	wnh	3
-追	wnnp	1
+追	wnnp	3
 似	wny	1
 伙	wo	7
-你	wq	181
+你	wq	182
 低	wqa	1
 爸	wqc	1
 像	wqj	9
@@ -1095,7 +1097,7 @@ use_preset_vocabulary: false
 永	yni	1
 启	ynk	1
 赢	ynky	1
-遍	ynm	1
+遍	ynm	2
 记	ynn	3
 忘	ynnu	3
 刻	yntj	1
@@ -1153,6 +1155,7 @@ use_preset_vocabulary: false
 某些	afhx	1
 某种	aftk	1
 某次	afuq	1
+革新	afus	1
 革命	afwg	1
 某个	afwh	1
 苹果	agjs	3
@@ -1339,6 +1342,8 @@ use_preset_vocabulary: false
 厂商	dgum	1
 三个	dgwh	1
 硬件	dgwr	1
+三体	dgws	1
+硬体	dgws	1
 感人	dgww	2
 感化	dgwx	1
 石化	dgwx	1
@@ -1418,6 +1423,7 @@ use_preset_vocabulary: false
 太难	dycw	1
 太大	dydd	3
 太少	dyit	1
+太监	dyjt	2
 太空	dypw	1
 太多	dyqq	2
 态度	dyya	1
@@ -1457,6 +1463,7 @@ use_preset_vocabulary: false
 地图	fblt	1
 地名	fbqk	1
 地铁	fbqr	1
+地利	fbtj	1
 地方	fbyy	13
 动态	fcdy	5
 运动	fcfc	1
@@ -1653,6 +1660,7 @@ use_preset_vocabulary: false
 天下	gdgh	1
 天上	gdhh	1
 天虹	gdja	1
+天时	gdjf	1
 吞噬	gdkt	3
 天赋	gdmg	1
 天然	gdqd	1
@@ -1694,7 +1702,7 @@ use_preset_vocabulary: false
 一般	ggte	9
 一片	ggth	1
 一种	ggtk	7
-五笔	ggtt	52
+五笔	ggtt	53
 一简	ggtu	2
 五入	ggty	1
 一次	gguq	1
@@ -1828,7 +1836,7 @@ use_preset_vocabulary: false
 平凡	gumy	1
 平铺	guqg	3
 平板	gusr	1
-虎码	hadc	9
+虎码	hadc	10
 皮肤	hcef	2
 肯定	hepg	9
 歧义	hfyq	1
@@ -1840,6 +1848,7 @@ use_preset_vocabulary: false
 上下	hhgh	3
 上班	hhgy	1
 上演	hhip	1
+卡车	hhlg	1
 上边	hhlp	1
 上周	hhmf	2
 上层	hhnf	1
@@ -2149,7 +2158,7 @@ use_preset_vocabulary: false
 只需	kwfd	1
 唯一	kwgg	1
 只是	kwjg	2
-哈哈	kwkw	35
+哈哈	kwkw	38
 只看	kwrh	1
 只要	kwsv	3
 只会	kwwf	1
@@ -2276,6 +2285,7 @@ use_preset_vocabulary: false
 购入	mqty	1
 网站	mquh	2
 网络	mqxt	2
+网文	mqyy	1
 几十	mtfg	1
 几天	mtgd	2
 几点	mthk	2
@@ -2297,11 +2307,13 @@ use_preset_vocabulary: false
 内容	mwpw	6
 凡人	myww	2
 展示	nafi	2
+异形	naga	1
 展现	nagm	1
 异步	nahi	1
 民国	nalg	1
 惬意	nauj	1
 异禀	nayl	1
+剧情	ndng	1
 恢复	ndtj	3
 居住	ndwy	1
 导出	nfbm	1
@@ -2409,6 +2421,7 @@ use_preset_vocabulary: false
 精准	oguw	3
 精灵	ogvo	1
 精练	ogxa	1
+爆款	ojff	1
 爆满	ojia	1
 爆炸	ojot	1
 断电	onjn	1
@@ -2445,6 +2458,9 @@ use_preset_vocabulary: false
 赛事	pfgk	1
 寒风	pfmq	1
 冠军	pfpl	2
+完本	pfsg	1
+寒酸	pfsg	1
+完美	pfug	1
 赛道	pfut	2
 完全	pfwg	3
 定期	pgad	1
@@ -2472,7 +2488,7 @@ use_preset_vocabulary: false
 之名	ppqk	1
 之后	pprg	15
 之处	ppth	1
-之前	ppue	20
+之前	ppue	21
 之间	ppuj	2
 之道	pput	1
 之旅	ppyt	1
@@ -2848,6 +2864,7 @@ use_preset_vocabulary: false
 本源	sgid	1
 配置	sglf	18
 配色	sgqc	4
+配角	sgqe	1
 西瓜	sgrc	1
 本质	sgrf	2
 本身	sgtm	5
@@ -2933,7 +2950,7 @@ use_preset_vocabulary: false
 短剧	tdnd	2
 适宜	tdpe	1
 知乎	tdtu	1
-知道	tdut	20
+知道	tdut	21
 适合	tdwg	10
 乱序	tdyc	1
 智育	tdyc	1
@@ -2973,6 +2990,7 @@ use_preset_vocabulary: false
 生死	tggq	1
 生涯	tgid	1
 生活	tgit	6
+重映	tgjm	1
 策略	tglt	1
 重写	tgpg	1
 重提	tgrj	1
@@ -3055,6 +3073,7 @@ use_preset_vocabulary: false
 移植	tqsf	1
 稳住	tqwy	1
 鹅厂	trdg	1
+特殊	trgq	1
 特别	trkl	2
 特定	trpg	1
 物质	trrf	1
@@ -3291,6 +3310,7 @@ use_preset_vocabulary: false
 如同	vkmg	1
 如何	vkws	21
 鼠标	vnsf	3
+刀郎	vnyv	1
 灵魂	vofc	1
 灵界	volw	1
 杂草	vsaj	1
@@ -3452,6 +3472,7 @@ use_preset_vocabulary: false
 人类	wwod	2
 人家	wwpe	5
 丛生	wwtg	1
+人和	wwtk	1
 人物	wwtr	2
 人们	wwwu	1
 华明	wxje	6
@@ -3480,7 +3501,7 @@ use_preset_vocabulary: false
 经过	xcfp	1
 经常	xcip	9
 经济	xciy	4
-经典	xcma	1
+经典	xcma	2
 经纬	xcxf	1
 绑定	xdpg	1
 缓存	xedh	2
@@ -3507,6 +3528,7 @@ use_preset_vocabulary: false
 强制	xkrm	3
 强推	xkrw	1
 强行	xktf	2
+细节	xlab	1
 细胞	xleq	2
 细看	xlrh	1
 纠结	xnxf	2
@@ -3520,6 +3542,7 @@ use_preset_vocabulary: false
 终究	xtpw	1
 疑问	xtuk	1
 终端	xtum	3
+终结	xtxf	1
 弹幕	xuaj	1
 弹窗	xupw	4
 绿色	xvqc	2
@@ -3703,6 +3726,7 @@ use_preset_vocabulary: false
 紊乱	yxtd	1
 畜生	yxtg	1
 玄乎	yxtu	1
+谐音	yxuj	1
 玄妙	yxvi	1
 方式	yyaa	8
 方面	yydm	8
@@ -3761,6 +3785,7 @@ use_preset_vocabulary: false
 不知道	gtut	1
 玩意儿	guqt	6
 一个人	gwww	1
+卡梅隆	hsbt	1
 滚动条	ifts	2
 小满意	iiuj	3
 浏览器	ijkk	6
@@ -3816,13 +3841,14 @@ use_preset_vocabulary: false
 李达康	sdyv	3
 管理员	tgkm	3
 第一次	tguq	3
+短视频	tphi	1
 很容易	tpjq	1
 自定义	tpyq	4
 自然码	tqdc	5
 奥特曼	ttjl	1
 自行车	ttlg	1
 怎么样	ttsu	2
-知北游	tuiy	2
+知北游	tuiy	7
 处女座	tvyw	1
 身份证	twyg	4
 翻译器	tykk	3
@@ -3865,7 +3891,7 @@ use_preset_vocabulary: false
 喜气洋洋	frii	1
 土木工程	fsat	1
 形散神聚	gapb	1
-吞噬星空	gkjp	20
+吞噬星空	gkjp	21
 一蹋糊涂	gkoi	2
 天赋异禀	gmny	1
 不可或缺	gsar	1
@@ -3887,6 +3913,7 @@ use_preset_vocabulary: false
 精神抖擞	oprr	1
 精诚所至	oyrg	1
 视若无睹	pafh	1
+空前绝后	puxr	1
 锦上添花	qhia	1
 白驹过隙	rcfb	1
 白狐天下	rqgg	1
@@ -3905,11 +3932,13 @@ use_preset_vocabulary: false
 公诸于众	wygw	1
 红衰翠减	xynu	1
 毫无意义	yfuy	5
+说来话长	ygyt	1
 文档管理	ystg	1
 文件来源	ywgi	1
 文件内容	ywmp	3
 高级搜索	yxrf	1
 高谈阔论	yyuy	1
-山海八荒录	miwv	8
+泰坦尼克号	dfnk	1
+山海八荒录	miwv	9
 凡人修仙传	mwww	8
 中华人民共和国	kwwl	3

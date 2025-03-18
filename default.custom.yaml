@@ -88,4 +88,4 @@ patch:
       - { when: always, accept: Control+u, send: '_' }
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
-      - { when: always, accept: Control+p, send: '+' }
+      # - { when: always, accept: Control+p, send: '+' }

@@ -17,25 +17,100 @@ sort: by_weight
 use_preset_vocabulary: false
 ...
 工	aa,aa;a0,00	1
+了	bn,h0;b0,00	0
+也	bn,hn	0
+太	dy,i0	1
+用	et,nh	0
 雾	ft,lb	2
+到	gc,fj	0
 淞	is,wc	1
-的	rq,yy;r0,00	1
+中	kh,k0;k0,00	1
+嗯	kl,dn	1
+呢	kn,xn	0
+啦	kr,ug	1
+己	nn,gn	1
+的	rq,yy;r0,00	2
 逆	ub,tp	1
 录	vi,u0	0
+做	wd,ty	0
 仙	wm,h0	1
+基座	ad,wf yw,wf	0
+限制	bv,ey rm,hj	0
+预测	cb,dm im,jh	0
+难搞	cw,yg ry,mk	1
+大厂	dd,dd dg,t0	0
+感觉	dg,kn ip,mq	0
+太多	dy,i0 qq,u0	1
+都是	ft,jb jg,hu;j0,00	0
 雾淞	ft,lb is,wc	1
+形码	ga,et dc,g0	0
+弄好	ga,j0 vb,g0	0
 吞噬	gd,kf kt,aw	0
 五笔	gg,hg tt,fn	0
-整句	gk,ih qk,d0	0
+不要	gi,i0;dh,i0;i0,00 sv,f0;s0,00	0
+整句	gk,ih qk,d0	1
+目前	hh,hh ue,jj	0
+明天	je,g0 gd,i0	0
+是有	jg,hu;j0,00 de,f0;e0,00	0
 星空	jt,gf pw,af	0
 转换	lf,ny rq,md	1
+加上	lk,g0 hg,d0;hh,gg;h0,00	0
+办法	lw,i0 if,cy	0
 山海	mm,mm it,xu	0
+之后	pp,pp rg,kd	0
+容易	pw,wk jq,rr	0
 拼音	ru,ah uj,f0	0
+模型	sa,jd ga,jf	0
+长句	ta,yi qk,d0	1
+好像	vb,g0 wq,je	1
+公司	wc,u0 ng,kd	0
 仙逆	wm,h0 ub,tp	7
+你的	wq,iy rq,yy;r0,00	0
 八荒	wt,y0 ay,nq	0
+依靠	wy,ey tf,kd	0
+试试	ya,ag ya,ag	1
+调频	ym,fk hi,dm	1
 词库	yn,gk yl,k0	1
+这种	yp,i0;p0,00 tk,hh	0
+这个	yp,i0;p0,00 wh,j0	1
+方案	yy,gn pv,su	1
+基本上	ad,wf sg,d0 hg,d0;hh,gg;h0,00	0
+切换成	av,n0 rq,md dn,nt	0
+也可以	bn,hn sk,d0 ny,wy;c0,00	0
+预测的	cb,dm im,jh rq,yy;r0,00	1
+开启了	ga,k0 yn,kd bn,h0;b0,00	3
+还可以	gi,pi sk,d0 ny,wy;c0,00	0
+输入法	lw,gj ty,i0 if,cy	0
+的事情	rq,yy;r0,00 gk,vh ng,eg	0
+本身就	sg,d0 tm,dt yi,dn	0
+我现在	tr,xy;tr,nt;q0,00 gm,qn dh,fd;d0,00	0
+我刚刚	tr,xy;tr,nt;q0,00 mq,jh mq,jh	0
+我记得	tr,xy;tr,nt;q0,00 yn,n0 tj,gf	0
 你好吗	wq,iy vb,g0 kc,g0	1
+也基本上	bn,hn ad,wf sg,d0 hg,d0;hh,gg;h0,00	1
+用户词库	et,nh yn,e0 yn,gk yl,k0	0
+都是依靠	ft,jb jg,hu;j0,00 wy,ey tf,kd	1
 雾淞拼音	ft,lb is,wc ru,ah uj,f0	3
 吞噬星空	gd,kf kt,aw jt,gf pw,af	1
 五笔整句	gg,hg tt,fn gk,ih qk,d0	1
+不是一件	gi,i0;dh,i0;i0,00 jg,hu;j0,00 gg,ll;g0,00 wr,hh	0
+加上模型	lk,g0 hg,d0;hh,gg;h0,00 sa,jd ga,jf	1
+模型这种	sa,jd ga,jf yp,i0;p0,00 tk,hh	1
+差不多了	ud,af gi,i0;dh,i0;i0,00 qq,u0 bn,h0;b0,00	0
+整句做词库	gk,ih qk,d0 wd,ty yn,gk yl,k0	1
 山海八荒录	mm,mm it,xu wt,y0 ay,nq vi,u0	1
+我刚刚弄好	tr,xy;tr,nt;q0,00 mq,jh mq,jh ga,j0 vb,g0	1
+基座差不多了	ad,wf yw,wf ud,af gi,i0;dh,i0;i0,00 qq,u0 bn,h0;b0,00	1
+用户词库之后	et,nh yn,e0 yn,gk yl,k0 pp,pp rg,kd	1
+怎么可以这样	th,fn tc,u0 sk,d0 ny,wy;c0,00 yp,i0;p0,00 su,dh	0
+感觉还可以目前	dg,kn ip,mq gi,pi sk,d0 ny,wy;c0,00 hh,hh ue,jj	1
+明天到公司之后	je,g0 gd,i0 gc,fj wc,u0 ng,kd pp,pp rg,kd	1
+是有限制的办法	jg,hu;j0,00 de,f0;e0,00 bv,ey rm,hj rq,yy;r0,00 lw,i0 if,cy	1
+怎么可以这样呢	th,fn tc,u0 sk,d0 ny,wy;c0,00 yp,i0;p0,00 su,dh kn,xn	2
+我记得你的方案	tr,xy;tr,nt;q0,00 yn,n0 tj,gf wq,iy rq,yy;r0,00 yy,gn pv,su	1
+你是怎么知道的	wq,iy jg,hu;j0,00 th,fn tc,u0 td,kg ut,hp rq,yy;r0,00	2
+这个不要也可以	yp,i0;p0,00 wh,j0 gi,i0;dh,i0;i0,00 sv,f0;s0,00 bn,hn sk,d0 ny,wy;c0,00	1
+感觉大厂的输入法预测	dg,kn ip,mq dd,dd dg,t0 rq,yy;r0,00 lw,gj ty,i0 if,cy cb,dm im,jh	1
+我现在切换成形码整句了	tr,xy;tr,nt;q0,00 gm,qn dh,fd;d0,00 av,n0 rq,md dn,nt ga,et dc,g0 gk,ih qk,d0 bn,h0;b0,00	1
+差不多了用这个试试模型	ud,af gi,i0;dh,i0;i0,00 qq,u0 bn,h0;b0,00 et,nh yp,i0;p0,00 wh,j0 ya,ag ya,ag sa,jd ga,jf	1
+本身就不是一件容易的事情	sg,d0 tm,dt yi,dn gi,i0;dh,i0;i0,00 jg,hu;j0,00 gg,ll;g0,00 wr,hh pw,wk jq,rr rq,yy;r0,00 gk,vh ng,eg	1

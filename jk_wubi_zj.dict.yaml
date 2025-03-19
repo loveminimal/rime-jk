@@ -1,0 +1,24 @@
+# Rime dictionary
+# encoding: utf-8
+# https://github.com/gaboolic/rime-shuangpin-fuzhuma
+# 
+# rime配置的部署位置：
+# ~/.local/share/fcitx5/rime 或者 ~/.config/ibus/rime  (Linux)
+# ~/Library/Rime  (Mac OS)
+# %APPDATA%\Rime  (Windows)
+# 
+#
+
+---
+name: jk_wubi_zj
+version: "2016.06.26"
+sort: by_weight
+use_preset_vocabulary: false
+import_tables:
+  ## 雾凇拼音 https://github.com/iDvel/rime-ice
+  - cn_dicts_wb/8105     # 字表
+  # - cn_dicts_wb/41448
+  - cn_dicts_wb/base     # 基础词库
+  - cn_dicts_wb/ext      # 扩展词库
+  - cn_dicts_wb/others   # 一些杂项 容错音和错字 可以不开
+...

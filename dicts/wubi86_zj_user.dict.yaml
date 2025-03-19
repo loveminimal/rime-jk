@@ -35,6 +35,8 @@ use_preset_vocabulary: false
 做	wd,ty	0
 仙	wm,h0	1
 基座	ad,wf yw,wf	0
+其实	ad,wu pu,du	0
+也是	bn,hn jg,hu;j0,00	0
 限制	bv,ey rm,hj	0
 预测	cb,dm im,jh	0
 难搞	cw,yg ry,mk	1
@@ -59,6 +61,8 @@ use_preset_vocabulary: false
 山海	mm,mm it,xu	0
 之后	pp,pp rg,kd	0
 容易	pw,wk jq,rr	0
+句子	qk,d0 bb,bb	0
+打的	rs,h0 rq,yy;r0,00	0
 拼音	ru,ah uj,f0	0
 模型	sa,jd ga,jf	0
 长句	ta,yi qk,d0	1
@@ -68,6 +72,7 @@ use_preset_vocabulary: false
 你的	wq,iy rq,yy;r0,00	0
 八荒	wt,y0 ay,nq	0
 依靠	wy,ey tf,kd	0
+经常	xc,ag;x0,00 ip,kh	0
 试试	ya,ag ya,ag	1
 调频	ym,fk hi,dm	1
 词库	yn,gk yl,k0	1
@@ -78,6 +83,7 @@ use_preset_vocabulary: false
 切换成	av,n0 rq,md dn,nt	0
 也可以	bn,hn sk,d0 ny,wy;c0,00	0
 预测的	cb,dm im,jh rq,yy;r0,00	1
+有限的	de,f0;e0,00 bv,ey rq,yy;r0,00	0
 开启了	ga,k0 yn,kd bn,h0;b0,00	3
 还可以	gi,pi sk,d0 ny,wy;c0,00	0
 输入法	lw,gj ty,i0 if,cy	0
@@ -97,6 +103,7 @@ use_preset_vocabulary: false
 加上模型	lk,g0 hg,d0;hh,gg;h0,00 sa,jd ga,jf	1
 模型这种	sa,jd ga,jf yp,i0;p0,00 tk,hh	1
 差不多了	ud,af gi,i0;dh,i0;i0,00 qq,u0 bn,h0;b0,00	0
+也是有限的	bn,hn jg,hu;j0,00 de,f0;e0,00 bv,ey rq,yy;r0,00	1
 整句做词库	gk,ih qk,d0 wd,ty yn,gk yl,k0	1
 山海八荒录	mm,mm it,xu wt,y0 ay,nq vi,u0	1
 我刚刚弄好	tr,xy;tr,nt;q0,00 mq,jh mq,jh ga,j0 vb,g0	1
@@ -110,6 +117,7 @@ use_preset_vocabulary: false
 我记得你的方案	tr,xy;tr,nt;q0,00 yn,n0 tj,gf wq,iy rq,yy;r0,00 yy,gn pv,su	1
 你是怎么知道的	wq,iy jg,hu;j0,00 th,fn tc,u0 td,kg ut,hp rq,yy;r0,00	2
 这个不要也可以	yp,i0;p0,00 wh,j0 gi,i0;dh,i0;i0,00 sv,f0;s0,00 bn,hn sk,d0 ny,wy;c0,00	1
+其实经常打的句子	ad,wu pu,du xc,ag;x0,00 ip,kh rs,h0 rq,yy;r0,00 qk,d0 bb,bb	1
 感觉大厂的输入法预测	dg,kn ip,mq dd,dd dg,t0 rq,yy;r0,00 lw,gj ty,i0 if,cy cb,dm im,jh	1
 我现在切换成形码整句了	tr,xy;tr,nt;q0,00 gm,qn dh,fd;d0,00 av,n0 rq,md dn,nt ga,et dc,g0 gk,ih qk,d0 bn,h0;b0,00	1
 差不多了用这个试试模型	ud,af gi,i0;dh,i0;i0,00 qq,u0 bn,h0;b0,00 et,nh yp,i0;p0,00 wh,j0 ya,ag ya,ag sa,jd ga,jf	1

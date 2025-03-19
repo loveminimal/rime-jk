@@ -12,7 +12,7 @@ schema:
   dependencies:
     - jk_ascii
     - jk_pinyin
-  icon: 'assets/jk.ico'
+  icon: 'assets/jk_m.ico'
   ascii_icon: 'assets/ascii.ico'
 
 switches:

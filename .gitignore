@@ -4,3 +4,4 @@
 *.userdb
 user.yaml
 __pycache__
+*.gram

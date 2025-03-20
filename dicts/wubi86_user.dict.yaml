@@ -306,6 +306,7 @@ use_preset_vocabulary: false
 此	hx	1
 些	hxf	23
 紫	hxx	1
+满	iagw	1
 灌	iak	1
 港	iawn	1
 汉	ic	1
@@ -1232,6 +1233,7 @@ use_preset_vocabulary: false
 随到	bdgc	2
 随礼	bdpy	1
 随想	bdsh	1
+随意	bduj	1
 随便	bdwg	3
 阻碍	bedj	1
 隔开	bgga	1
@@ -1467,6 +1469,7 @@ use_preset_vocabulary: false
 受限	epbv	1
 爱看	eprh	1
 受众	epww	1
+用了	etbn	1
 用去	etfc	1
 用过	etfp	3
 用到	etgc	1
@@ -1835,7 +1838,7 @@ use_preset_vocabulary: false
 事情	gkng	7
 整句	gkqk	15
 囊括	gkrt	1
-事物	gktr	1
+事物	gktr	2
 速录	gkvi	1
 整合	gkwg	1
 整个	gkwh	8
@@ -2050,6 +2053,7 @@ use_preset_vocabulary: false
 游戏	iyca	3
 流动	iyfc	1
 流浪	iyiy	1
+游泳	iyiy	1
 流量	iyjg	9
 流畅	iyjh	3
 注册	iymm	5
@@ -2296,6 +2300,7 @@ use_preset_vocabulary: false
 较早	lujh	1
 圈圈	lulu	1
 较长	luta	1
+较短	lutd	1
 轮子	lwbb	4
 输出	lwbm	4
 界面	lwdm	1
@@ -2307,6 +2312,7 @@ use_preset_vocabulary: false
 嵌入	maty	5
 邮箱	mbts	2
 凤凰	mcmr	2
+岸边	mdlp	1
 崩溃	meik	1
 周末	mfgs	6
 财务	mftl	1
@@ -3302,8 +3308,10 @@ use_preset_vocabulary: false
 交给	uqxw	1
 效率	uqyx	1
 亲戚	usdh	1
-新鲜	usqg	1
+新奇	usds	1
+新鲜	usqg	2
 新版	usth	1
+亲自	usth	1
 遵循	ustr	1
 新建	usvf	1
 新人	usww	1
@@ -3339,6 +3347,7 @@ use_preset_vocabulary: false
 闹钟	uyqk	1
 好友	vbdc	1
 好在	vbdh	1
+好奇	vbds	1
 好用	vbet	4
 好玩	vbgf	2
 好觉	vbip	1

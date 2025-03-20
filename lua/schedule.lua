@@ -183,8 +183,9 @@ local function schedule(input, seg, env)
         end
 
         if zero_jieqi and zero_jieqi ~= '' then
+        -- if zero_jieqi then
             -- 今天是节气时，取后两个节气
-            upcoming_jqs = {upcoming_jqs[3], upcoming_jqs[4]}
+            upcoming_jqs = {jqs[3], jqs[4]}
         else
             -- 今天不是节气，取前两个节气
             upcoming_jqs = {jqs[2], jqs[3]}

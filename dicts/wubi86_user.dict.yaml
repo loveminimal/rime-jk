@@ -80,6 +80,7 @@ use_preset_vocabulary: false
 防	by	1
 以	c	122
 戏	ca	1
+劲	cal	1
 邓	cb	1
 双	cc	1
 又	ccc	9
@@ -149,6 +150,7 @@ use_preset_vocabulary: false
 帮	dt	6
 碰	duo	1
 肆	dv	1
+春	dw	1
 龙	dx	1
 太	dy	29
 态	dyn	1
@@ -185,6 +187,7 @@ use_preset_vocabulary: false
 墙	ffuk	1
 二	fg	9
 干	fggh	7
+雨	fghy	1
 坏	fgi	2
 直	fh	1
 越	fha	14
@@ -214,6 +217,7 @@ use_preset_vocabulary: false
 壶	fpo	1
 索	fpx	1
 无	fq	4
+元	fqb	1
 远	fqpv	3
 堙	fsf	1
 才	ft	21
@@ -346,6 +350,7 @@ use_preset_vocabulary: false
 辉	iqpl	2
 溜	iqyl	1
 派	ire	1
+酒	isgg	2
 河	isk	1
 淞	iswc	1
 少	it	11
@@ -359,6 +364,7 @@ use_preset_vocabulary: false
 润	iugg	1
 当	iv	5
 浔	ivfy	1
+沧	iwb	1
 举	iwf	1
 涨	ix	1
 注	iy	1
@@ -406,6 +412,7 @@ use_preset_vocabulary: false
 吗	kcg	49
 呃	kdb	6
 顺	kdm	1
+哒	kdp	1
 吸	ke	3
 鹃	keq	1
 喷	kfam	1
@@ -421,6 +428,7 @@ use_preset_vocabulary: false
 踩	khes	1
 贵	khgm	1
 遗	khgp	1
+跳	khi	1
 踏	khij	1
 踢	khj	3
 蹋	khjn	2
@@ -820,6 +828,7 @@ use_preset_vocabulary: false
 丢	tfc	3
 等	tffu	14
 待	tffy	3
+徒	tfhy	1
 午	tfj	1
 千	tfk	2
 靠	tfkd	5
@@ -887,6 +896,7 @@ use_preset_vocabulary: false
 羊	udj	2
 判	udjh	1
 送	udp	2
+叛	udrc	1
 状	udy	2
 养	udyj	11
 前	ue	16
@@ -1043,11 +1053,12 @@ use_preset_vocabulary: false
 从	ww	6
 坐	wwf	3
 价	wwj	1
+谷	wwk	1
 份	wwv	2
 众	www	1
 化	wx	4
 华	wxf	3
-货	wxm	1
+货	wxm	3
 信	wy	2
 令	wyc	1
 住	wygg	3
@@ -1089,6 +1100,7 @@ use_preset_vocabulary: false
 纵	xww	1
 维	xwyg	1
 比	xx	9
+毙	xxgx	1
 纺	xy	1
 编	xyna	1
 纹	xyy	1
@@ -1165,7 +1177,7 @@ use_preset_vocabulary: false
 节奏	abdw	1
 节目	abhh	1
 节省	abit	1
-节气	abrn	1
+节气	abrn	4
 基础	addb	8
 藏在	addh	1
 甚至	adgc	5
@@ -1250,6 +1262,7 @@ use_preset_vocabulary: false
 函数	biov	5
 阳历	bjdl	1
 阳光	bjiq	1
+阵地	blfb	1
 出去	bmfc	2
 出现	bmgm	4
 出来	bmgo	16
@@ -1430,7 +1443,9 @@ use_preset_vocabulary: false
 成对	dncf	1
 成都	dnft	1
 成天	dngd	1
+万一	dngg	1
 万象	dnqj	9
+成年	dnrh	1
 成本	dnsg	1
 成熟	dnyb	1
 成语	dnyg	5
@@ -1445,6 +1460,7 @@ use_preset_vocabulary: false
 砍头	dqud	1
 爽朗	dqyv	1
 确认	dqyw	8
+原著	draf	1
 原有	drde	4
 原封	drff	1
 原型	drga	4
@@ -1463,6 +1479,7 @@ use_preset_vocabulary: false
 碰碰	dudu	1
 碰到	dugc	1
 在做	dwd	1
+春分	dwwv	1
 龙芯	dxan	1
 龙珠	dxgr	1
 龙凤	dxmc	1
@@ -1514,6 +1531,7 @@ use_preset_vocabulary: false
 地方	fbyy	13
 动态	fcdy	5
 运动	fcfc	1
+去过	fcfp	1
 动画	fcgl	1
 动漫	fcij	3
 支持	fcrf	9
@@ -1592,6 +1610,7 @@ use_preset_vocabulary: false
 进度	fjya	4
 喜欢	fkcq	9
 喜好	fkvb	2
+嘉华	fkwx	1
 喜庆	fkyd	2
 雷蛙	fljf	2
 雷电	fljn	1
@@ -1611,6 +1630,7 @@ use_preset_vocabulary: false
 过来	fpgo	6
 过目	fphh	1
 过滤	fpih	8
+过后	fprg	1
 过年	fprh	1
 过程	fptk	5
 过分	fpwv	2
@@ -1722,7 +1742,7 @@ use_preset_vocabulary: false
 表形	gega	1
 静静	gege	2
 静止	gehh	1
-表明	geje	1
+表明	geje	2
 表情	geng	5
 表格	gest	7
 表单	geuj	2
@@ -1746,7 +1766,9 @@ use_preset_vocabulary: false
 一边	gglp	2
 王炸	ggot	1
 一字	ggpb	1
+一家	ggpe	1
 一定	ggpg	9
+一句	ggqk	1
 一年	ggrh	1
 王林	ggss	5
 一样	ggsu	9
@@ -1854,6 +1876,7 @@ use_preset_vocabulary: false
 整句	gkqk	15
 囊括	gkrt	1
 事物	gktr	2
+逗笑	gktt	1
 速录	gkvi	1
 整合	gkwg	1
 整个	gkwh	8
@@ -1962,6 +1985,7 @@ use_preset_vocabulary: false
 法宝	ifpg	1
 清除	igbw	1
 清理	iggj	3
+清明	igje	1
 浅显	igjo	1
 清晰	igjs	1
 添加	iglk	6
@@ -2061,6 +2085,7 @@ use_preset_vocabulary: false
 润色	iuqc	3
 当成	ivdn	3
 当真	ivfh	1
+当天	ivgd	1
 当时	ivjf	5
 当空	ivpw	1
 当然	ivqd	3
@@ -2299,6 +2324,7 @@ use_preset_vocabulary: false
 加个	lkwh	2
 男人	llww	2
 思路	lnkh	1
+辗转	lnlf	1
 思想	lnsh	2
 思绪	lnxf	1
 思维	lnxw	2
@@ -2334,6 +2360,7 @@ use_preset_vocabulary: false
 邮箱	mbts	2
 凤凰	mcmr	2
 岸边	mdlp	1
+骨子	mebb	1
 崩溃	meik	1
 周末	mfgs	6
 财务	mftl	1
@@ -2354,7 +2381,7 @@ use_preset_vocabulary: false
 删了	mmbn	1
 删除	mmbw	5
 山海	mmit	4
-删掉	mmrh	1
+删掉	mmrh	2
 山人	mmww	1
 删词	mmyn	1
 崛起	mnfh	1
@@ -2439,7 +2466,7 @@ use_preset_vocabulary: false
 快捷	nnrg	2
 快查	nnsj	1
 书签	nntw	1
-快符	nntw	3
+快符	nntw	4
 已经	nnxc	21
 快说	nnyu	1
 乙方	nnyy	1
@@ -2468,6 +2495,7 @@ use_preset_vocabulary: false
 发生	nttg	2
 发送	ntud	1
 发给	ntxw	1
+改编	ntxy	1
 必应	ntyi	2
 改变	ntyo	4
 改良	ntyv	1
@@ -2489,6 +2517,7 @@ use_preset_vocabulary: false
 尽量	nyjg	6
 心中	nykh	2
 心田	nyll	1
+心思	nyln	1
 心累	nylx	2
 心性	nynt	1
 慷慨	nynv	1
@@ -2661,6 +2690,7 @@ use_preset_vocabulary: false
 印度	qgya	2
 外面	qhdm	2
 外卖	qhfn	2
+外号	qhkg	1
 外国	qhlg	1
 外网	qhmq	3
 外长	qhta	1
@@ -2673,6 +2703,7 @@ use_preset_vocabulary: false
 兔子	qkbb	1
 名胜	qket	1
 句号	qkkg	1
+名号	qkkg	1
 名字	qkpb	2
 名句	qkqk	1
 免得	qktj	1
@@ -2733,7 +2764,7 @@ use_preset_vocabulary: false
 反而	rcdm	4
 反正	rcgh	16
 返回	rclk	3
-反馈	rcqn	2
+反馈	rcqn	3
 反查	rcsj	21
 反复	rctj	4
 挨个	rcwh	1
@@ -2742,6 +2773,7 @@ use_preset_vocabulary: false
 排在	rddh	1
 排布	rddm	1
 排列	rdgq	2
+掩饰	rdqn	2
 排查	rdsj	1
 扼要	rdsv	1
 排版	rdth	1
@@ -2911,6 +2943,7 @@ use_preset_vocabulary: false
 失效	rwuq	1
 迭代	rwwa	1
 推广	rwyy	1
+指出	rxbm	1
 指法	rxif	2
 批量	rxjg	2
 指定	rxpg	2
@@ -3042,6 +3075,7 @@ use_preset_vocabulary: false
 长度	taya	1
 彻底	tayq	1
 私有	tcde	1
+么么	tctc	1
 适用	tdet	3
 适时	tdjf	1
 矢量	tdjg	1
@@ -3102,6 +3136,7 @@ use_preset_vocabulary: false
 重装	tguf	3
 生效	tguq	6
 重新	tgus	4
+生僻	tgwn	1
 重度	tgya	1
 重试	tgya	1
 重庆	tgyd	1
@@ -3158,7 +3193,7 @@ use_preset_vocabulary: false
 身边	tmlp	1
 微软	tmlq	9
 向前	tmue	1
-身体	tmws	1
+身体	tmws	3
 微信	tmwy	3
 微调	tmym	1
 颓废	tmyn	1
@@ -3201,6 +3236,7 @@ use_preset_vocabulary: false
 简便	tuwg	1
 简介	tuwj	1
 简体	tuws	3
+简化	tuwx	1
 简练	tuxa	1
 简约	tuxq	1
 很大	tvdd	1
@@ -3241,7 +3277,7 @@ use_preset_vocabulary: false
 差别	udkl	1
 头发	udnt	1
 关心	udny	1
-判断	udon	1
+判断	udon	4
 着急	udqv	3
 关键	udqv	3
 关机	udsm	2
@@ -3341,7 +3377,7 @@ use_preset_vocabulary: false
 效率	uqyx	1
 亲戚	usdh	1
 新奇	usds	1
-新鲜	usqg	2
+新鲜	usqg	3
 新版	usth	1
 亲自	usth	1
 遵循	ustr	1
@@ -3357,6 +3393,7 @@ use_preset_vocabulary: false
 产生	uttg	2
 疙瘩	utua	1
 首位	utwu	1
+立夏	uudh	2
 阅读	uuyf	2
 立刻	uuyn	1
 立方	uuyy	1
@@ -3463,6 +3500,7 @@ use_preset_vocabulary: false
 他们	wbwu	16
 仓库	wbyl	8
 他说	wbyu	1
+公开	wcga	1
 公司	wcng	8
 公道	wcut	1
 仅供	wcwa	1
@@ -3471,6 +3509,7 @@ use_preset_vocabulary: false
 俺宝	wdpg	9
 优势	wdrv	2
 优秀	wdte	1
+优先	wdtf	1
 俺爸	wdwq	1
 优化	wdwx	4
 估计	wdyf	5
@@ -3494,6 +3533,7 @@ use_preset_vocabulary: false
 使用	wget	37
 命运	wgfc	3
 全球	wggf	1
+合理	wggj	1
 拿来	wggo	2
 命中	wgkh	9
 倒置	wglf	1
@@ -3502,7 +3542,7 @@ use_preset_vocabulary: false
 全家	wgpe	4
 便宜	wgpe	2
 全角	wgqe	2
-全拼	wgru	7
+全拼	wgru	8
 合适	wgtd	3
 全选	wgtf	2
 使我	wgtr	1
@@ -3593,6 +3633,7 @@ use_preset_vocabulary: false
 分词	wvyn	13
 健康	wvyv	1
 人士	wwfg	1
+谷雨	wwfg	1
 从来	wwgo	5
 人员	wwkm	1
 人民	wwna	4
@@ -3625,6 +3666,7 @@ use_preset_vocabulary: false
 信息	wyth	8
 偏差	wyud	1
 集合	wywg	1
+信任	wywt	1
 住户	wyyn	1
 练习	xanu	4
 红烧	xaoa	1
@@ -3718,6 +3760,7 @@ use_preset_vocabulary: false
 序列	ycgq	2
 充电	ycjn	1
 序号	yckg	1
+充分	ycwv	1
 衣服	yeeb	1
 计划	yfaj	4
 读取	yfbc	5
@@ -3795,7 +3838,7 @@ use_preset_vocabulary: false
 启用	ynet	2
 启动	ynfc	1
 记过	ynfp	1
-永远	ynfq	3
+永远	ynfq	5
 词频	ynhi	9
 词汇	ynia	1
 房号	ynkg	1
@@ -3816,6 +3859,7 @@ use_preset_vocabulary: false
 词语	ynyg	5
 词库	ynyl	37
 翩翩	ynyn	1
+变了	yobn	1
 变成	yodn	3
 变形	yoga	1
 变更	yogj	1
@@ -3994,6 +4038,7 @@ use_preset_vocabulary: false
 李达康	sdyv	3
 管理员	tgkm	3
 第一次	tguq	3
+第一位	tgwu	1
 短视频	tphi	1
 很容易	tpjq	1
 自定义	tpyq	4
@@ -4072,11 +4117,13 @@ use_preset_vocabulary: false
 视若无睹	pafh	1
 空前绝后	puxr	1
 锦上添花	qhia	1
+名符其实	qtap	1
 白驹过隙	rcfb	1
 白狐天下	rqgg	1
 扬长补短	rtpt	1
 相见恨晚	smnj	1
 乱七八糟	tawo	1
+身不由己	tgmn	1
 积习难改	tncn	1
 简入繁出	tttb	3
 千方百计	tydy	1

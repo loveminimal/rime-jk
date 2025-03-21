@@ -38,6 +38,7 @@ use_preset_vocabulary: false
 牙	ah	1
 东	ai	1
 落	ait	4
+幕	ajdh	1
 草	ajj	1
 或	ak	6
 功	al	2
@@ -267,6 +268,7 @@ use_preset_vocabulary: false
 速	gkip	1
 卅	gkk	49
 带	gkp	8
+豆	gku	2
 逗	gkup	2
 事	gkv	12
 画	gl	1
@@ -619,6 +621,7 @@ use_preset_vocabulary: false
 害	pd	2
 家	pe	8
 宜	peg	1
+农	pei	1
 塞	pfjf	1
 完	pfq	10
 冠	pfqf	1
@@ -797,7 +800,7 @@ use_preset_vocabulary: false
 柳	sqt	1
 榴	sqy	1
 板	src	1
-林	ss	1
+林	ss	3
 柯	ssk	1
 楚	ssn	1
 梦	ssq	2
@@ -1223,6 +1226,7 @@ use_preset_vocabulary: false
 英法	amif	1
 黄轮	amlw	2
 英文	amyy	10
+巨款	anff	1
 世界	anlw	1
 世纪	anxn	2
 荣耀	apiq	2
@@ -1236,8 +1240,9 @@ use_preset_vocabulary: false
 欧冠	aqpf	1
 匹配	aqsg	3
 获得	aqtj	1
-区分	aqwv	1
+区分	aqwv	2
 蕃茄	atal	1
+攻击	atfm	1
 萎靡	atys	1
 切成	avdn	1
 切实	avpu	1
@@ -1344,6 +1349,7 @@ use_preset_vocabulary: false
 马竞	cnuk	5
 鸡蛋	cqnh	1
 欢迎	cqqb	3
+鸡毛	cqtf	1
 允许	cqyt	3
 难受	cwep	3
 难度	cwya	1
@@ -1354,16 +1360,19 @@ use_preset_vocabulary: false
 码字	dcpb	1
 码农	dcpe	1
 雄狮	dcqt	2
+码长	dcta	1
 友好	dcvb	3
 大陆	ddbf	2
 大圣	ddcf	2
 大码	dddc	1
 大有	ddde	1
 大脑	ddey	1
+硕士	ddfg	1
 大堆	ddfw	2
 大致	ddgc	1
 大于	ddgf	2
 大王	ddgg	1
+大叔	ddhi	1
 套餐	ddhq	6
 大江	ddia	1
 大小	ddih	7
@@ -1477,6 +1486,7 @@ use_preset_vocabulary: false
 原生	drtg	2
 原版	drth	1
 原始	drvc	3
+原文	dryy	1
 奇怪	dsnc	2
 帮助	dteg	3
 故事	dtgk	1
@@ -1554,6 +1564,7 @@ use_preset_vocabulary: false
 需要	fdsv	33
 震怒	fdvc	1
 城主	fdyg	2
+城市	fdym	1
 填坑	fffy	1
 填写	ffpg	1
 封装	ffuf	5
@@ -1620,6 +1631,7 @@ use_preset_vocabulary: false
 雷蛙	fljf	2
 雷电	fljn	1
 协议	flyy	1
+南方	fmyy	1
 专职	fnbk	1
 专注	fniy	1
 场景	fnjy	2
@@ -1773,7 +1785,7 @@ use_preset_vocabulary: false
 一字	ggpb	1
 一家	ggpe	1
 一定	ggpg	9
-一句	ggqk	1
+一句	ggqk	2
 一年	ggrh	1
 王林	ggss	5
 一样	ggsu	9
@@ -1957,6 +1969,7 @@ use_preset_vocabulary: false
 步骤	hicb	3
 频繁	hitx	3
 桌面	hjdm	1
+占用	hket	1
 点击	hkfm	9
 战术	hksy	1
 点个	hkwh	1
@@ -2178,6 +2191,7 @@ use_preset_vocabulary: false
 晚安	jqpv	2
 果断	json	1
 颗粒	jsou	1
+果然	jsqd	1
 昨天	jtgd	7
 临时	jtjf	3
 蜘蛛	jtjr	2
@@ -2354,7 +2368,7 @@ use_preset_vocabulary: false
 圈圈	lulu	1
 较长	luta	1
 较短	lutd	1
-轮子	lwbb	10
+轮子	lwbb	11
 输出	lwbm	4
 界面	lwdm	1
 办法	lwif	7
@@ -2388,10 +2402,11 @@ use_preset_vocabulary: false
 删了	mmbn	1
 删除	mmbw	5
 山海	mmit	4
-删掉	mmrh	2
+删掉	mmrh	3
 山人	mmww	1
 删词	mmyn	1
 崛起	mnfh	1
+岂止	mnhh	1
 风险	mqbw	3
 网友	mqdc	1
 网页	mqdm	2
@@ -2429,6 +2444,7 @@ use_preset_vocabulary: false
 凡人	myww	2
 展示	nafi	2
 异形	naga	1
+懂事	nagk	1
 展现	nagm	1
 异步	nahi	1
 民国	nalg	1
@@ -2550,6 +2566,7 @@ use_preset_vocabulary: false
 爆满	ojia	1
 爆炸	ojot	1
 断电	onjn	1
+断代	onwa	1
 迷惑	opak	1
 迷魂	opfc	1
 燃气	oqrn	1
@@ -2611,6 +2628,7 @@ use_preset_vocabulary: false
 之中	ppkh	2
 之内	ppmw	1
 之类	ppod	3
+之外	ppqh	1
 之名	ppqk	1
 之后	pprg	16
 之处	ppth	1
@@ -3009,6 +3027,7 @@ use_preset_vocabulary: false
 本身	sgtm	5
 配音	sguj	1
 配合	sgwg	1
+西方	sgyy	1
 相通	shce	1
 相对	shcf	5
 相貌	shee	1
@@ -3512,10 +3531,12 @@ use_preset_vocabulary: false
 仓库	wbyl	8
 他说	wbyu	1
 公开	wcga	1
+公平	wcgu	1
 公司	wcng	8
 公道	wcut	1
 仅供	wcwa	1
 公众	wcww	1
+段落	wdai	1
 做贼	wdma	1
 俺宝	wdpg	9
 优势	wdrv	2
@@ -3677,8 +3698,10 @@ use_preset_vocabulary: false
 信息	wyth	8
 偏差	wyud	1
 集合	wywg	1
+偏僻	wywn	1
 信任	wywt	1
 住户	wyyn	1
+红尘	xaif	1
 练习	xanu	4
 红烧	xaoa	1
 练气	xarn	2
@@ -3778,6 +3801,7 @@ use_preset_vocabulary: false
 读出	yfbm	2
 讲求	yffi	3
 读书	yfnn	1
+讲解	yfqe	1
 读音	yfuj	1
 诗词	yfyn	2
 主页	ygdm	1
@@ -3826,6 +3850,7 @@ use_preset_vocabulary: false
 高能	ymce	1
 设成	ymdn	1
 调用	ymet	2
+市场	ymfn	1
 高过	ymfp	1
 调教	ymft	1
 调到	ymgc	1
@@ -3855,6 +3880,7 @@ use_preset_vocabulary: false
 房号	ynkg	1
 词典	ynma	2
 永恒	ynng	1
+记忆	ynnn	1
 赢家	ynpe	1
 记得	yntj	2
 词条	ynts	1
@@ -4159,4 +4185,4 @@ use_preset_vocabulary: false
 凡人修仙传	mwww	8
 中华人民共和国	kwwl	3
 自有大儒为我辨经	tddx	2
-实践是检验真理的唯一标准	pkjw	2
+实践是检验真理的唯一标准	pkjw	3

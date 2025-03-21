@@ -126,7 +126,7 @@ use_preset_vocabulary: false
 感	dgkn	1
 厂	dgt	2
 威	dgv	1
-丰	dh	1
+丰	dh	2
 破	dhc	1
 厚	djb	3
 非	djd	2
@@ -174,6 +174,7 @@ use_preset_vocabulary: false
 土	f	4
 载	fa	3
 域	fakg	5
+戴	falw	1
 截	faw	1
 支	fc	2
 却	fcb	5
@@ -192,6 +193,7 @@ use_preset_vocabulary: false
 直	fh	1
 越	fha	14
 趣	fhb	1
+赶	fhfk	1
 起	fhn	4
 走	fhu	7
 超	fhv	4
@@ -265,7 +267,7 @@ use_preset_vocabulary: false
 速	gkip	1
 卅	gkk	49
 带	gkp	8
-逗	gkup	1
+逗	gkup	2
 事	gkv	12
 画	gl	1
 现	gm	50
@@ -347,6 +349,7 @@ use_preset_vocabulary: false
 深	ipw	3
 光	iq	3
 泡	iqn	1
+逃	iqp	1
 辉	iqpl	2
 溜	iqyl	1
 派	ire	1
@@ -443,7 +446,7 @@ use_preset_vocabulary: false
 吵	ki	1
 唱	kjj	1
 喝	kjq	3
-骂	kkc	1
+骂	kkc	2
 器	kkd	3
 串	kkh	4
 品	kkk	1
@@ -530,6 +533,7 @@ use_preset_vocabulary: false
 贱	mg	1
 由	mh	1
 贝	mh	6
+帽	mhj	2
 巾	mhk	2
 贴	mhkg	2
 则	mj	2
@@ -896,7 +900,7 @@ use_preset_vocabulary: false
 羊	udj	2
 判	udjh	1
 送	udp	2
-叛	udrc	1
+叛	udrc	2
 状	udy	2
 养	udyj	11
 前	ue	16
@@ -1411,6 +1415,7 @@ use_preset_vocabulary: false
 三方	dgyy	1
 存在	dhdh	9
 在乎	dhtu	1
+在意	dhuj	1
 契合	dhwg	1
 存储	dhwy	3
 在线	dhxg	1
@@ -1577,7 +1582,7 @@ use_preset_vocabulary: false
 超过	fhfp	2
 直到	fhgc	1
 真正	fhgh	2
-真理	fhgj	1
+真理	fhgj	3
 起来	fhgo	12
 起步	fhhi	1
 起点	fhhk	1
@@ -2234,6 +2239,7 @@ use_preset_vocabulary: false
 兄弟	kqux	1
 听过	krfp	1
 听到	krgc	1
+听听	krkr	1
 听着	krud	1
 听说	kryu	1
 吃过	ktfp	1
@@ -2259,7 +2265,7 @@ use_preset_vocabulary: false
 只用	kwet	1
 啥用	kwet	1
 只需	kwfd	1
-唯一	kwgg	1
+唯一	kwgg	3
 只是	kwjg	2
 哈哈	kwkw	40
 只看	kwrh	1
@@ -2348,7 +2354,7 @@ use_preset_vocabulary: false
 圈圈	lulu	1
 较长	luta	1
 较短	lutd	1
-轮子	lwbb	4
+轮子	lwbb	10
 输出	lwbm	4
 界面	lwdm	1
 办法	lwif	7
@@ -2358,6 +2364,7 @@ use_preset_vocabulary: false
 累积	lxtk	2
 嵌入	maty	5
 邮箱	mbts	2
+邮件	mbwr	1
 凤凰	mcmr	2
 岸边	mdlp	1
 骨子	mebb	1
@@ -2626,7 +2633,7 @@ use_preset_vocabulary: false
 实现	pugm	10
 初步	puhi	1
 实时	pujf	4
-实践	pukh	3
+实践	pukh	4
 实则	pumj	1
 被窝	pupw	1
 被迫	purp	1
@@ -2685,6 +2692,7 @@ use_preset_vocabulary: false
 解说	qeyu	2
 鲁迅	qgnf	1
 鱿鱼	qgqg	1
+鲸鱼	qgqg	2
 印象	qgqj	1
 印章	qguj	4
 印度	qgya	2
@@ -2863,6 +2871,7 @@ use_preset_vocabulary: false
 挣钱	rqqg	1
 挣扎	rqrn	1
 抵御	rqtr	1
+换个	rqwh	1
 白菜	rrae	1
 拍了	rrb	1
 折叠	rrcc	1
@@ -2984,7 +2993,7 @@ use_preset_vocabulary: false
 剽窃	sfpw	1
 标配	sfsg	1
 标签	sftw	1
-标准	sfuw	2
+标准	sfuw	3
 杜绝	sfxq	1
 标识	sfyk	2
 票房	sfyn	3
@@ -3061,7 +3070,7 @@ use_preset_vocabulary: false
 概念	svwy	1
 概率	svyx	1
 松散	swae	1
-检验	swcw	1
+检验	swcw	3
 检索	swfp	1
 检测	swim	1
 松手	swrt	1
@@ -3201,6 +3210,7 @@ use_preset_vocabulary: false
 番茄	toal	1
 翻页	todm	5
 翻过	tofp	2
+翻翻	toto	1
 翻倍	towu	1
 翻译	toyc	7
 释义	toyq	2
@@ -3240,6 +3250,7 @@ use_preset_vocabulary: false
 简练	tuxa	1
 简约	tuxq	1
 很大	tvdd	1
+很少	tvit	1
 很多	tvqq	2
 很久	tvqy	1
 签到	twgc	1

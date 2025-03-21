@@ -1582,7 +1582,7 @@ use_preset_vocabulary: false
 超过	fhfp	2
 直到	fhgc	1
 真正	fhgh	2
-真理	fhgj	3
+真理	fhgj	4
 起来	fhgo	12
 起步	fhhi	1
 起点	fhhk	1
@@ -2265,7 +2265,7 @@ use_preset_vocabulary: false
 只用	kwet	1
 啥用	kwet	1
 只需	kwfd	1
-唯一	kwgg	3
+唯一	kwgg	4
 只是	kwjg	2
 哈哈	kwkw	40
 只看	kwrh	1
@@ -2633,7 +2633,7 @@ use_preset_vocabulary: false
 实现	pugm	10
 初步	puhi	1
 实时	pujf	4
-实践	pukh	4
+实践	pukh	5
 实则	pumj	1
 被窝	pupw	1
 被迫	purp	1
@@ -2993,7 +2993,7 @@ use_preset_vocabulary: false
 剽窃	sfpw	1
 标配	sfsg	1
 标签	sftw	1
-标准	sfuw	3
+标准	sfuw	4
 杜绝	sfxq	1
 标识	sfyk	2
 票房	sfyn	3
@@ -3070,7 +3070,7 @@ use_preset_vocabulary: false
 概念	svwy	1
 概率	svyx	1
 松散	swae	1
-检验	swcw	3
+检验	swcw	4
 检索	swfp	1
 检测	swim	1
 松手	swrt	1
@@ -4159,3 +4159,4 @@ use_preset_vocabulary: false
 凡人修仙传	mwww	8
 中华人民共和国	kwwl	3
 自有大儒为我辨经	tddx	2
+实践是检验真理的唯一标准	pkjw	2

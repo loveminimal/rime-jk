@@ -174,7 +174,9 @@ local function schedule(input, seg, env)
             local jieqi = jqs[i]
             local diff_days = days_until_jieqi(jieqi)
 
-            if diff_days == 0 then
+            if diff_days < 0 then
+                zero_jieqi = ' '
+            elseif diff_days == 0 then
                 -- 记录今天的节气
                 zero_jieqi = jieqi:match("^(%S+)")
             elseif diff_days > 0 then

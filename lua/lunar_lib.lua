@@ -479,19 +479,20 @@ function GetNextJQ(y)
     local i, obj, q, s1, s2
     y = tostring(y)
     local jd = 365.2422 * (tonumber(y.sub(y, 1, 4)) - 2000)
+
     obj = {}
 
     for i = 0, 23 do
-        q = jiaoCal(jd + i * 15.2, i * 15, 0) + J2000 + 8 / 24 -- 计算第i个节气(i=0是春风),结果转为北京时
+        q = jiaoCal(jd + i * 15.2, i * 15, 0) + J2000 + 8 / 24 -- 计算第i个节气(i=0是春分),结果转为北京时
         JDate:setFromJD(q, 1)
         s1 = JDate:toStr() -- 将儒略日转成世界时
         JDate:setFromJD(q, 0)
         s2 = JDate:toStr() -- 将儒略日转成日期格式(输出日期形式的力学时)
         jqData = s1.sub(s1.gsub(s1, "^( )", ""), 1, 10)
         jqData = jqData.gsub(jqData, "-", "")
-        if (jqData >= y) then
+        -- if (jqData >= y) then
             table.insert(obj, jqB[i + 1] .. " " .. s1.sub(s1.gsub(s1, "^( )", ""), 1, 10))
-        end
+        -- end
     end
 
     return obj
@@ -566,11 +567,14 @@ end
 
 function GetNowTimeJq(date)
     local JQtable1, JQtable2
+
     date = tostring(date)
     if string.len(date) < 8 then
         return "无效日期"
     end
+
     JQtable2 = GetNextJQ(date)
+
     if tonumber(string.sub(date, 5, 8)) < 322 then
         JQtable1 = GetNextJQ(tonumber(string.sub(date, 1, 4)) - 1 .. string.sub(date, 5, 8))
         -- print(#JQtable1)

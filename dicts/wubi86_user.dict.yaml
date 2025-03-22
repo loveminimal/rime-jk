@@ -126,6 +126,7 @@ use_preset_vocabulary: false
 咸	dgk	1
 感	dgkn	1
 厂	dgt	2
+石	dgtg	1
 威	dgv	1
 丰	dh	2
 破	dhc	1
@@ -390,6 +391,7 @@ use_preset_vocabulary: false
 里	jfd	12
 蛙	jff	3
 量	jg	4
+昊	jgd	1
 旺	jgg	1
 早	jh	6
 冒	jhf	1
@@ -1953,6 +1955,7 @@ use_preset_vocabulary: false
 上演	hhip	1
 卡车	hhlg	1
 上边	hhlp	1
+上界	hhlw	1
 上周	hhmf	2
 上层	hhnf	1
 上屏	hhnu	20
@@ -3657,6 +3660,7 @@ use_preset_vocabulary: false
 分类	wvod	2
 分钟	wvqk	3
 分包	wvqn	1
+分身	wvtm	1
 分段	wvwd	1
 仇人	wvww	1
 分级	wvxe	1
@@ -3908,6 +3912,7 @@ use_preset_vocabulary: false
 这么	yptc	1
 底层	yqnf	1
 麻烦	ysod	4
+魔神	yspy	1
 摩尔	ysqi	1
 订阅	ysuu	1
 诱惑	ytak	1

@@ -454,7 +454,7 @@ use_preset_vocabulary: false
 器	kkd	3
 串	kkh	4
 品	kkk	1
-口	kkkk	1
+口	kkkk	2
 噪	kkks	1
 另	kl	7
 嗯	kldn	25
@@ -474,6 +474,7 @@ use_preset_vocabulary: false
 啦	kru	16
 呆	ks	2
 呵	ksk	1
+呼	kt	2
 咱	kth	9
 咋	kthf	3
 川	kthh	1
@@ -759,6 +760,7 @@ use_preset_vocabulary: false
 撞	ruj	1
 搁	rutk	1
 接	ruv	3
+挪	rvf	1
 搜	rvh	6
 招	rvk	2
 热	rvyo	2
@@ -1319,6 +1321,7 @@ use_preset_vocabulary: false
 双拼	ccru	15
 参考	cdft	2
 参数	cdov	4
+骑着	cdud	1
 通用	ceet	4
 通过	cefp	8
 通常	ceip	1
@@ -1397,6 +1400,7 @@ use_preset_vocabulary: false
 大件	ddwr	1
 大约	ddxq	1
 大义	ddyq	2
+胡同	demg	2
 有害	depd	2
 胡乱	detd	1
 郁闷	deun	1
@@ -1487,6 +1491,7 @@ use_preset_vocabulary: false
 原样	drsu	1
 原生	drtg	2
 原版	drth	1
+愿意	druj	1
 原始	drvc	3
 原文	dryy	1
 奇怪	dsnc	2
@@ -1691,6 +1696,7 @@ use_preset_vocabulary: false
 老家	ftpe	1
 老外	ftqh	1
 老板	ftsr	2
+才行	fttf	1
 教程	fttk	2
 老美	ftug	2
 老弟	ftux	2
@@ -1896,6 +1902,7 @@ use_preset_vocabulary: false
 囊括	gkrt	1
 事物	gktr	2
 逗笑	gktt	1
+带着	gkud	1
 速录	gkvi	1
 整合	gkwg	1
 整个	gkwh	8
@@ -2180,6 +2187,7 @@ use_preset_vocabulary: false
 电压	jndf	1
 电脑	jney	8
 电影	jnjy	4
+电车	jnlg	2
 电力	jnlt	2
 电梯	jnsu	1
 昵称	jntq	1
@@ -2892,6 +2900,7 @@ use_preset_vocabulary: false
 挣钱	rqqg	1
 挣扎	rqrn	1
 抵御	rqtr	1
+抱着	rqud	1
 换个	rqwh	1
 白菜	rrae	1
 拍了	rrb	1
@@ -3414,6 +3423,7 @@ use_preset_vocabulary: false
 新版	usth	1
 亲自	usth	1
 遵循	ustr	1
+新闻	usub	1
 新建	usvf	1
 新人	usww	1
 新疆	usxf	1
@@ -3510,7 +3520,7 @@ use_preset_vocabulary: false
 群里	vtjf	3
 姓名	vtqk	1
 群体	vtws	1
-群主	vtyg	1
+群主	vtyg	2
 嫂子	vvbb	1
 女士	vvfg	2
 女儿	vvqt	2
@@ -3632,6 +3642,7 @@ use_preset_vocabulary: false
 体力	wslt	1
 休息	wsth	2
 体积	wstk	3
+何种	wstk	1
 体会	wswf	2
 八荒	wtay	1
 作用	wtet	2
@@ -4075,6 +4086,7 @@ use_preset_vocabulary: false
 看起来	rfgo	1
 找不到	rggc	1
 看不懂	rgna	1
+白小纯	rixg	2
 年轻人	rlww	1
 打印机	rqsm	1
 李达康	sdyv	3
@@ -4142,6 +4154,7 @@ use_preset_vocabulary: false
 正午阳光	gtbi	2
 开箱即用	gtve	4
 一如既往	gvvt	1
+一念永恒	gwyn	1
 一言不合	gygw	1
 虚拟环境	hrgf	17
 沧海横流	iisi	1

@@ -268,6 +268,7 @@ use_preset_vocabulary: false
 赖	gkim	3
 速	gkip	1
 卅	gkk	49
+逼	gklp	1
 带	gkp	8
 豆	gku	2
 逗	gkup	2
@@ -282,7 +283,7 @@ use_preset_vocabulary: false
 来	go	49
 亚	gog	1
 琮	gp	1
-列	gq	2
+列	gq	3
 殖	gqf	1
 烈	gqjo	1
 敖	gqty	1
@@ -405,6 +406,7 @@ use_preset_vocabulary: false
 易	jqr	1
 歇	jqw	3
 果	js	1
+星	jtg	1
 临	jty	1
 鉴	jtyq	1
 暗	juj	3
@@ -632,6 +634,7 @@ use_preset_vocabulary: false
 宇	pgf	1
 写	pgn	20
 宝	pgy	13
+冥	pju	1
 宫	pk	1
 军	pl	2
 密	pnt	1
@@ -686,6 +689,7 @@ use_preset_vocabulary: false
 猎	qta	1
 猫	qtal	1
 猛	qtbl	2
+狂	qtg	1
 猜	qtge	2
 狗	qtq	5
 狐	qtr	2
@@ -713,6 +717,7 @@ use_preset_vocabulary: false
 挂	rffg	3
 质	rfm	1
 后	rg	12
+皇	rgf	1
 年	rh	8
 看	rhf	72
 掉	rhj	8
@@ -1072,6 +1077,7 @@ use_preset_vocabulary: false
 货	wxm	3
 信	wy	2
 令	wyc	1
+依	wye	1
 住	wygg	3
 伪	wyl	2
 仿	wyn	2
@@ -1270,6 +1276,7 @@ use_preset_vocabulary: false
 随便	bdwg	3
 阻碍	bedj	1
 隔开	bgga	1
+耳根	bgsv	1
 隔离	bgyb	1
 函索	bifp	1
 函数	biov	5
@@ -1409,6 +1416,7 @@ use_preset_vocabulary: false
 厨子	dgbb	1
 三码	dgdc	1
 感受	dgep	2
+古老	dgft	1
 感觉	dgip	21
 感冒	dgjh	3
 威力	dglt	1
@@ -1857,6 +1865,7 @@ use_preset_vocabulary: false
 否则	gimj	2
 不懂	gina	2
 不敢	ginb	1
+不愧	ginr	1
 不断	gion	1
 不完	gipf	2
 否定	gipg	1
@@ -1928,13 +1937,13 @@ use_preset_vocabulary: false
 来不	gogi	2
 来源	goid	6
 来啊	gokb	1
-来回	golk	1
+来回	golk	2
 恶心	gony	4
 来自	goth	1
 来得	gotj	1
 恶意	gouj	1
 来说	goyu	2
-列出	gqbm	1
+列出	gqbm	2
 死去	gqfc	1
 列表	gqge	4
 烈日	gqjj	1
@@ -2097,6 +2106,7 @@ use_preset_vocabulary: false
 汽油	irim	1
 激活	irit	7
 河南	isfm	3
+酒色	isqc	1
 活动	itfc	1
 省事	itgk	2
 海波	itih	1
@@ -2211,6 +2221,7 @@ use_preset_vocabulary: false
 照顾	jvdb	1
 归来	jvgo	2
 归属	jvnt	1
+归宿	jvpw	1
 归档	jvsi	12
 照片	jvth	3
 照着	jvud	1
@@ -2969,6 +2980,7 @@ use_preset_vocabulary: false
 拼音	ruuj	45
 抖音	ruuj	1
 搜索	rvfp	9
+势力	rvlt	1
 势必	rvnt	1
 搜狗	rvqt	4
 执行	rvtf	1
@@ -3151,6 +3163,7 @@ use_preset_vocabulary: false
 等着	tfud	1
 毛病	tfug	1
 选单	tfuj	2
+徒弟	tfux	1
 选好	tfvb	1
 选集	tfwy	1
 等级	tfxe	2
@@ -3160,7 +3173,7 @@ use_preset_vocabulary: false
 行为	tfyl	1
 造词	tfyn	2
 告诉	tfyr	3
-重码	tgdc	5
+重码	tgdc	6
 生成	tgdn	10
 生态	tgdy	2
 生死	tggq	1
@@ -3877,6 +3890,7 @@ use_preset_vocabulary: false
 高兴	ymiw	1
 高中	ymkh	1
 设置	ymlf	18
+设定	ympg	1
 高手	ymrt	1
 设备	ymtl	1
 高管	ymtp	1
@@ -4086,7 +4100,7 @@ use_preset_vocabulary: false
 看起来	rfgo	1
 找不到	rggc	1
 看不懂	rgna	1
-白小纯	rixg	2
+白小纯	rixg	3
 年轻人	rlww	1
 打印机	rqsm	1
 李达康	sdyv	3
@@ -4154,7 +4168,7 @@ use_preset_vocabulary: false
 正午阳光	gtbi	2
 开箱即用	gtve	4
 一如既往	gvvt	1
-一念永恒	gwyn	1
+一念永恒	gwyn	2
 一言不合	gygw	1
 虚拟环境	hrgf	17
 沧海横流	iisi	1

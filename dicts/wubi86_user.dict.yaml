@@ -39,6 +39,7 @@ use_preset_vocabulary: false
 东	ai	1
 落	ait	4
 幕	ajdh	1
+慕	ajdn	1
 草	ajj	1
 或	ak	6
 功	al	2
@@ -64,6 +65,7 @@ use_preset_vocabulary: false
 随	bde	1
 陆	bfm	4
 孙	bi	2
+阳	bj	1
 阵	bl	1
 出	bm	22
 也	bn	106
@@ -183,7 +185,7 @@ use_preset_vocabulary: false
 动	fcl	4
 运	fcp	2
 去	fcu	34
-云	fcu	6
+云	fcu	10
 圭	fff	1
 填	ffh	1
 款	ffi	2
@@ -273,7 +275,7 @@ use_preset_vocabulary: false
 豆	gku	2
 逗	gkup	2
 事	gkv	12
-画	gl	1
+画	gl	2
 现	gm	50
 瑞	gmdj	1
 再	gmf	30
@@ -736,6 +738,7 @@ use_preset_vocabulary: false
 所	rn	17
 气	rnb	2
 氪	rndq	1
+扭	rnf	2
 拨	rnt	1
 搂	ro	1
 近	rp	2
@@ -743,9 +746,10 @@ use_preset_vocabulary: false
 控	rpw	1
 擦	rpwi	2
 抑	rqb	2
+鬼	rqc	1
 撸	rqgj	1
 换	rqm	11
-抱	rqn	1
+抱	rqn	2
 掐	rqv	1
 挣	rqvh	1
 折	rr	3
@@ -765,6 +769,7 @@ use_preset_vocabulary: false
 撞	ruj	1
 搁	rutk	1
 接	ruv	3
+扫	rv	4
 挪	rvf	1
 搜	rvh	6
 招	rvk	2
@@ -787,6 +792,7 @@ use_preset_vocabulary: false
 飘	sfiq	1
 村	sfy	1
 本	sg	3
+酉	sgd	2
 西	sghg	1
 杯	sgi	4
 醒	sgj	2
@@ -869,6 +875,7 @@ use_preset_vocabulary: false
 复	tjt	1
 各	tk	5
 种	tkh	52
+积	tkw	3
 血	tld	1
 秃	tmb	2
 身	tmd	1
@@ -1074,7 +1081,7 @@ use_preset_vocabulary: false
 众	www	1
 化	wx	4
 华	wxf	3
-货	wxm	3
+货	wxm	4
 信	wy	2
 令	wyc	1
 依	wye	1
@@ -1283,7 +1290,7 @@ use_preset_vocabulary: false
 阳历	bjdl	1
 阳光	bjiq	1
 阵地	blfb	1
-出去	bmfc	2
+出去	bmfc	3
 出现	bmgm	4
 出来	bmgo	16
 出口	bmkk	1
@@ -1519,6 +1526,7 @@ use_preset_vocabulary: false
 太监	dyjt	2
 太空	dypw	1
 太多	dyqq	2
+太白	dyrr	1
 态度	dyya	1
 服务	ebtl	4
 朋友	eedc	4
@@ -1981,7 +1989,7 @@ use_preset_vocabulary: false
 上述	hhsy	2
 上升	hhta	1
 目前	hhue	17
-上次	hhuq	2
+上次	hhuq	3
 目录	hhvi	9
 上传	hhwf	9
 上级	hhxe	1
@@ -2143,6 +2151,7 @@ use_preset_vocabulary: false
 注释	iyto	8
 注意	iyuj	3
 浪费	iyxj	1
+暴风	jamq	1
 晓得	jatj	1
 最大	jbdd	1
 最爱	jbep	1
@@ -2229,7 +2238,7 @@ use_preset_vocabulary: false
 影院	jybp	1
 影响	jykt	5
 影射	jytm	3
-哎呀	kaka	1
+哎呀	kaka	2
 顺手	kdrt	1
 顺利	kdtj	1
 顺便	kdwg	1
@@ -2259,6 +2268,7 @@ use_preset_vocabulary: false
 中文	khyy	9
 虽然	kjqd	5
 唱歌	kjsk	1
+喝奶	kjve	1
 口味	kkkf	1
 口气	kkrn	1
 噪音	kkuj	1
@@ -2348,7 +2358,7 @@ use_preset_vocabulary: false
 回去	lkfc	4
 回到	lkgc	1
 回事	lkgk	4
-回来	lkgo	2
+回来	lkgo	4
 加班	lkgy	1
 加上	lkhh	3
 加油	lkim	1
@@ -2436,6 +2446,7 @@ use_preset_vocabulary: false
 刚才	mqft	2
 见到	mqgc	1
 网上	mqhh	3
+刚刚	mqmq	1
 风格	mqst	2
 网格	mqst	2
 网盘	mqte	2
@@ -2575,6 +2586,7 @@ use_preset_vocabulary: false
 糊涂	odiw	3
 类似	odwn	6
 类比	odxx	1
+精品	ogkk	1
 精力	oglt	2
 精神	ogpy	2
 精校	ogsu	1
@@ -2868,6 +2880,7 @@ use_preset_vocabulary: false
 提取	rjbc	3
 提示	rjfi	5
 提到	rjgc	1
+担心	rjny	1
 提醒	rjsg	2
 提升	rjta	2
 提前	rjue	1
@@ -2911,7 +2924,7 @@ use_preset_vocabulary: false
 挣钱	rqqg	1
 挣扎	rqrn	1
 抵御	rqtr	1
-抱着	rqud	1
+抱着	rqud	2
 换个	rqwh	1
 白菜	rrae	1
 拍了	rrb	1
@@ -2979,11 +2992,12 @@ use_preset_vocabulary: false
 接着	ruud	1
 拼音	ruuj	45
 抖音	ruuj	1
+扫码	rvdc	1
 搜索	rvfp	9
 势力	rvlt	1
 势必	rvnt	1
 搜狗	rvqt	4
-执行	rvtf	1
+执行	rvtf	4
 执着	rvud	1
 热闹	rvuy	5
 推荐	rwad	2
@@ -3143,6 +3157,7 @@ use_preset_vocabulary: false
 适应	tdyi	1
 知识	tdyk	1
 短词	tdyn	4
+秀才	teft	1
 透明	teje	1
 透彻	teta	1
 租房	teyn	1
@@ -3160,6 +3175,7 @@ use_preset_vocabulary: false
 等待	tftf	1
 等等	tftf	1
 选重	tftg	2
+先生	tftg	1
 等着	tfud	1
 毛病	tfug	1
 选单	tfuj	2
@@ -3565,6 +3581,8 @@ use_preset_vocabulary: false
 段落	wdai	1
 做贼	wdma	1
 俺宝	wdpg	9
+做饭	wdqn	1
+优质	wdrf	1
 优势	wdrv	2
 优秀	wdte	1
 优先	wdtf	1
@@ -3965,9 +3983,11 @@ use_preset_vocabulary: false
 详情	yung	2
 说错	yuqa	1
 说句	yuqk	2
+说的	yur	1
 详细	yuxl	2
 说话	yuyt	1
 说说	yuyu	2
+唐朝	yvfj	1
 良心	yvny	2
 良好	yvvb	2
 夜月	ywee	2
@@ -4033,13 +4053,14 @@ use_preset_vocabulary: false
 赵本山	fsmm	1
 无意义	fuyq	2
 干什么	fwtc	1
-二维码	fxdc	1
+二维码	fxdc	4
 互联网	gbmq	1
 表达式	gdaa	1
 不确定	gdpg	1
 来不来	gggo	1
 还不错	ggqa	1
 开玩笑	ggtt	1
+画中画	gkgl	2
 表情包	gnqn	1
 不客气	gprn	3
 不知道	gtut	1
@@ -4052,6 +4073,7 @@ use_preset_vocabulary: false
 浏览器	ijkk	6
 省略号	ilkg	2
 注册表	imge	2
+沃尔玛	iqgc	1
 小狼毫	iqyp	20
 小科狗	itqt	12
 注意力	iult	1
@@ -4159,6 +4181,7 @@ use_preset_vocabulary: false
 专案信息	fpwt	1
 喜气洋洋	frii	1
 土木工程	fsat	1
+才高八斗	fywu	1
 形散神聚	gapb	1
 吞噬星空	gkjp	23
 一蹋糊涂	gkoi	2
@@ -4168,10 +4191,11 @@ use_preset_vocabulary: false
 正午阳光	gtbi	2
 开箱即用	gtve	4
 一如既往	gvvt	1
-一念永恒	gwyn	2
+一念永恒	gwyn	3
 一言不合	gygw	1
 虚拟环境	hrgf	17
 沧海横流	iisi	1
+学富五车	ipgl	1
 中国电信	kljw	1
 喘息未定	ktfp	1
 加减乘除	lutb	1

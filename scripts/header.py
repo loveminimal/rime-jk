@@ -13,12 +13,12 @@ def get_header_sync(file_name):
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
-# - py scripts/sync_wubi_user_dict.py
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_{'.'.join(file_name.split('.')[:-2])}_dict.py
+# - py scripts/sync_{'.'.join(file_name.split('.')[:-2])}_dict.py
 # 
 ---
 name: {'.'.join(file_name.split('.')[:-2])}
-version: '{datetime.now().date().strftime("%Y.%m")}'
+version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -45,7 +45,7 @@ def get_en_aliases_header(file_name):
 #
 ---
 name: {'.'.join(file_name.split('.')[:-2])}
-version: '{datetime.now().date().strftime("%Y.%m")}'
+version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
 use_preset_vocabulary: false
 ...

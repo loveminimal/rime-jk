@@ -7,12 +7,12 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
-# - py scripts/sync_wubi_user_dict.py
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi86_user_dict.py
+# - py scripts/sync_wubi86_user_dict.py
 # 
 ---
 name: wubi86_user
-version: '2025.03'
+version: 2025.03
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -651,7 +651,7 @@ use_preset_vocabulary: false
 实	pu	2
 衫	pue	1
 补	puh	3
-被	puhc	9
+被	puhc	15
 初	puv	1
 裤	puyl	1
 安	pv	6
@@ -945,10 +945,10 @@ use_preset_vocabulary: false
 单	ujfj	6
 章	ujj	1
 意	ujn	2
+总	uk	9
 部	ukb	3
 问	ukd	8
 冲	ukh	3
-总	ukn	5
 竞	ukq	1
 曾	ulj	1
 商	um	1
@@ -1706,7 +1706,7 @@ use_preset_vocabulary: false
 无损	fqrk	1
 无所	fqrn	2
 无敌	fqtd	1
-无重	fqtg	1
+无重	fqtg	2
 远程	fqtk	4
 无关	fqud	1
 无益	fquw	1
@@ -1820,6 +1820,7 @@ use_preset_vocabulary: false
 一旦	ggjg	2
 一只	ggkw	1
 一边	gglp	2
+一周	ggmf	1
 王炸	ggot	1
 一字	ggpb	1
 一家	ggpe	1
@@ -1980,7 +1981,7 @@ use_preset_vocabulary: false
 平凡	gumy	1
 平铺	guqg	3
 平板	gusr	1
-虎码	hadc	10
+虎码	hadc	13
 虚拟	harn	5
 皮肤	hcef	2
 肯定	hepg	9
@@ -2350,6 +2351,7 @@ use_preset_vocabulary: false
 因为	ldyl	9
 转码	lfdc	1
 转成	lfdn	4
+围成	lfdn	1
 墨奇	lfds	3
 黑豹	lfee	1
 黟县	lfeg	1
@@ -2436,6 +2438,7 @@ use_preset_vocabulary: false
 岸边	mdlp	1
 骨子	mebb	1
 崩溃	meik	1
+周一	mfgg	1
 周末	mfgs	6
 财务	mftl	1
 同志	mgfn	1
@@ -3821,6 +3824,7 @@ use_preset_vocabulary: false
 强迫	xkrp	1
 强推	xkrw	1
 强行	xktf	2
+强度	xkya	1
 细节	xlab	1
 细胞	xleq	2
 细看	xlrh	1
@@ -4123,6 +4127,7 @@ use_preset_vocabulary: false
 坚果云	jjfc	1
 蜘蛛侠	jjwg	1
 日程表	jtge	1
+时间戳	junw	1
 申公豹	jwee	2
 只有就	keyi	1
 听起来	kfgo	1
@@ -4211,6 +4216,7 @@ use_preset_vocabulary: false
 文件夹	ywgu	1
 文件名	ywqk	6
 百花齐放	dayy	1
+原来如此	dgvh	1
 古川伊织	dkwx	1
 三心二意	dnfu	1
 遥遥领先	eewt	1

@@ -14,7 +14,7 @@
 #
 ---
 name: en_aliases
-version: '2025.03'
+version: 2025.03
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -64,7 +64,7 @@ git restore	grs	0
 git pull	gl	0
 git push	gt	0
 git push github	gtg	0
-git tag -l	gtl	0
+git log --decorate --simplify-by-decoration --oneline	gtl	0
 git tag -n	gtn	0
 git push --tags	gtt	0
 

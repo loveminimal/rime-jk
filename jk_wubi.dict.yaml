@@ -30,16 +30,17 @@ import_tables:
   - dicts/wubi86_district
 use_preset_vocabulary: false
 ...
-朙	lwme	1
-囧	lwm	1
 〇	llll	1
+囧	lwm	1
+朙	lwme	1
 
 # -------------------
 # 次选二级简码「高频」
 # -------------------
-被	pu	1
-道	ut	1
 都	ft	1
-选	tf	1
 还	gi	1
+选	tf	1
 总	uk	1
+道	ut	1
+宝	pg	1
+被	pu	1

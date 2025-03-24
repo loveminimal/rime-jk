@@ -15,10 +15,10 @@ patch:
       font_point: 12 
       label_font_point: 10
       comment_font_point: 10
-      horizontal: true 
+      horizontal: false 
       # 隐藏编码行
       # preedit_type: preview
-      inline_preedit: true
+      # inline_preedit: true
       layout:
         __include: style.yaml:/layout
         # margin_y: -1

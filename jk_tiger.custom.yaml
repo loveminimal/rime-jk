@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/tkjk
+  __include: style.yaml:/orjk
   __patch:
     style/+:
-      color_scheme: tkjk
+      color_scheme: orjk

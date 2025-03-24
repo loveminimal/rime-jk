@@ -321,7 +321,7 @@ use_preset_vocabulary: false
 此	hx	1
 些	hxf	23
 紫	hxx	1
-满	iagw	1
+满	iagw	2
 灌	iak	1
 港	iawn	1
 汉	ic	1
@@ -361,7 +361,7 @@ use_preset_vocabulary: false
 辉	iqpl	2
 溜	iqyl	1
 派	ire	1
-酒	isgg	2
+酒	isgg	3
 河	isk	1
 淞	iswc	1
 少	it	11
@@ -1706,6 +1706,7 @@ use_preset_vocabulary: false
 无损	fqrk	1
 无所	fqrn	2
 无敌	fqtd	1
+无重	fqtg	1
 远程	fqtk	4
 无关	fqud	1
 无益	fquw	1
@@ -2027,6 +2028,7 @@ use_preset_vocabulary: false
 具体	hwws	8
 此处	hxth	3
 鸿蒙	iaap	1
+满满	iaia	1
 江湖	iaid	1
 灌水	iaii	3
 港澳	iait	1
@@ -2898,6 +2900,7 @@ use_preset_vocabulary: false
 看看	rhrh	11
 年番	rhto	4
 看着	rhud	9
+年代	rhwa	1
 看个	rhwh	1
 看似	rhwn	2
 捎带	rigk	1

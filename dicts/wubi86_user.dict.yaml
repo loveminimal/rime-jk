@@ -172,6 +172,7 @@ use_preset_vocabulary: false
 腹	etj	1
 胖	euf	1
 脱	euk	3
+腿	eve	1
 脸	ewg	5
 及	ey	6
 地	f	9
@@ -264,7 +265,7 @@ use_preset_vocabulary: false
 歪	gig	2
 否	gik	6
 还	gip	84
-理	gj	3
+理	gj	4
 更	gjq	9
 整	gkih	3
 赖	gkim	3
@@ -416,6 +417,7 @@ use_preset_vocabulary: false
 鉴	jtyq	1
 暗	juj	3
 照	jvko	2
+景	jy	1
 中	k	65
 嘞	kaf	15
 呀	kah	5
@@ -477,7 +479,7 @@ use_preset_vocabulary: false
 兄	kqb	3
 呜	kqng	1
 吹	kqw	2
-听	kr	3
+听	kr	4
 啦	kru	16
 呆	ks	2
 呵	ksk	1
@@ -779,6 +781,7 @@ use_preset_vocabulary: false
 挪	rvf	1
 搜	rvh	6
 招	rvk	2
+抛	rvl	1
 热	rvyo	2
 失	rw	1
 扒	rwy	1
@@ -893,6 +896,7 @@ use_preset_vocabulary: false
 笥	tng	1
 番	tolf	1
 翻	toln	2
+乏	tpi	1
 管	tpn	5
 称	tq	1
 稳	tqv	1
@@ -962,6 +966,7 @@ use_preset_vocabulary: false
 将	uqf	2
 次	uqw	9
 资	uqwm	1
+亲	us	1
 闲	usi	2
 新	usr	15
 产	ut	3
@@ -1259,6 +1264,7 @@ use_preset_vocabulary: false
 世纪	anxn	2
 荣耀	apiq	2
 劳力	aplt	1
+营销	apqi	1
 劳模	apsa	1
 劳作	apwt	1
 获取	aqbc	8
@@ -1435,12 +1441,14 @@ use_preset_vocabulary: false
 压力	dflt	1
 压缩	dfxp	1
 厨子	dgbb	1
+厂子	dgbb	1
 三码	dgdc	1
 感受	dgep	2
 古老	dgft	1
 感觉	dgip	21
 感冒	dgjh	3
 威力	dglt	1
+感情	dgng	1
 研究	dgpw	1
 三枪	dgsw	1
 三种	dgtk	1
@@ -1551,6 +1559,7 @@ use_preset_vocabulary: false
 助手	egrt	5
 受限	epbv	1
 爱看	eprh	1
+爱护	epry	3
 受众	epww	1
 用了	etbn	1
 用去	etfc	1
@@ -1624,6 +1633,7 @@ use_preset_vocabulary: false
 二楼	fgso	1
 二简	fgtu	4
 干净	fguq	1
+干好	fgvb	1
 十分	fgwv	1
 二级	fgxe	8
 起草	fhaj	1
@@ -1924,6 +1934,7 @@ use_preset_vocabulary: false
 否认	giyw	1
 理由	gjmh	1
 更改	gjnt	2
+理发	gjnt	1
 理解	gjqe	7
 更多	gjqq	1
 更换	gjrq	1
@@ -1968,8 +1979,9 @@ use_preset_vocabulary: false
 来不	gogi	2
 来源	goid	6
 来啊	gokb	1
-来回	golk	2
+来回	golk	3
 恶心	gony	4
+严格	gost	1
 来自	goth	1
 来得	gotj	1
 恶意	gouj	1
@@ -2016,6 +2028,7 @@ use_preset_vocabulary: false
 目录	hhvi	9
 上传	hhwf	9
 上级	hhxe	1
+上线	hhxg	1
 步骤	hicb	3
 频繁	hitx	3
 桌面	hjdm	1
@@ -2042,6 +2055,7 @@ use_preset_vocabulary: false
 港澳	iait	1
 满足	iakh	1
 满屋	iang	1
+泄密	iapn	1
 满意	iauj	8
 渠道	iaut	1
 涵盖	ibug	1
@@ -2234,6 +2248,7 @@ use_preset_vocabulary: false
 映射	jmtm	9
 电压	jndf	1
 电脑	jney	8
+电动	jnfc	1
 电影	jnjy	4
 电车	jnlg	2
 电力	jnlt	2
@@ -2294,6 +2309,7 @@ use_preset_vocabulary: false
 跟着	khud	1
 中间	khuj	3
 跨度	khya	2
+距离	khyb	1
 中文	khyy	9
 虽然	kjqd	5
 唱歌	kjsk	1
@@ -2552,6 +2568,7 @@ use_preset_vocabulary: false
 快速	nngk	4
 快点	nnhk	1
 书法	nnif	2
+快照	nnjv	1
 快捷	nnrg	2
 快查	nnsj	1
 书签	nntw	1
@@ -2670,6 +2687,7 @@ use_preset_vocabulary: false
 冠军	pfpl	2
 完本	pfsg	1
 寒酸	pfsg	1
+完善	pfud	1
 完美	pfug	1
 赛道	pfut	2
 完全	pfwg	3
@@ -2743,12 +2761,13 @@ use_preset_vocabulary: false
 空白	pwrr	2
 空格	pwst	4
 空间	pwuj	3
-宿舍	pwwf	1
+宿舍	pwwf	2
 空位	pwwu	2
 它们	pxwu	9
 神通	pyce	1
 神奇	pyds	1
 视频	pyhi	3
+神器	pykk	1
 视图	pylt	9
 祖宗	pypf	1
 视窗	pypw	1
@@ -2842,6 +2861,7 @@ use_preset_vocabulary: false
 争气	qvrn	1
 键盘	qvte	6
 键位	qvwu	7
+锻炼	qwoa	2
 留下	qygh	1
 留着	qyud	3
 摸索	rafp	1
@@ -2973,6 +2993,7 @@ use_preset_vocabulary: false
 白天	rrgd	1
 白皮	rrhc	1
 哲学	rrip	1
+抓紧	rrjc	1
 魄力	rrlt	1
 拆字	rrpb	3
 白色	rrqc	1
@@ -3008,6 +3029,7 @@ use_preset_vocabulary: false
 手速	rtgk	1
 手残	rtgq	1
 手掌	rtip	1
+搬家	rtpe	1
 拖拽	rtrj	3
 手指	rtrx	3
 手机	rtsm	10
@@ -3026,6 +3048,7 @@ use_preset_vocabulary: false
 拼图	rult	1
 接触	ruqe	2
 拼搏	rurg	1
+接手	rurt	1
 拼接	ruru	2
 接入	ruty	1
 接着	ruud	1
@@ -3199,6 +3222,7 @@ use_preset_vocabulary: false
 短词	tdyn	4
 秀才	teft	1
 透明	teje	1
+秀发	tent	1
 透彻	teta	1
 租房	teyn	1
 选项	tfad	4
@@ -3304,7 +3328,7 @@ use_preset_vocabulary: false
 身边	tmlp	1
 微软	tmlq	9
 向前	tmue	1
-身体	tmws	3
+身体	tmws	4
 微信	tmwy	3
 微调	tmym	1
 颓废	tmyn	1
@@ -3376,6 +3400,7 @@ use_preset_vocabulary: false
 并且	uaeg	2
 并击	uafm	7
 逆向	ubtm	2
+痛苦	ucad	1
 痛点	uchk	1
 关联	udbu	1
 郑码	uddc	4
@@ -3481,7 +3506,7 @@ use_preset_vocabulary: false
 交互	uqgx	2
 资源	uqid	4
 资深	uqip	1
-交流	uqiy	1
+交流	uqiy	2
 效果	uqjs	10
 资料	uqou	2
 次数	uqov	2
@@ -3504,6 +3529,7 @@ use_preset_vocabulary: false
 新疆	usxf	1
 首页	utdm	7
 道理	utgj	3
+产品	utkk	2
 产业	utog	1
 痴迷	utop	1
 颜色	utqc	2
@@ -3563,10 +3589,10 @@ use_preset_vocabulary: false
 妈妈	vcvc	1
 始终	vcxt	1
 奶茶	veaw	1
-奶奶	veve	1
+奶奶	veve	2
 姐姐	veve	1
 退费	vexj	13
-妹子	vfbb	2
+妹子	vfbb	3
 那面	vfdm	2
 那些	vfhx	3
 那里	vfjf	2
@@ -3600,6 +3626,7 @@ use_preset_vocabulary: false
 群主	vtyg	2
 嫂子	vvbb	1
 女士	vvfg	2
+女性	vvnt	1
 女儿	vvqt	2
 女仆	vvwh	1
 女人	vvww	2
@@ -3769,6 +3796,7 @@ use_preset_vocabulary: false
 人类	wwod	2
 人家	wwpe	5
 份额	wwpt	1
+价格	wwst	1
 丛生	wwtg	1
 人和	wwtk	1
 人物	wwtr	2
@@ -4012,6 +4040,7 @@ use_preset_vocabulary: false
 魔神	yspy	1
 摩尔	ysqi	1
 订阅	ysuu	1
+麻袋	yswa	1
 诱惑	ytak	1
 放大	ytdd	1
 放在	ytdh	3
@@ -4164,6 +4193,7 @@ use_preset_vocabulary: false
 发行版	ntth	1
 精确度	odya	1
 数据库	oryl	3
+富士康	pfyv	2
 初中生	pktg	1
 字符串	ptkk	1
 初始化	pvwx	1
@@ -4183,6 +4213,7 @@ use_preset_vocabulary: false
 年轻人	rlww	1
 打印机	rqsm	1
 李达康	sdyv	3
+毛玻璃	tggy	1
 管理员	tgkm	3
 第一次	tguq	3
 第一位	tgwu	1
@@ -4255,6 +4286,7 @@ use_preset_vocabulary: false
 一言不合	gygw	1
 虚拟环境	hrgf	17
 沧海横流	iisi	1
+混口饭吃	ikqk	1
 学富五车	ipgl	1
 中国电信	kljw	1
 喘息未定	ktfp	1

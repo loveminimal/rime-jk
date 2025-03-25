@@ -302,6 +302,7 @@ use_preset_vocabulary: false
 上	h	60
 虎	ha	4
 瞄	hal	1
+彪	hame	1
 虚	hao	2
 皮	hc	2
 止	hh	2
@@ -888,6 +889,7 @@ use_preset_vocabulary: false
 微	tmg	2
 币	tmh	1
 向	tmk	2
+奥	tmo	1
 笥	tng	1
 番	tolf	1
 翻	toln	2
@@ -1358,6 +1360,7 @@ use_preset_vocabulary: false
 通话	ceyt	1
 对面	cfdm	2
 对于	cfgf	2
+对照	cfjv	1
 对账	cfmt	1
 对象	cfqj	6
 对接	cfru	2
@@ -1819,6 +1822,7 @@ use_preset_vocabulary: false
 一些	gghx	9
 一时	ggjf	1
 一旦	ggjg	2
+一路	ggkh	1
 一只	ggkw	1
 一边	gglp	2
 一周	ggmf	1
@@ -1839,6 +1843,7 @@ use_preset_vocabulary: false
 一半	gguf	1
 一次	gguq	1
 王道	ggut	1
+一门	gguy	2
 一段	ggwd	3
 一会	ggwf	1
 一个	ggwh	7
@@ -2028,6 +2033,7 @@ use_preset_vocabulary: false
 眼圈	hvlu	1
 瞧瞧	hwhw	1
 具体	hwws	8
+此类	hxod	1
 此处	hxth	3
 鸿蒙	iaap	1
 满满	iaia	1
@@ -2915,7 +2921,7 @@ use_preset_vocabulary: false
 提醒	rjsg	2
 提升	rjta	2
 提前	rjue	1
-提交	rjuq	4
+提交	rjuq	5
 提供	rjwa	3
 提高	rjym	1
 捐助	rkeg	1
@@ -3203,6 +3209,7 @@ use_preset_vocabulary: false
 等吧	tfkc	1
 行吗	tfkc	1
 选中	tfkh	6
+德国	tflg	1
 选择	tfrc	6
 丢失	tfrw	1
 待机	tfsm	1
@@ -3237,6 +3244,7 @@ use_preset_vocabulary: false
 重要	tgsv	4
 重复	tgtj	2
 重装	tguf	3
+生意	tguj	1
 生效	tguq	6
 重新	tgus	4
 生僻	tgwn	1
@@ -3511,6 +3519,7 @@ use_preset_vocabulary: false
 兼容	uvpw	6
 准确	uwdq	4
 冷静	uwge	1
+闪电	uwjn	1
 冷热	uwrv	1
 准备	uwtl	3
 凝聚	uxbc	1
@@ -3657,6 +3666,7 @@ use_preset_vocabulary: false
 全家	wgpe	4
 便宜	wgpe	2
 全角	wgqe	2
+命名	wgqk	1
 全拼	wgru	8
 合适	wgtd	3
 全选	wgtf	2
@@ -3690,6 +3700,7 @@ use_preset_vocabulary: false
 保护	wkry	1
 侃侃	wkwk	1
 保证	wkyg	1
+侧面	wmdm	1
 侧边	wmlp	1
 仙逆	wmub	12
 仙女	wmvv	1
@@ -3879,6 +3890,7 @@ use_preset_vocabulary: false
 离谱	ybyu	1
 弃用	ycet	1
 序列	ycgq	2
+充当	yciv	1
 充电	ycjn	1
 序号	yckg	1
 充分	ycwv	1

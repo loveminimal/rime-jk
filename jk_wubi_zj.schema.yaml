@@ -1,0 +1,163 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: jk_wubi_zj
+  name: 五笔·整句
+  author: 
+    - Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心五笔，五笔·拼音反查「 整句版 」，小啊小女仆
+    - https://github.com/loveminimal/rime-jk
+  dependencies:
+    - jk_ascii
+    - jk_pinyin
+  icon: 'assets/jk_m.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk.yaml:/switches
+
+
+engine:
+  processors:
+    - lua_processor@*quick_symbol
+    - ascii_composer
+    - chord_composer
+    - key_binder    
+    - recognizer    
+    - speller       
+    - punctuator    
+    - selector      
+    - navigator     
+    - express_editor
+  segmentors:
+    - ascii_segmentor        
+    - matcher                
+    - abc_segmentor          
+    - punct_segmentor        
+    - affix_segmentor@pinyin
+    - fallback_segmentor     
+  translators:
+    # - echo_translator               
+    - punct_translator        
+    # - table_translator
+    - script_translator
+    - table_translator@custom_phrase  
+    - script_translator@pinyin
+    - reverse_lookup_translator
+    - lua_translator@*schedule
+    - lua_translator@*helper
+    - lua_translator@*date_translator 
+    - lua_translator@*force_gc        
+  filters:
+    - lua_filter@*prettify_comment
+    # - lua_filter@*keep_primary_code_first
+    # - lua_filter@*keep_secondary_code_first
+    - simplifier
+    - simplifier@emoji   
+    - simplifier@zh2en
+    - simplifier@chaifen  
+    - simplifier@traditionalize
+    - uniquifier          
+
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  __include: jk.yaml:/recognizer
+  patterns/+:
+    pinyin: "^z[Xa-z]*$"    
+
+punctuator:
+  __include: jk.yaml:/punctuator
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  delimiter: " ~"     
+  # max_code_length: 4
+  algebra:
+    - derive/^(\w)(\w),(.+)$/$1$2/                            # 纯双拼的情况
+    - derive/^(\w)(\w),(\w)(\w);(\w)(\w),(.+)$/$5$6/          # 纯双拼的情况
+
+    - derive/^(\w)(\w),(\w)(.+)$/$1$2$3/                      # 双拼+一位辅助码的情况
+    - derive/^(\w)(\w),(\w)(\w);(\w)(\w),(\w)(.+)$/$5$6$7/    # 双拼+一位辅助码的情况
+
+    - derive|^(\w)(\w),(\w)(\w)$|$1$2$3$4z|                   # 双拼+2位辅助码的情况 结尾加 /
+    - derive|^(\w)(\w),(\w)(\w);(.+)$|$1$2$3$4z|              # 双拼+2位辅助码的情况 结尾加 /
+    - derive|^(\w)(\w),(\w)(\w);(\w)(\w),(\w)(\w)$|$5$6$7$8z| # 双拼+2位辅助码的情况 结尾加 /
+    
+    - derive|^(\w)(\w),(\w)0.+$|$1$2$3z|                      # 3码全码的字，3码全码后加 /
+    - derive|^(\w)(\w),00.+$|$1$2z|                           # 1码全码的字，3码全码后加 /
+    - derive|^(\w)0,00.+$|$1z|                                # 1码全码的字，3码全码后加 /
+
+    - derive|^.+;(\w)(\w),(\w)0$|$1$2$3z|                     # 3码全码的字，3码全码后加 /
+    - derive|^.+;(\w)(\w),00$|$1$2z|                          # 1码全码的字，3码全码后加 /
+    - derive|^.+;(\w)0,00$|$1z|                               # 1码全码的字，3码全码后加 /
+
+chord_composer:
+  __include: jk.yaml:/chord_composer_mini
+
+
+translator:
+  dictionary: jk_wubi_zj             
+  prism: jk_wubi_zj          
+  #  默认为不超过 2 个字的候选项显示输入码；将 2 改为 0 可关闭编码提示，
+  #  改为 1 则是只显示单字的输入码，依此类推。
+  spelling_hints: 0   
+  initial_quality: 10000     
+  # enable_charset_filter: false     
+  # enable_sentence: true           
+  # enable_encoder: true            
+  encode_commit_history: true     
+  disable_user_dict_for_patterns: 
+    - "^z.*$"
+  enable_completion: false     
+  enable_user_dict: true      
+  # comment_format: "{comment}" 
+  comment_format:
+    - "xform/(^|[ '])[^[]+[[]/$1/"
+
+
+date_translator:
+  __include: jk.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk.yaml:/reverse_lookup
+
+pinyin:
+  __include: jk.yaml:/pinyin
+
+custom_phrase:
+  __include: jk.yaml:/custom_phrase
+
+emoji:
+  __include: jk.yaml:/emoji
+
+zh2en:
+  __include: jk.yaml:/zh2en
+
+chaifen:
+  __include: jk.yaml:/chaifen
+
+traditionalize:
+  __include: jk.yaml:/traditionalize
+
+
+__include: octagram   #启用语言模型
+#语言模型
+octagram:
+  __patch:
+    grammar:
+      language: wanxiang-lts-zh-hans
+      collocation_max_length: 8    
+      collocation_min_length: 2    
+      collocation_penalty: -10     
+      non_collocation_penalty: -12 
+      weak_collocation_penalty: -24
+      rear_penalty: -30            
+    translator/contextual_suggestions: false
+    translator/max_homophones: 5
+    translator/max_homographs: 5

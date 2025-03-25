@@ -39,6 +39,7 @@ use_preset_vocabulary: false
 成	dn,nt	1
 太	dy,i0	1
 用	et,nh	1
+及	ey,i0	1
 地	fb,n0;f0,00	1
 云	fc,u0	1
 去	fc,u0	2
@@ -79,6 +80,7 @@ use_preset_vocabulary: false
 吗	kc,g0	1
 吧	kc,n0	1
 中	kh,k0;k0,00	2
+跟	kh,ve	1
 嗯	kl,dn	6
 咽	kl,dy	1
 呢	kn,xn	0
@@ -98,8 +100,11 @@ use_preset_vocabulary: false
 快	nn,wy	1
 买	nu,du	1
 糊	od,eg	2
+烦	od,my	1
+宽	pa,mq	0
 字	pb,f0	2
 宝	pg,yu	2
+错	qa,jg	1
 鱼	qg,f0	1
 包	qn,v0	1
 多	qq,u0	1
@@ -153,18 +158,22 @@ use_preset_vocabulary: false
 就	yi,dn	9
 记	yn,n0	0
 话	yt,dg	1
-基础	ad,wf db,mh	0
+说	yu,kq	0
+基础	ad,wf db,mh	1
 基座	ad,wf yw,wf	0
 其实	ad,wu pu,du	1
 东东	ai,i0 ai,i0	1
 勤奋	ak,gl dl,f0	0
 功能	al,n0 ce,xx	1
+区域	aq,i0 fa,kg	1
 获取	aq,td bc,y0	0
 医生	at,di tg,d0	0
 药膏	ax,qy yp,ke	0
 陈坤	ba,iy fj,hh	1
 随意	bd,ep uj,nu	1
+阴影	be,g0 jy,ie	1
 了吗	bn,h0;b0,00 kc,g0	0
+也有	bn,hn de,f0;e0,00	0
 也是	bn,hn jg,hu;j0,00	0
 也拉	bn,hn ru,g0	1
 也要	bn,hn sv,f0;s0,00	0
@@ -255,6 +264,7 @@ use_preset_vocabulary: false
 一些	gg,ll;g0,00 hx,ff	0
 一旦	gg,ll;g0,00 jg,f0	0
 一是	gg,ll;g0,00 jg,hu;j0,00	1
+一样	gg,ll;g0,00 su,dh	0
 一简	gg,ll;g0,00 tu,jf	1
 一个	gg,ll;g0,00 wh,j0	1
 一位	gg,ll;g0,00 wu,g0	0
@@ -305,6 +315,7 @@ use_preset_vocabulary: false
 江湖	ia,g0 id,eg	0
 满意	ia,gw uj,nu	0
 潇洒	ia,vj is,g0	1
+汉字	ic,y0 pb,f0	0
 小心	ih,ty ny,ny	0
 没有	im,cy de,f0;e0,00	2
 没放	im,cy yt,y0	0
@@ -335,6 +346,7 @@ use_preset_vocabulary: false
 量大	jg,jf dd,dd	0
 早睡	jh,nh ht,gf	0
 早前	jh,nh ue,jj	0
+早该	jh,nh yy,nw	0
 曼联	jl,cu bu,dy	0
 晚睡	jq,kq ht,gf	0
 果然	js,i0 qd,ou	1
@@ -343,6 +355,7 @@ use_preset_vocabulary: false
 归宿	jv,g0 pw,dj	1
 中有	kh,k0;k0,00 de,f0;e0,00	0
 中午	kh,k0;k0,00 tf,j0	1
+中间	kh,k0;k0,00 uj,d0	0
 喝汤	kj,qn in,rt	1
 虽然	kj,u0 qd,ou	1
 嘿嘿	kl,fo kl,fo	2
@@ -370,6 +383,10 @@ use_preset_vocabulary: false
 回家	lk,d0 pe,u0	0
 加载	lk,g0 fa,lk	0
 加上	lk,g0 hg,d0;hh,gg;h0,00	0
+加持	lk,g0 rf,fy	0
+圆角	lk,mi qe,j0	1
+边距	lp,v0 kh,an	1
+边框	lp,v0 sa,gg	1
 图片	lt,ui th,gn	0
 输出	lw,gj bm,k0	0
 输入	lw,gj ty,i0	0
@@ -392,6 +409,7 @@ use_preset_vocabulary: false
 发现	nt,cy;v0,00 gm,qn	0
 必须	nt,e0 ed,my	1
 属于	nt,ky gf,k0	0
+改的	nt,y0 rq,yy;r0,00	1
 屏幕	nu,ak aj,dh	0
 习惯	nu,d0 nx,fm	0
 恰好	nw,gk vb,g0	0
@@ -400,6 +418,8 @@ use_preset_vocabulary: false
 类型	od,u0 ga,jf	0
 精力	og,eg lt,n0	0
 火辣	oo,oo ug,ki	1
+宽高	pa,mq ym,kf	1
+字号	pb,f0 kg,nb	1
 字根	pb,f0 sv,ey	0
 字词	pb,f0 yn,gk	3
 宝子	pg,yu bb,bb	1
@@ -427,6 +447,7 @@ use_preset_vocabulary: false
 搭配	ra,wk sg,nn	0
 反手	rc,i0 rt,gh	0
 反查	rc,i0 sj,gf	0
+排列	rd,jd gq,jh	0
 后面	rg,kd dm,jd	0
 抹抹	rg,sy rg,sy	0
 看了	rh,f0 bn,h0;b0,00	1
@@ -440,6 +461,7 @@ use_preset_vocabulary: false
 提到	rj,gh gc,fj	0
 所以	rn,rh ny,wy;c0,00	1
 按着	rp,vg ud,hf	0
+换了	rq,md bn,h0;b0,00	0
 换个	rq,md wh,j0	0
 的话	rq,yy;r0,00 yt,dg	0
 折腾	rr,h0 eu,dc	0
@@ -457,8 +479,9 @@ use_preset_vocabulary: false
 搞的	ry,mk rq,yy;r0,00	0
 搞笑	ry,mk tt,du	0
 扩展	ry,t0 na,ei	0
-模型	sa,jd ga,jf	3
+模型	sa,jd ga,jf	4
 本来	sg,d0 go,i0	0
+本身	sg,d0 tm,dt	1
 想法	sh,nu if,cy	1
 想想	sh,nu sh,nu	0
 可能	sk,d0 ce,xx	1
@@ -470,6 +493,7 @@ use_preset_vocabulary: false
 要的	sv,f0;s0,00 rq,yy;r0,00	1
 长句	ta,yi qk,d0	1
 长的	ta,yi rq,yy;r0,00	0
+知道	td,kg ut,hp	1
 矫情	td,tj ng,eg	1
 丢了	tf,cu bn,h0;b0,00	0
 重码	tg,jf dc,g0	1
@@ -505,8 +529,10 @@ use_preset_vocabulary: false
 前期	ue,jj ad,we	1
 前面	ue,jj dm,jd	1
 闺女	uf,fd vv,vv	1
+半角	uf,k0 qe,j0	1
 症状	ug,hd ud,y0	1
 冰凌	ui,y0 uf,wt	0
+间距	uj,d0 kh,an	1
 单字	uj,fj pb,f0	0
 问题	uk,d0 jg,hm	0
 问得	uk,d0 tj,gf	1
@@ -516,6 +542,7 @@ use_preset_vocabulary: false
 产生	ut,e0;u0,00 tg,d0	0
 首先	ut,hf tf,qb	1
 准备	uw,yg tl,f0	1
+背景	ux,ef jy,iu	1
 门面	uy,hn dm,jd	0
 好大	vb,g0 dd,dd	0
 好鲜	vb,g0 qg,ud	1
@@ -526,6 +553,7 @@ use_preset_vocabulary: false
 好像	vb,g0 wq,je	1
 退费	ve,pi xj,mu	0
 那天	vf,bh gd,i0	0
+那些	vf,bh hx,ff	1
 那种	vf,bh tk,hh	0
 那个	vf,bh wh,j0	1
 如果	vk,g0 js,i0	0
@@ -546,9 +574,11 @@ use_preset_vocabulary: false
 舒爽	wf,kb dq,qq	0
 舒服	wf,kb eb,cy	0
 倒了	wg,cj bn,h0;b0,00	1
+全角	wg,f0 qe,j0	2
 便宜	wg,jq pe,gf	1
 使用	wg,kq et,nh	0
 个人	wh,j0 ww,ww;w0,00	0
+候选	wh,nd tf,qp	2
 偶尔	wj,my qi,u0	0
 煲汤	wk,so in,rt	0
 保留	wk,sy qy,vl	1
@@ -587,17 +617,20 @@ use_preset_vocabulary: false
 调整	ym,fk gk,ih	0
 调频	ym,fk hi,dm	1
 调侃	ym,fk wk,qn	0
+高亮	ym,kf yp,mb	0
 词库	yn,gk yl,k0	1
 忘记	yn,nu yn,n0	0
 变形	yo,cu ga,et	0
 这一	yp,i0;p0,00 gg,ll;g0,00	0
 这是	yp,i0;p0,00 jg,hu;j0,00	0
+这样	yp,i0;p0,00 su,dh	0
 这种	yp,i0;p0,00 tk,hh	0
 这个	yp,i0;p0,00 wh,j0	2
 许多	yt,fh qq,u0	0
 为空	yt,ny;yl,yi;o0,00 pw,af	0
 放松	yt,y0 sw,cy	1
 放弃	yt,y0 yc,aj	0
+方式	yy,gn aa,d0	0
 方面	yy,gn dm,jd	0
 方案	yy,gn pv,su	1
 广东	yy,gt ai,i0	0
@@ -620,6 +653,7 @@ use_preset_vocabulary: false
 有限的	de,f0;e0,00 bv,ey rq,yy;r0,00	0
 有需求	de,f0;e0,00 fd,mj fi,yi	0
 有一家	de,f0;e0,00 gg,ll;g0,00 pe,u0	1
+有一个	de,f0;e0,00 gg,ll;g0,00 wh,j0	1
 有没有	de,f0;e0,00 im,cy de,f0;e0,00	0
 有时候	de,f0;e0,00 jf,y0 wh,nd	0
 有补贴	de,f0;e0,00 pu,hy mh,kg	0
@@ -627,6 +661,7 @@ use_preset_vocabulary: false
 有问题	de,f0;e0,00 uk,d0 jg,hm	1
 在里面	dh,fd;d0,00 jf,d0 dm,jd	0
 非常好	dj,dd ip,kh vb,g0	0
+百分比	dj,f0 wv,b0 xx,n0	1
 确定性	dq,eh pg,hu nt,gg	0
 太累了	dy,i0 lx,iu bn,h0;b0,00	0
 肚子里	ef,g0 bb,bb jf,d0	0
@@ -703,6 +738,7 @@ use_preset_vocabulary: false
 早些年	jh,nh hx,ff rh,fk	0
 螺蛳粉	jl,xi jj,gh ow,vn	1
 晚睡了	jq,kq ht,gf bn,h0;b0,00	1
+中间的	kh,k0;k0,00 uj,d0 rq,yy;r0,00	1
 喝多了	kj,qn qq,u0 bn,h0;b0,00	0
 另一个	kl,b0 gg,ll;g0,00 wh,j0	0
 吃完饭	kt,nn pf,qb qn,rc	1
@@ -723,6 +759,7 @@ use_preset_vocabulary: false
 屏幕上	nu,ak aj,dh hg,d0;hh,gg;h0,00	0
 类似的	od,u0 wn,yw rq,yy;r0,00	0
 写了个	pg,ng bn,h0;b0,00 wh,j0	0
+突然就	pw,du qd,ou yi,dn	1
 它自己	px,b0 th,d0 nn,gn	0
 福建人	py,gl vf,hp ww,ww;w0,00	1
 多屏幕	qq,u0 nu,ak aj,dh	1
@@ -782,10 +819,14 @@ use_preset_vocabulary: false
 那个是	vf,bh wh,j0 jg,hu;j0,00	0
 创始人	wb,jh vc,kg ww,ww;w0,00	0
 做出来	wd,ty bm,k0 go,i0	0
+会出现	wf,cu bm,k0 gm,qn	0
 会慢慢	wf,cu nj,lc nj,lc	1
 舒爽啊	wf,kb dq,qq kb,sk	1
+舒服些	wf,kb eb,cy hx,ff	0
 命中率	wg,kb kh,k0;k0,00 yx,if	0
 使用的	wg,kq et,nh rq,yy;r0,00	0
+候选项	wh,nd tf,qp ad,my	1
+候选框	wh,nd tf,qp sa,gg	1
 修错了	wh,te qa,jg bn,h0;b0,00	1
 你来吧	wq,iy go,i0 kc,n0	0
 你好吗	wq,iy vb,g0 kc,g0	1
@@ -808,6 +849,7 @@ use_preset_vocabulary: false
 调整卅	ym,fk gk,ih gk,k0	1
 调侃着	ym,fk wk,qn ud,hf	1
 词库中	yn,gk yl,k0 kh,k0;k0,00	0
+这不是	yp,i0;p0,00 gi,i0;dh,i0;i0,00 jg,hu;j0,00	0
 这本身	yp,i0;p0,00 sg,d0 tm,dt	0
 这个来	yp,i0;p0,00 wh,j0 go,i0	1
 这个快	yp,i0;p0,00 wh,j0 nn,wy	1
@@ -821,11 +863,13 @@ use_preset_vocabulary: false
 基础词库	ad,wf db,mh yn,gk yl,k0	1
 也基本上	bn,hn ad,wf sg,d0 hg,d0;hh,gg;h0,00	1
 也有一个	bn,hn de,f0;e0,00 gg,ll;g0,00 wh,j0	0
+也有整句	bn,hn de,f0;e0,00 gk,ih qk,d0	1
 也无所谓	bn,hn fq,v0 rn,rh yl,eg	0
 也差不多	bn,hn ud,af gi,i0;dh,i0;i0,00 qq,u0	0
 隐私政策	bq,vn tc,y0 gh,ty tg,mi	1
 又更新了	cc,cc gj,qi us,rh bn,h0;b0,00	1
 通通过滤	ce,pk ce,pk fp,i0 ih,an	1
+对齐方式	cf,y0 yj,j0 yy,gn aa,d0	1
 有需求的	de,f0;e0,00 fd,mj fi,yi rq,yy;r0,00	1
 有什么用	de,f0;e0,00 wf,h0 tc,u0 et,nh	0
 原来如此	dr,ii go,i0 vk,g0 hx,n0	1
@@ -871,10 +915,12 @@ use_preset_vocabulary: false
 注释输出	iy,gg to,ch lw,gj bm,k0	1
 最喜欢的	jb,cu fk,uk cq,wy rq,yy;r0,00	0
 最终还是	jb,cu xt,uy gi,pi jg,hu;j0,00	0
+明白了吗	je,g0 rr,rr bn,h0;b0,00 kc,g0	1
 时候开始	jf,y0 wh,nd ga,k0 vc,kg	1
 是不是会	jg,hu;j0,00 gi,i0;dh,i0;i0,00 jg,hu;j0,00 wf,cu	0
 是这个字	jg,hu;j0,00 yp,i0;p0,00 wh,j0 pb,f0	1
 量大管饱	jg,jf dd,dd tp,nn qn,qn	1
+早该换了	jh,nh yy,nw rq,md bn,h0;b0,00	1
 昨天晚上	jt,hf gd,i0 jq,kq hg,d0;hh,gg;h0,00	1
 监管机构	jt,yl tp,nn sm,n0 sq,cy	1
 吓我一跳	kg,hy tr,xy;tr,nt;q0,00 gg,ll;g0,00 kh,iq	1
@@ -889,10 +935,12 @@ use_preset_vocabulary: false
 输入体验	lw,gj ty,i0 ws,gg cw,gi	0
 同样也是	mg,kd;m0,00 su,dh bn,hn jg,hu;j0,00	0
 恰好喜欢	nw,gk vb,g0 fk,uk cq,wy	1
+之前整句	pp,pp ue,jj gk,ih qk,d0	1
 神清气爽	py,jh ig,eg rn,b0 dq,qq	0
 昏昏沉沉	qa,jf qa,jf ip,mn ip,mn	1
 色情内容	qc,b0 ng,eg mw,i0 pw,wk	1
 反正都是	rc,i0 gh,d0 ft,jb jg,hu;j0,00	0
+排列方式	rd,jd gq,jh yy,gn aa,d0	1
 看过了吗	rh,f0 fp,i0 bn,h0;b0,00 kc,g0	1
 看看曼联	rh,f0 rh,f0 jl,cu bu,dy	1
 看着还行	rh,f0 ud,hf gi,pi tf,hh	0
@@ -928,6 +976,7 @@ use_preset_vocabulary: false
 住得附近	wy,gg tj,gf bw,fy rp,k0	1
 应该可以	yi,d0 yy,nw sk,d0 ny,wy;c0,00	0
 就是一个	yi,dn jg,hu;j0,00 gg,ll;g0,00 wh,j0	0
+高亮区域	ym,kf yp,mb aq,i0 fa,kg	1
 词库里面	yn,gk yl,k0 jf,d0 dm,jd	1
 词库层面	yn,gk yl,k0 nf,ci dm,jd	1
 这玩意儿	yp,i0;p0,00 gf,qn uj,nu qt,n0	0
@@ -980,6 +1029,7 @@ use_preset_vocabulary: false
 山海八荒录	mm,mm it,xu wt,y0 ay,nq vi,u0	2
 之前纯五笔	pp,pp ue,jj xg,bn gg,hg tt,fn	1
 抹抹就好了	rg,sy rg,sy yi,dn vb,g0 bn,h0;b0,00	1
+打着后面的	rs,h0 ud,hf rg,kd dm,jd rq,yy;r0,00	1
 本来把整句	sg,d0 go,i0 rc,n0 gk,ih qk,d0	1
 重组词库了	tg,jf xe,gg yn,gk yl,k0 bn,h0;b0,00	1
 我喜欢喝汤	tr,xy;tr,nt;q0,00 fk,uk cq,wy kj,qn in,rt	1
@@ -992,10 +1042,13 @@ use_preset_vocabulary: false
 问一下医生	uk,d0 gg,ll;g0,00 gh,i0 at,di tg,d0	1
 会一直使用	wf,cu gg,ll;g0,00 fh,f0 wg,kq et,nh	1
 什么好吃的	wf,h0 tc,u0 vb,g0 kt,nn rq,yy;r0,00	1
+候选框宽高	wh,nd tf,qp sa,gg pa,mq ym,kf	1
 体检的地方	ws,gg sw,gi rq,yy;r0,00 fb,n0;f0,00 yy,gn	1
 从去年开始	ww,y0 fc,u0 rh,fk ga,k0 vc,kg	1
+经常会出现	xc,ag;x0,00 ip,kh wf,cu bm,k0 gm,qn	1
 纳税人的钱	xm,wy tu,kq ww,ww;w0,00 rq,yy;r0,00 qg,t0	0
 词库转换的	yn,gk yl,k0 lf,ny rq,md rq,yy;r0,00	1
+这不是之前	yp,i0;p0,00 gi,i0;dh,i0;i0,00 jg,hu;j0,00 pp,pp ue,jj	1
 这个可以有	yp,i0;p0,00 wh,j0 sk,d0 ny,wy;c0,00 de,f0;e0,00	1
 放弃整句了	yt,y0 yc,aj gk,ih qk,d0 bn,h0;b0,00	1
 基座差不多了	ad,wf yw,wf ud,af gi,i0;dh,i0;i0,00 qq,u0 bn,h0;b0,00	1
@@ -1010,6 +1063,7 @@ use_preset_vocabulary: false
 不要折腾自己	gi,i0;dh,i0;i0,00 sv,f0;s0,00 rr,h0 eu,dc th,d0 nn,gn	1
 不知道是不是	gi,i0;dh,i0;i0,00 td,kg ut,hp jg,hu;j0,00 gi,i0;dh,i0;i0,00 jg,hu;j0,00	1
 还是挺快的卅	gi,pi jg,hu;j0,00 rt,fp nn,wy rq,yy;r0,00 gk,k0	1
+还是这样说吗	gi,pi jg,hu;j0,00 yp,i0;p0,00 su,dh yu,kq kc,g0	1
 最后发现忘记	jb,cu rg,kd nt,cy;v0,00 gm,qn yn,nu yn,n0	1
 昨天晚上在搞	jt,hf gd,i0 jq,kq hg,d0;hh,gg;h0,00 dh,fd;d0,00 ry,mk	1
 哈哈哈哈哈哈	kw,gk kw,gk kw,gk kw,gk kw,gk kw,gk	2
@@ -1054,6 +1108,7 @@ use_preset_vocabulary: false
 都是神清气爽的	ft,jb jg,hu;j0,00 py,jh ig,eg rn,b0 dq,qq rq,yy;r0,00	1
 都是纳税人的钱	ft,jb jg,hu;j0,00 xm,wy tu,kq ww,ww;w0,00 rq,yy;r0,00 qg,t0	1
 一会儿就结束啦	gg,ll;g0,00 wf,cu qt,n0 yi,dn xf,kg gk,ii kr,ug	1
+一个汉字一样宽	gg,ll;g0,00 wh,j0 ic,y0 pb,f0 gg,ll;g0,00 su,dh pa,mq	1
 不是你们创始人	gi,i0;dh,i0;i0,00 jg,hu;j0,00 wq,iy wu,n0 wb,jh vc,kg ww,ww;w0,00	1
 整体感觉还可以	gk,ih ws,gg dg,kn ip,mq gi,pi sk,d0 ny,wy;c0,00	1
 现在许多输入法	gm,qn dh,fd;d0,00 yt,fh qq,u0 lw,gj ty,i0 if,cy	1
@@ -1128,6 +1183,7 @@ use_preset_vocabulary: false
 感觉大厂的输入法预测	dg,kn ip,mq dd,dd dg,t0 rq,yy;r0,00 lw,gj ty,i0 if,cy cb,dm im,jh	1
 用来用去最后都会回到	et,nh go,i0 et,nh fc,u0 jb,cu rg,kd ft,jb wf,cu lk,d0 gc,fj	1
 五笔整句的就会大一些	gg,hg tt,fn gk,ih qk,d0 rq,yy;r0,00 yi,dn wf,cu dd,dd gg,ll;g0,00 hx,ff	1
+还是有模型加持舒服些	gi,pi jg,hu;j0,00 de,f0;e0,00 sa,jd ga,jf lk,g0 rf,fy wf,kb eb,cy hx,ff	1
 整句还是可以使用使用	gk,ih qk,d0 gi,pi jg,hu;j0,00 sk,d0 ny,wy;c0,00 wg,kq et,nh wg,kq et,nh	1
 整体体验比双拼要舒服	gk,ih ws,gg ws,gg cw,gi xx,n0 cc,y0 ru,ah sv,f0;s0,00 wf,kb eb,cy	1
 再用一段时间五笔整句	gm,fd et,nh gg,ll;g0,00 wd,mc jf,y0 uj,d0 gg,hg tt,fn gk,ih qk,d0	1

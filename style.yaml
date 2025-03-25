@@ -2,27 +2,114 @@
 # encoding: utf-8
 
 # 基础布局
+# -------------------------------------
+# type: vertical
+# baseline: 0           0 - 100，字号百分比。<https://github.com/rime/weasel/pull/1177>
+# linespacing: 0        0 - 100，字号百分比。与 baseline 一同设置可解决字体跳动问题，设置为 0 为禁用
+# align_type: bottom    标签、候选文字、注解文字之间的相对对齐方式：top、center、bottom
+# border_width: 1       边框宽度；又名 border                      
+# margin_x: 4           主体元素和候选框的左右边距；为负值时，不显示候选框
+# margin_y: 4           主体元素的上下边距；为负值时，不显示候选框
+# spacing: 13           inline_preedit 为否时，编码区域和候选区域的间距
+# 
+# max_height: 600       候选框最大高度，文本竖排模式下如高度超此尺寸则换列显示候选，设置为 0 不启用此功能
+# max_width: 0          候选框最大宽度，horizontal 布局如宽超此尺寸则换行显示候选，设置为 0 不启用此功能
+# min_height: 0         候选框最小高度
+# min_width: 0          候选框最小宽度
+# 
+# candidate_spacing: 12 候选项之间的间距
+# corner_radius: 6      候选窗口圆角半径
+# round_corner: 6       候选背景色块圆角半径，又名 hilited_corner_radius
+# 
+# line_spacing: 5
+# hilite_spacing: 5     候选项和相应标签的间距
+# hilite_padding: 5     高亮区域和内部文字的间距，影响高亮区域大小
+# hilite_padding_x: 8   高亮区域和内部文字的左右间距，如无特殊指定则依 hilite_padding 设置
+# hilite_padding_y: 8   高亮区域和内部文字的上下间距，如无特殊指定则依 hilite_padding 设置
+# 
+# shadow_radius: 0      阴影区域半径，为 0 不显示阴影；需要同时在配色方案中指定非透明的阴影颜色
+# shadow_offset_x: 4    阴影左右偏移距离
+# shadow_offset_y: 4    阴影上下偏移距离
+# -------------------------------------
+# 
 layout:
-  align_type: center
-  max_width: 0	                                # set 0 to disable max width
-  min_width: 160
+  # ---〔基础〕---
+  # 排列
+  # type: vertical
+  type: horizontal
+  # 字号
+  linespacing: 0
+  baseline: 0
+  # 对齐
+  align_type: bottom
+  # 边框
+  border_width: 0
+  # 边距
+  margin_x: 0
+  margin_y: 0
+  # 编码区域和候选区域的间距
+  spacing: 10
+  # ---〔候选框〕---
+  # 候选框宽高
+  max_width: 0
+  min_width: 0
   min_height: 0
-  max_height: 0	                                # set 0 to disable max height
+  max_height: 0
+  # 候选项间距
+  candidate_spacing: 5
+  # 圆角
+  corner_radius: 3
+  round_corner: 3 # i.e. hilited_corner_radius
+  # ---〔高亮候选〕---
+  # line_spacing: 4
+  hilite_spacing: 4
+  hilite_padding: 3
+  hilite_padding_x: 8
+  # hilite_padding_y: 8
+  # --- 〔阴影区域〕---
+  shadow_radius: 0
+  shadow_offset_x: 2
+  shadow_offset_y: 2
+
+layout_o:
+  # ---〔基础〕---
+  # 排列
+  # type: vertical
+  type: horizontal
+  # 字号
+  linespacing: 0
+  baseline: 0
+  # 对齐
+  align_type: center
+  # 边框
   border_width: 1
+  # 边距
   margin_x: 12
   margin_y: 8
+  # 编码区域和候选区域的间距
   spacing: 10
+  # ---〔候选框〕---
+  # 候选框宽高
+  max_width: 0
+  min_width: 160
+  min_height: 0
+  max_height: 0
+  # 候选项间距
   candidate_spacing: 5
+  # 圆角
+  corner_radius: 4
+  round_corner: 4 # i.e. hilited_corner_radius
+  # ---〔高亮候选〕---
+  # line_spacing: 4
   hilite_spacing: 4
   hilite_padding: 2
-  hilite_padding_x: 8                           # 候选项横向 X 间距
-  round_corner: 4                               # 别名 hilited_corner_radius
-  corner_radius: 4
+  hilite_padding_x: 8
+  # hilite_padding_y: 8
+  # --- 〔阴影区域〕---
   shadow_radius: 0
   shadow_offset_x: 4
   shadow_offset_y: 4
-  linespacing: 0                                # percentage of font point, 0 to disable
-  baseline: 0                                   # percentage of font point, 0 to disable
+
 
 # --- Purple 绛紫 ---
 pujk:

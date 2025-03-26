@@ -418,7 +418,7 @@ mljk:
     label_color: 0x48466d99                     # 标签
     # ---〔激活的候选项·高亮〕---
     hilited_candidate_text_color: 0x191919      # 文字
-    hilited_candidate_back_color: 0xEEEEF3      # 背景
+    hilited_candidate_back_color: 0xF3F3F3      # 背景
 
     hilited_mark_color: 0x0067c0                # 标签前的标记
     hilited_label_color: 0x191919CC             # 标签

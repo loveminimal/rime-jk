@@ -548,7 +548,7 @@ use_preset_vocabulary: false
 贱	mg	1
 由	mh	1
 贝	mh	6
-帽	mhj	2
+帽	mhj	3
 巾	mhk	2
 贴	mhkg	2
 则	mj	2
@@ -692,7 +692,7 @@ use_preset_vocabulary: false
 链	qlp	1
 包	qn	4
 饱	qnqn	1
-饿	qnt	1
+饿	qnt	2
 饼	qnu	1
 多	qq	47
 儿	qt	21
@@ -755,7 +755,7 @@ use_preset_vocabulary: false
 擦	rpwi	2
 抑	rqb	2
 鬼	rqc	1
-撸	rqgj	1
+撸	rqg	2
 换	rqm	11
 抱	rqn	2
 掐	rqv	1
@@ -782,6 +782,7 @@ use_preset_vocabulary: false
 搜	rvh	6
 招	rvk	2
 抛	rvl	1
+垫	rvyf	4
 热	rvyo	2
 失	rw	1
 扒	rwy	1
@@ -1258,6 +1259,7 @@ use_preset_vocabulary: false
 贡献	amfm	1
 英法	amif	1
 黄轮	amlw	2
+黄总	amuk	1
 英文	amyy	10
 巨款	anff	1
 世界	anlw	1
@@ -1553,7 +1555,7 @@ use_preset_vocabulary: false
 态度	dyya	1
 服务	ebtl	4
 朋友	eedc	4
-肚子	efbb	1
+肚子	efbb	2
 膨胀	efet	1
 脚本	efsg	20
 助手	egrt	5
@@ -2299,6 +2301,7 @@ use_preset_vocabulary: false
 跳坑	khfy	1
 跳转	khlf	7
 中国	khlg	4
+路边	khlp	1
 路由	khmh	6
 遗憾	khnd	1
 中心	khny	2
@@ -2404,7 +2407,7 @@ use_preset_vocabulary: false
 回去	lkfc	4
 回到	lkgc	1
 回事	lkgk	4
-回来	lkgo	4
+回来	lkgo	5
 加班	lkgy	1
 加上	lkhh	3
 加油	lkim	1
@@ -2487,6 +2490,7 @@ use_preset_vocabulary: false
 删词	mmyn	1
 崛起	mnfh	1
 岂止	mnhh	1
+凯文	mnyy	1
 风险	mqbw	3
 网友	mqdc	1
 网页	mqdm	2
@@ -4135,6 +4139,7 @@ use_preset_vocabulary: false
 元宵节	fpab	1
 无所谓	fryl	3
 赵本山	fsmm	1
+老杨哥	fssk	1
 无意义	fuyq	2
 干什么	fwtc	1
 二维码	fxdc	4

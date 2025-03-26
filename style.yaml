@@ -58,13 +58,13 @@ layout:
   # 候选项间距
   candidate_spacing: 5
   # 圆角
-  corner_radius: 3
-  round_corner: 3 # i.e. hilited_corner_radius
+  corner_radius: 4
+  round_corner: 4 # i.e. hilited_corner_radius
   # ---〔高亮候选〕---
   # line_spacing: 4
   hilite_spacing: 4
-  hilite_padding: 3
-  hilite_padding_x: 8
+  hilite_padding: 4
+  hilite_padding_x: 12
   # hilite_padding_y: 8
   # --- 〔阴影区域〕---
   shadow_radius: 0

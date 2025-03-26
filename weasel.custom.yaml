@@ -12,9 +12,9 @@ patch:
       font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
-      font_point: 12 
-      label_font_point: 10
-      comment_font_point: 10
+      font_point: 11 
+      label_font_point: 9
+      comment_font_point: 9
       horizontal: true 
       # 隐藏编码行
       # preedit_type: preview

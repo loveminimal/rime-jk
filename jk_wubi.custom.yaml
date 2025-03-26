@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/mdjk
+  __include: style.yaml:/mljk
   __patch:
     style/+:
-      color_scheme: mdjk
+      color_scheme: mljk

@@ -365,6 +365,7 @@ use_preset_vocabulary: false
 溜	iqyl	1
 派	ire	1
 酒	isgg	3
+渣	isjg	1
 河	isk	1
 淞	iswc	1
 少	it	11
@@ -480,7 +481,7 @@ use_preset_vocabulary: false
 兄	kqb	3
 呜	kqng	1
 吹	kqw	2
-听	kr	5
+听	kr	6
 啦	kru	16
 呆	ks	2
 呵	ksk	1
@@ -701,6 +702,7 @@ use_preset_vocabulary: false
 猎	qta	1
 猫	qtal	1
 猛	qtbl	2
+猪	qtfj	1
 狂	qtg	1
 猜	qtge	2
 狗	qtq	5
@@ -787,6 +789,7 @@ use_preset_vocabulary: false
 垫	rvyf	4
 热	rvyo	2
 失	rw	1
+扮	rwv	1
 扒	rwy	1
 推	rwyg	1
 指	rxj	5
@@ -806,6 +809,7 @@ use_preset_vocabulary: false
 村	sfy	1
 本	sg	3
 酉	sgd	2
+丁	sgh	1
 西	sghg	1
 杯	sgi	4
 醒	sgj	2
@@ -1087,7 +1091,7 @@ use_preset_vocabulary: false
 八	wty	3
 们	wu	10
 位	wug	6
-分	wv	5
+分	wv	7
 盆	wvl	1
 仇	wvn	1
 伊	wvt	1
@@ -1127,7 +1131,7 @@ use_preset_vocabulary: false
 费	xjm	5
 强	xkj	6
 织	xkw	1
-细	xl	1
+细	xl	2
 纲	xm	1
 纪	xn	1
 继	xo	1
@@ -1195,6 +1199,7 @@ use_preset_vocabulary: false
 底	yqa	1
 谄	yqv	1
 订	ys	1
+麻	yss	1
 魔	yssc	2
 磨	yssd	1
 放	yt	9
@@ -1262,7 +1267,7 @@ use_preset_vocabulary: false
 贡献	amfm	1
 英法	amif	1
 黄轮	amlw	2
-黄总	amuk	1
+黄总	amuk	2
 英文	amyy	10
 巨款	anff	1
 世界	anlw	1
@@ -1714,6 +1719,7 @@ use_preset_vocabulary: false
 无双	fqcc	1
 无感	fqdg	1
 远古	fqdg	1
+无脑	fqey	1
 无声	fqfn	1
 元素	fqgx	7
 无法	fqif	2
@@ -1858,6 +1864,7 @@ use_preset_vocabulary: false
 一简	ggtu	2
 五入	ggty	1
 一半	gguf	1
+一部	gguk	1
 一次	gguq	1
 王道	ggut	1
 一门	gguy	2
@@ -1887,6 +1894,7 @@ use_preset_vocabulary: false
 正解	ghqe	2
 下拉	ghru	3
 下午	ghtf	2
+正版	ghth	1
 下单	ghuj	1
 下次	ghuq	1
 正好	ghvb	1
@@ -2036,7 +2044,7 @@ use_preset_vocabulary: false
 目录	hhvi	9
 上传	hhwf	9
 上级	hhxe	1
-上线	hhxg	1
+上线	hhxg	2
 步骤	hicb	3
 频繁	hitx	3
 桌面	hjdm	1
@@ -2245,7 +2253,7 @@ use_preset_vocabulary: false
 日期	jjad	9
 日子	jjbb	1
 日历	jjdl	2
-日志	jjfn	1
+日志	jjfn	2
 日常	jjip	3
 日本	jjsg	1
 日程	jjtk	2
@@ -2416,7 +2424,7 @@ use_preset_vocabulary: false
 回去	lkfc	4
 回到	lkgc	1
 回事	lkgk	4
-回来	lkgo	5
+回来	lkgo	6
 加班	lkgy	1
 加上	lkhh	3
 加油	lkim	1
@@ -2432,6 +2440,7 @@ use_preset_vocabulary: false
 回头	lkud	3
 加装	lkuf	1
 加个	lkwh	2
+加分	lkwv	1
 男人	llww	2
 思路	lnkh	1
 辗转	lnlf	1
@@ -2600,7 +2609,7 @@ use_preset_vocabulary: false
 改进	ntfj	1
 改过	ntfp	3
 发过	ntfp	1
-属于	ntgf	1
+属于	ntgf	2
 发现	ntgm	8
 发呆	ntks	1
 发力	ntlt	1
@@ -2682,7 +2691,7 @@ use_preset_vocabulary: false
 字根	pbsv	12
 字长	pbta	3
 字符	pbtw	6
-字段	pbwd	4
+字段	pbwd	5
 字体	pbws	6
 字母	pbxg	2
 字库	pbyl	1
@@ -2986,6 +2995,7 @@ use_preset_vocabulary: false
 迫害	rppd	1
 按错	rpqa	1
 按钮	rpqn	3
+按键	rpqv	1
 控制	rprm	3
 按着	rpud	1
 近似	rpwn	1
@@ -3122,11 +3132,12 @@ use_preset_vocabulary: false
 极点	sehk	3
 极端	seum	2
 标点	sfhk	6
+标题	sfjg	1
 材料	sfou	4
 剽窃	sfpw	1
 杜撰	sfrn	1
 标配	sfsg	1
-标签	sftw	2
+标签	sftw	3
 标准	sfuw	4
 杜绝	sfxq	1
 标识	sfyk	2
@@ -3216,6 +3227,7 @@ use_preset_vocabulary: false
 长远	tafq	1
 长图	talt	2
 长句	taqk	3
+长相	tash	1
 升级	taxe	4
 长度	taya	1
 彻底	tayq	1
@@ -3273,6 +3285,7 @@ use_preset_vocabulary: false
 重码	tgdc	6
 生成	tgdn	10
 生态	tgdy	2
+垂直	tgfh	1
 生死	tggq	1
 生涯	tgid	1
 生活	tgit	6
@@ -3537,6 +3550,7 @@ use_preset_vocabulary: false
 效率	uqyx	1
 亲戚	usdh	1
 新奇	usds	1
+新增	usfu	1
 新鲜	usqg	3
 新版	usth	1
 亲自	usth	1
@@ -3611,7 +3625,7 @@ use_preset_vocabulary: false
 奶奶	veve	2
 姐姐	veve	1
 退费	vexj	13
-妹子	vfbb	3
+妹子	vfbb	4
 那面	vfdm	2
 那些	vfhx	3
 那里	vfjf	2
@@ -4071,6 +4085,7 @@ use_preset_vocabulary: false
 话题	ytjg	1
 放心	ytny	1
 许多	ytqq	4
+许可	ytsk	1
 放松	ytsw	3
 话术	ytsy	1
 诞生	yttg	1
@@ -4129,6 +4144,7 @@ use_preset_vocabulary: false
 文化	yywx	3
 广州	yyyt	1
 言论	yyyw	1
+基本上	ashh	1
 英伟达	awdp	1
 工作者	awft	1
 出不来	bggo	2
@@ -4151,6 +4167,7 @@ use_preset_vocabulary: false
 服务器	etkk	4
 用得着	etud	1
 爱德华	etwx	1
+用户名	eyqk	1
 起不来	fggo	1
 未归档	fjsi	6
 未发布	fndm	4
@@ -4207,6 +4224,8 @@ use_preset_vocabulary: false
 国民党	lnip	1
 输入法	ltif	14
 输入框	ltsa	2
+国产化	luwx	1
+加拿大	lwdd	1
 凤凰男	mmll	8
 尿不湿	ngij	2
 怪不得	ngtj	1
@@ -4228,6 +4247,7 @@ use_preset_vocabulary: false
 金刚钻	qmqh	1
 多数人	qoww	1
 饼状图	qult	4
+杀伤力	qwlt	1
 白菜价	raww	1
 看起来	rfgo	1
 找不到	rggc	1
@@ -4260,6 +4280,7 @@ use_preset_vocabulary: false
 关键字	uqpb	1
 关键词	uqyn	1
 资本家	uspe	1
+新生代	utwa	1
 好东西	vasg	1
 好不好	vgvb	1
 好家伙	vpwo	1

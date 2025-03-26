@@ -67,9 +67,9 @@ layout:
   hilite_padding_x: 12
   # hilite_padding_y: 8
   # --- 〔阴影区域〕---
-  shadow_radius: 0
-  shadow_offset_x: 2
-  shadow_offset_y: 2
+  shadow_radius: 2
+  shadow_offset_x: 1
+  shadow_offset_y: 1
 
 layout_o:
   # ---〔基础〕---

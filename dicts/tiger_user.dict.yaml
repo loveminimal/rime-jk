@@ -1,0 +1,19 @@
+# Rime dictionary - tiger_user.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于官方自动同步的用户词典合并排序生成 - 越来越懂你的「养成系」词库
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+# 运行脚本：
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_tiger_user_dict.py
+# - py scripts/sync_tiger_user_dict.py
+# 
+---
+name: tiger_user
+version: 2025.03
+sort: by_weight
+use_preset_vocabulary: false
+...
+哈哈	djdj	2

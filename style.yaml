@@ -74,8 +74,8 @@ layout:
 layout_o:
   # ---〔基础〕---
   # 排列
-  # type: vertical
-  type: horizontal
+  type: vertical
+  # type: horizontal
   # 字号
   linespacing: 0
   baseline: 0

@@ -12,8 +12,65 @@
 # 
 ---
 name: tiger_user
-version: 2025.03
+version: 2025.04
 sort: by_weight
 use_preset_vocabulary: false
 ...
+来	a	1
+未	aw	1
+号	df	1
+啥	dja	2
+嘞	dts	1
+咋	dwa	1
+干	eg	1
+样	egy	1
+突	emq	1
+子	hi	1
+为	i	1
+新	ie	1
+个	jg	3
+伦	jjl	1
+俩	jml	1
+你	jx	3
+水	ks	1
+卅	lss	2
+刚	mbp	3
+大	md	1
+同	mf	1
+在	n	1
+截	npu	2
+真	nq	1
+有	nv	1
+是	o	3
+赚	ohbc	1
+日	or	1
+帅	prj	1
+都	q	1
+了	r	2
+图	rhw	2
+符	rjk	1
+对	rk	1
+因	rm	1
+除	tjx	1
+么	tk	1
+用	ty	2
+的	u	6
+搞	ugg	1
+看	uq	1
+换	uxm	1
+宋	wem	1
+凌	wghh	1
+冰	wks	1
+到	y	1
+轮	yjl	1
+虎	zh	2
+银	zig	1
+引导	bgvk	1
 哈哈	djdj	2
+模型	elfl	1
+条件	hejq	1
+时候	okjg	1
+帅气	prvq	1
+怎么	whtk	1
+五笔	wurv	1
+小科狗	yxmg	1

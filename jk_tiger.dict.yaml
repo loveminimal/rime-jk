@@ -16,5 +16,6 @@ encoder:
       formula: "AaBaCaZa"
 import_tables:
   - dicts/tiger
+  - dicts/tiger_user
 use_preset_vocabulary: false
 ...

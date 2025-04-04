@@ -13,7 +13,7 @@ switches:
     states: [ 简体, 繁体 ]  
     reset: 0
   - name: emoji
-    reset: 1
+    reset: 0
     states: [ 💀, 😄 ]
   - name: zh2en
     reset: 0

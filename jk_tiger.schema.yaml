@@ -53,7 +53,7 @@ engine:
   filters:
     - lua_filter@*prettify_comment
     - lua_filter@*keep_primary_code_first_tiger
-    # - lua_filter@*keep_secondary_code_first
+    - lua_filter@*keep_secondary_code_first_tiger
     - simplifier
     - simplifier@emoji   
     - simplifier@zh2en

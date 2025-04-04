@@ -1,5 +1,5 @@
 --[[ 
-keep_secondary_code_first: 保持五笔 86 的一级简码对应的汉字在候选列表首位
+keep_secondary_code_first: 保持五笔 86 的二级简码对应的汉字在候选列表首位
 by Jack Liu <https://aituyaa.com>
 --]]
 

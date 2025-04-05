@@ -19,7 +19,7 @@ switches:
     reset: 0
     states: [ ☷译, ☰译 ]
   - name: chaifen
-    reset: 1
+    reset: 0
     states: [ 隐拆, 显拆 ]
 
 

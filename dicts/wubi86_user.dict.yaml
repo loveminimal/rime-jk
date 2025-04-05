@@ -943,9 +943,9 @@ use_preset_vocabulary: false
 待	tffy	3
 徒	tfhy	1
 午	tfj	1
-千	tfk	3
+千	tfk	5
 靠	tfkd	5
-告	tfkf	3
+告	tfkf	6
 造	tfkp	3
 德	tfl	2
 毛	tfn	6
@@ -2838,6 +2838,7 @@ use_preset_vocabulary: false
 类比	odxx	1
 精品	ogkk	1
 精力	oglt	2
+精炼	ogoa	1
 精神	ogpy	2
 精校	ogsu	1
 业务	ogtl	1
@@ -4498,7 +4499,7 @@ use_preset_vocabulary: false
 饼状图	qult	4
 杀伤力	qwlt	1
 白菜价	raww	1
-看起来	rfgo	1
+看起来	rfgo	2
 打不开	rgga	1
 找不到	rggc	1
 看不懂	rgna	1
@@ -4560,6 +4561,7 @@ use_preset_vocabulary: false
 三心二意	dnfu	1
 大差不差	dugu	2
 遥遥领先	eewt	1
+用户词库	eyyy	3
 寸草不生	fagt	1
 垃圾玩意	ffgu	1
 截止日期	fhja	2
@@ -4595,6 +4597,7 @@ use_preset_vocabulary: false
 居安思危	nplq	1
 心血来潮	ntgi	1
 迷迷糊糊	oooo	1
+精炼词库	ooyy	1
 精神抖擞	oprr	1
 精诚所至	oyrg	1
 视若无睹	pafh	1

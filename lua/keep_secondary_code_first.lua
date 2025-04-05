@@ -68,9 +68,9 @@ local secondary_code_table = {
 function keep_secondary_code_first(input, env)
     -- 获取用户输入的编码
     local input_code = env.engine.context.input
-    -- 仅处理单字符输入
+    -- 仅处理双字符输入
     if #input_code == 2 then
-        -- 从一级简码表中获取对应字符
+        -- 从二级简码表中获取对应字符
         local secondary_char = secondary_code_table[input_code]
         if secondary_char then
             local new_candidates = {}
@@ -80,7 +80,7 @@ function keep_secondary_code_first(input, env)
             for cand in input:iter() do
                 count = count + 1
                 if cand.text == secondary_char then
-                    -- 若找到一级简码字符，将其置于新候选列表首位
+                    -- 若找到二级简码字符，将其置于新候选列表首位
                     table.insert(new_candidates, 1, cand)
                     found = true
                 else
@@ -91,7 +91,7 @@ function keep_secondary_code_first(input, env)
                     break
                 end
             end
-            -- 若找到一级简码字符，输出新候选列表
+            -- 若找到二级简码字符，输出新候选列表
             if found then
                 for _, cand in ipairs(new_candidates) do
                     yield(cand)
@@ -100,7 +100,7 @@ function keep_secondary_code_first(input, env)
             end
         end
     end
-    -- 若未找到一级简码字符或输入非单字符，输出原始候选列表
+    -- 若未找到二级简码字符或输入非双字符，输出原始候选列表
     for cand in input:iter() do
         yield(cand)
     end

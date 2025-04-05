@@ -179,6 +179,7 @@ use_preset_vocabulary: false
 腿	eve	1
 脸	ewg	5
 及	ey	10
+脑	eyb	1
 地	f	9
 土	f	4
 载	fa	3
@@ -190,13 +191,14 @@ use_preset_vocabulary: false
 动	fcl	4
 运	fcp	2
 去	fcu	37
-云	fcu	10
+云	fcu	11
 圭	fff	1
 填	ffh	1
 款	ffi	2
 墙	ffuk	1
 二	fg	9
 干	fggh	7
+士	fghg	1
 雨	fghy	1
 坏	fgi	2
 直	fh	1
@@ -306,7 +308,7 @@ use_preset_vocabulary: false
 素	gxi	1
 班	gyt	1
 上	h	60
-虎	ha	4
+虎	ha	8
 瞄	hal	2
 彪	hame	1
 虚	hao	2
@@ -350,6 +352,7 @@ use_preset_vocabulary: false
 澡	ikks	1
 没	im	117
 滑	ime	1
+油	img	1
 测	imj	1
 沿	imk	1
 涔	imw	1
@@ -687,7 +690,7 @@ use_preset_vocabulary: false
 然	qd	4
 希	qdm	1
 角	qe	1
-钱	qg	6
+钱	qg	7
 印	qgb	1
 外	qh	1
 乐	qi	1
@@ -797,7 +800,7 @@ use_preset_vocabulary: false
 接	ruv	4
 扫	rv	4
 挪	rvf	1
-搜	rvh	6
+搜	rvh	8
 招	rvk	2
 抛	rvl	1
 垫	rvyf	4
@@ -809,6 +812,7 @@ use_preset_vocabulary: false
 指	rxj	5
 挤	ryj	1
 搞	rym	17
+棋	sad	1
 框	sagg	7
 栋	sai	2
 模	saj	1
@@ -900,6 +904,7 @@ use_preset_vocabulary: false
 处	th	2
 算	tha	13
 自	thd	2
+怎	thfn	1
 片	thg	1
 版	thgc	8
 秒	ti	1
@@ -1244,6 +1249,7 @@ use_preset_vocabulary: false
 该	yynw	6
 工具	aahw	6
 工商	aaum	1
+工资	aauq	2
 工作	aawt	4
 节奏	abdw	1
 节目	abhh	1
@@ -2928,6 +2934,7 @@ use_preset_vocabulary: false
 免得	qktj	1
 名称	qktq	7
 免费	qkxj	1
+勉强	qkxk	1
 名词	qkyn	1
 链接	qlru	3
 钢琴	qmgg	1
@@ -3544,7 +3551,7 @@ use_preset_vocabulary: false
 养老	udft	1
 减小	udih	1
 减少	udit	1
-关注	udiy	2
+关注	udiy	3
 差别	udkl	1
 头发	udnt	1
 关心	udny	1
@@ -3653,7 +3660,7 @@ use_preset_vocabulary: false
 亲戚	usdh	1
 新奇	usds	1
 新增	usfu	2
-新鲜	usqg	3
+新鲜	usqg	4
 新手	usrt	1
 新版	usth	1
 亲自	usth	1
@@ -3804,7 +3811,7 @@ use_preset_vocabulary: false
 优先	wdtf	1
 俺爸	wdwq	1
 优化	wdwx	4
-估计	wdyf	8
+估计	wdyf	9
 仍然	weqd	2
 付出	wfbm	1
 传参	wfcd	1
@@ -3946,6 +3953,7 @@ use_preset_vocabulary: false
 人类	wwod	2
 人家	wwpe	5
 份额	wwpt	1
+人名	wwqk	3
 价格	wwst	1
 丛生	wwtg	1
 人和	wwtk	1
@@ -4193,13 +4201,14 @@ use_preset_vocabulary: false
 变形	yoga	1
 变更	yogj	1
 变量	yojg	1
-变得	yotj	1
+变得	yotj	2
 变身	yotm	1
 变化	yowx	2
 毫无	ypfq	1
 这样	ypsu	1
 这么	yptc	1
 这个	ypwh	1
+亮度	ypya	1
 底层	yqnf	1
 麻烦	ysod	4
 魔神	yspy	1
@@ -4349,7 +4358,7 @@ use_preset_vocabulary: false
 听起来	kfgo	1
 只不过	kgfp	2
 哪一站	kguh	1
-哈哈哈	kkkw	3
+哈哈哈	kkkw	4
 中国人	klw	3
 吸引力	kxlt	1
 中州韵	kyuj	2

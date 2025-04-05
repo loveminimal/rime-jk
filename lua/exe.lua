@@ -41,6 +41,10 @@ local function exe(key, env)
         generic_open("https://typer.owenyang.top")
         context:clear()
 
+    elseif (context.input == "~aidazi") then
+        generic_open("https://www.52dazi.cn")
+        context:clear()
+
     elseif (context.input == "~ziyuan") then
         generic_open("https://zi.tools")
         context:clear()

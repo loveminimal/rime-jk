@@ -53,6 +53,8 @@ engine:
   filters:
     - lua_filter@*prettify_comment
     - lua_filter@*keep_short_code_first
+    - lua_filter@*single_char_first       # 单字优先
+    - lua_filter@*single_char_only        # 纯单字
     - simplifier
     - simplifier@emoji   
     - simplifier@zh2en
@@ -76,7 +78,10 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
-  # max_code_length: 4
+  max_code_length: 4        # 四码上屏
+  auto_select: true         # 四码唯一时，自动上屏
+  auto_select_pattern: "^(\\w{4})$"
+  # auto_clear: max_length  # 空码时自动清空
 
 chord_composer:
   __include: jk.yaml:/chord_composer_mini
@@ -86,12 +91,12 @@ translator:
   dictionary: jk_wubi             
   prism: jk_wubi                  
   enable_charset_filter: false     
-  enable_sentence: true           
+  enable_sentence: false           
   enable_encoder: true            
   encode_commit_history: true     
   disable_user_dict_for_patterns: 
     - "^z.*$"
-  enable_completion: true     
+  enable_completion: false     
   enable_user_dict: true      
   comment_format: "{comment}" 
 

@@ -71,6 +71,7 @@ patch:
       - { when: always, accept: "Control+bracketright", toggle: zh2en }            
       - { when: always, accept: "Control+backslash", toggle: chaifen }             
       - { when: always, accept: Control+apostrophe, toggle: emoji }
+      - { when: always, accept: Control+t, toggle: char_only }
       - { when: always, accept: Control+space, toggle: ascii_mode }                
       - { when: always, accept: Control+comma, select: .next }                     
       - { when: always, accept: Control+period, send: '~' }

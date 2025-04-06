@@ -21,6 +21,9 @@ switches:
   - name: chaifen
     reset: 1
     states: [ 隐拆, 显拆 ]
+  - name: char_only
+    reset: 1
+    states: [ 词语, 单字 ]
 
 
 # --- 识别器 ---

@@ -4,9 +4,10 @@
 
 local function single_char_only(input, env)
     local is_char_only = env.engine.context:get_option( 'char_only' )
+    local input_str = tostring(env.engine.context.input or "")  -- 类型安全转换
 
     -- 如果未开启单字模式，直接返回所有候选（不处理）
-    if not is_char_only then
+    if not is_char_only or (input_str ~= "" and string.sub(input_str, 1, 1) == "~") then
         for cand in input:iter() do
             yield(cand)
         end

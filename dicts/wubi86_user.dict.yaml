@@ -321,6 +321,7 @@ use_preset_vocabulary: false
 逗	gkup	2
 画	gl	2
 现	gm	50
+曹	gmaj	1
 瑞	gmdj	1
 再	gmf	30
 丙	gmw	1
@@ -622,6 +623,7 @@ use_preset_vocabulary: false
 凤	mc	1
 崦	mdj	1
 炭	mdo	1
+崎	mds	1
 骨	me	1
 崩	mee	3
 峙	mff	1
@@ -1870,7 +1872,9 @@ use_preset_vocabulary: false
 真正	fhgh	2
 真理	fhgj	4
 起来	fhgo	12
+越来	fhgo	3
 起步	fhhi	1
+超频	fhhi	2
 起点	fhhk	1
 直觉	fhip	2
 赶快	fhnn	1
@@ -3229,6 +3233,7 @@ use_preset_vocabulary: false
 提取	rjbc	3
 提示	rjfi	5
 提到	rjgc	1
+提速	rjgk	1
 担心	rjny	1
 提醒	rjsg	2
 提升	rjta	2
@@ -3297,6 +3302,7 @@ use_preset_vocabulary: false
 折行	rrtf	1
 拆分	rrwv	5
 打出	rsbm	3
+打了	rsbn	1
 打成	rsdn	1
 打击	rsfm	1
 打过	rsfp	1
@@ -3896,6 +3902,8 @@ use_preset_vocabulary: false
 好吃	vbkt	1
 好嘛	vbky	3
 好几	vbmt	2
+好书	vbnn	1
+好快	vbnn	1
 好象	vbqj	1
 好多	vbqq	7
 好久	vbqy	4
@@ -4442,6 +4450,7 @@ use_preset_vocabulary: false
 论述	ywsy	1
 认知	ywtd	2
 谁知	ywtd	1
+谁人	ywww	1
 认识	ywyk	1
 认为	ywyl	2
 论调	ywym	1
@@ -4624,6 +4633,7 @@ use_preset_vocabulary: false
 新生代	utwa	1
 好东西	vasg	1
 好不好	vgvb	1
+好几个	vmwh	1
 好家伙	vpwo	2
 姚秋萍	vtai	1
 信用卡	wehh	1
@@ -4646,6 +4656,7 @@ use_preset_vocabulary: false
 计算器	ytkk	1
 文件夹	ywgu	2
 文件名	ywqk	6
+高强度	yxya	1
 百花齐放	dayy	1
 原来如此	dgvh	1
 古川伊织	dkwx	3
@@ -4696,6 +4707,7 @@ use_preset_vocabulary: false
 空前绝后	puxr	1
 锦上添花	qhia	1
 名符其实	qtap	1
+独善其身	quat	1
 白驹过隙	rcfb	1
 白狐天下	rqgg	1
 扬长补短	rtpt	1
@@ -4714,6 +4726,7 @@ use_preset_vocabulary: false
 全神贯注	wpxi	1
 从头再来	wugg	1
 公诸于众	wygw	1
+弱肉强食	xmxw	2
 红衰翠减	xynu	1
 毫无意义	yfuy	5
 说来话长	ygyt	1

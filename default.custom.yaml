@@ -16,7 +16,6 @@ patch:
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_wubi}
-    - {schema: jk_tiger}
 
   # --- 选单设置 ---
   switcher/+:

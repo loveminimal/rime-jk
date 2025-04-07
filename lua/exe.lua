@@ -49,6 +49,10 @@ local function exe(key, env)
         generic_open("https://zi.tools")
         context:clear()
 
+    elseif (context.input == "~hu") then
+        generic_open("https://tiger-code.com")
+        context:clear()
+
     end
 
     return kNoop

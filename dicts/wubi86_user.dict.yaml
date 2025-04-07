@@ -276,6 +276,7 @@ use_preset_vocabulary: false
 夫	fw	4
 替	fwf	1
 规	fwm	1
+零	fwyc	1
 堆	fwyg	7
 坑	fym	5
 一	g	221
@@ -952,6 +953,7 @@ use_preset_vocabulary: false
 机	sm	6
 贾	smu	1
 杨	snr	1
+杰	so	2
 楼	sov	2
 构	sqc	3
 柳	sqt	1
@@ -1193,6 +1195,7 @@ use_preset_vocabulary: false
 娘	vyv	1
 人	w	58
 代	wa	7
+借	wajg	1
 贷	wam	1
 他	wb	18
 仔	wbg	1
@@ -3794,6 +3797,7 @@ use_preset_vocabulary: false
 单就	ujyi	1
 意识	ujyk	1
 音调	ujym	1
+单词	ujyn	2
 意义	ujyq	3
 总共	ukaw	2
 总理	ukgj	1
@@ -4067,6 +4071,7 @@ use_preset_vocabulary: false
 假借	wnwa	1
 假设	wnym	1
 伙子	wobb	2
+你来	wqgo	2
 仰止	wqhh	1
 你这	wqp	1
 你好	wqvb	12
@@ -4108,6 +4113,7 @@ use_preset_vocabulary: false
 分裂	wvgq	1
 分不	wvi	1
 分清	wvig	2
+分流	wviy	1
 分号	wvkg	2
 分别	wvkl	2
 分类	wvod	2
@@ -4362,6 +4368,7 @@ use_preset_vocabulary: false
 户数	ynov	1
 赢家	ynpe	1
 记错	ynqa	1
+永久	ynqy	1
 记得	yntj	2
 词条	ynts	1
 刻意	ynuj	1

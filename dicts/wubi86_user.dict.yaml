@@ -801,6 +801,7 @@ use_preset_vocabulary: false
 鑫	qqq	1
 猎	qta	1
 狂	qtg	2
+独	qtj	1
 狗	qtq	5
 狐	qtr	2
 狠	qtv	1
@@ -1816,6 +1817,7 @@ use_preset_vocabulary: false
 用法	etif	1
 用时	etjf	1
 用心	etny	1
+用它	etpx	1
 用的	etrq	7
 用处	etth	1
 用着	etud	2
@@ -2036,6 +2038,7 @@ use_preset_vocabulary: false
 规定	fwpg	1
 替换	fwrq	3
 规模	fwsa	1
+替身	fwtm	1
 规律	fwtv	4
 零头	fwud	1
 替代	fwwa	1
@@ -2135,6 +2138,7 @@ use_preset_vocabulary: false
 一段	ggwd	4
 一会	ggwf	1
 一个	ggwh	7
+五个	ggwh	1
 一件	ggwr	2
 一位	ggwu	1
 一份	ggww	1
@@ -2211,7 +2215,9 @@ use_preset_vocabulary: false
 不行	gitf	1
 还行	gitf	1
 不得	gitj	1
+不移	gitq	1
 不好	givb	3
+不如	givk	1
 不做	giwd	1
 不会	giwf	2
 不像	giwq	1
@@ -2253,7 +2259,7 @@ use_preset_vocabulary: false
 速度	gkya	9
 整齐	gkyj	1
 画风	glmq	2
-现有	gmde	1
+现有	gmde	2
 两三	gmdg	1
 现在	gmdh	9
 现成	gmdn	1
@@ -2354,7 +2360,7 @@ use_preset_vocabulary: false
 江湖	iaid	1
 灌水	iaii	3
 港澳	iait	1
-满足	iakh	1
+满足	iakh	2
 江山	iamm	1
 满屋	iang	1
 泄密	iapn	1
@@ -2438,6 +2444,7 @@ use_preset_vocabulary: false
 渲染	ipiv	5
 沉溺	ipix	1
 党员	ipkm	1
+演员	ipkm	1
 学习	ipnu	9
 深色	ipqc	1
 演技	iprf	1
@@ -3191,7 +3198,9 @@ use_preset_vocabulary: false
 包括	qnrt	3
 包含	qnwy	2
 钩子	qqbb	1
+多了	qqbn	1
 多大	qqdd	5
+多用	qqet	1
 多元	qqfq	1
 多少	qqit	9
 金丹	qqmy	1
@@ -3328,6 +3337,7 @@ use_preset_vocabulary: false
 制作	rmwt	1
 所有	rnde	1
 所需	rnfd	1
+气场	rnfn	1
 所学	rnip	1
 气泡	rniq	1
 所以	rnny	2
@@ -3747,7 +3757,7 @@ use_preset_vocabulary: false
 移除	tqbw	1
 移动	tqfc	1
 移到	tqgc	1
-稳定	tqpg	4
+稳定	tqpg	5
 移植	tqsf	2
 稳住	tqwy	1
 鹅厂	trdg	1
@@ -4445,6 +4455,7 @@ use_preset_vocabulary: false
 就看	yirh	1
 就行	yitf	2
 就算	yith	2
+就得	yitj	1
 应得	yitj	1
 就很	yitv	1
 就会	yiwf	1
@@ -4457,6 +4468,7 @@ use_preset_vocabulary: false
 误会	ykwf	1
 训练	ykxa	3
 为了	ylbn	1
+为公	ylwc	1
 高能	ymce	1
 设成	ymdn	1
 调用	ymet	2
@@ -4528,7 +4540,7 @@ use_preset_vocabulary: false
 这是	ypjg	2
 这样	ypsu	3
 这么	yptc	1
-这种	yptk	2
+这种	yptk	3
 这个	ypwh	12
 亮度	ypya	1
 底层	yqnf	1
@@ -4649,6 +4661,7 @@ use_preset_vocabulary: false
 无意义	fuyq	2
 干什么	fwtc	1
 二维码	fxdc	4
+正式版	gath	2
 互联网	gbmq	1
 表达式	gdaa	1
 不确定	gdpg	1
@@ -4820,6 +4833,7 @@ use_preset_vocabulary: false
 吞噬星空	gkjp	23
 一蹋糊涂	gkoi	2
 天赋异禀	gmny	1
+正气凛然	gruq	2
 不可或缺	gsar	1
 一模一样	gsgs	1
 正午阳光	gtbi	2
@@ -4863,6 +4877,7 @@ use_preset_vocabulary: false
 半途而废	uwdy	1
 兰亭集序	uywy	1
 九牛一毛	vrgt	1
+侠肝义胆	weye	1
 信赏必罚	winl	1
 人定胜天	wpeg	1
 全神贯注	wpxi	1

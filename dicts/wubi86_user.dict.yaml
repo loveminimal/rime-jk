@@ -43,6 +43,7 @@ use_preset_vocabulary: false
 七	ag	4
 牙	ah	1
 东	ai	6
+划	aj	1
 或	ak	7
 功	al	6
 世	an	7
@@ -161,7 +162,6 @@ use_preset_vocabulary: false
 小	ih	24
 水	ii	8
 没	im	117
-淡	io	1
 学	ip	7
 光	iq	6
 少	it	16
@@ -403,7 +403,7 @@ use_preset_vocabulary: false
 散	aet	2
 甘	afd	1
 落	ait	4
-草	ajj	1
+草	ajj	2
 英	amd	2
 黄	amw	3
 巨	and	2
@@ -581,6 +581,7 @@ use_preset_vocabulary: false
 沿	imk	1
 涔	imw	1
 汤	inr	1
+淡	ioo	1
 演	ipg	1
 党	ipk	1
 沉	ipm	1
@@ -606,6 +607,7 @@ use_preset_vocabulary: false
 浪	iyv	1
 蝶	jan	1
 贤	jcm	1
+暖	jef	1
 里	jfd	36
 蛙	jff	3
 蚨	jfw	1
@@ -885,6 +887,7 @@ use_preset_vocabulary: false
 贾	smu	1
 杨	snr	1
 楼	sov	2
+柠	sps	1
 构	sqc	3
 柳	sqt	1
 榴	sqy	1
@@ -1083,7 +1086,7 @@ use_preset_vocabulary: false
 绝	xqc	3
 约	xqy	2
 终	xtu	2
-绿	xvi	2
+绿	xvi	4
 给	xwg	53
 纵	xww	1
 统	xyc	5
@@ -1156,6 +1159,7 @@ use_preset_vocabulary: false
 耍	dmjv	1
 愿	drin	2
 奇	dskf	2
+貆	eegg	1
 豹	eeqy	1
 脚	efcb	1
 爱	epdc	3
@@ -1168,6 +1172,7 @@ use_preset_vocabulary: false
 雨	fghy	4
 赶	fhfk	3
 韩	fjfh	3
+露	fkhk	1
 鼓	fkuc	1
 嘉	fkuk	1
 场	fnrt	5
@@ -1270,6 +1275,7 @@ use_preset_vocabulary: false
 烂	oufg	2
 塞	pfjf	1
 冠	pfqf	1
+蜜	pntj	1
 额	ptkm	1
 被	puhc	15
 裤	puyl	1
@@ -1662,6 +1668,7 @@ use_preset_vocabulary: false
 大约	ddxq	1
 大变	ddyo	1
 大义	ddyq	2
+有些	dehx	1
 有时	dejf	2
 胡同	demg	2
 有害	depd	2
@@ -2078,6 +2085,7 @@ use_preset_vocabulary: false
 瑶池	geib	1
 表明	geje	2
 表情	geng	5
+青柠	gesp	2
 表格	gest	7
 表头	geud	1
 表单	geuj	9
@@ -3412,6 +3420,7 @@ use_preset_vocabulary: false
 拉开	ruga	1
 接口	rukk	34
 拼图	rult	1
+拼写	rupg	1
 接触	ruqe	2
 拼搏	rurg	1
 接手	rurt	1
@@ -3514,6 +3523,7 @@ use_preset_vocabulary: false
 相见	shmq	1
 想尽	shny	1
 想象	shqj	3
+相近	shrp	2
 想想	shsh	2
 想要	shsv	1
 想着	shud	1
@@ -3888,7 +3898,7 @@ use_preset_vocabulary: false
 单就	ujyi	1
 意识	ujyk	1
 音调	ujym	1
-单词	ujyn	2
+单词	ujyn	3
 意义	ujyq	3
 总共	ukaw	2
 总理	ukgj	1
@@ -3951,7 +3961,7 @@ use_preset_vocabulary: false
 产品	utkk	4
 产业	utog	1
 痴迷	utop	1
-颜色	utqc	2
+颜色	utqc	3
 疾控	utrp	1
 首选	uttf	1
 产生	uttg	2
@@ -4502,6 +4512,7 @@ use_preset_vocabulary: false
 词序	ynyc	1
 词语	ynyg	5
 词库	ynyl	37
+忘记	ynyn	1
 翩翩	ynyn	1
 变了	yobn	1
 变成	yodn	3
@@ -4514,6 +4525,7 @@ use_preset_vocabulary: false
 变化	yowx	2
 毫无	ypfq	1
 这里	ypjf	2
+这是	ypjg	2
 这样	ypsu	3
 这么	yptc	1
 这种	yptk	2
@@ -4725,6 +4737,7 @@ use_preset_vocabulary: false
 看起来	rfgo	2
 打不开	rgga	1
 找不到	rggc	1
+看一下	rggh	1
 看不懂	rgna	1
 白小纯	rixg	3
 年轻人	rlww	1

@@ -78,61 +78,50 @@ def is_chinese_char(char: str) -> bool:
 
 @timer
 def combine(out_dir):
-    dict_num = 0
     res_dict = {}
     res_dict_weight = defaultdict(set)
     lines_total = []
-    print('\n🔜  === 合并到用户词典 ===')
+
+    # 加载所有词典文件
     for file_path in out_dir.iterdir():
         if file_path.is_file() and file_path.name.startswith('wubi86_user'):
-            dict_num = dict_num + 1
-            print('☑️  已加载第 %d 份码表 » %s' % (dict_num, file_path))
-
             with open(file_path, 'r', encoding='utf-8') as f:
-                lines = f.readlines()
-                lines_total.extend(lines)
+                lines_total.extend(f.readlines())
 
-    # 去重未变动行
-    lines_total = list(dict.fromkeys(lines_total))
+    # 去重并处理词条
+    for line in set(lines_total):
+        if is_chinese_char(line[0]):
+            word, code, weight = line.strip().split('\t')
+            weight = int(weight)
+            if word not in res_dict or weight > max(res_dict_weight[word]):
+                res_dict[word] = f'{code}\t{weight}'
+                res_dict_weight[word].add(weight)
 
-    for line in lines_total:
-        if not is_chinese_char(line[0]):  # 忽略注释和特殊行
-            continue
-
-        word, code, weight = line.strip().split('\t')
-        code = code.strip()
-        weight = int(weight)
-
-        # 按字长顺序过滤依次处理 1, 2, 3, 4 ...
-        # 此外不再过滤非 8105 字词（源码表已做过滤 & 加载超范字词）
-        if word not in res_dict or weight > max(res_dict_weight[word]):
-            res_dict[word] = f'{code}\t{weight}'
-            res_dict_weight[word].add(weight)
-
-    res = ''
-    # 按字长分组并按编码排序
-    with open(out_dir / f'{out_file}', 'w', encoding='utf-8') as o:
-        o.write(get_header_sync(f'{out_file}'))  # 写入文件头
-
-        # 按字长分组
+    # 多级分组排序（词长→编码长度→编码→汉字）
+    with open(out_dir / out_file, 'w', encoding='utf-8') as o:
+        o.write(get_header_sync(out_file))
+        
+        # 第一级：按词长分组
         word_len_dict = defaultdict(list)
         for word, value in res_dict.items():
-            word_len = len(word)
-            word_len_dict[word_len].append((word, value))
+            word_len_dict[len(word)].append((word, value))
 
-        # 按字长排序
+        # 处理每组词长
         for word_len in sorted(word_len_dict.keys()):
-            group = word_len_dict[word_len]
+            # 第二级：按编码长度分组
+            code_len_dict = defaultdict(list)
+            for word, value in word_len_dict[word_len]:
+                code = value.split('\t')[0]
+                code_len_dict[len(code)].append((word, code, value))
 
-            # 按编码排序
-            group_sorted = sorted(group, key=lambda x: x[1].split('\t')[0])  # 按编码排序
-
-            # 写入文件
-            for word, value in group_sorted:
-                res += f'{word}\t{value}\n'
-            print('✅  » 已合并处理生成 %s 字词语' % word_len)    
-
-        o.write(res)
+            # 按编码长度处理
+            for code_len in sorted(code_len_dict.keys()):
+                # 关键修改：当编码相同时，按汉字unicode排序
+                group = sorted(code_len_dict[code_len], 
+                             key=lambda x: (x[1], x[0]))  # 先按编码排序，再按汉字排序
+                for word, _, value in group:
+                    o.write(f'{word}\t{value}\n')
+            print(f'✅ 已合并处理生成 {word_len} 字词语')
         print('✅  » 已合并生成用户词典 %s' % (out_dir / out_file))
 
 

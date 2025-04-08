@@ -12295,7 +12295,6 @@ use_preset_vocabulary: false
 𬭊	qsfg	0
 𬀪	jmqn	0
 𫔍	qtol	0
-戈	a	10
 戒	aa	10
 葚	aad	20
 蒸	ab	10
@@ -12332,7 +12331,6 @@ use_preset_vocabulary: false
 蕴	ax	10
 荒	ay	10
 蘼	ays	10
-子	b	10
 院	bp	10
 聊	bq	10
 阪	br	10
@@ -12342,35 +12340,28 @@ use_preset_vocabulary: false
 除	bw	10
 孩	by	10
 陔	byn	10
-又	c	10
 鹜	cbt	20
 蟊	cbt	10
 尢	copp	40
 骓	cwy	10
-石	d	10
 瓠	dfn	10
 翡	djd	10
-月	e	10
 乳	eb	10
 胎	ec	10
 腌	ed	10
 貌	ee	10
 胩	eh	10
-土	f	10
 寸	fgh	10
 霪	fie	10
 嘉	fku	10
 觳	fpg	10
-王	g	10
 臻	gcf	10
 琮	gp	10
 麸	gqfw	10
 餮	gqw	10
 纛	gxfi	10
-目	h	10
 龉	hwb	20
 龀	hwb	10
-水	i	10
 渫	ian	10
 洧	ide	10
 溽	idf	20
@@ -12384,7 +12375,6 @@ use_preset_vocabulary: false
 鎏	iyc	10
 浏	iyj	10
 漩	iyt	10
-日	j	10
 蛲	jat	10
 蜻	jge	10
 晁	jiq	10
@@ -12393,7 +12383,6 @@ use_preset_vocabulary: false
 蜥	jsr	10
 蚱	jth	10
 览	jty	10
-口	k	10
 嗬	kaw	10
 嘁	kdh	10
 蹰	khd	10
@@ -12403,7 +12392,6 @@ use_preset_vocabulary: false
 嚣	kkd	10
 噗	ko	10
 呤	kwy	10
-田	l	10
 黩	lfo	10
 圃	lge	10
 辋	lm	10
@@ -12416,7 +12404,6 @@ use_preset_vocabulary: false
 辂	ltk	10
 圈	lu	10
 畛	lwe	10
-山	m	10
 岸	md	10
 贱	mg	10
 岍	mga	10
@@ -12424,7 +12411,6 @@ use_preset_vocabulary: false
 凹	mm	10
 赕	mo	10
 刿	mqj	10
-已	n	10
 忮	nfc	10
 譬	nku	20
 嬖	nku	10
@@ -12433,13 +12419,10 @@ use_preset_vocabulary: false
 憧	nuj	10
 忭	nyh	10
 悴	nyw	10
-火	o	10
 煳	ode	10
-之	p	10
 襦	puf	10
 袷	puw	10
 祀	pyn	10
-金	q	10
 觯	qeu	10
 匍	qge	10
 鲈	qgh	10
@@ -12457,7 +12440,6 @@ use_preset_vocabulary: false
 镄	qx	10
 锿	qye	10
 凫	qyn	20
-白	r	10
 攉	rfw	10
 擢	rnw	10
 氦	rny	20
@@ -12466,7 +12448,6 @@ use_preset_vocabulary: false
 皤	rto	10
 抖	ruf	10
 拎	rwy	10
-木	s	10
 柰	sfi	10
 桓	sgj	10
 酲	sgk	10
@@ -12475,7 +12456,6 @@ use_preset_vocabulary: false
 桄	siq	10
 桁	stf	10
 柃	swy	30
-禾	t	10
 徂	teg	10
 鹄	tfk	10
 氆	tfn	10
@@ -12488,7 +12468,6 @@ use_preset_vocabulary: false
 笫	ttn	10
 箪	tuj	10
 篙	tym	10
-立	u	10
 羯	udj	10
 疠	udn	10
 闼	udp	10
@@ -12502,10 +12481,8 @@ use_preset_vocabulary: false
 瘅	uuj	10
 阕	uwg	10
 阏	uyw	10
-女	v	10
 逯	vip	10
 鼹	vnu	10
-八	w	10
 毹	wge	10
 颌	wgk	10
 俪	wgm	10
@@ -12515,10 +12492,8 @@ use_preset_vocabulary: false
 翎	wyc	10
 隼	wyf	20
 颔	wyn	10
-弓	x	10
 肄	xtd	10
 绗	xtf	10
-言	y	10
 廑	yak	10
 羸	ynk	20
 嬴	ynk	10
@@ -12558,7 +12533,6 @@ use_preset_vocabulary: false
 莓	atxy	0
 芬	awvr	0
 茂	adny	0
-也	b	0
 防	byt	0
 陇	bdxt	0
 勐	bllt	0
@@ -12568,7 +12542,6 @@ use_preset_vocabulary: false
 劝	clt	0
 劲	calt	0
 勇	celr	0
-大	d	0
 耗	di	0
 耜	dih	0
 历	dle	0

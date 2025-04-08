@@ -1969,7 +1969,7 @@ use_preset_vocabulary: false
 老婆	ftih	3
 雾淞	ftis	3
 老师	ftjg	4
-都是	ftjg	3
+都是	ftjg	7
 教员	ftkm	5
 才叫	ftkn	1
 老兄	ftkq	1
@@ -2054,6 +2054,7 @@ use_preset_vocabulary: false
 表明	geje	2
 表情	geng	5
 表格	gest	7
+表头	geud	1
 表单	geuj	9
 玩意	gfuj	8
 一共	ggaw	1
@@ -2153,6 +2154,7 @@ use_preset_vocabulary: false
 不懂	gina	2
 不敢	ginb	1
 不愧	ginr	1
+不忙	giny	1
 不断	gion	1
 不完	gipf	2
 不定	gipg	1
@@ -2218,6 +2220,7 @@ use_preset_vocabulary: false
 刺客	gmpt	1
 现实	gmpu	2
 现象	gmqj	2
+再多	gmqq	1
 现状	gmud	2
 现代	gmwa	6
 两个	gmwh	4
@@ -2601,6 +2604,7 @@ use_preset_vocabulary: false
 听着	krud	1
 听说	kryu	1
 吃过	ktfp	1
+吃吧	ktkc	2
 呼呼	ktkt	1
 咱家	ktpe	1
 吃饭	ktqn	1
@@ -2830,6 +2834,7 @@ use_preset_vocabulary: false
 怀疑	ngxt	2
 收藏	nhad	1
 收获	nhaq	2
+收款	nhff	1
 收到	nhgc	1
 疏导	nhnf	1
 蛋疼	nhut	2
@@ -3669,6 +3674,7 @@ use_preset_vocabulary: false
 特别	trkl	2
 特定	trpg	1
 物质	trrf	1
+我的	trrq	1
 我们	trwu	4
 箱子	tsbb	2
 条件	tswr	1
@@ -3847,6 +3853,7 @@ use_preset_vocabulary: false
 新奇	usds	1
 新增	usfu	2
 新鲜	usqg	4
+新的	usrq	1
 新手	usrt	1
 亲自	usth	1
 新版	usth	1
@@ -3923,6 +3930,7 @@ use_preset_vocabulary: false
 妈妈	vcvc	1
 始终	vcxt	1
 奶茶	veaw	1
+退款	veff	1
 退税	vetu	1
 奶奶	veve	2
 姐姐	veve	1
@@ -4081,8 +4089,10 @@ use_preset_vocabulary: false
 伙子	wobb	2
 你来	wqgo	2
 仰止	wqhh	1
+你别	wqkl	1
 你好	wqvb	12
 爹妈	wqvc	1
+你妹	wqvf	1
 你俩	wqwg	5
 爷爷	wqwq	1
 你们	wqwu	8
@@ -4196,6 +4206,7 @@ use_preset_vocabulary: false
 结束	xfgk	1
 结果	xfjs	6
 结局	xfnn	4
+结尾	xfnt	1
 结构	xfsq	4
 结合	xfwg	2
 续费	xfxj	4
@@ -4401,7 +4412,7 @@ use_preset_vocabulary: false
 毫无	ypfq	1
 这样	ypsu	1
 这么	yptc	1
-这个	ypwh	1
+这个	ypwh	2
 亮度	ypya	1
 底层	yqnf	1
 麻烦	ysod	4
@@ -4585,6 +4596,7 @@ use_preset_vocabulary: false
 字符串	ptkk	1
 初始值	pvwf	1
 初始化	pvwx	1
+神经病	pxug	1
 客户端	pyum	1
 乌克兰	qduf	1
 犹太人	qdww	3
@@ -4636,6 +4648,7 @@ use_preset_vocabulary: false
 姚秋萍	vtai	1
 信用卡	wehh	1
 修不完	wgpf	1
+会不会	wgwf	1
 领导人	wnww	1
 全家福	wppy	2
 含金量	wqjg	1

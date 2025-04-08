@@ -1,14 +1,12 @@
+# Rime dictionary - wubi86_jidian_extra_district.dict.yaml
+# encoding: utf-8
 ---
 name: wubi86_district
 note: "扩展词库-行政区域"
 version: "2022-12-16"
 last_edit_time: "2022-12-16"
-dict_grouped: true # 词库管理应用识别：标记该码表为分组模式
+dict_grouped: true	# 词库管理应用识别：标记该码表为分组模式
 sort: original
-# 源码表 wubi86_jidian_extra_district
-# 码表的排序方式: by_weight 权重，original 原始顺序
-# 码表内容格式：字词 编码 权重 注释 中间是tab，不是空格）
-# 行政区的词条过多，可以根据自己需求进行删减
 ...
 ## 北京市
 北京市	uyym	110000

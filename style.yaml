@@ -114,7 +114,7 @@ layout_o:
 # --- Purple 绛紫 ---
 pujk:
   preset_color_schemes/pujk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／PU紫JK"                        # 方案设置中显示的配色名称
+    name: "知心·绛紫"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -150,7 +150,7 @@ pujk:
 # --- Sky 天蓝 ----
 skjk:
   preset_color_schemes/skjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／SK蓝JK"                        # 方案设置中显示的配色名称
+    name: "知心·天蓝"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -186,7 +186,7 @@ skjk:
 # --- Primary 主蓝 ---
 prjk:
   preset_color_schemes/prjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／PR蓝JK"                        # 方案设置中显示的配色名称
+    name: "知心·主蓝"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -222,7 +222,7 @@ prjk:
 # --- Emerald 翠绿 ---
 emjk:
   preset_color_schemes/emjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／EM翠JK"                        # 方案设置中显示的配色名称
+    name: "知心·青翠"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -258,7 +258,7 @@ emjk:
 # --- Orange 暖橙 ---
 orjk:
   preset_color_schemes/orjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／OR橙JK"                        # 方案设置中显示的配色名称
+    name: "知心·暖橙"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -294,7 +294,7 @@ orjk:
 # --- Slate 岩灰 ---
 sljk:
   preset_color_schemes/sljk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／SL岩JK"                        # 方案设置中显示的配色名称
+    name: "知心·岩灰"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -330,7 +330,7 @@ sljk:
 # --- TeaInk 茶墨 ---
 tkjk:
   preset_color_schemes/tkjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／LT淡JK"                        # 方案设置中显示的配色名称
+    name: "知心·茶墨"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -366,7 +366,7 @@ tkjk:
 # --- Aqua 碧水〔改〕---
 aqjk:
   preset_color_schemes/aqjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／AQ碧JK"                        # 方案设置中显示的配色名称
+    name: "知心·碧水"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -402,7 +402,7 @@ aqjk:
 # --- Light 微亮 ---
 mljk:
   preset_color_schemes/mljk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／MS亮JK"                        # 方案设置中显示的配色名称
+    name: "知心·微浅"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -438,7 +438,7 @@ mljk:
 # --- Dark 微暗 ---
 mdjk:
   preset_color_schemes/mdjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心／MS暗JK"                        # 方案设置中显示的配色名称
+    name: "知心·微暗"                        # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---

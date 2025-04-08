@@ -25,6 +25,21 @@ use_preset_vocabulary: false
 '''
     return header.strip() + '\n'
 
+
+# --- 用户词典同步表头 ---
+# 
+def get_header_sort(file_name):
+    header = f'''
+# 
+# --- 说明 ---------------------------------------------
+# 该字典是按照「词长→编码长度→编码→汉字」多级分组排序
+# 运行脚本：
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sort_dict.py
+# 
+'''
+    return header.strip() + '\n'
+
+
 # --- 自定义脚本指令 ---
 # 
 def get_en_aliases_header(file_name):

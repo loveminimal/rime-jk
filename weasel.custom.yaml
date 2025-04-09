@@ -21,12 +21,10 @@ patch:
       # inline_preedit: true
       # --- 鼠标操作 ---------------------------------------------
       # hover_type       鼠标悬浮候选 ➭ none、hilite、semi_hilite
-      # paging_on_scroll 滚轮候选
       # click_to_capture 点击候选创建截图
       # ----------------------------------------------------------
       hover_type: none
-      paging_on_scroll: true
-      click_to_capture: false   
+      click_to_capture: true
       layout:
         __include: style.yaml:/layout_o
         # margin_y: -1

@@ -26,7 +26,7 @@ patch:
       # ----------------------------------------------------------
       hover_type: none
       paging_on_scroll: true
-      click_to_capture: true   
+      click_to_capture: false   
       layout:
         __include: style.yaml:/layout_o
         # margin_y: -1

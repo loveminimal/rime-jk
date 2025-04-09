@@ -244,7 +244,6 @@ use_preset_vocabulary: false
 害	pd	2
 家	pe	26
 定	pg	9
-宫	pk	1
 军	pl	4
 官	pn	2
 之	pp	14
@@ -767,6 +766,7 @@ use_preset_vocabulary: false
 写	pgn	21
 宝	pgy	13
 冥	pju	1
+宫	pkk	1
 密	pnt	1
 宋	psu	3
 宅	pta	1
@@ -1288,6 +1288,7 @@ use_preset_vocabulary: false
 被	puhc	15
 裤	puyl	1
 穿	pwat	1
+窅	pwhf	1
 容	pwwk	6
 视	pymq	2
 祲	pyvc	1
@@ -1830,7 +1831,7 @@ use_preset_vocabulary: false
 用时	etjf	1
 用心	etny	1
 用它	etpx	1
-用的	etrq	7
+用的	etrq	8
 用处	etth	1
 用着	etud	2
 用户	etyn	23
@@ -2311,6 +2312,7 @@ use_preset_vocabulary: false
 死去	gqfc	1
 列表	gqge	4
 烈日	gqjj	1
+残次	gquq	1
 残废	gqyn	1
 熬夜	gqyw	1
 末尾	gsnt	4
@@ -2457,8 +2459,10 @@ use_preset_vocabulary: false
 滑过	imfp	1
 没事	imgk	3
 滑梯	imsu	1
+没人	imww	1
 测试	imya	8
 测评	imyg	1
+没谁	imyw	1
 学医	ipat	1
 常用	ipet	15
 演示	ipfi	3
@@ -2775,7 +2779,7 @@ use_preset_vocabulary: false
 加班	lkgy	1
 加上	lkhh	3
 加油	lkim	1
-加辅	lklg	2
+加辅	lklg	3
 回车	lklg	1
 圆圆	lklk	1
 回忆	lknn	2
@@ -2850,6 +2854,7 @@ use_preset_vocabulary: false
 同意	mguj	1
 赋值	mgwf	2
 同级	mgxe	1
+同文	mgyy	2
 贴膜	mhea	1
 由于	mhgf	1
 贴图	mhlt	1
@@ -3283,7 +3288,7 @@ use_preset_vocabulary: false
 找找	rara	1
 描述	rasy	4
 找个	rawh	1
-报错	rbqa	1
+报错	rbqa	2
 摄氏	rbqa	1
 报名	rbqk	6
 报道	rbut	2
@@ -3442,6 +3447,8 @@ use_preset_vocabulary: false
 打错	rsqa	2
 打印	rsqg	6
 打包	rsqn	4
+打的	rsrq	1
+打着	rsud	1
 打单	rsuj	2
 打倒	rswg	1
 打词	rsyn	4
@@ -3842,7 +3849,7 @@ use_preset_vocabulary: false
 很早	tvjh	1
 很多	tvqq	2
 很久	tvqy	1
-很好	tvvb	1
+很好	tvvb	2
 很高	tvym	1
 签到	twgc	1
 符号	twkg	16
@@ -4560,7 +4567,7 @@ use_preset_vocabulary: false
 记过	ynfp	1
 永远	ynfq	5
 词频	ynhi	9
-词汇	ynia	1
+词汇	ynia	2
 房号	ynkg	1
 词典	ynma	4
 永恒	ynng	1
@@ -4936,6 +4943,7 @@ use_preset_vocabulary: false
 名符其实	qtap	1
 独善其身	quat	1
 白驹过隙	rcfb	1
+逝者如斯	rfva	1
 白狐天下	rqgg	1
 扬长补短	rtpt	1
 相见恨晚	smnj	1

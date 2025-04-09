@@ -27,7 +27,7 @@ encoder:
 import_tables:
   - dicts/wubi86         
   - dicts/wubi86_user    
-  - dicts/wubi86_district
+  # - dicts/wubi86_district
 use_preset_vocabulary: false
 ...
 # -------------------

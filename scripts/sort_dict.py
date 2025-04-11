@@ -1,6 +1,7 @@
 # 排序现有标准词库
 # created by Jack Liu <https://aituyaa.com>
 # 
+import hashlib
 from pathlib import Path
 from collections import defaultdict
 from header import get_header_sort
@@ -8,8 +9,33 @@ from timer import timer
 
 
 def is_chinese_char(char: str) -> bool:
+    """
+    判断字符是否属于《通用规范汉字表》8105字范围内的汉字。
+    使用 Unicode 区间列表优化判断。
+    """
+    if len(char) != 1:
+        return False
+    
     code = ord(char)
-    return (0x4E00 <= code <= 0x9FFF)
+    # 所有 CJK 汉字 Unicode 区间（基本区 + 扩展A-G）
+    cjk_ranges = [
+        (0x4E00, 0x9FFF),    # 基本区
+        (0x3400, 0x4DBF),    # 扩展A
+        (0x20000, 0x2A6DF),  # 扩展B
+        (0x2A700, 0x2B73F),  # 扩展C
+        (0x2B740, 0x2B81F),  # 扩展D
+        (0x2B820, 0x2CEAF),  # 扩展E
+        (0x2CEB0, 0x2EBEF),  # 扩展F
+        (0x30000, 0x3134F),  # 扩展G
+    ]
+    
+    return any(start <= code <= end for start, end in cjk_ranges)
+
+def get_md5(text: str) -> str:
+    """计算字符串的 MD5 哈希值"""
+    md5 = hashlib.md5()  # 创建 MD5 对象
+    md5.update(text.encode('utf-8'))  # 传入字节数据（必须 encode）
+    return md5.hexdigest()  # 返回 32 位 16 进制字符串
 
 @timer
 def combine(src_dir, out_dir):
@@ -38,15 +64,20 @@ def combine(src_dir, out_dir):
         if is_chinese_char(line[0]):
             word, code, weight = line.strip().split('\t')
             weight = int(weight)
-            if word not in res_dict or weight > max(res_dict_weight[word]):
-                res_dict[word] = f'{code}\t{weight}'
-                res_dict_weight[word].add(weight)
+            # if word not in res_dict or weight > max(res_dict_weight[word]):
+            #     res_dict[word] = f'{code}\t{weight}'
+            #     res_dict_weight[word].add(weight)
+            
+            # 唯一化
+            if word not in res_dict:
+                res_dict[word + get_md5(line)] = f'{code}\t{weight}'
+                # res_dict_weight[word].add(weight)
 
 
     # 多级分组排序（词长→编码长度→编码→汉字）
     with open(out_dir / out_file, 'w', encoding='utf-8') as o:
         o.write(header_str)
-        o.write(get_header_sort(out_file))
+        # o.write(get_header_sort(out_file))
         o.write('...\n')
         
         # 第一级：按词长分组
@@ -68,7 +99,7 @@ def combine(src_dir, out_dir):
                 group = sorted(code_len_dict[code_len], 
                              key=lambda x: (x[1], x[0]))  # 先按编码排序，再按汉字排序
                 for word, _, value in group:
-                    o.write(f'{word}\t{value}\n')
+                    o.write(f'{word[:-32]}\t{value}\n')
             print(f'✅ 已合并处理生成 {word_len} 字词语')
         print('✅  » 已合并生成用户词典 %s' % (out_dir / out_file))
 
@@ -77,8 +108,8 @@ if __name__ == '__main__':
     current_dir = Path.cwd()
 
     src_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
-    out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
-    dict_start = 'wubi86_district'
+    out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\out')
+    dict_start = '8105'
 
     # out_file = f'{dict_start}.sorted.dict.yaml'
     out_file = f'{dict_start}.dict.yaml'

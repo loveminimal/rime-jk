@@ -894,6 +894,7 @@ use_preset_vocabulary: false
 杯	sgi	4
 醒	sgj	2
 配	sgn	2
+醉	sgy	1
 想	shn	29
 桃	siq	2
 档	siv	1
@@ -2165,7 +2166,7 @@ use_preset_vocabulary: false
 一堆	ggfw	2
 一致	gggc	1
 一天	gggd	2
-一下	gggh	20
+一下	gggh	21
 一步	gghi	1
 一点	gghk	3
 一些	gghx	9
@@ -2335,7 +2336,7 @@ use_preset_vocabulary: false
 画风	glmq	2
 现有	gmde	2
 两三	gmdg	1
-现在	gmdh	28
+现在	gmdh	30
 现成	gmdn	1
 两天	gmgd	1
 刺激	gmir	1
@@ -2508,7 +2509,7 @@ use_preset_vocabulary: false
 混乱	ijtd	3
 混合	ijwg	1
 渐近	ilrp	1
-没有	imde	25
+没有	imde	26
 没用	imet	1
 测过	imfp	1
 滑过	imfp	1
@@ -2836,7 +2837,7 @@ use_preset_vocabulary: false
 四方	lhyy	1
 甲方	lhyy	1
 架子	lkbb	1
-加了	lkbn	5
+加了	lkbn	6
 加载	lkfa	9
 回去	lkfc	4
 回到	lkgc	1
@@ -3376,6 +3377,7 @@ use_preset_vocabulary: false
 反驳	rccq	2
 反而	rcdm	4
 反正	rcgh	16
+把酒	rcis	1
 返回	rclk	14
 把它	rcpx	1
 反馈	rcqn	3
@@ -3706,7 +3708,7 @@ use_preset_vocabulary: false
 禁用	sset	2
 禁止	sshh	3
 禁网	ssmq	1
-木得	sstj	2
+木得	sstj	3
 格式	staa	7
 样式	suaa	7
 样子	subb	4
@@ -4164,6 +4166,7 @@ use_preset_vocabulary: false
 好奇	vbds	1
 好用	vbet	4
 好玩	vbgf	2
+好点	vbhk	1
 好觉	vbip	1
 好啊	vbkb	2
 好吗	vbkc	1
@@ -4176,7 +4179,7 @@ use_preset_vocabulary: false
 好多	vbqq	7
 好久	vbqy	4
 好看	vbrh	5
-好的	vbrq	4
+好的	vbrq	5
 好处	vbth	1
 好好	vbvb	4
 好像	vbwq	11
@@ -4196,6 +4199,7 @@ use_preset_vocabulary: false
 退了	vebn	1
 退款	veff	1
 退税	vetu	1
+奶瓶	veua	1
 奶奶	veve	2
 姐姐	veve	1
 退费	vexj	13
@@ -4267,7 +4271,7 @@ use_preset_vocabulary: false
 公开	wcga	1
 公平	wcgu	1
 公司	wcng	8
-公交	wcuq	1
+公交	wcuq	2
 公道	wcut	1
 仅供	wcwa	1
 公众	wcww	1
@@ -4452,6 +4456,7 @@ use_preset_vocabulary: false
 人和	wwtk	1
 俗称	wwtq	1
 人物	wwtr	2
+坐个	wwwh	1
 人们	wwwu	1
 人为	wwyl	1
 华丽	wxgm	1
@@ -4686,7 +4691,7 @@ use_preset_vocabulary: false
 记过	ynfp	1
 永远	ynfq	5
 词频	ynhi	9
-词汇	ynia	2
+词汇	ynia	3
 房号	ynkg	1
 词典	ynma	6
 永恒	ynng	1

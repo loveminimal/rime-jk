@@ -37,6 +37,7 @@ use_preset_vocabulary: false
 呢	kn;xn	1
 啥	kw;fk	0
 连	lp;kz	2
+已	nn;nn	0
 字	pb;fz	2
 它	px;bz	1
 多	qq;uz	2
@@ -52,14 +53,18 @@ use_preset_vocabulary: false
 第	tx;ht	1
 着	ud;hf	1
 好	vb;gz	0
+如	vk;gz	0
 群	vt;kd	1
 个	wh;jz	1
 你	wq;iy	1
+人	ww;ww	0
 比	xx;nz	1
 就	yi;dn	2
+亦	yo;uz	1
 这	yp;iz	1
 放	yt;yz	1
 基于	ad;wf gf;kz	2
+其实	ad;wu pu;du	0
 东西	ai;iz sg;hg	1
 英文	am;du yy;gy	1
 聚焦	bc;ti wy;ou	0
@@ -70,6 +75,7 @@ use_preset_vocabulary: false
 双拼	cc;yz ru;ah	1
 对于	cf;yz gf;kz	0
 对的	cf;yz rq;yy	0
+台词	ck;fz yn;gk	1
 难道	cw;yg ut;hp	1
 码表	dc;gz ge;uz	1
 大了	dd;dd bn;hz	0
@@ -78,6 +84,7 @@ use_preset_vocabulary: false
 有些	de;fz hx;ff	1
 有的	de;fz rq;yy	0
 感觉	dg;kn ip;mq	2
+在意	dh;fd uj;nu	0
 而且	dm;jj eg;dz	1
 万象	dn;vz qj;eu	2
 确实	dq;eh pu;du	1
@@ -86,6 +93,7 @@ use_preset_vocabulary: false
 悬浮	eg;cn ie;bg	0
 用过	et;nh fp;iz	1
 用啥	et;nh kw;fk	1
+用着	et;nh ud;hf	0
 用户	et;nh yn;ez	1
 支持	fc;uz rf;fy	0
 需要	fd;mj sv;fz	1
@@ -102,7 +110,9 @@ use_preset_vocabulary: false
 弄好	ga;jz vb;gz	0
 开源	ga;kz id;ri	0
 开箱	ga;kz ts;hf	0
+开着	ga;kz ud;hf	0
 开始	ga;kz vc;kg	0
+到底	gc;fj yq;ay	0
 天天	gd;iz gd;iz	0
 吞噬	gd;kf kt;aw	0
 玩的	gf;qn rq;yy	0
@@ -119,6 +129,8 @@ use_preset_vocabulary: false
 不用	gi;iz et;nh	0
 不过	gi;iz fp;iz	1
 不是	gi;iz jg;hu	2
+不然	gi;iz qd;ou	0
+不要	gi;iz sv;fz	0
 不会	gi;iz wf;cu	0
 还是	gi;pi jg;hu	3
 还行	gi;pi tf;hh	0
@@ -126,8 +138,10 @@ use_preset_vocabulary: false
 整句	gk;ih qk;dz	2
 现在	gm;qn dh;fd	4
 来回	go;iz lk;dz	0
+残烛	gq;gt oj;yz	0
 虎头	ha;mv ud;iz	1
 上面	hh;gg dm;jd	1
+上屏	hh;gg nu;ak	0
 目录	hh;hh vi;uz	1
 卡卡	hh;uz hh;uz	1
 具体	hw;uz ws;gg	1
@@ -154,9 +168,14 @@ use_preset_vocabulary: false
 加了	lk;gz bn;hz	0
 田野	ll;ll jf;cb	1
 软件	lq;wy wr;hh	1
+输入	lw;gj ty;iz	0
 办法	lw;iz if;cy	1
 删除	mm;gj bw;ty	1
+风中	mq;iz kh;kz	0
 几个	mt;nz wh;jz	1
+几遍	mt;nz yn;mp	0
+异义	na;jz yq;iz	1
+已经	nn;nn xc;ag	0
 习惯	nu;dz nx;fm	1
 以前	ny;wy ue;jj	1
 数字	ov;ty pb;fz	2
@@ -174,20 +193,26 @@ use_preset_vocabulary: false
 制作	rm;hj wt;hf	1
 控制	rp;wa rm;hj	1
 换成	rq;md dn;nt	1
+的话	rq;yy yt;dg	0
 白霜	rr;rr fs;hf	1
+打了	rs;hz bn;hz	1
 挺好	rt;fp vb;gz	0
 插件	rt;fv wr;hh	1
 拼音	ru;ah uj;fz	0
 搜狗	rv;hc qt;qk	1
 指针	rx;jg qf;hz	0
 搞的	ry;mk rq;yy	1
+模型	sa;jd ga;jf	0
+权重	sc;yz tg;jf	0
 相对	sh;gz cf;yz	1
 可见	sk;dz mq;bz	1
 可以	sk;dz ny;wy	1
 禁止	ss;fi hh;hg	1
 要有	sv;fz de;fz	1
 要个	sv;fz wh;jz	1
+乱掉	td;nn rh;jh	1
 选择	tf;qp rc;fh	2
+生命	tg;dz wg;kb	0
 重新	tg;jf us;rh	1
 自从	th;dz ww;yz	1
 怎么	th;fn tc;uz	3
@@ -203,10 +228,14 @@ use_preset_vocabulary: false
 兼容	uv;ou pw;wk	1
 好用	vb;gz et;nh	0
 好啊	vb;gz kb;sk	0
+既然	vc;aq qd;ou	0
 即用	vc;bh et;nh	0
+那些	vf;bh hx;ff	1
+那么	vf;bh tc;uz	0
 那个	vf;bh wh;jz	3
+那就	vf;bh yi;dn	0
 群友	vt;kd dc;uz	1
-什么	wf;hz tc;uz	1
+什么	wf;hz tc;uz	2
 使用	wg;kq et;nh	5
 企业	wh;fz og;dz	0
 你的	wq;iy rq;yy	1
@@ -225,6 +254,7 @@ use_preset_vocabulary: false
 主流	yg;dz iy;cq	1
 主题	yg;dz jg;hm	1
 主要	yg;dz sv;fz	1
+语法	yg;kg if;cy	0
 语言	yg;kg yy;yy	1
 就不	yi;dn gi;iz	0
 就是	yi;dn jg;hu	4
@@ -232,10 +262,12 @@ use_preset_vocabulary: false
 应该	yi;dz yy;nw	2
 误导	yk;gd nf;uz	1
 设置	ym;cy lf;hf	0
+调频	ym;fk hi;dm	0
+词语	yn;gk yg;kg	1
 词库	yn;gk yl;kz	2
 这些	yp;iz hx;ff	1
 这种	yp;iz tk;hh	2
-这个	yp;iz wh;jz	3
+这个	yp;iz wh;jz	5
 许多	yt;fh qq;uz	0
 放在	yt;yz dh;fd	1
 放个	yt;yz wh;jz	1
@@ -243,6 +275,7 @@ use_preset_vocabulary: false
 说明	yu;kq je;gz	1
 方案	yy;gn pv;su	0
 基本上	ad;wf sg;dz hh;gg	0
+出不来	bm;kz gi;iz go;iz	0
 也还行	bn;hn gi;pi tf;hh	1
 也可以	bn;hn sk;dz ny;wy	1
 骚操作	cc;yj rk;ks wt;hf	1
@@ -252,15 +285,18 @@ use_preset_vocabulary: false
 有时候	de;fz jf;yz wh;nd	1
 有的用	de;fz rq;yy et;nh	1
 万能的	dn;vz ce;xx rq;yy	1
+爽就行	dq;qq yi;dn tf;hh	0
 太多了	dy;iz qq;uz bn;hz	1
 太傻比	dy;iz wt;lt xx;nz	1
 用起来	et;nh fh;nv go;iz	1
 用哪个	et;nh kv;fb wh;jz	1
 用词库	et;nh yn;gk yl;kz	1
 无所谓	fq;vz rn;rh yl;eg	1
+才出来	ft;ez bm;kz go;iz	0
 都一样	ft;jb gg;ll su;dh	1
 都不用	ft;jb gi;iz et;nh	1
 都还好	ft;jb gi;pi vb;gz	0
+都没有	ft;jb im;cy de;fz	1
 都可以	ft;jb sk;dz ny;wy	1
 雾淞的	ft;lb is;wc rq;yy	1
 老机器	ft;xb sm;nz kk;dk	1
@@ -274,10 +310,15 @@ use_preset_vocabulary: false
 不好用	gi;iz vb;gz et;nh	1
 不使用	gi;iz wg;kq et;nh	1
 还不能	gi;pi gi;iz ce;xx	1
+还不如	gi;pi gi;iz vk;gz	0
+两个字	gm;ww wh;jz pb;fz	0
 来回换	go;iz lk;dz rq;md	1
+肯定是	he;fz pg;hu jg;hu	0
+此电脑	hx;nz jn;vz ey;bh	1
 小助手	ih;ty eg;ln rt;gh	2
 小科狗	ih;ty tu;fh qt;qk	1
 没必要	im;cy nt;ez sv;fz	1
+是不是	jg;hu gi;iz jg;hu	0
 是哪个	jg;hu kv;fb wh;jz	0
 跟拼音	kh;ve ru;ah uj;fz	1
 跟这个	kh;ve yp;iz wh;jz	1
@@ -286,8 +327,10 @@ use_preset_vocabulary: false
 啥好用	kw;fk vb;gz et;nh	1
 只要能	kw;uz sv;fz ce;xx	1
 辅助码	lg;ey eg;ln dc;gz	1
+回收站	lk;dz nh;ty uh;kg	1
 输入法	lw;gj ty;iz if;cy	1
 办公了	lw;iz wc;uz bn;hz	1
+已修改	nn;nn wh;te nt;yz	0
 快捷键	nn;wy rg;vh qv;fp	1
 之前的	pp;pp ue;jj rq;yy	1
 安装了	pv;fz uf;ye bn;hz	1
@@ -300,26 +343,35 @@ use_preset_vocabulary: false
 想用了	sh;nu et;nh bn;hz	0
 可以用	sk;dz ny;wy et;nh	0
 可以的	sk;dz ny;wy rq;yy	1
+要用的	sv;fz et;nh rq;yy	0
 处理完	th;iz gj;fg pf;qb	0
 移植到	tq;qy sf;hg gc;fj	1
+我现在	tr;nt gm;qn dh;fd	0
 第几个	tx;ht mt;nz wh;jz	1
 差不多	ud;af gi;iz qq;uz	2
+总是有	uk;nu jg;hu de;fz	0
 新功能	us;rh al;nz ce;xx	1
 好东西	vb;gz ai;iz sg;hg	1
+好像是	vb;gz wq;je jg;hu	1
+如果不	vk;gz js;iz gi;iz	0
 群友们	vt;kd dc;uz wu;nz	1
 群文件	vt;kd yy;gy wr;hh	1
+会不会	wf;cu gi;iz wf;cu	0
 命中率	wg;kb kh;kz yx;if	2
 使用了	wg;kq et;nh bn;hz	1
+你不用	wq;iy gi;iz et;nh	0
 你好吧	wq;iy vb;gz kc;nz	1
 你们都	wq;iy wu;nz ft;jb	0
 任务栏	wt;fg tl;bz su;fg	1
 比较晚	xx;nz lu;qy jq;kq	1
+试一下	ya;ag gg;ll gh;iz	0
 主要是	yg;dz sv;fz jg;hu	1
 主方案	yg;dz yy;gn pv;su	1
 就是玩	yi;dn jg;hu gf;qn	1
 就是我	yi;dn jg;hu tr;nt	0
 就行了	yi;dn tf;hh bn;hz	1
 高了好	ym;kf bn;hz vb;gz	0
+这句话	yp;iz qk;dz yt;dg	0
 说有用	yu;kq de;fz et;nh	1
 说到底	yu;kq gc;fj yq;ay	1
 方案中	yy;gn pv;su kh;kz	1
@@ -331,6 +383,7 @@ use_preset_vocabulary: false
 雾淞拼音	ft;lb is;wc ru;ah uj;fz	1
 弄好之后	ga;jz vb;gz pp;pp rg;kd	1
 开箱即用	ga;kz ts;hf vc;bh et;nh	1
+到底上屏	gc;fj yq;ay hh;gg nu;ak	1
 吞噬星空	gd;kf kt;aw jt;gf pw;af	2
 五笔整句	gg;hg tt;fn gk;ih qk;dz	2
 环境恢复	gg;iy fu;jq nd;oy tj;tu	1
@@ -339,10 +392,14 @@ use_preset_vocabulary: false
 一段时间	gg;ll wd;mc jf;yz uj;dz	1
 下的版本	gh;iz rq;yy th;gc sg;dz	1
 不用聚焦	gi;iz et;nh bc;ti wy;ou	1
+不然的话	gi;iz qd;ou rq;yy yt;dg	1
+不要在意	gi;iz sv;fz dh;fd uj;nu	1
 不怎么好	gi;iz th;fn tc;uz vb;gz	0
 是哪个嘞	jg;hu kv;fb wh;jz ka;fl	1
 量大管饱	jg;jf dd;dd tp;nn qn;qn	1
+因为没有	ld;iz yl;yi im;cy de;fz	1
 加了几个	lk;gz bn;hz mt;nz wh;jz	1
+风中残烛	mq;iz kh;kz gq;gt oj;yz	2
 挺好玩的	rt;fp vb;gz gf;qn rq;yy	1
 指针悬浮	rx;jg qf;hz eg;cn ie;bg	1
 想出来的	sh;nu bm;kz go;iz rq;yy	1
@@ -354,33 +411,55 @@ use_preset_vocabulary: false
 你自己的	wq;iy th;dz nn;gn rq;yy	1
 你们都是	wq;iy wu;nz ft;jb jg;hu	1
 停止支持	wy;ps hh;hg fc;uz rf;fy	1
+语法模型	yg;kg if;cy sa;jd ga;jf	1
 就完事了	yi;dn pf;qb gk;vh bn;hz	0
 高了好多	ym;kf bn;hz vb;gz qq;uz	2
 这玩意儿	yp;iz gf;qn uj;nu qt;nz	1
 这个东西	yp;iz wh;jz ai;iz sg;hg	1
 这个之前	yp;iz wh;jz pp;pp ue;jj	1
 基本上就是	ad;wf sg;dz hh;gg yi;dn jg;hu	1
+其实两个字	ad;wu pu;du gm;ww wh;jz pb;fz	1
+也是要用的	bn;hn jg;hu sv;fz et;nh rq;yy	1
 万象的词库	dn;vz qj;eu rq;yy yn;gk yl;kz	1
 开源不开源	ga;kz id;ri gi;iz ga;kz id;ri	1
 开始不支持	ga;kz vc;kg gi;iz fc;uz rf;fy	1
+到底用不用	gc;fj yq;ay et;nh gi;iz et;nh	0
+还不如不用	gi;pi gi;iz vk;gz gi;iz et;nh	1
 现在使用的	gm;qn dh;fd wg;kq et;nh rq;yy	1
 另一个窗口	kl;bz gg;ll wh;jz pw;tq kk;kk	1
 别的都还好	kl;jh rq;yy ft;jb gi;pi vb;gz	1
 哈哈哈哈哈	kw;gk kw;gk kw;gk kw;gk kw;gk	0
+输入会不会	lw;gj ty;iz wf;cu gi;iz wf;cu	1
+几遍才出来	mt;nz yn;mp ft;ez bm;kz go;iz	1
+已修改权重	nn;nn wh;te nt;yz sc;yz tg;jf	1
 找到的那个	ra;tz gc;fj rq;yy vf;bh wh;jz	1
 可以用方案	sk;dz ny;wy et;nh yy;gn pv;su	1
 处理完之后	th;iz gj;fg pf;qb pp;pp rg;kd	1
 冰凌可以的	ui;yz uf;wt sk;dz ny;wy rq;yy	1
 命中率不高	wg;kb kh;kz yx;if gi;iz ym;kf	1
+你不用的话	wq;iy gi;iz et;nh rq;yy yt;dg	1
 就不想用了	yi;dn gi;iz sh;nu et;nh bn;hz	1
 这种骚操作	yp;iz tk;hh cc;yj rk;ks wt;hf	1
 现在使用万象	gm;qn dh;fd wg;kq et;nh dn;vz qj;eu	1
 另外也是许多	kl;bz qh;yz bn;hn jg;hu yt;fh qq;uz	1
 之前使用雾淞	pp;pp ue;jj wg;kq et;nh ft;lb is;wc	1
 怎么想出来的	th;fn tc;uz sh;nu bm;kz go;iz rq;yy	1
+我现在试一下	tr;nt gm;qn dh;fd ya;ag gg;ll gh;iz	1
+使用一段时间	wg;kq et;nh gg;ll wd;mc jf;yz uj;dz	0
+你的生命已如	wq;iy rq;yy tg;dz wg;kb nn;nn vk;gz	1
 其实也没多大用	ad;wu pu;du bn;hn im;cy qq;uz dd;dd et;nh	1
+直接也是出不来	fh;fz ru;vg bn;hn jg;hu bm;kz gi;iz go;iz	1
 哈哈哈哈哈哈哈	kw;gk kw;gk kw;gk kw;gk kw;gk kw;gk kw;gk	1
 处理完之后大概	th;iz gj;fg pf;qb pp;pp rg;kd dd;dd sv;cq	1
+总是有人要用的	uk;nu jg;hu de;fz ww;ww sv;fz et;nh rq;yy	1
+这句话如果不是	yp;iz qk;dz yt;dg vk;gz js;iz gi;iz jg;hu	1
+万象拼音输入方案	dn;vz qj;eu ru;ah uj;fz lw;gj ty;iz yy;gn pv;su	1
 反正好用就完事了	rc;iz gh;dz vb;gz et;nh yi;dn pf;qb gk;vh bn;hz	1
+既然已经使用整句	vc;aq qd;ou nn;nn xc;ag wg;kq et;nh gk;ih qk;dz	1
 使用体验不怎么好	wg;kq et;nh ws;gg cw;gi gi;iz th;fn tc;uz vb;gz	1
+是不是没有风中残烛	jg;hu gi;iz jg;hu im;cy de;fz mq;iz kh;kz gq;gt oj;yz	1
+那么你到底用不用呢	vf;bh tc;uz wq;iy gc;fj yq;ay et;nh gi;iz et;nh kn;xn	1
+开着调频使用一段时间	ga;kz ud;hf ym;fk hi;dm wg;kq et;nh gg;ll wd;mc jf;yz uj;dz	1
+那就肯定是用着爽就行	vf;bh yi;dn he;fz pg;hu jg;hu et;nh ud;hf dq;qq yi;dn tf;hh	1
+你的生命已如风中残烛	wq;iy rq;yy tg;dz wg;kb nn;nn vk;gz mq;iz kh;kz gq;gt oj;yz	1
 你看到的不会就是我弄的吧	wq;iy rh;fz gc;fj rq;yy gi;iz wf;cu yi;dn jg;hu tr;nt ga;jz rq;yy kc;nz	1

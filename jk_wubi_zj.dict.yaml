@@ -10,7 +10,7 @@ sort: by_weight
 # ----------------------------------------
 import_tables:
   - dicts/wubi86_zj         
-  # - dicts/wubi86_user_zj    
+  - dicts/wubi86_user_zj
 use_preset_vocabulary: false
 ...
 # -------------------

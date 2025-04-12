@@ -16,28 +16,36 @@ version: 2025.04
 sort: by_weight
 use_preset_vocabulary: false
 ...
-用	et;nh	1
+用	et;nh	2
+才	ft;ez	1
 上	hh;gg	1
 没	im;cy	1
 是	jg;hu	1
+啥	kw;fk	0
 连	lp;kz	2
 把	rc;nz	1
 搞	ry;mk	1
 抗	ry;mn	1
 要	sv;fz	1
 和	tk;gz	2
+向	tm;kd	1
+你	wq;iy	1
 就	yi;dn	1
 东西	ai;iz sg;hg	1
+英文	am;du yy;gy	1
+码表	dc;gz ge;uz	1
 大家	dd;dd pe;uz	1
 而且	dm;jj eg;dz	1
 万象	dn;vz qj;eu	1
 用过	et;nh fp;iz	1
+用啥	et;nh kw;fk	1
 需要	fd;mj sv;fz	1
 直接	fh;fz ru;vg	1
 都用	ft;jb et;nh	1
 都会	ft;jb wf;cu	1
 雾淞	ft;lb is;wc	1
 弄好	ga;jz vb;gz	0
+开源	ga;kz id;ri	0
 吞噬	gd;kf kt;aw	0
 五笔	gg;hg tt;fn	1
 一个	gg;ll wh;jz	1
@@ -47,7 +55,11 @@ use_preset_vocabulary: false
 目录	hh;hh vi;uz	0
 卡卡	hh;uz hh;uz	1
 流程	iy;cq tk;gg	1
+是个	jg;hu wh;jz	1
 星空	jt;gf pw;af	0
+只能	kw;uz ce;xx	1
+只要	kw;uz sv;fz	1
+因为	ld;iz yl;yi	1
 习惯	nu;dz nx;fm	1
 字节	pb;fz ab;jz	2
 之后	pp;pp rg;kd	0
@@ -57,26 +69,48 @@ use_preset_vocabulary: false
 换成	rq;md dn;nt	1
 白霜	rr;rr fs;hf	1
 插件	rt;fv wr;hh	1
+搜狗	rv;hc qt;qk	1
 搞的	ry;mk rq;yy	1
+要有	sv;fz de;fz	1
+要个	sv;fz wh;jz	1
 怎么	th;fn tc;uz	1
 程序	tk;gg yc;bk	0
 兼容	uv;ou pw;wk	1
+好用	vb;gz et;nh	0
+什么	wf;hz tc;uz	1
 使用	wg;kq et;nh	1
 你好	wq;iy vb;gz	2
+引擎	xh;hz aq;kr	1
 主题	yg;dz jg;hm	1
-就是	yi;dn jg;hu	2
+语言	yg;kg yy;yy	1
+就是	yi;dn jg;hu	3
+这种	yp;iz tk;hh	1
 这个	yp;iz wh;jz	2
 基本上	ad;wf sg;dz hh;gg	0
 大半天	dd;dd uf;kz gd;iz	1
+有时候	de;fz jf;yz wh;nd	1
 太多了	dy;iz qq;uz bn;hz	1
 用起来	et;nh fh;nv go;iz	1
+无所谓	fq;vz rn;rh yl;eg	1
 都一样	ft;jb gg;ll su;dh	1
+都可以	ft;jb sk;dz ny;wy	1
+弄出来	ga;jz bm;kz go;iz	1
+不开源	gi;iz ga;kz id;ri	0
+不好用	gi;iz vb;gz et;nh	1
 跟这个	kh;ve yp;iz wh;jz	1
+啥好用	kw;fk vb;gz et;nh	1
 安装了	pv;fz uf;ye bn;hz	1
+看久了	rh;fz qy;iz bn;hz	1
 差不多	ud;af gi;iz qq;uz	1
+新功能	us;rh al;nz ce;xx	1
 好东西	vb;gz ai;iz sg;hg	1
+主要是	yg;dz sv;fz jg;hu	1
+说到底	yu;kq gc;fj yq;ay	1
 弄好之后	ga;jz vb;gz pp;pp rg;kd	1
 吞噬星空	gd;kf kt;aw jt;gf pw;af	1
+可扩展性	sk;dz ry;tz na;ei nt;gg	1
 程序目录	tk;gg yc;bk hh;hh vi;uz	1
+这玩意儿	yp;iz gf;qn uj;nu qt;nz	1
 这个东西	yp;iz wh;jz ai;iz sg;hg	1
 基本上就是	ad;wf sg;dz hh;gg yi;dn jg;hu	1
+开源不开源	ga;kz id;ri gi;iz ga;kz id;ri	1

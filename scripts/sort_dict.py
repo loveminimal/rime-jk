@@ -109,7 +109,7 @@ if __name__ == '__main__':
 
     src_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\out')
-    dict_start = '8105'
+    dict_start = 'jk_wubi_zj'
 
     # out_file = f'{dict_start}.sorted.dict.yaml'
     out_file = f'{dict_start}.dict.yaml'

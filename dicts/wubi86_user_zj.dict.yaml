@@ -16,22 +16,67 @@ version: 2025.04
 sort: by_weight
 use_preset_vocabulary: false
 ...
+用	et;nh	1
+上	hh;gg	1
+没	im;cy	1
+是	jg;hu	1
+连	lp;kz	2
+把	rc;nz	1
+搞	ry;mk	1
+抗	ry;mn	1
+要	sv;fz	1
 和	tk;gz	2
+就	yi;dn	1
+东西	ai;iz sg;hg	1
 大家	dd;dd pe;uz	1
+而且	dm;jj eg;dz	1
 万象	dn;vz qj;eu	1
+用过	et;nh fp;iz	1
+需要	fd;mj sv;fz	1
+直接	fh;fz ru;vg	1
+都用	ft;jb et;nh	1
 都会	ft;jb wf;cu	1
 雾淞	ft;lb is;wc	1
+弄好	ga;jz vb;gz	0
+吞噬	gd;kf kt;aw	0
 五笔	gg;hg tt;fn	1
+一个	gg;ll wh;jz	1
 一级	gg;ll xe;yy	1
 整句	gk;ih qk;dz	1
+现在	gm;qn dh;fd	1
+目录	hh;hh vi;uz	0
+卡卡	hh;uz hh;uz	1
 流程	iy;cq tk;gg	1
+星空	jt;gf pw;af	0
+习惯	nu;dz nx;fm	1
+字节	pb;fz ab;jz	2
+之后	pp;pp rg;kd	0
+额外	pt;km qh;yz	1
 补充	pu;hy yc;qb	1
+安装	pv;fz uf;ye	1
+换成	rq;md dn;nt	1
 白霜	rr;rr fs;hf	1
+插件	rt;fv wr;hh	1
+搞的	ry;mk rq;yy	1
+怎么	th;fn tc;uz	1
+程序	tk;gg yc;bk	0
 兼容	uv;ou pw;wk	1
 使用	wg;kq et;nh	1
 你好	wq;iy vb;gz	2
-就是	yi;dn jg;hu	0
-这个	yp;iz wh;jz	1
+主题	yg;dz jg;hm	1
+就是	yi;dn jg;hu	2
+这个	yp;iz wh;jz	2
 基本上	ad;wf sg;dz hh;gg	0
+大半天	dd;dd uf;kz gd;iz	1
+太多了	dy;iz qq;uz bn;hz	1
+用起来	et;nh fh;nv go;iz	1
+都一样	ft;jb gg;ll su;dh	1
+跟这个	kh;ve yp;iz wh;jz	1
+安装了	pv;fz uf;ye bn;hz	1
+差不多	ud;af gi;iz qq;uz	1
 好东西	vb;gz ai;iz sg;hg	1
+弄好之后	ga;jz vb;gz pp;pp rg;kd	1
+吞噬星空	gd;kf kt;aw jt;gf pw;af	1
+程序目录	tk;gg yc;bk hh;hh vi;uz	1
+这个东西	yp;iz wh;jz ai;iz sg;hg	1
 基本上就是	ad;wf sg;dz hh;gg yi;dn jg;hu	1

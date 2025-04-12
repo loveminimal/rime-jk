@@ -16,101 +16,371 @@ version: 2025.04
 sort: by_weight
 use_preset_vocabulary: false
 ...
-用	et;nh	2
+也	bn;hn	0
+对	cf;yz	2
+在	dh;fd	1
+用	et;nh	4
+去	fc;uz	1
 才	ft;ez	1
-上	hh;gg	1
+到	gc;fj	1
+下	gh;iz	1
+卅	gk;kz	1
+上	hh;gg	2
+点	hk;ou	1
+水	ii;ii	0
 没	im;cy	1
-是	jg;hu	1
+是	jg;hu	9
+嘞	ka;fl	0
+哎	ka;qy	1
+吧	kc;nz	2
+跟	kh;ve	0
+呢	kn;xn	1
 啥	kw;fk	0
 连	lp;kz	2
-把	rc;nz	1
+字	pb;fz	2
+它	px;bz	1
+多	qq;uz	2
+狗	qt;qk	0
+把	rc;nz	3
+换	rq;md	1
+的	rq;yy	1
 搞	ry;mk	1
 抗	ry;mn	1
 要	sv;fz	1
 和	tk;gz	2
 向	tm;kd	1
+第	tx;ht	1
+着	ud;hf	1
+好	vb;gz	0
+群	vt;kd	1
+个	wh;jz	1
 你	wq;iy	1
-就	yi;dn	1
+比	xx;nz	1
+就	yi;dn	2
+这	yp;iz	1
+放	yt;yz	1
+基于	ad;wf gf;kz	2
 东西	ai;iz sg;hg	1
 英文	am;du yy;gy	1
+聚焦	bc;ti wy;ou	0
+也是	bn;hn jg;hu	2
+了吧	bn;hz kc;nz	1
+阿三	bs;kg dg;gg	1
+除了	bw;ty bn;hz	2
+双拼	cc;yz ru;ah	1
+对于	cf;yz gf;kz	0
+对的	cf;yz rq;yy	0
+难道	cw;yg ut;hp	1
 码表	dc;gz ge;uz	1
+大了	dd;dd bn;hz	0
 大家	dd;dd pe;uz	1
+大概	dd;dd sv;cq	0
+有些	de;fz hx;ff	1
+有的	de;fz rq;yy	0
+感觉	dg;kn ip;mq	2
 而且	dm;jj eg;dz	1
-万象	dn;vz qj;eu	1
+万象	dn;vz qj;eu	2
+确实	dq;eh pu;du	1
+太傻	dy;iz wt;lt	0
+脚本	ef;cb sg;dz	1
+悬浮	eg;cn ie;bg	0
 用过	et;nh fp;iz	1
 用啥	et;nh kw;fk	1
+用户	et;nh yn;ez	1
+支持	fc;uz rf;fy	0
 需要	fd;mj sv;fz	1
+干脆	fg;gh eq;db	1
 直接	fh;fz ru;vg	1
+进步	fj;pk hi;rz	0
+远程	fq;pv tk;gg	0
+才是	ft;ez jg;hu	0
+都有	ft;jb de;fz	1
 都用	ft;jb et;nh	1
+都被	ft;jb pu;hc	1
 都会	ft;jb wf;cu	1
 雾淞	ft;lb is;wc	1
 弄好	ga;jz vb;gz	0
 开源	ga;kz id;ri	0
+开箱	ga;kz ts;hf	0
+开始	ga;kz vc;kg	0
+天天	gd;iz gd;iz	0
 吞噬	gd;kf kt;aw	0
-五笔	gg;hg tt;fn	1
-一个	gg;ll wh;jz	1
+玩的	gf;qn rq;yy	0
+王道	gg;gg ut;hp	0
+五笔	gg;hg tt;fn	4
+一天	gg;ll gd;iz	1
+一些	gg;ll hx;ff	0
+一段	gg;ll wd;mc	0
+一个	gg;ll wh;jz	3
 一级	gg;ll xe;yy	1
-整句	gk;ih qk;dz	1
-现在	gm;qn dh;fd	1
-目录	hh;hh vi;uz	0
+正解	gh;dz qe;vh	1
+下载	gh;iz fa;lk	1
+下的	gh;iz rq;yy	0
+不用	gi;iz et;nh	0
+不过	gi;iz fp;iz	1
+不是	gi;iz jg;hu	2
+不会	gi;iz wf;cu	0
+还是	gi;pi jg;hu	3
+还行	gi;pi tf;hh	0
+更新	gj;qi us;rh	1
+整句	gk;ih qk;dz	2
+现在	gm;qn dh;fd	4
+来回	go;iz lk;dz	0
+虎头	ha;mv ud;iz	1
+上面	hh;gg dm;jd	1
+目录	hh;hh vi;uz	1
 卡卡	hh;uz hh;uz	1
+具体	hw;uz ws;gg	1
+小科	ih;ty tu;fh	0
+没有	im;cy de;fz	2
+滚动	iu;ce fc;ln	1
 流程	iy;cq tk;gg	1
+时间	jf;yz uj;dz	0
+是用	jg;hu et;nh	0
+是的	jg;hu rq;yy	1
+是要	jg;hu sv;fz	1
 是个	jg;hu wh;jz	1
 星空	jt;gf pw;af	0
+另外	kl;bz qh;yz	0
+别的	kl;jh rq;yy	0
+哦哦	kt;rt kt;rt	1
+哪个	kv;fb wh;jz	1
+哈哈	kw;gk kw;gk	1
 只能	kw;uz ce;xx	1
 只要	kw;uz sv;fz	1
-因为	ld;iz yl;yi	1
+因为	ld;iz yl;yi	3
+置顶	lf;hf sd;my	1
+转换	lf;ny rq;md	1
+加了	lk;gz bn;hz	0
+田野	ll;ll jf;cb	1
+软件	lq;wy wr;hh	1
+办法	lw;iz if;cy	1
+删除	mm;gj bw;ty	1
+几个	mt;nz wh;jz	1
 习惯	nu;dz nx;fm	1
+以前	ny;wy ue;jj	1
+数字	ov;ty pb;fz	2
 字节	pb;fz ab;jz	2
 之后	pp;pp rg;kd	0
+之前	pp;pp ue;jj	0
 额外	pt;km qh;yz	1
 补充	pu;hy yc;qb	1
 安装	pv;fz uf;ye	1
+窗口	pw;tq kk;kk	0
+包里	qn;vz jf;dz	1
+多列	qq;uz gq;jh	1
+反正	rc;iz gh;dz	0
+操作	rk;ks wt;hf	0
+制作	rm;hj wt;hf	1
+控制	rp;wa rm;hj	1
 换成	rq;md dn;nt	1
 白霜	rr;rr fs;hf	1
+挺好	rt;fp vb;gz	0
 插件	rt;fv wr;hh	1
+拼音	ru;ah uj;fz	0
 搜狗	rv;hc qt;qk	1
+指针	rx;jg qf;hz	0
 搞的	ry;mk rq;yy	1
+相对	sh;gz cf;yz	1
+可见	sk;dz mq;bz	1
+可以	sk;dz ny;wy	1
+禁止	ss;fi hh;hg	1
 要有	sv;fz de;fz	1
 要个	sv;fz wh;jz	1
-怎么	th;fn tc;uz	1
+选择	tf;qp rc;fh	2
+重新	tg;jf us;rh	1
+自从	th;dz ww;yz	1
+怎么	th;fn tc;uz	3
+版本	th;gc sg;dz	1
 程序	tk;gg yc;bk	0
+微信	tm;gt wy;gz	1
+很烦	tv;ey od;my	1
+系统	tx;iu xy;cq	1
+冰凌	ui;yz uf;wt	1
+单独	uj;fj qt;jy	1
+将就	uq;fy yi;dn	1
+新的	us;rh rq;yy	1
 兼容	uv;ou pw;wk	1
 好用	vb;gz et;nh	0
+好啊	vb;gz kb;sk	0
+即用	vc;bh et;nh	0
+那个	vf;bh wh;jz	3
+群友	vt;kd dc;uz	1
 什么	wf;hz tc;uz	1
-使用	wg;kq et;nh	1
+使用	wg;kq et;nh	5
+企业	wh;fz og;dz	0
+你的	wq;iy rq;yy	1
 你好	wq;iy vb;gz	2
+体验	ws;gg cw;gi	0
+体积	ws;gg tk;wy	1
+作为	wt;hf yl;yi	1
+分包	wv;bz qn;vz	1
+人们	ww;ww wu;nz	1
+依赖	wy;ey gk;im	1
+今天	wy;nb gd;iz	2
+停止	wy;ps hh;hg	0
 引擎	xh;hz aq;kr	1
+比较	xx;nz lu;qy	1
+比如	xx;nz vk;gz	1
+主流	yg;dz iy;cq	1
 主题	yg;dz jg;hm	1
+主要	yg;dz sv;fz	1
 语言	yg;kg yy;yy	1
-就是	yi;dn jg;hu	3
-这种	yp;iz tk;hh	1
-这个	yp;iz wh;jz	2
+就不	yi;dn gi;iz	0
+就是	yi;dn jg;hu	4
+就行	yi;dn tf;hh	1
+应该	yi;dz yy;nw	2
+误导	yk;gd nf;uz	1
+设置	ym;cy lf;hf	0
+词库	yn;gk yl;kz	2
+这些	yp;iz hx;ff	1
+这种	yp;iz tk;hh	2
+这个	yp;iz wh;jz	3
+许多	yt;fh qq;uz	0
+放在	yt;yz dh;fd	1
+放个	yt;yz wh;jz	1
+说有	yu;kq de;fz	0
+说明	yu;kq je;gz	1
+方案	yy;gn pv;su	0
 基本上	ad;wf sg;dz hh;gg	0
+也还行	bn;hn gi;pi tf;hh	1
+也可以	bn;hn sk;dz ny;wy	1
+骚操作	cc;yj rk;ks wt;hf	1
+对的卅	cf;yz rq;yy gk;kz	1
+大了好	dd;dd bn;hz vb;gz	1
 大半天	dd;dd uf;kz gd;iz	1
 有时候	de;fz jf;yz wh;nd	1
+有的用	de;fz rq;yy et;nh	1
+万能的	dn;vz ce;xx rq;yy	1
 太多了	dy;iz qq;uz bn;hz	1
+太傻比	dy;iz wt;lt xx;nz	1
 用起来	et;nh fh;nv go;iz	1
+用哪个	et;nh kv;fb wh;jz	1
+用词库	et;nh yn;gk yl;kz	1
 无所谓	fq;vz rn;rh yl;eg	1
 都一样	ft;jb gg;ll su;dh	1
+都不用	ft;jb gi;iz et;nh	1
+都还好	ft;jb gi;pi vb;gz	0
 都可以	ft;jb sk;dz ny;wy	1
+雾淞的	ft;lb is;wc rq;yy	1
+老机器	ft;xb sm;nz kk;dk	1
 弄出来	ga;jz bm;kz go;iz	1
+弄的吧	ga;jz rq;yy kc;nz	0
+天天水	gd;iz gd;iz ii;ii	1
+玩意儿	gf;qn uj;nu qt;nz	1
+不支持	gi;iz fc;uz rf;fy	0
 不开源	gi;iz ga;kz id;ri	0
+不清楚	gi;iz ig;eg ss;nh	1
 不好用	gi;iz vb;gz et;nh	1
+不使用	gi;iz wg;kq et;nh	1
+还不能	gi;pi gi;iz ce;xx	1
+来回换	go;iz lk;dz rq;md	1
+小助手	ih;ty eg;ln rt;gh	2
+小科狗	ih;ty tu;fh qt;qk	1
+没必要	im;cy nt;ez sv;fz	1
+是哪个	jg;hu kv;fb wh;jz	0
+跟拼音	kh;ve ru;ah uj;fz	1
 跟这个	kh;ve yp;iz wh;jz	1
+另一个	kl;bz gg;ll wh;jz	0
+啥都有	kw;fk ft;jb de;fz	1
 啥好用	kw;fk vb;gz et;nh	1
+只要能	kw;uz sv;fz ce;xx	1
+辅助码	lg;ey eg;ln dc;gz	1
+输入法	lw;gj ty;iz if;cy	1
+办公了	lw;iz wc;uz bn;hz	1
+快捷键	nn;wy rg;vh qv;fp	1
+之前的	pp;pp ue;jj rq;yy	1
 安装了	pv;fz uf;ye bn;hz	1
+找到的	ra;tz gc;fj rq;yy	0
 看久了	rh;fz qy;iz bn;hz	1
-差不多	ud;af gi;iz qq;uz	1
+所以说	rn;rh ny;wy yu;kq	1
+抢走了	rw;bn fh;uz bn;hz	1
+搞这个	ry;mk yp;iz wh;jz	1
+相对于	sh;gz cf;yz gf;kz	1
+想用了	sh;nu et;nh bn;hz	0
+可以用	sk;dz ny;wy et;nh	0
+可以的	sk;dz ny;wy rq;yy	1
+处理完	th;iz gj;fg pf;qb	0
+移植到	tq;qy sf;hg gc;fj	1
+第几个	tx;ht mt;nz wh;jz	1
+差不多	ud;af gi;iz qq;uz	2
 新功能	us;rh al;nz ce;xx	1
 好东西	vb;gz ai;iz sg;hg	1
+群友们	vt;kd dc;uz wu;nz	1
+群文件	vt;kd yy;gy wr;hh	1
+命中率	wg;kb kh;kz yx;if	2
+使用了	wg;kq et;nh bn;hz	1
+你好吧	wq;iy vb;gz kc;nz	1
+你们都	wq;iy wu;nz ft;jb	0
+任务栏	wt;fg tl;bz su;fg	1
+比较晚	xx;nz lu;qy jq;kq	1
 主要是	yg;dz sv;fz jg;hu	1
+主方案	yg;dz yy;gn pv;su	1
+就是玩	yi;dn jg;hu gf;qn	1
+就是我	yi;dn jg;hu tr;nt	0
+就行了	yi;dn tf;hh bn;hz	1
+高了好	ym;kf bn;hz vb;gz	0
+说有用	yu;kq de;fz et;nh	1
 说到底	yu;kq gc;fj yq;ay	1
+方案中	yy;gn pv;su kh;kz	1
+对于整句	cf;yz gf;kz gk;ih qk;dz	1
+大了好啊	dd;dd bn;hz vb;gz kb;sk	1
+万象词库	dn;vz qj;eu yn;gk yl;kz	1
+远程操作	fq;pv tk;gg rk;ks wt;hf	1
+才是王道	ft;ez jg;hu gg;gg ut;hp	1
+雾淞拼音	ft;lb is;wc ru;ah uj;fz	1
 弄好之后	ga;jz vb;gz pp;pp rg;kd	1
-吞噬星空	gd;kf kt;aw jt;gf pw;af	1
+开箱即用	ga;kz ts;hf vc;bh et;nh	1
+吞噬星空	gd;kf kt;aw jt;gf pw;af	2
+五笔整句	gg;hg tt;fn gk;ih qk;dz	2
+环境恢复	gg;iy fu;jq nd;oy tj;tu	1
+一些进步	gg;ll hx;ff fj;pk hi;rz	1
+一些设置	gg;ll hx;ff ym;cy lf;hf	1
+一段时间	gg;ll wd;mc jf;yz uj;dz	1
+下的版本	gh;iz rq;yy th;gc sg;dz	1
+不用聚焦	gi;iz et;nh bc;ti wy;ou	1
+不怎么好	gi;iz th;fn tc;uz vb;gz	0
+是哪个嘞	jg;hu kv;fb wh;jz ka;fl	1
+量大管饱	jg;jf dd;dd tp;nn qn;qn	1
+加了几个	lk;gz bn;hz mt;nz wh;jz	1
+挺好玩的	rt;fp vb;gz gf;qn rq;yy	1
+指针悬浮	rx;jg qf;hz eg;cn ie;bg	1
+想出来的	sh;nu bm;kz go;iz rq;yy	1
 可扩展性	sk;dz ry;tz na;ei nt;gg	1
 程序目录	tk;gg yc;bk hh;hh vi;uz	1
+那个是用	vf;bh wh;jz jg;hu et;nh	1
+企业微信	wh;fz og;dz tm;gt wy;gz	1
+你看到的	wq;iy rh;fz gc;fj rq;yy	0
+你自己的	wq;iy th;dz nn;gn rq;yy	1
+你们都是	wq;iy wu;nz ft;jb jg;hu	1
+停止支持	wy;ps hh;hg fc;uz rf;fy	1
+就完事了	yi;dn pf;qb gk;vh bn;hz	0
+高了好多	ym;kf bn;hz vb;gz qq;uz	2
 这玩意儿	yp;iz gf;qn uj;nu qt;nz	1
 这个东西	yp;iz wh;jz ai;iz sg;hg	1
+这个之前	yp;iz wh;jz pp;pp ue;jj	1
 基本上就是	ad;wf sg;dz hh;gg yi;dn jg;hu	1
+万象的词库	dn;vz qj;eu rq;yy yn;gk yl;kz	1
 开源不开源	ga;kz id;ri gi;iz ga;kz id;ri	1
+开始不支持	ga;kz vc;kg gi;iz fc;uz rf;fy	1
+现在使用的	gm;qn dh;fd wg;kq et;nh rq;yy	1
+另一个窗口	kl;bz gg;ll wh;jz pw;tq kk;kk	1
+别的都还好	kl;jh rq;yy ft;jb gi;pi vb;gz	1
+哈哈哈哈哈	kw;gk kw;gk kw;gk kw;gk kw;gk	0
+找到的那个	ra;tz gc;fj rq;yy vf;bh wh;jz	1
+可以用方案	sk;dz ny;wy et;nh yy;gn pv;su	1
+处理完之后	th;iz gj;fg pf;qb pp;pp rg;kd	1
+冰凌可以的	ui;yz uf;wt sk;dz ny;wy rq;yy	1
+命中率不高	wg;kb kh;kz yx;if gi;iz ym;kf	1
+就不想用了	yi;dn gi;iz sh;nu et;nh bn;hz	1
+这种骚操作	yp;iz tk;hh cc;yj rk;ks wt;hf	1
+现在使用万象	gm;qn dh;fd wg;kq et;nh dn;vz qj;eu	1
+另外也是许多	kl;bz qh;yz bn;hn jg;hu yt;fh qq;uz	1
+之前使用雾淞	pp;pp ue;jj wg;kq et;nh ft;lb is;wc	1
+怎么想出来的	th;fn tc;uz sh;nu bm;kz go;iz rq;yy	1
+其实也没多大用	ad;wu pu;du bn;hn im;cy qq;uz dd;dd et;nh	1
+哈哈哈哈哈哈哈	kw;gk kw;gk kw;gk kw;gk kw;gk kw;gk kw;gk	1
+处理完之后大概	th;iz gj;fg pf;qb pp;pp rg;kd dd;dd sv;cq	1
+反正好用就完事了	rc;iz gh;dz vb;gz et;nh yi;dn pf;qb gk;vh bn;hz	1
+使用体验不怎么好	wg;kq et;nh ws;gg cw;gi gi;iz th;fn tc;uz vb;gz	1
+你看到的不会就是我弄的吧	wq;iy rh;fz gc;fj rq;yy gi;iz wf;cu yi;dn jg;hu tr;nt ga;jz rq;yy kc;nz	1

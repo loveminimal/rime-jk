@@ -54,8 +54,8 @@ engine:
   filters:
     - lua_filter@*prettify_comment
     - lua_filter@*keep_short_code_first
-    # - lua_filter@*single_char_first     # 单字优先
-    - lua_filter@*single_char_only        # 纯单字
+    # - lua_filter@*single_char_first       # 单字优先
+    # - lua_filter@*single_char_only        # 纯单字
     - simplifier
     - simplifier@emoji   
     - simplifier@zh2en

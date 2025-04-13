@@ -47,7 +47,7 @@ use_preset_vocabulary: false
 或	ak	7
 功	al	6
 世	an	7
-区	aq	2
+区	aq	3
 切	av	7
 共	aw	2
 药	ax	1
@@ -423,6 +423,7 @@ use_preset_vocabulary: false
 耶	bbh	1
 聚	bct	2
 陆	bfm	4
+耳	bgh	1
 孔	bnn	1
 院	bpf	3
 隆	btg	1
@@ -739,7 +740,7 @@ use_preset_vocabulary: false
 剧	ndj	3
 恢	ndo	1
 层	nfc	2
-丑	nfd	1
+丑	nfd	2
 迅	nfp	1
 情	nge	7
 司	ngk	4
@@ -919,6 +920,7 @@ use_preset_vocabulary: false
 根	sve	12
 枪	swb	1
 栓	swg	1
+楷	sxx	2
 柱	syg	1
 述	syp	1
 笞	tck	1
@@ -1040,7 +1042,7 @@ use_preset_vocabulary: false
 娘	vyv	1
 借	waj	1
 贷	wam	1
-仓	wbb	3
+仓	wbb	4
 仔	wbg	1
 仅	wcy	2
 佐	wda	1
@@ -1200,6 +1202,7 @@ use_preset_vocabulary: false
 露	fkhk	1
 鼓	fkuc	1
 嘉	fkuk	1
+霞	fnhc	1
 场	fnrt	5
 卖	fnud	2
 教	ftbt	6
@@ -1270,6 +1273,7 @@ use_preset_vocabulary: false
 咋	kthf	3
 川	kthh	1
 嗡	kwcn	1
+哙	kwfc	1
 啥	kwfk	41
 哈	kwgk	9
 唯	kwyg	3
@@ -1281,6 +1285,7 @@ use_preset_vocabulary: false
 四	lhng	5
 圆	lkmi	2
 朙	lwke	3
+崂	mapl	1
 帧	mhhm	1
 贴	mhkg	2
 删	mmgj	12
@@ -1491,6 +1496,7 @@ use_preset_vocabulary: false
 革命	afwg	1
 某个	afwh	1
 苹果	agjs	5
+雅黑	ahlf	1
 牙膏	ahyp	1
 范式	aiaa	1
 东东	aiai	1
@@ -1576,15 +1582,17 @@ use_preset_vocabulary: false
 也用	bnet	1
 也不	bngi	2
 也没	bnim	3
-也是	bnjg	11
+也是	bnjg	12
 了解	bnqe	8
-也可	bnsk	2
+也可	bnsk	3
 也要	bnsv	2
 孔径	bntc	1
 也行	bntf	1
 也算	bnth	1
 也得	bntj	1
+也很	bntv	1
 也好	bnvb	1
+也使	bnwg	1
 也就	bnyi	2
 也许	bnyt	4
 院子	bpbb	1
@@ -1600,7 +1608,7 @@ use_preset_vocabulary: false
 联网	bumq	3
 联想	bush	2
 联系	butx	2
-限制	bvrm	5
+限制	bvrm	7
 除了	bwbn	2
 除非	bwdj	3
 附加	bwlk	1
@@ -1719,7 +1727,7 @@ use_preset_vocabulary: false
 大变	ddyo	1
 大义	ddyq	2
 有过	defp	1
-有些	dehx	2
+有些	dehx	3
 有时	dejf	2
 胡同	demg	2
 有害	depd	2
@@ -1802,7 +1810,7 @@ use_preset_vocabulary: false
 成都	dnft	1
 成天	dngd	1
 万一	dngg	1
-万象	dnqj	13
+万象	dnqj	15
 成年	dnrh	1
 成本	dnsg	1
 成熟	dnyb	1
@@ -1855,6 +1863,7 @@ use_preset_vocabulary: false
 太多	dyqq	2
 太白	dyrr	1
 太短	dytd	1
+太细	dyxl	1
 态度	dyya	1
 服气	ebrn	1
 服务	ebtl	4
@@ -1974,7 +1983,7 @@ use_preset_vocabulary: false
 真是	fhjg	2
 赶快	fhnn	1
 真实	fhpu	3
-真的	fhrq	6
+真的	fhrq	7
 直播	fhrt	1
 直接	fhru	39
 趋势	fhrv	1
@@ -2190,7 +2199,7 @@ use_preset_vocabulary: false
 一下	gggh	25
 一步	gghi	1
 一点	gghk	3
-一些	gghx	9
+一些	gghx	12
 一时	ggjf	1
 一旦	ggjg	2
 一路	ggkh	1
@@ -2212,15 +2221,16 @@ use_preset_vocabulary: false
 一种	ggtk	7
 五笔	ggtt	55
 一简	ggtu	6
+一律	ggtv	1
 五入	ggty	1
 一半	gguf	1
 一部	gguk	1
-一次	gguq	2
+一次	gguq	3
 王道	ggut	1
 一门	gguy	2
 一段	ggwd	7
 一会	ggwf	1
-一个	ggwh	16
+一个	ggwh	21
 五个	ggwh	1
 一件	ggwr	2
 一位	ggwu	1
@@ -2281,7 +2291,7 @@ use_preset_vocabulary: false
 不小	giih	1
 不明	gije	1
 不是	gijg	5
-还是	gijg	22
+还是	gijg	23
 不中	gikh	1
 不同	gimg	2
 否则	gimj	2
@@ -2302,7 +2312,7 @@ use_preset_vocabulary: false
 不想	gish	1
 还想	gish	1
 不可	gisk	2
-不要	gisv	7
+不要	gisv	8
 还要	gisv	5
 不知	gitd	1
 不行	gitf	2
@@ -2325,7 +2335,7 @@ use_preset_vocabulary: false
 不说	giyu	1
 不论	giyw	3
 否认	giyw	1
-更少	gjit	1
+更少	gjit	2
 理由	gjmh	1
 更改	gjnt	2
 理发	gjnt	1
@@ -2371,6 +2381,7 @@ use_preset_vocabulary: false
 现象	gmqj	2
 再多	gmqq	1
 现状	gmud	2
+再次	gmuq	1
 现代	gmwa	6
 两个	gmwh	8
 再说	gmyu	1
@@ -2387,7 +2398,7 @@ use_preset_vocabulary: false
 来着	goud	1
 恶意	gouj	1
 来说	goyu	4
-列出	gqbm	2
+列出	gqbm	3
 死去	gqfc	1
 列表	gqge	4
 烈日	gqjj	1
@@ -2597,6 +2608,7 @@ use_preset_vocabulary: false
 省心	itny	1
 海外	itqh	2
 少儿	itqt	1
+活儿	itqt	1
 洗手	itrt	1
 省会	itwf	1
 滚动	iufc	6
@@ -2684,7 +2696,7 @@ use_preset_vocabulary: false
 日子	jjbb	1
 日历	jjdl	2
 日志	jjfn	2
-日常	jjip	4
+日常	jjip	5
 日本	jjsg	1
 日程	jjtk	2
 日化	jjwx	1
@@ -2730,7 +2742,7 @@ use_preset_vocabulary: false
 照着	jvud	3
 影子	jybb	1
 影院	jybp	1
-影响	jykt	5
+影响	jykt	6
 景气	jyrn	1
 影射	jytm	3
 哎呀	kaka	2
@@ -2745,11 +2757,12 @@ use_preset_vocabulary: false
 味道	kfut	1
 号码	kgdc	3
 吓跑	kgkh	1
-中英	kham	1
+中英	kham	3
 跟随	khbd	1
 跨越	khfh	1
 跟进	khfj	1
 跳坑	khfy	1
+跳到	khgc	1
 跳转	khlf	7
 中国	khlg	4
 路边	khlp	1
@@ -2874,7 +2887,7 @@ use_preset_vocabulary: false
 四方	lhyy	1
 甲方	lhyy	1
 架子	lkbb	1
-加了	lkbn	6
+加了	lkbn	7
 加载	lkfa	9
 回去	lkfc	4
 回到	lkgc	1
@@ -2883,7 +2896,7 @@ use_preset_vocabulary: false
 加班	lkgy	1
 加上	lkhh	3
 加油	lkim	1
-加辅	lklg	3
+加辅	lklg	4
 回车	lklg	1
 圆圆	lklk	1
 回忆	lknn	2
@@ -3006,7 +3019,7 @@ use_preset_vocabulary: false
 几种	mttk	1
 账单	mtuj	1
 几次	mtuq	2
-几个	mtwh	7
+几个	mtwh	9
 几张	mtxt	3
 几遍	mtyn	1
 内联	mwbu	1
@@ -3078,7 +3091,7 @@ use_preset_vocabulary: false
 发出	ntbm	1
 性能	ntce	3
 发布	ntdm	10
-改成	ntdn	1
+改成	ntdn	2
 必须	nted	9
 改动	ntfc	4
 发起	ntfh	3
@@ -3183,7 +3196,7 @@ use_preset_vocabulary: false
 字长	pbta	3
 字符	pbtw	6
 字段	pbwd	20
-字体	pbws	7
+字体	pbws	14
 字母	pbxg	2
 字库	pbyl	1
 字词	pbyn	9
@@ -3253,6 +3266,7 @@ use_preset_vocabulary: false
 实际	pubf	3
 实验	pucw	2
 实在	pudh	2
+实用	puet	1
 被动	pufc	1
 实现	pugm	10
 初步	puhi	1
@@ -3617,6 +3631,7 @@ use_preset_vocabulary: false
 拼搏	rurg	1
 接手	rurt	1
 拼接	ruru	2
+拉丁	rusg	1
 接入	ruty	1
 接着	ruud	1
 抖音	ruuj	1
@@ -3647,11 +3662,12 @@ use_preset_vocabulary: false
 指针	rxqf	2
 指向	rxtm	1
 批评	rxyg	1
+搞了	rybn	1
 扩大	rydd	1
 扩展	ryna	4
 撤销	ryqi	1
 擅长	ryta	1
-搞得	rytj	1
+搞得	rytj	2
 搞笑	rytt	4
 搞个	rywh	1
 扩充	ryyc	1
@@ -3743,7 +3759,7 @@ use_preset_vocabulary: false
 可惜	skna	1
 可怕	sknr	1
 可怜	sknw	1
-可以	skny	41
+可以	skny	57
 可乐	skqi	2
 可按	skrp	1
 可要	sksv	1
@@ -3832,6 +3848,7 @@ use_preset_vocabulary: false
 行吗	tfkc	1
 选中	tfkh	6
 德国	tflg	1
+等宽	tfpa	2
 选择	tfrc	6
 丢失	tfrw	1
 待机	tfsm	1
@@ -3919,7 +3936,7 @@ use_preset_vocabulary: false
 复刻	tjyn	1
 各项	tkad	1
 积累	tklx	2
-积极	tkse	1
+积极	tkse	2
 种植	tksf	1
 各种	tktk	1
 各个	tkwh	1
@@ -3966,6 +3983,7 @@ use_preset_vocabulary: false
 我是	trjg	1
 特别	trkl	2
 特定	trpg	1
+特色	trqc	2
 物质	trrf	1
 我的	trrq	2
 我们	trwu	4
@@ -4030,6 +4048,7 @@ use_preset_vocabulary: false
 入口	tykk	1
 入骨	tyme	1
 往外	tyqh	1
+往前	tyue	1
 入门	tyuy	3
 入库	tyyl	2
 并且	uaeg	2
@@ -4279,7 +4298,7 @@ use_preset_vocabulary: false
 那种	vftk	6
 建立	vfuu	1
 那会	vfwf	2
-那个	vfwh	10
+那个	vfwh	12
 那你	vfwq	1
 那份	vfww	1
 那就	vfyi	6
@@ -4356,6 +4375,7 @@ use_preset_vocabulary: false
 会有	wfde	1
 舒服	wfeb	8
 传染	wfiv	1
+佳景	wfjy	1
 会员	wfkm	1
 传播	wfrt	1
 什么	wftc	54
@@ -4434,6 +4454,7 @@ use_preset_vocabulary: false
 伙子	wobb	2
 你能	wqce	1
 仰起	wqfh	2
+你还	wqgi	1
 你来	wqgo	2
 像素	wqgx	1
 仰止	wqhh	1
@@ -4489,7 +4510,7 @@ use_preset_vocabulary: false
 分裂	wvgq	1
 分清	wvig	2
 分流	wviy	1
-分号	wvkg	2
+分号	wvkg	3
 分别	wvkl	4
 分类	wvod	2
 分神	wvpy	1
@@ -4606,6 +4627,7 @@ use_preset_vocabulary: false
 继续	xoxf	3
 综上	xphh	2
 缩小	xpih	2
+缩写	xppg	1
 缩放	xpyt	4
 绝对	xqcf	6
 缥缈	xsxh	1
@@ -4623,12 +4645,13 @@ use_preset_vocabulary: false
 给钱	xwqg	1
 维护	xwry	3
 纵向	xwtm	3
+给我	xwtr	1
 给你	xwwq	2
-比较	xxlu	10
+比较	xxlu	11
 比赛	xxpf	2
 丝袜	xxpu	1
 毕竟	xxuj	8
-比如	xxvk	4
+比如	xxvk	5
 比例	xxwg	5
 编码	xydc	18
 统一	xygg	2
@@ -4751,6 +4774,7 @@ use_preset_vocabulary: false
 设备	ymtl	4
 高管	ymtp	1
 高效	ymuq	4
+高分	ymwv	1
 高级	ymxe	5
 调试	ymya	5
 高度	ymya	3
@@ -4799,13 +4823,13 @@ use_preset_vocabulary: false
 变身	yotm	1
 变化	yowx	2
 毫无	ypfq	1
-这里	ypjf	3
+这里	ypjf	4
 这是	ypjg	3
 这边	yplp	1
-这样	ypsu	7
+这样	ypsu	10
 这么	yptc	2
-这种	yptk	14
-这个	ypwh	38
+这种	yptk	15
+这个	ypwh	43
 亮度	ypya	1
 这就	ypyi	1
 底层	yqnf	1
@@ -4839,6 +4863,7 @@ use_preset_vocabulary: false
 说法	yuif	1
 说明	yuje	5
 说是	yujg	1
+说呢	yukn	1
 详见	yumq	1
 详情	yung	2
 说错	yuqa	2
@@ -4943,10 +4968,12 @@ use_preset_vocabulary: false
 互联网	gbmq	1
 表达式	gdaa	1
 不确定	gdpg	1
+不支持	gfrf	1
 一下子	ggbb	1
 来不来	gggo	2
 还不错	ggqa	1
 开玩笑	ggtt	2
+不影响	gjkt	2
 画中画	gkgl	2
 表情包	gnqn	1
 不定期	gpad	1
@@ -4999,6 +5026,7 @@ use_preset_vocabulary: false
 只不过	kgfp	2
 哪一站	kguh	1
 哈哈哈	kkkw	4
+哪几个	kmwh	2
 吸引力	kxlt	1
 中州韵	kyuj	2
 男朋友	ledc	1
@@ -5046,14 +5074,17 @@ use_preset_vocabulary: false
 白小纯	rixg	3
 年轻人	rlww	1
 打印机	rqsm	1
+挺好用	rvet	1
 李达康	sdyv	3
 西游记	siyn	1
 移动端	tfum	1
 毛玻璃	tggy	1
 管理器	tgkk	1
 管理员	tgkm	3
+很不错	tgqa	1
 第一次	tguq	3
 第一位	tgwu	1
+第几个	tmwh	1
 短视频	tphi	1
 很容易	tpjq	1
 自定义	tpyq	6
@@ -5106,11 +5137,12 @@ use_preset_vocabulary: false
 强迫症	xrug	2
 维生素	xtgx	1
 试一下	yggh	1
-摩洛哥	yisk	3
+摩洛哥	yisk	4
 康师傅	yjwg	1
 计算器	ytkk	1
 讲道理	yugj	1
 文件夹	ywgu	2
+高分屏	ywnu	1
 文件名	ywqk	6
 为什么	ywtc	4
 高强度	yxya	1
@@ -5121,7 +5153,7 @@ use_preset_vocabulary: false
 三心二意	dnfu	1
 大差不差	dugu	2
 遥遥领先	eewt	1
-悬崖勒马	emac	3
+悬崖勒马	emac	4
 用户词库	eyyy	3
 寸草不生	fagt	1
 垃圾玩意	ffgu	1
@@ -5170,6 +5202,7 @@ use_preset_vocabulary: false
 神采奕奕	peyy	1
 宝安中心	ppkn	2
 空前绝后	puxr	1
+社会主义	pwyy	2
 锦上添花	qhia	1
 多多少少	qqii	1
 名符其实	qtap	1
@@ -5189,6 +5222,7 @@ use_preset_vocabulary: false
 差强人意	uxwu	1
 兰亭集序	uywy	1
 九牛一毛	vrgt	1
+仓耳今楷	wbws	1
 侠肝义胆	weye	1
 信赏必罚	winl	1
 人定胜天	wpeg	1
@@ -5214,5 +5248,7 @@ use_preset_vocabulary: false
 中华人民共和国	kwwl	3
 书中自有颜如玉	nktg	1
 千淘万漉虽辛苦	tida	1
+合肥巷陌皆种柳	weas	1
+中国特色社会主义	klty	1
 自有大儒为我辨经	tddx	2
 实践是检验真理的唯一标准	pkjw	3

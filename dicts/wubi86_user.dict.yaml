@@ -289,7 +289,7 @@ use_preset_vocabulary: false
 查	sj	8
 可	sk	107
 机	sm	6
-杨	sn	1
+杨	sn	2
 杰	so	2
 林	ss	11
 样	su	38
@@ -695,6 +695,7 @@ use_preset_vocabulary: false
 哦	ktr	4
 嘀	kum	1
 咐	kwf	1
+咏	kyn	1
 轻	lca	4
 固	ldd	2
 转	lfn	14
@@ -1067,6 +1068,7 @@ use_preset_vocabulary: false
 舍	wfk	2
 付	wfy	1
 倒	wgc	4
+剑	wgi	1
 便	wgj	5
 合	wgk	7
 俩	wgm	2
@@ -1181,7 +1183,9 @@ use_preset_vocabulary: false
 慕	ajdn	1
 苟	aqkf	1
 警	aqky	1
+尧	atgq	1
 薅	avdf	2
+荷	awsk	1
 荒	aynq	1
 随	bdep	2
 叠	cccg	1
@@ -1331,6 +1335,7 @@ use_preset_vocabulary: false
 视	pymq	2
 祲	pyvc	1
 钟	qkhh	12
+逸	qkqp	1
 够	qkqq	7
 兔	qkqy	1
 饱	qnqn	1
@@ -1513,6 +1518,7 @@ use_preset_vocabulary: false
 革命	afwg	2
 某个	afwh	1
 苹果	agjs	5
+七绝	agxq	1
 雅黑	ahlf	1
 牙膏	ahyp	1
 范式	aiaa	1
@@ -1590,6 +1596,7 @@ use_preset_vocabulary: false
 隔离	bgyb	1
 函索	bifp	1
 函数	biov	6
+丞相	bish	1
 阳历	bjdl	1
 阳光	bjiq	1
 阵地	blfb	1
@@ -1753,7 +1760,7 @@ use_preset_vocabulary: false
 大义	ddyq	2
 有过	defp	1
 有才	deft	1
-有点	dehk	1
+有点	dehk	2
 有些	dehx	3
 有时	dejf	2
 胡同	demg	2
@@ -1840,7 +1847,7 @@ use_preset_vocabulary: false
 成都	dnft	1
 成天	dngd	1
 万一	dngg	1
-万象	dnqj	16
+万象	dnqj	17
 成年	dnrh	1
 成本	dnsg	1
 成熟	dnyb	1
@@ -1853,7 +1860,7 @@ use_preset_vocabulary: false
 克隆	dqbt	3
 砍到	dqgc	1
 确定	dqpg	8
-确实	dqpu	9
+确实	dqpu	11
 克制	dqrm	1
 砍头	dqud	1
 爽朗	dqyv	1
@@ -1964,6 +1971,7 @@ use_preset_vocabulary: false
 支持	fcrf	9
 去年	fcrh	1
 去掉	fcrh	1
+运气	fcrn	1
 动手	fcrt	1
 运行	fctf	6
 去重	fctg	1
@@ -2010,7 +2018,7 @@ use_preset_vocabulary: false
 超出	fhbm	1
 起码	fhdc	3
 超载	fhfa	1
-超越	fhfh	1
+超越	fhfh	2
 越南	fhfm	1
 超过	fhfp	2
 直到	fhgc	2
@@ -2022,7 +2030,7 @@ use_preset_vocabulary: false
 超频	fhhi	2
 起点	fhhk	1
 直觉	fhip	2
-真是	fhjg	3
+真是	fhjg	4
 赶快	fhnn	1
 真心	fhny	1
 真实	fhpu	3
@@ -2114,6 +2122,7 @@ use_preset_vocabulary: false
 无关	fqud	1
 无益	fquw	1
 无他	fqwb	1
+无人	fqww	1
 无线	fqxg	1
 无序	fqyc	7
 无语	fqyg	1
@@ -2237,6 +2246,7 @@ use_preset_vocabulary: false
 王码	ggdc	5
 一套	ggdd	2
 一页	ggdm	2
+一脸	ggew	1
 一款	ggff	1
 一直	ggfh	6
 一起	ggfh	5
@@ -2343,7 +2353,7 @@ use_preset_vocabulary: false
 不小	giih	1
 不明	gije	1
 不是	gijg	6
-还是	gijg	29
+还是	gijg	30
 不中	gikh	1
 不同	gimg	2
 否则	gimj	2
@@ -2356,7 +2366,7 @@ use_preset_vocabulary: false
 不完	gipf	2
 不定	gipg	1
 否定	gipg	1
-不错	giqa	9
+不错	giqa	10
 不然	giqd	5
 不多	giqq	2
 不振	gird	1
@@ -2364,17 +2374,17 @@ use_preset_vocabulary: false
 不换	girq	1
 不想	gish	1
 还想	gish	1
-不可	gisk	3
+不可	gisk	4
 不要	gisv	12
 还要	gisv	5
 不知	gitd	1
 不行	gitf	3
-还行	gitf	1
+还行	gitf	2
 不算	gith	5
 不得	gitj	1
 不移	gitq	1
 不善	giud	1
-不好	givb	4
+不好	givb	5
 还好	givb	2
 不如	givk	1
 不做	giwd	1
@@ -2588,6 +2598,8 @@ use_preset_vocabulary: false
 小姨	ihvg	1
 小女	ihvv	1
 小众	ihww	3
+小刘	ihyj	1
+小齐	ihyj	2
 小说	ihyu	3
 消除	iibw	1
 消耗	iidi	2
@@ -2609,7 +2621,7 @@ use_preset_vocabulary: false
 混乱	ijtd	3
 混合	ijwg	1
 渐近	ilrp	1
-没有	imde	34
+没有	imde	35
 没用	imet	1
 测过	imfp	1
 滑过	imfp	1
@@ -2736,6 +2748,7 @@ use_preset_vocabulary: false
 明显	jejo	2
 暖男	jell	1
 明白	jerr	4
+明知	jetd	1
 明文	jeyy	1
 时期	jfad	1
 里面	jfdm	12
@@ -3103,6 +3116,7 @@ use_preset_vocabulary: false
 内心	mwny	1
 内容	mwpw	6
 内部	mwuk	1
+凡事	mygk	1
 凡人	myww	2
 展示	nafi	2
 异形	naga	1
@@ -3856,7 +3870,7 @@ use_preset_vocabulary: false
 可惜	skna	1
 可怕	sknr	1
 可怜	sknw	1
-可以	skny	59
+可以	skny	61
 可乐	skqi	2
 可按	skrp	1
 可要	sksv	1
@@ -4265,6 +4279,7 @@ use_preset_vocabulary: false
 总体	ukws	1
 部分	ukwv	9
 总结	ukxf	3
+曾江	ulia	2
 疫苗	umal	1
 商场	umfn	1
 商品	umkk	1
@@ -4323,7 +4338,7 @@ use_preset_vocabulary: false
 产生	uttg	2
 产物	uttr	1
 疙瘩	utua	1
-颜值	utwf	1
+颜值	utwf	2
 首位	utwu	1
 立夏	uudh	2
 阅读	uuyf	2
@@ -4331,6 +4346,7 @@ use_preset_vocabulary: false
 立方	uuyy	1
 兼职	uvbk	1
 兼容	uvpw	6
+妆造	uvtf	1
 兼并	uvua	1
 准确	uwdq	5
 冷静	uwge	1
@@ -4443,6 +4459,7 @@ use_preset_vocabulary: false
 女儿	vvqt	2
 女仆	vvwh	1
 女人	vvww	2
+女主	vvyg	1
 忍受	vyep	1
 代码	wadc	9
 代表	wage	1
@@ -4858,8 +4875,9 @@ use_preset_vocabulary: false
 应用	yiet	2
 就不	yigi	2
 应战	yihk	1
-就是	yijg	23
+就是	yijg	24
 就跟	yikh	1
+就怕	yinr	1
 就看	yirh	1
 就行	yitf	5
 就算	yith	2
@@ -5211,6 +5229,7 @@ use_preset_vocabulary: false
 挺好用	rvet	1
 李达康	sdyv	3
 西游记	siyn	1
+楚留香	sqtj	2
 移动端	tfum	1
 毛玻璃	tggy	1
 管理器	tgkk	1
@@ -5239,6 +5258,7 @@ use_preset_vocabulary: false
 新世纪	uaxn	3
 养成系	udtx	3
 差不多	ugqq	7
+关咏荷	ukaw	3
 前几年	umrh	1
 关键字	uqpb	1
 关键词	uqyn	1
@@ -5271,6 +5291,7 @@ use_preset_vocabulary: false
 幻灯片	xoth	1
 强迫症	xrug	2
 红楼梦	xsss	2
+张智尧	xtat	3
 维生素	xtgx	1
 试一下	yggh	1
 摩洛哥	yisk	4

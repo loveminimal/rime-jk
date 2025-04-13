@@ -390,6 +390,7 @@ use_preset_vocabulary: false
 此电脑	hx;nz jn;vz ey;bh	1
 小助手	ih;ty eg;ln rt;gh	2
 小科狗	ih;ty tu;fh qt;qk	1
+没办法	im;cy lw;iz if;cy	1
 没必要	im;cy nt;ez sv;fz	1
 是不是	jg;hu gi;iz jg;hu	1
 是哪个	jg;hu kv;fb wh;jz	0
@@ -537,6 +538,7 @@ use_preset_vocabulary: false
 别的都还好	kl;jh rq;yy ft;jb gi;pi vb;gz	1
 哈哈哈哈哈	kw;gk kw;gk kw;gk kw;gk kw;gk	0
 国与国之间	lg;yi gn;gd lg;yi pp;pp uj;dz	1
+连接不稳定	lp;kz ru;vg gi;iz tq;vn pg;hu	0
 输入会不会	lw;gj ty;iz wf;cu gi;iz wf;cu	1
 几遍才出来	mt;nz yn;mp ft;ez bm;kz go;iz	1
 已修改权重	nn;nn wh;te nt;yz sc;yz tg;jf	1
@@ -572,6 +574,7 @@ use_preset_vocabulary: false
 这几年见证历史	yp;iz mt;nz rh;fk mq;bz yg;hg dl;vz kq;iz	1
 这句话如果不是	yp;iz qk;dz yt;dg vk;gz js;iz gi;iz jg;hu	1
 这个说明上来看	yp;iz wh;jz yu;kq je;gz hh;gg go;iz rh;fz	1
+有时候连接不稳定	de;fz jf;yz wh;nd lp;kz ru;vg gi;iz tq;vn pg;hu	1
 在真正的战争面前	dh;fd fh;wu gh;dz rq;yy hk;at qv;hj dm;jd ue;jj	1
 万象拼音输入方案	dn;vz qj;eu ru;ah uj;fz lw;gj ty;iz yy;gn pv;su	1
 整句也不用那么长	gk;ih qk;dz bn;hn gi;iz et;nh vf;bh tc;uz ta;yi	1

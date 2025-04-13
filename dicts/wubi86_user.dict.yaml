@@ -27,7 +27,7 @@ use_preset_vocabulary: false
 是	j	516
 中	k	65
 国	l	20
-民	n	11
+民	n	13
 为	o	52
 这	p	294
 我	q	213
@@ -607,6 +607,7 @@ use_preset_vocabulary: false
 洛	itk	1
 海	itx	5
 滚	iuc	1
+梁	ivw	1
 沧	iwb	1
 举	iwf	3
 流	iyc	5
@@ -1346,6 +1347,7 @@ use_preset_vocabulary: false
 推	rwyg	6
 摔	ryxf	1
 框	sagg	7
+橘	scbk	1
 飘	sfiq	1
 标	sfiy	3
 西	sghg	6
@@ -1448,7 +1450,6 @@ use_preset_vocabulary: false
 又又	cc	1
 在做	dwd	1
 拍了	rrb	1
-你这	wqp	1
 分不	wvi	1
 说的	yur	1
 工具	aahw	6
@@ -1574,7 +1575,7 @@ use_preset_vocabulary: false
 也用	bnet	1
 也不	bngi	2
 也没	bnim	3
-也是	bnjg	9
+也是	bnjg	10
 了解	bnqe	8
 也可	bnsk	2
 也要	bnsv	2
@@ -1637,7 +1638,7 @@ use_preset_vocabulary: false
 通话	ceyt	1
 对了	cfbn	1
 对面	cfdm	2
-对于	cfgf	4
+对于	cfgf	5
 对照	cfjv	1
 对呀	cfka	1
 对账	cfmt	1
@@ -1800,7 +1801,7 @@ use_preset_vocabulary: false
 成都	dnft	1
 成天	dngd	1
 万一	dngg	1
-万象	dnqj	9
+万象	dnqj	10
 成年	dnrh	1
 成本	dnsg	1
 成熟	dnyb	1
@@ -1835,6 +1836,7 @@ use_preset_vocabulary: false
 奇怪	dsnc	3
 帮助	dteg	3
 故事	dtgk	1
+帮我	dttr	1
 故意	dtuj	1
 碰巧	duag	2
 碰碰	dudu	1
@@ -1876,7 +1878,7 @@ use_preset_vocabulary: false
 用时	etjf	1
 用心	etny	1
 用它	etpx	1
-用的	etrq	8
+用的	etrq	9
 用处	etth	1
 用着	etud	2
 用户	etyn	23
@@ -2070,7 +2072,7 @@ use_preset_vocabulary: false
 雾淞	ftis	3
 才是	ftjg	1
 老师	ftjg	4
-都是	ftjg	10
+都是	ftjg	11
 教员	ftkm	5
 才叫	ftkn	1
 老兄	ftkq	1
@@ -2086,7 +2088,7 @@ use_preset_vocabulary: false
 老弟	ftux	2
 老妈	ftvc	19
 老姐	ftve	1
-才会	ftwf	1
+才会	ftwf	2
 都会	ftwf	2
 老爸	ftwq	1
 才华	ftwx	1
@@ -2109,7 +2111,7 @@ use_preset_vocabulary: false
 零碎	fwdy	1
 规则	fwmj	9
 规定	fwpg	1
-替换	fwrq	4
+替换	fwrq	5
 规模	fwsa	1
 替身	fwtm	1
 规律	fwtv	4
@@ -2181,7 +2183,7 @@ use_preset_vocabulary: false
 一堆	ggfw	2
 一致	gggc	1
 一天	gggd	2
-一下	gggh	22
+一下	gggh	23
 一步	gghi	1
 一点	gghk	3
 一些	gghx	9
@@ -2212,9 +2214,9 @@ use_preset_vocabulary: false
 一次	gguq	1
 王道	ggut	1
 一门	gguy	2
-一段	ggwd	6
+一段	ggwd	7
 一会	ggwf	1
-一个	ggwh	14
+一个	ggwh	15
 五个	ggwh	1
 一件	ggwr	2
 一位	ggwu	1
@@ -2258,7 +2260,7 @@ use_preset_vocabulary: false
 不对	gicf	1
 不难	gicw	2
 不大	gidd	1
-还有	gide	5
+还有	gide	6
 不在	gidh	2
 还在	gidh	2
 不爽	gidq	1
@@ -2301,7 +2303,7 @@ use_preset_vocabulary: false
 不知	gitd	1
 不行	gitf	2
 还行	gitf	1
-不算	gith	3
+不算	gith	4
 不得	gitj	1
 不移	gitq	1
 不善	giud	1
@@ -2356,7 +2358,7 @@ use_preset_vocabulary: false
 画风	glmq	2
 现有	gmde	2
 两三	gmdg	1
-现在	gmdh	35
+现在	gmdh	36
 现成	gmdn	1
 两天	gmgd	1
 刺激	gmir	1
@@ -2380,7 +2382,7 @@ use_preset_vocabulary: false
 来得	gotj	1
 来着	goud	1
 恶意	gouj	1
-来说	goyu	2
+来说	goyu	3
 列出	gqbm	2
 死去	gqfc	1
 列表	gqge	4
@@ -2410,6 +2412,7 @@ use_preset_vocabulary: false
 卡壳	hhfp	1
 止境	hhfu	1
 上下	hhgh	3
+上来	hhgo	1
 卡死	hhgq	1
 上班	hhgy	1
 上演	hhip	1
@@ -2504,13 +2507,14 @@ use_preset_vocabulary: false
 小鹤	ihpw	6
 小镇	ihqf	1
 小白	ihrr	1
+小桶	ihsc	1
 小弟	ihux	1
 小姨	ihvg	1
 小女	ihvv	1
 小众	ihww	3
 小说	ihyu	3
 消除	iibw	1
-消耗	iidi	1
+消耗	iidi	2
 水平	iigu	2
 水波	iiih	1
 水果	iijs	6
@@ -2602,9 +2606,10 @@ use_preset_vocabulary: false
 当时	ivjf	5
 当空	ivpw	1
 当然	ivqd	3
-当前	ivue	17
+当前	ivue	18
 涂鸦	iwah	1
 濮阳	iwbj	1
+涨价	ixww	1
 游戏	iyca	3
 流动	iyfc	1
 流浪	iyiy	1
@@ -2838,6 +2843,7 @@ use_preset_vocabulary: false
 黟县	lfeg	1
 转过	lffp	1
 转账	lfmt	1
+黑客	lfpt	1
 转换	lfrq	5
 置顶	lfsd	5
 黑体	lfws	2
@@ -3042,7 +3048,7 @@ use_preset_vocabulary: false
 收录	nhvi	1
 收集	nhwy	1
 收费	nhxj	3
-慢慢	njnj	3
+慢慢	njnj	4
 壁垒	nkcc	1
 避免	nkqk	6
 刷牙	nmah	1
@@ -3064,7 +3070,7 @@ use_preset_vocabulary: false
 快说	nnyu	1
 乙方	nnyy	1
 发出	ntbm	1
-性能	ntce	2
+性能	ntce	3
 发布	ntdm	10
 改成	ntdn	1
 必须	nted	9
@@ -3149,6 +3155,7 @@ use_preset_vocabulary: false
 爆满	ojia	1
 爆炸	ojot	1
 断电	onjn	1
+断档	onsi	1
 断代	onwa	1
 迷惑	opak	1
 迷魂	opfc	1
@@ -3194,6 +3201,7 @@ use_preset_vocabulary: false
 完全	pfwg	3
 定期	pgad	1
 宝子	pgbb	12
+写了	pgbn	1
 写过	pgfp	1
 定死	pggq	1
 定频	pghi	1
@@ -3231,7 +3239,7 @@ use_preset_vocabulary: false
 宋体	psws	2
 客服	pteb	4
 额外	ptqh	2
-客气	ptrn	1
+客气	ptrn	2
 客户	ptyn	5
 袖子	pubb	1
 袜子	pubb	1
@@ -3281,6 +3289,7 @@ use_preset_vocabulary: false
 福气	pyrn	1
 祖先	pytf	1
 祷告	pytf	1
+神算	pyth	3
 福利	pytj	1
 福音	pyuj	1
 社会	pywf	1
@@ -3353,6 +3362,7 @@ use_preset_vocabulary: false
 多用	qqet	1
 多元	qqfq	1
 金球	qqgf	1
+多点	qqhk	1
 多少	qqit	9
 金丹	qqmy	1
 多数	qqov	2
@@ -3364,6 +3374,7 @@ use_preset_vocabulary: false
 多么	qqtc	1
 多选	qqtf	6
 多种	qqtk	1
+多音	qquj	1
 多端	qqum	2
 多好	qqvb	1
 多个	qqwh	2
@@ -3640,6 +3651,7 @@ use_preset_vocabulary: false
 扩充	ryyc	1
 邀请	ryyg	1
 模式	saaa	4
+棋圣	sacf	1
 模块	safn	7
 模型	saga	8
 横竖	sajc	1
@@ -3724,7 +3736,7 @@ use_preset_vocabulary: false
 可惜	skna	1
 可怕	sknr	1
 可怜	sknw	1
-可以	skny	36
+可以	skny	38
 可乐	skqi	2
 可按	skrp	1
 可要	sksv	1
@@ -3911,6 +3923,7 @@ use_preset_vocabulary: false
 备用	tlet	1
 血泪	tlih	1
 备注	tliy	1
+血液	tliy	1
 备份	tlww	5
 微码	tmdc	1
 身上	tmhh	1
@@ -3955,7 +3968,7 @@ use_preset_vocabulary: false
 笔画	ttgl	2
 简码	tudc	8
 简历	tudl	1
-简直	tufh	2
+简直	tufh	3
 简洁	tuif	1
 科学	tuip	2
 科狗	tuqt	1
@@ -3998,7 +4011,7 @@ use_preset_vocabulary: false
 每天	txgd	2
 第一	txgg	2
 繁琐	txgi	1
-系列	txgq	1
+系列	txgq	2
 每次	txuq	1
 每个	txwh	2
 繁体	txws	8
@@ -4130,6 +4143,7 @@ use_preset_vocabulary: false
 决绝	unxq	1
 普通	uoce	3
 普及	uoey	1
+帝国	uplg	1
 旁边	uplp	1
 交叉	uqcy	1
 交替	uqfw	1
@@ -4153,6 +4167,8 @@ use_preset_vocabulary: false
 新鲜	usqg	4
 新的	usrq	2
 新手	usrt	1
+尊重	ustg	2
+新生	ustg	1
 亲自	usth	1
 新版	usth	1
 亲身	ustm	1
@@ -4203,6 +4219,7 @@ use_preset_vocabulary: false
 好奇	vbds	1
 好用	vbet	4
 好玩	vbgf	2
+好再	vbgm	1
 好点	vbhk	1
 好觉	vbip	1
 好啊	vbkb	2
@@ -4427,6 +4444,7 @@ use_preset_vocabulary: false
 你给	wqxw	1
 你就	wqyi	1
 低调	wqym	1
+你这	wqyp	1
 低廉	wqyu	1
 体验	wscw	8
 休眠	wshn	1
@@ -4516,6 +4534,7 @@ use_preset_vocabulary: false
 依然	wyqd	1
 售后	wyrg	1
 今年	wyrh	3
+领先	wytf	1
 信息	wyth	8
 偏差	wyud	1
 依次	wyuq	1
@@ -4675,7 +4694,7 @@ use_preset_vocabulary: false
 应对	yicf	1
 就用	yiet	2
 应用	yiet	2
-就不	yigi	1
+就不	yigi	2
 应战	yihk	1
 就是	yijg	19
 就看	yirh	1
@@ -4767,11 +4786,11 @@ use_preset_vocabulary: false
 变身	yotm	1
 变化	yowx	2
 毫无	ypfq	1
-这里	ypjf	2
+这里	ypjf	3
 这是	ypjg	3
 这边	yplp	1
 这样	ypsu	6
-这么	yptc	1
+这么	yptc	2
 这种	yptk	11
 这个	ypwh	37
 亮度	ypya	1
@@ -4802,6 +4821,7 @@ use_preset_vocabulary: false
 谢谢	ytyt	6
 话说	ytyu	2
 谦逊	yubi	1
+说到	yugc	1
 说来	yugo	1
 说法	yuif	1
 说明	yuje	5
@@ -4929,7 +4949,8 @@ use_preset_vocabulary: false
 卡梅隆	hsbt	1
 沧元图	iflt	2
 滚动条	ifts	2
-小事儿	igqt	2
+小事儿	igqt	3
+没事儿	igqt	1
 滑滑梯	iisu	1
 小满意	iiuj	3
 浏览器	ijkk	6
@@ -4938,6 +4959,7 @@ use_preset_vocabulary: false
 注册表	imge	2
 沃尔玛	iqgc	1
 小狼毫	iqyp	20
+小橘狗	isqt	1
 小毛子	itbb	1
 小科狗	itqt	12
 注意力	iult	1
@@ -5026,6 +5048,7 @@ use_preset_vocabulary: false
 自行车	ttlg	2
 怎么样	ttsu	2
 自造词	ttyn	1
+怎么说	ttyu	1
 知北游	tuiy	7
 处女座	tvyw	1
 身份证	twyg	4

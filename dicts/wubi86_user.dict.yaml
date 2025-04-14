@@ -4431,6 +4431,7 @@ use_preset_vocabulary: false
 好在	vbdh	1
 好奇	vbds	1
 好用	vbet	5
+好过	vbfp	1
 好玩	vbgf	2
 好再	vbgm	1
 好点	vbhk	1
@@ -4682,6 +4683,7 @@ use_preset_vocabulary: false
 低调	wqym	1
 你这	wqyp	2
 低廉	wqyu	1
+你说	wqyu	1
 体验	wscw	8
 休眠	wshn	1
 体力	wslt	1
@@ -4940,6 +4942,7 @@ use_preset_vocabulary: false
 语言	ygyy	9
 店里	yhjf	2
 让它	yhpx	1
+让你	yhwq	1
 让人	yhww	1
 应聘	yibm	1
 应对	yicf	1
@@ -4958,7 +4961,7 @@ use_preset_vocabulary: false
 应得	yitj	1
 就很	yitv	1
 就好	yivb	3
-就会	yiwf	2
+就会	yiwf	3
 应该	yiyy	12
 课堂	yjip	1
 衰落	ykai	1

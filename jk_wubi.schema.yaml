@@ -77,8 +77,8 @@ punctuator:
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  delimiter: " ~"     
-  max_code_length: 4
+  delimiter: " z"     
+  # max_code_length: 4
   # auto_select: true
   # auto_select_pattern: "^(\\w{4})$"
   # auto_clear: max_length

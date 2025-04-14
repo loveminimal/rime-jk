@@ -711,6 +711,7 @@ use_preset_vocabulary: false
 连	lpk	6
 软	lqw	1
 暂	lrj	2
+略	ltk	1
 图	ltu	3
 圈	lud	5
 输	lwg	5
@@ -748,6 +749,7 @@ use_preset_vocabulary: false
 展	nae	2
 懵	nal	2
 懂	nat	2
+惨	ncd	1
 怪	ncf	2
 剧	ndj	3
 恢	ndo	1
@@ -1494,6 +1496,7 @@ use_preset_vocabulary: false
 节点	abhk	10
 节省	abit	1
 节气	abrn	4
+节哀	abye	1
 基础	addb	8
 藏在	addh	1
 基地	adfb	1
@@ -2067,6 +2070,7 @@ use_preset_vocabulary: false
 未来	figo	1
 未消	fiii	1
 示意	fiuj	1
+未曾	fiul	1
 示例	fiwg	1
 示弱	fixu	1
 朝左	fjda	2
@@ -2380,6 +2384,7 @@ use_preset_vocabulary: false
 不是	gijg	8
 还是	gijg	30
 不中	gikh	1
+不只	gikw	1
 不同	gimg	2
 否则	gimj	2
 不懂	gina	2
@@ -2467,6 +2472,7 @@ use_preset_vocabulary: false
 现成	gmdn	1
 两天	gmgd	1
 刺激	gmir	1
+遭遇	gmjm	1
 刺客	gmpt	1
 现实	gmpu	2
 现象	gmqj	2
@@ -3683,6 +3689,7 @@ use_preset_vocabulary: false
 所以	rnny	6
 气质	rnrf	1
 气息	rnth	1
+气人	rnww	1
 所谓	rnyl	1
 所说	rnyu	1
 据说	rnyu	1
@@ -4379,6 +4386,7 @@ use_preset_vocabulary: false
 新疆	usxf	1
 首页	utdm	7
 道理	utgj	3
+道路	utkh	1
 产品	utkk	4
 产业	utog	2
 痴迷	utop	1
@@ -4981,6 +4989,7 @@ use_preset_vocabulary: false
 设置	ymlf	18
 设定	ympg	1
 高手	ymrt	1
+设想	ymsh	1
 设备	ymtl	4
 高管	ymtp	1
 高效	ymuq	4
@@ -5307,6 +5316,7 @@ use_preset_vocabulary: false
 看一下	rggh	1
 看不见	rgmq	1
 看不懂	rgna	1
+搞事情	rgng	4
 白小纯	rixg	3
 年轻人	rlww	1
 打印机	rqsm	1

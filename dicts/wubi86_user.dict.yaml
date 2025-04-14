@@ -1110,7 +1110,7 @@ use_preset_vocabulary: false
 货	wxm	4
 令	wyc	4
 依	wye	3
-伪	wyl	2
+伪	wyl	4
 仿	wyn	2
 停	wyp	1
 集	wys	5
@@ -2385,6 +2385,7 @@ use_preset_vocabulary: false
 还是	gijg	30
 不中	gikh	1
 不只	gikw	1
+不加	gilk	1
 不同	gimg	2
 否则	gimj	2
 不懂	gina	2
@@ -3580,6 +3581,7 @@ use_preset_vocabulary: false
 找我	ratr	1
 找个	rawh	1
 拒绝	raxq	1
+报班	rbgy	1
 报错	rbqa	4
 摄氏	rbqa	1
 报名	rbqk	6

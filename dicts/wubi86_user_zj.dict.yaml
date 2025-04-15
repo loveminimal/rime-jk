@@ -16,320 +16,677 @@ version: 2025.04
 sort: by_weight
 use_preset_vocabulary: false
 ...
+或	ak;gd	1
 出	bm;kz	1
-也	bn;hn	2
-对	cf;yz	1
+也	bn;hn	4
+又	cc;cc	1
+对	cf;yz	3
 码	dc;gz	2
 三	dg;gg	1
 面	dm;jd	0
-成	dn;nt	1
-用	et;nh	3
+成	dn;nt	2
+万	dn;vz	1
+太	dy;iz	2
+用	et;nh	8
 及	ey;iz	1
-去	fc;uz	2
+去	fc;uz	3
 二	fg;gz	1
+起	fh;nv	1
 壹	fp;gu	1
 过	fp;iz	1
+才	ft;ez	1
+者	ft;jf	1
+到	gc;fj	1
 于	gf;kz	1
 五	gg;hg	1
-下	gh;iz	3
+下	gh;iz	5
+还	gi;pi	3
+卅	gk;kz	3
+再	gm;fd	3
 与	gn;gd	1
+来	go;iz	3
 夹	gu;wi	1
-没	im;cy	1
-吗	kc;gz	2
-呢	kn;xn	1
-啥	kw;fk	1
+点	hk;ou	5
+些	hx;ff	2
+没	im;cy	2
+是	jg;hu	1
+早	jh;nh	1
+歇	jq;ww	0
+嘞	ka;fl	1
+啊	kb;sk	1
+吗	kc;gz	5
+吧	kc;nz	1
+跟	kh;ve	2
+呢	kn;xn	4
+喽	ko;vg	1
+听	kr;hz	0
+吃	kt;nn	3
+哦	kt;rt	2
+啥	kw;fk	5
+呦	kx;ln	1
 四	lh;ng	1
-加	lk;gz	1
+回	lk;dz	1
+加	lk;gz	5
+轮	lw;xn	1
+内	mw;iz	1
+肉	mw;wi	1
+已	nn;nn	1
+快	nn;wy	1
+买	nu;du	1
+字	pb;fz	4
+完	pf;qb	1
+补	pu;hy	1
+它	px;bz	2
+多	qq;uz	3
+儿	qt;nz	1
+鸟	qy;ng	1
 把	rc;nz	2
-看	rh;fz	1
+后	rg;kd	2
+看	rh;fz	4
 近	rp;kz	1
 换	rq;md	3
 的	rq;yy	0
-打	rs;hz	3
-搞	ry;mk	1
-可	sk;dz	1
+打	rs;hz	6
+搞	ry;mk	2
+想	sh;nu	2
+可	sk;dz	2
 哥	sk;sk	1
-根	sv;ey	1
+样	su;dh	1
+根	sv;ey	3
+要	sv;fz	1
 长	ta;yi	1
 短	td;gu	1
+种	tk;hh	1
 积	tk;wy	1
-很	tv;ey	2
-并	ua;jz	3
+很	tv;ey	3
+符	tw;fu	1
+并	ua;jz	4
+单	uj;fj	1
 将	uq;fy	1
-会	wf;cu	5
+好	vb;gz	1
+那	vf;bh	1
+群	vt;kd	1
+做	wd;ty	1
+会	wf;cu	6
 值	wf;hg	1
-个	wh;jz	1
+个	wh;jz	3
 候	wh;nd	1
 但	wj;gg	4
-你	wq;iy	2
+你	wq;iy	13
 像	wq;je	1
 终	xt;uy	1
-比	xx;nz	2
-就	yi;dn	6
+比	xx;nz	3
+让	yh;gz	1
+就	yi;dn	16
 高	ym;kf	1
-话	yt;dg	1
-节奏	ab;jz dw;gd	2
-基础	ad;wf db;mh	1
-其实	ad;wu pu;du	2
+亮	yp;mb	1
+话	yt;dg	3
+说	yu;kq	1
+节奏	ab;jz dw;gd	5
+基础	ad;wf db;mh	2
+基数	ad;wf ov;ty	1
+基本	ad;wf sg;dz	1
+其实	ad;wu pu;du	3
 其后	ad;wu rg;kd	0
-功能	al;nz ce;xx	1
+菜单	ae;su uj;fj	1
+范围	ai;bb lf;nh	1
+功能	al;nz ce;xx	5
+英文	am;du yy;gy	1
 获取	aq;td bc;yz	1
+取消	bc;yz ii;eg	2
 函数	bi;bk ov;ty	2
-也是	bn;hn jg;hu	1
-双拼	cc;yz ru;ah	4
+出现	bm;kz gm;qn	1
+出来	bm;kz go;iz	1
+也是	bn;hn jg;hu	4
+附属	bw;fy nt;ky	1
+除了	bw;ty bn;hz	1
+双拼	cc;yz ru;ah	7
+参考	cd;er ft;gn	1
+通规	ce;pk fw;mq	0
 对于	cf;yz gf;kz	1
+对的	cf;yz rq;yy	1
+对应	cf;yz yi;dz	1
+鸡肋	cq;yg el;nz	1
 难道	cw;yg ut;hp	1
+左右	da;fz dk;fz	1
+大了	dd;dd bn;hz	2
 大厂	dd;dd dg;tz	1
 有用	de;fz et;nh	1
-有些	de;fz hx;ff	1
-有的	de;fz rq;yy	1
-感觉	dg;kn ip;mq	5
+有些	de;fz hx;ff	2
+有的	de;fz rq;yy	2
+压根	df;yi sv;ey	1
+三级	dg;gg xe;yy	1
+感觉	dg;kn ip;mq	9
 存在	dh;bd dh;fd	1
-而且	dm;jj eg;dz	1
-万象	dn;vz qj;eu	5
-克隆	dq;bz bt;gg	2
+而且	dm;jj eg;dz	2
+万象	dn;vz qj;eu	9
+克隆	dq;bz bt;gg	3
+克制	dq;bz rm;hj	0
+确实	dq;eh pu;du	1
 确保	dq;eh wk;sy	2
 原理	dr;ii gj;fg	1
+原来	dr;ii go;iz	1
 奇奇	ds;kf ds;kf	0
-脚本	ef;cb sg;dz	5
+帮助	dt;bh eg;ln	1
+太多	dy;iz qq;uz	1
+脚本	ef;cb sg;dz	7
 用于	et;nh gf;kz	1
-用来	et;nh go;iz	1
+用来	et;nh go;iz	3
+用法	et;nh if;cy	1
 用以	et;nh ny;wy	1
-用的	et;nh rq;yy	1
-用户	et;nh yn;ez	2
+用的	et;nh rq;yy	2
+用着	et;nh ud;hf	1
+用户	et;nh yn;ez	5
+动漫	fc;ln ij;lc	2
+运行	fc;pi tf;hh	2
 运算	fc;pi th;aj	1
-需要	fd;mj sv;fz	0
+去啦	fc;uz kr;ug	1
+需要	fd;mj sv;fz	6
+干啥	fg;gh kw;fk	2
 二简	fg;gz tu;jf	1
+二次	fg;gz uq;wy	1
 十分	fg;hz wv;bz	0
 直接	fh;fz ru;vg	3
 进行	fj;pk tf;hh	1
 进入	fj;pk ty;iz	2
 喜欢	fk;uk cq;wy	1
+过来	fp;iz go;iz	3
+过滤	fp;iz ih;an	2
 过程	fp;iz tk;gg	1
-都是	ft;jb jg;hu	3
+无解	fq;vz qe;vh	1
+才刚	ft;ez mq;jh	0
+都是	ft;jb jg;hu	6
+老李	ft;xb sb;fz	1
+老杨	ft;xb sn;rt	1
+老妈	ft;xb vc;gz	0
 替换	fw;fj rq;md	1
-替代	fw;fj wa;yz	1
+替代	fw;fj wa;yz	2
+规范	fw;mq ai;bb	1
 规则	fw;mq mj;hz	1
+形码	ga;et dc;gz	0
 开了	ga;kz bn;hz	3
 开着	ga;kz ud;hf	1
-开启	ga;kz yn;kd	0
-五笔	gg;hg tt;fn	5
-一直	gg;ll fh;fz	2
+开关	ga;kz ud;uz	1
+开启	ga;kz yn;kd	1
+表情	ge;uz ng;eg	6
+五笔	gg;hg tt;fn	10
+一套	gg;ll dd;uz	1
+一直	gg;ll fh;fz	3
+一起	gg;ll fh;nv	1
 一致	gg;ll gc;ft	1
-一下	gg;ll gh;iz	3
-一些	gg;ll hx;ff	5
-一键	gg;ll qv;fp	1
+一下	gg;ll gh;iz	7
+一点	gg;ll hk;ou	0
+一些	gg;ll hx;ff	10
+一家	gg;ll pe;uz	1
+一键	gg;ll qv;fp	2
+一般	gg;ll te;mc	0
+一行	gg;ll tf;hh	1
 一简	gg;ll tu;jf	1
-一个	gg;ll wh;jz	1
-下来	gh;iz go;iz	1
-不过	gi;iz fp;iz	1
+一段	gg;ll wd;mc	0
+一个	gg;ll wh;jz	7
+下来	gh;iz go;iz	3
+不能	gi;iz ce;xx	2
+不大	gi;iz dd;dd	1
+不用	gi;iz et;nh	3
+不过	gi;iz fp;iz	3
 不再	gi;iz gm;fd	0
-不是	gi;iz jg;hu	4
+不来	gi;iz go;iz	2
+不是	gi;iz jg;hu	8
+不叫	gi;iz kn;hh	1
+不错	gi;iz qa;jg	1
+不然	gi;iz qd;ou	1
+不要	gi;iz sv;fz	1
+不笑	gi;iz tt;du	1
+不好	gi;iz vb;gz	2
 不会	gi;iz wf;cu	1
+不就	gi;iz yi;dn	1
 不变	gi;iz yo;cu	1
-更新	gj;qi us;rh	5
+还有	gi;pi de;fz	1
+还是	gi;pi jg;hu	0
+理解	gj;fg qe;vh	1
+更少	gj;qi it;rz	1
+更新	gj;qi us;rh	6
 更好	gj;qi vb;gz	1
 囊括	gk;he rt;dg	1
-整句	gk;ih qk;dz	10
-现在	gm;qn dh;fd	3
+整句	gk;ih qk;dz	13
+事实	gk;vh pu;du	1
+现在	gm;qn dh;fd	9
 两个	gm;ww wh;jz	1
+来了	go;iz bn;hz	1
+来过	go;iz fp;iz	0
 来说	go;iz yu;kq	1
 列表	gq;jh ge;uz	1
 虎码	ha;mv dc;gz	1
-上面	hh;gg dm;jd	1
-上屏	hh;gg nu;ak	2
+上面	hh;gg dm;jd	2
+上屏	hh;gg nu;ak	4
+上次	hh;gg uq;wy	1
+目前	hh;hh ue;jj	1
 目录	hh;hh vi;uz	1
-添加	ig;dn lk;gz	1
-没有	im;cy de;fz	2
-当前	iv;fz ue;jj	1
-最近	jb;cu rp;kz	3
-里面	jf;dz dm;jd	1
-时候	jf;yz wh;nd	1
+睡了	ht;gf bn;hz	1
+满意	ia;gw uj;nu	1
+添加	ig;dn lk;gz	2
+清除	ig;eg bw;ty	1
+小陈	ih;ty ba;iy	2
+小说	ih;ty yu;kq	1
+没有	im;cy de;fz	6
+尝试	ip;fc ya;ag	1
+常用	ip;kh et;nh	3
+当初	iv;fz pu;vn	1
+当前	iv;fz ue;jj	5
+注释	iy;gg to;ch	1
+最近	jb;cu rp;kz	5
+最新	jb;cu us;rh	1
+最终	jb;cu xt;uy	1
+里面	jf;dz dm;jd	2
+时间	jf;yz uj;dz	2
+时候	jf;yz wh;nd	3
+早些	jh;nh hx;ff	1
+早晨	jh;nh jd;fe	1
 日常	jj;jj ip;kh	1
 映射	jm;dy tm;df	1
-电脑	jn;vz ey;bh	2
+电脑	jn;vz ey;bh	3
+显示	jo;gf fi;uz	5
+跳水	kh;iq ii;ii	1
+中午	kh;kz tf;jz	1
+中间	kh;kz uj;dz	1
 中文	kh;kz yy;gy	1
 路径	kh;tk tc;ag	2
 虽然	kj;uz qd;ou	2
+吃点	kt;nn hk;ou	2
+吃饭	kt;nn qn;rc	1
+呼呼	kt;uh kt;uh	1
+叨叨	kv;nz kv;nz	1
 啥用	kw;fk et;nh	2
-只有	kw;uz de;fz	2
+只能	kw;uz ce;xx	1
+只有	kw;uz de;fz	4
+只用	kw;uz et;nh	1
 因为	ld;iz yl;yi	4
-转成	lf;ny dn;nt	1
-转换	lf;ny rq;md	4
-默认	lf;od yw;yz	2
+转成	lf;ny dn;nt	2
+转换	lf;ny rq;md	9
+默认	lf;od yw;yz	3
+国家	lg;yi pe;uz	1
 回答	lk;dz tw;gk	1
 逻辑	lq;pi lk;bg	2
+软件	lq;wy wr;hh	1
 困难	ls;iz cw;yg	0
-输出	lw;gj bm;kz	2
-输入	lw;gj ty;iz	3
+输出	lw;gj bm;kz	3
+输入	lw;gj ty;iz	7
+轮总	lw;xn uk;nu	1
+周五	mf;kd gg;hg	1
 周边	mf;kd lp;vz	1
+周六	mf;kd uy;gy	1
+同步	mg;kd hi;rz	2
 同样	mg;kd su;dh	1
 刚需	mq;jh fd;mj	1
+几章	mt;nz uj;jz	1
+情节	ng;eg ab;jz	1
 懒得	ng;km tj;gf	1
-已经	nn;nn xc;ag	4
+慢慢	nj;lc nj;lc	1
+避免	nk;up qk;qb	1
+已经	nn;nn xc;ag	5
+快速	nn;wy gk;ip	1
+快符	nn;wy tw;fu	5
+买的	nu;du rq;yy	1
 习惯	nu;dz nx;fm	1
+飞鹤	nu;iz pw;yg	1
+心情	ny;ny ng;eg	1
 以上	ny;wy hh;gg	1
 以前	ny;wy ue;jj	1
+精髓	og;eg me;dp	1
 精简	og;eg tu;jf	1
-字根	pb;fz sv;ey	1
+字根	pb;fz sv;ey	2
 字段	pb;fz wd;mc	0
-字词	pb;fz yn;gk	1
+字词	pb;fz yn;gk	2
 完善	pf;qb ud;uk	1
 完全	pf;qb wg;fz	2
-之前	pp;pp ue;jj	1
+定式	pg;hu aa;dz	1
+定子	pg;hu bb;bb	1
+定时	pg;hu jf;yz	3
+定位	pg;hu wu;gz	1
+宝子	pg;yu bb;bb	1
+之外	pp;pp qh;yz	1
+之后	pp;pp rg;kd	1
+之前	pp;pp ue;jj	5
 补充	pu;hy yc;qb	1
 安装	pv;fz uf;ye	2
 空间	pw;af uj;dz	0
+神奇	py;jh ds;kf	1
+错误	qa;jg yk;gd	1
+角色	qe;jz qc;bz	1
 解释	qe;vh to;ch	1
-句子	qk;dz bb;bb	3
+外面	qh;yz dm;jd	1
+句子	qk;dz bb;bb	4
 名称	qk;fz tq;iy	1
+够大	qk;qq dd;dd	2
+摸索	ra;jd fp;xi	2
 排序	rd;jd yc;bk	3
+拥有	re;hz de;fz	1
+挂掉	rf;fg rh;jh	1
+卸载	rh;bh fa;lk	1
+看了	rh;fz bn;hz	1
+看到	rh;fz gc;fj	1
+提交	rj;gh uq;uz	1
 操作	rk;ks wt;hf	0
 所有	rn;rh de;fz	1
 所需	rn;rh fd;mj	1
+所以	rn;rh ny;wy	2
+的话	rq;yy yt;dg	0
+折腾	rr;hz eu;dc	3
 拆分	rr;yy wv;bz	1
+打字	rs;hz pb;fz	1
+打空	rs;hz pw;af	2
+挺好	rt;fp vb;gz	2
 手动	rt;gh fc;ln	1
 拼音	ru;ah uj;fz	2
-拉取	ru;gz bc;yz	5
-执行	rv;yy tf;hh	1
+拉取	ru;gz bc;yz	8
+搜狗	rv;hc qt;qk	1
+抛弃	rv;ln yc;aj	1
+执行	rv;yy tf;hh	2
+推送	rw;yg ud;pi	1
+搞毛	ry;mk tf;nv	0
+扩展	ry;tz na;ei	1
+本地	sg;dz fb;nz	1
+配置	sg;nn lf;hf	5
+配合	sg;nn wg;kf	1
 相关	sh;gz ud;uz	1
+想吃	sh;nu kt;nn	0
+想找	sh;nu ra;tz	1
+查看	sj;gf rh;fz	1
 可能	sk;dz ce;xx	2
-可以	sk;dz ny;wy	5
+可以	sk;dz ny;wy	8
 覆盖	st;tt ug;lf	1
+根本	sv;ey sg;dz	2
+要到	sv;fz gc;fj	1
+要不	sv;fz gi;iz	1
 长词	ta;yi yn;gk	1
 短板	td;gu sr;cy	1
-短词	td;gu yn;gk	3
+短词	td;gu yn;gk	5
+乱套	td;nn dd;uz	1
+矫情	td;tj ng;eg	1
+行了	tf;hh bn;hz	1
+午觉	tf;jz ip;mq	1
 造词	tf;kp yn;gk	1
+先看	tf;qb rh;fz	1
+选中	tf;qp kh;kz	1
 选重	tf;qp tg;jf	1
 生成	tg;dz dn;nt	2
+重码	tg;jf dc;gz	1
 重要	tg;jf sv;fz	1
-重复	tg;jf tj;tu	2
-自动	th;dz fc;ln	2
-自己	th;dz nn;gn	3
+重复	tg;jf tj;tu	4
+重装	tg;jf uf;ye	1
+重新	tg;jf us;rh	1
+自动	th;dz fc;ln	4
+自己	th;dz nn;gn	8
 自行	th;dz tf;hh	0
+自从	th;dz ww;yz	1
 怎么	th;fn tc;uz	1
-版本	th;gc sg;dz	1
+版本	th;gc sg;dz	2
 处理	th;iz gj;fg	2
 衍生	ti;fh tg;dz	1
+筛选	tj;gh tf;qp	0
 各个	tk;fz wh;jz	0
+释义	to;ch yq;iz	1
+秋萍	to;yz ai;gh	1
 移植	tq;qy sf;hg	1
+循环	tr;fh gg;iy	1
 我是	tr;nt jg;hu	1
 我的	tr;nt rq;yy	1
+我们	tr;nt wu;nz	1
+笑哭	tt;du kk;du	1
+简码	tu;jf dc;gz	1
 简直	tu;jf fh;fz	1
+简短	tu;jf td;gu	1
 简单	tu;jf uj;fj	1
 很像	tv;ey wq;je	1
+符号	tw;fu kg;nb	2
 并击	ua;jz fm;kz	1
+站点	uh;kg hk;ou	1
+单字	uj;fj pb;fz	1
 单个	uj;fj wh;jz	1
+单纯	uj;fj xg;bn	1
+意思	uj;nu ln;uz	1
 意义	uj;nu yq;iz	1
 部分	uk;bh wv;bz	0
-问题	uk;dz jg;hm	2
+问题	uk;dz jg;hm	3
 总有	uk;nu de;fz	0
+决定	un;wy pg;hu	0
+闲暇	us;iz jn;hc	1
+兼容	uv;ou pw;wk	1
+背离	ux;ef yb;mc	1
 好用	vb;gz et;nh	1
+好处	vb;gz th;iz	1
+好好	vb;gz vb;gz	1
+好会	vb;gz wf;cu	0
+即显	vc;bh jo;gf	1
 即可	vc;bh sk;dz	1
-那个	vf;bh wh;jz	1
+那里	vf;bh jf;dz	1
+那样	vf;bh su;dh	1
+那个	vf;bh wh;jz	3
+妹的	vf;iy rq;yy	1
 如果	vk;gz js;iz	2
+如何	vk;gz ws;kg	1
 灵魂	vo;uz fc;rc	1
+群里	vt;kd jf;dz	1
+忍住	vy;nu wy;gg	1
 代码	wa;yz dc;gz	1
 仓库	wb;bz yl;kz	1
+他们	wb;nz wu;nz	1
 优化	wd;nn wx;nz	2
-舒服	wf;kb eb;cy	1
-全码	wg;fz dc;gz	4
+什么	wf;hz tc;uz	5
+舒服	wf;kb eb;cy	2
+全码	wg;fz dc;gz	5
+便捷	wg;jq rg;vh	1
 命名	wg;kb qk;fz	0
-合并	wg;kf ua;jz	2
-使用	wg;kq et;nh	10
+命令	wg;kb wy;cu	2
+合并	wg;kf ua;jz	5
+盒装	wg;kl uf;ye	1
+使用	wg;kq et;nh	24
+候选	wh;nd tf;qp	2
+修改	wh;te nt;yz	1
 但是	wj;gg jg;hu	1
 保持	wk;sy rf;fy	1
 保证	wk;sy yg;hg	1
+仙逆	wm;hz ub;tp	1
 你好	wq;iy vb;gz	1
+你俩	wq;iy wg;mw	2
 体验	ws;gg cw;gi	1
+休息	ws;yz th;nu	1
+任务	wt;fg tl;bz	1
+任何	wt;fg ws;kg	1
+位置	wu;gz lf;hf	1
+分包	wv;bz qn;vz	1
 分组	wv;bz xe;gg	0
 分级	wv;bz xe;yy	1
+信息	wy;gz th;nu	1
+今天	wy;nb gd;iz	2
 含义	wy;nk yq;iz	1
 红色	xa;gz qc;bz	0
+组合	xe;gg wg;kf	3
+引用	xh;hz et;nh	1
 绝对	xq;cn cf;yz	1
+终端	xt;uy um;dj	1
 给力	xw;gk lt;nz	1
 毕竟	xx;fj uj;qb	2
-编码	xy;na dc;gz	1
-主要	yg;dz sv;fz	1
-就是	yi;dn jg;hu	3
-就行	yi;dn tf;hh	2
+比较	xx;nz lu;qy	2
+比如	xx;nz vk;gz	3
+编码	xy;na dc;gz	4
+编译	xy;na yc;fh	0
+享受	yb;fz ep;cu	1
+主题	yg;dz jg;hm	1
+主角	yg;dz qe;jz	1
+主要	yg;dz sv;fz	4
+就是	yi;dn jg;hu	7
+就行	yi;dn tf;hh	4
 就好	yi;dn vb;gz	1
 就会	yi;dn wf;cu	2
+应该	yi;dz yy;nw	1
+设置	ym;cy lf;hf	4
 调整	ym;fk gk;ih	0
 调频	ym;fk hi;dm	1
 词频	yn;gk hi;dm	2
-词典	yn;gk ma;wu	2
+词典	yn;gk ma;wu	4
 词组	yn;gk xe;gg	2
-词语	yn;gk yg;kg	3
-词库	yn;gk yl;kz	10
+词语	yn;gk yg;kg	5
+词库	yn;gk yl;kz	23
+忘记	yn;nu yn;nz	1
 记录	yn;nz vi;uz	2
 变频	yo;cu hi;dm	1
 这点	yp;iz hk;ou	2
+这些	yp;iz hx;ff	1
+这里	yp;iz jf;dz	1
 这样	yp;iz su;dh	1
 这行	yp;iz tf;hh	1
-这种	yp;iz tk;hh	1
+这种	yp;iz tk;hh	5
 这段	yp;iz wd;mc	1
-这个	yp;iz wh;jz	9
+这个	yp;iz wh;jz	22
 放在	yt;yz dh;fd	1
+放火	yt;yz oo;oo	1
+说过	yu;kq fp;iz	1
 说明	yu;kq je;gz	1
-方式	yy;gn aa;dz	0
-方案	yy;gn pv;su	1
+说的	yu;kq rq;yy	1
+说话	yu;kq yt;dg	1
+良好	yv;ei vb;gz	0
+方式	yy;gn aa;dz	3
+方案	yy;gn pv;su	4
 文恰	yy;gy nw;gk	1
-文件	yy;gy wr;hh	7
+文件	yy;gy wr;hh	9
 节奏感	ab;jz dw;gd dg;kn	1
 其实在	ad;wu pu;du dh;fd	1
 其后面	ad;wu rg;kd dm;jd	1
+也需要	bn;hn fd;mj sv;fz	1
 也不用	bn;hn gi;iz et;nh	1
+通规字	ce;pk fw;mq pb;fz	1
 对应的	cf;yz yi;dz rq;yy	2
 大厂的	dd;dd dg;tz rq;yy	2
 大多数	dd;dd qq;uz ov;ty	1
+大模型	dd;dd sa;jd ga;jf	2
+大概率	dd;dd sv;cq yx;if	1
+大部分	dd;dd uk;bh wv;bz	1
+有这个	de;fz yp;iz wh;jz	1
 三字词	dg;gg pb;fz yn;gk	1
 在这个	dh;fd yp;iz wh;jz	1
 尤其是	dn;vz ad;wu jg;hu	1
-玩意儿	gf;qn uj;nu qt;nz	2
+太慢了	dy;iz nj;lc bn;hz	1
+太快了	dy;iz nn;wy bn;hz	1
+朋友们	ee;gz dc;uz wu;nz	1
+用不完	et;nh gi;iz pf;qb	1
+用整句	et;nh gk;ih qk;dz	1
+用这种	et;nh yp;iz tk;hh	1
+才能吃	ft;ez ce;xx kt;nn	1
+才可以	ft;ez sk;dz ny;wy	1
+都可能	ft;jb sk;dz ce;xx	1
+老杨哥	ft;xb sn;rt sk;sk	2
+形码的	ga;et dc;gz rq;yy	1
+到饭点	gc;fj qn;rc hk;ou	1
+玩意儿	gf;qn uj;nu qt;nz	3
 一些字	gg;ll hx;ff pb;fz	1
 一样的	gg;ll su;dh rq;yy	1
 一个样	gg;ll wh;jz su;dh	0
-不需要	gi;iz fd;mj sv;fz	1
+一个人	gg;ll wh;jz ww;ww	1
+不需要	gi;iz fd;mj sv;fz	2
+不明白	gi;iz je;gz rr;rr	1
 不完全	gi;iz pf;qb wg;fz	1
 不定期	gi;iz pg;hu ad;we	1
 不错了	gi;iz qa;jg bn;hz	1
-不可能	gi;iz sk;dz ce;xx	1
+不可能	gi;iz sk;dz ce;xx	2
+不应该	gi;iz yi;dz yy;nw	1
+还不得	gi;pi gi;iz tj;gf	1
+还可以	gi;pi sk;dz ny;wy	1
+还做了	gi;pi wd;ty bn;hz	1
 再加上	gm;fd lk;gz hh;gg	1
+目前是	hh;hh ue;jj jg;hu	1
+睡得早	ht;gf tj;gf jh;nh	1
+没啥用	im;cy kw;fk et;nh	2
+少一些	it;rz gg;ll hx;ff	1
 最适合	jb;cu td;pd wg;kf	1
 是不是	jg;hu gi;iz jg;hu	3
 电脑上	jn;vz ey;bh hh;gg	1
+显示的	jo;gf fi;uz rq;yy	1
+歇一段	jq;ww gg;ll wd;mc	1
+跨平台	kh;dn gu;hk ck;fz	1
+跑偏了	kh;qn wy;na bn;hz	1
+听老妈	kr;hz ft;xb vc;gz	1
+啥时候	kw;fk jf;yz wh;nd	1
 只用了	kw;uz et;nh bn;hz	1
-只需要	kw;uz fd;mj sv;fz	1
+只需要	kw;uz fd;mj sv;fz	2
 只不过	kw;uz gi;iz fp;iz	3
-辅助码	lg;ey eg;ln dc;gz	1
+只保留	kw;uz wk;sy qy;vl	1
+辅助码	lg;ey eg;ln dc;gz	3
+回家了	lk;dz pe;uz bn;hz	1
 输入法	lw;gj ty;iz if;cy	1
+刚出来	mq;jh bm;kz go;iz	1
 怪怪的	nc;fg nc;fg rq;yy	0
+完事了	pf;qb gk;vh bn;hz	1
+定制性	pg;hu rm;hj nt;gg	1
 之前的	pp;pp ue;jj rq;yy	1
+看下去	rh;fz gh;iz fc;uz	1
+看时间	rh;fz jf;yz uj;dz	1
 看编码	rh;fz xy;na dc;gz	1
 提供了	rj;gh wa;wy bn;hz	1
+打视频	rs;hz py;mq hi;dm	1
 打全码	rs;hz wg;fz dc;gz	1
+挺好用	rt;fp vb;gz et;nh	2
+挺好玩	rt;fp vb;gz gf;qn	1
+搞毛嘞	ry;mk tf;nv ka;fl	1
+本地化	sg;dz fb;nz wx;nz	1
 等价于	tf;fu ww;jh gf;kz	1
 等价的	tf;fu ww;jh rq;yy	1
+重复了	tg;jf tj;tu bn;hz	1
+自动化	th;dz fc;ln wx;nz	1
+自己的	th;dz nn;gn rq;yy	2
 自造词	th;dz tf;kp yn;gk	1
 我现在	tr;nt gm;qn dh;fd	1
+我的错	tr;nt rq;yy qa;jg	1
 每个字	tx;gu wh;jz pb;fz	1
-养成系	ud;yj dn;nt tx;iu	1
+差不多	ud;af gi;iz qq;uz	1
+养成系	ud;yj dn;nt tx;iu	3
 前提下	ue;jj rj;gh gh;iz	1
 单个字	uj;fj wh;jz pb;fz	1
+好的嘛	vb;gz rq;yy ky;ss	1
+好会吃	vb;gz wf;cu kt;nn	1
 那些事	vf;bh hx;ff gk;vh	1
 那么多	vf;bh tc;uz qq;uz	1
+那会儿	vf;bh wf;cu qt;nz	1
+候选项	wh;nd tf;qp ad;my	1
+你不是	wq;iy gi;iz jg;hu	1
+你来啦	wq;iy go;iz kr;ug	1
+你怎么	wq;iy th;fn tc;uz	1
+红烧肉	xa;gz oa;tq mw;wi	1
 弥补了	xq;iy pu;hy bn;hz	1
+编译过	xy;na yc;fh fp;iz	1
+就想吃	yi;dn sh;nu kt;nn	1
+就可以	yi;dn sk;dz ny;wy	1
+就行了	yi;dn tf;hh bn;hz	1
+记不住	yn;nz gi;iz wy;gg	1
 这一段	yp;iz gg;ll wd;mc	3
 这一个	yp;iz gg;ll wh;jz	1
+这两人	yp;iz gm;ww ww;ww	1
 这些字	yp;iz hx;ff pb;fz	1
+文件夹	yy;gy wr;hh gu;wi	1
 该目录	yy;nw hh;hh vi;uz	1
+感觉良好	dg;kn ip;mq yv;ei vb;gz	1
 万象词库	dn;vz qj;eu yn;gk yl;kz	6
+克制一点	dq;bz rm;hj gg;ll hk;ou	1
+动漫更新	fc;ln ij;lc gj;qi us;rh	1
 十分困难	fg;hz wv;bz ls;iz cw;yg	1
-五笔整句	gg;hg tt;fn gk;ih qk;dz	4
+才刚来过	ft;ez mq;jh go;iz fp;iz	1
+五笔整句	gg;hg tt;fn gk;ih qk;dz	5
+一般来说	gg;ll te;mc go;iz yu;kq	1
 不再需要	gi;iz gm;fd fd;mj sv;fz	1
+不然的话	gi;iz qd;ou rq;yy yt;dg	1
+整句筛选	gk;ih qk;dz tj;gh tf;qp	1
 没有开启	im;cy de;fz ga;kz yn;kd	1
 当前脚本	iv;fz ue;jj ef;cb sg;dz	1
+最近更新	jb;cu rp;kz gj;qi us;rh	1
+最终还是	jb;cu xt;uy gi;pi jg;hu	1
+最终决定	jb;cu xt;uy un;wy pg;hu	1
+是可以的	jg;hu sk;dz ny;wy rq;yy	0
+输入方式	lw;gj ty;iz yy;gn aa;dz	1
+周五可以	mf;kd gg;hg sk;dz ny;wy	1
+恢复一下	nd;oy tj;tu gg;ll gh;iz	1
+精益求精	og;eg uw;lf fi;yi og;eg	1
+定时任务	pg;hu jf;yz wt;fg tl;bz	1
+实在不行	pu;du dh;fd gi;iz tf;hh	1
 解释一下	qe;vh to;ch gg;ll gh;iz	1
 打不出来	rs;hz gi;iz bm;kz go;iz	0
 可以存在	sk;dz ny;wy dh;bd dh;fd	1
@@ -338,11 +695,19 @@ use_preset_vocabulary: false
 处理方式	th;iz gj;fg yy;gn aa;dz	1
 各个字段	tk;fz wh;jz pb;fz wd;mc	1
 总有一些	uk;nu de;fz gg;ll hx;ff	1
+新官上任	us;rh pn;hn hh;gg wt;fg	1
+如何设置	vk;gz ws;kg ym;cy lf;hf	1
+仅供参考	wc;yz wa;wy cd;er ft;gn	1
 命名空间	wg;kb qk;fz pw;af uj;dz	1
+使用体验	wg;kq et;nh ws;gg cw;gi	1
 使用说明	wg;kq et;nh yu;kq je;gz	1
 分组操作	wv;bz xe;gg rk;ks wt;hf	1
 红色部分	xa;gz qc;bz uk;bh wv;bz	1
+就可以了	yi;dn sk;dz ny;wy bn;hz	1
+这两句话	yp;iz gm;ww qk;dz yt;dg	1
+这种方式	yp;iz tk;hh yy;gn aa;dz	2
 这个函数	yp;iz wh;jz bi;bk ov;ty	1
 也是一个样	bn;hn jg;hu gg;ll wh;jz su;dh	1
+也是可以的	bn;hn jg;hu sk;dz ny;wy rq;yy	1
 奇奇怪怪的	ds;kf ds;kf nc;fg nc;fg rq;yy	1
 打不出来的	rs;hz gi;iz bm;kz go;iz rq;yy	1

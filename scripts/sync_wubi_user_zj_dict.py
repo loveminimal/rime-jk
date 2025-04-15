@@ -3,12 +3,12 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
-# - py scripts/sync_wubi_user_dict.py
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_zj_dict.py
+# - py scripts/sync_wubi_user_zj_dict.py
 # 
 # 默认目录：
-# src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack\\jk_wubi.userdb.txt
-# out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\wubi86_user.dict.yaml
+# src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack\\jk_wubi_zj.userdb.txt
+# out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\wubi86_user_zj.dict.yaml
 # 
 import re
 from pathlib import Path

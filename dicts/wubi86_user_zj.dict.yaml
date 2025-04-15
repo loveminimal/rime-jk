@@ -16,4 +16,134 @@ version: 2025.04
 sort: by_weight
 use_preset_vocabulary: false
 ...
+也	bn;hn	1
+及	ey;iz	1
+下	gh;iz	2
+与	gn;gd	1
+夹	gu;wi	1
+吗	kc;gz	2
+呢	kn;xn	1
+近	rp;kz	1
+可	sk;dz	1
+哥	sk;sk	1
+根	sv;ey	1
+并	ua;jz	3
+将	uq;fy	1
+会	wf;cu	2
+值	wf;hg	1
+你	wq;iy	2
+终	xt;uy	1
+功能	al;nz ce;xx	1
+获取	aq;td bc;yz	1
+函数	bi;bk ov;ty	2
+难道	cw;yg ut;hp	1
+有些	de;fz hx;ff	1
+感觉	dg;kn ip;mq	1
+存在	dh;bd dh;fd	0
+万象	dn;vz qj;eu	3
+克隆	dq;bz bt;gg	2
+确保	dq;eh wk;sy	2
+脚本	ef;cb sg;dz	4
+用于	et;nh gf;kz	1
+用来	et;nh go;iz	1
+用以	et;nh ny;wy	1
+需要	fd;mj sv;fz	0
+进行	fj;pk tf;hh	1
+进入	fj;pk ty;iz	2
+五笔	gg;hg tt;fn	2
+一下	gg;ll gh;iz	3
+一键	gg;ll qv;fp	1
+一个	gg;ll wh;jz	1
+不再	gi;iz gm;fd	0
+不是	gi;iz jg;hu	2
+不变	gi;iz yo;cu	1
+更新	gj;qi us;rh	5
+更好	gj;qi vb;gz	1
+整句	gk;ih qk;dz	2
+列表	gq;jh ge;uz	1
+上面	hh;gg dm;jd	1
+目录	hh;hh vi;uz	1
+当前	iv;fz ue;jj	1
+最近	jb;cu rp;kz	3
+电脑	jn;vz ey;bh	2
+中文	kh;kz yy;gy	1
+路径	kh;tk tc;ag	2
+转换	lf;ny rq;md	3
+默认	lf;od yw;yz	1
+回答	lk;dz tw;gk	1
+逻辑	lq;pi lk;bg	2
+输出	lw;gj bm;kz	2
+已经	nn;nn xc;ag	3
+以上	ny;wy hh;gg	1
+精简	og;eg tu;jf	1
+字段	pb;fz wd;mc	0
+安装	pv;fz uf;ye	2
+空间	pw;af uj;dz	0
+解释	qe;vh to;ch	1
+名称	qk;fz tq;iy	1
+排序	rd;jd yc;bk	3
+操作	rk;ks wt;hf	0
+所需	rn;rh fd;mj	1
+拉取	ru;gz bc;yz	5
+执行	rv;yy tf;hh	1
+可以	sk;dz ny;wy	2
+覆盖	st;tt ug;lf	1
+生成	tg;dz dn;nt	2
+重复	tg;jf tj;tu	2
+自行	th;dz tf;hh	0
+怎么	th;fn tc;uz	1
+版本	th;gc sg;dz	1
+处理	th;iz gj;fg	2
+各个	tk;fz wh;jz	0
+我的	tr;nt rq;yy	1
+简单	tu;jf uj;fj	1
+单个	uj;fj wh;jz	1
+问题	uk;dz jg;hm	1
+即可	vc;bh sk;dz	1
+代码	wa;yz dc;gz	1
+仓库	wb;bz yl;kz	1
+优化	wd;nn wx;nz	2
+命名	wg;kb qk;fz	0
+合并	wg;kf ua;jz	2
+使用	wg;kq et;nh	3
 你好	wq;iy vb;gz	1
+分组	wv;bz xe;gg	0
+分级	wv;bz xe;yy	1
+含义	wy;nk yq;iz	1
+主要	yg;dz sv;fz	1
+调整	ym;fk gk;ih	0
+词典	yn;gk ma;wu	2
+词库	yn;gk yl;kz	2
+这行	yp;iz tf;hh	1
+这种	yp;iz tk;hh	1
+这段	yp;iz wd;mc	1
+这个	yp;iz wh;jz	3
+放在	yt;yz dh;fd	1
+说明	yu;kq je;gz	1
+方式	yy;gn aa;dz	0
+文恰	yy;gy nw;gk	1
+文件	yy;gy wr;hh	4
+也不用	bn;hn gi;iz et;nh	1
+对应的	cf;yz yi;dz rq;yy	1
+不需要	gi;iz fd;mj sv;fz	1
+是不是	jg;hu gi;iz jg;hu	2
+之前的	pp;pp ue;jj rq;yy	1
+等价于	tf;fu ww;jh gf;kz	1
+等价的	tf;fu ww;jh rq;yy	1
+前提下	ue;jj rj;gh gh;iz	1
+那些事	vf;bh hx;ff gk;vh	1
+这一段	yp;iz gg;ll wd;mc	3
+该目录	yy;nw hh;hh vi;uz	1
+万象词库	dn;vz qj;eu yn;gk yl;kz	3
+五笔整句	gg;hg tt;fn gk;ih qk;dz	2
+不再需要	gi;iz gm;fd fd;mj sv;fz	1
+当前脚本	iv;fz ue;jj ef;cb sg;dz	1
+解释一下	qe;vh to;ch gg;ll gh;iz	1
+可以存在	sk;dz ny;wy dh;bd dh;fd	1
+自行调整	th;dz tf;hh ym;fk gk;ih	1
+处理方式	th;iz gj;fg yy;gn aa;dz	1
+各个字段	tk;fz wh;jz pb;fz wd;mc	1
+命名空间	wg;kb qk;fz pw;af uj;dz	1
+使用说明	wg;kq et;nh yu;kq je;gz	1
+分组操作	wv;bz xe;gg rk;ks wt;hf	1
+这个函数	yp;iz wh;jz bi;bk ov;ty	1

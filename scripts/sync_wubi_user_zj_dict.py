@@ -121,7 +121,7 @@ def combine(out_dir):
                              key=lambda x: (x[1], x[0]))  # 先按编码排序，再按汉字排序
                 for word, _, value in group:
                     o.write(f'{word}\t{value}\n')
-            print(f'✅ 已合并处理生成 {word_len} 字词语')
+            print(f'☑️  已合并处理生成 {word_len} 字词语')
         print('✅  » 已合并生成用户词典 %s' % (out_dir / out_file))
 
 

@@ -1,4 +1,5 @@
-import os
+# 当前脚本用于拉取万象词库的最近更新，并进行「转换 ➭ 合并 ➭ 排序」处理，以
+# 生成所需的五笔整句词库 dicts/wubi86_zj.dict.yaml
 import re
 import subprocess
 import hashlib
@@ -102,6 +103,7 @@ def filter_8105(src_dir: Path, out_file: Path):
     """过滤并合并五笔码表，保持按词长排序"""
     dict_num = 0
     res_dict = {}
+    res_dict_code = defaultdict(set)
     tab_split_re = re.compile(r'\t+')
     word_len_groups = {}
     
@@ -125,13 +127,10 @@ def filter_8105(src_dir: Path, out_file: Path):
                     word_len = len(word)
                     
                     try:
-                        if word not in res_dict:
+                        if word not in res_dict or code not in res_dict_code[word]:
                             res_dict[word] = {code}
-                            if word_len not in word_len_groups:
-                                word_len_groups[word_len] = []
-                            word_len_groups[word_len].append(f"{word}\t{code}\t{weight}\n")
-                        elif code not in res_dict[word]:
-                            res_dict[word].add(code)
+                            res_dict_code[word].add(code)
+                            
                             if word_len not in word_len_groups:
                                 word_len_groups[word_len] = []
                             word_len_groups[word_len].append(f"{word}\t{code}\t{weight}\n")
@@ -147,9 +146,9 @@ def filter_8105(src_dir: Path, out_file: Path):
         group_lines = word_len_groups[word_len]
         output_lines.extend(group_lines)
         line_count_sum += len(group_lines)
-        print(f'✅  » 已合并处理生成 {word_len} 字词语，共计 {len(group_lines)} 行')
+        print(f'☑️  已合并处理生成 {word_len} 字词语，共计 {len(group_lines)} 行')
     
-    print(f'☑️  共生成 {line_count_sum} 行数据')
+    print(f'✅ » 共生成 {line_count_sum} 行数据')
     
     # 写入输出文件
     out_file.parent.mkdir(parents=True, exist_ok=True)
@@ -161,16 +160,6 @@ def filter_8105(src_dir: Path, out_file: Path):
         o.writelines(output_lines)
 
 
-# 排序现有标准词库
-# created by Jack Liu <https://aituyaa.com>
-# 
-from pathlib import Path
-from header import get_header_sort
-from timer import timer
-
-
-
-
 def get_md5(text: str) -> str:
     """计算字符串的 MD5 哈希值"""
     md5 = hashlib.md5()  # 创建 MD5 对象
@@ -178,7 +167,7 @@ def get_md5(text: str) -> str:
     return md5.hexdigest()  # 返回 32 位 16 进制字符串
 
 @timer
-def combine(src_dir, out_dir, dict_start):
+def sort_dict(src_dir, out_dir, dict_start):
     res_dict = {}
     lines_total = []
 
@@ -235,15 +224,15 @@ def combine(src_dir, out_dir, dict_start):
                              key=lambda x: (x[1], x[0]))  # 先按编码排序，再按汉字排序
                 for word, _, value in group:
                     o.write(f'{word[:-32]}\t{value}\n')
-            print(f'✅ 已排序处理生成 {word_len - 32} 字词语')
-        print('☑️  » 已排序生成用户词典 %s' % (out_dir / f'{dict_start}.dict.yaml'))
+            print(f'☑️  已排序处理生成 {word_len - 32} 字词语')
+        print('✅ » 已排序生成用户词典 %s' % (out_dir / f'{dict_start}.dict.yaml'))
 
 
 
 
 if __name__ == "__main__":
     proj_dir = Path(__file__).resolve().parent.parent
-    work_dir = ".temp"
+    work_dir = "../.temp_rime"
     
     # 同步仓库
     repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
@@ -269,4 +258,4 @@ if __name__ == "__main__":
     dict_start = 'wubi86_zj'
     print('\n🔜  === 开始排序处理词库文件 ===')
     # 排序处理至用户词典
-    combine(src_dir, out_dir, dict_start)
+    sort_dict(src_dir, out_dir, dict_start)

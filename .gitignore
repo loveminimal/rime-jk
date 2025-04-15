@@ -5,3 +5,4 @@
 user.yaml
 __pycache__
 *.gram
+.temp

@@ -16,134 +16,304 @@ version: 2025.04
 sort: by_weight
 use_preset_vocabulary: false
 ...
-也	bn;hn	1
+也	bn;hn	2
+对	cf;yz	1
+码	dc;gz	2
+三	dg;gg	1
+面	dm;jd	0
+成	dn;nt	1
+用	et;nh	2
 及	ey;iz	1
-下	gh;iz	2
+去	fc;uz	1
+二	fg;gz	1
+壹	fp;gu	1
+过	fp;iz	1
+于	gf;kz	1
+五	gg;hg	1
+下	gh;iz	3
 与	gn;gd	1
 夹	gu;wi	1
+没	im;cy	1
 吗	kc;gz	2
 呢	kn;xn	1
+啥	kw;fk	1
+四	lh;ng	1
+加	lk;gz	1
+把	rc;nz	1
+看	rh;fz	1
 近	rp;kz	1
+换	rq;md	3
+的	rq;yy	0
+打	rs;hz	3
+搞	ry;mk	1
 可	sk;dz	1
 哥	sk;sk	1
 根	sv;ey	1
+长	ta;yi	1
+短	td;gu	1
+积	tk;wy	1
+很	tv;ey	2
 并	ua;jz	3
 将	uq;fy	1
-会	wf;cu	2
+会	wf;cu	4
 值	wf;hg	1
+个	wh;jz	1
+候	wh;nd	1
+但	wj;gg	2
 你	wq;iy	2
+像	wq;je	1
 终	xt;uy	1
+比	xx;nz	2
+就	yi;dn	5
+高	ym;kf	1
+话	yt;dg	1
+节奏	ab;jz dw;gd	2
+其实	ad;wu pu;du	2
+其后	ad;wu rg;kd	0
 功能	al;nz ce;xx	1
 获取	aq;td bc;yz	1
 函数	bi;bk ov;ty	2
+也是	bn;hn jg;hu	1
+双拼	cc;yz ru;ah	4
+对于	cf;yz gf;kz	1
 难道	cw;yg ut;hp	1
+大厂	dd;dd dg;tz	1
+有用	de;fz et;nh	1
 有些	de;fz hx;ff	1
-感觉	dg;kn ip;mq	1
-存在	dh;bd dh;fd	0
-万象	dn;vz qj;eu	3
+有的	de;fz rq;yy	1
+感觉	dg;kn ip;mq	4
+存在	dh;bd dh;fd	1
+而且	dm;jj eg;dz	1
+万象	dn;vz qj;eu	4
 克隆	dq;bz bt;gg	2
 确保	dq;eh wk;sy	2
+原理	dr;ii gj;fg	1
+奇奇	ds;kf ds;kf	0
 脚本	ef;cb sg;dz	4
 用于	et;nh gf;kz	1
 用来	et;nh go;iz	1
 用以	et;nh ny;wy	1
+用的	et;nh rq;yy	1
+用户	et;nh yn;ez	1
+运算	fc;pi th;aj	1
 需要	fd;mj sv;fz	0
+二简	fg;gz tu;jf	1
+十分	fg;hz wv;bz	0
+直接	fh;fz ru;vg	1
 进行	fj;pk tf;hh	1
 进入	fj;pk ty;iz	2
-五笔	gg;hg tt;fn	2
+过程	fp;iz tk;gg	1
+都是	ft;jb jg;hu	2
+替换	fw;fj rq;md	1
+替代	fw;fj wa;yz	1
+规则	fw;mq mj;hz	1
+开了	ga;kz bn;hz	2
+五笔	gg;hg tt;fn	5
+一致	gg;ll gc;ft	1
 一下	gg;ll gh;iz	3
+一些	gg;ll hx;ff	5
 一键	gg;ll qv;fp	1
+一简	gg;ll tu;jf	1
 一个	gg;ll wh;jz	1
+不过	gi;iz fp;iz	1
 不再	gi;iz gm;fd	0
-不是	gi;iz jg;hu	2
+不是	gi;iz jg;hu	4
+不会	gi;iz wf;cu	1
 不变	gi;iz yo;cu	1
 更新	gj;qi us;rh	5
 更好	gj;qi vb;gz	1
-整句	gk;ih qk;dz	2
+囊括	gk;he rt;dg	1
+整句	gk;ih qk;dz	10
+现在	gm;qn dh;fd	3
+两个	gm;ww wh;jz	1
+来说	go;iz yu;kq	1
 列表	gq;jh ge;uz	1
+虎码	ha;mv dc;gz	1
 上面	hh;gg dm;jd	1
 目录	hh;hh vi;uz	1
+添加	ig;dn lk;gz	1
+没有	im;cy de;fz	2
 当前	iv;fz ue;jj	1
 最近	jb;cu rp;kz	3
+里面	jf;dz dm;jd	1
+时候	jf;yz wh;nd	1
+日常	jj;jj ip;kh	1
+映射	jm;dy tm;df	1
 电脑	jn;vz ey;bh	2
 中文	kh;kz yy;gy	1
 路径	kh;tk tc;ag	2
-转换	lf;ny rq;md	3
+虽然	kj;uz qd;ou	2
+啥用	kw;fk et;nh	2
+只有	kw;uz de;fz	1
+因为	ld;iz yl;yi	3
+转换	lf;ny rq;md	4
 默认	lf;od yw;yz	1
 回答	lk;dz tw;gk	1
 逻辑	lq;pi lk;bg	2
+困难	ls;iz cw;yg	0
 输出	lw;gj bm;kz	2
-已经	nn;nn xc;ag	3
+输入	lw;gj ty;iz	3
+同样	mg;kd su;dh	1
+刚需	mq;jh fd;mj	1
+已经	nn;nn xc;ag	4
+习惯	nu;dz nx;fm	1
 以上	ny;wy hh;gg	1
+以前	ny;wy ue;jj	1
 精简	og;eg tu;jf	1
+字根	pb;fz sv;ey	1
 字段	pb;fz wd;mc	0
+字词	pb;fz yn;gk	1
+完善	pf;qb ud;uk	1
+完全	pf;qb wg;fz	1
+之前	pp;pp ue;jj	1
+补充	pu;hy yc;qb	1
 安装	pv;fz uf;ye	2
 空间	pw;af uj;dz	0
 解释	qe;vh to;ch	1
+句子	qk;dz bb;bb	3
 名称	qk;fz tq;iy	1
 排序	rd;jd yc;bk	3
 操作	rk;ks wt;hf	0
+所有	rn;rh de;fz	1
 所需	rn;rh fd;mj	1
+拆分	rr;yy wv;bz	1
+拼音	ru;ah uj;fz	2
 拉取	ru;gz bc;yz	5
 执行	rv;yy tf;hh	1
-可以	sk;dz ny;wy	2
+相关	sh;gz ud;uz	1
+可能	sk;dz ce;xx	2
+可以	sk;dz ny;wy	4
 覆盖	st;tt ug;lf	1
+长词	ta;yi yn;gk	1
+短板	td;gu sr;cy	1
+短词	td;gu yn;gk	3
+选重	tf;qp tg;jf	1
 生成	tg;dz dn;nt	2
+重要	tg;jf sv;fz	1
 重复	tg;jf tj;tu	2
+自己	th;dz nn;gn	1
 自行	th;dz tf;hh	0
 怎么	th;fn tc;uz	1
 版本	th;gc sg;dz	1
 处理	th;iz gj;fg	2
 各个	tk;fz wh;jz	0
+移植	tq;qy sf;hg	1
+我是	tr;nt jg;hu	1
 我的	tr;nt rq;yy	1
+简直	tu;jf fh;fz	1
 简单	tu;jf uj;fj	1
+很像	tv;ey wq;je	1
+并击	ua;jz fm;kz	1
 单个	uj;fj wh;jz	1
-问题	uk;dz jg;hm	1
+意义	uj;nu yq;iz	1
+部分	uk;bh wv;bz	0
+问题	uk;dz jg;hm	2
+总有	uk;nu de;fz	0
+好用	vb;gz et;nh	1
 即可	vc;bh sk;dz	1
+那个	vf;bh wh;jz	1
+如果	vk;gz js;iz	2
 代码	wa;yz dc;gz	1
 仓库	wb;bz yl;kz	1
 优化	wd;nn wx;nz	2
+舒服	wf;kb eb;cy	1
+全码	wg;fz dc;gz	4
 命名	wg;kb qk;fz	0
 合并	wg;kf ua;jz	2
-使用	wg;kq et;nh	3
+使用	wg;kq et;nh	10
+但是	wj;gg jg;hu	1
+保持	wk;sy rf;fy	1
+保证	wk;sy yg;hg	1
 你好	wq;iy vb;gz	1
+体验	ws;gg cw;gi	1
 分组	wv;bz xe;gg	0
 分级	wv;bz xe;yy	1
 含义	wy;nk yq;iz	1
+红色	xa;gz qc;bz	0
+绝对	xq;cn cf;yz	1
+毕竟	xx;fj uj;qb	1
+编码	xy;na dc;gz	1
 主要	yg;dz sv;fz	1
+就是	yi;dn jg;hu	3
+就行	yi;dn tf;hh	2
+就好	yi;dn vb;gz	1
 调整	ym;fk gk;ih	0
+词频	yn;gk hi;dm	1
 词典	yn;gk ma;wu	2
-词库	yn;gk yl;kz	2
+词组	yn;gk xe;gg	2
+词语	yn;gk yg;kg	2
+词库	yn;gk yl;kz	6
+变频	yo;cu hi;dm	1
+这点	yp;iz hk;ou	2
 这行	yp;iz tf;hh	1
 这种	yp;iz tk;hh	1
 这段	yp;iz wd;mc	1
-这个	yp;iz wh;jz	3
+这个	yp;iz wh;jz	9
 放在	yt;yz dh;fd	1
 说明	yu;kq je;gz	1
 方式	yy;gn aa;dz	0
+方案	yy;gn pv;su	1
 文恰	yy;gy nw;gk	1
-文件	yy;gy wr;hh	4
+文件	yy;gy wr;hh	6
+节奏感	ab;jz dw;gd dg;kn	1
+其实在	ad;wu pu;du dh;fd	1
+其后面	ad;wu rg;kd dm;jd	1
 也不用	bn;hn gi;iz et;nh	1
-对应的	cf;yz yi;dz rq;yy	1
+对应的	cf;yz yi;dz rq;yy	2
+大厂的	dd;dd dg;tz rq;yy	2
+大多数	dd;dd qq;uz ov;ty	1
+三字词	dg;gg pb;fz yn;gk	1
+在这个	dh;fd yp;iz wh;jz	1
+尤其是	dn;vz ad;wu jg;hu	1
+玩意儿	gf;qn uj;nu qt;nz	1
+一些字	gg;ll hx;ff pb;fz	1
+一样的	gg;ll su;dh rq;yy	1
+一个样	gg;ll wh;jz su;dh	0
 不需要	gi;iz fd;mj sv;fz	1
-是不是	jg;hu gi;iz jg;hu	2
+不完全	gi;iz pf;qb wg;fz	1
+不错了	gi;iz qa;jg bn;hz	1
+不可能	gi;iz sk;dz ce;xx	1
+再加上	gm;fd lk;gz hh;gg	1
+是不是	jg;hu gi;iz jg;hu	3
+只用了	kw;uz et;nh bn;hz	1
+只需要	kw;uz fd;mj sv;fz	1
+只不过	kw;uz gi;iz fp;iz	3
+辅助码	lg;ey eg;ln dc;gz	1
+输入法	lw;gj ty;iz if;cy	1
+怪怪的	nc;fg nc;fg rq;yy	0
 之前的	pp;pp ue;jj rq;yy	1
+看编码	rh;fz xy;na dc;gz	1
+打全码	rs;hz wg;fz dc;gz	1
 等价于	tf;fu ww;jh gf;kz	1
 等价的	tf;fu ww;jh rq;yy	1
+我现在	tr;nt gm;qn dh;fd	1
+每个字	tx;gu wh;jz pb;fz	1
 前提下	ue;jj rj;gh gh;iz	1
+单个字	uj;fj wh;jz pb;fz	1
 那些事	vf;bh hx;ff gk;vh	1
+那么多	vf;bh tc;uz qq;uz	1
+弥补了	xq;iy pu;hy bn;hz	1
 这一段	yp;iz gg;ll wd;mc	3
+这一个	yp;iz gg;ll wh;jz	1
+这些字	yp;iz hx;ff pb;fz	1
 该目录	yy;nw hh;hh vi;uz	1
-万象词库	dn;vz qj;eu yn;gk yl;kz	3
-五笔整句	gg;hg tt;fn gk;ih qk;dz	2
+万象词库	dn;vz qj;eu yn;gk yl;kz	6
+十分困难	fg;hz wv;bz ls;iz cw;yg	1
+五笔整句	gg;hg tt;fn gk;ih qk;dz	4
 不再需要	gi;iz gm;fd fd;mj sv;fz	1
 当前脚本	iv;fz ue;jj ef;cb sg;dz	1
 解释一下	qe;vh to;ch gg;ll gh;iz	1
+打不出来	rs;hz gi;iz bm;kz go;iz	0
 可以存在	sk;dz ny;wy dh;bd dh;fd	1
 自行调整	th;dz tf;hh ym;fk gk;ih	1
 处理方式	th;iz gj;fg yy;gn aa;dz	1
 各个字段	tk;fz wh;jz pb;fz wd;mc	1
+总有一些	uk;nu de;fz gg;ll hx;ff	1
 命名空间	wg;kb qk;fz pw;af uj;dz	1
 使用说明	wg;kq et;nh yu;kq je;gz	1
 分组操作	wv;bz xe;gg rk;ks wt;hf	1
+红色部分	xa;gz qc;bz uk;bh wv;bz	1
 这个函数	yp;iz wh;jz bi;bk ov;ty	1
+也是一个样	bn;hn jg;hu gg;ll wh;jz su;dh	1
+奇奇怪怪的	ds;kf ds;kf nc;fg nc;fg rq;yy	1
+打不出来的	rs;hz gi;iz bm;kz go;iz rq;yy	1

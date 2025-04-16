@@ -84,6 +84,10 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
 
                 word, _, weight = parts[0], parts[1], parts[2]
                 
+                # 8105 过滤器开关 - is_filter_8105
+                if is_filter_8105 and any(char not in wubi86_8105_map for char in word):
+                    continue
+
                 try:
                     wubi_code = get_wubi_code(word)
                     valid_entries.add(f"{word}\t{wubi_code}\t{weight}\n")
@@ -233,6 +237,9 @@ def sort_dict(src_dir, out_dir, dict_start):
 if __name__ == "__main__":
     proj_dir = Path(__file__).resolve().parent.parent
     work_dir = "../.temp_rime"
+
+    # 是否开启 8105 通规字字符范围过滤
+    is_filter_8105 = True
     
     # 同步仓库
     repository_url = "https://github.com/amzxyz/rime_wanxiang.git"

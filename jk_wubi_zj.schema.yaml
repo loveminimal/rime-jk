@@ -142,7 +142,7 @@ traditionalize:
   __include: jk.yaml:/traditionalize
 
 #语法模型
-# __include: octagram
+__include: octagram
 octagram:
   __patch:
     grammar:

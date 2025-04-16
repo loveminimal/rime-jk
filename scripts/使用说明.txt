@@ -1,5 +1,5 @@
 --------------------------
-主要脚本 x.py
+主要脚本 fetch_wubi86_zj_dict.py
 --------------------------
 
 说明：
@@ -12,7 +12,7 @@
 2. 确保已经安装 python 3.x 版本
 
 - 将 scripts 文件夹放在你的 Rime 根目录下；
-- 进入该目录执行 python x.py 即可
+- 进入该目录执行 python fetch_wubi86_zj_dict.py 即可
 
 默认文件会生成在 Rime/dicts/wubi86_zj.dict.yaml
 
@@ -24,7 +24,7 @@
 
 
 --------------------------
-主要脚本 t.py
+主要脚本 fetch_tiger_zj_dict.py
 --------------------------
 
 说明：使用方法同上

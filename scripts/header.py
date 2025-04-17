@@ -2,6 +2,27 @@ from datetime import datetime
 
 # --- 用户词典同步表头 ---
 # 
+def get_header_common(file_name):
+    header = f'''
+# Rime dictionary - {file_name}
+# encoding: utf-8
+# 
+# Created by:
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+---
+name: {'.'.join(file_name.split('.')[:-2])}
+version: {datetime.now().date().strftime("%Y.%m")}
+sort: by_weight
+use_preset_vocabulary: false
+...
+'''
+    return header.strip() + '\n'
+
+
+# --- 用户词典同步表头 ---
+# 
 def get_header_sync(file_name):
     header = f'''
 # Rime dictionary - {file_name}

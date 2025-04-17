@@ -18,6 +18,7 @@ from timer import timer
 from tiger_map import tiger_map
 from wubi86_8105_map import wubi86_8105_map
 from header import get_header_zj
+from header import get_header_common
 from collections import defaultdict
 
 
@@ -108,6 +109,7 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
         if valid_entries:
             output_path = out_dir / f"{file_path.stem}.yaml"
             with open(output_path, 'w', encoding='utf-8') as o:
+                o.writelines(get_header_common(f"{file_path.stem}.yaml"))
                 o.writelines(sorted(valid_entries))
 
             # print(f"  成功转换 {len(valid_entries)} 条记录，跳过 {invalid_line_count} 条无效记录")

@@ -44,7 +44,7 @@ def sync_repository(repo_url, local_path):
     if git_dir.exists():
         print(f"仓库已存在于 {local_path}")
         print(f"🔜  正在拉取最新更新...")
-        if run_git_command(["pull"], cwd=local_path):
+        if run_git_command(["pull", "--depth=1"], cwd=local_path):
             print("✅  » 拉取更新成功")
         else:
             print("🚫  » 拉取更新失败")

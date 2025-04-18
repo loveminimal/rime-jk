@@ -205,6 +205,7 @@ def get_md5(text: str) -> str:
 
 @timer
 def sort_dict(src_dir, out_dir, dict_start):
+    """分组排序处理用户词典"""
     res_dict = {}
     lines_total = []
 

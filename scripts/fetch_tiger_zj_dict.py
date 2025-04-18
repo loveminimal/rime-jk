@@ -10,6 +10,7 @@
 # is_filter_8105 = False
 # -------------------------------------------------------------------------
 # 
+import platform
 import re
 import subprocess
 import hashlib
@@ -20,6 +21,20 @@ from wubi86_8105_map import wubi86_8105_map
 from header import get_header_zj
 from header import get_header_common
 from collections import defaultdict
+
+def force_remove_dir(path):
+    """强制递归删除目录（兼容 Windows 和 Linux/macOS）"""
+    try:
+        if platform.system() == "Windows":
+            # Windows: 使用 rd /s /q 删除目录
+            subprocess.run(f'rd /s /q "{path}"', shell=True, check=True)
+        else:
+            # Linux/macOS: 使用 rm -rf 删除目录
+            subprocess.run(f'rm -rf "{path}"', shell=True, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️  强制删除失败: {path} (错误: {e})")
+    except Exception as e:
+        print(f"❌  未知错误: {e}")
 
 
 def run_git_command(command, cwd=None):
@@ -49,6 +64,10 @@ def sync_repository(repo_url, local_path):
             print("✅  » 拉取更新成功")
         else:
             print("🚫  » 拉取更新失败")
+            if local_path.exists():
+                force_remove_dir(local_path)
+            (f"🔜  重新浅克隆 {repo_url}...")
+            sync_repository(repo_url, local_path)
     else:
         print(f"本地仓库不存在")
         print(f"🔜  正在浅克隆 {repo_url}...")
@@ -256,7 +275,7 @@ if __name__ == "__main__":
     
     # 同步仓库
     repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
-    local_directory = proj_dir / work_dir / "rime_wanxiang"
+    local_directory = (proj_dir / work_dir / "rime_wanxiang").resolve()
     print('🔜  === 开始获取最新词库文件 ===')
     sync_repository(repository_url, local_directory)
 
@@ -276,6 +295,9 @@ if __name__ == "__main__":
     src_dir = proj_dir /  work_dir
     out_dir = proj_dir / 'dicts'
     dict_start = 'tiger_zj'
+    # 若不存在，创建
+    if not out_dir.exists():
+        out_dir.mkdir(parents=True, exist_ok=True)
     print('\n🔜  === 开始排序处理词库文件 ===')
     # 排序处理至用户词典
     sort_dict(src_dir, out_dir, dict_start)

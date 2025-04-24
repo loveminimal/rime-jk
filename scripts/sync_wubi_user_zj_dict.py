@@ -134,7 +134,7 @@ if __name__ == '__main__':
     current_dir = Path.cwd()
 
     # 是否限制词库最大词长，若为 0 ，则不限制
-    word_length_limit = 5
+    word_length_limit = 0
 
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')

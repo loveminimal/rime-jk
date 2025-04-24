@@ -139,7 +139,7 @@ use_preset_vocabulary: false
 电	jn;vz	1
 歇	jq;ww	0
 嘞	ka;fl	8
-哎	ka;qy	2
+哎	ka;qy	3
 啊	kb;sk	9
 吗	kc;gz	24
 吧	kc;nz	9
@@ -379,7 +379,7 @@ use_preset_vocabulary: false
 范围	ai;bb lf;nh	7
 薄荷	ai;gf aw;sk	2
 东东	ai;iz ai;iz	1
-东西	ai;iz sg;hg	10
+东西	ai;iz sg;hg	11
 萌伴	aj;ef wu;fh	3
 划分	aj;hz wv;bz	1
 蓝三	aj;tl dg;gg	1
@@ -420,6 +420,7 @@ use_preset_vocabulary: false
 除了	bw;ty bn;hz	3
 除非	bw;ty dj;dd	1
 除此	bw;ty hx;nz	1
+队伍	bw;yz wg;gz	0
 防止	by;nz hh;hg	0
 又出	cc;cc bm;kz	1
 又不	cc;cc gi;iz	1
@@ -461,6 +462,7 @@ use_preset_vocabulary: false
 大概	dd;dd sv;cq	2
 大竹	dd;dd tt;gh	2
 大文	dd;dd yy;gy	0
+有了	de;fz bn;hz	0
 有限	de;fz bv;ey	0
 有用	de;fz et;nh	1
 有点	de;fz hk;ou	3
@@ -719,7 +721,7 @@ use_preset_vocabulary: false
 一半	gg;ll uf;kz	1
 一次	gg;ll uq;wy	5
 一段	gg;ll wd;mc	1
-一个	gg;ll wh;jz	22
+一个	gg;ll wh;jz	23
 一位	gg;ll wu;gz	1
 一遍	gg;ll yn;mp	1
 正确	gh;dz dq;eh	1
@@ -798,6 +800,7 @@ use_preset_vocabulary: false
 速度	gk;ip ya;ci	1
 事情	gk;vh ng;eg	1
 事实	gk;vh pu;du	1
+事物	gk;vh tr;qr	0
 再往	gm;fd ty;gg	1
 再次	gm;fd uq;wy	1
 现在	gm;qn dh;fd	28
@@ -1301,6 +1304,7 @@ use_preset_vocabulary: false
 操蛋	rk;ks nh;ju	1
 操作	rk;ks wt;hf	3
 拐弯	rk;ln yo;xb	0
+制定	rm;hj pg;hu	0
 制做	rm;hj wd;ty	0
 制度	rm;hj ya;ci	0
 所有	rn;rh de;fz	3
@@ -1367,6 +1371,7 @@ use_preset_vocabulary: false
 指定	rx;jg pg;hu	2
 批发	rx;xn nt;cy	1
 搞云	ry;mk fc;uz	1
+搞定	ry;mk pg;hu	0
 搞错	ry;mk qa;jg	1
 搞毛	ry;mk tf;nv	0
 护眼	ry;nt hv;ey	1
@@ -1400,6 +1405,7 @@ use_preset_vocabulary: false
 想吃	sh;nu kt;nn	0
 想找	sh;nu ra;tz	1
 想要	sh;nu sv;fz	5
+想着	sh;nu ud;hf	0
 想坐	sh;nu ww;ff	1
 桃子	si;qn bb;bb	1
 档子	si;vg bb;bb	0
@@ -1610,6 +1616,7 @@ use_preset_vocabulary: false
 总有	uk;nu de;fz	0
 总是	uk;nu jg;hu	2
 总之	uk;nu pp;pp	1
+总会	uk;nu wf;cu	0
 弊端	um;ia um;dj	1
 商业	um;wk og;dz	4
 决定	un;wy pg;hu	0
@@ -1801,6 +1808,7 @@ use_preset_vocabulary: false
 幼稚	xl;nz tw;yg	1
 继续	xo;nn xf;nd	4
 绝对	xq;cn cf;yz	3
+终于	xt;uy gf;kz	0
 终端	xt;uy um;dj	1
 给力	xw;gk lt;nz	1
 给我	xw;gk tr;nt	3
@@ -1825,6 +1833,7 @@ use_preset_vocabulary: false
 熟悉	yb;vo to;nu	1
 衣服	ye;uz eb;cy	1
 诗句	yf;fy qk;dz	1
+计划	yf;hz aj;hz	0
 讲真	yf;jh fh;wu	1
 读取	yf;nd bc;yz	1
 主题	yg;dz jg;hm	4
@@ -1892,7 +1901,7 @@ use_preset_vocabulary: false
 这点	yp;iz hk;ou	2
 这些	yp;iz hx;ff	3
 这里	yp;iz jf;dz	2
-这是	yp;iz jg;hu	2
+这是	yp;iz jg;hu	3
 这边	yp;iz lp;vz	5
 这样	yp;iz su;dh	11
 这么	yp;iz tc;uz	2
@@ -1959,6 +1968,7 @@ use_preset_vocabulary: false
 也不用	bn;hn gi;iz et;nh	2
 也不是	bn;hn gi;iz jg;hu	1
 也不错	bn;hn gi;iz qa;jg	1
+也不行	bn;hn gi;iz tf;hh	0
 也不好	bn;hn gi;iz vb;gz	1
 也可能	bn;hn sk;dz ce;xx	1
 也可以	bn;hn sk;dz ny;wy	2
@@ -2010,6 +2020,7 @@ use_preset_vocabulary: false
 有许多	de;fz yt;fh qq;uz	2
 三字词	dg;gg pb;fz yn;gk	2
 硬编码	dg;jq xy;na dc;gz	1
+在不断	dh;fd gi;iz on;rh	0
 在家里	dh;fd pe;uz jf;dz	0
 在这个	dh;fd yp;iz wh;jz	1
 厚衣服	dj;bd ye;uz eb;cy	1
@@ -2048,6 +2059,7 @@ use_preset_vocabulary: false
 去镇上	fc;uz qf;hw hh;gg	1
 干啥嘞	fg;gh kw;fk ka;fl	1
 干什么	fg;gh wf;hz tc;uz	1
+越来越	fh;at go;iz fh;at	0
 赶不上	fh;fk gi;iz hh;gg	1
 起码在	fh;nv dc;gz dh;fd	1
 走一半	fh;uz gg;ll uf;kz	1
@@ -2137,6 +2149,7 @@ use_preset_vocabulary: false
 不影响	gi;iz jy;ie kt;mk	3
 不回去	gi;iz lk;dz fc;uz	1
 不同音	gi;iz mg;kd uj;fz	1
+不见得	gi;iz mq;bz tj;gf	1
 不敢当	gi;iz nb;ty iv;fz	1
 不断地	gi;iz on;rh fb;nz	2
 不完全	gi;iz pf;qb wg;fz	2
@@ -2147,14 +2160,17 @@ use_preset_vocabulary: false
 不够看	gi;iz qk;qq rh;fz	1
 不排除	gi;iz rd;jd bw;ty	1
 不看好	gi;iz rh;fz vb;gz	1
+不执行	gi;iz rv;yy tf;hh	0
 不想让	gi;iz sh;nu yh;gz	1
 不可能	gi;iz sk;dz ce;xx	4
 不可怕	gi;iz sk;dz nr;gz	0
 不可行	gi;iz sk;dz tf;hh	2
+不彻底	gi;iz ta;vn yq;ay	0
 不知道	gi;iz td;kg ut;hp	5
 不乱用	gi;iz td;nn et;nh	1
 不适用	gi;iz td;pd et;nh	1
 不适应	gi;iz td;pd yi;dz	1
+不行的	gi;iz tf;hh rq;yy	0
 不生效	gi;iz tg;dz uq;ty	1
 不怎么	gi;iz th;fn tc;uz	2
 不符合	gi;iz tw;fu wg;kf	1
@@ -2311,6 +2327,7 @@ use_preset_vocabulary: false
 发出来	nt;cy bm;kz go;iz	1
 发过来	nt;cy fp;iz go;iz	1
 发早了	nt;cy jh;nh bn;hz	1
+发展着	nt;cy na;ei ud;hf	0
 发愁了	nt;cy to;nu bn;hz	1
 改起来	nt;yz fh;nv go;iz	1
 买哪个	nu;du kv;fb wh;jz	1
@@ -2321,6 +2338,7 @@ use_preset_vocabulary: false
 完事了	pf;qb gk;vh bn;hz	1
 定制性	pg;hu rm;hj nt;gg	1
 定制化	pg;hu rm;hj wx;nz	2
+写出来	pg;ng bm;kz go;iz	0
 之前的	pp;pp ue;jj rq;yy	1
 实现了	pu;du gm;qn bn;hz	0
 实践是	pu;du kh;gt jg;hu	0
@@ -2361,7 +2379,7 @@ use_preset_vocabulary: false
 拆开打	rr;yy ga;kz rs;hz	2
 打出来	rs;hz bm;kz go;iz	1
 打太长	rs;hz dy;iz ta;yi	1
-打整句	rs;hz gk;ih qk;dz	1
+打整句	rs;hz gk;ih qk;dz	2
 打视频	rs;hz py;mq hi;dm	1
 打错了	rs;hz qa;jg bn;hz	1
 打的词	rs;hz rq;yy yn;gk	1
@@ -2506,6 +2524,7 @@ use_preset_vocabulary: false
 候选框	wh;nd tf;qp sa;gg	1
 修改的	wh;te nt;yz rq;yy	1
 修好了	wh;te vb;gz bn;hz	1
+修订了	wh;te ys;hz bn;hz	0
 低频词	wq;ay hi;dm yn;gk	1
 低性能	wq;ay nt;gg ce;xx	1
 您使用	wq;in wg;kq et;nh	1
@@ -2636,6 +2655,7 @@ use_preset_vocabulary: false
 放里面	yt;yz jf;dz dm;jd	1
 放外面	yt;yz qh;yz dm;jd	1
 说了算	yu;kq bn;hz th;aj	1
+说真的	yu;kq fh;wu rq;yy	1
 说过了	yu;kq fp;iz bn;hz	2
 说清楚	yu;kq ig;eg ss;nh	1
 唐人街	yv;hk ww;ww tf;fh	1
@@ -2689,6 +2709,7 @@ use_preset_vocabulary: false
 都挺好的	ft;jb rt;fp vb;gz rq;yy	1
 都使用的	ft;jb wg;kq et;nh rq;yy	1
 形形色色	ga;et ga;et qc;bz qc;bz	1
+开开心心	ga;kz ga;kz ny;ny ny;ny	0
 开机启动	ga;kz sm;nz yn;kd fc;ln	1
 天气预报	gd;iz rn;bz cb;dm rb;cy	1
 吞噬星空	gd;kf kt;aw jt;gf pw;af	3
@@ -2696,6 +2717,7 @@ use_preset_vocabulary: false
 五笔整句	gg;hg tt;fn gk;ih qk;dz	7
 一劳永逸	gg;ll ap;lb yn;ii qk;qp	1
 一起用卅	gg;ll fh;nv et;nh gk;kz	1
+一开始就	gg;ll ga;kz vc;kg yi;dn	0
 一路顺风	gg;ll kh;tk kd;my mq;iz	1
 一字两码	gg;ll pb;fz gm;ww dc;gz	1
 一般来说	gg;ll te;mc go;iz yu;kq	1
@@ -2777,6 +2799,7 @@ use_preset_vocabulary: false
 定时任务	pg;hu jf;yz wt;fg tl;bz	1
 定神看去	pg;hu py;jh rh;fz fc;uz	1
 定义不完	pg;hu yq;iz gi;iz pf;qb	1
+写出来的	pg;ng bm;kz go;iz rq;yy	1
 实在不行	pu;du dh;fd gi;iz tf;hh	1
 空穴来风	pw;af pw;uz go;iz mq;iz	1
 解释一下	qe;vh to;ch gg;ll gh;iz	1
@@ -2894,7 +2917,7 @@ use_preset_vocabulary: false
 这个听过	yp;iz wh;jz kr;hz fp;iz	1
 这个字体	yp;iz wh;jz pb;fz ws;gg	1
 这个问题	yp;iz wh;jz uk;dz jg;hm	1
-许多时候	yt;fh qq;uz jf;yz wh;nd	1
+许多时候	yt;fh qq;uz jf;yz wh;nd	2
 放进去的	yt;yz fj;pk fc;uz rq;yy	1
 说明文件	yu;kq je;gz yy;gy wr;hh	1
 说什么呢	yu;kq wf;hz tc;uz kn;xn	1
@@ -2907,6 +2930,7 @@ use_preset_vocabulary: false
 出现问题了	bm;kz gm;qn uk;dz jg;hm bn;hz	1
 也有可能是	bn;hn de;fz sk;dz ce;xx jg;hu	1
 也是一个样	bn;hn jg;hu gg;ll wh;jz su;dh	1
+也是不行的	bn;hn jg;hu gi;iz tf;hh rq;yy	1
 也是可以的	bn;hn jg;hu sk;dz ny;wy rq;yy	1
 也记不清了	bn;hn yn;nz gi;iz ig;eg bn;hz	1
 又有多少人	cc;cc de;fz qq;uz it;rz ww;ww	1
@@ -2916,6 +2940,7 @@ use_preset_vocabulary: false
 奇奇怪怪的	ds;kf ds;kf nc;fg nc;fg rq;yy	1
 真的挺重要	fh;wu rq;yy rt;fp tg;jf sv;fz	1
 都没有看过	ft;jb im;cy de;fz rh;fz fp;iz	1
+都是可以的	ft;jb jg;hu sk;dz ny;wy rq;yy	1
 开始上火了	ga;kz vc;kg hh;gg oo;oo bn;hz	1
 到底实现了	gc;fj yq;ay pu;du gm;qn bn;hz	1
 天气太热了	gd;iz rn;bz dy;iz rv;yo bn;hz	1
@@ -2927,6 +2952,7 @@ use_preset_vocabulary: false
 还是可以的	gi;pi jg;hu sk;dz ny;wy rq;yy	1
 整句的方案	gk;ih qk;dz rq;yy yy;gn pv;su	1
 现在使用的	gm;qn dh;fd wg;kq et;nh rq;yy	1
+肯定是不行	he;fz pg;hu jg;hu gi;iz tf;hh	0
 睡得怎么样	ht;gf tj;gf th;fn tc;uz su;dh	1
 没有睡觉吗	im;cy de;fz ht;gf ip;mq kc;gz	1
 遇到没有的	jm;hp gc;fj im;cy de;fz rq;yy	1
@@ -2944,12 +2970,15 @@ use_preset_vocabulary: false
 拐弯的地方	rk;ln yo;xb rq;yy fb;nz yy;gn	1
 打了标签的	rs;hz bn;hz sf;iy tw;gi rq;yy	1
 打不出来的	rs;hz gi;iz bm;kz go;iz rq;yy	1
+想写点什么	sh;nu pg;ng hk;ou wf;hz tc;uz	0
 根目录下的	sv;ey hh;hh vi;uz gh;iz rq;yy	1
 知道不知道	td;kg ut;hp gi;iz td;kg ut;hp	1
 乱七八糟的	td;nn ag;nz wt;yz og;mj rq;yy	1
 自己喜欢的	th;dz nn;gn fk;uk cq;wy rq;yy	1
+自己想要的	th;dz nn;gn sh;nu sv;fz rq;yy	0
 怎么那么多	th;fn tc;uz vf;bh tc;uz qq;uz	1
 特殊时间段	tr;ff gq;ri jf;yz uj;dz wd;mc	1
+我都不知道	tr;nt ft;jb gi;iz td;kg ut;hp	0
 问题解决了	uk;dz jg;hm qe;vh un;wy bn;hz	1
 总是忍不住	uk;nu jg;hu vy;nu gi;iz wy;gg	1
 个人开发的	wh;jz ww;ww ga;kz nt;cy rq;yy	1

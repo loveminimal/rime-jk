@@ -18,6 +18,7 @@ import_tables:
   - cn_dicts/compatible
   - cn_dicts/poetry
   - cn_dicts/place
+  - cn_dicts/people
   # - dicts/wubi86_zj     
   - dicts/wubi86_user_zj
 use_preset_vocabulary: false

@@ -416,6 +416,7 @@ use_preset_vocabulary: false
 聊天	bq;tb gd;iz	0
 陷入	bq;vg ty;iz	0
 陪伴	bu;kg wu;fh	1
+限制	bv;ey rm;hj	2
 附属	bw;fy nt;ky	1
 除了	bw;ty bn;hz	3
 除非	bw;ty dj;dd	1
@@ -1225,6 +1226,7 @@ use_preset_vocabulary: false
 希望	qd;mh yn;eg	1
 然后	qd;ou rg;kd	2
 角色	qe;jz qc;bz	1
+解除	qe;vh bw;ty	1
 解释	qe;vh to;ch	1
 解决	qe;vh un;wy	2
 针对	qf;hz cf;yz	1
@@ -1293,6 +1295,7 @@ use_preset_vocabulary: false
 看了	rh;fz bn;hz	3
 看过	rh;fz fp;iz	3
 看到	rh;fz gc;fj	6
+看来	rh;fz go;iz	1
 看见	rh;fz mq;bz	0
 看看	rh;fz rh;fz	9
 看着	rh;fz ud;hf	2
@@ -2686,6 +2689,7 @@ use_preset_vocabulary: false
 奇淫技巧	ds;kf ie;tf rf;cy ag;nn	1
 太多未知	dy;iz qq;uz fi;iz td;kg	1
 太可怜了	dy;iz sk;dz nw;yc bn;hz	1
+用的什么	et;nh rq;yy wf;hz tc;uz	1
 及时更新	ey;iz jf;yz gj;qi us;rh	1
 截止日期	fa;wy hh;hg jj;jj ad;we	1
 动漫更新	fc;ln ij;lc gj;qi us;rh	1
@@ -2872,6 +2876,7 @@ use_preset_vocabulary: false
 使用说明	wg;kq et;nh yu;kq je;gz	1
 使用方式	wg;kq et;nh yy;gn aa;dz	1
 使用方法	wg;kq et;nh yy;gn if;cy	2
+拿来用的	wg;kr go;iz et;nh rq;yy	1
 修修补补	wh;te wh;te pu;hy pu;hy	1
 似曾相识	wn;yw ul;jf sh;gz yk;wy	1
 你也可以	wq;iy bn;hn sk;dz ny;wy	1
@@ -2996,3 +3001,4 @@ use_preset_vocabulary: false
 这个可以有	yp;iz wh;jz sk;dz ny;wy de;fz	1
 谁都不知道	yw;yg ft;jb gi;iz td;kg ut;hp	1
 文件管理器	yy;gy wr;hh tp;nn gj;fg kk;dk	1
+实践是检验真理的唯一标准	pu;du kh;gt jg;hu sw;gi cw;gi fh;wu gj;fg rq;yy kw;yg gg;ll sf;iy uw;yg	1

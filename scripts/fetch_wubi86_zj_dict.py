@@ -12,6 +12,8 @@
 # word_length_limit = 0
 # -------------------------------------------------------------------------
 # 
+import os
+import platform
 import re
 import shutil
 import subprocess
@@ -44,13 +46,13 @@ def run_git_command(command, cwd=None):
     except subprocess.CalledProcessError:
         return False
     
+
 def ask_yes_no(question, timeout=5):
     answer = [None]  # 使用列表以便在嵌套函数中修改
     
     def input_thread():
         answer[0] = input(f"{question} ? (y/n) n: ").strip().lower()
 
-    
     print(f"\n--- 将在 {timeout} 秒后选择默认 ---")
     thread = threading.Thread(target=input_thread)
     thread.daemon = True
@@ -61,6 +63,35 @@ def ask_yes_no(question, timeout=5):
         return True
     else:
         return False
+
+
+def force_delete(path):
+    """暴力删除文件/文件夹（无视权限和占用）"""
+    try:
+        if not os.path.exists(path):
+            return True
+
+        # Windows系统处理
+        if platform.system() == "Windows":
+            path = os.path.abspath(path)
+            # 使用robocopy空文件夹替换（微软官方推荐）
+            temp_dir = os.path.join(os.path.dirname(path), "temp_empty")
+            os.makedirs(temp_dir, exist_ok=True)
+            subprocess.run(
+                ["robocopy", temp_dir, path, "/mir", "/njh", "/njs", "/ndl", "/np"],
+                check=True,
+                stderr=subprocess.DEVNULL
+            )
+            os.rmdir(temp_dir)
+            # 二次清理残留
+            subprocess.run(["rd", "/s", "/q", path], shell=True, stderr=subprocess.DEVNULL)
+        else:
+            # Linux/Mac系统
+            subprocess.run(["rm", "-rf", path], check=True)
+        return True
+    except Exception:
+        return False
+
 
 def sync_repository(repo_url, local_path):
     """同步Git仓库（克隆时只获取最新版本）"""
@@ -83,7 +114,6 @@ def sync_repository(repo_url, local_path):
                     print("🔜  » 继续转换 ¦ 即将开始转换...")
                 else:
                     print("\n🎉  » 不再转换 ¦ 祝你使用愉快")
-                    
             else:
                 print("✅  » 拉取更新成功")
                 
@@ -93,11 +123,10 @@ def sync_repository(repo_url, local_path):
             if local_path.exists():
                 if backup_path.exists():
                     shutil.rmtree(backup_path)
-                local_path.replace(backup_path)
+                local_path.rename(backup_path)
                 print(f"✅  » 当前仓库已备份为 { backup_path }")
             print(f"--- 重新浅克隆 ---")
             sync_repository(repo_url, local_path)
-            
     else:
         print(f"🔜  正在浅克隆 {repo_url}...")
         local_path.parent.mkdir(parents=True, exist_ok=True)
@@ -105,17 +134,19 @@ def sync_repository(repo_url, local_path):
         if run_git_command(["clone", "--depth=1", repo_url, str(local_path)]):
             print(f"✅  » 仓库已浅克隆到 {local_path}")
             sync_success = True
+            return sync_success
         else:
             print("🚫  » 克隆仓库失败")
             if backup_path.exists():
                 print(f"--- 开始恢复仓库 ---")
                 if local_path.exists():
                     shutil.rmtree(local_path)
-                backup_path.replace(local_path)
+                backup_path.rename(local_path)
                 print(f"✅  » 仓库恢复成功 {local_path}")
                 sync_success = False
-
+            return sync_success
     return sync_success
+
 
 def get_wubi_code(word: str) -> str:
     """将汉字转换为五笔编码"""

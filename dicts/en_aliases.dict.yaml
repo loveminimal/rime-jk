@@ -67,6 +67,7 @@ git push github	gtg	0
 git log --decorate --simplify-by-decoration --oneline	gtl	0
 git tag -n	gtn	0
 git push --tags	gtt	0
+git count-objects -vH	gct	0
 
 git add . && git commit -m 'perf: dicts|symbols update' && git push	grr	0
 git add . && git commit -m 'perf: some updates' && git push	gpp	0

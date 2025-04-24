@@ -1,0 +1,171 @@
+# Rime JK model
+# encoding: utf-8
+
+version: v6.6.0.lite
+
+# --- 开关 ---
+# reset: ← 0 1 →
+switches:
+  - name: ascii_mode
+    reset: 0 
+    states: [ 中文, 英文 ]
+  - name: traditionalization
+    states: [ 简体, 繁体 ]  
+    reset: 0
+  - name: emoji
+    reset: 0
+    states: [ 💀, 😄 ]
+  - name: zh2en
+    reset: 0
+    states: [ ☷译, ☰译 ]
+  - name: chaifen
+    reset: 0
+    states: [ 隐拆, 显拆 ]
+  - name: char_only
+    reset: 0
+    states: [ 词语, 单字 ]
+
+
+# --- 识别器 ---
+# -------------------------------------
+# 匹配特定的输入模式，并给它们打上标签，以便后续切分、翻译处理
+# reverse_lookup  反查标签
+# punct           自定义符号映射，响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
+# pinyin          拼音反查，取消引导词，直接五笔拼音混输「用任意大写字母隔开，防止反查混入」
+# -------------------------------------
+recognizer:
+  # import_preset: default
+  patterns:
+    reverse_lookup: "^~~[a-z]*:?$"
+    punct: "^~([0-9]|10|[A-Za-z]+)$"
+    # pinyin: "^z[Xa-z]*$"    
+    helper: "^(~hh|hH)$"
+    quick_symbol: "^;.*$" 
+
+
+# --- 标点符号处理器 --
+# -------------------------------------
+# 负责处理标点符号输入，可导入符号映射「如 symbols_z」
+# -------------------------------------
+punctuator:
+  import_preset: default
+  symbols:
+    __include: symbols_z:/symbols
+
+
+# --- 反查 ---
+# -------------------------------------
+# date_translator 日期时间输入
+# reverse_lookup  英文翻译字典
+# pinyin          拼音反查
+# custom_phrase   自定义码表
+# -------------------------------------
+date_translator:
+  jk_datetime: ~d
+
+reverse_lookup:
+  dictionary: jk_ascii
+  # prefix: "`"
+  prefix: "~~"
+  suffix: ":"
+  tips: 〔英文·反查〕
+  enable_completion: true
+  preedit_format:
+    - xlit|~| |
+
+pinyin:
+  tag: pinyin
+  dictionary: jk_pinyin
+  prefix: "z"
+  suffix: "'"
+  tips: 〔拼音·反查〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+# -------------------------------------
+# custom_phrase:
+#   db_class: stabledb        只读数据库，无法动态调频；设为 tabledb 可以动态调频
+#   enable_completion: false  补全提示
+#   enable_sentence: false    禁止造句
+# -------------------------------------
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb      
+  enable_completion: false
+  enable_sentence: false  
+  initial_quality: 99
+
+
+# --- 并击 ---
+# -------------------------------------
+# prompt_format 并击过程中套用式样「加方括号」
+# output_format 并击完成后套用式样
+# alphabet      击键一律以字母表顺序排列「字母表，包含用并击按键」
+# algebra       运算规则
+# -------------------------------------
+# --- 迷你版 ---
+chord_composer_mini:
+  prompt_format:
+    - "xform/^(.*)$/[$1]/" 
+  output_format:
+    - "xform/^(.*)左/$1/"
+    - "xform/^(.*)右$/$1/"
+    - "xform/^(.*)左(.*)右$/$1$2/"
+  # alphabet: ",."
+  algebra:
+    # --- 修改为并击键位 ---
+    # 定义左手键
+    # - xform/^er(?![左右])/y左/
+    # 定义右手键
+    # - xform/z;(?![左右])$/Z右/
+    # --- 符号快输 ---
+    # ---------------------------------
+    # 仅保留〔 ,. ➭ ~ 〕，其余使用快符
+    # ---------------------------------
+    - xform/,\.(?![左右])$/~右/
+
+
+# --- OpenCC ---
+# -------------------------------------
+# emoji 
+# zh2en   中译英
+# chaifen 五笔拆分
+# -------------------------------------
+emoji:
+  option_name: emoji
+  opencc_config: emoji.json
+  inherit_comment: false
+
+zh2en:
+  option_name: zh2en
+  opencc_config: zh2en.json
+  inherit_comment: false
+
+# -------------------------------------
+# tips  char←字 词→all
+# -------------------------------------
+chaifen:
+  opencc_config: wb_cf.json
+  option_name: chaifen
+  show_in_comment: true 
+  comment_format:     
+    - "xform/-/ /"
+  tags:     
+    - abc
+    - pinyin
+  tips: char   
+
+
+# -------------------------------------
+# 简繁切换 
+# opencc_config s2t.json → s2hk.json  | s2tw.json | s2twp.json
+# tips                   → all | char | none
+# -------------------------------------
+traditionalize:
+  option_name: traditionalization
+  opencc_config: s2tw.json
+  tips: char
+  tags: [ abc, number, gregorian_to_lunar ]

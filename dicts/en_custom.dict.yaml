@@ -1,0 +1,40 @@
+# Rime dictionary - en_custom.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是对既有英文词典的个人扩充
+# 用于自定义字符串、命令的快捷输入
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+#
+---
+name: en_custom
+version: 2025-01-07
+sort: by_weight
+use_preset_vocabulary: false
+...
+
+js	js	10000
+javascript	js	10000
+JavaScript	js	10000
+JS	js	10000
+
+es	es	10000
+ECMAScript	es	10000
+
+utf	utf	10000
+utf8	utf	10000
+utf-8	utf	10000
+UTF	utf	10000
+UTF8	utf	10000
+UTF-8	utf	10000
+UTF-16	utf	10000
+UTF-32	utf	10000
+
+py	py	10000
+python	py	10000
+python3	py	10000
+Python	py	10000
+winpty python	py	10000
+pip3	pip	10000
+

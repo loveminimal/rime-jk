@@ -1,0 +1,8 @@
+.vscode
+.idea
+/build
+*.userdb
+user.yaml
+__pycache__
+*.gram
+.temp

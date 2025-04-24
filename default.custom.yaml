@@ -1,0 +1,106 @@
+# Rime default custom settings
+# encoding: utf-8
+#
+# 覆盖程序预设的配置项「 default.yaml 」
+
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.16.3
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Tue Jun  4 16:17:26 2024"
+  rime_version: 1.11.2
+
+
+patch:
+  # --- 方案列表 ---
+  schema_list:
+    - {schema: jk_ascii}
+    - {schema: jk_wubi}
+    - {schema: jk_wubi_zj}
+
+  # --- 选单设置 ---
+  switcher/+:
+    caption: 〔方案选单〕
+    hotkeys:
+      - Control+m
+      - F4
+    option_list_separator: ' | ' 
+
+  # --- 候选项数 --- 
+  menu/page_size: 4
+
+  # --- 标点符号 --
+  punctuator/+:
+    half_shape/+:
+      ',' : { commit: ， }
+      '.' : { commit: 。 }
+      '<' : [ 《, '<' ]
+      '>' : [ 》, '>' ]
+      '/' : '/'
+      '?' : { commit: ？ }
+      ';' : { commit: ； }
+      ':' : { commit: ： }
+      '''' : { pair: [ '‘', '’' ] }
+      '"' : { pair: [ '“', '”' ] }
+      '\' :  、
+      '|' : [ ·, '|', '¦' ]
+      '`' : '`'
+      '~' : ['~']
+      '!' : { commit: ！ }
+      '@' : '@'
+      '#' : '#'
+      '%' : '%'
+      '$' : [ '¥', '$' ]
+      '^' : { commit: …… }
+      '&' : '&'
+      '*' : '*'
+      '(' : （
+      ')' : ）
+      '-' : '-'
+      '_' : '_'
+      '+' : '+'
+      '=' : '='
+      '[' : [ 「 , '[',〔 ,【  ]
+      ']' : [  」,']' , 〕, 】 ]
+      '{' : '{'
+      '}' : '}'
+
+  # --- 键位绑定 ---
+  key_binder/+:
+    bindings/+:
+      - { when: always, accept: "Control+bracketleft", toggle: traditionalization }
+      - { when: always, accept: "Control+bracketright", toggle: zh2en }            
+      - { when: always, accept: "Control+backslash", toggle: chaifen }             
+      - { when: always, accept: Control+apostrophe, toggle: emoji }
+      - { when: always, accept: Control+t, toggle: char_only }
+      - { when: always, accept: Control+space, toggle: ascii_mode }                
+      - { when: always, accept: Control+comma, select: .next }                     
+      - { when: always, accept: Control+period, send: '~' }
+      - { when: has_menu, accept: semicolon, send: 2 }                             
+      - { when: has_menu, accept: apostrophe, send: 3 }                            
+      - { when: has_menu, accept: slash, send: 4 }                                 
+      - { when: paging, accept: comma, send: Page_Up }                             
+      - { when: has_menu, accept: period, send: Page_Down }                        
+      - { when: composing, accept: Control+k, send: Up }                           
+      - { when: composing, accept: Control+j, send: Down }                         
+
+      - { when: composing, accept: Control+u, send: Return }
+      - { when: composing, accept: Control+i, send: Return }
+      - { when: composing, accept: Control+l, send: Return }
+      - { when: composing, accept: Control+comma, send: Return }
+
+      - { when: always, accept: Control+u, send: '_' }
+      - { when: always, accept: Control+i, send: '-' }
+      - { when: always, accept: Control+o, send: '=' }
+      # - { when: always, accept: Control+p, send: '+' }
+      # 跳至特定音节，tab 回到末尾
+      - { when: composing, accept: "Tab", send: "Control+Right" }
+      - { when: composing, accept: Control+1, send_sequence: '{Home}{Shift+Right}' }
+      - { when: composing, accept: Control+2, send_sequence: '{Home}{Shift+Right}{Shift+Right}' }
+      - { when: composing, accept: Control+3, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}' }
+      - { when: composing, accept: Control+4, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
+      - { when: composing, accept: Control+5, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
+      - { when: composing, accept: Control+6, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
+      - { when: composing, accept: Control+7, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
+      - { when: composing, accept: Control+8, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
+      - { when: composing, accept: Control+9, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }

@@ -1,0 +1,32 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.16.3
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Fri Dec  6 10:55:38 2024"
+  rime_version: 1.11.2
+patch:
+  __include: style.yaml:aqjk
+  __patch:
+    style/+:
+      color_scheme: aqjk
+      font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      font_point: 11 
+      label_font_point: 9
+      comment_font_point: 9
+      label_format: "%s." #"%s."
+      # mark_text: "♪"
+      # horizontal: true 
+      # 隐藏编码行
+      # preedit_type: preview
+      # inline_preedit: true
+      # --- 鼠标操作 ---------------------------------------------
+      # hover_type       鼠标悬浮候选 ➭ none、hilite、semi_hilite
+      # click_to_capture 点击候选创建截图
+      # ----------------------------------------------------------
+      hover_type: none
+      click_to_capture: true
+      layout:
+        __include: style.yaml:/layout_v
+        # margin_y: -1

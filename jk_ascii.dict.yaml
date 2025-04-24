@@ -1,0 +1,15 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 挂载英文输入方案的词库
+#
+
+---
+name: jk_ascii
+version: 2023.05
+sort: by_weight
+import_tables:
+  - dicts/en
+  - dicts/en_custom
+  - dicts/en_aliases
+...

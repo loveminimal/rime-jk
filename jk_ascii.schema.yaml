@@ -1,0 +1,117 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jk_ascii
+  name: 英文·知心
+  author: 
+    - 发明人 Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心英文，一款快速输入数字和预设字符的键盘式输入法方案
+    - https://github.com/loveminimal/rime-jk
+  icon: "assets/pr.ico"
+  ascii_icon: 'assets/ascii.ico' 
+
+switches:
+  __include: jk.yaml:/switches
+
+engine:
+  processors:
+    - lua_processor@*quick_symbol
+    - lua_processor@*exe
+    - ascii_composer
+    - chord_composer
+    - key_binder
+    - recognizer
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - echo_translator
+    - punct_translator
+    - table_translator
+    - reverse_lookup_translator
+    - lua_translator@*schedule
+    - lua_translator@*helper
+    - lua_translator@*date_translator
+    - lua_translator@*force_gc
+  filters:
+    - lua_filter@*prettify_comment
+    - uniquifier
+
+
+speller:
+  alphabet: ·~
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+
+chord_composer:
+  __include: jk.yaml:/chord_composer_mini
+
+
+translator:
+  dictionary: jk_ascii
+  enable_sentence: false  
+  enable_user_dict: false 
+  enable_word_completion: true
+  initial_quality: 1.1    
+  comment_format: {comment}      
+
+
+punctuator:
+  import_preset: default
+  symbols:
+    __include: symbols_z:/symbols
+  half_shape: &symtable
+    ',' : { commit: ',' }
+    '.' : { commit: '.' }
+    '<' : '<'
+    '>' : '>'
+    '/' : '/'
+    '?' : { commit: '?' }
+    ';' : { commit: ';' }
+    ':' : { commit: ':' }
+    "'" : "'"
+    '"' : '"'
+    '\' : '\'
+    '|' : '|'
+    '`' : '`'
+    '~' : ['~']
+    '!' : { commit: '!' }
+    '@' : '@'
+    '#' : '#'
+    '%' : '%'
+    '$' : '$'
+    '^' : '^'
+    '&' : '&'
+    '*' : '*'
+    '(' : '('
+    ')' : ')'
+    '-' : '-'
+    '_' : '_'
+    '+' : '+'
+    '=' : '='
+    '[' : '['
+    ']' : ']'
+    '{' : '{'
+    '}' : '}'
+  full_shape: *symtable
+
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  __include: jk.yaml:/recognizer
+
+date_translator:
+  __include: jk.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk.yaml:/reverse_lookup

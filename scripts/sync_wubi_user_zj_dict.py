@@ -93,6 +93,11 @@ def combine(out_dir):
         if is_chinese_char(line[0]):
             word, code, weight = line.strip().split('\t')
             weight = int(weight)
+
+            if word_length_limit > 0 and len(word) > word_length_limit:
+                # print(f"过滤掉长词语: {word} (长度: {len(word)})")
+                continue
+
             if word not in res_dict or weight > max(res_dict_weight[word]):
                 res_dict[word] = f'{code}\t{weight}'
                 res_dict_weight[word].add(weight)
@@ -125,10 +130,11 @@ def combine(out_dir):
         print('✅  » 已合并生成用户词典 %s' % (out_dir / out_file))
 
 
-
-
 if __name__ == '__main__':
     current_dir = Path.cwd()
+
+    # 是否限制词库最大词长，若为 0 ，则不限制
+    word_length_limit = 5
 
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')

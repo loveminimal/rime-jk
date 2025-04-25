@@ -67,7 +67,7 @@ patch:
 
   # --- 键位绑定 ---
   key_binder/+:
-    bindings/+:
+    bindings:
       - { when: always, accept: "Control+bracketleft", toggle: traditionalization }
       - { when: always, accept: "Control+bracketright", toggle: zh2en }            
       - { when: always, accept: "Control+backslash", toggle: chaifen }             
@@ -80,7 +80,9 @@ patch:
       - { when: has_menu, accept: apostrophe, send: 3 }                            
       - { when: has_menu, accept: slash, send: 4 }                                 
       - { when: paging, accept: comma, send: Page_Up }                             
-      - { when: has_menu, accept: period, send: Page_Down }                        
+      # - { when: has_menu, accept: period, send: Page_Down }                        
+      - { when: paging, accept: Control+p, send: Page_Up }                           
+      - { when: has_menu, accept: Control+n, send: Page_Down }                           
       - { when: composing, accept: Control+k, send: Up }                           
       - { when: composing, accept: Control+j, send: Down }                         
 

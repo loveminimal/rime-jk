@@ -16,7 +16,6 @@ patch:
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_wubi}
-    - {schema: jk_wubi_zj}
 
   # --- 选单设置 ---
   switcher/+:
@@ -67,9 +66,9 @@ patch:
 
   # --- 键位绑定 ---
   key_binder/+:
-    bindings:
+    bindings/+:
       - { when: always, accept: "Control+bracketleft", toggle: traditionalization }
-      - { when: always, accept: "Control+bracketright", toggle: zh2en }            
+      - { when: always, accept: "Control+bracketright", toggle: zh2en }
       - { when: always, accept: "Control+backslash", toggle: chaifen }             
       - { when: always, accept: Control+apostrophe, toggle: emoji }
       - { when: always, accept: Control+t, toggle: char_only }
@@ -79,8 +78,8 @@ patch:
       - { when: has_menu, accept: semicolon, send: 2 }                             
       - { when: has_menu, accept: apostrophe, send: 3 }                            
       - { when: has_menu, accept: slash, send: 4 }                                 
-      - { when: paging, accept: comma, send: Page_Up }                             
-      # - { when: has_menu, accept: period, send: Page_Down }                        
+      - { when: paging, accept: comma, send: Page_Up }
+      - { when: has_menu, accept: period, send: '.' }                        
       - { when: paging, accept: Control+p, send: Page_Up }                           
       - { when: has_menu, accept: Control+n, send: Page_Down }                           
       - { when: composing, accept: Control+k, send: Up }                           
@@ -95,14 +94,3 @@ patch:
       - { when: always, accept: Control+i, send: '-' }
       - { when: always, accept: Control+o, send: '=' }
       # - { when: always, accept: Control+p, send: '+' }
-      # 跳至特定音节，tab 回到末尾
-      - { when: composing, accept: "Tab", send: "Control+Right" }
-      - { when: composing, accept: Control+1, send_sequence: '{Home}{Shift+Right}' }
-      - { when: composing, accept: Control+2, send_sequence: '{Home}{Shift+Right}{Shift+Right}' }
-      - { when: composing, accept: Control+3, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}' }
-      - { when: composing, accept: Control+4, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
-      - { when: composing, accept: Control+5, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
-      - { when: composing, accept: Control+6, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
-      - { when: composing, accept: Control+7, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
-      - { when: composing, accept: Control+8, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }
-      - { when: composing, accept: Control+9, send_sequence: '{Home}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}{Shift+Right}' }

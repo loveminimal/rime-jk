@@ -16,6 +16,7 @@ from collections import defaultdict
 from header import get_header_sync
 from timer import timer
 from progress import progress
+from wubi86_8105_map import wubi86_8105_map
 
 
 @timer
@@ -72,10 +73,6 @@ def convert(src_dir, out_dir):
             print('\n✅  » 已生成用户词库临时文件 %s' % (out_dir / out_file_temp))
             o.write(res)
 
-def is_chinese_char(char: str) -> bool:
-    code = ord(char)
-    return (0x4E00 <= code <= 0x9FFF)
-
 @timer
 def combine(out_dir):
     res_dict = {}
@@ -90,7 +87,7 @@ def combine(out_dir):
 
     # 去重并处理词条
     for line in set(lines_total):
-        if is_chinese_char(line[0]):
+        if line[0] in wubi86_8105_map:
             word, code, weight = line.strip().split('\t')
             weight = int(weight)
             if word not in res_dict or weight > max(res_dict_weight[word]):

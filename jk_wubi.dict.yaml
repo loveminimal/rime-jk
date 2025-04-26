@@ -21,14 +21,11 @@ encoder:
       formula: "AaBaCaZa"
 # -------------------------------------
 # wubi86      「 8105 通规字 」精炼词库
-# wubi86_wx      「 万象直转 」万象词库
-# --- 以上二选一 ----------------------
 # wubi86_user      「 养成系 」用户词库
 # wubi86_district      全国行政区域词库
 # -------------------------------------
 import_tables:
   - dicts/wubi86         
-  # - dicts/wubi86_wx    
   - dicts/wubi86_user    
   # - dicts/wubi86_district
 use_preset_vocabulary: false

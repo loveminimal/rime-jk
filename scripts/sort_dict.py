@@ -6,6 +6,7 @@ from pathlib import Path
 from collections import defaultdict
 from header import get_header_sort
 from timer import timer
+from wubi86_8105_map import wubi86_8105_map
 
 
 def is_chinese_char(char: str) -> bool:
@@ -68,6 +69,10 @@ def sort_dict(src_dir, out_dir):
             #     res_dict[word] = f'{code}\t{weight}'
             #     res_dict_weight[word].add(weight)
             
+            # 8105 过滤器开关 - is_filter_8105
+            if is_filter_8105 and any((char not in wubi86_8105_map and char not in white_list) for char in word):
+                continue
+            
             # 唯一化
             if word not in res_dict:
                 res_dict[word + get_md5(line)] = f'{code}\t{weight}'
@@ -107,6 +112,10 @@ def sort_dict(src_dir, out_dir):
 
 if __name__ == '__main__':
     current_dir = Path.cwd()
+
+    # 是否开启 8105 通规字字符范围过滤
+    is_filter_8105 = True
+    white_list = ['，']
 
     src_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\out')

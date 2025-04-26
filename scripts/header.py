@@ -1,5 +1,25 @@
 from datetime import datetime
 
+# --- 用户词典同步表头 ---
+# 
+def get_header_common(file_name):
+    header = f'''
+# Rime dictionary - {file_name}
+# encoding: utf-8
+# 
+# Created by:
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+---
+name: {'.'.join(file_name.split('.')[:-2])}
+version: {datetime.now().date().strftime("%Y.%m")}
+sort: by_weight
+use_preset_vocabulary: false
+...
+'''
+    return header.strip() + '\n'
+
 
 # --- 用户词典同步表头 ---
 # 
@@ -23,6 +43,20 @@ version: {datetime.now().date().strftime("%Y.%m")}
 sort: by_weight
 use_preset_vocabulary: false
 ...
+'''
+    return header.strip() + '\n'
+
+
+# --- 用户词典排序表头 ---
+# 
+def get_header_sort(file_name):
+    header = f'''
+# 
+# --- 说明 ---------------------------------------------
+# 该字典是按照「词长→编码长度→编码→汉字」多级分组排序
+# 运行脚本：
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sort_dict.py
+# 
 '''
     return header.strip() + '\n'
 

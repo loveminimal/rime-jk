@@ -229,6 +229,8 @@ local function schedule(input, seg, env)
             line .. "  \n" ..
             string.format("距离: %s \t< [ %02d ]天  \n", upcoming_jqs[1], jieqi_days[1]) ..
             string.format("距离: %s \t< [ %02d ]天  \n", upcoming_jqs[2], jieqi_days[2]) .. 
+            line .. "  \n" ..
+            "将喜欢的一切留在身边，这便是努力的意义！ \n" .. 
             ''
 
         -- 使用 generate_candidates 函数生成候选项

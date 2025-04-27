@@ -21,7 +21,7 @@ patch:
   switcher/+:
     caption: 〔方案选单〕
     hotkeys:
-      # - Control+m
+      - Control+m
       - F4
     option_list_separator: ' | ' 
 
@@ -80,8 +80,8 @@ patch:
       - { when: has_menu, accept: slash, send: 4 }                                 
       - { when: has_menu, accept: comma, send: ',' }
       - { when: has_menu, accept: period, send: '.' }                        
-      - { when: paging, accept: Control+m, send: Page_Up }                           
-      - { when: has_menu, accept: Control+n, send: Page_Down }                           
+      # - { when: paging, accept: Control+m, send: Page_Up }                           
+      - { when: has_menu, accept: bracketleft, send: Page_Down }                           
       - { when: composing, accept: Control+k, send: Up }                           
       - { when: composing, accept: Control+j, send: Down }                         
 

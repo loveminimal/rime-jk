@@ -1548,7 +1548,7 @@ use_preset_vocabulary: false
 基于	adgf	2
 苦逼	adgk	1
 项目	adhh	14
-其中	adkh	3
+其中	adkh	4
 基数	adov	1
 其实	adpu	13
 基本	adsg	17
@@ -2358,7 +2358,7 @@ use_preset_vocabulary: false
 开头	gaud	1
 开着	gaud	1
 弄好	gavb	2
-开始	gavc	11
+开始	gavc	12
 开启	gayn	4
 到期	gcad	1
 到了	gcbn	2
@@ -2460,7 +2460,7 @@ use_preset_vocabulary: false
 一门	gguy	2
 一段	ggwd	9
 一会	ggwf	2
-一个	ggwh	43
+一个	ggwh	44
 五个	ggwh	1
 一件	ggwr	2
 一位	ggwu	1
@@ -2751,6 +2751,7 @@ use_preset_vocabulary: false
 占比	hkxx	3
 睡了	htbn	1
 睡在	htdh	1
+睡到	htgc	1
 睡眠	hthn	1
 睡觉	htip	2
 睡醒	htsg	1
@@ -2859,7 +2860,7 @@ use_preset_vocabulary: false
 混入	ijty	1
 混合	ijwg	1
 渐近	ilrp	1
-没有	imde	73
+没有	imde	75
 没用	imet	1
 测过	imfp	1
 滑过	imfp	1
@@ -3230,7 +3231,7 @@ use_preset_vocabulary: false
 固态	lddy	1
 固定	ldpg	4
 固化	ldwx	2
-因为	ldyl	17
+因为	ldyl	18
 转码	lfdc	1
 围成	lfdn	1
 转成	lfdn	4
@@ -3264,6 +3265,7 @@ use_preset_vocabulary: false
 四码	lhdc	2
 四字	lhpb	1
 四个	lhwh	1
+四级	lhxe	1
 四方	lhyy	1
 甲方	lhyy	1
 架子	lkbb	1
@@ -4181,7 +4183,7 @@ use_preset_vocabulary: false
 权限	scbv	4
 权当	sciv	2
 梭哈	sckw	1
-权重	sctg	4
+权重	sctg	6
 棒子	sdbb	1
 顶戴	sdfa	1
 顶多	sdqq	1
@@ -4258,7 +4260,7 @@ use_preset_vocabulary: false
 可惜	skna	1
 可怕	sknr	1
 可怜	sknw	1
-可以	skny	63
+可以	skny	65
 可乐	skqi	2
 可按	skrp	1
 可要	sksv	1
@@ -5351,7 +5353,7 @@ use_preset_vocabulary: false
 序列	ycgq	2
 充满	ycia	1
 充当	yciv	1
-充电	ycjn	1
+充电	ycjn	2
 序号	yckg	1
 充分	ycwv	1
 衣服	yeeb	1
@@ -5496,7 +5498,7 @@ use_preset_vocabulary: false
 雇佣	ynwe	1
 房价	ynww	2
 记住	ynwy	3
-词组	ynxe	2
+词组	ynxe	3
 刻度	ynya	1
 废弃	ynyc	1
 词序	ynyc	1
@@ -5929,7 +5931,7 @@ use_preset_vocabulary: false
 奶油果	vijs	1
 她是谁	vjyw	1
 好几个	vmwh	1
-好家伙	vpwo	4
+好家伙	vpwo	5
 好可爱	vsep	2
 姚秋萍	vtai	1
 那就是	vyjg	1

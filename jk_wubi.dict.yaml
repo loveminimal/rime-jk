@@ -25,8 +25,8 @@ encoder:
 # wubi86_district      全国行政区域词库
 # -------------------------------------
 import_tables:
-  - dicts/wubi86         
   - dicts/wubi86_user    
+  - dicts/wubi86         
   # - dicts/wubi86_district
 use_preset_vocabulary: false
 ...
@@ -38,8 +38,21 @@ use_preset_vocabulary: false
 朙	lwme	1
 # ------------------------------------------
 # 8105 兼容字集（附录部分为王码五笔默认编码）
+# 王码五笔 2018 大一统按笔画进行了调整
+# 但鉴于旧码表仍有大批受众，这里需做一下兼容
 # ------------------------------------------
 罪	ldj	1	lhd
 罪	ldjd	1	lhdd
 非	djd	1	hdh
 非	djd	1	hdhd
+辈	djdl	1	hdhl
+悲	djdn	1	hdhn
+剕	djdj	1	hdhj
+棐	djds	1	hdhs
+蜚	djdj	1	hdhj
+翡	djdn	1	hdhn
+斐	djdy	1	hdhy
+韭	djdg	1	hdhg
+裴	djde	1	hdhe
+戈	agnt	1	agny
+我	trnt	1	trny

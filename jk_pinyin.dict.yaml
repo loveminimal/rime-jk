@@ -375,6 +375,7 @@ use_preset_vocabulary: false
 珼	bei;gm	6
 偝	bei;wu	7
 輩	bei;dj	7
+輩	bei;hd	7
 盃	bei;gi	10
 碚	bei;du	13
 貝	bei;mh	16
@@ -390,9 +391,11 @@ use_preset_vocabulary: false
 焙	bei;ou	91
 蓓	bei;aw	163
 辈	bei;dj	421
+辈	bei;hd	421
 卑	bei;rt	457
 碑	bei;dr	550
 悲	bei;dj	983
+悲	bei;hd	983
 备	bei;tl	1571
 贝	bei;mh	2074
 杯	bei;sg	2948
@@ -2823,12 +2826,14 @@ use_preset_vocabulary: false
 疿	fei;ux	0
 昲	fei;jx	0
 餥	fei;dj	0
+餥	fei;hd	0
 濷	fei;ii	0
 鯡	fei;qo	1
 襏	fei;pu	1
 曊	fei;jx	1
 蟦	fei;jf	1
 奜	fei;dj	1
+奜	fei;hd	1
 騛	fei;cn	1
 裶	fei;pu	1
 蜰	fei;ec	1
@@ -2841,13 +2846,16 @@ use_preset_vocabulary: false
 誹	fei;yd	3
 鲱	fei;qg	3
 婓	fei;dj	3
+婓	fei;hd	3
 剕	fei;dj	3
+剕	fei;hd	3
 癈	fei;uw	4
 怫	fei;nx	4
 馡	fei;tj	4
 櫠	fei;sy	5
 緋	fei;xd	5
 棐	fei;dj	8
+棐	fei;hd	8
 榧	fei;sa	10
 悱	fei;nd	11
 廢	fei;yw	12
@@ -2856,6 +2864,7 @@ use_preset_vocabulary: false
 狒	fei;qt	14
 芾	fei;ag	15
 蜚	fei;dj	18
+蜚	fei;hd	18
 淝	fei;ie	20
 俷	fei;we	22
 痱	fei;ud	24
@@ -2869,9 +2878,11 @@ use_preset_vocabulary: false
 吠	fei;kd	111
 霏	fei;fd	119
 翡	fei;dj	121
+翡	fei;hd	121
 沸	fei;ix	175
 绯	fei;xd	217
 斐	fei;dj	334
+斐	fei;hd	334
 匪	fei;ad	395
 妃	fei;vn	806
 肺	fei;eg	1611
@@ -2881,6 +2892,7 @@ use_preset_vocabulary: false
 费	fei;xj	10112
 飞	fei;nu	11468
 非	fei;dj	17475
+非	fei;hd	17475
 秎	fen;tw	0
 鐼	fen;qf	0
 竕	fen;uw	0
@@ -5582,6 +5594,7 @@ use_preset_vocabulary: false
 啾	jiu;kt	36
 僦	jiu;wy	45
 韭	jiu;dj	56
+韭	jiu;hd	56
 鹫	jiu;yi	59
 臼	jiu;vt	72
 咎	jiu;th	94
@@ -8799,6 +8812,7 @@ use_preset_vocabulary: false
 沛	pei;ig	290
 呸	pei;kg	416
 裴	pei;dj	717
+裴	pei;hd	717
 佩	pei;wm	919
 培	pei;fu	1119
 赔	pei;mu	1866

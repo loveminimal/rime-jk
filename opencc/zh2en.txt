@@ -6427,6 +6427,7 @@
 兼任	兼任 pluralism 
 兼修	兼修 minor 
 兼修学科	兼修学科 minor 
+兼容	兼容 compatible 
 兼容的	兼容的 compatible 
 兼并	兼并 annex 
 兼有	兼有 combine 

@@ -96,7 +96,7 @@ translator:
   disable_user_dict_for_patterns: 
     - "^z.*$"
   enable_completion: true     
-  enable_user_dict: true      
+  enable_user_dict: false      
   comment_format: "{comment}" 
 
 

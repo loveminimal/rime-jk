@@ -1234,7 +1234,7 @@ use_preset_vocabulary: false
 芸	afcu	1
 鞋	afff	1
 巧	agnn	1
-戈	agny	2
+戈	agny	3
 幕	ajdh	1
 慕	ajdn	1
 苟	aqkf	1
@@ -1313,6 +1313,7 @@ use_preset_vocabulary: false
 洞	imgk	1
 漏	infy	1
 常	ipkh	7
+赏	ipkm	1
 掌	ipkr	1
 觉	ipmq	6
 辉	iqpl	2
@@ -1690,6 +1691,7 @@ use_preset_vocabulary: false
 丞相	bish	1
 阳历	bjdl	1
 阳光	bjiq	1
+职责	bkgm	1
 职业	bkog	1
 阵地	blfb	1
 出动	bmfc	1
@@ -2134,6 +2136,7 @@ use_preset_vocabulary: false
 支持	fcrf	9
 去年	fcrh	1
 去掉	fcrh	2
+支撑	fcri	1
 运气	fcrn	1
 动手	fcrt	1
 支配	fcsg	1
@@ -2206,7 +2209,7 @@ use_preset_vocabulary: false
 真是	fhjg	4
 真响	fhkt	3
 赶快	fhnn	1
-真心	fhny	1
+真心	fhny	2
 真实	fhpu	3
 真的	fhrq	19
 直播	fhrt	1
@@ -2252,6 +2255,7 @@ use_preset_vocabulary: false
 南方	fmyy	1
 专职	fnbk	1
 专注	fniy	1
+专题	fnjg	1
 场景	fnjy	2
 专员	fnkm	1
 专属	fnnt	1
@@ -2365,6 +2369,7 @@ use_preset_vocabulary: false
 幸福	fupy	2
 增长	futa	1
 幸好	fuvb	3
+培训	fuyk	1
 雪中	fvkh	1
 雪亮	fvyp	1
 零散	fwae	2
@@ -2388,6 +2393,7 @@ use_preset_vocabulary: false
 开涮	gain	1
 型号	gakg	1
 开车	galg	3
+开展	gana	1
 开局	gann	2
 开发	gant	11
 开心	gany	1
@@ -2530,6 +2536,7 @@ use_preset_vocabulary: false
 下来	ghgo	4
 下班	ghgy	12
 玻璃	ghgy	1
+政治	ghic	1
 正常	ghip	6
 正是	ghjg	1
 下周	ghmf	1
@@ -2668,6 +2675,7 @@ use_preset_vocabulary: false
 囊括	gkrt	1
 事物	gktr	2
 逗笑	gktt	1
+带头	gkud	1
 带着	gkud	2
 融资	gkuq	1
 带好	gkvb	1
@@ -2716,6 +2724,7 @@ use_preset_vocabulary: false
 恶心	gony	4
 来钱	goqg	1
 来看	gorh	1
+严禁	goss	1
 严格	gost	1
 严重	gotg	1
 来自	goth	1
@@ -2851,6 +2860,7 @@ use_preset_vocabulary: false
 肖邦	iedt	1
 污染	ifiv	1
 法则	ifmj	4
+法定	ifpg	1
 法宝	ifpg	1
 清除	igbw	1
 清爽	igdq	1
@@ -2947,7 +2957,7 @@ use_preset_vocabulary: false
 沉浸	ipiv	1
 渲染	ipiv	6
 沉溺	ipix	1
-党员	ipkm	1
+党员	ipkm	2
 演员	ipkm	1
 学习	ipnu	9
 深色	ipqc	1
@@ -3150,6 +3160,7 @@ use_preset_vocabulary: false
 蜘蛛	jtjr	2
 星空	jtpw	2
 监控	jtrp	2
+监管	jttp	1
 照顾	jvdb	1
 归来	jvgo	2
 归属	jvnt	1
@@ -3508,6 +3519,7 @@ use_preset_vocabulary: false
 懂得	natj	1
 惬意	nauj	1
 异禀	nayl	1
+民族	nayt	1
 怡情	ncng	2
 剧情	ndng	1
 恢复	ndtj	3
@@ -3590,6 +3602,8 @@ use_preset_vocabulary: false
 发挥	ntrp	1
 改的	ntrq	1
 必要	ntsv	8
+发行	nttf	1
+履行	nttf	1
 改造	nttf	3
 发生	nttg	4
 必备	nttl	1
@@ -3983,6 +3997,7 @@ use_preset_vocabulary: false
 返回	rclk	14
 把它	rcpx	1
 反馈	rcqn	3
+把握	rcrn	1
 反查	rcsj	21
 反复	rctj	4
 挨个	rcwh	1
@@ -4002,6 +4017,7 @@ use_preset_vocabulary: false
 排位	rdwu	1
 排序	rdyc	16
 拥有	rede	4
+授权	resc	1
 扔给	rexw	1
 技能	rfce	1
 质量	rfjg	1
@@ -4215,6 +4231,7 @@ use_preset_vocabulary: false
 执着	rvud	1
 热闹	rvuy	5
 推荐	rwad	2
+推进	rwfj	1
 推到	rwgc	1
 推崇	rwmp	1
 失败	rwmt	2
@@ -4540,6 +4557,7 @@ use_preset_vocabulary: false
 得到	tjgc	1
 利于	tjgf	1
 香港	tjia	2
+复兴	tjiw	1
 复明	tjje	1
 得空	tjpw	1
 复制	tjrm	4
@@ -5006,7 +5024,7 @@ use_preset_vocabulary: false
 杂草	vsaj	1
 杂活	vsit	1
 杂糅	vsoc	1
-群友	vtdc	1
+群友	vtdc	2
 群里	vtjf	4
 姓名	vtqk	1
 群体	vtws	1
@@ -5081,6 +5099,7 @@ use_preset_vocabulary: false
 传染	wfiv	1
 佳景	wfjy	1
 会员	wfkm	1
+伟业	wfog	1
 传播	wfrt	1
 什么	wftc	65
 舒适	wftd	1
@@ -5258,6 +5277,7 @@ use_preset_vocabulary: false
 分析	wvsr	3
 分身	wvtm	1
 分段	wvwd	1
+健全	wvwg	1
 仇人	wvww	1
 分化	wvwx	1
 分级	wvxe	1
@@ -5423,6 +5443,7 @@ use_preset_vocabulary: false
 统治	xyic	1
 编辑	xylk	4
 编写	xypg	3
+统筹	xytd	1
 编程	xytk	4
 编译	xyyc	2
 统计	xyyf	3
@@ -5464,6 +5485,7 @@ use_preset_vocabulary: false
 诸如	yfvk	1
 讨伐	yfwa	1
 诗词	yfyn	2
+讨论	yfyw	1
 主观	ygcm	1
 主页	ygdm	1
 主动	ygfc	1
@@ -5541,7 +5563,7 @@ use_preset_vocabulary: false
 设成	ymdn	1
 调用	ymet	5
 高地	ymfb	2
-市场	ymfn	1
+市场	ymfn	2
 高过	ymfp	1
 调教	ymft	1
 调到	ymgc	1
@@ -5707,6 +5729,7 @@ use_preset_vocabulary: false
 玄妙	yxvi	1
 方式	yyaa	8
 广东	yyai	1
+广大	yydd	1
 方面	yydm	9
 该用	yyet	1
 文献	yyfm	2
@@ -5741,6 +5764,7 @@ use_preset_vocabulary: false
 也没有	bide	1
 阿凡达	bmdp	2
 防火墙	boff	2
+阿拉冠	brpf	1
 也可以	bsny	2
 阿根廷	bstf	1
 阿森纳	bsxm	1
@@ -5851,12 +5875,14 @@ use_preset_vocabulary: false
 一会儿	gwqt	2
 一个个	gwwh	1
 一个人	gwww	2
+现代化	gwwx	1
 亚健康	gwyv	1
 不方便	gywg	1
 不应该	gyyy	1
 卢沟桥	hist	1
 卡梅隆	hsbt	1
 占位符	hwtw	1
+河南省	ifit	1
 沧元图	iflt	2
 滚动条	ifts	2
 小事儿	igqt	3
@@ -6010,7 +6036,7 @@ use_preset_vocabulary: false
 怎么啦	ttkr	9
 自行车	ttlg	2
 怎么样	ttsu	3
-自造词	ttyn	1
+自造词	ttyn	2
 怎么说	ttyu	1
 知北游	tuiy	7
 自媒体	tvws	2
@@ -6104,6 +6130,7 @@ use_preset_vocabulary: false
 垃圾玩意	ffgu	1
 老老实实	ffpp	4
 截止日期	fhja	2
+违法违规	fiff	1
 无法自拔	fitr	1
 专心致志	fngf	1
 丧尽天良	fngy	1
@@ -6206,6 +6233,7 @@ use_preset_vocabulary: false
 半途而废	uwdy	1
 差强人意	uxwu	1
 兰亭集序	uywy	1
+建功立业	vauo	1
 九牛一毛	vrgt	1
 仓耳今楷	wbws	1
 侠肝义胆	weye	1

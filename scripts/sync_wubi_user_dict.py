@@ -91,8 +91,8 @@ def combine(out_dir):
             word, code, weight = line.strip().split('\t')
 
             # 增加用户词语的权重，放大亿点点 100,000,000
-            # weight = int(weight)
-            weight = int(weight)  * 100000000 if not weight.endswith('00000000') else int(weight)
+            weight = int(weight)
+            # weight = int(weight)  * 100000000 if not weight.endswith('00000000') else int(weight)
             if word not in res_dict or weight > max(res_dict_weight[word]):
                 res_dict[word] = f'{code}\t{weight}'
                 res_dict_weight[word].add(weight)

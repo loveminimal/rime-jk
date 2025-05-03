@@ -7,6 +7,7 @@ from collections import defaultdict
 from header import get_header_sort
 from timer import timer
 from wubi86_8105_map import wubi86_8105_map
+from three_level_8105 import first_level, second_level, third_level
 
 
 def is_chinese_char(char: str) -> bool:
@@ -68,6 +69,17 @@ def sort_dict(src_dir, out_dir):
             # if word not in res_dict or weight > max(res_dict_weight[word]):
             #     res_dict[word] = f'{code}\t{weight}'
             #     res_dict_weight[word].add(weight)
+            
+            # 按码表分级添加相应权重，一级字-3 二级字-2 三级字-1 词语-2
+            if len(word) == 1:
+                if word in first_level:
+                    weight = 3
+                elif word in second_level:
+                    weight = 2
+                elif word in third_level:
+                    weight = 1
+            else:
+                weight = 2
             
             # 8105 过滤器开关 - is_filter_8105
             if is_filter_8105 and any((char not in wubi86_8105_map and char not in white_list) for char in word):

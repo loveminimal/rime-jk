@@ -39,6 +39,7 @@ use_preset_vocabulary: false
 式	aa	7
 节	ab	4
 蒸	ab	1
+芭	ac	1
 基	ad	1
 七	ag	4
 牙	ah	1
@@ -812,6 +813,7 @@ use_preset_vocabulary: false
 糙	otf	2
 炸	oth	1
 数	ovt	6
+粉	owv	1
 寄	pds	1
 宜	peg	1
 农	pei	1
@@ -2741,6 +2743,7 @@ use_preset_vocabulary: false
 残酷	gqsg	1
 残次	gquq	1
 残忍	gqvy	1
+死亡	gqyn	1
 残废	gqyn	1
 熬夜	gqyw	1
 末尾	gsnt	4

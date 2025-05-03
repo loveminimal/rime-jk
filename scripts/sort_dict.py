@@ -57,13 +57,14 @@ def sort_dict(src_dir, out_dir):
     for line in lines_total:
         if line.startswith('.'):
             is_header_end = True
-        if (not is_chinese_char(line[0])) and not is_header_end:
+        if (line[0] not in wubi86_8105_map) and not is_header_end:
             header_str += line 
 
-
+    res_dict_temp = set()
+    res_dict_temp1 = set()
     # 去重并处理词条
     for line in set(lines_total):
-        if is_chinese_char(line[0]):
+        if (line[0] in wubi86_8105_map):
             word, code, weight = line.strip().split('\t')
             weight = int(weight)
             # if word not in res_dict or weight > max(res_dict_weight[word]):
@@ -71,15 +72,27 @@ def sort_dict(src_dir, out_dir):
             #     res_dict_weight[word].add(weight)
             
             # 按码表分级添加相应权重，一级字-3 二级字-2 三级字-1 词语-2
-            if len(word) == 1:
-                if word in first_level:
-                    weight = 3
-                elif word in second_level:
-                    weight = 2
-                elif word in third_level:
-                    weight = 1
-            else:
+            # if len(word) == 1:
+            #     if word in first_level:
+            #         weight = 3
+            #     elif word in second_level:
+            #         weight = 2
+            #     elif word in third_level:
+            #         weight = 1
+            # else:
+            #     weight = 2
+            if(len(word) == 1):
+                res_dict_temp.add(word)
+            # print(len(res_dict_temp))
+
+
+            # 添加相应权重，一级字-3 二级字-2 三级字-1 词语-3、2，三级字没有组词
+            if any((char in third_level) for char in word):
+                weight = 1
+            elif any((char in second_level) for char in word):
                 weight = 2
+            elif any((char in first_level) for char in word):
+                weight = 3
             
             # 8105 过滤器开关 - is_filter_8105
             if is_filter_8105 and any((char not in wubi86_8105_map and char not in white_list) for char in word):
@@ -90,6 +103,15 @@ def sort_dict(src_dir, out_dir):
                 res_dict[word + get_md5(line)] = f'{code}\t{weight}'
                 # res_dict_weight[word].add(weight)
 
+    # 补充词库中可能缺失的通规字 8105 单字
+    count = 0
+    for word1 in wubi86_8105_map:
+        if word1 not in res_dict_temp:
+            res_dict_temp1.add(word1)
+            count += 1
+            line1 = f'{word1}\t{wubi86_8105_map[word1]}\t1'
+            print(f'{count} - {line1}')
+            res_dict[word1 + get_md5(line1)] = f'{wubi86_8105_map[word1]}\t1'
 
     # 多级分组排序（词长→编码长度→编码→汉字）
     with open(out_dir / out_file, 'w', encoding='utf-8') as o:

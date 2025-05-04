@@ -57,14 +57,14 @@ def sort_dict(src_dir, out_dir):
     for line in lines_total:
         if line.startswith('.'):
             is_header_end = True
-        if (line[0] not in wubi86_8105_map) and not is_header_end:
+        if not is_chinese_char(line[0]) and not is_header_end:
             header_str += line 
 
-    res_dict_temp = set()
-    res_dict_temp1 = set()
+    res_dict_temp = set()   # 存储字典中的单字
+    res_dict_temp1 = set()  # 存储字典中缺失的 8105 单字
     # 去重并处理词条
     for line in set(lines_total):
-        if (line[0] in wubi86_8105_map):
+        if (is_chinese_char(line[0])):
             word, code, weight = line.strip().split('\t')
             weight = int(weight)
             # if word not in res_dict or weight > max(res_dict_weight[word]):
@@ -86,13 +86,13 @@ def sort_dict(src_dir, out_dir):
             # print(len(res_dict_temp))
 
 
-            # 添加相应权重，一级字-3 二级字-2 三级字-1 词语-3、2，三级字没有组词
+            # 添加相应权重，一级字-100 二级字-10 三级字-1 词语-3、2，三级字没有组词
             if any((char in third_level) for char in word):
                 weight = 1
             elif any((char in second_level) for char in word):
-                weight = 2
+                weight = 10
             elif any((char in first_level) for char in word):
-                weight = 3
+                weight = 100
             
             # 8105 过滤器开关 - is_filter_8105
             if is_filter_8105 and any((char not in wubi86_8105_map and char not in white_list) for char in word):

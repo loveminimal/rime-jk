@@ -1,0 +1,166 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: jk_wubi_zj
+  name: 五笔·整句
+  author: 
+    - Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心五笔，五笔·拼音反查，小啊小女仆
+    - https://github.com/loveminimal/rime-jk
+  dependencies:
+    - jk_ascii
+    - jk_pinyin
+  icon: 'assets/jk_m.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk.yaml:/switches
+
+
+engine:
+  processors:
+    - lua_processor@*quick_symbol
+    - lua_processor@*exe
+    - ascii_composer
+    - chord_composer
+    - key_binder    
+    - recognizer    
+    - speller       
+    - punctuator    
+    - selector      
+    - navigator     
+    - express_editor
+  segmentors:
+    - ascii_segmentor        
+    - matcher                
+    - abc_segmentor          
+    - punct_segmentor        
+    - affix_segmentor@pinyin
+    - affix_segmentor@add_user_dict
+    - fallback_segmentor     
+  translators:
+    # - echo_translator               
+    - punct_translator        
+    - script_translator
+    # - table_translator
+    - table_translator@custom_phrase  
+    - script_translator@pinyin
+    - script_translator@user_dict_set
+    - script_translator@add_user_dict
+    - reverse_lookup_translator
+    - lua_translator@*schedule
+    - lua_translator@*helper
+    - lua_translator@*date_translator 
+    - lua_translator@*force_gc        
+  filters:
+    - lua_filter@*prettify_comment
+    # - lua_filter@*keep_short_code_first
+    - lua_filter@*single_char_only          # 纯单字
+    - simplifier
+    - simplifier@emoji   
+    - simplifier@zh2en
+    - simplifier@chaifen  
+    - simplifier@traditionalize
+    - uniquifier          
+
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  __include: jk.yaml:/recognizer
+  patterns/+:
+    pinyin: "^z[Xa-z]*$"    
+
+punctuator:
+  __include: jk.yaml:/punctuator
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  delimiter: " ~"     
+  # max_code_length: 4
+  # auto_select: true
+  # auto_select_pattern: "^(\\w{4})$"
+  # auto_clear: max_length
+  algebra:
+    - abbrev/^([a-z]).+$/$1/
+    - derive/^([a-z])$/$1/
+    # - abbrev|^(.+);.*$|$1|               
+    - derive|^(.+);.*$|$1|                 
+    - derive|^(.+);(\w)(\w).*$|$1$2|       
+    - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+    - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+    - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
+    - erase/^(.+);(.+)$/
+chord_composer:
+  __include: jk.yaml:/chord_composer_mini
+
+
+translator:
+  dictionary: jk_wubi_zj             
+  prism: jk_wubi_zj                  
+  enable_charset_filter: false     
+  enable_sentence: true           
+  enable_encoder: true            
+  encode_commit_history: false     
+  disable_user_dict_for_patterns: 
+    - "^z.*$"
+    # - "^[a-z]{1,6}"    #基本的6码3字不调频
+  enable_completion: true     
+  enable_user_dict: false      
+  spelling_hints: 1
+  # comment_format: "{comment}" 
+  comment_format:
+    - xform/[^;]*;([^;]*)/$1/
+
+
+date_translator:
+  __include: jk.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk.yaml:/reverse_lookup
+
+pinyin:
+  __include: jk.yaml:/pinyin
+
+user_dict_set:
+  __include: jk.yaml:/user_dict_set
+
+add_user_dict:
+  __include: jk.yaml:/add_user_dict
+
+custom_phrase:
+  __include: jk.yaml:/custom_phrase
+
+emoji:
+  __include: jk.yaml:/emoji
+
+zh2en:
+  __include: jk.yaml:/zh2en
+
+chaifen:
+  __include: jk.yaml:/chaifen
+
+traditionalize:
+  __include: jk.yaml:/traditionalize
+
+#语法模型
+# __include: octagram
+# octagram:
+#   __patch:
+#     grammar:
+#       language: wanxiang-lts-zh-hans
+#       collocation_max_length: 8    
+#       collocation_min_length: 2    
+#       collocation_penalty: -10     
+#       non_collocation_penalty: -12 
+#       weak_collocation_penalty: -24
+#       rear_penalty: -30            
+#     translator/contextual_suggestions: false
+#     translator/max_homophones: 5
+#     translator/max_homographs: 5

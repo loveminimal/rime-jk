@@ -1,4 +1,4 @@
-# fetch_wubi86_ext_dict.py
+# fetch_wubi_dict.py
 # encoding: utf-8
 # -------------------------------------------------------------------------
 # 作用：
@@ -393,7 +393,7 @@ def exec(proj_dir, work_dir, repository_url):
     # ④ 重新排序
     src_dir = proj_dir /  work_dir
     out_dir = proj_dir / 'dicts'
-    dict_start = 'wubi86_ext'
+    dict_start = 'wubi86_ext' if is_wubi_normal else 'wubi86_zj'
     # 若不存在，创建
     if not out_dir.exists():
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -410,15 +410,16 @@ if __name__ == "__main__":
     # 是否开启 8105 通规字字符范围过滤
     # 该设置项仅供有扩展字符集需求（需修改当前脚本）
     is_filter_8105 = True
-    # 常规五笔编码还是整句编码
-    is_wubi_normal = True
+    # 常规五笔编码还是整句编码, True 常规 False 整句
+    is_wubi_normal = False
     # 分包还是归并
     # - 归并 True （dicts/wubi86_ext.dict.yaml）
     # - 分包 Flase（cn_dicts/*）
     is_merge = True
     # 是否限制词库最大词长，若为 0 ，则不限制
-    word_length_limit = 4
+    word_length_limit = 0
     # 待转换的词典仓库
+    # repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
     repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
     # repository_url = "https://github.com/gaboolic/rime-frost.git"
     # repository_url = "https://github.com/iDvel/rime-ice.git"

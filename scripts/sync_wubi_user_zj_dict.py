@@ -55,7 +55,7 @@ def convert(src_dir, out_dir):
                 weight = line_list[2].split(' ')[0].split('=')[1]
 
                 # 删除权重为负数的字词（废词）
-                if int(weight) < 0:
+                if int(weight) <= 0:
                     continue
 
                 # 处理特殊编码

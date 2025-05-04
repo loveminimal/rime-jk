@@ -92,7 +92,7 @@ user_dict_set:
   enable_sentence: false
   spelling_hints: 100
   comment_format:
-    - xform/[^;]*;([^;]*)/-/
+    - xform/[^;]*;([^;]*)//
   enable_user_dict: true
   user_dict: jk
 

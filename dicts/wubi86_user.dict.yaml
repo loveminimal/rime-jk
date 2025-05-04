@@ -811,6 +811,7 @@ use_preset_vocabulary: false
 烦	odm	100000000
 烤	oft	100000000
 精	oge	400000000
+粘	ohk	200000000
 炒	oit	100000000
 爆	oja	300000000
 断	onr	300000000
@@ -979,6 +980,7 @@ use_preset_vocabulary: false
 栏	suf	200000000
 根	sve	1200000000
 枪	swb	200000000
+松	swc	100000000
 栓	swg	100000000
 楷	sxx	200000000
 柱	syg	100000000
@@ -2092,6 +2094,7 @@ use_preset_vocabulary: false
 月光	eeiq	300000000
 貌似	eewn	100000000
 月份	eeww	100000000
+月底	eeyq	100000000
 肚子	efbb	200000000
 膨胀	efet	100000000
 脚本	efsg	2000000000
@@ -2161,6 +2164,7 @@ use_preset_vocabulary: false
 动画	fcgl	100000000
 动漫	fcij	300000000
 却是	fcjg	100000000
+去吧	fckc	100000000
 去吃	fckt	100000000
 运转	fclf	200000000
 云朵	fcms	100000000
@@ -3946,6 +3950,7 @@ use_preset_vocabulary: false
 印度	qgya	200000000
 外面	qhdm	300000000
 外卖	qhfn	200000000
+外婆	qhih	100000000
 外号	qhkg	100000000
 外国	qhlg	100000000
 外网	qhmq	300000000
@@ -5052,7 +5057,7 @@ use_preset_vocabulary: false
 始祖	vcpy	100000000
 即可	vcsk	300000000
 即将	vcuq	100000000
-妈妈	vcvc	100000000
+妈妈	vcvc	200000000
 始终	vcxt	100000000
 奶茶	veaw	100000000
 退出	vebm	100000000
@@ -5376,7 +5381,7 @@ use_preset_vocabulary: false
 谷雨	wwfg	100000000
 坐到	wwgc	100000000
 从来	wwgo	500000000
-从小	wwih	100000000
+从小	wwih	200000000
 人员	wwkm	100000000
 人民	wwna	400000000
 人类	wwod	200000000

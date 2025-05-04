@@ -91,8 +91,11 @@ def combine(out_dir):
             word, code, weight = line.strip().split('\t')
 
             # 增加用户词语的权重，放大亿点点 100,000,000
-            weight = int(weight)
-            # weight = int(weight)  * 100000000 if not weight.endswith('00000000') else int(weight)
+            if is_keep_user_dict_first:
+                weight = int(weight)  * 100000000 if not weight.endswith('00000000') else int(weight)
+            else:
+                weight = int(weight) if not weight.endswith('00000000') else int(weight[:-8])
+
             if word not in res_dict or weight > max(res_dict_weight[word]):
                 res_dict[word] = f'{code}\t{weight}'
                 res_dict_weight[word].add(weight)
@@ -129,6 +132,10 @@ def combine(out_dir):
 
 if __name__ == '__main__':
     current_dir = Path.cwd()
+
+    # --- 配置：是否让用户词库排在最前 ---
+    # 权重放大亿点点
+    is_keep_user_dict_first = True
 
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')

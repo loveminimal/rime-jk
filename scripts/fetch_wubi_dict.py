@@ -385,8 +385,9 @@ def exec(proj_dir, work_dir, repository_url):
         return
 
     # ③ 过滤合并五笔码表
+    out_file_name = 'wubi86_ext.dict.yaml' if is_wubi_normal else 'wubi86_zj.dict.yaml'
     src_dir = proj_dir / work_dir / 'cn_dicts_x'
-    out_file = proj_dir / work_dir / 'wubi86_ext.dict.yaml'
+    out_file = proj_dir / work_dir / out_file_name
     print('\n🔜  === 开始合并处理词库文件 ===')
     filter_8105(src_dir, out_file)
     

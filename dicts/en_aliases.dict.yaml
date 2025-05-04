@@ -111,7 +111,7 @@ cd ~/site/themes/virgo	cdtt	0
 cd ~/AppData/Roaming/Rime && py scripts/deploy_rime.py	ddr	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py	ssr	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	wwr	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/fetch_wubi_dict.py	ffd	0
+cd ~/AppData/Roaming/Rime && py scripts/fetch_wubi_dict.py	ffd	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_dict.py && py scripts/deploy_rime.py	uud	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_zj_dict.py && py scripts/deploy_rime.py	uuz	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_en_aliases_dict.py && py scripts/deploy_rime.py	uea	0

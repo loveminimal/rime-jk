@@ -38,7 +38,7 @@ recognizer:
   patterns:
     reverse_lookup: "^~~[a-z]*:?$"
     punct: "^~([0-9]|10|[A-Za-z]+)$"
-    # pinyin: "^z[Xa-z]*$"    
+    pinyin: "^z[Xa-z]*$"    
     add_user_dict: "^Z[a-z]*$"
     helper: "^(~help|hH)$"
     quick_symbol: "^;.*$" 

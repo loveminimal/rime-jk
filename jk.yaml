@@ -80,7 +80,7 @@ reverse_lookup:
 
 pinyin:
   tag: pinyin
-  dictionary: jk_pinyin
+  dictionary: jk_pinyin_mini
   prefix: "z"
   suffix: "'"
   tips: 〔拼音·反查〕

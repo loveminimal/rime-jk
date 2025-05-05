@@ -8,5 +8,6 @@ __pycache__
 .temp
 dicts/out
 dicts/wubi86_zj.dict.yaml
-dicts/*_ext.dict.yaml
+dicts/wubi86_ext.dict.yaml
+dicts/pinyin.dict.yaml
 *_dicts

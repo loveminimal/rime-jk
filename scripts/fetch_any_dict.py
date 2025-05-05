@@ -1,9 +1,9 @@
-# fetch_wubi_dict.py
+# fetch_any_dict.py
 # encoding: utf-8
 # -------------------------------------------------------------------------
 # 作用：
 # 当前脚本用于拉取万象词库的最近更新，并进行「转换 ➭ 合并 ➭ 排序」处理，以
-# 生成所需的五笔常规 or 整句词库
+# 生成所需的五笔常规 or 整句词库、拼音词库
 # 
 # --- 可配置项 ---
 # ① 是否开启 8105 通规字字符范围过滤
@@ -171,6 +171,16 @@ def get_wubi_code(word: str) -> str:
         return ' '.join(code_parts)
 
 
+def get_pinyin_code(code: str) -> str:
+    """将汉字转换为拼音+辅助码编码"""
+    code_parts = []
+    for _code in code.split(' '):
+        _cc = _code.split(';')
+        code_parts.append(f'{_cc[0]};{_cc[fuzhuma_type]}')
+
+    return ' '.join(code_parts)
+
+
 @timer
 def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
     """将拼音词库转换为五笔词库"""
@@ -214,7 +224,7 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
                 if len(parts) < 3:
                     continue
 
-                word, _, weight = parts[0], parts[1], parts[2]
+                word, code, weight = parts[0], parts[1], parts[2]
                 
                 if word_length_limit > 0 and len(word) > word_length_limit:
                     # print(f"过滤掉长词语: {word} (长度: {len(word)})")
@@ -225,8 +235,12 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
                     continue
 
                 try:
-                    wubi_code = get_wubi_code(word)
-                    valid_entries.add(f"{word}\t{wubi_code}\t{res_dict_word_weight[word]}\n")
+                    if is_pinyin:
+                        pinyin_code = get_pinyin_code(code)
+                        valid_entries.add(f"{word}\t{pinyin_code}\t{res_dict_word_weight[word]}\n")
+                    else:
+                        wubi_code = get_wubi_code(word)
+                        valid_entries.add(f"{word}\t{wubi_code}\t{res_dict_word_weight[word]}\n")
                 except KeyError:
                     invalid_line_count += 1
 
@@ -400,7 +414,14 @@ def exec(proj_dir, work_dir, repository_url):
         return
 
     # ③ 过滤合并五笔码表
-    out_file_name = 'wubi86_ext.dict.yaml' if is_wubi_normal else 'wubi86_zj.dict.yaml'
+    out_file_name = ''
+    if is_pinyin:
+        out_file_name = 'pinyin.dict.yaml'
+    elif is_wubi_normal:
+        out_file_name = 'wubi86_ext.dict.yaml'
+    else:
+        out_file_name = 'wubi86_zj.dict.yaml'
+
     src_dir = proj_dir / work_dir / 'cn_dicts_x'
     out_file = proj_dir / work_dir / out_file_name
     print('\n🔜  === 开始合并处理词库文件 ===')
@@ -409,7 +430,14 @@ def exec(proj_dir, work_dir, repository_url):
     # ④ 重新排序
     src_dir = proj_dir /  work_dir
     out_dir = proj_dir / 'dicts'
-    dict_start = 'wubi86_ext' if is_wubi_normal else 'wubi86_zj'
+    dict_start = ''
+    if is_pinyin:
+        dict_start = 'pinyin'
+    elif is_wubi_normal:
+        dict_start = 'wubi86_ext'
+    else:
+        dict_start = 'wubi86_zj'
+
     # 若不存在，创建
     if not out_dir.exists():
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -426,6 +454,12 @@ if __name__ == "__main__":
     # 是否开启 8105 通规字字符范围过滤
     # 该设置项仅供有扩展字符集需求（需修改当前脚本）
     is_filter_8105 = True
+    # 是否转换为拼音词库〔 如果为 True，优先级高于 is_wubi_normal 〕
+    is_pinyin = True
+    # 拼音辅助码类型（按需选择即可）
+    # 1 moqi 墨奇, 2 flypy 鹤形, 3 zrm 自然码, 4 jdh 简单鹤, 5 cj 仓颉, 
+    # 6 tiger 虎码首末, 7 wubi 五笔前二, 8 hanxin 汉心
+    fuzhuma_type = 6 
     # 常规五笔编码还是整句编码, True 常规 False 整句
     is_wubi_normal = False
     # 分包还是归并
@@ -435,8 +469,8 @@ if __name__ == "__main__":
     # 是否限制词库最大词长，若为 0 ，则不限制
     word_length_limit = 0
     # 待转换的词典仓库
-    # repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
-    repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
+    repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
+    # repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
     # repository_url = "https://github.com/gaboolic/rime-frost.git"
     # repository_url = "https://github.com/iDvel/rime-ice.git"
 

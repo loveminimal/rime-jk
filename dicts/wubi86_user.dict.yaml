@@ -2835,6 +2835,7 @@ use_preset_vocabulary: false
 上街	hhtf	100000000
 上前	hhue	100000000
 目前	hhue	1700000000
+上交	hhuq	100000000
 上次	hhuq	400000000
 目录	hhvi	1600000000
 上供	hhwa	100000000
@@ -2975,6 +2976,7 @@ use_preset_vocabulary: false
 混入	ijty	100000000
 混合	ijwg	100000000
 渐近	ilrp	100000000
+尚有	imde	100000000
 没有	imde	7500000000
 没用	imet	100000000
 测过	imfp	100000000
@@ -4328,6 +4330,7 @@ use_preset_vocabulary: false
 扩大	rydd	100000000
 搞成	rydn	100000000
 搞到	rygc	100000000
+撤回	rylk	100000000
 扩展	ryna	400000000
 撤销	ryqi	100000000
 护栏	rysu	100000000

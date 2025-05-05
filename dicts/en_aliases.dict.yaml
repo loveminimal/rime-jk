@@ -48,6 +48,7 @@ sudo /etc/init.d/nscd restart	flushdns	0
 git status	gst	0
 git add .	gaa	0
 git commit -m	gcm	0
+git reset --soft HEAD~1	grc	0
 git commit --amend --no-edit	gca	0
 git commit --amend	gcaa	0
 git checkout	gco	0

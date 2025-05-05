@@ -15,7 +15,7 @@ patch:
   # --- 方案列表 ---
   schema_list:
     - {schema: jk_ascii}
-    # - {schema: jk_wubi}
+    - {schema: jk_wubi}
     - {schema: jk_wubi_zj}
 
   # --- 选单设置 ---

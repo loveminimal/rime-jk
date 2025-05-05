@@ -3,13 +3,28 @@
 # -------------------------------------------------------------------------
 # 作用：
 # 当前脚本用于拉取万象词库的最近更新，并进行「转换 ➭ 合并 ➭ 排序」处理，以
-# 生成所需的五笔整句词库 dicts/wubi86_ext.dict.yaml 或者 cn_dicts/*
+# 生成所需的五笔常规 or 整句词库
 # 
-# 配置：「 五笔该项设置不生效，只生成 8105 通规字组成的字词 」
-# 是否开启 8105 通规字字符范围过滤，默认「 开启 」
+# --- 可配置项 ---
+# ① 是否开启 8105 通规字字符范围过滤
+# 该设置项仅供有扩展字符集需求（需修改当前脚本）
 # is_filter_8105 = True
-# 是否限制词库最大词长，若为 0 ，则不限制
+# ② 常规五笔编码还是整句编码, True 常规 False 整句
+# is_wubi_normal = False
+# ③ 分包还是归并
+# - 归并 True （dicts/wubi86_ext.dict.yaml）
+# - 分包 Flase（cn_dicts/*）
+# is_merge = True
+# ④ 是否限制词库最大词长，若为 0 ，则不限制
 # word_length_limit = 0
+# ⑤ 待转换的词典仓库
+# repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
+# repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
+# 
+# --- 其他说明 ---
+# 其实稍微修改一下当前脚本，可以获得更多转换功能，如可以转换万象词库到任意
+# 辅助码的拼音词库，有兴趣的朋友可以自行扩展
+# 
 # -------------------------------------------------------------------------
 # 
 import os
@@ -108,7 +123,7 @@ def sync_repository(repo_url, local_path):
             sync_success = False
             if local_path.exists():
                 if backup_path.exists():
-                    shutil.rmtree(backup_path)
+                    force_delete(backup_path)
                 local_path.rename(backup_path)
                 print(f"✅  » 当前仓库已备份为 { backup_path }")
             print(f"--- 重新浅克隆 ---")
@@ -125,7 +140,7 @@ def sync_repository(repo_url, local_path):
             if backup_path.exists():
                 print(f"--- 开始恢复仓库 ---")
                 if local_path.exists():
-                    shutil.rmtree(local_path)
+                    force_delete(local_path)
                 backup_path.rename(local_path)
                 print(f"✅  » 仓库恢复成功 {local_path}")
                 sync_success = False

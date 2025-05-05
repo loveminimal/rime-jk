@@ -39,8 +39,23 @@ def get_md5(text: str) -> str:
     md5.update(text.encode('utf-8'))  # 传入字节数据（必须 encode）
     return md5.hexdigest()  # 返回 32 位 16 进制字符串
 
+def get_wubi_code(word: str) -> str:
+    """将汉字转换为五笔编码"""
+    if len(word) == 1:
+        return f'{wubi86_8105_map[word]}'
+    elif len(word) == 2:
+        return f'{wubi86_8105_map[word[0]][:2]}{wubi86_8105_map[word[1]][:2]}'
+    elif len(word) == 3:
+        return f'{wubi86_8105_map[word[0]][0]}{wubi86_8105_map[word[1]][0]}{wubi86_8105_map[word[2]][:2]}'
+    elif len(word) >= 4:
+        return f'{wubi86_8105_map[word[0]][0]}{wubi86_8105_map[word[1]][0]}{wubi86_8105_map[word[2]][0]}{wubi86_8105_map[word[len(word) - 1]][0]}'
+
+
 @timer
 def sort_dict(src_dir, out_dir):
+    count = 0
+    line_dict = set()
+    res = ''
     res_dict = {}
     res_dict_weight = defaultdict(set)
     lines_total = []
@@ -63,10 +78,20 @@ def sort_dict(src_dir, out_dir):
     res_dict_temp = set()   # 存储字典中的单字
     res_dict_temp1 = set()  # 存储字典中缺失的 8105 单字
     # 去重并处理词条
-    for line in set(lines_total):
+    for line in set(lines_total) if is_sort else lines_total:
         if (is_chinese_char(line[0])):
-            word, code, weight = line.strip().split('\t')
-            weight = int(weight)
+            if line not in line_dict:
+                line_dict.add(line)
+            else:
+                count += 1
+                # print(f'{count} - {line}')
+                continue
+
+            # word, code, weight = line.strip().split('\t')
+            _arr = line.strip().split('\t')
+            word = _arr[0]
+            code = _arr[1]
+            weight = int(_arr[2]) if len(_arr) > 2 else 0
             # if word not in res_dict or weight > max(res_dict_weight[word]):
             #     res_dict[word] = f'{code}\t{weight}'
             #     res_dict_weight[word].add(weight)
@@ -102,22 +127,36 @@ def sort_dict(src_dir, out_dir):
             if word not in res_dict:
                 res_dict[word + get_md5(line)] = f'{code}\t{weight}'
                 # res_dict_weight[word].add(weight)
+                if not is_sort:
+                    # 此处将王码大一统版本的恢复至 4.5 版本编码
+                    code = get_wubi_code(word) if len(code) > 3 else code
+                    res += f'{word}\t{code}\t{weight}\n'
+
+    print(f'✅  » 已过滤 {count} 行重复词条')
 
     # 补充词库中可能缺失的通规字 8105 单字
-    count = 0
+    count1 = 0
     for word1 in wubi86_8105_map:
         if word1 not in res_dict_temp:
             res_dict_temp1.add(word1)
-            count += 1
+            count1 += 1
             line1 = f'{word1}\t{wubi86_8105_map[word1]}\t1'
-            print(f'{count} - {line1}')
+            # print(f'{count1} - {line1}')
             res_dict[word1 + get_md5(line1)] = f'{wubi86_8105_map[word1]}\t1'
+
+            if not is_sort:
+                res += f'{word1}\t{wubi86_8105_map[word1]}\t1\n'
 
     # 多级分组排序（词长→编码长度→编码→汉字）
     with open(out_dir / out_file, 'w', encoding='utf-8') as o:
         o.write(header_str)
         # o.write(get_header_sort(out_file))
         o.write('...\n')
+
+        if not is_sort:
+            o.write(res)
+            print('✅  » 已合并生成用户词典 %s' % (out_dir / out_file))
+            return
         
         # 第一级：按词长分组
         word_len_dict = defaultdict(list)
@@ -150,6 +189,8 @@ if __name__ == '__main__':
     # 是否开启 8105 通规字字符范围过滤
     is_filter_8105 = True
     white_list = ['，']
+    # 是否改变原词典顺序（用于不想改变词典顺序的情况）
+    is_sort = False
 
     src_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\out')

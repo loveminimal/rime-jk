@@ -2266,6 +2266,7 @@ use_preset_vocabulary: false
 未曾	fiul	200000000
 示例	fiwg	100000000
 示弱	fixu	100000000
+求魔	fiys	200000000
 朝左	fjda	200000000
 进去	fjfc	300000000
 进到	fjgc	100000000
@@ -2291,6 +2292,7 @@ use_preset_vocabulary: false
 南方	fmyy	100000000
 专职	fnbk	100000000
 专注	fniy	100000000
+声明	fnje	100000000
 专题	fnjg	100000000
 场景	fnjy	200000000
 专员	fnkm	100000000
@@ -3661,6 +3663,7 @@ use_preset_vocabulary: false
 发呆	ntks	100000000
 发力	ntlt	100000000
 发展	ntna	200000000
+性情	ntng	100000000
 属性	ntnt	300000000
 属实	ntpu	100000000
 必然	ntqd	100000000

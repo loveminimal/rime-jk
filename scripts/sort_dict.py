@@ -112,12 +112,12 @@ def sort_dict(src_dir, out_dir):
 
 
             # 添加相应权重，一级字-100 二级字-10 三级字-1 词语-3、2，三级字没有组词
-            if any((char in third_level) for char in word):
-                weight = 10
+            if all((char in first_level) for char in word):
+                weight = 100000
             elif any((char in second_level) for char in word):
                 weight = 1000
-            elif any((char in first_level) for char in word):
-                weight = 100000
+            elif any((char in third_level) for char in word):
+                weight = 10
             
             # 8105 过滤器开关 - is_filter_8105
             if is_filter_8105 and any((char not in wubi86_8105_map and char not in white_list) for char in word):

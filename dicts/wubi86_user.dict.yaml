@@ -660,6 +660,7 @@ use_preset_vocabulary: false
 贤	jcm	100000000
 竖	jcu	100000000
 暖	jef	100000000
+野	jfc	100000000
 里	jfd	3600000000
 蛙	jff	300000000
 蚨	jfw	100000000
@@ -1269,6 +1270,7 @@ use_preset_vocabulary: false
 感	dgkn	600000000
 石	dgtg	300000000
 辈	djdl	100000000
+耐	dmjf	200000000
 耍	dmjv	100000000
 愿	drin	200000000
 奇	dskf	200000000
@@ -1328,6 +1330,7 @@ use_preset_vocabulary: false
 澡	ikks	100000000
 洞	imgk	100000000
 漏	infy	100000000
+堂	ipkf	200000000
 常	ipkh	700000000
 赏	ipkm	100000000
 掌	ipkr	100000000
@@ -1446,6 +1449,7 @@ use_preset_vocabulary: false
 提	rjgh	400000000
 制	rmhj	500000000
 氪	rndq	100000000
+撰	rnnw	100000000
 拟	rnyw	100000000
 擦	rpwi	200000000
 挣	rqvh	200000000
@@ -2002,6 +2006,7 @@ use_preset_vocabulary: false
 耐心	dmny	100000000
 布尔	dmqi	100000000
 面包	dmqn	200000000
+耐看	dmrh	200000000
 厕所	dmrn	100000000
 面积	dmtk	100000000
 面向	dmtm	500000000
@@ -2035,7 +2040,7 @@ use_preset_vocabulary: false
 砍到	dqgc	100000000
 确定	dqpg	800000000
 确实	dqpu	1100000000
-克制	dqrm	100000000
+克制	dqrm	300000000
 砍头	dqud	100000000
 爽朗	dqyv	100000000
 确认	dqyw	800000000
@@ -3218,6 +3223,7 @@ use_preset_vocabulary: false
 星空	jtpw	200000000
 监控	jtrp	200000000
 监管	jttp	100000000
+暗堂	juip	300000000
 照顾	jvdb	100000000
 归来	jvgo	200000000
 归属	jvnt	100000000
@@ -3510,6 +3516,7 @@ use_preset_vocabulary: false
 同文	mgyy	400000000
 贴膜	mhea	100000000
 由于	mhgf	100000000
+贴吧	mhkc	100000000
 帐号	mhkg	200000000
 贴图	mhlt	100000000
 删了	mmbn	100000000
@@ -5281,6 +5288,7 @@ use_preset_vocabulary: false
 仙女	wmvv	100000000
 仙人	wmww	100000000
 仙佛	wmwx	200000000
+假期	wnad	100000000
 追随	wnbd	100000000
 追求	wnfi	100000000
 假借	wnwa	100000000
@@ -6211,7 +6219,9 @@ use_preset_vocabulary: false
 刘海屏	yinu	100000000
 摩洛哥	yisk	400000000
 康师傅	yjwg	100000000
+这几天	ymgd	100000000
 夜视仪	ypwy	100000000
+主持人	yrww	100000000
 就可以	ysny	400000000
 计算器	ytkk	100000000
 刘德华	ytwx	200000000

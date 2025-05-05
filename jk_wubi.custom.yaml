@@ -5,4 +5,4 @@ patch:
   __include: style.yaml:/pujk
   __patch:
     style/+:
-      color_scheme: pujk
+      color_scheme: dark_temple

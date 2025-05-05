@@ -11,7 +11,7 @@ schema:
     - https://github.com/loveminimal/rime-jk
   dependencies:
     - jk_ascii
-    - jk_pinyin_mini
+    - jk_pinyin
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
 

@@ -1,168 +1,66 @@
-# Rime schema settings
+# Rime schema - jk_pinyin.schema.yaml
 # encoding: utf-8
 
 schema:
   schema_id: jk_pinyin
-  name: 拼音·知心
-  author: 
-    - Jack Liu <https://aituyaa.com>
+  name: 拼音·反查
+  author:
+    - by Jack Liu <https://aituyaa.com>
   description: |
-    - 知心拼音，小鹤·辅助码，小啊小女仆
-    - https://github.com/loveminimal/rime-jk
-    - 支持〔 全拼、小鹤双拼、自然码双拼 〕+ 增强版
-  dependencies:
-    - jk_ascii
-  icon: 'assets/fly_b.ico'
-  ascii_icon: 'assets/ascii.ico'
-
-switches:
-  __include: jk.yaml:/switches
-
+    - 拼音反查，拼音+五笔前二辅助码增强
+    - 仅用于拼音反查，不再作为独立的输入方案
 
 engine:
   processors:
-    - lua_processor@*quick_symbol
-    - lua_processor@*exe
     - ascii_composer
-    - chord_composer
-    - key_binder    
-    - recognizer    
-    - speller       
-    - punctuator    
-    - selector      
-    - navigator     
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
     - express_editor
   segmentors:
-    - ascii_segmentor        
-    - matcher                
-    - abc_segmentor          
-    - punct_segmentor        
-    - affix_segmentor@pinyin
-    - affix_segmentor@add_user_dict
-    - fallback_segmentor     
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
   translators:
-    # - echo_translator               
-    - punct_translator        
+    - punct_translator
     - script_translator
-    # - table_translator
-    - table_translator@custom_phrase  
-    - script_translator@pinyin
-    - script_translator@user_dict_set
-    - script_translator@add_user_dict
     - reverse_lookup_translator
-    - lua_translator@*schedule
-    - lua_translator@*helper
-    - lua_translator@*date_translator 
-    - lua_translator@*force_gc        
+    - lua_translator@*force_gc
   filters:
-    - lua_filter@*prettify_comment
-    # - lua_filter@*keep_short_code_first
-    - lua_filter@*single_char_only          # 纯单字
     - simplifier
-    - simplifier@emoji   
-    - simplifier@zh2en
-    - simplifier@chaifen  
-    - simplifier@traditionalize
-    - uniquifier          
-
-
-key_binder:
-  import_preset: default
-
-recognizer:
-  __include: jk.yaml:/recognizer
-  patterns/+:
-    add_user_dict: "^Z[a-z]*$"
-
-punctuator:
-  __include: jk.yaml:/punctuator
+    - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
-  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
-  delimiter: " ~"     
-  # max_code_length: 4
-  # auto_select: true
-  # auto_select_pattern: "^(\\w{4})$"
-  # auto_clear: max_length
-  # 支持：
-  # ① 全拼   algebra_pinyin 
-  # ② 小鹤    algebra_flypy
-  # ③ 自然码    algebra_zrm
   algebra:
-    __include: algebra.yaml:/algebra_flypy
-    __append:
-      __include: algebra.yaml:/algebra_fuzhuma
-chord_composer:
-  __include: jk.yaml:/chord_composer_mini
-
+    # --- 全拼 ---
+    - derive/(;.*)$//
+    - abbrev/^([a-z]).+$/$1/
+    - derive/^([a-z])$/$1/
+    # --- 辅助码 ---
+    - derive|^(.+);.*$|$1|                 
+    - derive|^(.+);(\w)(\w).*$|$1$2|       
+    - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+    - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+    - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
+    - erase/^(.+);(.+)$/
 
 translator:
-  dictionary: jk_pinyin             
-  prism: jk_pinyin                  
-  enable_charset_filter: false     
-  enable_sentence: true           
-  enable_encoder: true            
-  encode_commit_history: false     
-  # disable_user_dict_for_patterns: 
-  #   - "^z.*$"
-  #   - "^[a-z]{1,6}"    #基本的6码3字不调频
-  enable_completion: true     
-  enable_user_dict: false      
+  dictionary: jk_pinyin
+  prism: jk_pinyin
+  enable_charset_filter: true
+  enable_sentence: false
+  enable_encoder: true
+  encode_commit_history: true
+  max_phrase_length: 4
+  enable_completion: true
+  enable_user_dict: true
   spelling_hints: 1
-  # comment_format: "{comment}" 
-  comment_format:
+  comment_format: 
     - xform/[^;]*;([^;]*)/$1/
-
-
-date_translator:
-  __include: jk.yaml:/date_translator
-
-reverse_lookup:
-  __include: jk.yaml:/reverse_lookup
-
-# pinyin:
-#   __include: jk.yaml:/pinyin
-#   prefix: "Z"
-
-user_dict_set:
-  __include: jk.yaml:/user_dict_set
-  dictionary: jk_pinyin
-  user_dict: jk_py
-
-add_user_dict:
-  __include: jk.yaml:/add_user_dict
-  prefix: "Z"
-  dictionary: jk_pinyin
-  user_dict: jk_py
-
-# custom_phrase:
-#   __include: jk.yaml:/custom_phrase
-
-emoji:
-  __include: jk.yaml:/emoji
-
-zh2en:
-  __include: jk.yaml:/zh2en
-
-chaifen:
-  __include: jk.yaml:/chaifen
-
-traditionalize:
-  __include: jk.yaml:/traditionalize
-
-#语法模型
-# __include: octagram
-# octagram:
-#   __patch:
-#     grammar:
-#       language: wanxiang-lts-zh-hans
-#       collocation_max_length: 8    
-#       collocation_min_length: 2    
-#       collocation_penalty: -10     
-#       non_collocation_penalty: -12 
-#       weak_collocation_penalty: -24
-#       rear_penalty: -30            
-#     translator/contextual_suggestions: false
-#     translator/max_homophones: 5
-#     translator/max_homographs: 5

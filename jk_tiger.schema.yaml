@@ -17,7 +17,10 @@ schema:
 
 switches:
   __include: jk.yaml:/switches
-
+  __append:
+    - name: char_only
+      reset: 1
+      states: [ 词语, 单字 ]
 
 engine:
   processors:
@@ -53,6 +56,7 @@ engine:
   filters:
     - lua_filter@*prettify_comment
     - lua_filter@*keep_short_code_first_tiger
+    - lua_filter@*single_char_only
     - simplifier
     - simplifier@emoji   
     - simplifier@zh2en

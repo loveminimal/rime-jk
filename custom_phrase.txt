@@ -103,11 +103,14 @@
 还是	gijg	3
 不行	gitf	4
 还行	gitf	3
-都是	ftjg	4
-才是	ftjg	3
+不要	gisv	4
+还要	gisv	3
 
 不可以	gsny	4
 还可以	gsny	3
+
+都是	ftjg	4
+才是	ftjg	3
 
 都可以	fsny	4
 才可以	fsny	3

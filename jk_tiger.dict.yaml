@@ -1,0 +1,25 @@
+name: jk_tiger
+version: 2025.03
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaBaCaCb"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa"
+# ------------------------------------
+# tiger      「 8105 通规字 」虎码词库
+# tiger_user      「 养成系 」用户词库
+# ------------------------------------
+import_tables:
+  - dicts/tiger
+  - dicts/tiger_user
+use_preset_vocabulary: false
+...

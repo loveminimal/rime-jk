@@ -70,7 +70,6 @@ use_preset_vocabulary: false
 降	bt	100000000
 联	bu	100000000
 队	bw	100000000
-孩	by	100000000
 防	by	100000000
 戏	ca	100000000
 邓	cb	100000000
@@ -362,6 +361,7 @@ use_preset_vocabulary: false
 巡	vp	100000000
 婚	vq	100000000
 杂	vs	200000000
+九	vt	200000000
 妇	vv	100000000
 姆	vx	100000000
 妨	vy	100000000
@@ -404,6 +404,7 @@ use_preset_vocabulary: false
 度	ya	300000000
 离	yb	500000000
 充	yc	200000000
+庆	yd	100000000
 衣	ye	200000000
 计	yf	400000000
 让	yh	1500000000
@@ -419,7 +420,7 @@ use_preset_vocabulary: false
 认	yw	400000000
 率	yx	400000000
 方	yy	1300000000
-莽	ada	100000000
+莽	ada	200000000
 苦	adf	100000000
 若	adk	300000000
 项	adm	600000000
@@ -453,6 +454,7 @@ use_preset_vocabulary: false
 阶	bwj	100000000
 除	bwt	400000000
 劲	cal	100000000
+驰	cbn	100000000
 又	ccc	900000000
 驿	ccf	100000000
 骑	cds	500000000
@@ -483,6 +485,7 @@ use_preset_vocabulary: false
 而	dmj	1400000000
 页	dmu	800000000
 万	dnv	800000000
+尤	dnv	100000000
 确	dqe	400000000
 爽	dqq	700000000
 砍	dqw	100000000
@@ -615,6 +618,7 @@ use_preset_vocabulary: false
 湖	ide	400000000
 涯	idf	100000000
 源	idr	800000000
+滔	iev	200000000
 汗	ifh	100000000
 清	ige	800000000
 滞	igk	100000000
@@ -656,6 +660,7 @@ use_preset_vocabulary: false
 湾	iyo	100000000
 洲	iyt	100000000
 浪	iyv	100000000
+蜡	jaj	100000000
 蝶	jan	100000000
 贤	jcm	100000000
 竖	jcu	100000000
@@ -673,6 +678,7 @@ use_preset_vocabulary: false
 曼	jlc	100000000
 帅	jmh	600000000
 晕	jpl	100000000
+蛇	jpx	100000000
 易	jqr	200000000
 歇	jqw	300000000
 星	jtg	100000000
@@ -806,6 +812,7 @@ use_preset_vocabulary: false
 改	nty	2500000000
 屏	nua	400000000
 飞	nui	200000000
+惟	nwy	100000000
 惯	nxf	100000000
 屁	nxx	100000000
 尽	nyu	500000000
@@ -907,6 +914,7 @@ use_preset_vocabulary: false
 担	rjg	200000000
 操	rkk	100000000
 摆	rlf	200000000
+舞	rlg	100000000
 投	rmc	200000000
 缺	rmn	200000000
 气	rnb	600000000
@@ -919,6 +927,7 @@ use_preset_vocabulary: false
 抑	rqb	200000000
 鬼	rqc	100000000
 撸	rqg	200000000
+拘	rqk	100000000
 换	rqm	1100000000
 抱	rqn	300000000
 掐	rqv	100000000
@@ -1112,7 +1121,6 @@ use_preset_vocabulary: false
 嫁	vpe	100000000
 婉	vpq	100000000
 群	vtk	800000000
-九	vtn	200000000
 嫌	vuv	100000000
 娘	vyv	100000000
 借	waj	100000000
@@ -1156,6 +1164,7 @@ use_preset_vocabulary: false
 何	wsk	600000000
 任	wtf	600000000
 伤	wtl	100000000
+余	wtu	200000000
 八	wty	500000000
 位	wug	1000000000
 倍	wuk	100000000
@@ -1241,6 +1250,7 @@ use_preset_vocabulary: false
 畜	yxl	100000000
 玄	yxu	100000000
 议	yyq	300000000
+葚	aadn	100000000
 惹	adkn	200000000
 藏	adnt	100000000
 期	adwe	400000000
@@ -1260,8 +1270,10 @@ use_preset_vocabulary: false
 荷	awsk	100000000
 荒	aynq	100000000
 随	bdep	200000000
+孩	bynw	100000000
 柔	cbts	100000000
 叠	cccg	100000000
+桑	cccs	100000000
 骚	ccyj	200000000
 熊	cexo	200000000
 飙	dddq	100000000
@@ -1283,6 +1295,7 @@ use_preset_vocabulary: false
 戴	falw	100000000
 垮	fdfn	100000000
 土	ffff	100000000
+封	fffy	100000000
 墙	ffuk	100000000
 干	fggh	1200000000
 士	fghg	800000000
@@ -1487,6 +1500,7 @@ use_preset_vocabulary: false
 乖	tfux	200000000
 重	tgjf	800000000
 秣	tgsy	100000000
+臭	thdu	100000000
 怎	thfn	2400000000
 版	thgc	800000000
 程	tkgg	400000000
@@ -1581,6 +1595,7 @@ use_preset_vocabulary: false
 拍了	rrb	100000000
 长的	tar	200000000
 分不	wvi	100000000
+工夫	aafw	100000000
 工具	aahw	600000000
 工农	aape	100000000
 工程	aatk	100000000
@@ -1614,6 +1629,7 @@ use_preset_vocabulary: false
 基准	aduw	200000000
 其他	adwb	800000000
 其余	adwt	200000000
+惹人	adww	100000000
 苦读	adyf	100000000
 菜园	aelf	100000000
 菜单	aeuj	100000000
@@ -1622,7 +1638,7 @@ use_preset_vocabulary: false
 某种	aftk	100000000
 某次	afuq	100000000
 革新	afus	100000000
-革命	afwg	200000000
+革命	afwg	400000000
 勒个	afwh	100000000
 某个	afwh	100000000
 苹果	agjs	500000000
@@ -1713,6 +1729,7 @@ use_preset_vocabulary: false
 承诺	bdya	100000000
 阴阳	bebj	100000000
 阻碍	bedj	100000000
+阴影	bejy	100000000
 隔开	bgga	100000000
 耳根	bgsv	100000000
 隔离	bgyb	100000000
@@ -1810,6 +1827,7 @@ use_preset_vocabulary: false
 通用	ceet	400000000
 通过	cefp	800000000
 能否	cegi	100000000
+能上	cehh	100000000
 通常	ceip	100000000
 能当	ceiv	100000000
 能量	cejg	100000000
@@ -1843,6 +1861,7 @@ use_preset_vocabulary: false
 台湾	ckiy	300000000
 台蛙	ckjf	100000000
 台独	ckqt	100000000
+观点	cmhk	100000000
 观看	cmrh	100000000
 观众	cmww	300000000
 马达	cndp	100000000
@@ -1995,6 +2014,7 @@ use_preset_vocabulary: false
 历史	dlkq	900000000
 奋斗	dluf	100000000
 面子	dmbb	100000000
+面孔	dmbn	100000000
 面对	dmcf	200000000
 页码	dmdc	100000000
 页面	dmdm	800000000
@@ -2186,6 +2206,7 @@ use_preset_vocabulary: false
 运算	fcth	300000000
 动物	fctr	100000000
 云端	fcum	100000000
+支付	fcwf	100000000
 动作	fcwt	100000000
 运费	fcxj	100000000
 震动	fdfc	700000000
@@ -2271,7 +2292,7 @@ use_preset_vocabulary: false
 未曾	fiul	200000000
 示例	fiwg	100000000
 示弱	fixu	100000000
-求魔	fiys	200000000
+求魔	fiys	300000000
 朝左	fjda	200000000
 进去	fjfc	300000000
 进到	fjgc	100000000
@@ -2385,10 +2406,12 @@ use_preset_vocabulary: false
 老杨	ftsn	100000000
 老板	ftsr	200000000
 都要	ftsv	200000000
+才智	fttd	100000000
 才行	fttf	200000000
 都行	fttf	100000000
 老版	ftth	100000000
 教程	fttk	200000000
+教条	ftts	200000000
 老美	ftug	200000000
 老弟	ftux	200000000
 老妈	ftvc	1900000000
@@ -2426,6 +2449,7 @@ use_preset_vocabulary: false
 规定	fwpg	100000000
 替换	fwrq	500000000
 规模	fwsa	100000000
+零乱	fwtd	100000000
 替身	fwtm	100000000
 规律	fwtv	400000000
 零头	fwud	100000000
@@ -2445,11 +2469,11 @@ use_preset_vocabulary: false
 开心	gany	100000000
 弄完	gapf	100000000
 形象	gaqj	100000000
-开票	gasf	500000000
+开票	gasf	800000000
 弄得	gatj	200000000
 开箱	gats	200000000
 开关	gaud	200000000
-开头	gaud	100000000
+开头	gaud	300000000
 开着	gaud	100000000
 弄好	gavb	200000000
 开始	gavc	1200000000
@@ -2566,6 +2590,7 @@ use_preset_vocabulary: false
 一倍	ggwu	100000000
 一份	ggww	200000000
 一级	ggxe	300000000
+一组	ggxe	200000000
 一张	ggxt	100000000
 一统	ggxy	100000000
 一遍	ggyn	100000000
@@ -2822,7 +2847,7 @@ use_preset_vocabulary: false
 上下	hhgh	300000000
 上来	hhgo	200000000
 卡死	hhgq	100000000
-上班	hhgy	100000000
+上班	hhgy	300000000
 上演	hhip	100000000
 上海	hhit	100000000
 卡车	hhlg	100000000
@@ -2929,6 +2954,7 @@ use_preset_vocabulary: false
 清单	iguj	100000000
 清净	iguq	100000000
 小孩	ihby	300000000
+小胖	iheu	100000000
 涉及	ihey	100000000
 小王	ihgg	100000000
 小事	ihgk	200000000
@@ -2943,7 +2969,7 @@ use_preset_vocabulary: false
 小宝	ihpg	200000000
 涉密	ihpn	200000000
 小窗	ihpw	100000000
-小鹤	ihpw	600000000
+小鹤	ihpw	800000000
 小镇	ihqf	100000000
 小儿	ihqt	100000000
 小狗	ihqt	100000000
@@ -3015,6 +3041,7 @@ use_preset_vocabulary: false
 党员	ipkm	200000000
 演员	ipkm	100000000
 沉默	iplf	100000000
+党内	ipmw	100000000
 学习	ipnu	900000000
 深色	ipqc	100000000
 演技	iprf	100000000
@@ -3024,6 +3051,7 @@ use_preset_vocabulary: false
 学术	ipsy	100000000
 学生	iptg	100000000
 深处	ipth	100000000
+觉得	iptj	200000000
 常务	iptl	200000000
 浑身	iptm	100000000
 深入	ipty	300000000
@@ -3060,6 +3088,7 @@ use_preset_vocabulary: false
 活力	itlt	100000000
 省力	itlt	100000000
 省略	itlt	200000000
+省内	itmw	100000000
 省心	itny	100000000
 海外	itqh	200000000
 少儿	itqt	100000000
@@ -3082,12 +3111,14 @@ use_preset_vocabulary: false
 当然	ivqd	300000000
 当前	ivue	1800000000
 当你	ivwq	100000000
+当作	ivwt	100000000
 涂鸦	iwah	100000000
 濮阳	iwbj	200000000
 兴趣	iwfh	200000000
 涨价	ixww	200000000
 游戏	iyca	300000000
 流动	iyfc	100000000
+流水	iyii	100000000
 流淌	iyii	100000000
 流浪	iyiy	100000000
 游泳	iyiy	100000000
@@ -3129,6 +3160,7 @@ use_preset_vocabulary: false
 坚持	jcrf	200000000
 紧迫	jcrp	100000000
 紧要	jcsv	100000000
+紧凑	jcud	100000000
 贤侄	jcwg	100000000
 坚信	jcwy	100000000
 紧张	jcxt	100000000
@@ -3136,11 +3168,12 @@ use_preset_vocabulary: false
 明天	jegd	1000000000
 明清	jeig	100000000
 明明	jeje	300000000
+明日	jejj	100000000
 明显	jejo	200000000
 暖男	jell	100000000
 明白	jerr	400000000
 明知	jetd	100000000
-明细	jexl	100000000
+明细	jexl	300000000
 明文	jeyy	100000000
 时期	jfad	100000000
 野花	jfaw	100000000
@@ -3189,6 +3222,7 @@ use_preset_vocabulary: false
 帅气	jmrn	100000000
 映射	jmtm	900000000
 遇着	jmud	100000000
+电子	jnbb	200000000
 电压	jndf	100000000
 电脑	jney	1800000000
 电动	jnfc	100000000
@@ -3229,7 +3263,7 @@ use_preset_vocabulary: false
 归属	jvnt	100000000
 归宿	jvpw	100000000
 归档	jvsi	2000000000
-照片	jvth	300000000
+照片	jvth	500000000
 照着	jvud	300000000
 照亮	jvyp	200000000
 影子	jybb	100000000
@@ -3250,6 +3284,7 @@ use_preset_vocabulary: false
 吐槽	kfsg	100000000
 味道	kfut	100000000
 号码	kgdc	300000000
+吓唬	kgkh	100000000
 吓跑	kgkh	100000000
 中期	khad	100000000
 中英	kham	300000000
@@ -3298,6 +3333,7 @@ use_preset_vocabulary: false
 另外	klqh	200000000
 别名	klqk	100000000
 别提	klrj	100000000
+别扭	klrn	100000000
 别的	klrq	300000000
 别人	klww	400000000
 别离	klyb	100000000
@@ -3434,6 +3470,7 @@ use_preset_vocabulary: false
 贺客	lkpt	100000000
 加持	lkrf	100000000
 加热	lkrv	100000000
+回执	lkrv	800000000
 架构	lksq	200000000
 回复	lktj	300000000
 回答	lktw	300000000
@@ -3449,6 +3486,7 @@ use_preset_vocabulary: false
 思想	lnsh	200000000
 思绪	lnxf	100000000
 思维	lnxw	200000000
+连带	lpgk	100000000
 连接	lpru	300000000
 边框	lpsa	200000000
 连续	lpxf	300000000
@@ -3476,6 +3514,7 @@ use_preset_vocabulary: false
 轮子	lwbb	1200000000
 输出	lwbm	500000000
 界面	lwdm	100000000
+办理	lwgj	600000000
 办事	lwgk	100000000
 办法	lwif	800000000
 轮回	lwlk	100000000
@@ -3500,7 +3539,7 @@ use_preset_vocabulary: false
 周转	mflf	100000000
 财务	mftl	100000000
 财税	mftu	100000000
-同志	mgfn	100000000
+同志	mgfn	400000000
 同一	mggg	100000000
 同理	mggj	100000000
 同事	mggk	300000000
@@ -3537,6 +3576,7 @@ use_preset_vocabulary: false
 刚才	mqft	200000000
 见到	mqgc	200000000
 网上	mqhh	300000000
+风光	mqiq	100000000
 网游	mqiy	100000000
 网吧	mqkc	100000000
 刚刚	mqmq	100000000
@@ -3578,6 +3618,7 @@ use_preset_vocabulary: false
 内网	mwmq	100000000
 内心	mwny	100000000
 内容	mwpw	600000000
+内外	mwqh	100000000
 内核	mwsy	400000000
 内部	mwuk	100000000
 凡事	mygk	100000000
@@ -3642,9 +3683,11 @@ use_preset_vocabulary: false
 书法	nnif	200000000
 快照	nnjv	100000000
 书写	nnpg	300000000
+快乐	nnqi	200000000
 快捷	nnrg	200000000
 书本	nnsg	100000000
 快查	nnsj	100000000
+书籍	nntd	100000000
 书签	nntw	100000000
 快符	nntw	400000000
 快递	nnux	100000000
@@ -3664,6 +3707,8 @@ use_preset_vocabulary: false
 改进	ntfj	100000000
 发过	ntfp	100000000
 改过	ntfp	300000000
+发型	ntga	100000000
+发表	ntge	100000000
 属于	ntgf	400000000
 发现	ntgm	800000000
 发光	ntiq	100000000
@@ -3678,6 +3723,7 @@ use_preset_vocabulary: false
 改掉	ntrh	100000000
 发挥	ntrp	100000000
 改的	ntrq	100000000
+发票	ntsf	1000000000
 必要	ntsv	800000000
 发行	nttf	100000000
 履行	nttf	100000000
@@ -3831,6 +3877,7 @@ use_preset_vocabulary: false
 宝安	pgpv	100000000
 定制	pgrm	300000000
 定长	pgta	100000000
+宣传	pgwf	100000000
 写作	pgwt	200000000
 定位	pgwu	100000000
 富豪	pgyp	100000000
@@ -3961,6 +4008,7 @@ use_preset_vocabulary: false
 印章	qguj	400000000
 印度	qgya	200000000
 外面	qhdm	300000000
+外地	qhfb	100000000
 外卖	qhfn	200000000
 外婆	qhih	100000000
 外号	qhkg	100000000
@@ -3970,6 +4018,7 @@ use_preset_vocabulary: false
 外长	qhta	100000000
 外科	qhtu	100000000
 外部	qhuk	100000000
+外衣	qhye	100000000
 乐观	qicm	100000000
 乐园	qilf	200000000
 锁定	qipg	100000000
@@ -4066,6 +4115,7 @@ use_preset_vocabulary: false
 找我	ratr	100000000
 找个	rawh	200000000
 拒绝	raxq	100000000
+报表	rbge	100000000
 报班	rbgy	100000000
 报错	rbqa	400000000
 摄氏	rbqa	100000000
@@ -4085,12 +4135,13 @@ use_preset_vocabulary: false
 反查	rcsj	2100000000
 反复	rctj	400000000
 把头	rcud	100000000
+抬头	rcud	300000000
 挨个	rcwh	100000000
 反比	rcxx	100000000
 反应	rcyi	100000000
 反腐	rcyw	100000000
 排除	rdbw	100000000
-排在	rddh	100000000
+排在	rddh	200000000
 排布	rddm	100000000
 排列	rdgq	200000000
 排号	rdkg	100000000
@@ -4132,6 +4183,7 @@ use_preset_vocabulary: false
 看到	rhgc	200000000
 掉下	rhgh	100000000
 牛逼	rhgk	100000000
+年来	rhgo	100000000
 看来	rhgo	400000000
 年龄	rhhw	100000000
 扯淡	rhio	100000000
@@ -4151,6 +4203,7 @@ use_preset_vocabulary: false
 捎带	rigk	100000000
 提取	rjbc	300000000
 提示	rjfi	700000000
+揭露	rjfk	200000000
 提到	rjgc	100000000
 提速	rjgk	100000000
 担心	rjny	100000000
@@ -4164,6 +4217,7 @@ use_preset_vocabulary: false
 捐赠	rkmu	100000000
 操蛋	rknh	300000000
 操守	rkpf	100000000
+损失	rkrw	100000000
 操作	rkwt	900000000
 摆着	rlud	100000000
 抽取	rmbc	100000000
@@ -4175,6 +4229,7 @@ use_preset_vocabulary: false
 抽象	rmqj	200000000
 缺失	rmrw	100000000
 制程	rmtk	300000000
+投入	rmty	100000000
 投稿	rmty	100000000
 制作	rmwt	100000000
 制度	rmya	100000000
@@ -4204,6 +4259,7 @@ use_preset_vocabulary: false
 近似	rpwn	100000000
 探讨	rpyf	100000000
 控诉	rpyr	100000000
+鬼子	rqbb	100000000
 抑郁	rqde	100000000
 换成	rqdn	200000000
 鬼脸	rqew	100000000
@@ -4330,6 +4386,7 @@ use_preset_vocabulary: false
 失误	rwyk	100000000
 推广	rwyy	100000000
 指出	rxbm	100000000
+指南	rxfm	100000000
 指法	rxif	200000000
 批量	rxjg	300000000
 指定	rxpg	400000000
@@ -4374,6 +4431,7 @@ use_preset_vocabulary: false
 顶戴	sdfa	100000000
 顶多	sdqq	100000000
 顶部	sduk	100000000
+极大	sedd	100000000
 极速	segk	100000000
 极点	sehk	300000000
 极端	seum	200000000
@@ -4409,6 +4467,7 @@ use_preset_vocabulary: false
 配音	sguj	100000000
 本次	sguq	100000000
 配合	sgwg	100000000
+本人	sgww	200000000
 西方	sgyy	200000000
 想出	shbm	100000000
 相通	shce	100000000
@@ -4504,7 +4563,8 @@ use_preset_vocabulary: false
 检查	swsj	300000000
 核心	syny	500000000
 柱状	syud	100000000
-长期	taad	100000000
+长期	taad	200000000
+长城	tafd	100000000
 长远	tafq	100000000
 长时	tajf	200000000
 长图	talt	200000000
@@ -4553,6 +4613,7 @@ use_preset_vocabulary: false
 先王	tfgg	100000000
 行政	tfgh	100000000
 行事	tfgk	100000000
+千里	tfjf	100000000
 待遇	tfjm	100000000
 等吧	tfkc	100000000
 行吗	tfkc	100000000
@@ -4595,6 +4656,7 @@ use_preset_vocabulary: false
 征服	tgeb	100000000
 垂直	tgfh	100000000
 生死	tggq	100000000
+重点	tghk	100000000
 生涯	tgid	100000000
 生活	tgit	600000000
 重映	tgjm	100000000
@@ -4615,7 +4677,7 @@ use_preset_vocabulary: false
 生僻	tgwn	100000000
 重度	tgya	100000000
 重试	tgya	100000000
-重庆	tgyd	100000000
+重庆	tgyd	300000000
 重启	tgyn	400000000
 算了	thbn	100000000
 自有	thde	100000000
@@ -4867,6 +4929,7 @@ use_preset_vocabulary: false
 装逼	ufgk	200000000
 斗法	ufif	100000000
 半角	ufqe	200000000
+半年	ufrh	100000000
 装着	ufud	100000000
 闭会	ufwf	100000000
 装修	ufwh	100000000
@@ -4899,6 +4962,7 @@ use_preset_vocabulary: false
 间距	ujkh	200000000
 单车	ujlg	100000000
 意思	ujln	600000000
+音同	ujmg	100000000
 意见	ujmq	100000000
 意料	ujou	100000000
 单字	ujpb	1100000000
@@ -4930,11 +4994,11 @@ use_preset_vocabulary: false
 问问	ukuk	100000000
 部首	ukut	100000000
 总会	ukwf	100000000
-总体	ukws	100000000
+总体	ukws	200000000
 部分	ukwv	900000000
 总结	ukxf	300000000
 曾江	ulia	200000000
-曾经	ulxc	100000000
+曾经	ulxc	200000000
 疫苗	umal	100000000
 疯子	umbb	300000000
 商场	umfn	100000000
@@ -4981,7 +5045,7 @@ use_preset_vocabulary: false
 新秀	uste	100000000
 尊重	ustg	200000000
 新生	ustg	100000000
-亲自	usth	100000000
+亲自	usth	200000000
 新版	usth	100000000
 亲身	ustm	100000000
 遵循	ustr	100000000
@@ -5022,6 +5086,7 @@ use_preset_vocabulary: false
 凝聚	uxbc	100000000
 递归	uxjv	200000000
 背景	uxjy	400000000
+北国	uxlg	100000000
 慈祥	uxpy	100000000
 背锅	uxqk	100000000
 北斗	uxuf	200000000
@@ -5205,6 +5270,7 @@ use_preset_vocabulary: false
 什么	wftc	6500000000
 舒适	wftd	100000000
 值得	wftj	100000000
+传入	wfty	100000000
 仁慈	wfux	100000000
 传递	wfux	100000000
 会做	wfwd	100000000
@@ -5239,7 +5305,7 @@ use_preset_vocabulary: false
 合格	wgst	100000000
 合适	wgtd	300000000
 全选	wgtf	200000000
-使得	wgtj	100000000
+使得	wgtj	200000000
 便利	wgtj	100000000
 使我	wgtr	100000000
 全篇	wgty	100000000
@@ -5414,13 +5480,14 @@ use_preset_vocabulary: false
 人物	wwtr	200000000
 人头	wwud	100000000
 坐个	wwwh	100000000
-人们	wwwu	100000000
+人们	wwwu	200000000
 人为	wwyl	100000000
 华丽	wxgm	100000000
 华明	wxje	700000000
 货色	wxqc	100000000
 华北	wxux	100000000
 华人	wxww	100000000
+华裔	wxye	100000000
 华为	wxyl	100000000
 集成	wydn	200000000
 偏爱	wyep	100000000
@@ -5458,7 +5525,7 @@ use_preset_vocabulary: false
 红烧	xaoa	100000000
 练气	xarn	200000000
 红楼	xaso	100000000
-经验	xccw	100000000
+经验	xccw	400000000
 经历	xcdl	500000000
 经过	xcfp	100000000
 经常	xcip	1000000000
@@ -5506,6 +5573,7 @@ use_preset_vocabulary: false
 细胞	xleq	200000000
 细看	xlrh	100000000
 纳粹	xmoy	100000000
+纳税	xmtu	300000000
 幻想	xnsh	100000000
 纠结	xnxf	200000000
 继承	xobd	100000000
@@ -5556,7 +5624,7 @@ use_preset_vocabulary: false
 编程	xytk	400000000
 编译	xyyc	200000000
 统计	xyyf	300000000
-试了	yabn	100000000
+试了	yabn	200000000
 试验	yacw	100000000
 试过	yafp	100000000
 试图	yalt	100000000
@@ -5586,6 +5654,7 @@ use_preset_vocabulary: false
 计划	yfaj	400000000
 读取	yfbc	500000000
 读出	yfbm	200000000
+讨厌	yfdd	100000000
 讲真	yffh	100000000
 讲求	yffi	300000000
 读者	yfft	400000000
@@ -5621,11 +5690,12 @@ use_preset_vocabulary: false
 语音	yguj	100000000
 请问	yguk	200000000
 评估	ygwd	200000000
+证件	ygwr	100000000
 评价	ygww	100000000
 主线	ygxg	100000000
 主张	ygxt	100000000
 主席	ygya	100000000
-主义	ygyq	200000000
+主义	ygyq	400000000
 语义	ygyq	100000000
 语言	ygyy	900000000
 店里	yhjf	200000000
@@ -5710,6 +5780,7 @@ use_preset_vocabulary: false
 记过	ynfp	100000000
 永远	ynfq	500000000
 永不	yngi	100000000
+盲目	ynhh	100000000
 词频	ynhi	900000000
 词汇	ynia	300000000
 房号	ynkg	100000000
@@ -5833,7 +5904,7 @@ use_preset_vocabulary: false
 谁人	ywww	100000000
 认证	ywyg	500000000
 夜店	ywyh	100000000
-认识	ywyk	100000000
+认识	ywyk	200000000
 认为	ywyl	200000000
 论调	ywym	100000000
 论文	ywyy	100000000
@@ -5874,6 +5945,7 @@ use_preset_vocabulary: false
 创建人	wvw	100000000
 东临宗	ajpf	300000000
 基本上	ashh	100000000
+共产党	auip	100000000
 英伟达	awdp	100000000
 工作者	awft	100000000
 出不来	bggo	200000000
@@ -5918,6 +5990,7 @@ use_preset_vocabulary: false
 大拇指	drrx	100000000
 大模型	dsga	200000000
 大概率	dsyx	300000000
+有效期	duad	100000000
 大部分	duwv	200000000
 大好人	dvww	100000000
 百分百	dwdj	100000000
@@ -5989,6 +6062,7 @@ use_preset_vocabulary: false
 不适应	gtyi	100000000
 一次性	gunt	100000000
 玩意儿	guqt	600000000
+一部分	guwv	200000000
 一会儿	gwqt	200000000
 一个个	gwwh	100000000
 一个人	gwww	200000000
@@ -6091,6 +6165,7 @@ use_preset_vocabulary: false
 数人头	owud	200000000
 富士康	pfyv	400000000
 初中生	pktg	100000000
+实践论	pkyw	100000000
 之所以	prny	200000000
 字符串	ptkk	100000000
 初始值	pvwf	100000000
@@ -6143,12 +6218,14 @@ use_preset_vocabulary: false
 很不错	tgqa	100000000
 第一次	tguq	300000000
 第一位	tgwu	100000000
+毛泽东	tiai	400000000
 长时间	tjuj	100000000
 第几个	tmwh	100000000
 短视频	tphi	100000000
 很容易	tpjq	100000000
 自定义	tpyq	600000000
 自然码	tqdc	500000000
+重要性	tsnt	100000000
 奥特曼	ttjl	100000000
 么么哒	ttkd	100000000
 怎么啦	ttkr	900000000
@@ -6161,7 +6238,7 @@ use_preset_vocabulary: false
 自媒体	tvws	200000000
 处女座	tvyw	100000000
 每个人	twww	200000000
-身份证	twyg	400000000
+身份证	twyg	500000000
 翻译器	tykk	300000000
 程序员	tykm	100000000
 毛主席	tyya	200000000
@@ -6265,6 +6342,7 @@ use_preset_vocabulary: false
 无处不在	ftgd	100000000
 无微不至	ftgg	100000000
 老生常谈	ftiy	100000000
+教条主义	ftyy	500000000
 无产阶级	fubx	200000000
 朝九晚五	fvjg	100000000
 无论如何	fyvw	100000000
@@ -6283,6 +6361,7 @@ use_preset_vocabulary: false
 天赋异禀	gmny	100000000
 不由自主	gmty	100000000
 不同寻常	gmvi	100000000
+不断完善	gopu	100000000
 两袖清风	gpim	100000000
 一年到头	grgu	100000000
 正气凛然	gruq	200000000
@@ -6344,6 +6423,7 @@ use_preset_vocabulary: false
 扬长补短	rtpt	100000000
 相见恨晚	smnj	100000000
 乱七八糟	tawo	100000000
+生吞活剥	tgiv	100000000
 身不由己	tgmn	100000000
 积习难改	tncn	100000000
 自然而然	tqdq	100000000
@@ -6371,6 +6451,7 @@ use_preset_vocabulary: false
 公诸于众	wygw	100000000
 弱肉强食	xmxw	200000000
 红衰翠减	xynu	100000000
+主观主义	ycyy	100000000
 永无止境	yfhf	100000000
 毫无意义	yfuy	500000000
 说来话长	ygyt	100000000
@@ -6380,7 +6461,7 @@ use_preset_vocabulary: false
 文件内容	ywmp	300000000
 高级搜索	yxrf	100000000
 高谈阔论	yyuy	100000000
-马克思主义	cdly	100000000
+马克思主义	cdly	400000000
 邓小平理论	cigy	100000000
 泰坦尼克号	dfnk	100000000
 国家旅游局	lpyn	100000000
@@ -6395,4 +6476,5 @@ use_preset_vocabulary: false
 书中自有颜如玉	nktg	100000000
 中国特色社会主义	klty	100000000
 自有大儒为我辨经	tddx	200000000
+中国石油天然气总公司	kldn	100000000
 实践是检验真理的唯一标准	pkju	300000000

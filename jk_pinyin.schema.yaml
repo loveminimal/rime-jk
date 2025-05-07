@@ -37,6 +37,9 @@ engine:
 
 speller:
   algebra:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ńg|ňg|ǹg/en/
+    - xform/ń|ň|ǹ/en/
     # --- 全拼 ---
     - derive/(;.*)$//
     - abbrev/^([a-z]).+$/$1/

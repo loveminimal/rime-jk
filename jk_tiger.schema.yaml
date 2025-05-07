@@ -11,7 +11,7 @@ schema:
     - https://github.com/loveminimal/rime-jk
   dependencies:
     - jk_ascii
-    - jk_pinyin
+    - jk_pinyin_tiger
   icon: 'assets/tiger_s.ico'
   ascii_icon: 'assets/ascii.ico'
 
@@ -107,6 +107,7 @@ reverse_lookup:
 
 pinyin:
   __include: jk.yaml:/pinyin
+  dictionary: jk_pinyin_tiger
   prefix: "Z"
 
 custom_phrase:

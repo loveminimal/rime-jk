@@ -20,7 +20,6 @@ switches:
   __append:
     - name: char_only
       reset: 1
-      states: [ 词语, 单字 ]
 
 engine:
   processors:
@@ -80,7 +79,7 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
-  # max_code_length: 4
+  max_code_length: 4
 
 chord_composer:
   __include: jk.yaml:/chord_composer_mini

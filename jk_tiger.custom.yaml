@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/orjk
+  __include: style.yaml:/otjk
   __patch:
     style/+:
-      color_scheme: steam
+      color_scheme: otjk

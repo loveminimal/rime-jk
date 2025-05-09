@@ -1211,6 +1211,7 @@ use_preset_vocabulary: false
 译	ycf	200000000
 庄	yfd	200000000
 讲	yfj	300000000
+读	yfn	100000000
 请	yge	700000000
 证	ygh	300000000
 语	ygk	800000000
@@ -1569,7 +1570,6 @@ use_preset_vocabulary: false
 编	xyna	800000000
 孰	ybvy	100000000
 庵	ydjn	100000000
-读	yfnd	100000000
 诸	yftj	100000000
 衰	ykge	100000000
 市	ymhj	200000000

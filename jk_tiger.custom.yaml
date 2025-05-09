@@ -5,4 +5,4 @@ patch:
   __include: style.yaml:/otjk
   __patch:
     style/+:
-      color_scheme: otjk
+      color_scheme: google

@@ -75,7 +75,7 @@ def get_header_ext(file_name):
 # 
 # 参考码表：
 # - https://github.com/loveminimal/rime-jk
-# - https://github.com/amzxyz/rime_wanxiang
+# - https://github.com/amzxyz/rime_wanxiang_pro
 # - ……
 # 
 ---

@@ -5,29 +5,45 @@
 # 当前脚本用于拉取万象词库的最近更新，并进行「转换 ➭ 合并 ➭ 排序」处理，以
 # 生成所需的五笔常规 or 整句词库、拼音词库
 # 
-# --- 可配置项 ---
-# ① 是否开启 8105 通规字字符范围过滤
-# 该设置项仅供有扩展字符集需求（需修改当前脚本）
+# === 可配置项 ===
+# ① --- 编码类型 ---
+# !!! 转换拼音编码需要万象拼音Pro为底座，即 repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
+# !!! 五笔、虎码支持使用其他仓库，如雾凇、白霜、万象拼音基础版等
+# 目标转码类型：
+# ¹ 拼音：¹1 moqi 墨奇, ¹2 flypy 鹤形, ¹3 zrm 自然码, ¹4 jdh 简单鹤, ¹5 cj 仓颉,
+#         ¹6 tiger 虎码首末, ¹7 wubi 五笔前二, ¹8 hanxin 汉心，¹0 纯拼音
+# 
+# ² 五笔：²1 五笔整句，²0 五笔常规
+# ³ 虎码：³1 虎码整句，³0 虎码常规 
+# code_type = '31'
+# ② --- 字集过滤 ---
+# 是否开启 8105 通规字字符范围过滤「 🔥 强烈推荐开启 」
+# 该设置项仅供有扩展字符集需求的用户
+# 拼音、虎码已提供大字集映射，五笔默认提供 8105 通规字映射
+# !!! 再次强烈推荐开启
 # is_filter_8105 = True
-# ② 常规五笔编码还是整句编码, True 常规 False 整句
-# is_wubi_normal = False
-# ③ 分包还是归并
-# - 归并 True （dicts/wubi86_ext.dict.yaml）
+# ③ --- 分包归并 ---
+# 分包还是归并「 合并后可提高 Rime 重新部署速度 」
+# - 归并 True （dicts/*_ext.dict.yaml、dicts/*_zj.dict.yaml）
 # - 分包 Flase（cn_dicts/*）
-# is_merge = True
-# ④ 是否限制词库最大词长，若为 0 ，则不限制
+# is_merge = False
+# ④ --- 词长限制 ---
+# 是否限制词库最大词长，若为 0 ，则不限制
 # word_length_limit = 0
-# ⑤ 待转换的词典仓库
+# ⑤ --- 仓库指定 ---
+# 待转换的词典仓库
 # repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
 # repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
+# repository_url = "https://github.com/gaboolic/rime-frost.git"
+# repository_url = "https://github.com/iDvel/rime-ice.git"
 # 
 # --- 其他说明 ---
-# 其实稍微修改一下当前脚本，可以获得更多转换功能，如可以转换万象词库到任意
-# 辅助码的拼音词库，有兴趣的朋友可以自行扩展
+# 其实稍微修改一下当前脚本，可以获得更多转换功能，有兴趣的朋友可以自行扩展
 # 
 # -------------------------------------------------------------------------
 # 
 import os
+import stat
 import platform
 import re
 import shutil
@@ -36,6 +52,8 @@ import hashlib
 from pathlib import Path
 import threading
 from timer import timer
+from is_chinese_char import is_chinese_char
+from tiger_map import tiger_map
 from wubi86_8105_map import wubi86_8105_map
 from header import get_header_ext
 from header import get_header_common
@@ -72,26 +90,31 @@ def ask_yes_no(question, timeout=5):
         return False
 
 
-def force_delete(path):
-    """暴力删除文件/文件夹（无视权限和占用）"""
+def remove_readonly(func, path, exc):
+    """
+    清除只读属性并重新尝试删除。
+    """
     try:
-        if not os.path.exists(path):
-            return True
-        if platform.system() == "Windows":
-            # ^ Windows系统处理
-            path = os.path.abspath(path)
-            # 使用robocopy空文件夹替换（微软官方推荐）
-            temp_dir = os.path.join(os.path.dirname(path), "temp_empty")
-            os.makedirs(temp_dir, exist_ok=True)
-            subprocess.run(["robocopy", temp_dir, path, "/mir", "/njh", "/njs", "/ndl", "/np"], check=True, stderr=subprocess.DEVNULL)
-            os.rmdir(temp_dir)
-            # 二次清理残留
-            subprocess.run(["rd", "/s", "/q", path], shell=True, stderr=subprocess.DEVNULL)
-        else:
-            # ^ Linux/Mac系统
-            subprocess.run(["rm", "-rf", path], check=True)
+        os.chmod(path, stat.S_IWRITE)
+        func(path)
+    except Exception as e:
+        print(f"Error removing {path}: {e}")
+
+def force_delete(path):
+    """
+    强制删除文件或文件夹，忽略权限限制。
+    """
+    if not os.path.exists(path):
         return True
-    except Exception:
+    try:
+        if os.path.isfile(path) or os.path.islink(path):
+            os.chmod(path, stat.S_IWRITE)
+            os.remove(path)
+        elif os.path.isdir(path):
+            shutil.rmtree(path, onexc=remove_readonly)
+        return True
+    except Exception as e:
+        print(f"Error deleting {path}: {e}")
         return False
 
 
@@ -122,8 +145,8 @@ def sync_repository(repo_url, local_path):
             print("🚫  » 拉取更新失败")
             sync_success = False
             if local_path.exists():
-                if backup_path.exists():
-                    force_delete(backup_path)
+                # if backup_path.exists():
+                force_delete(backup_path)
                 local_path.rename(backup_path)
                 print(f"✅  » 当前仓库已备份为 { backup_path }")
             print(f"--- 重新浅克隆 ---")
@@ -139,8 +162,8 @@ def sync_repository(repo_url, local_path):
             print("🚫  » 克隆仓库失败")
             if backup_path.exists():
                 print(f"--- 开始恢复仓库 ---")
-                if local_path.exists():
-                    force_delete(local_path)
+                # if local_path.exists():
+                force_delete(local_path)
                 backup_path.rename(local_path)
                 print(f"✅  » 仓库恢复成功 {local_path}")
                 sync_success = False
@@ -149,7 +172,7 @@ def sync_repository(repo_url, local_path):
 
 def get_wubi_code(word: str) -> str:
     """将汉字转换为五笔编码"""
-    if is_wubi_normal:
+    if code_type.startswith("20"):
         # ^ 常规编码
         if len(word) == 1:
             return f'{wubi86_8105_map[word]}'
@@ -171,12 +194,37 @@ def get_wubi_code(word: str) -> str:
         return ' '.join(code_parts)
 
 
+def get_tiger_code(word: str) -> str:
+    """将汉字转换为虎码编码"""
+    if code_type.startswith("30"):
+        # ^ 常规编码
+        if len(word) == 1:
+            return f'{tiger_map[word]}'
+        elif len(word) == 2:
+            return f'{tiger_map[word[0]][:2]}{tiger_map[word[1]][:2]}'
+        elif len(word) == 3:
+            return f'{tiger_map[word[0]][0]}{tiger_map[word[1]][0]}{tiger_map[word[2]][:2]}'
+        elif len(word) >= 4:
+            return f'{tiger_map[word[0]][0]}{tiger_map[word[1]][0]}{tiger_map[word[2]][0]}{tiger_map[word[len(word) - 1]][0]}'
+    else:
+        # ^ 整句编码
+        code_parts = []
+        for char in word:
+            tiger_code = tiger_map[char]
+            if len(tiger_code) == 3:
+                code_parts.append(f"{tiger_code[:2]};{tiger_code[2:]}0")
+            else:
+                code_parts.append(f"{tiger_code[:2]};{tiger_code[2:]}")
+        return ' '.join(code_parts)
+
+
 def get_pinyin_code(code: str) -> str:
-    """将汉字转换为拼音+辅助码编码"""
+    """将汉字转换为拼音 + 辅助码编码（可选）"""
     code_parts = []
     for _code in code.split(' '):
         _cc = _code.split(';')
-        code_parts.append(f'{_cc[0]};{_cc[fuzhuma_type]}')
+        fuzhuma = _cc[int(code_type[-1])] if not code_type.endswith('0') else ''
+        code_parts.append(f'{_cc[0]}{';' if fuzhuma else ''}{fuzhuma}')
 
     return ' '.join(code_parts)
 
@@ -199,7 +247,7 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
         with open(file_path, 'r', encoding='utf-8') as fp:
             for line in fp:
                 line = line.strip()
-                if not line or line[0] not in wubi86_8105_map:
+                if not line or not is_chinese_char(line[0]):
                     continue
 
                 parts = tab_split_re.split(line)
@@ -217,7 +265,7 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
         with open(file_path, 'r', encoding='utf-8') as f:
             for line in f:
                 line = line.strip()
-                if not line or line[0] not in wubi86_8105_map:
+                if not line or not is_chinese_char(line[0]):
                     continue
 
                 parts = tab_split_re.split(line)
@@ -235,12 +283,15 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
                     continue
 
                 try:
-                    if is_pinyin:
+                    if code_type.startswith("1"):
                         pinyin_code = get_pinyin_code(code)
                         valid_entries.add(f"{word}\t{pinyin_code}\t{res_dict_word_weight[word]}\n")
-                    else:
+                    elif code_type.startswith("2"):
                         wubi_code = get_wubi_code(word)
                         valid_entries.add(f"{word}\t{wubi_code}\t{res_dict_word_weight[word]}\n")
+                    else:
+                        tiger_code = get_tiger_code(word)
+                        valid_entries.add(f"{word}\t{tiger_code}\t{res_dict_word_weight[word]}\n")
                 except KeyError:
                     invalid_line_count += 1
 
@@ -270,7 +321,7 @@ def filter_8105(src_dir: Path, out_file: Path):
             
             with open(filepath, 'r', encoding='utf-8') as f:
                 for line in f:
-                    if not line or line[0] not in wubi86_8105_map:
+                    if not line or not is_chinese_char(line[0]):
                         continue
                         
                     parts = tab_split_re.split(line.strip())
@@ -339,13 +390,13 @@ def sort_dict(src_dir, out_dir, dict_start):
     for line in lines_total:
         if line.startswith('.'):
             is_header_end = True
-        if line[0] not in wubi86_8105_map and not is_header_end:
+        if not is_chinese_char(line[0]) and not is_header_end:
             header_str += line 
 
 
     # 去重并处理词条
     for line in set(lines_total):
-        if line[0] in wubi86_8105_map:
+        if is_chinese_char(line[0]):
             word, code, weight = line.strip().split('\t')
             weight = int(weight)
             
@@ -391,6 +442,7 @@ def exec(proj_dir, work_dir, repository_url):
     repository_url = repository_url or "https://github.com/amzxyz/rime_wanxiang.git"
     repository_name = repository_url.split('/')[-1][:-4] # 如 rime_wanxiang
     local_directory = (proj_dir / work_dir / repository_name).resolve()
+    out_dict = f'cn_dicts_{repository_name}'
     print('🔜  === 开始获取最新词库文件 ===')
     exec_success = sync_repository(repository_url, local_directory)
     if not exec_success:
@@ -398,7 +450,7 @@ def exec(proj_dir, work_dir, repository_url):
 
     # ② 转换拼音词库为五笔词库
     src_dir = proj_dir / work_dir / repository_name / 'cn_dicts'
-    out_dir = proj_dir / work_dir / 'cn_dicts_x'
+    out_dir = proj_dir / work_dir / out_dict
     # 已存在，先删除，再转换
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -415,14 +467,18 @@ def exec(proj_dir, work_dir, repository_url):
 
     # ③ 过滤合并五笔码表
     out_file_name = ''
-    if is_pinyin:
+    if code_type.startswith("1"):
         out_file_name = 'pinyin.dict.yaml'
-    elif is_wubi_normal:
+    elif code_type.startswith("20"):
         out_file_name = 'wubi86_ext.dict.yaml'
-    else:
+    elif code_type.startswith("21"):
         out_file_name = 'wubi86_zj.dict.yaml'
+    elif code_type.startswith("30"):
+        out_file_name = 'tiger_ext.dict.yaml'
+    elif code_type.startswith("31"):
+        out_file_name = 'tiger_zj.dict.yaml'
 
-    src_dir = proj_dir / work_dir / 'cn_dicts_x'
+    src_dir = proj_dir / work_dir / out_dict
     out_file = proj_dir / work_dir / out_file_name
     print('\n🔜  === 开始合并处理词库文件 ===')
     filter_8105(src_dir, out_file)
@@ -431,12 +487,16 @@ def exec(proj_dir, work_dir, repository_url):
     src_dir = proj_dir /  work_dir
     out_dir = proj_dir / 'dicts'
     dict_start = ''
-    if is_pinyin:
+    if code_type.startswith("1"):
         dict_start = 'pinyin'
-    elif is_wubi_normal:
+    elif code_type.startswith("20"):
         dict_start = 'wubi86_ext'
-    else:
+    elif code_type.startswith("21"):
         dict_start = 'wubi86_zj'
+    elif code_type.startswith("30"):
+        dict_start = 'tiger_ext'
+    elif code_type.startswith("31"):
+        dict_start = 'tiger_zj'
 
     # 若不存在，创建
     if not out_dir.exists():
@@ -451,23 +511,31 @@ if __name__ == "__main__":
     work_dir = "../.temp_rime"
 
     # --- 可配置项 ---
-    # 是否开启 8105 通规字字符范围过滤
-    # 该设置项仅供有扩展字符集需求（需修改当前脚本）
+    # ① --- 编码类型 ---
+    # !!! 转换拼音编码需要万象拼音Pro为底座，即 repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
+    # !!! 五笔、虎码支持使用其他仓库，如雾凇、白霜、万象拼音基础版等
+    # 目标转码类型：
+    # ¹ 拼音：¹1 moqi 墨奇, ¹2 flypy 鹤形, ¹3 zrm 自然码, ¹4 jdh 简单鹤, ¹5 cj 仓颉,
+    #         ¹6 tiger 虎码首末, ¹7 wubi 五笔前二, ¹8 hanxin 汉心，¹0 纯拼音
+    # 
+    # ² 五笔：²1 五笔整句，²0 五笔常规
+    # ³ 虎码：³1 虎码整句，³0 虎码常规 
+    code_type = '31'
+    # ② --- 字集过滤 ---
+    # 是否开启 8105 通规字字符范围过滤「 🔥 强烈推荐开启 」
+    # 该设置项仅供有扩展字符集需求的用户
+    # 拼音、虎码已提供大字集映射，五笔默认提供 8105 通规字映射
+    # !!! 再次强烈推荐开启
     is_filter_8105 = True
-    # 是否转换为拼音词库〔 如果为 True，优先级高于 is_wubi_normal 〕
-    is_pinyin = True
-    # 拼音辅助码类型（按需选择即可）
-    # 1 moqi 墨奇, 2 flypy 鹤形, 3 zrm 自然码, 4 jdh 简单鹤, 5 cj 仓颉, 
-    # 6 tiger 虎码首末, 7 wubi 五笔前二, 8 hanxin 汉心
-    fuzhuma_type = 6 
-    # 常规五笔编码还是整句编码, True 常规 False 整句
-    is_wubi_normal = False
-    # 分包还是归并
-    # - 归并 True （dicts/wubi86_ext.dict.yaml）
+    # ③ --- 分包归并 ---
+    # 分包还是归并「 合并后可提高 Rime 重新部署速度 」
+    # - 归并 True （dicts/pinyin.dict.yaml、dicts/*_ext.dict.yaml、dicts/*_zj.dict.yaml）
     # - 分包 Flase（cn_dicts/*）
-    is_merge = True
+    is_merge = False
+    # ④ --- 词长限制 ---
     # 是否限制词库最大词长，若为 0 ，则不限制
     word_length_limit = 0
+    # ⑤ --- 仓库指定 ---
     # 待转换的词典仓库
     repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
     # repository_url = "https://github.com/amzxyz/rime_wanxiang.git"

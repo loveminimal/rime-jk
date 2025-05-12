@@ -1,0 +1,42 @@
+=== 脚本使用 ===
+
+scripts
+├── fetch_any_dict.py           # 词库转换
+├──
+├── --- 其它脚本 ---
+├── deploy_rime.py              # 重新部署
+├── sync_rime.py                # 用户资料同步
+├── sync_wubi_user_dict.py      # 转换及累积式合并五笔用户词库
+├── sync_tiger_user_dict.py     # 转换及累积式合并虎码用户词库
+├── sync_en_aliases_dict.py     # 转换本地 .bash_aliases 别名
+├── sort_dict.py                # 转换指定词典
+├──
+├── --- 工具脚本 ---
+├── is_chinese_char.py          # 判断是否中文字符
+├── progress.py                 # 进度条
+├── three_level_8105.py         # 通规字三级字串
+├── header.py                   # 头部说明
+├── timer.py                    # 时间统计
+├── tiger_map.py                # 虎码编码映射表
+└── wubi86_8105_map.py          # 五笔编码映射表
+
+
+---------------------------------------
+附一个转换后可用的整句运算规则 algebra 
+---------------------------------------
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~0
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  delimiter: " ~"     
+  algebra:
+    - abbrev/^([a-z]).+$/$1/
+    - derive/^([a-z])$/$1/
+    # - abbrev|^(.+);.*$|$1|               
+    - derive|^(.+);.*$|$1|                 
+    - derive|^(.+);(\w)(\w).*$|$1$2|       
+    - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+    - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+    - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
+    - erase/^(.+);(.+)$/

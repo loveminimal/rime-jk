@@ -531,14 +531,14 @@ if __name__ == "__main__":
     # 分包还是归并「 合并后可提高 Rime 重新部署速度 」
     # - 归并 True （dicts/pinyin.dict.yaml、dicts/*_ext.dict.yaml、dicts/*_zj.dict.yaml）
     # - 分包 Flase（cn_dicts/*）
-    is_merge = False
+    is_merge = True
     # ④ --- 词长限制 ---
     # 是否限制词库最大词长，若为 0 ，则不限制
     word_length_limit = 0
     # ⑤ --- 仓库指定 ---
     # 待转换的词典仓库
-    repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
-    # repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
+    # repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
+    repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
     # repository_url = "https://github.com/gaboolic/rime-frost.git"
     # repository_url = "https://github.com/iDvel/rime-ice.git"
 

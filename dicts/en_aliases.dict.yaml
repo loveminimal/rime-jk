@@ -100,7 +100,6 @@ cd ~/AppData/Roaming/Rime	cdr	0
 cd ~/AppData/Roaming/site	cds	0
 cd ~/AppData/Roaming/site/themes/virgo	cdt	0
 cd ~/AppData/Roaming/site/content/.obsidian/themes/Virgo	cdo	0
-cd D:/sourcecode/sc_rime/rime_utils	cdu	0
 cd D:/sourcecode/sc_rime	cdsc	0
 
 # --- Linux ---
@@ -109,16 +108,24 @@ cd ~/.shell	cdsh	0
 cd ~/site	cdss	0
 cd ~/site/themes/virgo	cdtt	0
 
+# --- Rime ---
+code	cc	0
+code ~/.bash_aliases	cca	0
+code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_wubi.userdb.txt	ccw	0
+code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_tiger.userdb.txt	cct	0
+
 cd ~/AppData/Roaming/Rime && py scripts/deploy_rime.py	ddr	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py	ssr	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	wwr	0
 cd ~/AppData/Roaming/Rime && py scripts/fetch_any_dict.py	fad	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_dict.py && py scripts/deploy_rime.py	uud	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_dict.py && py scripts/deploy_rime.py	uuw	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_tiger_user_dict.py && py scripts/deploy_rime.py	uut	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_zj_dict.py && py scripts/deploy_rime.py	uuz	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_zj_dict.py && py scripts/deploy_rime.py	uuwz	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_tiger_user_zj_dict.py && py scripts/deploy_rime.py	uutz	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_en_aliases_dict.py && py scripts/deploy_rime.py	uea	0
+
+# --- Hugo ---
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0
 cd ~/AppData/Roaming/site && rm -rf public && hugo && scp -r public/* aituyaa.com:/home/jack/blog/ && rm -rf public	sscp	0
-
 hugo server -Dw	hs	0
 hugo server -Dw -p 1314	hso	0

@@ -195,11 +195,11 @@ chaifen:
 
 # -------------------------------------
 # 简繁切换 
-# opencc_config s2t.json → s2hk.json  | s2tw.json | s2twp.json
+# opencc_config s2t.json → s2t.json | s2hk.json  | s2tw.json | s2twp.json
 # tips                   → all | char | none
 # -------------------------------------
 traditionalize:
   option_name: traditionalization
-  opencc_config: s2tw.json
+  opencc_config: s2t.json
   tips: char
   tags: [ abc, number, gregorian_to_lunar ]

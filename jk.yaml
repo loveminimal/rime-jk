@@ -203,3 +203,22 @@ traditionalize:
   opencc_config: s2t.json
   tips: char
   tags: [ abc, number, gregorian_to_lunar ]
+
+
+# -------------------------------------
+# 语言大模型 octagram 
+# wanxiang-lts-zh-hans
+# -------------------------------------
+octagram:
+  __patch:
+    grammar:
+      language: wanxiang-lts-zh-hans
+      collocation_max_length: 8    
+      collocation_min_length: 2    
+      collocation_penalty: -10     
+      non_collocation_penalty: -12 
+      weak_collocation_penalty: -24
+      rear_penalty: -30            
+    translator/contextual_suggestions: false
+    translator/max_homophones: 5
+    translator/max_homographs: 5

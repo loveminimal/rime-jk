@@ -3,16 +3,17 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_tiger_user_dict.py
-# - py scripts/sync_tiger_user_dict.py
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
+# - py scripts/sync_wubi_user_dict.py
 # 
 # 默认目录：
-# src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack\\jk_tiger.userdb.txt
-# out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\tiger_user.dict.yaml
+# src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack\\jk_wubi.userdb.txt
+# out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\wubi86_user.dict.yaml
 # 
 import re
 from pathlib import Path
 from collections import defaultdict
+import sys
 from header import get_header_sync
 from timer import timer
 from progress import progress
@@ -20,7 +21,7 @@ from is_chinese_char import is_chinese_char
 
 
 @timer
-def convert(src_dir, out_dir):
+def convert(src_dir, out_dir, src_file, out_file):
     """
     将用户同步的词典文件合并、排序并生成适用于 Rime 输入法的用户词典文件。
 
@@ -37,7 +38,7 @@ def convert(src_dir, out_dir):
     with open(src_file_path, 'r', encoding='utf-8') as f:
         lines_total = f.readlines()
 
-    with open(out_dir / f'{out_file_temp}', 'w', encoding='utf-8') as o:
+    with open(out_dir / f'{out_file + '.temp'}', 'w', encoding='utf-8') as o:
         res = ''
         # 以下几行为原始同步词典格式
         # ---------------------------------------------------
@@ -70,11 +71,11 @@ def convert(src_dir, out_dir):
 
         if len(res.strip()) > 0:
             progress('正在转换')
-            print('\n✅  » 已生成用户词库临时文件 %s' % (out_dir / out_file_temp))
+            print('\n✅  » 已生成用户词库临时文件 %s' % (out_dir / f'{out_file + '.temp'}'))
             o.write(res)
 
 @timer
-def combine(out_dir):
+def combine(out_dir, out_file):
     res_dict = {}
     res_dict_weight = defaultdict(set)
     lines_total = []
@@ -128,30 +129,73 @@ def combine(out_dir):
         print('✅  » 已合并生成用户词典 %s' % (out_dir / out_file))
 
 
-
-
-if __name__ == '__main__':
-    current_dir = Path.cwd()
-
-    # --- 配置：是否让用户词库排在最前 ---
-    # 权重放大亿点点
-    is_keep_user_dict_first = True
+def exec(code_type = ''):
+    # print(type(code_type), code_type)
 
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
 
-    src_file = 'jk_tiger.userdb.txt'
-    out_file = 'tiger_user.dict.yaml'
-    out_file_temp = out_file + '.temp'
+    src_file = 'jk_wubi.userdb.txt'
+    out_file = 'wubi86_user.dict.yaml'
+
+    code_dict = { '1': '拼音', '20': '五笔常规','21': '五笔整句','30': '虎码常规','31': '虎码整句' }
+
+    if code_type not in code_dict:
+        print(f'''
+🔔  请输入正确的用户词典标识码:
+------------------------------------------------------------------------------
+1 ➭ 拼音；20 ➭ 五笔常规；21 ➭ 五笔整句；30 ➭ 虎码常规；31 ➭ 虎码整句
+------------------------------------------------------------------------------
+        ''')
+        code_type = input(f"🔔  默认「 虎码常规 」? (30): ").strip().lower() or "30"
+        print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
+
+    if code_type.startswith("1"):
+        src_file = 'jk_pinyin_u.userdb.txt'
+        out_file = 'pinyin_user.dict.yaml'
+    elif code_type.startswith("20"):
+        src_file = 'jk_wubi.userdb.txt'
+        out_file = 'wubi86_user.dict.yaml'
+    elif code_type.startswith("21"):
+        src_file = 'jk_wubi_u.userdb.txt'
+        out_file = 'wubi86_user_zj.dict.yaml'
+    elif code_type.startswith("30"):
+        src_file = 'jk_tiger.userdb.txt'
+        out_file = 'tiger_user.dict.yaml'
+    elif code_type.startswith("31"):
+        src_file = 'jk_tiger_u.userdb.txt'
+        out_file = 'tiger_user_zj.dict.yaml'
 
     # 如果存在输出文件，先删除
-    current_out_file_temp = out_dir / out_file_temp
+    current_out_file_temp = out_dir / f'{out_file + '.temp'}'
     if current_out_file_temp.exists():
         current_out_file_temp.unlink()
         
-    print('🔜  === 开始同步转换用户自定义词库文件 ===')
-    convert(src_dir, out_dir)
+    print(f'🔜  === 开始同步转换「 {code_dict[code_type]} 」用户词库文件 ===')
+
+    convert(src_dir, out_dir, src_file, out_file)
     # 合并至用户文件
-    combine(out_dir)
+    combine(out_dir, out_file)
     # 清理掉临时文件 *.temp
     current_out_file_temp.unlink()
+    
+
+if __name__ == '__main__':
+    current_dir = Path.cwd()
+
+    # --- ① 是否让用户词库排在最前 ---
+    # 权重放大亿点点
+    is_keep_user_dict_first = True
+
+    # --- ② 编码类型 ---
+    # 目标转码类型：
+    # ¹ 拼音：¹1 moqi 墨奇, ¹2 flypy 鹤形, ¹3 zrm 自然码, ¹4 jdh 简单鹤, ¹5 cj 仓颉,
+    #         ¹6 tiger 虎码首末, ¹7 wubi 五笔前二, ¹8 hanxin 汉心，¹0 纯拼音
+    # 
+    # ² 五笔：²1 五笔整句，²0 五笔常规
+    # ³ 虎码：³1 虎码整句，³0 虎码常规 
+
+    code_type = sys.argv[1] if len(sys.argv) > 1 else ''
+
+    exec(code_type)
+    

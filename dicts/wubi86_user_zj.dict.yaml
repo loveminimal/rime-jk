@@ -1,4 +1,4 @@
-# Rime dictionary - pinyin_user.dict.yaml
+# Rime dictionary - wubi_user_zj.dict.yaml
 # encoding: utf-8
 # 
 # --- 说明 ---
@@ -11,7 +11,7 @@
 # - py scripts/sync_user_dict.py
 # 
 ---
-name: pinyin_user
+name: wubi_user_zj
 version: 2025.05
 sort: by_weight
 use_preset_vocabulary: false

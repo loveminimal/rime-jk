@@ -16,7 +16,7 @@ from collections import defaultdict
 from header import get_header_sync
 from timer import timer
 from progress import progress
-from wubi86_8105_map import wubi86_8105_map
+from is_chinese_char import is_chinese_char
 
 
 @timer
@@ -81,13 +81,13 @@ def combine(out_dir):
 
     # 加载所有词典文件
     for file_path in out_dir.iterdir():
-        if file_path.is_file() and file_path.name.startswith('wubi86_user.'):
+        if file_path.is_file() and file_path.name.startswith(f'{out_file.split('.')[0] + '.'}'):
             with open(file_path, 'r', encoding='utf-8') as f:
                 lines_total.extend(f.readlines())
 
     # 去重并处理词条
     for line in set(lines_total):
-        if line[0] in wubi86_8105_map:
+        if is_chinese_char(line[0]):
             word, code, weight = line.strip().split('\t')
 
             # 增加用户词语的权重，放大亿点点 100,000,000

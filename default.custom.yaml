@@ -75,6 +75,7 @@ patch:
       - { when: always, accept: Control+t, toggle: char_only }
       - { when: always, accept: Control+space, toggle: ascii_mode }                
       - { when: always, accept: Control+comma, select: .next }                     
+      - { when: always, accept: Control+l, select: .next }                     
       - { when: always, accept: Control+period, send: '~' }
       - { when: has_menu, accept: semicolon, send: 2 }                             
       - { when: has_menu, accept: apostrophe, send: 3 }                            

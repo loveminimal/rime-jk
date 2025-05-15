@@ -1,0 +1,69 @@
+# Rime schema - jk_pinyin_wubi.schema.yaml
+# encoding: utf-8
+
+schema:
+  schema_id: jk_pinyin_wubi
+  name: 拼音·反查
+  author:
+    - by Jack Liu <https://aituyaa.com>
+  description: |
+    - 拼音反查，拼音+五笔前二辅助码增强
+    - 仅用于拼音反查，不再作为独立的输入方案
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+    - lua_translator@*force_gc
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  algebra:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ńg|ňg|ǹg/en/
+    - xform/ń|ň|ǹ/en/
+    # --- 全拼 ---
+    - derive/(;.*)$//
+    - abbrev/^([a-z]).+$/$1/
+    - derive/^([a-z])$/$1/
+    # --- 辅助码 ---
+    - derive|^(.+);.*$|$1|                 
+    - derive|^(.+);(\w)(\w).*$|$1$2|       
+    - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+    - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+    - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+    - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
+    - erase/^(.+);(.+)$/
+
+translator:
+  dictionary: jk_pinyin_wubi
+  prism: jk_pinyin_wubi
+  enable_charset_filter: true
+  enable_sentence: false
+  enable_encoder: true
+  encode_commit_history: true
+  max_phrase_length: 4
+  enable_completion: true
+  enable_user_dict: true
+  spelling_hints: 1
+  comment_format: 
+    - xform/[^;]*;([^;]*)/$1/

@@ -1,0 +1,8 @@
+# Rime custom settings
+# encoding: utf-8
+
+patch:
+  __include: style.yaml:/skjk
+  __patch:
+    style/+:
+      color_scheme: skjk

@@ -318,12 +318,18 @@ algebra_zhixin:
 
 # === 拼音运算 ===
 algebra_pinyin: 
+  - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+  - xform/ńg|ňg|ǹg/en/
+  - xform/ń|ň|ǹ/en/
   # - xform/(;.*)$//
   - derive/(;.*)$//
   - abbrev/^([a-z]).+$/$1/
   - derive/^([a-z])$/$1/
 
 algebra_flypy:
+  - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+  - xform/ńg|ňg|ǹg/en/
+  - xform/ń|ň|ǹ/en/
   - derive/^([jqxy])u(;.*)$/$1v$2/
   - derive/^([aoe])([ioun])(;.*)$/$1$1$2$3/
   - xform/^([aoe])(ng)?(;.*)$/$1$1$2$3/
@@ -358,6 +364,9 @@ algebra_flypy:
   - derive/^([a-z])$/$1/
 
 algebra_zrm:
+  - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+  - xform/ńg|ňg|ǹg/en/
+  - xform/ń|ň|ǹ/en/
   - derive/^([jqxy])u(;.*)$/$1v$2/
   - derive/^([aoe])([ioun])(;.*)$/$1$1$2$3/
   - xform/^([aoe])(ng)?(;.*)$/$1$1$2$3/
@@ -423,4 +432,12 @@ algebra_fuzhuma:
 algebra_zj:
   - abbrev/^([a-z]).+$/$1/
   - derive/^([a-z])$/$1/
-  __include: algebra_fuzhuma
+  # - abbrev|^(.+);.*$|$1|               
+  - derive|^(.+);.*$|$1|                 
+  - derive|^(.+);(\w)(\w).*$|$1$2|       
+  - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
+  - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
+  - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
+  - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
+  - erase/^(.+);(.+)$/

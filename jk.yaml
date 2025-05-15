@@ -91,6 +91,7 @@ pinyin:
 
 user_dict_set:
   dictionary: jk_wubi_zj
+  user_dict: jk
   initial_quality: 0
   enable_completion: false
   enable_sentence: false
@@ -98,13 +99,12 @@ user_dict_set:
   comment_format:
     - xform/[^;]*;([^;]*)//
   enable_user_dict: true
-  user_dict: jk
 
 add_user_dict:
-  tag: add_user_dict
   dictionary: jk_wubi_zj
-  initial_quality: -1
   user_dict: jk
+  tag: add_user_dict
+  initial_quality: -1
   enable_charset_filter: false
   enable_completion: true
   enable_encoder: true

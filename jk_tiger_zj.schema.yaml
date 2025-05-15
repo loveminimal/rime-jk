@@ -2,8 +2,8 @@
 # encoding: utf-8
 
 schema:
-  schema_id: jk_tiger
-  name: 虎码·知心
+  schema_id: jk_tiger_zj
+  name: 虎码·整句
   author: 
     - Jack Liu <https://aituyaa.com>
   description: |
@@ -12,14 +12,12 @@ schema:
   dependencies:
     - jk_ascii
     - jk_pinyin_tiger
-  icon: 'assets/tiger_s.ico'
+  icon: 'assets/tiger.ico'
   ascii_icon: 'assets/ascii.ico'
 
 switches:
   __include: jk.yaml:/switches
-  __append:
-    - name: char_only
-      reset: 0
+
 
 engine:
   processors:
@@ -40,13 +38,16 @@ engine:
     - abc_segmentor          
     - punct_segmentor        
     - affix_segmentor@pinyin
+    - affix_segmentor@add_user_dict
     - fallback_segmentor     
   translators:
     # - echo_translator               
     - punct_translator        
-    - table_translator
+    - script_translator
     - table_translator@custom_phrase  
     - script_translator@pinyin
+    - script_translator@user_dict_set
+    - script_translator@add_user_dict
     - reverse_lookup_translator
     - lua_translator@*schedule
     - lua_translator@*helper
@@ -54,9 +55,9 @@ engine:
     - lua_translator@*force_gc        
   filters:
     - lua_filter@*prettify_comment
-    - lua_filter@*keep_short_code_first_tiger
+    # - lua_filter@*keep_short_code_first
     # - lua_filter@*single_char_first       # 单字优先
-    - lua_filter@*single_char_only
+    - lua_filter@*single_char_only          # 纯单字
     - simplifier
     - simplifier@emoji   
     - simplifier@zh2en
@@ -71,7 +72,8 @@ key_binder:
 recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
-    pinyin: "^Z[a-z]*$"    
+    # pinyin: "^z[Xa-z]*$"   
+    add_user_dict: "^Z[a-z]*$"
 
 punctuator:
   __include: jk.yaml:/punctuator
@@ -80,24 +82,33 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
-  max_code_length: 4
+  # max_code_length: 4
+  # auto_select: true
+  # auto_select_pattern: "^(\\w{4})$"
+  # auto_clear: max_length
+  algebra:
+    __include: algebra.yaml:/algebra_zj
 
 chord_composer:
   __include: jk.yaml:/chord_composer_mini
 
 
 translator:
-  dictionary: jk_tiger             
-  prism: jk_tiger                  
+  dictionary: jk_tiger_zj             
+  prism: jk_tiger_zj                  
   enable_charset_filter: true     
   enable_sentence: true           
   enable_encoder: true            
-  encode_commit_history: true     
+  encode_commit_history: false    
   # disable_user_dict_for_patterns: 
-  #   - "^z.*$"
+  #   - "^z.*$" 
+  #   - "^[a-z]{1,6}"    #基本的6码3字不调频
   enable_completion: true     
-  enable_user_dict: true      
-  comment_format: "{comment}" 
+  enable_user_dict: false      
+  spelling_hints: 1
+  # comment_format: "{comment}" 
+  comment_format:
+    - xform/[^;]*;([^;]*)/$1/
 
 
 date_translator:
@@ -106,9 +117,20 @@ date_translator:
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
-pinyin:
-  __include: jk.yaml:/pinyin
-  dictionary: jk_pinyin_tiger
+# pinyin:
+#   __include: jk.yaml:/pinyin
+#   dictionary: jk_pinyin_tiger
+#   prefix: "Z"
+
+user_dict_set:
+  __include: jk.yaml:/user_dict_set
+  dictionary: jk_tiger_zj
+  user_dict: jk_tiger_u
+
+add_user_dict:
+  __include: jk.yaml:/add_user_dict
+  dictionary: jk_tiger_zj
+  user_dict: jk_tiger_u
   prefix: "Z"
 
 custom_phrase:
@@ -127,3 +149,7 @@ chaifen:
 
 traditionalize:
   __include: jk.yaml:/traditionalize
+
+#语法模型
+octagram:
+  __include: jk.yaml:/octagram

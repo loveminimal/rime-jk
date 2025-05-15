@@ -11,7 +11,7 @@ schema:
     - https://github.com/loveminimal/rime-jk
   dependencies:
     - jk_ascii
-    - jk_pinyin
+    - jk_pinyin_wubi
   icon: 'assets/jk.ico'
   ascii_icon: 'assets/ascii.ico'
 
@@ -53,6 +53,7 @@ engine:
   filters:
     - lua_filter@*prettify_comment
     - lua_filter@*keep_short_code_first
+    # - lua_filter@*single_char_first       # 单字优先
     - lua_filter@*single_char_only
     - simplifier
     - simplifier@emoji   
@@ -108,9 +109,12 @@ reverse_lookup:
 
 pinyin:
   __include: jk.yaml:/pinyin
+  dictionary: jk_pinyin_wubi
+  prefix: "z"
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase
+  user_dict: custom_phrase_wubi
 
 emoji:
   __include: jk.yaml:/emoji

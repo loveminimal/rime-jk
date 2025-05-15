@@ -44,7 +44,6 @@
 # 
 import os
 import stat
-import platform
 import re
 import shutil
 import subprocess
@@ -212,7 +211,7 @@ def get_tiger_code(word: str) -> str:
         for char in word:
             tiger_code = tiger_map[char]
             if len(tiger_code) == 3:
-                code_parts.append(f"{tiger_code[:2]};{tiger_code[2:]}0")
+                code_parts.append(f"{tiger_code[:2]};{tiger_code[2:]}_")
             else:
                 code_parts.append(f"{tiger_code[:2]};{tiger_code[2:]}")
         return ' '.join(code_parts)
@@ -520,7 +519,7 @@ if __name__ == "__main__":
     # 
     # ² 五笔：²1 五笔整句，²0 五笔常规
     # ³ 虎码：³1 虎码整句，³0 虎码常规 
-    code_type = '31'
+    code_type = '16'
     # ② --- 字集过滤 ---
     # 是否开启 8105 通规字字符范围过滤「 🔥 强烈推荐开启 」
     # 该设置项仅供有扩展字符集需求的用户
@@ -537,8 +536,8 @@ if __name__ == "__main__":
     word_length_limit = 0
     # ⑤ --- 仓库指定 ---
     # 待转换的词典仓库
-    # repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
-    repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
+    repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
+    # repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
     # repository_url = "https://github.com/gaboolic/rime-frost.git"
     # repository_url = "https://github.com/iDvel/rime-ice.git"
 

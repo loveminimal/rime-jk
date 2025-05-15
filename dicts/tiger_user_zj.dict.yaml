@@ -7,8 +7,8 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_user_dict.py
-# - py scripts/sync_user_dict.py
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_tiger_user_zj_dict.py
+# - py scripts/sync_tiger_user_zj_dict.py
 # 
 ---
 name: tiger_user_zj
@@ -16,3 +16,14 @@ version: 2025.05
 sort: by_weight
 use_preset_vocabulary: false
 ...
+录	bk;s_	0
+感	nf;dh	0
+咱孩	do;i_ hk;h_	200000000
+八荒	hb;b_ lf;oc	0
+俺宝	jm;oa wn;id	200000000
+仙逆	jv;s_ hs;uc	200000000
+洗手	kq;pe us;s_	0
+山海	vs;s_ ke;km	0
+八荒录	hb;b_ lf;oc bk;s_	200000000
+洗手感	kq;pe us;s_ nf;dh	100000000
+山海八荒录	vs;s_ ke;km hb;b_ lf;oc bk;s_	200000000

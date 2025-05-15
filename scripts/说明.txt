@@ -1,7 +1,14 @@
 === 脚本使用 ===
 
+进入 Rime 根目录下，执行相关脚本即可：
+-------------------------------------
+$ ➭ python scripts/fetch_any_dict.py
+$ ➭ python scripts/sync_user_dict.py
+-------------------------------------
+
 scripts
-├── fetch_any_dict.py           # 词库转换
+├── fetch_any_dict.py           # 🔥词库转换「 交互式 」
+├── sync_user_dict.py           # 🔥转换及累积式合并用户词库 「 交互式 」
 ├──
 ├── --- 其它脚本 ---
 ├── deploy_rime.py              # 重新部署
@@ -29,6 +36,9 @@ speller:
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
   algebra:
+    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
+    - xform/ńg|ňg|ǹg/en/
+    - xform/ń|ň|ǹ/en/
     - abbrev/^([a-z]).+$/$1/
     - derive/^([a-z])$/$1/
     # - abbrev|^(.+);.*$|$1|               

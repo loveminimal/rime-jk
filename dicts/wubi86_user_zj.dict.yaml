@@ -1,4 +1,4 @@
-# Rime dictionary - wubi_user_zj.dict.yaml
+# Rime dictionary - wubi86_user_zj.dict.yaml
 # encoding: utf-8
 # 
 # --- 说明 ---
@@ -7,12 +7,13 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_user_dict.py
-# - py scripts/sync_user_dict.py
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi86_user_zj_dict.py
+# - py scripts/sync_wubi86_user_zj_dict.py
 # 
 ---
-name: wubi_user_zj
+name: wubi86_user_zj
 version: 2025.05
 sort: by_weight
 use_preset_vocabulary: false
 ...
+仙逆	wm;hz ub;tp	200000000

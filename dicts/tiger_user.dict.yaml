@@ -1628,6 +1628,7 @@ use_preset_vocabulary: false
 仙逆	jvhs	100000000
 你好	jxbh	400000000
 你们	jxja	200000000
+你是	jxot	100000000
 你的	jxun	100000000
 倒置	jyyn	100000000
 清理	kand	100000000
@@ -1681,7 +1682,7 @@ use_preset_vocabulary: false
 大佬	mdjq	200000000
 大陆	mdtu	100000000
 大把	mdum	100000000
-大家	mdwj	100000000
+大家	mdwj	200000000
 大厂	mdxc	100000000
 同志	mfgh	200000000
 同文	mfvw	100000000
@@ -1753,6 +1754,7 @@ use_preset_vocabulary: false
 晚安	owwb	100000000
 晚上	owyf	200000000
 精校	paea	100000000
+精神	pafo	100000000
 糟心	pfhx	100000000
 粉条	phhe	100000000
 黑色	phxm	100000000

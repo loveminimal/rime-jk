@@ -117,13 +117,13 @@ code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_tiger.userdb.t
 
 cd ~/AppData/Roaming/Rime && py scripts/deploy_rime.py	ddr	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py	ssr	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_wubi_user_dict.py	wwr	0
 cd ~/AppData/Roaming/Rime && py scripts/fetch_any_dict.py	fad	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py && py scripts/deploy_rime.py	uud	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_dict.py && py scripts/deploy_rime.py	uuw	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_tiger_user_dict.py && py scripts/deploy_rime.py	uut	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_wubi_user_zj_dict.py && py scripts/deploy_rime.py	uuwz	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_tiger_user_zj_dict.py && py scripts/deploy_rime.py	uutz	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 20 && py scripts/deploy_rime.py	uuw	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 30 && py scripts/deploy_rime.py	uut	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uupy	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 21 && py scripts/deploy_rime.py	uuwz	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 31 && py scripts/deploy_rime.py	uutz	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_en_aliases_dict.py && py scripts/deploy_rime.py	uea	0
 
 # --- Hugo ---

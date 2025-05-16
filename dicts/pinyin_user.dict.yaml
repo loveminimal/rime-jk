@@ -7,8 +7,8 @@
 # - Jack Liu <https://aituyaa.com>
 # 
 # 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_user_dict.py
-# - py scripts/sync_user_dict.py
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_pinyin_user_dict.py
+# - py scripts/sync_pinyin_user_dict.py
 # 
 ---
 name: pinyin_user
@@ -16,3 +16,8 @@ version: 2025.05
 sort: by_weight
 use_preset_vocabulary: false
 ...
+感	gǎn;nh	0
+的多	de;ui duō;ll	200000000
+废词	fèi;xi cí;sd	200000000
+洗手	xǐ;kp shǒu;us	0
+洗手感	xǐ;kp shǒu;us gǎn;nh	200000000

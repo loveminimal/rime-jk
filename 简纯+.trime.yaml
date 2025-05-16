@@ -3144,11 +3144,11 @@ preset_keyboards:
       - {click: num3}
       - {click: num4}
       - {click: num5}
-      - {click: num6}
+      - {click: num6, long_click: '……', swipe_down: 6, __include: conf/num_line}
       - {click: num7}
       - {click: num8}
       - {click: num9,  long_click: '=', swipe_down: 9, __include: conf/num_line}
-      - {click: num0}
+      - {click: num0,  long_click: '+', swipe_down: 0, __include: conf/num_line}
       # 第 1 行
       - { click: 'q', long_click: '!', swipe_down: 1, __include: styl/key }
       - { click: 'w', long_click: '@', swipe_down: 2, __include: styl/key }
@@ -3157,7 +3157,7 @@ preset_keyboards:
           click: 'r',
           long_click: '$',
           swipe_down: 4,
-          hint: 4,
+          # hint: 4,
           __include: styl/key,
         }
       - { click: 't', long_click: '%', swipe_down: 5, __include: styl/key }
@@ -3166,7 +3166,7 @@ preset_keyboards:
           click: 'u',
           long_click: '&',
           swipe_down: 7,
-          hint: 7,
+          # hint: 7,
           __include: styl/key,
         }
       - { click: 'i', long_click: '*', swipe_down: 8, __include: styl/key }

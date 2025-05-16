@@ -15,11 +15,15 @@ patch:
   # --- 方案列表 ---
   schema_list:
     - {schema: jk_ascii}
-    - {schema: jk_wubi}
-    - {schema: jk_tiger}
+    - {schema: jk_ascii_bj}
     - {schema: jk_pinyin}
+    - {schema: jk_pinyin_bj}
+    - {schema: jk_wubi}
     - {schema: jk_wubi_zj}
+    - {schema: jk_wubi_bj}
+    - {schema: jk_tiger}
     - {schema: jk_tiger_zj}
+    - {schema: jk_tiger_bj}
 
   # --- 选单设置 ---
   switcher/+:

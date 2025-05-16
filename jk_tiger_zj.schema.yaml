@@ -72,7 +72,7 @@ key_binder:
 recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
-    # pinyin: "^z[Xa-z]*$"   
+    pinyin: "^ZZ[Xa-z]*$"   
     add_user_dict: "^Z[a-z]*$"
 
 punctuator:
@@ -117,10 +117,10 @@ date_translator:
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
-# pinyin:
-#   __include: jk.yaml:/pinyin
-#   dictionary: jk_pinyin_t
-#   prefix: "Z"
+pinyin:
+  __include: jk.yaml:/pinyin
+  dictionary: jk_pinyin_t
+  prefix: "ZZ"
 
 user_dict_set:
   __include: jk.yaml:/user_dict_set

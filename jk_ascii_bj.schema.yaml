@@ -1,0 +1,44 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: jk_ascii_bj
+  name: 英文·并击
+  author: 
+    - 发明人 Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心英文「 并击版 」，一款快速输入数字和预设字符的键盘式输入法方案
+    - https://github.com/loveminimal/rime-jk
+  icon: "assets/pr.ico"
+  ascii_icon: 'assets/ascii.ico' 
+
+switches:
+  __include: jk_ascii.schema.yaml:/switches
+
+engine:
+  __include: jk_ascii.schema.yaml:/engine
+
+speller:
+  __include: jk_ascii.schema.yaml:/speller
+
+chord_composer:	# 🔥
+  __include: jk.yaml:/chord_composer
+
+translator:			# 🔥
+  __include: jk_ascii.schema.yaml:/translator
+  prism: jk_ascii_bj
+
+punctuator:
+  __include: jk_ascii.schema.yaml:/punctuator
+
+key_binder:
+  __include: jk_ascii.schema.yaml:/key_binder
+
+recognizer:
+  __include: jk_ascii.schema.yaml:/recognizer
+
+date_translator:
+  __include: jk_ascii.schema.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk_ascii.schema.yaml:/reverse_lookup

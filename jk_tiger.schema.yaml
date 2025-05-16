@@ -54,7 +54,7 @@ engine:
     - lua_translator@*force_gc        
   filters:
     - lua_filter@*prettify_comment
-    - lua_filter@*keep_short_code_first_tiger
+    - lua_filter@*keep_short_code_first*T
     # - lua_filter@*single_char_first       # 单字优先
     - lua_filter@*single_char_only
     - simplifier

@@ -1,8 +1,8 @@
-# Rime schema - jk_pinyin_wubi.schema.yaml
+# Rime schema - jk_pinyin_w.schema.yaml
 # encoding: utf-8
 
 schema:
-  schema_id: jk_pinyin_wubi
+  schema_id: jk_pinyin_w
   name: 拼音·反查
   author:
     - by Jack Liu <https://aituyaa.com>
@@ -37,26 +37,13 @@ engine:
 
 speller:
   algebra:
-    - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/
-    - xform/ńg|ňg|ǹg/en/
-    - xform/ń|ň|ǹ/en/
-    # --- 全拼 ---
-    - derive/(;.*)$//
-    - abbrev/^([a-z]).+$/$1/
-    - derive/^([a-z])$/$1/
-    # --- 辅助码 ---
-    - derive|^(.+);.*$|$1|                 
-    - derive|^(.+);(\w)(\w).*$|$1$2|       
-    - abbrev|^(.+);(\w)(\w).*$|$1$2$3|     
-    - derive|^(.+);(\w)(\w).*$|$1$2$3o|    
-    - derive|^(.+);.*?,(\w)(\w).*$|$1$2|   
-    - abbrev|^(.+);.*?,(\w)(\w).*$|$1$2$3| 
-    - derive|^(.+);.*?,(\w)(\w).*$|$1$2$3o|
-    - erase/^(.+);(.+)$/
+    __include: algebra.yaml:/algebra_pinyin
+    __append:
+      __include: algebra.yaml:/algebra_fuzhuma
 
 translator:
-  dictionary: jk_pinyin_wubi
-  prism: jk_pinyin_wubi
+  dictionary: jk_pinyin_w
+  prism: jk_pinyin_w
   enable_charset_filter: true
   enable_sentence: false
   enable_encoder: true

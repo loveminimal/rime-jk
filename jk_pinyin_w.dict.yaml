@@ -1,4 +1,4 @@
-# Rime dictionary - jk_pinyin_wubi.dict.yaml
+# Rime dictionary - jk_pinyin_w.dict.yaml
 # encoding: utf-8
 #
 # --- 说明 ---
@@ -10,7 +10,7 @@
 # - https://github.com/amzxyz/rime_wanxiang_pro
 #
 ---
-name: jk_pinyin_wubi
+name: jk_pinyin_w
 version: 2025.05
 sort: by_weight
 use_preset_vocabulary: false

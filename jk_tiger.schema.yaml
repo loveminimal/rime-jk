@@ -113,7 +113,7 @@ pinyin:
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase
-  user_dict: custom_phrase_tiger
+  user_dict: custom_phrase_t
 
 emoji:
   __include: jk.yaml:/emoji

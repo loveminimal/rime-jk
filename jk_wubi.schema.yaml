@@ -114,7 +114,7 @@ pinyin:
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase
-  user_dict: custom_phrase_wubi
+  user_dict: custom_phrase_w
 
 emoji:
   __include: jk.yaml:/emoji

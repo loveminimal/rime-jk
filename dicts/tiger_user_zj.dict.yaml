@@ -16,15 +16,18 @@ version: 2025.05
 sort: by_weight
 use_preset_vocabulary: false
 ...
-录	bk;s_	0
+录	bk;s_	200000000
 感	nf;dh	0
 串击	dd;gs um;k_	100000000
-咱孩	do;i_ hk;h_	200000000
+咱孩	do;i_ hk;h_	400000000
 八荒	hb;b_ lf;oc	0
 俺宝	jm;oa wn;id	200000000
 仙逆	jv;s_ hs;uc	200000000
 洗手	kq;pe us;s_	0
 山海	vs;s_ ke;km	0
+整句	xh;fs gj;j_	0
+虎码	zh;h_ mn;m_	0
 八荒录	hb;b_ lf;oc bk;s_	200000000
 洗手感	kq;pe us;s_ nf;dh	100000000
+虎码整句	zh;h_ mn;m_ xh;fs gj;j_	500000000
 山海八荒录	vs;s_ ke;km hb;b_ lf;oc bk;s_	200000000

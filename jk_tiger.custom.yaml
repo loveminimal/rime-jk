@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/otjk
+  __include: style.yaml:/orjk
   __patch:
     style/+:
       color_scheme: google

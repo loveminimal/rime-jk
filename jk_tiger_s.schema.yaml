@@ -1,0 +1,70 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: jk_tiger_s
+  name: 虎码·单字
+  author: 
+    - Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心虎码，虎码·拼音反查，小啊小女仆
+    - https://github.com/loveminimal/rime-jk
+  dependencies:
+    - jk_ascii
+    - jk_pinyin_t
+  icon: 'assets/tiger_palm.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk_tiger.schema.yaml:/switches
+  __append:
+    - name: char_only
+      reset: 1	# 🔥
+
+engine:
+  __include: jk_tiger.schema.yaml:/engine
+ 
+key_binder:
+  __include: jk_tiger.schema.yaml:/key_binder
+
+recognizer:
+  __include: jk_tiger.schema.yaml:/recognizer
+
+punctuator:
+  __include: jk_tiger.schema.yaml:/punctuator
+
+speller:
+  __include: jk_tiger.schema.yaml:/speller
+
+chord_composer:
+  __include: jk_tiger.schema.yaml:/chord_composer
+
+translator:	# 🔥
+  __include: jk_tiger.schema.yaml:/translator      
+  prism: jk_tiger_s                        
+  encode_commit_history: false     
+  enable_user_dict: false      
+
+date_translator:
+  __include: jk_tiger.schema.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk_tiger.schema.yaml:/reverse_lookup
+
+pinyin:
+  __include: jk_tiger.schema.yaml:/pinyin
+
+custom_phrase:
+  __include: jk_tiger.schema.yaml:/custom_phrase
+
+emoji:
+  __include: jk_tiger.schema.yaml:/emoji
+
+zh2en:
+  __include: jk_tiger.schema.yaml:/zh2en
+
+chaifen:
+  __include: jk_tiger.schema.yaml:/chaifen
+
+traditionalize:
+  __include: jk_tiger.schema.yaml:/traditionalize

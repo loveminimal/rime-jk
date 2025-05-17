@@ -44,13 +44,13 @@ speller:
 translator:
   dictionary: jk_pinyin_w
   prism: jk_pinyin_w
-  enable_charset_filter: true
+  enable_charset_filter: false
   enable_sentence: false
   enable_encoder: true
-  encode_commit_history: true
+  encode_commit_history: false
   max_phrase_length: 4
-  enable_completion: true
-  enable_user_dict: true
+  enable_completion: false
+  enable_user_dict: false
   spelling_hints: 1
   comment_format: 
     - xform/[^;]*;([^;]*)/$1/

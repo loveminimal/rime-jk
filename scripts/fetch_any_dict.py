@@ -1,13 +1,22 @@
 # fetch_any_dict.py
 # encoding: utf-8
+'''
 # -------------------------------------------------------------------------
 # 作用：
 # 当前脚本用于拉取万象词库的最近更新，并进行「转换 ➭ 合并 ➭ 排序」处理，以
-# 生成所需的五笔常规 or 整句词库、拼音词库
+# 生成所需的五笔、虎码常规及整句词库、拼音词库
 # 
-# === 可配置项 ===
+# ¹ 本地词库文件夹为 .temp_rime/rime_local/cn_dicts
+# ² 其中 .temp_rime 与 scripts 父级目录同级
+# --------------------------- 使用方法 ------------------------------------
+# 使用方法：〔 进入 scripts 目录 〕
+# ¹ python fetch_any_dict.py			默认交互式「 需要交互输入编码类型及使用网络仓库 」
+# ² python fetch_any_dict.py 31         直接指定编码类型(31)
+# ³ python fetch_any_dict.py 31 1       直接指定编码类型(31) + 使用本地仓库(1)
+# 
+# --------------------------- 可配置项 ------------------------------------
 # ① --- 编码类型 ---
-# !!! 转换拼音编码需要万象拼音Pro为底座，即 amzxyz/rime_wanxiang_pro.git
+# !!! 转换拼音编码需要万象拼音Pro为底座，即 repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
 # !!! 五笔、虎码支持使用其他仓库，如雾凇、白霜、万象拼音基础版等
 # 目标转码类型：
 # ¹ 拼音：¹1 moqi 墨奇, ¹2 flypy 鹤形, ¹3 zrm 自然码, ¹4 jdh 简单鹤, ¹5 cj 仓颉,
@@ -15,33 +24,48 @@
 # 
 # ² 五笔：²1 五笔整句，²0 五笔常规
 # ³ 虎码：³1 虎码整句，³0 虎码常规 
-# code_type = '31'
+
 # ② --- 字集过滤 ---
 # 是否开启 8105 通规字字符范围过滤「 🔥 强烈推荐开启 」
 # 该设置项仅供有扩展字符集需求的用户
 # 拼音、虎码已提供大字集映射，五笔默认提供 8105 通规字映射
 # !!! 再次强烈推荐开启
-# is_filter_8105 = True
+is_filter_8105 = True
+
 # ③ --- 分包归并 ---
 # 分包还是归并「 合并后可提高 Rime 重新部署速度 」
-# - 归并 True （dicts/*_ext.dict.yaml、dicts/*_zj.dict.yaml）
+# - 归并 True （dicts/pinyin.dict.yaml、dicts/*_ext.dict.yaml、dicts/*_zj.dict.yaml）
 # - 分包 Flase（cn_dicts/*）
-# is_merge = False
+is_merge = True
+
 # ④ --- 词长限制 ---
 # 是否限制词库最大词长，若为 0 ，则不限制
-# word_length_limit = 0
+word_length_limit = 0
+
 # ⑤ --- 仓库指定 ---
-# 待转换的词典仓库
-# repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
-# repository_url = "https://github.com/amzxyz/rime_wanxiang.git"
+# 待转换的词典仓库 - 网络仓库 False / 本地仓库 True
+# 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_local/cn_dicts
+# 其中 .temp_rime 与 scripts 父级目录同级
+is_local = False
+# ¹ 网络仓库
+# ----------
+# !!! 转换拼音编码需要万象拼音Pro为底座
+rime_wanxiang_pro = "https://github.com/amzxyz/rime_wanxiang_pro.git"
+rime_wanxiang = "https://github.com/amzxyz/rime_wanxiang.git"
+repository_url = rime_wanxiang_pro if code_type.startswith("1") else rime_wanxiang
 # repository_url = "https://github.com/gaboolic/rime-frost.git"
 # repository_url = "https://github.com/iDvel/rime-ice.git"
 # 
+# ² 本地仓库
+# ----------
+# [ rime_local/cn_dicts ]
+# ！仓库需要重命名为 rime_local ，字典置于 cn_dicts 中
+repository_url = 'rime_local.git' if is_local else repository_url
+# 
 # --- 其他说明 ---
 # 其实稍微修改一下当前脚本，可以获得更多转换功能，有兴趣的朋友可以自行扩展
-# 
 # -------------------------------------------------------------------------
-# 
+'''
 import os
 import sys
 import stat
@@ -443,10 +467,25 @@ def exec(proj_dir, work_dir, repository_url):
     repository_name = repository_url.split('/')[-1][:-4] # 如 rime_wanxiang
     local_directory = (proj_dir / work_dir / repository_name).resolve()
     out_dict = f'cn_dicts_{repository_name}'
-    print('🔜  === 开始获取最新词库文件 ===')
-    exec_success = sync_repository(repository_url, local_directory)
-    if not exec_success:
-        return False;
+
+    if not is_local:
+        print('🔜  === 开始获取最新词库文件 ===')
+        exec_success = sync_repository(repository_url, local_directory)
+        if not exec_success:
+            return False;
+    else:
+        print('🔜  === 开始转换本地词库文件 ===')
+        if not local_directory.exists():
+            print(f'''
+🚫  请检查 .temp_rime/{repository_name}/cn_dicts 是否存在
+--- Tips ---------------------------------------------------------------------
+# ¹ 本地词库文件夹为 .temp_rime/rime_local/cn_dicts
+# ² 其中 .temp_rime 与 scripts 父级目录同级
+------------------------------------------------------------------------------
+            ''')
+            return False
+        else:
+            print(f'☑️  已加载词典 {local_directory}/cn_dicts \n')
 
     # ② 转换拼音词库为五笔词库
     src_dir = proj_dir / work_dir / repository_name / 'cn_dicts'
@@ -542,7 +581,8 @@ if __name__ == "__main__":
 ------------------------------------------------------------------------------
         ''')
         code_type = input(f"🔔  默认「 虎码整句 」? (31): ").strip().lower() or "31"
-        print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
+        # print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
+    print(f'----------- {code_dict[code_type]} -----------')
 
     # ② --- 字集过滤 ---
     # 是否开启 8105 通规字字符范围过滤「 🔥 强烈推荐开启 」
@@ -562,7 +602,13 @@ if __name__ == "__main__":
     word_length_limit = 0
 
     # ⑤ --- 仓库指定 ---
-    # 待转换的词典仓库
+    # 待转换的词典仓库 - 网络仓库 0 / 本地仓库 1
+    # 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_local/cn_dicts
+    # 其中 .temp_rime 与 scripts 父级目录同级
+    is_local = sys.argv[2] if len(sys.argv) > 2 else 0
+    # print(bool(int(is_local)))
+    # ¹ 网络仓库
+    # ----------
     # !!! 转换拼音编码需要万象拼音Pro为底座
     rime_wanxiang_pro = "https://github.com/amzxyz/rime_wanxiang_pro.git"
     rime_wanxiang = "https://github.com/amzxyz/rime_wanxiang.git"
@@ -570,6 +616,12 @@ if __name__ == "__main__":
     # repository_url = "https://github.com/gaboolic/rime-frost.git"
     # repository_url = "https://github.com/iDvel/rime-ice.git"
     # print(repository_url)
+    # 
+    # ² 本地仓库
+    # ----------
+    # [ rime_local/cn_dicts ]
+    # ！仓库需要重命名为 rime_local ，字典置于 cn_dicts 中
+    repository_url = 'rime_local.git' if is_local else repository_url
 
     # 开始执行
     exec(proj_dir, work_dir, repository_url)

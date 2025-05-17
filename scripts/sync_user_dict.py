@@ -2,14 +2,19 @@
 # - https://github.com/loveminimal/rime-jk
 # - Jack Liu <https://aituyaa.com>
 # 
-# 运行脚本：
-# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_wubi_user_dict.py
-# - py scripts/sync_wubi_user_dict.py
-# 
+'''
+---------------------------------- 使用方法 -------------------------------------------
+# 用户词典类型 1 拼音；20 五笔常规；21 五笔整句；30 虎码常规；31 虎码整句
+# ¹ python sync_user_dict.py			默认交互式「 需要交互输入用户词典类型 」
+# ² python sync_user_dict.py 31         直接指定用户词典类型(31)
+
+$ ➭ python sync_user_dict.py
+
 # 默认目录：
 # src - C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack\\jk_wubi.userdb.txt
 # out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\wubi86_user.dict.yaml
-# 
+---------------------------------------------------------------------------------------
+'''
 import re
 from pathlib import Path
 from collections import defaultdict

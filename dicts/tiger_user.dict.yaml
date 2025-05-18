@@ -1106,6 +1106,7 @@ use_preset_vocabulary: false
 睁	qxb	100000000
 观	rej	100000000
 困	rem	100000000
+箱	req	100000000
 圣	rgt	300000000
 圈	rhh	100000000
 图	rhw	400000000
@@ -1468,7 +1469,7 @@ use_preset_vocabulary: false
 不是	cbot	400000000
 不足	cbpu	100000000
 不行	cbpx	200000000
-不对	cbrk	100000000
+不对	cbrk	200000000
 不算	cbrq	100000000
 不用	cbty	700000000
 不看	cbuq	100000000
@@ -1486,6 +1487,7 @@ use_preset_vocabulary: false
 还是	cuot	1500000000
 还行	cupx	200000000
 还要	cuvb	100000000
+还得	cuwo	100000000
 还可	cuzk	200000000
 燃烧	cvcp	100000000
 屋里	cydl	100000000
@@ -1520,10 +1522,12 @@ use_preset_vocabulary: false
 本来	efah	200000000
 本末	effe	100000000
 本地	efge	1100000000
+标签	efrj	200000000
 标识	efsd	100000000
 本身	efzs	100000000
 干啥	egdj	100000000
 干活	egka	100000000
+样式	egpu	300000000
 干脆	egvx	100000000
 干净	egwx	100000000
 梯子	ehhi	100000000
@@ -1639,6 +1643,7 @@ use_preset_vocabulary: false
 判断	hupa	200000000
 前面	hvbm	100000000
 绑定	iawt	100000000
+部分	idhp	100000000
 新旧	iego	100000000
 新手	ieus	100000000
 纯纯	ifif	100000000
@@ -1652,7 +1657,7 @@ use_preset_vocabulary: false
 编码	immn	400000000
 编译	imsr	100000000
 主动	inbs	100000000
-主题	inot	200000000
+主题	inot	500000000
 主要	invb	200000000
 续期	inzh	100000000
 删了	iprl	100000000
@@ -1660,7 +1665,7 @@ use_preset_vocabulary: false
 经典	irih	100000000
 经常	irsr	100000000
 绝对	ixrk	100000000
-颜色	ixxm	100000000
+颜色	ixxm	200000000
 今天	jafm	200000000
 舒服	javz	300000000
 会串	jbdd	100000000
@@ -1744,7 +1749,7 @@ use_preset_vocabulary: false
 江山	kuvs	100000000
 浏览	kvpr	100000000
 觉得	kwwo	100000000
-学习	kwzx	100000000
+学习	kwzx	200000000
 河南	kznm	100000000
 乖乖	lala	200000000
 世界	laqj	300000000
@@ -1759,6 +1764,7 @@ use_preset_vocabulary: false
 方式	lfpu	100000000
 方向	lftm	100000000
 方案	lfwb	700000000
+放弃	lhbl	100000000
 放飞	lhcf	100000000
 放在	lhng	200000000
 多着	llgq	100000000
@@ -1788,6 +1794,7 @@ use_preset_vocabulary: false
 大写	mdwf	100000000
 大家	mdwj	300000000
 大厂	mdxc	100000000
+同事	mffd	100000000
 同志	mfgh	200000000
 同级	mfic	100000000
 同步	mfss	100000000
@@ -1801,7 +1808,7 @@ use_preset_vocabulary: false
 狼狗	mimg	100000000
 太长	mipc	100000000
 太少	miyt	100000000
-内置	mjyn	100000000
+内置	mjyn	300000000
 两个	mljg	100000000
 两行	mlpx	100000000
 两双	mlrr	100000000
@@ -1838,6 +1845,7 @@ use_preset_vocabulary: false
 真的	nqun	500000000
 有些	nvsv	200000000
 包括	nvua	100000000
+有点	nvyd	100000000
 王爷	nwhb	100000000
 王码	nwmn	100000000
 王朝	nwno	100000000
@@ -2053,7 +2061,7 @@ use_preset_vocabulary: false
 功能	uskv	100000000
 挺好	utbh	300000000
 挺有	utnv	100000000
-折腾	utvh	100000000
+折腾	utvh	500000000
 指定	uvwt	300000000
 按着	uwgq	100000000
 项目	uwqm	100000000
@@ -2061,6 +2069,7 @@ use_preset_vocabulary: false
 摆着	uygq	100000000
 抓紧	uypr	100000000
 脚本	vgef	700000000
+改版	vhax	100000000
 改编	vhim	200000000
 已经	viir	300000000
 幽默	vipm	100000000
@@ -2094,6 +2103,7 @@ use_preset_vocabulary: false
 害死	wagv	100000000
 安装	wbag	500000000
 宫庶	wdxl	300000000
+资料	wepj	100000000
 字根	whei	200000000
 字典	whih	100000000
 容易	whon	100000000
@@ -2229,6 +2239,7 @@ use_preset_vocabulary: false
 产业链	iczy	100000000
 为什么	ijtk	500000000
 立陶宛	itwl	100000000
+任务栏	jheh	100000000
 命令行	jjpx	100000000
 你是谁	josu	100000000
 候选框	jqen	100000000
@@ -2244,6 +2255,7 @@ use_preset_vocabulary: false
 玩意儿	nxpe	100000000
 有钱人	nzjr	100000000
 是不是	ocot	200000000
+自由度	odxl	100000000
 电视剧	ofcc	100000000
 自造词	oqsa	100000000
 自然码	ovmn	100000000

@@ -452,9 +452,12 @@ aqjk:
 
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
-    text_color: 0x2E3440                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x0A3AFA99              # 背景
+    # text_color: 0x2E3440                        # 文字
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x0A3AFA99              # 背景
+    text_color: 0x000000DD                        # 文字
+    hilited_text_color: 0x000000DD                # 编码
+    # hilited_back_color: 0x0A3AFA99              # 背景
 
     label_color: 0x0A3AFA99                     # 标签
     # ---〔激活的候选项·高亮〕---

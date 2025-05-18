@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/aqjk
+  __include: style.yaml:/dark_temple_jk
   __patch:
     style/+:
-      color_scheme: dark_temple
+      color_scheme: dark_temple_jk

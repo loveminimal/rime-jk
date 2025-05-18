@@ -550,3 +550,224 @@ mdjk:
     # ---〔翻页选项〕---
     prevpage_color: 0xffffff99                  # 上一页
     nextpage_color: 0xffffff99                  # 下一页
+
+
+# --- 官方内置「 改 」---
+google_jk:
+  preset_color_schemes/google_jk:
+    name: 谷歌／Google
+    author: skoj <skoj@qq.com>
+    color_format: rgba
+    text_color: 0x666666
+    candidate_text_color: 0x000000
+    back_color: 0xFFFFFF
+    border_color: 0xE2E2E2
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xFFFFFF
+    hilited_candidate_text_color: 0xFFFFFF
+    hilited_candidate_back_color: 0x3975CE
+    # ---〔翻页选项〕---
+    nextpage_color: 0x3975CE99
+    prevpage_color: 0x000000DD
+
+dark_temple_jk:
+  preset_color_schemes/dark_temple_jk:
+    name: 暗堂／Dark Temple
+    author: 佛振 <chen.sst@gmail.com>, based on ir_black
+    color_format: rgba
+    text_color: 0xdaf692
+    candidate_text_color: 0xe6e3d8
+    back_color: 0x222222
+    border_color: 0x222222
+    hilited_text_color: 0x9acfff
+    hilited_back_color: 0x222222
+    hilited_candidate_text_color: 0xdaf692
+    hilited_candidate_back_color: 0x333333
+    # comment_text_color: 0xff6c60
+    comment_text_color: 0xff6c6099
+
+flypy_jk:
+  preset_color_schemes/flypy_jk:
+    # description: |
+    #   小鹤飞扬：白底蓝字，红色高亮。
+    #   根据小鹤双拼官网图片制作
+    #   http://www.flypy.com/images/mr.png
+    name: "小鹤飞扬／flypy"
+    author: "Pal.lxk <Pal.lxk@gmail.com>"
+    color_format: rgba
+    text_color: 0x000000
+    back_color: 0xffffff
+    border_color: 0xc6c6c6
+    label_color: 0x0080ff
+    hilited_text_color: 0x0080ff
+    hilited_back_color: 0xffffff
+    candidate_text_color: 0x0080ff
+    comment_text_color: 0x0080ff
+    hilited_candidate_text_color: 0xb00000
+    hilited_comment_text_color: 0xb00000
+    hilited_candidate_back_color: 0xffffff
+
+kuon_jk:
+  preset_color_schemes/kuon_jk:
+    name: "琨／Kuon"
+    author: "Patricivs <ipatrickmac@me.com>"
+    color_format: rgba
+    text_color: 0xffffff
+    back_color: 0x3eb370
+    border_color: 0x3eb370
+    label_color: 0xffffff
+    hilited_text_color: 0x3eb370
+    hilited_back_color: 0xffffff
+    candidate_text_color: 0xffffff
+    comment_text_color: 0xffffff
+    hilited_candidate_text_color: 0x3eb370
+    hilited_comment_text_color: 0x3eb370
+    hilited_candidate_back_color: 0xffffff
+
+lost_temple_jk:
+  preset_color_schemes/lost_temple_jk:
+    name: 孤寺／Lost Temple
+    author: 佛振 <chen.sst@gmail.com>, based on ir_black
+    color_format: rgba
+    text_color: 0xf6f3e8
+    back_color: 0x444444
+    border_color: 0x444444
+    hilited_text_color: 0xcae682
+    hilited_back_color: 0x222222
+    hilited_candidate_text_color: 0x000000
+    hilited_candidate_back_color: 0xcae682
+
+metroblue_jk:
+  preset_color_schemes/metroblue_jk:
+    name: "现代蓝／Metro Blue"
+    author: "Prcuvu <prcuvu@gmail.com>"
+    color_format: rgba
+    text_color: 0x000000
+    back_color: 0xffffff
+    border_color: 0x0078d7
+    label_color: 0x838383
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xffffff
+    candidate_text_color: 0x000000
+    comment_text_color: 0x000000
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_candidate_back_color: 0x0078d7
+    hilited_label_color: 0xffffff
+
+modern_warfare_jk:
+  preset_color_schemes/modern_warfare_jk:
+    name: "現代戰爭／Modern Warfare"
+    author: P1461
+    color_format: rgba
+    text_color: 0x70bc14
+    back_color: 0x0d1b0a
+    border_color: 0x83ad4b
+    hilited_text_color: 0xfcfdfb
+    hilited_back_color: 0x060e03
+    candidate_text_color: 0xdcfeab
+    comment_text_color: 0xfcfdfb
+    hilited_candidate_text_color: 0xdcfeab
+    hilited_candidate_back_color: 0x636f67
+
+skype_jk:
+  preset_color_schemes/skype_jk:
+    name: "斯蓋普／Skype"
+    author: "Patricivs <ipatrickmac@me.com>"
+    color_format: rgba
+    text_color: 0xffffff
+    back_color: 0x00adef
+    border_color: 0x00adef
+    label_color: 0xffffff
+    hilited_text_color: 0x00adef
+    hilited_back_color: 0xffffff
+    candidate_text_color: 0xffffff
+    comment_text_color: 0xffffff
+    hilited_candidate_text_color: 0x00adef
+    hilited_comment_text_color: 0x00adef
+    hilited_candidate_back_color: 0xffffff
+
+so_young_jk:
+  preset_color_schemes/so_young_jk:
+    name: "致青春／So Young"
+    author: "五磅兔 <zcunlin@foxmail.com>"
+    color_format: rgba
+    text_color: 0xd33682
+    back_color: 0xfdf6e3
+    border_color: 0xeee8d5
+    label_color: 0x93a1a1
+    candidate_text_color: 0x657b83
+    comment_text_color: 0xd28b26
+    hilited_text_color: 0x839496
+    hilited_back_color: 0xeee8d5
+    hilited_candidate_text_color: 0xeee8d5
+    hilited_comment_text_color: 0xeee8d5
+    hilited_candidate_back_color: 0x2aa198
+
+starcraft_ii_jk:
+  preset_color_schemes/starcraft_ii_jk:
+    name: "星際爭霸Ⅱ／StarCraft Ⅱ"
+    author: "Patricivs <ipatrickmac@me.com>"
+    color_format: rgba
+    text_color: 0xffffff
+    back_color: 0x0a1929
+    border_color: 0x464b53
+    label_color: 0xffffff
+    hilited_text_color: 0xffffff
+    hilited_back_color: 0x0a1017
+    candidate_text_color: 0xffffff
+    comment_text_color: 0xffffff
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_candidate_back_color: 0x1eadef
+
+steam_jk:
+  preset_color_schemes/steam_jk:
+    name: "Steam"
+    author: "Patricivs <ipatrickmac@me.com>"
+    color_format: rgba
+    text_color: 0x528ccd
+    back_color: 0x171614
+    border_color: 0x383635
+    label_color: 0xffffff
+    hilited_text_color: 0xd1cfc9
+    hilited_back_color: 0x171614
+    candidate_text_color: 0xffffff
+    comment_text_color: 0xa9a7a7
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xa9a7a7
+    hilited_candidate_back_color: 0x314259
+
+wii_jk:
+  preset_color_schemes/wii_jk:
+    name: "Wii"
+    author: "Patricivs <ipatrickmac@me.com>"
+    color_format: rgba
+    text_color: 0x595757
+    back_color: 0xefefef
+    border_color: 0xefefef
+    label_color: 0xc8c9ca
+    hilited_text_color: 0x33ccff
+    hilited_back_color: 0xefefef
+    candidate_text_color: 0x595757
+    comment_text_color: 0xc8c9ca
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_candidate_back_color: 0x33ccff
+
+youtube_jk:
+  preset_color_schemes/youtube_jk:
+    name: "YouTube"
+    author: "Patricivs <ipatrickmac@me.com>"
+    color_format: rgba
+    text_color: 0x000000
+    back_color: 0xdedede
+    border_color: 0xdedede
+    label_color: 0x000000
+    hilited_text_color: 0xc30d23
+    hilited_back_color: 0xffffff
+    candidate_text_color: 0x000000
+    comment_text_color: 0x000000
+    hilited_candidate_text_color: 0xffffff
+    hilited_comment_text_color: 0xffffff
+    hilited_candidate_back_color: 0xc30d23    

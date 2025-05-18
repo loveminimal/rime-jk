@@ -1402,9 +1402,11 @@ use_preset_vocabulary: false
 冠	wmpk	100000000
 席	xlrj	500000000
 遁	xnqu	100000000
+都是	qo	200000000
 好的	bhu	100000000
 不要	cbv	200000000
 用得	tyw	100000000
+乱搞	aaug	100000000
 交互	abfb	500000000
 效果	abqe	100000000
 问题	adot	1000000000
@@ -1572,6 +1574,7 @@ use_preset_vocabulary: false
 一会	fijb	100000000
 一个	fijg	700000000
 一两	fiml	100000000
+一套	fimp	100000000
 一直	finq	200000000
 一路	fips	100000000
 一起	fipv	100000000
@@ -1631,6 +1634,7 @@ use_preset_vocabulary: false
 懂得	hlwo	100000000
 关闭	hman	100000000
 送人	hmjr	100000000
+关系	hmti	100000000
 慎重	hnld	100000000
 首末	hofe	100000000
 慢慢	hoho	600000000
@@ -1915,6 +1919,7 @@ use_preset_vocabulary: false
 睡着	qlgq	100000000
 老爸	qlhb	200000000
 老公	qlhk	100000000
+睡觉	qlkw	100000000
 老师	qlpf	100000000
 老了	qlrl	100000000
 睡得	qlwo	100000000
@@ -1923,7 +1928,6 @@ use_preset_vocabulary: false
 目标	qmef	100000000
 目前	qmhv	200000000
 都有	qonv	100000000
-都是	qoot	100000000
 馒头	qowm	100000000
 选择	qpur	100000000
 齐备	qqhq	100000000
@@ -1996,6 +2000,7 @@ use_preset_vocabulary: false
 设置	sryn	200000000
 频繁	ssek	100000000
 边框	suen	100000000
+记录	svbk	100000000
 记住	svji	100000000
 肯定	svwt	200000000
 语言	swsy	100000000
@@ -2021,6 +2026,7 @@ use_preset_vocabulary: false
 用法	tykg	100000000
 补觉	tykw	100000000
 用户	tymh	300000000
+用的	tyun	100000000
 阿哥	tzzz	200000000
 打单	uahq	300000000
 打包	uanv	200000000
@@ -2059,9 +2065,10 @@ use_preset_vocabulary: false
 看到	uqyp	100000000
 手机	useo	200000000
 功能	uskv	100000000
+手感	usnf	200000000
 挺好	utbh	300000000
 挺有	utnv	100000000
-折腾	utvh	500000000
+折腾	utvh	600000000
 指定	uvwt	300000000
 按着	uwgq	100000000
 项目	uwqm	100000000
@@ -2207,7 +2214,7 @@ use_preset_vocabulary: false
 基干	zheg	100000000
 其他	zhje	100000000
 虎码	zhmn	1200000000
-基础	zhms	100000000
+基础	zhms	200000000
 其它	zhwv	100000000
 其实	zhww	300000000
 欺负	zhxo	100000000
@@ -2278,6 +2285,7 @@ use_preset_vocabulary: false
 小狼毫	ymgv	200000000
 小时候	yojg	100000000
 小科狗	yxmg	100000000
+身份证	zjsf	100000000
 来来回回	aarr	100000000
 缺一不可	afcz	100000000
 春风得意	aowx	100000000
@@ -2289,6 +2297,7 @@ use_preset_vocabulary: false
 心潮澎湃	hkkk	100000000
 斗罗大陆	jymt	500000000
 莫名奇妙	llmb	100000000
+肆无忌惮	pdvh	100000000
 秉公办案	xhsw	100000000
 削足适履	ypac	100000000
 山海八荒录	vkhb	700000000

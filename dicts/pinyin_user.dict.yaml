@@ -16,13 +16,7 @@ version: 2025.05
 sort: by_weight
 use_preset_vocabulary: false
 ...
-感	gǎn;nh	0
-学	xué;kh	0
-虎码	hǔ;zh mǎ;mn	0
-的多	de;ui duō;ll	200000000
 废词	fèi;xi cí;sd	200000000
-形码	xíng;fe mǎ;mn	0
-洗手	xǐ;kp shǒu;us	0
 学虎码	xué;kh hǔ;zh mǎ;mn	100000000
 学形码	xué;kh xíng;fe mǎ;mn	200000000
 洗手感	xǐ;kp shǒu;us gǎn;nh	200000000

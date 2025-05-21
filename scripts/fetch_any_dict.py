@@ -6,67 +6,10 @@
 # 当前脚本用于拉取万象词库的最近更新，并进行「转换 ➭ 合并 ➭ 排序」处理，以
 # 生成所需的五笔、虎码常规及整句词库、拼音词库
 # 
-# ¹ 本地词库文件夹为 .temp_rime/rime_local/cn_dicts
-# ² 其中 .temp_rime 与 scripts 父级目录同级
-# --------------------------- 使用方法 ------------------------------------
-# 使用方法：〔 进入 scripts 目录 〕
-# ¹ python fetch_any_dict.py			默认交互式「 需要交互输入编码类型及使用网络仓库 」
-# ² python fetch_any_dict.py 31         直接指定编码类型(31)
-# ³ python fetch_any_dict.py 31 1       直接指定编码类型(31) + 使用本地仓库(1)
-# 
-# --------------------------- 可配置项 ------------------------------------
-# ① --- 编码类型 ---
-# !!! 转换拼音编码需要万象拼音Pro为底座，即 repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
-# !!! 五笔、虎码支持使用其他仓库，如雾凇、白霜、万象拼音基础版等
-# 目标转码类型：
-# ¹ 拼音：¹1 moqi 墨奇, ¹2 flypy 鹤形, ¹3 zrm 自然码, ¹4 jdh 简单鹤, ¹5 cj 仓颉,
-#         ¹6 tiger 虎码首末, ¹7 wubi 五笔前二, ¹8 hanxin 汉心，¹0 纯拼音
-# 
-# ² 五笔：²1 五笔整句，²0 五笔常规
-# ³ 虎码：³1 虎码整句，³0 虎码常规 
-
-# ② --- 字集过滤 ---
-# 是否开启 8105 通规字字符范围过滤「 🔥 强烈推荐开启 」
-# 该设置项仅供有扩展字符集需求的用户
-# 拼音、虎码已提供大字集映射，五笔默认提供 8105 通规字映射
-# !!! 再次强烈推荐开启
-is_filter_8105 = True
-
-# ③ --- 分包归并 ---
-# 分包还是归并「 合并后可提高 Rime 重新部署速度 」
-# - 归并 True （dicts/pinyin.dict.yaml、dicts/*_ext.dict.yaml、dicts/*_zj.dict.yaml）
-# - 分包 Flase（cn_dicts/*）
-is_merge = True
-
-# ④ --- 词长限制 ---
-# 是否限制词库最大词长，若为 0 ，则不限制
-word_length_limit = 0
-
-# ⑤ --- 仓库指定 ---
-# 待转换的词典仓库 - 网络仓库 False / 本地仓库 True
-# 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_local/cn_dicts
-# 其中 .temp_rime 与 scripts 父级目录同级
-is_local = False
-# ¹ 网络仓库
-# ----------
-# !!! 转换拼音编码需要万象拼音Pro为底座
-rime_wanxiang_pro = "https://github.com/amzxyz/rime_wanxiang_pro.git"
-rime_wanxiang = "https://github.com/amzxyz/rime_wanxiang.git"
-repository_url = rime_wanxiang_pro if code_type.startswith("1") else rime_wanxiang
-# repository_url = "https://github.com/gaboolic/rime-frost.git"
-# repository_url = "https://github.com/iDvel/rime-ice.git"
-# 
-# ² 本地仓库
-# ----------
-# [ rime_local/cn_dicts ]
-# ！仓库需要重命名为 rime_local ，字典置于 cn_dicts 中
-repository_url = 'rime_local.git' if is_local else repository_url
-# 
 # --- 其他说明 ---
 # 其实稍微修改一下当前脚本，可以获得更多转换功能，有兴趣的朋友可以自行扩展
 # -------------------------------------------------------------------------
 '''
-from datetime import datetime
 import os
 import sys
 import stat
@@ -76,17 +19,17 @@ import subprocess
 import hashlib
 from pathlib import Path
 import threading
-import time
-import zipfile
 from timer import timer
 from is_chinese_char import is_chinese_char
+from progress import format_progress_bar
 from tiger_map import tiger_map
 from wubi86_8105_map import wubi86_8105_map
 from header import get_header_ext
 from header import get_header_common
 from collections import defaultdict
-from fetch_url_file import fetch_url_file, get_remote_mtime
-
+import zipfile
+import urllib.request
+from datetime import datetime, timedelta, timezone
 
 def run_git_command(command, cwd=None):
     """执行git命令并返回是否成功"""
@@ -99,11 +42,14 @@ def run_git_command(command, cwd=None):
         }
     except subprocess.CalledProcessError:
         return False
-    
 
 def ask_yes_no(question, timeout=5):
+    '''
+    询问是否继续操作  
+    question - 具体请求描述  
+    timeout - 默认超过 5s 自动取消
+    '''
     answer = [None]  # 使用列表以便在嵌套函数中修改
-    
     def input_thread():
         answer[0] = input(f"{question} ? (y/n) y: ").strip().lower() or "y"
 
@@ -118,7 +64,6 @@ def ask_yes_no(question, timeout=5):
     else:
         print('\n🎉  » 取消操作 ¦ 祝你使用愉快')
         return False
-
 
 def remove_readonly(func, path, exc):
     """
@@ -223,7 +168,6 @@ def get_wubi_code(word: str) -> str:
                 code_parts.append(f"{wubi_code[:2]};{wubi_code[2:]}")
         return ' '.join(code_parts)
 
-
 def get_tiger_code(word: str) -> str:
     """将汉字转换为虎码编码"""
     if code_type.startswith("30"):
@@ -246,7 +190,6 @@ def get_tiger_code(word: str) -> str:
             else:
                 code_parts.append(f"{tiger_code[:2]};{tiger_code[2:]}")
         return ' '.join(code_parts)
-
 
 def get_pinyin_code(code: str) -> str:
     """将汉字转换为拼音 + 辅助码编码（可选）"""
@@ -464,16 +407,74 @@ def sort_dict(src_dir, out_dir, dict_start):
             print(f'☑️  已排序处理生成 {word_len - 32} 字词语')
         print('✅ » 已排序生成用户词典 %s' % (out_dir / f'{dict_start}.dict.yaml'))
 
+
+def get_remote_mtime(url):
+    '''
+    获取远程资源更新日期
+    '''
+    with urllib.request.urlopen(url) as response:
+        last_modified = response.getheader('Last-Modified')
+        if last_modified:
+            # 转换GMT时间字符串为时间戳（需处理时区请自行调整）
+            gmt_time = datetime.strptime(last_modified, '%a, %d %b %Y %H:%M:%S GMT')
+            # 添加UTC时区标记
+            utc_time = gmt_time.replace(tzinfo=timezone.utc)
+            # 转换为北京时间（东八区）
+            beijing_time = utc_time.astimezone(timezone(timedelta(hours=8)))
+            
+            return beijing_time.strftime('%Y-%m-%d %H:%M:%S')
+    return None
+
+def fetch_url_file(url, out_dir, is_download_gram):
+    '''
+    获取远程文件  
+    url - 远程资源地址  
+    out_dir - 存放目录  
+    is_download_gram - 是否下载大模型  
+    '''
+    default_url = 'https://github.com/amzxyz/rime_wanxiang_pro/releases/download/dict-nightly/9-cn_dicts.zip'
+    url = url or default_url
+
+    filename = os.path.basename(url)
+    filename = 'cn_dicts.zip' if not is_download_gram else 'wanxiang-lts-zh-hans.gram'
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    try:
+        with urllib.request.urlopen(url) as response:
+            total_size = int(response.headers.get('content-length', 0))
+            downloaded = 0
+            chunk_size = 8192  # 8KB
+
+            with open(out_dir / filename, 'wb') as f:
+                while True:
+                    chunk = response.read(chunk_size)
+                    if not chunk:
+                        break
+                    f.write(chunk)
+                    downloaded += len(chunk)
+                    format_progress_bar(downloaded, total_size)
+        print(f"\n✅ » 下载完成 {out_dir}")
+    except Exception as e:
+        print(f"\n下载失败：{e}")
+
 @timer
-def download_dict(url_dict, out_url_directory):
+def download_dict(url_dict, out_url_directory, is_download_gram = False):
     """
     url_dict - 如 https://github.com/amzxyz/rime_wanxiang/releases/download/dict-nightly/cn_dicts.zip
     out_url_directory - 如 C:\\Users\\jack\\AppData\\Roaming\\.temp_rime\\rime_url
+    is_download_gram - False 默认不下载大模型
     """
     # 直接下载仓库词典文件
     url_dict = url_dict or url_dict_rime_wanxiang                                         # 远程资源地址
     out_url_directory = out_url_directory or (proj_dir / work_dir / 'rime_url').resolve() # 预设下载目录
-    
+    out_file = 'cn_dicts.zip'
+
+    if is_download_gram:
+        url_dict = url_dict or url_gram
+        out_url_directory = out_url_directory or proj_dir
+        out_file = 'wanxiang-lts-zh-hans.gram'
+
+    print(f'🔜  远程资源： {url_dict}')
     print(f'🔜  目标路径： {out_url_directory}')
     
     # modified time
@@ -482,19 +483,23 @@ def download_dict(url_dict, out_url_directory):
     cur_remote_file_mtime = get_remote_mtime(url_dict)
     print(f'远程文件更新时间：{cur_remote_file_mtime}')
 
-    if (out_url_directory / 'cn_dicts.zip').exists():
-        pre_mtime = datetime.fromtimestamp(os.path.getmtime((out_url_directory / 'cn_dicts.zip'))).strftime('%Y-%m-%d %H:%M:%S')
+    if (out_url_directory / out_file).exists():
+        pre_mtime = datetime.fromtimestamp(os.path.getmtime((out_url_directory / out_file))).strftime('%Y-%m-%d %H:%M:%S')
+        # 文件上次下载时间 > 远程文件更新时间 ➭ 无需下载
         print(f'文件上次下载时间：{pre_mtime}')
         delta = datetime.strptime(pre_mtime, "%Y-%m-%d %H:%M:%S").timestamp() - datetime.strptime(cur_remote_file_mtime, "%Y-%m-%d %H:%M:%S").timestamp()
         # print(int(int(delta) / 60 / 60 / 24 ))
         if delta > 0:
             print('✅  » 无需下载 ¦ 仓库没有新的提交')
             return False
+        else:
+            fetch_url_file(url_dict, out_url_directory, is_download_gram)
     else:
         fetch_url_file(url_dict, out_url_directory)
         # 解压整个ZIP文件到指定目录
-        with zipfile.ZipFile((out_url_directory / 'cn_dicts.zip'), 'r') as zip_ref:
-            zip_ref.extractall(out_url_directory)
+        if not is_download_gram:
+            with zipfile.ZipFile((out_url_directory / out_file), 'r') as zip_ref:
+                zip_ref.extractall(out_url_directory)
 
 
 def exec(proj_dir, work_dir, repository_url):
@@ -609,6 +614,11 @@ def exec(proj_dir, work_dir, repository_url):
     sort_dict(src_dir, out_dir, dict_start)
 
 
+    is_download_gram = ask_yes_no("🔔  是否继续下载语言大模型")
+    if not is_download_gram:
+        return False;
+    download_dict(url_gram, proj_dir, is_download_gram)
+
 if __name__ == "__main__":
     proj_dir = Path(__file__).resolve().parent.parent
     work_dir = "../.temp_rime"
@@ -666,14 +676,8 @@ if __name__ == "__main__":
     word_length_limit = 0
 
     # ⑤ --- 仓库指定 ---
-    # 克隆仓库 ← True  False → 直接下载字典压缩包或模型
-    is_clone_repo = False
     # 待转换的词典仓库 - 网络仓库 0 / 本地仓库 1
-    # 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_local/cn_dicts
-    # 其中 .temp_rime 与 scripts 父级目录同级
-    is_local = sys.argv[2] if len(sys.argv) > 2 else 0
-    # print(bool(int(is_local)))
-    # ¹ 网络仓库
+    # ⁰ 网络仓库
     # ----------
     # !!! 转换拼音编码需要万象拼音Pro为底座
     rime_wanxiang_pro = "https://github.com/amzxyz/rime_wanxiang_pro.git"
@@ -683,22 +687,32 @@ if __name__ == "__main__":
     # repository_url = "https://github.com/iDvel/rime-ice.git"
     # print(repository_url)
     # 
-    # ¹⁰ 直接下载字典压缩包或模型
-    # is_clone_repo 为 False 时
-    # 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_url/cn_dicts
+    # 克隆仓库 ← 1  0 → 直接下载字典压缩包或模型
+    # ⁰⁰ 直接下载字典压缩包或模型
+    is_clone_repo = bool(int(sys.argv[3] if len(sys.argv) > 3 else 0))
+    # is_clone_repo 为 0 时
+    # 为了不增加脚本复杂性，我们固定本地词库文件夹为：
+    # - 拼音 + 辅助码 .temp_rime/rime_url_pro/cn_dicts
+    # - 形码整句      .temp_rime/rime_url/cn_dicts
     # 其中 .temp_rime 与 scripts 父级目录同级
     # ----------
-    url_dict_rime_ice = "https://github.com/iDvel/rime-ice/releases/download/2025.04.06/en_dicts.zip"
+    # url_dict_rime_ice = "https://github.com/iDvel/rime-ice/releases/download/2025.04.06/en_dicts.zip"
     # url_dict_rime_ice = "https://github.com/iDvel/rime-ice/releases/download/2025.04.06/cn_dicts.zip"
     url_dict_rime_wanxiang_pro = "https://github.com/amzxyz/rime_wanxiang_pro/releases/download/dict-nightly/9-cn_dicts.zip"
     url_dict_rime_wanxiang = "https://github.com/amzxyz/rime_wanxiang/releases/download/dict-nightly/cn_dicts.zip"
-    url_gram = 'https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram'
     # 
-    # ² 本地仓库
+    # ¹ 本地仓库
     # ----------
+    # 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_local/cn_dicts
+    # 其中 .temp_rime 与 scripts 父级目录同级
+    is_local = bool(int(sys.argv[2] if len(sys.argv) > 2 else 0))
     # [ rime_local/cn_dicts ]
     # ！仓库需要重命名为 rime_local ，字典置于 cn_dicts 中
     repository_url = 'rime_local.git' if is_local else repository_url
+    # 
+    # 是否需要下载语言大模型
+    is_download_gram = bool(int(sys.argv[4] if len(sys.argv) > 4 else 0))
+    url_gram = 'https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram'
 
     # 开始执行
     exec(proj_dir, work_dir, repository_url)

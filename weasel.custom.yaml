@@ -19,6 +19,14 @@ patch:
       # mark_text: "♪"
       # horizontal: true 
       # 隐藏编码行
+      # --- 编码行操作 -------------------------------------------
+      # preedit_type          用于控制​​预编辑文本的显示方式
+      # - input、composition  嵌入​​编码
+      # - preview​​             嵌入​​首选项内容​
+      # - preview_all​         嵌入​​全部预编辑内容​ 
+      # 
+      # ​inline_preedit  单行布局 ← true  false → 双行布局
+      # ----------------------------------------------------------
       # preedit_type: preview
       # inline_preedit: true
       # --- 鼠标操作 ---------------------------------------------
@@ -29,4 +37,4 @@ patch:
       click_to_capture: true
       layout:
         __include: style.yaml:/layout_v
-        margin_y: -1
+        # margin_y: -1

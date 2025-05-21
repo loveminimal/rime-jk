@@ -66,6 +66,7 @@ repository_url = 'rime_local.git' if is_local else repository_url
 # 其实稍微修改一下当前脚本，可以获得更多转换功能，有兴趣的朋友可以自行扩展
 # -------------------------------------------------------------------------
 '''
+from datetime import datetime
 import os
 import sys
 import stat
@@ -75,6 +76,8 @@ import subprocess
 import hashlib
 from pathlib import Path
 import threading
+import time
+import zipfile
 from timer import timer
 from is_chinese_char import is_chinese_char
 from tiger_map import tiger_map
@@ -82,6 +85,7 @@ from wubi86_8105_map import wubi86_8105_map
 from header import get_header_ext
 from header import get_header_common
 from collections import defaultdict
+from fetch_url_file import fetch_url_file, get_remote_mtime
 
 
 def run_git_command(command, cwd=None):
@@ -103,14 +107,16 @@ def ask_yes_no(question, timeout=5):
     def input_thread():
         answer[0] = input(f"{question} ? (y/n) y: ").strip().lower() or "y"
 
-    print(f"\n--- 默认 {timeout} 秒后取消转换 ---")
+    print(f"\n--- 默认 {timeout} 秒后取消操作 ---")
     thread = threading.Thread(target=input_thread)
     thread.daemon = True
     thread.start()
     thread.join(timeout)
     if answer[0] in ("y", "yes"):
+        print("🔜  » 继续操作 ¦ 即将开始执行...")
         return True
     else:
+        print('\n🎉  » 取消操作 ¦ 祝你使用愉快')
         return False
 
 
@@ -159,10 +165,10 @@ def sync_repository(repo_url, local_path):
                 print("✅  » 无需转换 ¦ 仓库没有新的提交")
                 # sync_success = False
                 sync_success = ask_yes_no(f"🔔  是否继续执行转换操作")
-                if sync_success:
-                    print("🔜  » 继续转换 ¦ 即将开始转换...")
-                else:
-                    print("\n🎉  » 不再转换 ¦ 祝你使用愉快")
+                # if sync_success:
+                #     print("🔜  » 继续转换 ¦ 即将开始转换...")
+                # else:
+                #     print("\n🎉  » 不再转换 ¦ 祝你使用愉快")
             else:
                 print("✅  » 拉取更新成功")
         else:
@@ -458,6 +464,38 @@ def sort_dict(src_dir, out_dir, dict_start):
             print(f'☑️  已排序处理生成 {word_len - 32} 字词语')
         print('✅ » 已排序生成用户词典 %s' % (out_dir / f'{dict_start}.dict.yaml'))
 
+@timer
+def download_dict(url_dict, out_url_directory):
+    """
+    url_dict - 如 https://github.com/amzxyz/rime_wanxiang/releases/download/dict-nightly/cn_dicts.zip
+    out_url_directory - 如 C:\\Users\\jack\\AppData\\Roaming\\.temp_rime\\rime_url
+    """
+    # 直接下载仓库词典文件
+    url_dict = url_dict or url_dict_rime_wanxiang                                         # 远程资源地址
+    out_url_directory = out_url_directory or (proj_dir / work_dir / 'rime_url').resolve() # 预设下载目录
+    
+    print(f'🔜  目标路径： {out_url_directory}')
+    
+    # modified time
+    # current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # print(f'当前时间：{current_datetime}')
+    cur_remote_file_mtime = get_remote_mtime(url_dict)
+    print(f'远程文件更新时间：{cur_remote_file_mtime}')
+
+    if (out_url_directory / 'cn_dicts.zip').exists():
+        pre_mtime = datetime.fromtimestamp(os.path.getmtime((out_url_directory / 'cn_dicts.zip'))).strftime('%Y-%m-%d %H:%M:%S')
+        print(f'文件上次下载时间：{pre_mtime}')
+        delta = datetime.strptime(pre_mtime, "%Y-%m-%d %H:%M:%S").timestamp() - datetime.strptime(cur_remote_file_mtime, "%Y-%m-%d %H:%M:%S").timestamp()
+        # print(int(int(delta) / 60 / 60 / 24 ))
+        if delta > 0:
+            print('✅  » 无需下载 ¦ 仓库没有新的提交')
+            return False
+    else:
+        fetch_url_file(url_dict, out_url_directory)
+        # 解压整个ZIP文件到指定目录
+        with zipfile.ZipFile((out_url_directory / 'cn_dicts.zip'), 'r') as zip_ref:
+            zip_ref.extractall(out_url_directory)
+
 
 def exec(proj_dir, work_dir, repository_url):
     exec_success = True
@@ -470,9 +508,35 @@ def exec(proj_dir, work_dir, repository_url):
 
     if not is_local:
         print('🔜  === 开始获取最新词库文件 ===')
-        exec_success = sync_repository(repository_url, local_directory)
-        if not exec_success:
-            return False;
+        if is_clone_repo:
+            exec_success = sync_repository(repository_url, local_directory)
+            if not exec_success:
+                return False;
+        else:
+            # 直接下载仓库词典文件
+            is_pinyin = code_type.startswith("1")
+            url_dict = url_dict_rime_wanxiang
+            out_url_directory = (proj_dir / work_dir / 'rime_url').resolve()
+
+            if is_pinyin:
+                url_dict = url_dict_rime_wanxiang_pro
+                out_url_directory = (proj_dir / work_dir / 'rime_url_pro').resolve()
+
+            download_dict(url_dict, out_url_directory)
+            exec_success = ask_yes_no("🔔  是否继续执行转换操作")
+            if not exec_success:
+                return False;
+        
+            # 更新工作文件目录 
+            repository_name = 'rime_url'
+            out_dict = 'cn_dicts_rime_url'
+
+            if is_pinyin:
+                repository_name = 'rime_url_pro'
+                out_dict = 'cn_dicts_rime_url_pro'
+
+            print(f'☑️  已加载词典 {out_url_directory}/cn_dicts \n')                
+
     else:
         print('🔜  === 开始转换本地词库文件 ===')
         if not local_directory.exists():
@@ -594,7 +658,7 @@ if __name__ == "__main__":
     # ③ --- 分包归并 ---
     # 分包还是归并「 合并后可提高 Rime 重新部署速度 」
     # - 归并 True （dicts/pinyin.dict.yaml、dicts/*_ext.dict.yaml、dicts/*_zj.dict.yaml）
-    # - 分包 Flase（cn_dicts/*）
+    # - 分包 False （cn_dicts/*）
     is_merge = True
 
     # ④ --- 词长限制 ---
@@ -602,6 +666,8 @@ if __name__ == "__main__":
     word_length_limit = 0
 
     # ⑤ --- 仓库指定 ---
+    # 克隆仓库 ← True  False → 直接下载字典压缩包或模型
+    is_clone_repo = False
     # 待转换的词典仓库 - 网络仓库 0 / 本地仓库 1
     # 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_local/cn_dicts
     # 其中 .temp_rime 与 scripts 父级目录同级
@@ -616,6 +682,17 @@ if __name__ == "__main__":
     # repository_url = "https://github.com/gaboolic/rime-frost.git"
     # repository_url = "https://github.com/iDvel/rime-ice.git"
     # print(repository_url)
+    # 
+    # ¹⁰ 直接下载字典压缩包或模型
+    # is_clone_repo 为 False 时
+    # 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_url/cn_dicts
+    # 其中 .temp_rime 与 scripts 父级目录同级
+    # ----------
+    url_dict_rime_ice = "https://github.com/iDvel/rime-ice/releases/download/2025.04.06/en_dicts.zip"
+    # url_dict_rime_ice = "https://github.com/iDvel/rime-ice/releases/download/2025.04.06/cn_dicts.zip"
+    url_dict_rime_wanxiang_pro = "https://github.com/amzxyz/rime_wanxiang_pro/releases/download/dict-nightly/9-cn_dicts.zip"
+    url_dict_rime_wanxiang = "https://github.com/amzxyz/rime_wanxiang/releases/download/dict-nightly/cn_dicts.zip"
+    url_gram = 'https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram'
     # 
     # ² 本地仓库
     # ----------

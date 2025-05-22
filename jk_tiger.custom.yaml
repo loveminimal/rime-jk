@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 patch:
-  __include: style.yaml:/google_jk
+  __include: style.yaml:/lost_temple_jk
   __patch:
     style/+:
-      color_scheme: google_jk
+      color_scheme: lost_temple_jk

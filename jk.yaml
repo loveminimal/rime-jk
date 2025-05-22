@@ -151,7 +151,8 @@ chord_composer:
   # 字母表，包含用并击按键
   # 击键一律以字母表顺序排列
   # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p',./"
-  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
+  # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
+  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/1234567890"
   algebra:
     __include: algebra.yaml:/algebra_kongming
 

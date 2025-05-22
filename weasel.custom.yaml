@@ -37,4 +37,4 @@ patch:
       click_to_capture: true
       layout:
         __include: style.yaml:/layout_v
-        margin_y: -1
+        # margin_y: -1

@@ -23,6 +23,7 @@ switches:
 
 engine:
   processors:
+    - lua_processor@*super_sequence*P
     - lua_processor@*quick_symbol
     - lua_processor@*exe
     - ascii_composer
@@ -53,6 +54,7 @@ engine:
     - lua_translator@*date_translator 
     - lua_translator@*force_gc        
   filters:
+    - lua_filter@*super_sequence*F
     - lua_filter@*prettify_comment
     - lua_filter@*keep_short_code_first*T
     # - lua_filter@*single_char_first       # 单字优先
@@ -92,11 +94,11 @@ translator:
   enable_charset_filter: true     
   enable_sentence: true           
   enable_encoder: true            
-  encode_commit_history: true     
+  encode_commit_history: false     
   # disable_user_dict_for_patterns: 
   #   - "^z.*$"
   enable_completion: true     
-  enable_user_dict: true      
+  enable_user_dict: false      
   comment_format: "{comment}" 
 
 

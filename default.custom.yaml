@@ -103,8 +103,8 @@ patch:
       - { when: has_menu, accept: slash, send: 4 }                                 
       - { when: paging, accept: comma, send: Page_Up }                           
       - { when: has_menu, accept: period, send: Page_Down }                     
-      - { when: composing, accept: Control+k, send: Up }                           
-      - { when: composing, accept: Control+j, send: Down }                         
+      # - { when: composing, accept: Control+k, send: Up }                           
+      # - { when: composing, accept: Control+j, send: Down }                         
 
       - { when: composing, accept: Control+u, send: Return }
       - { when: composing, accept: Control+i, send: Return }

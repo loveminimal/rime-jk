@@ -87,7 +87,8 @@ local function filter(input)
 
             -- 移除那令人讨厌的 ☯ 注释
             if cand.comment:find('☯') then
-                cand:get_genuine().comment = '💭'
+                -- cand:get_genuine().comment = '💭'
+                cand:get_genuine().comment = '+'
             end
 
             yield(cand)

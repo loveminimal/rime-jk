@@ -49,6 +49,19 @@ local function exe(key, env)
         generic_open("https://tiger-code.com/")
         context:clear()
 
+    elseif (context.input == "~ddr") then
+        os.execute('"C:\\Program Files\\Rime\\weasel-0.16.3\\WeaselDeployer.exe" /deploy')
+        context:clear()
+
+    elseif (context.input == "~ssr") then
+        os.execute('"C:\\Program Files\\Rime\\weasel-0.16.3\\WeaselDeployer.exe" /sync')
+        context:clear()
+
+    elseif (context.input == "~rrr") then
+        -- generic_open("C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\小狼毫输入法\\小狼毫算法服务")
+        os.execute('cmd /c start "" "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\小狼毫输入法\\小狼毫算法服务"')
+        context:clear()
+
     end
 
     return kNoop

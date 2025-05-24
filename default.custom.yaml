@@ -35,7 +35,7 @@ patch:
     # - {schema: jk_wubi_zj}
     # - {schema: jk_wubi_bj}
     - {schema: jk_tiger}
-    - {schema: jk_tiger_s}
+    # - {schema: jk_tiger_s}
     # - {schema: jk_tiger_zj}
     # - {schema: jk_tiger_bj}
 

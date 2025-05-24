@@ -58,6 +58,7 @@ local function exe(key, env)
         context:clear()
 
     elseif (context.input == "~rrr") then
+        -- os.execute('"C:\\Program Files\\Rime\\weasel-0.16.3\\WeaselServer.exe"')
         -- generic_open("C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\小狼毫输入法\\小狼毫算法服务")
         os.execute('cmd /c start "" "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\小狼毫输入法\\小狼毫算法服务"')
         context:clear()

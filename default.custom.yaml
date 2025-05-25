@@ -34,8 +34,8 @@ patch:
   # jk_tiger_bj     虎码·并击   虎码整句¦空明码键位
   # ----------------------------------------------------------------------------
   schema_list:
-    - {schema: jk_ascii}
-    # - {schema: jk_ascii_bj}
+    # - {schema: jk_ascii}
+    - {schema: jk_ascii_bj}
     # - {schema: jk_pinyin}
     # - {schema: jk_pinyin_flypy}
     # - {schema: jk_pinyin_zrm}
@@ -43,10 +43,10 @@ patch:
     # - {schema: jk_wubi}
     # - {schema: jk_wubi_zj}
     # - {schema: jk_wubi_bj}
-    - {schema: jk_tiger}
+    # - {schema: jk_tiger}
     # - {schema: jk_tiger_s}
     # - {schema: jk_tiger_zj}
-    # - {schema: jk_tiger_bj}
+    - {schema: jk_tiger_bj}
 
   # --- 选单设置 ---
   switcher/+:

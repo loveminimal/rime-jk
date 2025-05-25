@@ -39,6 +39,7 @@ chord_composer:	# 🔥
 translator:			# 🔥
   __include: jk_tiger_zj.schema.yaml:/translator
   prism: jk_tiger_bj                  
+  dictionary: jk_tiger_bj             
 
 date_translator:
   __include: jk_tiger_zj.schema.yaml:/date_translator
@@ -49,11 +50,13 @@ reverse_lookup:
 pinyin:
   __include: jk_tiger_zj.schema.yaml:/pinyin
 
-user_dict_set:
+user_dict_set:	# 🔥
   __include: jk_tiger_zj.schema.yaml:/user_dict_set
+  dictionary: jk_tiger_bj
 
-add_user_dict:
+add_user_dict:	# 🔥
   __include: jk_tiger_zj.schema.yaml:/add_user_dict
+  dictionary: jk_tiger_bj
 
 custom_phrase:
   __include: jk_tiger_zj.schema.yaml:/custom_phrase

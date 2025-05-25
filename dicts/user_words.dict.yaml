@@ -1,0 +1,30 @@
+# Rime dictionary - user_word.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于 word_words.lua 同步生成的用户词典
+# 
+---
+name: user_words
+version: 2025.05
+sort: by_weight
+use_preset_vocabulary: false
+...
+串击	ddum	100000000
+候选项	jquw	100000000
+元瑶	mpny	100000000
+冬去春来	hgaa	100000000
+前二	hvme	100000000
+司徒南	awnm	100000000
+啼魂	diba	100000000
+大的	mdun	100000000
+小金鱼	yzwv	100000000
+武指	fpuv	100000000
+没苦硬吃	klmd	100000000
+洗手感	kunf	100000000
+空明码	eomn	100000000
+紫灵	svbc	100000000
+说真的	snun	100000000
+速录宝	xbwn	100000000
+键值对	zjrk	100000000
+韩老魔	nqza	100000000

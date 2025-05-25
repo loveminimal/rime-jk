@@ -78,12 +78,25 @@ function write_word_to_file(env, record_type)
     if not filename then
         return false
     end
-    local serialize_str = "" -- 返回数据部分
+
     -- 遍历表中的每个元素并格式化
-    for phrase, _ in pairs(env.user_words) do
-        local code = get_tiger_code(phrase)
-        serialize_str = serialize_str .. string.format('    ["%s"] = "%s",\n', phrase, code)
-    end
+    -- for phrase, _ in pairs(env.user_words) do
+    --     local code = get_tiger_code(phrase)
+    --     serialize_str = serialize_str .. string.format('    ["%s"] = "%s",\n', phrase, code)
+    -- end
+    local phrases = {}
+	for phrase, _ in pairs(env.user_words) do
+	    table.insert(phrases, phrase)
+	end
+	-- 对 phrases 按照你想要的方式排序（例如按字典序）
+	table.sort(phrases)  -- 默认按字典序排序
+	-- 使用排序后的顺序生成 serialize_str
+    local serialize_str = "" -- 返回数据部分
+	for _, phrase in ipairs(phrases) do
+	    local code = get_tiger_code(phrase)
+	    serialize_str = serialize_str .. string.format('    ["%s"] = "%s",\n', phrase, code)
+	end
+
     -- 构造完整的 record 内容
     local record = "local user_words = {\n" .. serialize_str .. "}\nreturn user_words"
     -- 打开文件进行写入
@@ -99,15 +112,28 @@ function write_word_to_dict(env, record_type)
     if not filename then
         return false
     end
+
+    -- 遍历表中的每个元素并格式化
+    -- for phrase, _ in pairs(env.user_words) do
+    --     local code = get_tiger_code(phrase)
+    --     serialize_str = serialize_str .. string.format('%s	%s	%d\n', phrase, code, 100000000)
+    -- end
+    local phrases = {}
+	for phrase, _ in pairs(env.user_words) do
+	    table.insert(phrases, phrase)
+	end
+	-- 对 phrases 按照你想要的方式排序（例如按字典序）
+	table.sort(phrases)  -- 默认按字典序排序
+	-- 使用排序后的顺序生成 serialize_str
     local serialize_str =
         "# Rime dictionary - user_word.dict.yaml\n# encoding: utf-8\n" .. 
         "# \n# --- 说明 ---\n# 该字典是基于 word_words.lua 同步生成的用户词典\n# \n" .. 
         "---\nname: user_words\nversion: 2025.05\nsort: by_weight\nuse_preset_vocabulary: false\n...\n" -- 返回数据部分
-    -- 遍历表中的每个元素并格式化
-    for phrase, _ in pairs(env.user_words) do
-        local code = get_tiger_code(phrase)
-        serialize_str = serialize_str .. string.format('%s	%s	%d\n', phrase, code, 100000000)
-    end
+	for _, phrase in ipairs(phrases) do
+	    local code = get_tiger_code(phrase)
+	    serialize_str = serialize_str .. string.format('%s\t%s\t%d\n', phrase, code, 100000000)
+	end
+
     -- 构造完整的 record 内容
     local record = serialize_str
     -- 打开文件进行写入

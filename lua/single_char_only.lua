@@ -3,7 +3,7 @@
 --- 过滤器：只显示单字
 
 local function single_char_only(input, env)
-    local is_char_only = env.engine.context:get_option( 'char_only' )
+    local is_char_only = env.engine.context:get_option( 'char_only' ) or false
     local input_str = tostring(env.engine.context.input or "")  -- 类型安全转换
 
     -- 如果未开启单字模式，直接返回所有候选（不处理）

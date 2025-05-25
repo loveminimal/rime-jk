@@ -1,0 +1,77 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  __include: jk_pinyin.schema.yaml:/schema 
+  schema_id: jk_pinyin_flypy
+  name: 小鹤·知心
+
+
+switches:
+  __include: jk_pinyin.schema.yaml:/switches 
+
+engine:
+  __include: jk_pinyin.schema.yaml:/engine    
+
+key_binder:
+  __include: jk_pinyin.schema.yaml:/key_binder
+
+recognizer:
+  __include: jk_pinyin.schema.yaml:/recognizer
+
+punctuator:
+  __include: jk_pinyin.schema.yaml:/punctuator
+
+speller:
+  __include: jk_pinyin.schema.yaml:/speller
+  # 支持：
+  # ① 全拼   algebra_pinyin 
+  # ② 小鹤    algebra_flypy
+  # ③ 自然码    algebra_zrm
+  algebra:
+    __include: algebra.yaml:/algebra_flypy
+    __append:
+      __include: algebra.yaml:/algebra_fuzhuma
+      
+chord_composer:
+  __include: jk_pinyin.schema.yaml:/chord_composer
+
+
+translator:
+  __include: jk_pinyin.schema.yaml:/translator
+  prism: jk_pinyin_flypy                  
+
+
+date_translator:
+  __include: jk_pinyin.schema.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk_pinyin.schema.yaml:/reverse_lookup
+
+# pinyin:
+#   __include: jk_pinyin.schema.yaml:/pinyin
+
+user_dict_set:
+  __include: jk_pinyin.schema.yaml:/user_dict_set
+
+add_user_dict:
+  __include: jk_pinyin.schema.yaml:/add_user_dict
+
+custom_phrase:
+  __include: jk_pinyin.schema.yaml:/custom_phrase
+
+emoji:
+  __include: jk_pinyin.schema.yaml:/emoji
+
+zh2en:
+  __include: jk_pinyin.schema.yaml:/zh2en
+
+chaifen:
+  __include: jk_pinyin.schema.yaml:/chaifen
+
+traditionalize:
+  __include: jk_pinyin.schema.yaml:/traditionalize
+
+#语法模型
+octagram:
+  __include: jk_pinyin.schema.yaml:/octagram

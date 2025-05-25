@@ -3,7 +3,7 @@
 
 schema:
   schema_id: jk_pinyin_t
-  name: 拼音·反查「虎」
+  name: 拼音·反查「虎码」
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |

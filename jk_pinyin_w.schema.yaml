@@ -3,7 +3,7 @@
 
 schema:
   schema_id: jk_pinyin_w
-  name: 拼音·反查
+  name: 拼音·反查「五笔」
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |

@@ -33,6 +33,14 @@ punctuator:
 
 speller:
   __include: jk_pinyin.schema.yaml:/speller
+  # 支持：
+  # ① 全拼   algebra_pinyin 
+  # ② 小鹤    algebra_flypy
+  # ③ 自然码    algebra_zrm
+  algebra:
+    __include: algebra.yaml:/algebra_flypy
+    __append:
+      __include: algebra.yaml:/algebra_fuzhuma
 
 chord_composer:	# 🔥
   __include: jk.yaml:/chord_composer

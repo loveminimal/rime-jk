@@ -36,6 +36,8 @@ key_binder:
 
 recognizer:
   __include: jk_ascii.schema.yaml:/recognizer
+  patterns/+:
+    quick_symbol: ""
 
 date_translator:
   __include: jk_ascii.schema.yaml:/date_translator

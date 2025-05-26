@@ -71,6 +71,7 @@ git tag -n	gtn	0
 git push --tags	gtt	0
 git count-objects -vH	gct	0
 
+git add . && git commit --amend --no-edit && git push -f	gaf	0
 git add . && git commit -m 'perf: dicts|symbols update' && git push	grr	0
 git add . && git commit -m 'perf: some updates' && git push	gpp	0
 git add . && git commit -m 'perf: some updates'	gcc	0

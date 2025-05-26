@@ -48,6 +48,7 @@ chord_composer:	# 🔥
 translator:			# 🔥
   __include: jk_pinyin.schema.yaml:/translator       
   prism: jk_pinyin_bj                  
+  dictionary: jk_pinyin_bj
 
 date_translator:
   __include: jk_pinyin.schema.yaml:/date_translator       
@@ -58,11 +59,13 @@ reverse_lookup:
 # pinyin:
 #   __include: jk_pinyin.schema.yaml:/pinyin       
 
-user_dict_set:
+user_dict_set:	# 🔥
   __include: jk_pinyin.schema.yaml:/user_dict_set
+  dictionary: jk_pinyin_bj
 
-add_user_dict:
+add_user_dict:	# 🔥
   __include: jk_pinyin.schema.yaml:/add_user_dict
+  dictionary: jk_pinyin_bj
 
 custom_phrase:
   __include: jk_pinyin.schema.yaml:/custom_phrase       

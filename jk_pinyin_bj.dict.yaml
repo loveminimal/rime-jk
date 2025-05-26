@@ -1,0 +1,25 @@
+# Rime dictionary
+# encoding: utf-8
+---
+name: jk_pinyin_bj
+version: 2025.05
+sort: by_weight
+# ------------------------------------------------
+# cn_dicts/*   「 万象转换 8105 整句」省流分包词库
+# pinyin           「 万象转换 8105 整句」合一词库
+# pinyin_user                 「 养成系 」用户词库
+# ------------------------------------------------
+import_tables:
+  # - cn_dicts/chars         
+  # - cn_dicts/base          
+  # - cn_dicts/correlation   
+  # - cn_dicts/suggestion_one
+  # - cn_dicts/suggestion_two
+  # - cn_dicts/corrections   
+  # - cn_dicts/compatible    
+  # - cn_dicts/poetry        
+  # - cn_dicts/place  
+  - dicts/pinyin     
+  - dicts/pinyin_user
+use_preset_vocabulary: false
+...

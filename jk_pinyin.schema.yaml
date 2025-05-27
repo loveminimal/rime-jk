@@ -1,13 +1,13 @@
-# Rime schema - jk_pinyin_t.schema.yaml
+# Rime schema - jk_pinyin.schema.yaml
 # encoding: utf-8
 
 schema:
-  schema_id: jk_pinyin_t
-  name: 拼音·反查「虎码」
+  schema_id: jk_pinyin
+  name: 拼音·反查
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |
-    - 拼音反查，拼音+虎码首末辅助码增强
+    - 拼音反查，拼音+虎码首末辅助码增强「 5万+单字表 」
     - 仅用于拼音反查，不再作为独立的输入方案
 
 engine:
@@ -42,8 +42,8 @@ speller:
       __include: algebra.yaml:/algebra_fuzhuma
 
 translator:
-  dictionary: jk_pinyin_t
-  prism: jk_pinyin_t
+  dictionary: jk_pinyin
+  prism: jk_pinyin
   enable_charset_filter: false
   enable_sentence: false
   enable_encoder: true

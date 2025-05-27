@@ -33,8 +33,12 @@ local function exe(key, env)
         generic_open("https://github.com/loveminimal")
         context:clear()
 
-    elseif (context.input == "~rime") then
+    elseif (context.input == "~rrc") then
         generic_open("C:\\Users\\jack\\AppData\\Roaming\\Rime")
+        context:clear()
+
+    elseif (context.input == "~rrs") then
+        generic_open("C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack")
         context:clear()
 
     elseif (context.input == "~dazi") then
@@ -45,7 +49,7 @@ local function exe(key, env)
         generic_open("https://www.52dazi.cn")
         context:clear()
 
-    elseif (context.input == "~hu") then
+    elseif (context.input == "~tiger") then
         generic_open("https://tiger-code.com/")
         context:clear()
 

@@ -1589,6 +1589,7 @@ use_preset_vocabulary: false
 不来	cbah	100000000
 不好	cbbh	200000000
 不动	cbbs	100000000
+不想	cbeq	100000000
 不开	cbfl	100000000
 不高	cbgg	100000000
 不去	cbgk	100000000
@@ -2051,6 +2052,7 @@ use_preset_vocabulary: false
 作用	jwty	100000000
 你来	jxah	100000000
 你好	jxbh	500000000
+你还	jxcu	100000000
 你想	jxeq	100000000
 你也	jxey	200000000
 你们	jxja	500000000
@@ -2949,7 +2951,6 @@ use_preset_vocabulary: false
 身上	zsyf	100000000
 习惯	zxhk	500000000
 链接	zyui	300000000
-不知道	coh	500000000
 来不来	acah	300000000
 状态栏	ameh	100000000
 动不动	bcbs	100000000
@@ -3044,6 +3045,7 @@ use_preset_vocabulary: false
 看一下	uffy	300000000
 批处理	uhnd	100000000
 工作者	ujqo	100000000
+白小纯	uyif	200000000
 服务商	vhim	100000000
 文件夹	vjhh	100000000
 文件名	vjld	100000000

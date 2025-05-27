@@ -915,6 +915,7 @@ use_preset_vocabulary: false
 企	jsi	200000000
 佛	jtf	100000000
 依	jti	100000000
+儒	jtl	100000000
 傻	jtr	200000000
 伯	jub	100000000
 化	jvb	200000000
@@ -1059,6 +1060,7 @@ use_preset_vocabulary: false
 玩	nmp	600000000
 博	nnk	300000000
 韩	non	100000000
+辨	npn	100000000
 裁	npt	100000000
 截	npu	200000000
 载	npy	100000000
@@ -1687,6 +1689,7 @@ use_preset_vocabulary: false
 听歌	dtzz	100000000
 无敌	duah	100000000
 无业	ducy	100000000
+唯一	dufi	200000000
 无能	dukv	100000000
 无重	duld	100000000
 无耻	duqs	100000000
@@ -1701,6 +1704,7 @@ use_preset_vocabulary: false
 标签	efrj	200000000
 标识	efsd	100000000
 本文	efvw	100000000
+标准	efwu	200000000
 本质	efxn	100000000
 本钱	efzf	100000000
 本身	efzs	300000000
@@ -1717,6 +1721,7 @@ use_preset_vocabulary: false
 概率	eizi	100000000
 检查	ejeo	100000000
 见过	ejku	100000000
+检验	ejnj	200000000
 每天	ekfm	100000000
 核心	ekhx	300000000
 繁体	ekje	300000000
@@ -1742,6 +1747,7 @@ use_preset_vocabulary: false
 相对	eqrk	200000000
 想说	eqsh	100000000
 想用	eqty	100000000
+想的	equn	100000000
 想要	eqvb	100000000
 相当	eqyb	300000000
 想到	eqyp	300000000
@@ -1812,6 +1818,7 @@ use_preset_vocabulary: false
 神奇	fomz	100000000
 更加	fosd	100000000
 更改	fovh	100000000
+神庙	foxd	100000000
 武器	fpdd	100000000
 万能	fpkv	100000000
 武功	fpus	100000000
@@ -2272,6 +2279,7 @@ use_preset_vocabulary: false
 韩冰	nowk	300000000
 截图	nprh	100000000
 真忘	nqfh	100000000
+真理	nqnd	200000000
 真有	nqnv	200000000
 真是	nqot	100000000
 直接	nqui	1700000000
@@ -2312,6 +2320,7 @@ use_preset_vocabulary: false
 凡人	oijr	100000000
 自信	oijs	100000000
 自带	oilw	100000000
+自有	oinv	100000000
 自造	oiqd	100000000
 自我	oitu	100000000
 自用	oity	100000000
@@ -2360,6 +2369,7 @@ use_preset_vocabulary: false
 晚安	owwb	100000000
 顺序	owxi	100000000
 晚上	owyf	400000000
+暗色	oxxm	100000000
 尤其	oyzh	100000000
 精校	paea	100000000
 精神	pafo	300000000
@@ -2580,6 +2590,7 @@ use_preset_vocabulary: false
 翻着	tpgq	100000000
 翻译	tpsr	100000000
 翻页	tpwy	200000000
+三个	tsjg	100000000
 三方	tslf	100000000
 三观	tsre	100000000
 近来	tuah	100000000
@@ -2805,7 +2816,7 @@ use_preset_vocabulary: false
 微软	wvye	100000000
 实体	wwje	200000000
 实现	wwne	200000000
-实践	wwpf	100000000
+实践	wwpf	200000000
 实话	wwsa	100000000
 实力	wwsl	100000000
 实际	wwtf	300000000
@@ -3099,3 +3110,5 @@ use_preset_vocabulary: false
 爱潜水的乌贼	ykko	200000000
 中华人民共和国	djjr	100000000
 千年修得共枕眠	lejq	100000000
+自有大儒帮我辨经	onmi	200000000
+实践是检验真理的唯一标准	wpow	100000000

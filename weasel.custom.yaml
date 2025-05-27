@@ -5,10 +5,10 @@ customization:
   modified_time: "Fri Dec  6 10:55:38 2024"
   rime_version: 1.11.2
 patch:
-  __include: style.yaml:aqjk
+  __include: style.yaml:lost_temple_jk
   __patch:
     style/+:
-      color_scheme: aqjk
+      color_scheme: lost_temple_jk
       font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
@@ -28,7 +28,7 @@ patch:
       # ​inline_preedit  单行布局 ← true  false → 双行布局
       # ----------------------------------------------------------
       # preedit_type: preview
-      # inline_preedit: true
+      inline_preedit: true
       # --- 鼠标操作 ---------------------------------------------
       # hover_type       鼠标悬浮候选 ➭ none、hilite、semi_hilite
       # click_to_capture 点击候选创建截图
@@ -36,5 +36,5 @@ patch:
       hover_type: none
       click_to_capture: true
       layout:
-        __include: style.yaml:/layout_v
+        __include: style.yaml:/layout_h
         # margin_y: -1

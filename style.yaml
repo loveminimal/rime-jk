@@ -42,6 +42,19 @@
 # -------------------------------------
 
 
+# *.custom.yaml
+# -------------------------------------
+# Rime custom settings
+# encoding: utf-8
+
+# patch:
+#   __include: style.yaml:/lost_temple_jk
+#   __patch:
+#     style/+:
+#       color_scheme: lost_temple_jk
+# -------------------------------------
+
+
 # 基础布局
 # -------------------------------------
 # type: vertical

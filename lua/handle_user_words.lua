@@ -17,22 +17,23 @@
 local auto_reload_service = false
 local auto_generate_dict = false
 
-local filename = rime_api.get_user_data_dir() .. "/user.yaml"
-local fd = assert(io.open(filename, "r"))
-local content = fd:read("*a")
-fd:close()
+-- local filename = rime_api.get_user_data_dir() .. "/user.yaml"
+-- local fd = assert(io.open(filename, "r"))
+-- local content = fd:read("*a")
+-- fd:close()
 
 -- 提取 user.yaml:/var/previously_selected_schema 的值 - 当指使用方案
 -- jk_wubi、jk_tiger……
-local cur_schema = content:match("previously_selected_schema:%s*([%w_]+)")
+-- local cur_schema = content:match("previously_selected_schema:%s*([%w_]+)")
 -- log.warning(cur_schema)
 
-local code_table = {}
-if cur_schema == 'jk_wubi' then
-    code_table = require("wubi86_code_table")
-elseif cur_schema == 'jk_tiger' then
-    code_table = require("tiger_code_table")
-end
+-- local code_table = {}
+-- if cur_schema == 'jk_wubi' then
+--     code_table = require("wubi86_code_table")
+-- elseif cur_schema == 'jk_tiger' then
+--     code_table = require("tiger_code_table")
+-- end
+local code_table = require("tiger_code_table")
 
 -- 获取键值对 table 长度
 function table_len(t)

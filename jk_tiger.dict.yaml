@@ -21,5 +21,6 @@ encoder:
 import_tables:
   - dicts/tiger
   - dicts/tiger_user
+  # - dicts/user_words
 use_preset_vocabulary: false
 ...

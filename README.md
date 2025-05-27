@@ -2,8 +2,10 @@ RIME_JK ，指尖上的旋律 ～ [🍕 指南](https://aituyaa.com/rime_jk-%E6%
 
 <img src='./assets/color.png' width='76%' /><img src='./assets/click.gif' width='16%' />
 
+> 🪄 该版本之后的版本，都只保留了个人所需方案和功能，不再具备强通用性（除非你和我的使用习惯一模一样）。
 
-🔥v6.6.6.ultimate「 唯一推荐，超越任何一个历史版本 」 最新终极大一统版本包含内容 ：
+🔥 [Release Version 6.6.6.ultimate](https://github.com/loveminimal/rime-jk/releases/tag/v6.6.6.ultimate) ➭「 唯一推荐 」 终极大一统版本 ：
+
 
 ```
 - 方案：

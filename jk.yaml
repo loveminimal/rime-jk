@@ -40,8 +40,8 @@ recognizer:
   patterns:
     reverse_lookup: "^~~[a-z]*:?$"
     punct: "^~([0-9]|10|[A-Za-z]+)$"
-    # pinyin: "^z[Xa-z]*$"    
-    # add_user_dict: "^Z[a-z]*$"
+    # pinyin: "^z[Xa-z]*$" 
+    pinyin: "^Z[a-z]*$"    
     helper: "^(~help|hH)$"
     quick_symbol: "^;.*$" 
 
@@ -61,8 +61,6 @@ punctuator:
 # date_translator 日期时间输入
 # reverse_lookup  英文翻译字典
 # pinyin          拼音反查
-# user_dict_set   加载自造词
-# add_user_dict   自造词
 # custom_phrase   自定义码表
 # -------------------------------------
 date_translator:
@@ -81,41 +79,13 @@ reverse_lookup:
 pinyin:
   tag: pinyin
   dictionary: jk_pinyin
-  prefix: "z"
+  prefix: "Z"
   suffix: "'"
   tips: 〔拼音·反查〕
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
-
-user_dict_set:
-  dictionary: jk_wubi_zj
-  user_dict: jk
-  initial_quality: 0
-  enable_completion: false
-  enable_sentence: false
-  spelling_hints: 100
-  comment_format:
-    - xform/[^;]*;([^;]*)//
-  enable_user_dict: true
-
-add_user_dict:
-  dictionary: jk_wubi_zj
-  user_dict: jk
-  tag: add_user_dict
-  initial_quality: -1
-  enable_charset_filter: false
-  enable_completion: true
-  enable_encoder: true
-  enable_sentence: true
-  enable_user_dict: true
-  encode_commit_history: false
-  preedit_format:   
-  comment_format:
-    - xform/[^;]*;([^;]*)/$1/
-  prefix: "Z"
-  tips: "〔字词·自造〕"
 
 
 # -------------------------------------
@@ -198,7 +168,7 @@ zh2en:
 # tips  char←字 词→all
 # -------------------------------------
 chaifen:
-  opencc_config: wb_cf.json
+  opencc_config: hu_cf.json
   option_name: chaifen
   show_in_comment: true 
   comment_format:     

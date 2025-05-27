@@ -425,7 +425,7 @@ def get_remote_mtime(url):
             return beijing_time.strftime('%Y-%m-%d %H:%M:%S')
     return None
 
-def fetch_url_file(url, out_dir, is_download_gram):
+def fetch_url_file(url, out_dir, is_download_gram = False):
     '''
     获取远程文件  
     url - 远程资源地址  

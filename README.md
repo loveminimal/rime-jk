@@ -3,7 +3,7 @@ RIME_JK ，指尖上的旋律 ～ [🍕 指南](https://aituyaa.com/rime_jk-%E6%
 <img src='./assets/color.png' width='76%' /><img src='./assets/click.gif' width='16%' />
 
 
-🔥`> 2025-05-16 15:48`「 唯一推荐，超越任何一个历史版本 」 最新大一统版本包含内容 ：
+🔥v6.6.6.ultimate「 唯一推荐，超越任何一个历史版本 」 最新终极大一统版本包含内容 ：
 
 ```
 - 方案：

@@ -13,19 +13,15 @@ customization:
 patch:
   # --- 方案列表 ---
   # ---------------------------------------------------------------------
-  # jk_ascii      英文·知心   ¦ 自定义的 ASCII 模式
-  # jk_ascii_bj   英文·并击   ¦ 空明码键位   
-  # jk_tiger      虎码·知心   ¦ 常规输入
-  # jk_tiger_s    虎码·单字   ¦ 定频单字输入
-  # jk_tiger_bj   虎码·并击   ¦ 空明码键位
+  # jk_ascii      英文·知心   ¦ 自定义 ASCII（方便使用快捷键、快符等）
+  # jk_tiger      虎码·知心   ¦ 常规输入（默认开启自动调频）
+  # jk_tiger_s    虎码·单字   ¦ 单字输入（默认定频）
   # jk_pinyin     拼音·反查   ¦ 虎码首末辅助码（* 仅用于反查，非独立方案）
   # ---------------------------------------------------------------------
   schema_list:
     - {schema: jk_ascii}
-    - {schema: jk_ascii_bj}
     - {schema: jk_tiger}
     - {schema: jk_tiger_s}
-    - {schema: jk_tiger_bj}
 
 
   # --- 选单设置 ---

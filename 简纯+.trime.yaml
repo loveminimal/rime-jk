@@ -170,7 +170,7 @@ style:
   candidate_padding: 5 #候选项内边距
   candidate_spacing: 0.5 #候选间距
   candidate_font: han.ttf #候选字型
-  candidate_text_size: 20 #候选字号
+  candidate_text_size: 19 #候选字号
   ## 编码
   comment_on_top: false #编码提示在上方或右侧
   comment_height: 18 #编码提示区高度
@@ -3140,7 +3140,7 @@ preset_keyboards:
     keys:
       # 数字行
       - {click: num1, __include: conf/num_line}
-      - {click: num2, long_click: '~', swipe_down: 2, __include: conf/num_line }
+      - {click: num2, long_click: '~', swipe_down: '~', __include: conf/num_line }
       - {click: num3}
       - {click: num4}
       - {click: num5}

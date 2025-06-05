@@ -3,9 +3,7 @@
 # 
 import subprocess
 from progress import progress
-
-# 定义命令路径
-weasel_deployer_path = "C:/Program Files/Rime/weasel-0.16.3/WeaselDeployer.exe"
+from get_rime_version import get_rime_version
 
 # 执行部署命令
 def deploy_rime():
@@ -25,4 +23,9 @@ def deploy_rime():
 
 # 主程序
 if __name__ == "__main__":
+    rime_version = get_rime_version()
+    # 定义命令路径
+    weasel_deployer_path = f"C:/Program Files/Rime/weasel-{rime_version}/WeaselDeployer.exe"
+    # print(weasel_deployer_path)
+
     deploy_rime()  # 执行部署

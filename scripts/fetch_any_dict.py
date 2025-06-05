@@ -124,6 +124,11 @@ def sync_repository(repo_url, local_path):
                 force_delete(backup_path)
                 local_path.rename(backup_path)
                 print(f"✅  » 当前仓库已备份为 { backup_path }")
+
+                # 失败了之后回退版本后重试（避免源仓库强推导致错误）
+                # run_git_command(["reset", "--hard HEAD~1"], cwd=local_path)
+                run_git_command(["reset", "--hard", "HEAD~1"], cwd=local_path)
+
             print(f"--- 重新浅克隆 ---")
             sync_success = sync_repository(repo_url, local_path)
     else:
@@ -228,6 +233,10 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
                     continue
                 word, _, weight = parts[0], parts[1], parts[2]
 
+                # 避免 weight 中包含非数字的情况 
+                if any(i not in '1234567890' for i in weight):
+                    print(line)
+                    weight = 1
                 # 将权重转换为整数以便比较
                 current_weight = int(weight)
                 # 如果字不存在于字典中，或者当前权重更大，则更新字典
@@ -689,7 +698,7 @@ if __name__ == "__main__":
     # 
     # 克隆仓库 ← 1  0 → 直接下载字典压缩包或模型
     # ⁰⁰ 直接下载字典压缩包或模型
-    is_clone_repo = bool(int(sys.argv[3] if len(sys.argv) > 3 else 0))
+    is_clone_repo = 1 or bool(int(sys.argv[3] if len(sys.argv) > 3 else 0))
     # is_clone_repo 为 0 时
     # 为了不增加脚本复杂性，我们固定本地词库文件夹为：
     # - 拼音 + 辅助码 .temp_rime/rime_url_pro/cn_dicts

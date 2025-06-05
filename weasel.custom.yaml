@@ -5,10 +5,10 @@ customization:
   modified_time: "Fri Dec  6 10:55:38 2024"
   rime_version: 1.11.2
 patch:
-  __include: style.yaml:lost_temple_jk
+  __include: style.yaml:emjk
   __patch:
     style/+:
-      color_scheme: lost_temple_jk
+      color_scheme: emjk
       font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根

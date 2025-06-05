@@ -103,7 +103,7 @@ def sync_repository(repo_url, local_path):
         print(f"仓库已存在于 {local_path}")
         print(f"--- 拉取最新更新 ---")
         print(f"🔜  正在拉取最新更新...")
-        pull_result = run_git_command(["pull", "--depth=1"], cwd=local_path)
+        pull_result = run_git_command(["pull", "--depth=10"], cwd=local_path)
         if pull_result and pull_result['success']:
             # print("输出信息:", pull_result["stdout"])
             if 'Already up to date' in pull_result["stdout"]:
@@ -135,7 +135,7 @@ def sync_repository(repo_url, local_path):
         print(f"🔜  正在浅克隆 {repo_url}...")
         local_path.parent.mkdir(parents=True, exist_ok=True)
         
-        if run_git_command(["clone", "--depth=1", repo_url, str(local_path)]):
+        if run_git_command(["clone", "--depth=10", repo_url, str(local_path)]):
             print(f"✅  » 仓库已浅克隆到 {local_path}")
             sync_success = True
         else:
@@ -240,6 +240,11 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
                 # 将权重转换为整数以便比较
                 current_weight = int(weight)
                 # 如果字不存在于字典中，或者当前权重更大，则更新字典
+                # 拼音时由于存在多音字，不再根据 word 去重
+                if code_type.startswith("1"):
+                    res_dict_word_weight[word + get_md5(line)] = current_weight
+                    continue
+
                 if word not in res_dict_word_weight or current_weight > res_dict_word_weight[word]:
                     res_dict_word_weight[word] = current_weight
 
@@ -267,7 +272,7 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
                 try:
                     if code_type.startswith("1"):
                         pinyin_code = get_pinyin_code(code)
-                        valid_entries.add(f"{word}\t{pinyin_code}\t{res_dict_word_weight[word]}\n")
+                        valid_entries.add(f"{word}\t{pinyin_code}\t{res_dict_word_weight[word + get_md5(line)]}\n")
                     elif code_type.startswith("2"):
                         wubi_code = get_wubi_code(word)
                         valid_entries.add(f"{word}\t{wubi_code}\t{res_dict_word_weight[word]}\n")
@@ -315,8 +320,8 @@ def filter_8105(src_dir: Path, out_file: Path):
                     word_len = len(word)
                     
                     try:
-                        if word not in res_dict or code not in res_dict_code[word]:
-                            res_dict[word] = {code}
+                        if (word + get_md5(line)) not in res_dict or code not in res_dict_code[word]:
+                            res_dict[word + get_md5(line)] = {code}
                             res_dict_code[word].add(code)
                             
                             if word_len not in word_len_groups:
@@ -383,6 +388,11 @@ def sort_dict(src_dir, out_dir, dict_start):
             weight = int(weight)
             
             # 唯一化
+            # 拼音时由于存在多音字，不再根据 word 去重
+            if code_type.startswith("1"):
+                res_dict[word + get_md5(line)] = f'{code}\t{weight}'
+                continue
+
             if word not in res_dict:
                 res_dict[word + get_md5(line)] = f'{code}\t{weight}'
 

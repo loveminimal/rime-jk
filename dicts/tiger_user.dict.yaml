@@ -1379,6 +1379,7 @@ use_preset_vocabulary: false
 厉	xfp	100000000
 压	xgi	200000000
 庄	xgt	100000000
+税	xhd	100000000
 整	xhf	800000000
 禾	xhh	100000000
 季	xhi	100000000
@@ -1732,6 +1733,7 @@ use_preset_vocabulary: false
 嚣张	ddbp	200000000
 品保	ddjd	100000000
 吃饭	deqx	100000000
+吃点	deyd	100000000
 中间	dgao	100000000
 吐槽	dgef	100000000
 中场	dgga	100000000
@@ -1769,12 +1771,14 @@ use_preset_vocabulary: false
 唯一	dufi	400000000
 无能	dukv	100000000
 无重	duld	300000000
+无奈	dumf	100000000
 无耻	duqs	100000000
 无论	dusj	100000000
 无需	dutl	100000000
 无损	duud	100000000
 无脑	duvz	100000000
 无解	duxt	200000000
+由于	dyfn	100000000
 杨康	eaxb	200000000
 极端	eciv	100000000
 极点	ecyd	100000000
@@ -1792,6 +1796,7 @@ use_preset_vocabulary: false
 本身	efzs	300000000
 干啥	egdj	200000000
 干嘛	egdz	100000000
+样子	eghi	100000000
 干活	egka	200000000
 样式	egpu	500000000
 干脆	egvx	100000000
@@ -1800,6 +1805,7 @@ use_preset_vocabulary: false
 平台	ehkd	500000000
 平时	ehok	200000000
 根本	eief	100000000
+根据	eiuc	100000000
 概率	eizi	100000000
 检查	ejeo	100000000
 见过	ejku	100000000
@@ -1832,6 +1838,7 @@ use_preset_vocabulary: false
 想想	eqeq	200000000
 想着	eqgq	100000000
 相关	eqhm	100000000
+想法	eqkg	100000000
 相同	eqmf	300000000
 相对	eqrk	200000000
 想说	eqsh	100000000
@@ -1841,6 +1848,7 @@ use_preset_vocabulary: false
 相应	eqxk	200000000
 相当	eqyb	300000000
 想到	eqyp	300000000
+权重	erld	100000000
 穷人	esjr	100000000
 格式	espu	500000000
 窗口	etdk	100000000
@@ -2139,6 +2147,7 @@ use_preset_vocabulary: false
 会儿	jbpe	100000000
 健胃	jbqv	100000000
 会的	jbun	100000000
+健脾	jbvu	100000000
 低配	jbyv	200000000
 做好	jcbh	100000000
 做了	jcrl	100000000
@@ -2246,6 +2255,7 @@ use_preset_vocabulary: false
 法国	kgrn	100000000
 潜水	khks	100000000
 注释	kitp	400000000
+注定	kiwt	100000000
 注意	kixh	400000000
 注解	kixt	100000000
 九品	kjdd	100000000
@@ -2706,6 +2716,7 @@ use_preset_vocabulary: false
 观众	rejj	100000000
 观察	rewh	200000000
 非常	rfsr	100000000
+等着	rggq	100000000
 等级	rgic	100000000
 等等	rgrg	100000000
 等到	rgyp	100000000
@@ -2955,7 +2966,7 @@ use_preset_vocabulary: false
 找到	upyp	200000000
 看来	uqah	100000000
 看好	uqbh	100000000
-看着	uqgq	100000000
+看着	uqgq	200000000
 看懂	uqhl	100000000
 看过	uqku	200000000
 看了	uqrl	100000000
@@ -3247,6 +3258,7 @@ use_preset_vocabulary: false
 醒醒	yoyo	100000000
 到了	yprl	100000000
 轻松	yreh	200000000
+省事	ytfd	100000000
 省心	ythx	100000000
 暂停	ytjg	100000000
 省力	ytsl	100000000
@@ -3400,6 +3412,7 @@ use_preset_vocabulary: false
 大参林	mkee	100000000
 碎碎念	mmja	100000000
 网易云	moby	100000000
+大字根	mwei	100000000
 有一次	nfwe	100000000
 有什么	njtk	100000000
 有没有	nknv	300000000
@@ -3422,6 +3435,7 @@ use_preset_vocabulary: false
 都一样	qfeg	100000000
 进一步	qfss	100000000
 进度条	qxhe	100000000
+回不去	rcgk	100000000
 算不算	rcrq	100000000
 第一个	rfjg	100000000
 第一页	rfwy	100000000

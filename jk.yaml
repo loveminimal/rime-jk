@@ -88,6 +88,34 @@ pinyin:
     - xform/([jqxy])v/$1u/
 
 
+user_dict_set:
+  dictionary: jk_wubi_zj
+  user_dict: jk
+  initial_quality: 0
+  enable_completion: false
+  enable_sentence: false
+  spelling_hints: 100
+  comment_format:
+    - xform/[^;]*;([^;]*)//
+  enable_user_dict: true
+
+add_user_dict:
+  dictionary: jk_wubi_zj
+  user_dict: jk
+  tag: add_user_dict
+  initial_quality: -1
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: true
+  enable_user_dict: true
+  encode_commit_history: false
+  preedit_format:   
+  comment_format:
+    - xform/[^;]*;([^;]*)/$1/
+  prefix: "Z"
+  tips: "〔字词·自造〕"
+
 # -------------------------------------
 # custom_phrase:
 #   db_class: stabledb        只读数据库，无法动态调频；设为 tabledb 可以动态调频

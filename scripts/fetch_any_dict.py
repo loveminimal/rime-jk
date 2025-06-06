@@ -22,6 +22,7 @@ import threading
 from timer import timer
 from is_chinese_char import is_chinese_char
 from progress import format_progress_bar
+from pinyin2aux import load_metadata, process_input
 from tiger_map import tiger_map
 from wubi86_8105_map import wubi86_8105_map
 from header import get_header_ext
@@ -213,6 +214,9 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     tab_split_re = re.compile(r'\t+')
 
+    list_with_tone = list('āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüńňǹ')
+    list_without_tone = list('aaaaooooeeeeiiiiuuuuvvvvvnnn')
+
     for file_num, file_path in enumerate(src_dir.glob(f'*{file_endswith_filter}'), 1):
         print(f'☑️  已加载第 {file_num} 份码表 » {file_path.name}')
 
@@ -260,6 +264,9 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
                     continue
 
                 word, code, weight = parts[0], parts[1], parts[2]
+                # 不喜欢带调的（与其他可能使用的拼音词库同步后会冲突），转换成不带调的
+                for idx, char in enumerate(list_with_tone):
+                    code = code.replace(char, list_without_tone[idx])
                 
                 if word_length_limit > 0 and len(word) > word_length_limit:
                     # print(f"过滤掉长词语: {word} (长度: {len(word)})")
@@ -451,7 +458,7 @@ def fetch_url_file(url, out_dir, is_download_gram = False):
     out_dir - 存放目录  
     is_download_gram - 是否下载大模型  
     '''
-    default_url = 'https://github.com/amzxyz/rime_wanxiang_pro/releases/download/dict-nightly/9-cn_dicts.zip'
+    default_url = "https://github.com/amzxyz/rime_wanxiang.git"
     url = url or default_url
 
     filename = os.path.basename(url)
@@ -530,39 +537,32 @@ def exec(proj_dir, work_dir, repository_url):
     local_directory = (proj_dir / work_dir / repository_name).resolve()
     out_dict = f'cn_dicts_{repository_name}'
 
-    if not is_local:
-        print('🔜  === 开始获取最新词库文件 ===')
-        if is_clone_repo:
-            exec_success = sync_repository(repository_url, local_directory)
-            if not exec_success:
-                return False;
-        else:
-            # 直接下载仓库词典文件
-            is_pinyin = code_type.startswith("1")
-            url_dict = url_dict_rime_wanxiang
-            out_url_directory = (proj_dir / work_dir / 'rime_url').resolve()
+    # --- 仓库克隆 ---
+    if int(dict_type) == 1:
+        print('🔜  === 〔 仓库克隆 〕开始获取最新词库文件 ===')
+        exec_success = sync_repository(repository_url, local_directory)
+        if not exec_success:
+            return False
+    # --- 远程下载 ---
+    if int(dict_type) == 2:
+        print('🔜  === 〔 远程下载 〕开始获取最新词库文件 ===')
+        # 直接下载仓库词典文件
+        url_dict = url_dict_rime_wanxiang
+        out_url_directory = (proj_dir / work_dir / 'rime_url').resolve()
 
-            if is_pinyin:
-                url_dict = url_dict_rime_wanxiang_pro
-                out_url_directory = (proj_dir / work_dir / 'rime_url_pro').resolve()
+        download_dict(url_dict, out_url_directory)
+        exec_success = ask_yes_no("🔔  是否继续执行转换操作")
+        if not exec_success:
+            return False;
+    
+        # 更新工作文件目录 
+        repository_name = 'rime_url'
+        out_dict = 'cn_dicts_rime_url'
 
-            download_dict(url_dict, out_url_directory)
-            exec_success = ask_yes_no("🔔  是否继续执行转换操作")
-            if not exec_success:
-                return False;
-        
-            # 更新工作文件目录 
-            repository_name = 'rime_url'
-            out_dict = 'cn_dicts_rime_url'
-
-            if is_pinyin:
-                repository_name = 'rime_url_pro'
-                out_dict = 'cn_dicts_rime_url_pro'
-
-            print(f'☑️  已加载词典 {out_url_directory}/cn_dicts \n')                
-
-    else:
-        print('🔜  === 开始转换本地词库文件 ===')
+        print(f'☑️  已加载词典 {out_url_directory}/cn_dicts \n')                
+    # --- 本地词典 ---
+    if int(dict_type) == 3:
+        print('🔜  === 〔 本地词典 〕开始转换本地词库文件 ===')
         if not local_directory.exists():
             print(f'''
 🚫  请检查 .temp_rime/{repository_name}/cn_dicts 是否存在
@@ -575,9 +575,29 @@ def exec(proj_dir, work_dir, repository_url):
         else:
             print(f'☑️  已加载词典 {local_directory}/cn_dicts \n')
 
-    # ② 转换拼音词库为五笔词库
+
+    # '非万象Pro词库转换为带辅助码版本
+    if code_type.startswith("1"):
+        metadata_directory = Path(proj_dir / 'scripts').resolve()   # / 'auxiliary_code.yaml'
+        input_path =  Path(proj_dir / work_dir / repository_name / 'cn_dicts').resolve()
+        output_path = Path(proj_dir / work_dir / (repository_name + '_aux') / 'cn_dicts').resolve()
+        # 如果存在输出文件，先删除
+        if os.path.exists(output_path):
+            shutil.rmtree(output_path)
+        # os.mkdir(output_path)
+        output_path.mkdir(parents=True, exist_ok=True)
+        # 加载元数据
+        metadata = load_metadata(metadata_directory)
+        print(f'已加载 {len(metadata)} 个字符的元数据')
+        # 处理输入路径
+        process_input(input_path, metadata, output_path)
+
+    # ② 转换拼音词库为目标词库
     src_dir = proj_dir / work_dir / repository_name / 'cn_dicts'
     out_dir = proj_dir / work_dir / out_dict
+    if code_type.startswith("1"):
+        src_dir = proj_dir / work_dir / (repository_name + '_aux') / 'cn_dicts'
+
     # 已存在，先删除，再转换
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -642,17 +662,34 @@ if __name__ == "__main__":
     proj_dir = Path(__file__).resolve().parent.parent
     work_dir = "../.temp_rime"
 
+    # ---------------------------------------------------------------------------------------
+    # code_type         编码类型            → 详见下
+    # dict_type         字典来源类型        → ¹仓库克隆  ²远程下载  ³本地词典
+    # repo_type         仓库类型            → ¹万象拼音  ²白霜拼音  ³雾凇拼音  ⁰其它
+    # is_download_gram  是否下载语言大模型  → ⁰否  ¹是
+    # ---------------------------------------------------------------------------------------
+    dict_type = 1
+    code_type = 0
+    repo_type = 0
+    is_download_gram = 0
+    for i, arg in enumerate(sys.argv):
+        if arg == "-c":
+            code_type = sys.argv[i + 1]
+        elif arg == '-d':
+            dict_type = sys.argv[i + 1]
+        elif arg == '-r':
+            repo_type = sys.argv[i + 1]
+        elif arg == '-g':
+            is_download_gram = sys.argv[i + 1]
+
     # === 可配置项 ===
     # ① --- 编码类型 ---
-    # !!! 转换拼音编码需要万象拼音Pro为底座，即 repository_url = "https://github.com/amzxyz/rime_wanxiang_pro.git"
-    # !!! 五笔、虎码支持使用其他仓库，如雾凇、白霜、万象拼音基础版等
     # 目标转码类型：
     # ¹ 拼音：¹1 moqi 墨奇, ¹2 flypy 鹤形, ¹3 zrm 自然码, ¹4 jdh 简单鹤, ¹5 cj 仓颉,
     #         ¹6 tiger 虎码首末, ¹7 wubi 五笔前二, ¹8 hanxin 汉心，¹0 纯拼音
     # 
     # ² 五笔：²1 五笔整句，²0 五笔常规
     # ³ 虎码：³1 虎码整句，³0 虎码常规 
-    code_type = sys.argv[1] if len(sys.argv) > 1 else ''
     code_dict = { 
         '10': '纯拼音', '11': '墨奇', '12': '鹤形', '13': '自然码', '14': '简单鹤', '15': '仓颉', '16': '虎码首末', '17': '五笔前二', '18': '汉心',  
         '20': '五笔常规','21': '五笔整句',
@@ -673,9 +710,9 @@ if __name__ == "__main__":
 如：16 ➭ 拼音+虎码首末；20 ➭ 五笔常规；31 ➭ 虎码整句
 ------------------------------------------------------------------------------
         ''')
-        code_type = input(f"🔔  默认「 虎码整句 」? (31): ").strip().lower() or "31"
+        code_type = input(f"🔔  默认「 自然码 」? (13): ").strip().lower() or "13"
         # print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
-    print(f'----------- {code_dict[code_type]} -----------')
+    print(f'🔜  {code_type} {code_dict[code_type]} \n')
 
     # ② --- 字集过滤 ---
     # 是否开启 8105 通规字字符范围过滤「 🔥 强烈推荐开启 」
@@ -695,42 +732,58 @@ if __name__ == "__main__":
     word_length_limit = 0
 
     # ⑤ --- 仓库指定 ---
-    # 待转换的词典仓库 - 网络仓库 0 / 本地仓库 1
-    # ⁰ 网络仓库
+    # 字典来源类型 → ¹仓库克隆  ²远程下载  ³本地词典
     # ----------
-    # !!! 转换拼音编码需要万象拼音Pro为底座
-    rime_wanxiang_pro = "https://github.com/amzxyz/rime_wanxiang_pro.git"
-    rime_wanxiang = "https://github.com/amzxyz/rime_wanxiang.git"
-    repository_url = rime_wanxiang_pro if code_type.startswith("1") else rime_wanxiang
-    # repository_url = "https://github.com/gaboolic/rime-frost.git"
-    # repository_url = "https://github.com/iDvel/rime-ice.git"
-    # print(repository_url)
+    repository_url_wanxiang = "https://github.com/amzxyz/rime_wanxiang.git"
+    repository_url_frost = "https://github.com/gaboolic/rime-frost.git"
+    repository_url_ice = "https://github.com/iDvel/rime-ice.git"
     # 
-    # 克隆仓库 ← 1  0 → 直接下载字典压缩包或模型
-    # ⁰⁰ 直接下载字典压缩包或模型
-    is_clone_repo = 1 or bool(int(sys.argv[3] if len(sys.argv) > 3 else 0))
-    # is_clone_repo 为 0 时
+    repo_dict = { '1': '万象拼音', '2': '白霜拼音', '3': '雾凇拼音', '0': '其它' }
+    repository_url = ''
+    repository_url_str = ''
+    # --- ¹仓库克隆 ---
+    if int(dict_type) == 1:
+        if repo_type not in repo_dict:
+            print(f'''
+🔔  请输入正确的仓库标识码:
+------------------------------------------------------------------------------
+# 目标候选仓库：
+# ¹ 万象拼音 ² 白霜拼音  ³ 雾凇拼音  ⁰ 其它完整仓库地址 
+
+如：4 ➭ https://github.com/amzxyz/rime_wanxiang.git
+------------------------------------------------------------------------------
+            ''')
+            repo_type = input(f"🔔  默认「 万象拼音 」? (1): ").strip().lower() or "1"
+        if repo_type == '1':
+            repository_url = repository_url_wanxiang
+        elif repo_type == '2':
+            repository_url = repository_url_frost
+        elif repo_type == '3':
+            repository_url = repository_url_ice
+        else:
+            repository_url = input(f"🔔  请输入完整的仓库地址: ").strip()
+
+        repo_type = str(repo_type)
+        repository_url_str = (repo_dict[repo_type] + ' ➭ ' + repository_url) if repo_type != '0' else ('其它 ➭ ' + repository_url)
+        print(f'🔜  {repository_url_str} \n')
+
+    # --- ²远程下载 ---
     # 为了不增加脚本复杂性，我们固定本地词库文件夹为：
-    # - 拼音 + 辅助码 .temp_rime/rime_url_pro/cn_dicts
-    # - 形码整句      .temp_rime/rime_url/cn_dicts
+    # [ .temp_rime/rime_url/cn_dicts ]
     # 其中 .temp_rime 与 scripts 父级目录同级
     # ----------
-    # url_dict_rime_ice = "https://github.com/iDvel/rime-ice/releases/download/2025.04.06/en_dicts.zip"
     # url_dict_rime_ice = "https://github.com/iDvel/rime-ice/releases/download/2025.04.06/cn_dicts.zip"
-    url_dict_rime_wanxiang_pro = "https://github.com/amzxyz/rime_wanxiang_pro/releases/download/dict-nightly/9-cn_dicts.zip"
     url_dict_rime_wanxiang = "https://github.com/amzxyz/rime_wanxiang/releases/download/dict-nightly/cn_dicts.zip"
     # 
-    # ¹ 本地仓库
-    # ----------
+    # --- ³本地词典 ---
     # 为了不增加脚本复杂性，我们固定本地词库文件夹为 .temp_rime/rime_local/cn_dicts
     # 其中 .temp_rime 与 scripts 父级目录同级
-    is_local = bool(int(sys.argv[2] if len(sys.argv) > 2 else 0))
     # [ rime_local/cn_dicts ]
     # ！仓库需要重命名为 rime_local ，字典置于 cn_dicts 中
-    repository_url = 'rime_local.git' if is_local else repository_url
+    repository_url = 'rime_local.git' if int(dict_type) == 3 else repository_url
     # 
     # 是否需要下载语言大模型
-    is_download_gram = bool(int(sys.argv[4] if len(sys.argv) > 4 else 0))
+    is_download_gram = bool(int(is_download_gram))
     url_gram = 'https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram'
 
     # 开始执行

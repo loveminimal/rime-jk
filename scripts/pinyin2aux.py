@@ -13,7 +13,7 @@ def load_metadata(metadata_dir):
     for filename in os.listdir(metadata_dir):
         file_path = os.path.join(metadata_dir, filename)
         # 只处理以 .txt、.yaml 或 .yml 结尾的文件
-        if os.path.isfile(file_path) and (filename.endswith('.txt') or filename.endswith('.yaml') or filename.endswith('.yml')):
+        if os.path.isfile(file_path) and (filename.endswith('.yaml') or filename.endswith('.yml')):
             print(f'正在加载元数据文件: {filename}')
             with open(file_path, 'r', encoding='utf-8') as file:
                 for line in file:
@@ -103,7 +103,7 @@ def process_input(input_path, metadata, output_path):
         # 输入是目录，处理目录中的所有文件
         for filename in os.listdir(input_path):
             file_path = os.path.join(input_path, filename)
-            if os.path.isfile(file_path) and (filename.endswith('.txt') or filename.endswith('.yaml') or filename.endswith('.yml')):
+            if os.path.isfile(file_path) and (filename.endswith('.yaml') or filename.endswith('.yml')):
                 output_file_path = os.path.join(output_path, filename)
                 process_file(file_path, metadata, output_file_path)
     elif os.path.isfile(input_path):

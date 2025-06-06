@@ -7,7 +7,7 @@
 # ¹ 本地词库文件夹为 .temp_rime/rime_local/cn_dicts
 # ² 其中 .temp_rime 与 scripts 父级目录同级
 ----------------- ① 使用方法 --------------------
-# 目标转码类型：
+# --- 目标转码类型：---
 # ¹ 拼音：¹1 moqi 墨奇, ¹2 flypy 鹤形, ¹3 zrm 自然码, ¹4 jdh 简单鹤, ¹5 cj 仓颉,
 #         ¹6 tiger 虎码首末, ¹7 wubi 五笔前二, ¹8 hanxin 汉心，¹0 纯拼音
 # 
@@ -15,9 +15,15 @@
 # ³ 虎码：³1 虎码整句，³0 虎码常规 
 如：16 ➭ 拼音+虎码首末；20 ➭ 五笔常规；31 ➭ 虎码整句
 
+# --- 接收参数： ---
+# -c ➭ code_type         编码类型            → 详见上
+# -d ➭ dict_type         字典来源类型        → ¹仓库克隆  ²远程下载  ³本地词典
+# -r ➭ repo_type         仓库类型            → ¹万象拼音  ²白霜拼音  ³雾凇拼音  ⁰其它
+# -g ➭ is_download_gram  是否下载语言大模型  → ⁰否  ¹是
+
 # ¹ python fetch_any_dict.py            默认交互式「 需要交互输入编码类型及使用网络仓库 」
-# ² python fetch_any_dict.py 31         直接指定编码类型(31)
-# ³ python fetch_any_dict.py 31 1       直接指定编码类型(31) + 使用本地仓库(1)
+# ² python fetch_any_dict.py -c 31      直接指定编码类型(31)
+# ³ python fetch_any_dict.py -c 31 -d 3 直接指定编码类型(31) + 使用本地仓库(3)
 
 $ ➭ python fetch_any_dict.py
 
@@ -43,7 +49,9 @@ scripts
 ├── sort_dict.py                # 转换指定词典
 ├──
 ├── --- 工具脚本 ---
+├── auxiliary_code.yaml         # 辅助码元数据
 ├── is_chinese_char.py          # 判断是否中文字符
+├── pinyin2aux.py               # 转换为带辅助码版本
 ├── progress.py                 # 进度条
 ├── three_level_8105.py         # 通规字三级字串
 ├── header.py                   # 头部说明

@@ -10,9 +10,10 @@ schema:
     - 知心拼音，拼音·辅助码，小啊小女仆
     - https://github.com/loveminimal/rime-jk
     - 支持〔 全拼、小鹤双拼、自然码双拼 〕+ 增强版
-    - 默认〔 全拼 + 虎码首末 〕，辅助码类型与词库有关
+    - 默认〔 自然码双拼 〕，辅助码类型与词库有关〔 预设为自然码 〕
   dependencies:
     - jk_ascii
+    - jk_chars
   icon: 'assets/fly_m.ico'
   ascii_icon: 'assets/ascii.ico'
 
@@ -72,8 +73,8 @@ key_binder:
 
 recognizer:
   __include: jk.yaml:/recognizer
-  patterns/+:
-    add_user_dict: "^Z[a-z]*$"
+  # patterns/+:
+  #   add_user_dict: "^ZZ[a-z]*$"
 
 punctuator:
   __include: jk.yaml:/punctuator
@@ -93,7 +94,7 @@ speller:
   algebra:
     __include: algebra.yaml:/algebra_zrm
     __append:
-      __include: algebra.yaml:/algebra_fuzhuma
+      __include: algebra.yaml:/algebra_aux
       
 chord_composer:
   __include: jk.yaml:/chord_composer_mini
@@ -123,9 +124,8 @@ date_translator:
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
-# pinyin:
-#   __include: jk.yaml:/pinyin
-#   prefix: "Z"
+pinyin:
+  __include: jk.yaml:/pinyin
 
 user_dict_set:
   __include: jk.yaml:/user_dict_set
@@ -134,9 +134,6 @@ user_dict_set:
 
 add_user_dict:
   __include: jk.yaml:/add_user_dict
-  prefix: "Z"
-  dictionary: jk_pinyin
-  user_dict: jk_pinyin_u
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase

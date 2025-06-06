@@ -11,7 +11,7 @@ schema:
     - https://github.com/loveminimal/rime-jk
   dependencies:
     - jk_ascii
-    - jk_pinyin
+    - jk_chars
   icon: 'assets/tiger.ico'
   ascii_icon: 'assets/ascii.ico'
 
@@ -72,6 +72,8 @@ key_binder:
 
 recognizer:
   __include: jk.yaml:/recognizer
+  patterns/+:
+    pinyin: "^Z[a-z]*$"
 
 punctuator:
   __include: jk.yaml:/punctuator

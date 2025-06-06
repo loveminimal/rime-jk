@@ -42,6 +42,7 @@ recognizer:
     punct: "^~([0-9]|10|[A-Za-z]+)$"
     # pinyin: "^z[Xa-z]*$" 
     pinyin: "^Z[a-z]*$"    
+    add_user_dict: "^ZZ[a-z]*$"    
     helper: "^(~help|hH)$"
     quick_symbol: "^;.*$" 
 
@@ -78,7 +79,7 @@ reverse_lookup:
 
 pinyin:
   tag: pinyin
-  dictionary: jk_pinyin
+  dictionary: jk_chars
   prefix: "Z"
   suffix: "'"
   tips: 〔拼音·反查〕
@@ -89,8 +90,8 @@ pinyin:
 
 
 user_dict_set:
-  dictionary: jk_wubi_zj
-  user_dict: jk
+  dictionary: jk_pinyin
+  user_dict: jk_pinyin_u
   initial_quality: 0
   enable_completion: false
   enable_sentence: false
@@ -100,8 +101,8 @@ user_dict_set:
   enable_user_dict: true
 
 add_user_dict:
-  dictionary: jk_wubi_zj
-  user_dict: jk
+  dictionary: jk_pinyin
+  user_dict: jk_pinyin_u
   tag: add_user_dict
   initial_quality: -1
   enable_charset_filter: false
@@ -113,7 +114,7 @@ add_user_dict:
   preedit_format:   
   comment_format:
     - xform/[^;]*;([^;]*)/$1/
-  prefix: "Z"
+  prefix: "ZZ"
   tips: "〔字词·自造〕"
 
 # -------------------------------------

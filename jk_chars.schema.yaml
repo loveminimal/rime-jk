@@ -1,0 +1,60 @@
+# Rime schema - jk_chars.schema.yaml
+# encoding: utf-8
+
+schema:
+  schema_id: jk_chars
+  name: 拼音·反查「自然码」
+  author:
+    - by Jack Liu <https://aituyaa.com>
+  description: |
+    - 拼音反查〔 10万+单字集 〕，拼音+自然码辅助码增强
+    - 仅用于拼音反查，不作为独立的输入方案
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+    - lua_translator@*force_gc
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  # 支持：
+  # ① 全拼   algebra_pinyin 
+  # ② 小鹤    algebra_flypy
+  # ③ 自然码    algebra_zrm
+  algebra:
+    __include: algebra.yaml:/algebra_zrm
+    __append:
+      __include: algebra.yaml:/algebra_aux
+
+translator:
+  dictionary: jk_chars
+  prism: jk_chars
+  enable_charset_filter: false
+  enable_sentence: false
+  enable_encoder: true
+  encode_commit_history: false
+  max_phrase_length: 4
+  enable_completion: false
+  enable_user_dict: false
+  spelling_hints: 1
+  comment_format: 
+    - xform/[^;]*;([^;]*)/$1/

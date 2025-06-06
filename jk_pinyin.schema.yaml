@@ -102,7 +102,7 @@ chord_composer:
 translator:
   dictionary: jk_pinyin             
   prism: jk_pinyin                  
-  enable_charset_filter: false     
+  enable_charset_filter: true     
   enable_sentence: true           
   enable_encoder: true            
   encode_commit_history: false     

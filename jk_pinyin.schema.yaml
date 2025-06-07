@@ -116,7 +116,8 @@ translator:
   # comment_format: "{comment}" 
   comment_format:
     - xform/[^;]*;([^;]*)/$1/
-
+  # preedit_format:
+  #   __include: algebra.yaml:/preedit_format_zrm
 
 date_translator:
   __include: jk.yaml:/date_translator

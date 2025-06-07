@@ -1,6 +1,19 @@
 # Rime 主题配色方案
 # encoding: utf-8
 
+# ---- 主题汇总 -------------------------------------------------------
+#〔 制作 11 〕
+# pujk skjk prjk emjk orjk otjk sljk tkjk aqjk mljk mdjk
+#〔 魔改 11 〕
+# google_jk dark_temple_jk flypy_jk kuon_jk lost_temple_jk metroblue_jk
+# modern_warfare_jk skype_jk so_young_jk starcraft_ii_jk steam_jk
+#〔 内置 26 〕
+# android aqua azure brasil brisk cool_breeze dark_temple doraemon 
+# dota_2 espagna flypy gholabok google google_plus ink kuma_shuzboz 
+# kuon lost_temple luna macau metroblue nba ps4 psionics skype smurfs 
+# so_young starcraft starcraft_ii steam tintin wii xbox_silver youtube       
+# ---------------------------------------------------------------------
+
 # 自带主题
 # -------------------------------------
 # android         ✗  安卓／Android
@@ -36,9 +49,9 @@
 # starcraft_ii    ✓  星際爭霸Ⅱ／StarCraft Ⅱ
 # steam           ✓  Steam
 # tintin          ✗  丁丁／ Tintin
-# wii             ✓  Wii
+# wii             ✗  Wii
 # xbox_silver     ✗  銀色叉盒／Xbox Silver
-# youtube         ✓  YouTube
+# youtube         ✗  YouTube
 # -------------------------------------
 
 
@@ -168,7 +181,7 @@ layout_v:
 # --- Purple 绛紫 ---
 pujk:
   preset_color_schemes/pujk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·绛紫"                        # 方案设置中显示的配色名称
+    name: "知心·绛紫"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -178,8 +191,8 @@ pujk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x48466d                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x48466d99              # 背景
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x48466d99              # 背景
     
     label_color: 0x48466d99                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -204,7 +217,7 @@ pujk:
 # --- Sky 天蓝 ----
 skjk:
   preset_color_schemes/skjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·天蓝"                        # 方案设置中显示的配色名称
+    name: "知心·天蓝"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -214,8 +227,8 @@ skjk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1B4F72                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x1B4F7299              # 背景
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x1B4F7299              # 背景
     
     label_color: 0x1B4F7299                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -240,7 +253,7 @@ skjk:
 # --- Primary 主蓝 ---
 prjk:
   preset_color_schemes/prjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·主蓝"                        # 方案设置中显示的配色名称
+    name: "知心·主蓝"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -250,8 +263,8 @@ prjk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x0a58ca                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x0a58ca99              # 背景
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x0a58ca99              # 背景
 
     label_color: 0x0a58ca99                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -276,7 +289,7 @@ prjk:
 # --- Emerald 翠绿 ---
 emjk:
   preset_color_schemes/emjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·青翠"                        # 方案设置中显示的配色名称
+    name: "知心·青翠"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -286,8 +299,8 @@ emjk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x0B5345                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x0B534599              # 背景
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x0B534599              # 背景
 
     label_color: 0x0B534599                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -312,7 +325,7 @@ emjk:
 # --- Orange 暖橙 ---
 orjk:
   preset_color_schemes/orjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·暖橙"                        # 方案设置中显示的配色名称
+    name: "知心·暖橙"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -322,8 +335,8 @@ orjk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x555250                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x55525099              # 背景
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x55525099              # 背景
 
     label_color: 0x55525099                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -348,7 +361,7 @@ orjk:
 # --- Orange 虎橙 ---
 otjk:
   preset_color_schemes/otjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·虎橙"                        # 方案设置中显示的配色名称
+    name: "知心·虎橙"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -358,8 +371,8 @@ otjk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x663300                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x66330099              # 背景
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x66330099              # 背景
 
     label_color: 0x66330099                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -384,7 +397,7 @@ otjk:
 # --- Slate 岩灰 ---
 sljk:
   preset_color_schemes/sljk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·岩灰"                        # 方案设置中显示的配色名称
+    name: "知心·岩灰"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -394,8 +407,8 @@ sljk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x334155                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x33415599              # 背景
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x33415599              # 背景
 
     label_color: 0x33415599                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -420,7 +433,7 @@ sljk:
 # --- TeaInk 茶墨 ---
 tkjk:
   preset_color_schemes/tkjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·茶墨"                        # 方案设置中显示的配色名称
+    name: "知心·茶墨"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -430,8 +443,8 @@ tkjk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1150af                        # 文字
-    hilited_text_color: 0xFFFFFF                # 编码
-    hilited_back_color: 0x1150af99              # 背景
+    # hilited_text_color: 0xFFFFFF                # 编码
+    # hilited_back_color: 0x1150af99              # 背景
 
     label_color: 0x1150af99                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -456,7 +469,7 @@ tkjk:
 # --- Aqua 碧水〔改〕---
 aqjk:
   preset_color_schemes/aqjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·碧水"                        # 方案设置中显示的配色名称
+    name: "知心·碧水"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -465,11 +478,11 @@ aqjk:
 
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
-    # text_color: 0x2E3440                        # 文字
+    text_color: 0x2E3440                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
     # hilited_back_color: 0x0A3AFA99              # 背景
-    text_color: 0x000000DD                        # 文字
-    hilited_text_color: 0x000000DD                # 编码
+    text_color: 0x000000DD                      # 文字
+    hilited_text_color: 0x000000DD              # 编码
     # hilited_back_color: 0x0A3AFA99              # 背景
 
     label_color: 0x0A3AFA99                     # 标签
@@ -489,13 +502,13 @@ aqjk:
     # candidate_border_color:                   # 边框
     # candidate_shadow_color:                   # 阴影
     # ---〔翻页选项〕---
+    prevpage_color: 0x0A3AFADD                  # 上一页
     nextpage_color: 0x0A3AFA99                  # 下一页
-    prevpage_color: 0x000000DD                  # 上一页
 
 # --- Light 微亮 ---
 mljk:
   preset_color_schemes/mljk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·微浅"                        # 方案设置中显示的配色名称
+    name: "知心·微浅"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -505,8 +518,8 @@ mljk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1A1A1A                        # 文字
-    hilited_text_color: 0x191919                # 编码
-    hilited_back_color: 0xF3F3F3                # 背景
+    # hilited_text_color: 0x191919                # 编码
+    # hilited_back_color: 0xF3F3F3                # 背景
     
     label_color: 0x48466d99                     # 标签
     # ---〔激活的候选项·高亮〕---
@@ -531,7 +544,7 @@ mljk:
 # --- Dark 微暗 ---
 mdjk:
   preset_color_schemes/mdjk:                    # 在 `style/color_schema` 指定的配色方案值
-    name: "知心·微暗"                        # 方案设置中显示的配色名称
+    name: "知心·微暗"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
     color_format: rgba                          # 颜色格式：argb（0xaarrggbb）；rgba（0xrrggbbaa）；abgr（0xaabbggrr 默认）
     # ---〔背景设置〕---
@@ -541,8 +554,8 @@ mdjk:
     shadow_color: 0x000000b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0xffffff                        # 文字
-    hilited_text_color: 0xffffff                # 编码
-    hilited_back_color: 0x383838                # 背景
+    # hilited_text_color: 0xffffff                # 编码
+    # hilited_back_color: 0x383838                # 背景
     
     label_color: 0xd1d1d1                       # 标签
     # ---〔激活的候选项·高亮〕---
@@ -576,12 +589,12 @@ google_jk:
     back_color: 0xFFFFFF
     border_color: 0xE2E2E2
     hilited_text_color: 0x000000
-    hilited_back_color: 0xFFFFFF
+    # hilited_back_color: 0xFFFFFF
     hilited_candidate_text_color: 0xFFFFFF
     hilited_candidate_back_color: 0x3975CE
     # ---〔翻页选项〕---
     nextpage_color: 0x3975CE99
-    prevpage_color: 0x000000DD
+    prevpage_color: 0x3975CE99
 
 dark_temple_jk:
   preset_color_schemes/dark_temple_jk:
@@ -593,12 +606,15 @@ dark_temple_jk:
     back_color: 0x222222
     border_color: 0x222222
     hilited_text_color: 0x9acfff
-    hilited_back_color: 0x222222
+    # hilited_back_color: 0x222222
     hilited_candidate_text_color: 0xdaf692
     hilited_candidate_back_color: 0x333333
     # comment_text_color: 0xff6c60
     comment_text_color: 0xff6c6099
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0xdaf69299
+    prevpage_color: 0xdaf69299
+  
 flypy_jk:
   preset_color_schemes/flypy_jk:
     # description: |
@@ -608,18 +624,21 @@ flypy_jk:
     name: "小鹤飞扬／flypy"
     author: "Pal.lxk <Pal.lxk@gmail.com>"
     color_format: rgba
-    text_color: 0x000000
+    text_color: 0x0080ff # 0x000000
     back_color: 0xffffff
     border_color: 0xc6c6c6
     label_color: 0x0080ff
     hilited_text_color: 0x0080ff
-    hilited_back_color: 0xffffff
+    # hilited_back_color: 0xffffff
     candidate_text_color: 0x0080ff
     comment_text_color: 0x0080ff
     hilited_candidate_text_color: 0xb00000
     hilited_comment_text_color: 0xb00000
     hilited_candidate_back_color: 0xffffff
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0x0080ff99
+    prevpage_color: 0x0080ff99
+  
 kuon_jk:
   preset_color_schemes/kuon_jk:
     name: "琨／Kuon"
@@ -629,14 +648,17 @@ kuon_jk:
     back_color: 0x3eb370
     border_color: 0x3eb370
     label_color: 0xffffff
-    hilited_text_color: 0x3eb370
-    hilited_back_color: 0xffffff
+    hilited_text_color: 0xffffff
+    # hilited_back_color: 0xffffff
     candidate_text_color: 0xffffff
     comment_text_color: 0xffffff
     hilited_candidate_text_color: 0x3eb370
     hilited_comment_text_color: 0x3eb370
     hilited_candidate_back_color: 0xffffff
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0xffffff99
+    prevpage_color: 0xffffff99
+  
 lost_temple_jk:
   preset_color_schemes/lost_temple_jk:
     name: 孤寺／Lost Temple
@@ -646,10 +668,13 @@ lost_temple_jk:
     back_color: 0x444444
     border_color: 0x444444
     hilited_text_color: 0xcae682
-    hilited_back_color: 0x222222
+    # hilited_back_color: 0x222222
     hilited_candidate_text_color: 0x000000
     hilited_candidate_back_color: 0xcae682
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0xcae68299
+    prevpage_color: 0xcae68299
+  
 metroblue_jk:
   preset_color_schemes/metroblue_jk:
     name: "现代蓝／Metro Blue"
@@ -660,14 +685,17 @@ metroblue_jk:
     border_color: 0x0078d7
     label_color: 0x838383
     hilited_text_color: 0x000000
-    hilited_back_color: 0xffffff
+    # hilited_back_color: 0xffffff
     candidate_text_color: 0x000000
     comment_text_color: 0x000000
     hilited_candidate_text_color: 0xffffff
     hilited_comment_text_color: 0xffffff
     hilited_candidate_back_color: 0x0078d7
     hilited_label_color: 0xffffff
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0x0078d799
+    prevpage_color: 0x0078d799
+  
 modern_warfare_jk:
   preset_color_schemes/modern_warfare_jk:
     name: "現代戰爭／Modern Warfare"
@@ -677,12 +705,15 @@ modern_warfare_jk:
     back_color: 0x0d1b0a
     border_color: 0x83ad4b
     hilited_text_color: 0xfcfdfb
-    hilited_back_color: 0x060e03
+    # hilited_back_color: 0x060e03
     candidate_text_color: 0xdcfeab
     comment_text_color: 0xfcfdfb
     hilited_candidate_text_color: 0xdcfeab
     hilited_candidate_back_color: 0x636f67
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0x636f6799
+    prevpage_color: 0x636f6799
+  
 skype_jk:
   preset_color_schemes/skype_jk:
     name: "斯蓋普／Skype"
@@ -692,31 +723,37 @@ skype_jk:
     back_color: 0x00adef
     border_color: 0x00adef
     label_color: 0xffffff
-    hilited_text_color: 0x00adef
-    hilited_back_color: 0xffffff
+    hilited_text_color: 0xffffff
+    # hilited_back_color: 0xffffff
     candidate_text_color: 0xffffff
     comment_text_color: 0xffffff
     hilited_candidate_text_color: 0x00adef
     hilited_comment_text_color: 0x00adef
     hilited_candidate_back_color: 0xffffff
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0xffffff99
+    prevpage_color: 0xffffff99
+  
 so_young_jk:
   preset_color_schemes/so_young_jk:
     name: "致青春／So Young"
     author: "五磅兔 <zcunlin@foxmail.com>"
     color_format: rgba
-    text_color: 0xd33682
+    text_color: 0x2aa198 # 0xd33682
     back_color: 0xfdf6e3
     border_color: 0xeee8d5
     label_color: 0x93a1a1
     candidate_text_color: 0x657b83
     comment_text_color: 0xd28b26
     hilited_text_color: 0x839496
-    hilited_back_color: 0xeee8d5
+    # hilited_back_color: 0xeee8d5
     hilited_candidate_text_color: 0xeee8d5
     hilited_comment_text_color: 0xeee8d5
     hilited_candidate_back_color: 0x2aa198
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0x2aa19899
+    prevpage_color: 0x2aa19899
+  
 starcraft_ii_jk:
   preset_color_schemes/starcraft_ii_jk:
     name: "星際爭霸Ⅱ／StarCraft Ⅱ"
@@ -727,13 +764,16 @@ starcraft_ii_jk:
     border_color: 0x464b53
     label_color: 0xffffff
     hilited_text_color: 0xffffff
-    hilited_back_color: 0x0a1017
+    # hilited_back_color: 0x0a1017
     candidate_text_color: 0xffffff
     comment_text_color: 0xffffff
     hilited_candidate_text_color: 0xffffff
     hilited_comment_text_color: 0xffffff
     hilited_candidate_back_color: 0x1eadef
-
+    # ---〔翻页选项〕---
+    nextpage_color: 0x1eadef99
+    prevpage_color: 0x1eadef99
+  
 steam_jk:
   preset_color_schemes/steam_jk:
     name: "Steam"
@@ -744,43 +784,13 @@ steam_jk:
     border_color: 0x383635
     label_color: 0xffffff
     hilited_text_color: 0xd1cfc9
-    hilited_back_color: 0x171614
+    # hilited_back_color: 0x171614
     candidate_text_color: 0xffffff
     comment_text_color: 0xa9a7a7
     hilited_candidate_text_color: 0xffffff
     hilited_comment_text_color: 0xa9a7a7
     hilited_candidate_back_color: 0x314259
-
-wii_jk:
-  preset_color_schemes/wii_jk:
-    name: "Wii"
-    author: "Patricivs <ipatrickmac@me.com>"
-    color_format: rgba
-    text_color: 0x595757
-    back_color: 0xefefef
-    border_color: 0xefefef
-    label_color: 0xc8c9ca
-    hilited_text_color: 0x33ccff
-    hilited_back_color: 0xefefef
-    candidate_text_color: 0x595757
-    comment_text_color: 0xc8c9ca
-    hilited_candidate_text_color: 0xffffff
-    hilited_comment_text_color: 0xffffff
-    hilited_candidate_back_color: 0x33ccff
-
-youtube_jk:
-  preset_color_schemes/youtube_jk:
-    name: "YouTube"
-    author: "Patricivs <ipatrickmac@me.com>"
-    color_format: rgba
-    text_color: 0x000000
-    back_color: 0xdedede
-    border_color: 0xdedede
-    label_color: 0x000000
-    hilited_text_color: 0xc30d23
-    hilited_back_color: 0xffffff
-    candidate_text_color: 0x000000
-    comment_text_color: 0x000000
-    hilited_candidate_text_color: 0xffffff
-    hilited_comment_text_color: 0xffffff
-    hilited_candidate_back_color: 0xc30d23    
+    # ---〔翻页选项〕---
+    nextpage_color: 0x31425999
+    prevpage_color: 0x31425999
+  

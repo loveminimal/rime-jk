@@ -5,10 +5,22 @@ customization:
   modified_time: "Fri Dec  6 10:55:38 2024"
   rime_version: 1.11.2
 patch:
-  __include: style.yaml:emjk
+# ---- 主题汇总 -------------------------------------------------------
+#〔 制作 11 〕
+# pujk skjk prjk emjk orjk otjk sljk tkjk aqjk mljk mdjk
+#〔 魔改 11 〕
+# google_jk dark_temple_jk flypy_jk kuon_jk lost_temple_jk metroblue_jk
+# modern_warfare_jk skype_jk so_young_jk starcraft_ii_jk steam_jk
+#〔 内置 26 〕
+# android aqua azure brasil brisk cool_breeze dark_temple doraemon 
+# dota_2 espagna flypy gholabok google google_plus ink kuma_shuzboz 
+# kuon lost_temple luna macau metroblue nba ps4 psionics skype smurfs 
+# so_young starcraft starcraft_ii steam tintin wii xbox_silver youtube       
+# ---------------------------------------------------------------------
+  __include: style.yaml:skjk
   __patch:
     style/+:
-      color_scheme: emjk
+      color_scheme: skjk
       font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根

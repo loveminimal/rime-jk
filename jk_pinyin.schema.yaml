@@ -14,7 +14,7 @@ schema:
   dependencies:
     - jk_ascii
     - jk_chars
-  icon: 'assets/fly_m.ico'
+  icon: 'assets/zrm.ico'
   ascii_icon: 'assets/ascii.ico'
 
 switches:

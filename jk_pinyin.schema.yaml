@@ -152,5 +152,6 @@ traditionalize:
   __include: jk.yaml:/traditionalize
 
 #语法模型
+__include: octagram	#启用语言模型
 octagram:
   __include: jk.yaml:/octagram

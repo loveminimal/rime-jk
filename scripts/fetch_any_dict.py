@@ -521,7 +521,7 @@ def download_dict(url_dict, out_url_directory, is_download_gram = False):
         else:
             fetch_url_file(url_dict, out_url_directory, is_download_gram)
     else:
-        fetch_url_file(url_dict, out_url_directory)
+        fetch_url_file(url_dict, out_url_directory, is_download_gram)
         # 解压整个ZIP文件到指定目录
         if not is_download_gram:
             with zipfile.ZipFile((out_url_directory / out_file), 'r') as zip_ref:

@@ -173,9 +173,37 @@ function P.func(key_event, env)
         return 2
     end
 
-    if key_event.keycode == 0x6A then -- ctrl + j (移除)
+    -- ​组合键​​	​​键码（十六进制）​​	​​ASCII 码（十进制）​​
+    -- Ctrl + a	0x61	97
+    -- Ctrl + b	0x62	98
+    -- Ctrl + c	0x63	99
+    -- Ctrl + d	0x64	100
+    -- Ctrl + e	0x65	101
+    -- Ctrl + f	0x66	102
+    -- Ctrl + g	0x67	103
+    -- Ctrl + h	0x68	104
+    -- Ctrl + i	0x69	105
+    -- Ctrl + j	0x6A	106
+    -- Ctrl + k	0x6B	107
+    -- Ctrl + l	0x6C	108
+    -- Ctrl + m	0x6D	109
+    -- Ctrl + n	0x6E	110
+    -- Ctrl + o	0x6F	111
+    -- Ctrl + p	0x70	112
+    -- Ctrl + q	0x71	113
+    -- Ctrl + r	0x72	114
+    -- Ctrl + s	0x73	115
+    -- Ctrl + t	0x74	116
+    -- Ctrl + u	0x75	117
+    -- Ctrl + v	0x76	118
+    -- Ctrl + w	0x77	119
+    -- Ctrl + x	0x78	120
+    -- Ctrl + y	0x79	121
+    -- Ctrl + z	0x7A	122
+
+    if key_event.keycode == 0x75 then -- ctrl + u (移除)
         env.user_words[phrase] = nil
-    elseif key_event.keycode == 0x6B then -- ctrl + k (添加)
+    elseif key_event.keycode == 0x69 then -- ctrl + i (添加)
         env.user_words[phrase] = get_tiger_code(phrase)
     else
         return 2
@@ -265,7 +293,7 @@ function F.func(input, env)
                 -- log.warning("值:" .. phrase)
                 if input_code == code then
                     local new_cand = Candidate("word", cand.start, cand._end, phrase, "*")
-                    table.insert(new_candidates, new_cand)
+                    table.insert(new_candidates, 1, new_cand)
                 end
             end
         end

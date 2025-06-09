@@ -15,6 +15,7 @@ local user_words = {
     ["武指"] = "fpuv",
     ["没苦硬吃"] = "klmd",
     ["洗手感"] = "kunf",
+    ["用户词"] = "tmsa",
     ["看下去"] = "ufgk",
     ["空明码"] = "eomn",
     ["紫灵"] = "svbc",

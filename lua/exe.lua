@@ -37,6 +37,10 @@ local function exe(key, env)
         generic_open("C:\\Users\\jack\\AppData\\Roaming\\Rime")
         context:clear()
 
+    elseif (context.input == "~ahk") then
+        generic_open("C:\\Users\\jack\\AppData\\Roaming\\Rime\\ahk\\rime.exe")
+        context:clear()
+
     elseif (context.input == "~rrs") then
         generic_open("C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack")
         context:clear()

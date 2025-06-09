@@ -36,7 +36,6 @@ use_preset_vocabulary: false
 都有	qnv	200000000
 用得	tyw	100000000
 的吧	udm	100000000
-到底	yxb	100000000
 乱伦	aajj	200000000
 书评	aase	100000000
 乱搞	aaug	100000000
@@ -668,6 +667,7 @@ use_preset_vocabulary: false
 合掌	jdsu	100000000
 保持	jdug	100000000
 保密	jdwh	100000000
+斗争	jdxb	100000000
 他们	jeja	800000000
 体温	jeko	500000000
 体验	jenj	600000000
@@ -725,12 +725,13 @@ use_preset_vocabulary: false
 化神	jvfo	100000000
 仙逆	jvhs	100000000
 仍然	jvvm	100000000
+作死	jwgv	100000000
 作者	jwqo	200000000
 作用	jwty	100000000
 你来	jxah	100000000
 你好	jxbh	500000000
 你不	jxcb	100000000
-你还	jxcu	100000000
+你还	jxcu	200000000
 你想	jxeq	100000000
 你也	jxey	200000000
 你就	jxgy	100000000
@@ -1368,7 +1369,7 @@ use_preset_vocabulary: false
 系统	tiib	300000000
 限制	tiqr	300000000
 衣服	tivz	200000000
-阶级	tjic	100000000
+阶级	tjic	200000000
 除了	tjrl	100000000
 附上	tjyf	100000000
 需求	tlfk	300000000
@@ -1776,6 +1777,7 @@ use_preset_vocabulary: false
 醒了	yorl	200000000
 醒醒	yoyo	100000000
 到了	yprl	100000000
+到底	ypxb	200000000
 轻松	yreh	200000000
 省事	ytfd	100000000
 省心	ythx	100000000
@@ -1795,9 +1797,11 @@ use_preset_vocabulary: false
 小姨	yxbm	200000000
 小于	yxfn	100000000
 小心	yxhx	100000000
+小红	yxiu	400000000
 小盒	yxjd	100000000
 小众	yxjj	200000000
 小偷	yxjj	100000000
+小华	yxjv	400000000
 小二	yxme	200000000
 小狗	yxmg	400000000
 小时	yxok	200000000
@@ -1850,11 +1854,14 @@ use_preset_vocabulary: false
 链接	zyui	300000000
 来不来	aca	500000000
 不知道	coh	100000000
+要不要	vcv	100000000
 状态栏	ameh	100000000
 动不动	bcbs	100000000
 张继科	bixj	100000000
 好多年	blev	100000000
 强迫症	buaf	100000000
+女朋友	bvnr	100000000
+好朋友	bvnr	200000000
 引导符	bvrj	300000000
 好家伙	bwjc	300000000
 不适合	cajd	100000000
@@ -1875,6 +1882,7 @@ use_preset_vocabulary: false
 无所谓	dmsq	300000000
 想不到	ecyp	100000000
 本土化	egjv	100000000
+年羹尧	egpf	100000000
 干什么	ejtk	100000000
 繁体字	ejwh	100000000
 想清楚	ekee	100000000
@@ -1905,7 +1913,7 @@ use_preset_vocabulary: false
 做什么	jjtk	100000000
 保修期	jjzh	100000000
 化学品	jkdd	100000000
-你是谁	josu	100000000
+你是谁	josu	200000000
 候选框	jqen	400000000
 创造力	jqsl	100000000
 什么样	jteg	100000000

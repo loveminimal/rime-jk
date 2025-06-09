@@ -32,8 +32,7 @@ switches:
 # reverse_lookup  反查标签
 # punct           自定义符号映射，响应 symbols_v.yaml 的 symbols，用 'z' 替换 '/'
 # pinyin          拼音反查，取消引导词，直接五笔拼音混输「用任意大写字母隔开，防止反查混入」
-# add_user_dict   自造词
-# 后面两个在方案中给出，避免在 jk_ascii 模式中 zZ 无法直接上屏
+# ^z[Xa-z]*$      避免在 jk_ascii 模式中 zZ 无法直接上屏
 # -------------------------------------
 recognizer:
   # import_preset: default
@@ -42,7 +41,6 @@ recognizer:
     punct: "^~([0-9]|10|[A-Za-z]+)$"
     # pinyin: "^z[Xa-z]*$" 
     pinyin: "^Z[a-z]*$"    
-    add_user_dict: "^ZZ[a-z]*$"    
     helper: "^(~help|hH)$"
     quick_symbol: "^;.*$" 
 
@@ -69,7 +67,6 @@ date_translator:
 
 reverse_lookup:
   dictionary: jk_ascii
-  # prefix: "`"
   prefix: "~~"
   suffix: ":"
   tips: 〔英文·反查〕
@@ -88,34 +85,6 @@ pinyin:
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
 
-
-user_dict_set:
-  dictionary: jk_pinyin
-  user_dict: jk_pinyin_u
-  initial_quality: 0
-  enable_completion: false
-  enable_sentence: false
-  spelling_hints: 100
-  comment_format:
-    - xform/[^;]*;([^;]*)//
-  enable_user_dict: true
-
-add_user_dict:
-  dictionary: jk_pinyin
-  user_dict: jk_pinyin_u
-  tag: add_user_dict
-  initial_quality: -1
-  enable_charset_filter: false
-  enable_completion: true
-  enable_encoder: true
-  enable_sentence: true
-  enable_user_dict: true
-  encode_commit_history: false
-  preedit_format:   
-  comment_format:
-    - xform/[^;]*;([^;]*)/$1/
-  prefix: "ZZ"
-  tips: "〔字词·自造〕"
 
 # -------------------------------------
 # custom_phrase:

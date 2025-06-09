@@ -440,7 +440,7 @@ algebra_flypy:
   - xform/^ch/Ⓘ/
   - xform/^zh/Ⓥ/
   - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/
-  - abbrev/^([a-z]).+$/$1/
+  # - abbrev/^([a-z]).+$/$1/
   - derive/^([a-z])$/$1/
 
 algebra_zrm:
@@ -477,7 +477,7 @@ algebra_zrm:
   - xform/^ch/Ⓘ/
   - xform/^zh/Ⓥ/
   - xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⓂⒿⒸⓀⓁⓏⓍⓋⒷⓃ/qwrtyuiopsdfghmjcklzxvbn/
-  - abbrev/^([a-z]).+$/$1/
+  # - abbrev/^([a-z]).+$/$1/
   - derive/^([a-z])$/$1/
  
 

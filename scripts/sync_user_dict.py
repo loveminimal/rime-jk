@@ -216,5 +216,9 @@ if __name__ == '__main__':
 
     code_type = sys.argv[1] if len(sys.argv) > 1 else ''
 
+    # 词长限制 -- 只限制拼音、整句，常规形码不限制
+    if not (code_type.startswith("1") or code_type in ['21', '31']):
+        word_length_limit = 0
+    
     exec(code_type)
     

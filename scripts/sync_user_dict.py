@@ -68,6 +68,10 @@ def convert(src_dir, out_dir, src_file, out_file):
                 if '' in code:
                     code = code.split('')[1]
 
+                # 过滤掉过长、过短(如 1)的词条
+                if len(word) == 1 or (word_length_limit > 0 and len(word) > word_length_limit):
+                    continue
+
                 # 此外不再过滤非 8105 字词（源码表已做过滤 & 加载超范字词）
                 # 仅处理已合成词典中 不存在 或 已存在但编码不同的字词
                 if word not in res_dict or code not in res_dict[word]:
@@ -117,6 +121,10 @@ def combine(out_dir, out_file):
 
         # 处理每组词长
         for word_len in sorted(word_len_dict.keys()):
+            # 过滤掉过长、过短(如 1)的词条
+            if word_len == 1 or (word_length_limit > 0 and word_len > word_length_limit):
+                continue
+
             # 第二级：按编码长度分组
             code_len_dict = defaultdict(list)
             for word, value in word_len_dict[word_len]:
@@ -199,6 +207,12 @@ if __name__ == '__main__':
     # 
     # ² 五笔：²1 五笔整句，²0 五笔常规
     # ³ 虎码：³1 虎码整句，³0 虎码常规 
+
+    # ③ --- 词长限制 ---
+    # 是否限制词库最大词长，若为 0 ，则不限制
+    # - 主要是为了过滤掉包含已添加词汇的较长词条
+    # - 默认删除了单字（因为积累单字毫无意义）
+    word_length_limit = 7
 
     code_type = sys.argv[1] if len(sys.argv) > 1 else ''
 

@@ -265,8 +265,9 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
 
                 word, code, weight = parts[0], parts[1], parts[2]
                 # 不喜欢带调的（与其他可能使用的拼音词库同步后会冲突），转换成不带调的
-                for idx, char in enumerate(list_with_tone):
-                    code = code.replace(char, list_without_tone[idx])
+                if is_clear_tone:
+                    for idx, char in enumerate(list_with_tone):
+                        code = code.replace(char, list_without_tone[idx])
                 
                 if word_length_limit > 0 and len(word) > word_length_limit:
                     # print(f"过滤掉长词语: {word} (长度: {len(word)})")
@@ -785,6 +786,11 @@ if __name__ == "__main__":
     # 是否需要下载语言大模型
     is_download_gram = bool(int(is_download_gram))
     url_gram = 'https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram'
+
+    # ⑥ --- 是否清除声调 ---
+    # 万象拼音词库本身是带声调的
+    # 清除←True  False→不清除
+    is_clear_tone = True
 
     # 开始执行
     exec(proj_dir, work_dir, repository_url)

@@ -7,8 +7,9 @@ schema:
   author: 
     - Jack Liu <https://aituyaa.com>
   description: |
-    - 知心虎码，虎码·拼音反查，小啊小女仆
+    - 知心虎码「定频版」，虎码·拼音反查，小啊小女仆
     - https://github.com/loveminimal/rime-jk
+    - 调频版使用「 jk_tiger_x 」
   dependencies:
     - jk_ascii
     - jk_chars

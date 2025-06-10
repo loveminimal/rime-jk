@@ -65,6 +65,7 @@ git remote -v	grl	0
 git restore	grs	0
 git pull	gl	0
 git push	gt	0
+git push -f && git push github -f	gff	0
 git push github	gtg	0
 git log --decorate --simplify-by-decoration --oneline	gtl	0
 git tag -n	gtn	0

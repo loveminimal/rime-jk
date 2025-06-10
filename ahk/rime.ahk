@@ -6,7 +6,7 @@
 ; + → Shift 键
 
 ; 重启 Rime 服务
-^o::
+^p::
 {
     Run "C:\Program Files\Rime\weasel-0.16.3\WeaselServer.exe"
     return

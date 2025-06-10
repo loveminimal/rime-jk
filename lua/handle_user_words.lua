@@ -201,9 +201,9 @@ function P.func(key_event, env)
     -- Ctrl + y	0x79	121
     -- Ctrl + z	0x7A	122
 
-    if key_event.keycode == 0x75 then -- ctrl + u (移除)
+    if key_event.keycode == 0x6F then -- ctrl + o (移除 out)
         env.user_words[phrase] = nil
-    elseif key_event.keycode == 0x69 then -- ctrl + i (添加)
+    elseif key_event.keycode == 0x69 then -- ctrl + i (添加 in)
         env.user_words[phrase] = get_tiger_code(phrase)
     else
         return 2
@@ -293,7 +293,7 @@ function F.func(input, env)
                 -- log.warning("值:" .. phrase)
                 if input_code == code then
                     local new_cand = Candidate("word", cand.start, cand._end, phrase, "*")
-                    table.insert(new_candidates, 1, new_cand)
+                    table.insert(new_candidates, new_cand)
                 end
             end
         end

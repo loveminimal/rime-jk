@@ -15,7 +15,8 @@
 ² false 不生成
 --]] 
 local auto_reload_service = false
-local auto_generate_dict = false
+local auto_generate_dict  = false
+local keep_user_words_top = true
 
 -- local filename = rime_api.get_user_data_dir() .. "/user.yaml"
 -- local fd = assert(io.open(filename, "r"))
@@ -285,7 +286,10 @@ function F.func(input, env)
 
     for cand in input:iter() do
         -- 先插入已有匹配选项，将自造词语加在其后
-        table.insert(new_candidates, cand)
+        if not keep_user_words_top then
+            table.insert(new_candidates, cand)
+        end
+
         for code, phrases in pairs(env.seq_words_dict) do
             -- log.warning("键:" .. code)
             -- 遍历当前键对应的词组列表
@@ -296,6 +300,11 @@ function F.func(input, env)
                     table.insert(new_candidates, new_cand)
                 end
             end
+        end
+
+        -- 自造词依次放在居首
+        if keep_user_words_top then
+            table.insert(new_candidates, cand)
         end
     end
 

@@ -17,8 +17,11 @@ schema:
 
 switches:
   __include: jk_tiger.schema.yaml:/switches
+  __append:
+    - name: char_only
+      reset: 0
 
-engine:
+engine: # 🔥
   __include: jk_tiger.schema.yaml:/engine
  
 key_binder:

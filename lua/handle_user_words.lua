@@ -4,15 +4,20 @@
 作用：用来添加、删除自定义词语
 
 -- 配制项 --
-➭ auto_reload_service = true
-添加、删除操作之后强制重启 Rime 服务，存在几秒左右卡顿 
-➭ auto_reload_service = false
-添加、删除操作之手动重启服务，不卡顿
-¹ 手动点击重启服务选项
-² ~rrr → rime_jk 方案可通过 ~rrr 触发重启服务
-➭ auto_generate_dict = false
+➭ auto_reload_service
+¹ true 添加、删除操作之后「自动重启」服务，卡顿 
+² false  添加、删除操作之「手动重启」服务，不卡顿
+- ²¹ 手动点击重启服务选项
+- ²² rime_jk 方案可通过 ~rrr 触发重启服务
+- ²³🎉〔 推荐 〕好消息，已经引入 ahk 调用外部命令（通过绑定 ctrl+p）解决重启服务
+
+➭ auto_generate_dict
 ¹ true  同步生成与 user_words.lua 相对应的字典 - user_words.dict.yaml
 ² false 不生成
+
+➭ keep_user_words_top
+¹ true 自造词升序排在前面
+² false 排在后面
 --]] 
 local auto_reload_service = false
 local auto_generate_dict  = false
@@ -133,7 +138,7 @@ function write_word_to_dict(env, record_type)
         "---\nname: user_words\nversion: 2025.05\nsort: by_weight\nuse_preset_vocabulary: false\n...\n" -- 返回数据部分
 	for _, phrase in ipairs(phrases) do
 	    local code = get_tiger_code(phrase)
-	    serialize_str = serialize_str .. string.format('%s\t%s\t%d\n', phrase, code, 100000000)
+	    serialize_str = serialize_str .. string.format('%s\t%s\t%d\n', phrase, code, keep_user_words_top and 100000000 or 1)
 	end
 
     -- 构造完整的 record 内容
@@ -273,6 +278,7 @@ function F.func(input, env)
     local code_len = #input_code
 
     local is_in_table = hasKey(env.seq_words_dict, input_code)
+    local old_candidates = {}
     local new_candidates = {}
     -- log.warning(tostring(is_in_table))
 
@@ -285,11 +291,6 @@ function F.func(input, env)
     end
 
     for cand in input:iter() do
-        -- 先插入已有匹配选项，将自造词语加在其后
-        if not keep_user_words_top then
-            table.insert(new_candidates, cand)
-        end
-
         for code, phrases in pairs(env.seq_words_dict) do
             -- log.warning("键:" .. code)
             -- 遍历当前键对应的词组列表
@@ -298,18 +299,35 @@ function F.func(input, env)
                 if input_code == code then
                     local new_cand = Candidate("word", cand.start, cand._end, phrase, "*")
                     table.insert(new_candidates, new_cand)
+                else
+                    table.insert(old_candidates, cand)
                 end
             end
         end
+    end
 
-        -- 自造词依次放在居首
-        if keep_user_words_top then
-            table.insert(new_candidates, cand)
+    table.sort(new_candidates, function(a, b)
+        -- 自定义排序逻辑
+        return a.text < b.text  -- 按候选词文本升序排序
+    end)
+
+    local _cands = {}
+    if keep_user_words_top then
+        -- ^¹ 自造词排在前面
+        _cands = new_candidates
+        for i = 1, #old_candidates do
+            _cands[#new_candidates + 1] = old_candidates[i]
+        end
+    else
+        -- ^² 自造词排在后面
+        _cands = old_candidates
+        for i = 1, #new_candidates do
+            _cands[#old_candidates + 1] = new_candidates[i]
         end
     end
 
     -- 输出重新排序后的候选
-    for _, cand in ipairs(new_candidates) do
+    for _, cand in ipairs(_cands) do
         yield(cand)
     end
 end

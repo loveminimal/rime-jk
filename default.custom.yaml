@@ -17,13 +17,11 @@ patch:
   # jk_chars      拼音·反查   ¦ 虎码首末辅助码 （*仅用于反查，非独立方案）
   # jk_tiger      虎码·知心   ¦ 常规输入（开启调频）
   # jk_tiger_x    虎码·定频   ¦ 常规输入（关闭调频）
-  # jk_tiger_s    虎码·单字   ¦ 单字输入（关闭调频）
   # ---------------------------------------------------------------------
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_tiger}
     - {schema: jk_tiger_x}
-    # - {schema: jk_tiger_s}
 
 
   # --- 选单设置 ---

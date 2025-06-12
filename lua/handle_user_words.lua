@@ -212,8 +212,6 @@ function P.func(key_event, env)
     if auto_generate_dict then
         write_word_to_dict(env, "seq") -- 使用统一的写入函数生成对应的词典
     end
-    -- os.execute('"C:\\Program Files\\Rime\\weasel-0.16.3\\WeaselDeployer.exe" /deploy')
-    -- os.execute('C:\\Program Files\\Rime\\weasel-0.16.3\\WeaselServer.exe')
 
     if auto_reload_service then
         os.execute('cmd /c start "" "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\小狼毫输入法\\小狼毫算法服务"')

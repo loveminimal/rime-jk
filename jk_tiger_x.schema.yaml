@@ -15,11 +15,11 @@ schema:
   icon: 'assets/tiger_x.ico'
   ascii_icon: 'assets/ascii.ico'
 
-switches:
+switches: # 🔥
   __include: jk_tiger.schema.yaml:/switches
   __append:
     - name: char_only
-      reset: 0
+      reset: 0 # 词语←0    1→单字
 
 engine: # 🔥
   __include: jk_tiger.schema.yaml:/engine

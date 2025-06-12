@@ -1,48 +1,41 @@
 --[[ 
+作用：用来添加、删除自定义词语
 -- by Jack Liu <https://aituyaa.com>
 
-作用：用来添加、删除自定义词语
+当前仅支持虎码、五笔，感兴趣的朋友可以按需扩展
+--]] 
 
 -- 配制项 --
-➭ auto_reload_service
-¹ true 添加、删除操作之后「自动重启」服务，卡顿 
-² false  添加、删除操作之「手动重启」服务，不卡顿
-- ²¹ 手动点击重启服务选项
-- ²² rime_jk 方案可通过 ~rrr 触发重启服务
-- ²³🎉〔 推荐 〕好消息，已经引入 ahk 调用外部命令（通过绑定 ctrl+p）解决重启服务
-
-➭ auto_generate_dict
-¹ true  同步生成与 user_words.lua 相对应的字典 - user_words.dict.yaml
-² false 不生成
-
-➭ keep_user_words_top
-¹ true 自造词升序排在前面
-² false 排在后面
---]] 
+-- ① ➭ auto_reload_service
+-- ¹ true 添加、删除操作之后「自动重启」服务，卡顿 
+-- ² false  添加、删除操作之「手动重启」服务，不卡顿
+-- - ²¹ 手动点击重启服务选项
+-- - ²² rime_jk 方案可通过 ~rrr 触发重启服务「 不推荐 」新版本会崩溃
+-- - ²³🎉〔 推荐 〕好消息，已经引入 ahk 调用外部命令（通过绑定 ctrl+p）解决重启服务
 local auto_reload_service = false
+
+-- ② ➭ auto_generate_dict
+-- ¹ true  同步生成与 user_words.lua 相对应的字典 - user_words.dict.yaml
+-- ² false 不生成
 local auto_generate_dict  = false
+
+-- ③ ➭ keep_user_words_top
+-- ¹ true 自造词升序排在前面
+-- ² false 排在后面
 local keep_user_words_top = true
 
--- local filename = rime_api.get_user_data_dir() .. "/user.yaml"
--- local fd = assert(io.open(filename, "r"))
--- local content = fd:read("*a")
--- fd:close()
+-- ④ 此处可以指定你的方案 schema_id
+local schema_id_table = {
+    ["tiger"] = "jk_tiger",
+    ["wubi"] = "jk_wubi",
+}
 
--- 提取 user.yaml:/var/previously_selected_schema 的值 - 当指使用方案
--- jk_wubi、jk_tiger……
--- local cur_schema = content:match("previously_selected_schema:%s*([%w_]+)")
--- log.warning(cur_schema)
-
--- local code_table = {}
--- if cur_schema == 'jk_wubi' then
---     code_table = require("wubi86_code_table")
--- elseif cur_schema == 'jk_tiger' then
---     code_table = require("tiger_code_table")
--- end
-local code_table = require("tiger_code_table")
+local cur_code_table = {}
+local tiger_code_table = require("tiger_code_table")
+local wubi86_code_table = require("wubi86_code_table")
 
 -- 获取键值对 table 长度
-function table_len(t)
+local function table_len(t)
     local count = 0
     for _ in pairs(t) do
         count = count + 1
@@ -52,45 +45,40 @@ end
 
 -- 正确的中文切片函数
 -- lua 对中文的支持相当不友好 😡
-function utf8_sub(str, start_char, end_char)
+local function utf8_sub(str, start_char, end_char)
     local start_byte = utf8.offset(str, start_char)
     local end_byte = utf8.offset(str, end_char + 1) or #str + 1
     return string.sub(str, start_byte, end_byte - 1)
 end
 
--- 将汉字转换为虎码编码
-function get_tiger_code(word)
+-- 将汉字转换为虎码、五笔编码
+local function get_code(word)
     local len = utf8.len(word)
     if len == 1 then
-        return code_table[word]
+        return cur_code_table[word]
     elseif len == 2 then
-        return string.sub(code_table[utf8_sub(word, 1, 1)], 1, 2) .. string.sub(code_table[utf8_sub(word, 2, 2)], 1, 2)
+        return string.sub(cur_code_table[utf8_sub(word, 1, 1)], 1, 2) .. string.sub(cur_code_table[utf8_sub(word, 2, 2)], 1, 2)
     elseif len == 3 then
         return
-            string.sub(code_table[utf8_sub(word, 1, 1)], 1, 1) .. string.sub(code_table[utf8_sub(word, 2, 2)], 1, 1) ..
-                string.sub(code_table[utf8_sub(word, 3, 3)], 1, 2)
+            string.sub(cur_code_table[utf8_sub(word, 1, 1)], 1, 1) .. string.sub(cur_code_table[utf8_sub(word, 2, 2)], 1, 1) ..
+                string.sub(cur_code_table[utf8_sub(word, 3, 3)], 1, 2)
     elseif len >= 4 then
         return
-            string.sub(code_table[utf8_sub(word, 1, 1)], 1, 1) .. string.sub(code_table[utf8_sub(word, 2, 2)], 1, 1) ..
-                string.sub(code_table[utf8_sub(word, 3, 3)], 1, 1) ..
-                string.sub(code_table[utf8_sub(word, len, len)], 1, 1)
+            string.sub(cur_code_table[utf8_sub(word, 1, 1)], 1, 1) .. string.sub(cur_code_table[utf8_sub(word, 2, 2)], 1, 1) ..
+                string.sub(cur_code_table[utf8_sub(word, 3, 3)], 1, 1) ..
+                string.sub(cur_code_table[utf8_sub(word, len, len)], 1, 1)
     end
 
     return ""
 end
 
 -- 写入当前候选到 user_words.lua 中
-function write_word_to_file(env, record_type)
+local function write_word_to_file(env, record_type)
     local filename = rime_api.get_user_data_dir() .. "/lua/user_words.lua"
     if not filename then
         return false
     end
 
-    -- 遍历表中的每个元素并格式化
-    -- for phrase, _ in pairs(env.user_words) do
-    --     local code = get_tiger_code(phrase)
-    --     serialize_str = serialize_str .. string.format('    ["%s"] = "%s",\n', phrase, code)
-    -- end
     local phrases = {}
 	for phrase, _ in pairs(env.user_words) do
 	    table.insert(phrases, phrase)
@@ -100,7 +88,7 @@ function write_word_to_file(env, record_type)
 	-- 使用排序后的顺序生成 serialize_str
     local serialize_str = "" -- 返回数据部分
 	for _, phrase in ipairs(phrases) do
-	    local code = get_tiger_code(phrase)
+	    local code = get_code(phrase)
 	    serialize_str = serialize_str .. string.format('    ["%s"] = "%s",\n', phrase, code)
 	end
 
@@ -114,17 +102,12 @@ function write_word_to_file(env, record_type)
     fd:close() -- 关闭文件
 end
 
-function write_word_to_dict(env, record_type)
+local function write_word_to_dict(env, record_type)
     local filename = rime_api.get_user_data_dir() .. "/dicts/user_words.dict.yaml"
     if not filename then
         return false
     end
 
-    -- 遍历表中的每个元素并格式化
-    -- for phrase, _ in pairs(env.user_words) do
-    --     local code = get_tiger_code(phrase)
-    --     serialize_str = serialize_str .. string.format('%s	%s	%d\n', phrase, code, 100000000)
-    -- end
     local phrases = {}
 	for phrase, _ in pairs(env.user_words) do
 	    table.insert(phrases, phrase)
@@ -137,7 +120,7 @@ function write_word_to_dict(env, record_type)
         "# \n# --- 说明 ---\n# 该字典是基于 word_words.lua 同步生成的用户词典\n# \n" .. 
         "---\nname: user_words\nversion: 2025.05\nsort: by_weight\nuse_preset_vocabulary: false\n...\n" -- 返回数据部分
 	for _, phrase in ipairs(phrases) do
-	    local code = get_tiger_code(phrase)
+	    local code = get_code(phrase)
 	    serialize_str = serialize_str .. string.format('%s\t%s\t%d\n', phrase, code, keep_user_words_top and 100000000 or 1)
 	end
 
@@ -151,11 +134,21 @@ function write_word_to_dict(env, record_type)
     fd:close() -- 关闭文件
 end
 
+local function startsWith(str, prefix)
+    return string.sub(str, 1, #prefix) == prefix
+end
 -- ❶ 添加、删除候选项 ---
 -- ------------------------------------------------------------------
 local P = {}
 function P.init(env)
     env.user_words = require("user_words") -- 加载文件中的 user_words
+    local cur_schema = env.engine.schema.schema_id
+    log.warning('➭ ' .. cur_schema)
+    if startsWith(cur_schema, schema_id_table["tiger"]) then
+        cur_code_table = tiger_code_table
+    elseif startsWith(cur_schema, schema_id_table["wubi"]) then
+        cur_code_table = wubi86_code_table
+    end
 end
 
 -- P 阶段按键处理
@@ -210,7 +203,7 @@ function P.func(key_event, env)
     if key_event.keycode == 0x6F then -- ctrl + o (移除 out)
         env.user_words[phrase] = nil
     elseif key_event.keycode == 0x69 then -- ctrl + i (添加 in)
-        env.user_words[phrase] = get_tiger_code(phrase)
+        env.user_words[phrase] = get_code(phrase)
     else
         return 2
     end
@@ -230,7 +223,7 @@ function P.func(key_event, env)
     return 1
 end
 
-function hasKey(tbl, key)
+local function hasKey(tbl, key)
     if tbl == nil then
         return false
     end
@@ -242,7 +235,7 @@ function hasKey(tbl, key)
     return false
 end
 
-function reverse_seq_words(user_words)
+local function reverse_seq_words(user_words)
     local new_dict = {}
 
     for word, code in pairs(user_words) do

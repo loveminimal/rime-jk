@@ -1,9 +1,8 @@
 customization:
   distribution_code_name: Weasel
-  distribution_version: 0.16.3
   generator: "Weasel::UIStyleSettings"
   modified_time: "Fri Dec  6 10:55:38 2024"
-  rime_version: 1.11.2
+
 patch:
 # ---- 主题汇总 -------------------------------------------------------
 #〔 制作 11 〕

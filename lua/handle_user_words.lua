@@ -73,7 +73,7 @@ local function get_code(word)
 end
 
 -- 写入当前候选到 user_words.lua 中
-local function write_word_to_file(env, record_type)
+local function write_word_to_file(env)
     local filename = rime_api.get_user_data_dir() .. "/lua/user_words.lua"
     if not filename then
         return false
@@ -93,7 +93,8 @@ local function write_word_to_file(env, record_type)
 	end
 
     -- 构造完整的 record 内容
-    local record = "local user_words = {\n" .. serialize_str .. "}\nreturn user_words"
+    local record_header = "-- type: " .. env.schema_type .. "\n"
+    local record = record_header .. "local user_words = {\n" .. serialize_str .. "}\nreturn user_words"
     -- 打开文件进行写入
     local fd = assert(io.open(filename, "w"))
     fd:setvbuf("line")
@@ -102,7 +103,7 @@ local function write_word_to_file(env, record_type)
     fd:close() -- 关闭文件
 end
 
-local function write_word_to_dict(env, record_type)
+local function write_word_to_dict(env)
     local filename = rime_api.get_user_data_dir() .. "/dicts/user_words.dict.yaml"
     if not filename then
         return false
@@ -118,7 +119,9 @@ local function write_word_to_dict(env, record_type)
     local serialize_str =
         "# Rime dictionary - user_word.dict.yaml\n# encoding: utf-8\n" .. 
         "# \n# --- 说明 ---\n# 该字典是基于 word_words.lua 同步生成的用户词典\n# \n" .. 
-        "---\nname: user_words\nversion: 2025.05\nsort: by_weight\nuse_preset_vocabulary: false\n...\n" -- 返回数据部分
+        "---\nname: user_words\n" ..
+        "type: " .. env.schema_type .. "\n" ..
+        "version: 2025.05\nsort: by_weight\nuse_preset_vocabulary: false\n...\n" -- 返回数据部分
 	for _, phrase in ipairs(phrases) do
 	    local code = get_code(phrase)
 	    serialize_str = serialize_str .. string.format('%s\t%s\t%d\n', phrase, code, keep_user_words_top and 100000000 or 1)
@@ -145,8 +148,10 @@ function P.init(env)
     local cur_schema = env.engine.schema.schema_id
     log.warning('➭ ' .. cur_schema)
     if startsWith(cur_schema, schema_id_table["tiger"]) then
+        env.schema_type = "tiger"
         cur_code_table = tiger_code_table
     elseif startsWith(cur_schema, schema_id_table["wubi"]) then
+        env.schema_type = "wubi"
         cur_code_table = wubi86_code_table
     end
 end
@@ -208,9 +213,10 @@ function P.func(key_event, env)
         return 2
     end
     -- 实时更新 Lua 表序列化并保存
-    write_word_to_file(env, "seq") -- 使用统一的写入函数
+    log.warning(env.schema_type)
+    write_word_to_file(env) -- 使用统一的写入函数
     if auto_generate_dict then
-        write_word_to_dict(env, "seq") -- 使用统一的写入函数生成对应的词典
+        write_word_to_dict(env) -- 使用统一的写入函数生成对应的词典
     end
 
     if auto_reload_service then

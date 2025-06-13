@@ -95,6 +95,26 @@ def combine(out_dir, out_file):
             with open(file_path, 'r', encoding='utf-8') as f:
                 lines_total.extend(f.readlines())
 
+    # 加载定频时添加的自造词词典
+    type = ""   # tiger | wubi
+    lines_users = []
+    user_words_path = out_dir / 'user_words.dict.yaml'
+    if user_words_path.exists():
+        with open(user_words_path, 'r', encoding='utf-8') as f:
+            print('☑️  已加载用户自造词文件 » %s' % user_words_path)
+            for l in f.readlines():
+                if l.startswith('type'):
+                    type = l.strip().split(':')[1].strip()   # tiger | wubi
+                if is_chinese_char(l[0]):
+                    lines_users.append(l)
+        # ^ 虎码常规
+        if type == 'tiger' and code_type == '30':
+            lines_total.extend(lines_users)
+        # ^ 五笔常规
+        if type == 'wubi' and code_type == '20':
+            lines_total.extend(lines_users)
+
+
     # 去重并处理词条
     for line in set(lines_total):
         if is_chinese_char(line[0]):

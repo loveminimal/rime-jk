@@ -3,7 +3,7 @@
 
 schema:
   schema_id: jk_chars
-  name: 拼音·反查「自然码」
+  name: 拼音·反查
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |
@@ -41,7 +41,7 @@ speller:
   # ② 小鹤    algebra_flypy
   # ③ 自然码    algebra_zrm
   algebra:
-    __include: algebra.yaml:/algebra_pinyin
+    __include: algebra.yaml:/algebra_flypy
     __append:
       __include: algebra.yaml:/algebra_aux
 

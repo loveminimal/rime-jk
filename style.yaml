@@ -586,6 +586,7 @@ google_jk:
     color_format: rgba
     text_color: 0x666666
     candidate_text_color: 0x000000
+    comment_text_color: 0x666666CC
     back_color: 0xFFFFFF
     border_color: 0xE2E2E2
     hilited_text_color: 0x000000

@@ -25,14 +25,16 @@ use_preset_vocabulary: false
 不行	cp	300000000
 不要	cv	700000000
 也是	eo	300000000
-就是	go	1200000000
-都是	qo	700000000
+就是	go	1400000000
+就行	gp	100000000
+都是	qo	900000000
 都要	qv	200000000
 可能	zk	600000000
 如何	bjz	700000000
 如此	bsv	200000000
 不看	cuq	100000000
 还要	cuv	100000000
+不完	cwm	100000000
 一看	fuq	100000000
 能力	ksl	100000000
 都有	qnv	200000000
@@ -153,7 +155,7 @@ use_preset_vocabulary: false
 留着	bqgq	100000000
 留念	bqja	100000000
 努力	brsl	200000000
-动漫	bsko	100000000
+动漫	bsko	200000000
 动态	bsmi	100000000
 动力	bssl	100000000
 动向	bstm	100000000
@@ -184,6 +186,7 @@ use_preset_vocabulary: false
 不大	cbmd	100000000
 不同	cbmf	200000000
 不成	cbna	100000000
+不知	cbod	100000000
 不断	cbpa	100000000
 不足	cbpu	100000000
 不起	cbpv	100000000
@@ -195,7 +198,7 @@ use_preset_vocabulary: false
 不出	cbsm	100000000
 不用	cbty	700000000
 不然	cbvm	400000000
-不完	cbwm	100000000
+层次	cbwe	100000000
 不准	cbwu	300000000
 不赖	cbxx	100000000
 不到	cbyp	200000000
@@ -205,6 +208,7 @@ use_preset_vocabulary: false
 不错	cbzl	1000000000
 炎黄	ccnh	100000000
 壁纸	cdib	100000000
+蜗牛	cdqn	800000000
 避免	cdwp	200000000
 否定	cdwt	100000000
 飞机	cfeo	100000000
@@ -216,15 +220,17 @@ use_preset_vocabulary: false
 火车	chyc	100000000
 尽量	ciof	100000000
 支持	ciug	900000000
+迟到	ciyp	100000000
 爆炸	cocw	100000000
 遗产	coix	100000000
+遗珠	cont	100000000
 克制	cpqr	100000000
 克隆	cpth	200000000
 刷屏	crch	100000000
 刷新	crie	200000000
 刷到	cryp	100000000
 属于	ctfn	100000000
-属性	cthl	100000000
+属性	cthl	200000000
 还好	cubh	100000000
 还分	cuhp	100000000
 还会	cujb	100000000
@@ -286,7 +292,7 @@ use_preset_vocabulary: false
 听风	dtob	100000000
 邮箱	dtre	100000000
 听说	dtsh	100000000
-响应	dtxk	100000000
+响应	dtxk	200000000
 听到	dtyp	100000000
 听歌	dtzz	100000000
 无敌	duah	100000000
@@ -304,7 +310,7 @@ use_preset_vocabulary: false
 由于	dyfn	100000000
 杨康	eaxb	200000000
 极端	eciv	100000000
-极点	ecyd	100000000
+极点	ecyd	200000000
 柚子	edhi	100000000
 梦中	eedg	100000000
 梅西	eevx	100000000
@@ -353,6 +359,7 @@ use_preset_vocabulary: false
 突出	emsm	100000000
 突然	emvm	100000000
 构造	enqd	100000000
+机会	eojb	100000000
 复现	eone	200000000
 复制	eoqr	100000000
 查询	eosn	200000000
@@ -491,13 +498,14 @@ use_preset_vocabulary: false
 下去	fygk	100000000
 下班	fynp	400000000
 下载	fynp	1800000000
+下雨	fytv	100000000
 下次	fywe	100000000
 场合	gajd	100000000
 盖住	gaji	100000000
 场景	gaog	100000000
 坏事	gcfd	100000000
 声母	gckm	100000000
-声明	gcov	200000000
+声明	gcov	300000000
 声调	gcsm	200000000
 地址	gegs	300000000
 地方	gelf	400000000
@@ -513,6 +521,7 @@ use_preset_vocabulary: false
 高手	ggus	100000000
 高点	ggyd	100000000
 高铁	ggzt	100000000
+熟练	ghir	100000000
 善茬	ghln	100000000
 增量	ghof	300000000
 增长	ghpc	100000000
@@ -550,7 +559,6 @@ use_preset_vocabulary: false
 就好	gybh	100000000
 就会	gyjb	200000000
 就有	gynv	100000000
-就行	gypx	100000000
 情愫	haha	100000000
 情节	halz	100000000
 情况	hawd	500000000
@@ -576,10 +584,12 @@ use_preset_vocabulary: false
 公司	hkaf	400000000
 公平	hkeh	100000000
 孩子	hkhi	100000000
+公告	hkqd	100000000
 公费	hkto	100000000
 性别	hlds	100000000
 懵逼	hlfd	100000000
 懵懂	hlhl	100000000
+性能	hlkv	100000000
 并击	hlum	500000000
 并把	hlum	100000000
 懵比	hlvv	100000000
@@ -724,6 +734,7 @@ use_preset_vocabulary: false
 合适	jdau	200000000
 保留	jdbq	400000000
 盒子	jdhi	300000000
+鸽子	jdhi	100000000
 合并	jdhl	400000000
 保命	jdjd	300000000
 命令	jdjk	400000000
@@ -786,6 +797,7 @@ use_preset_vocabulary: false
 优秀	joxv	100000000
 代表	jpat	200000000
 代码	jpmn	200000000
+代理	jpnd	100000000
 偶尔	jqxy	300000000
 人民	jrdm	100000000
 人员	jrdo	100000000
@@ -799,7 +811,7 @@ use_preset_vocabulary: false
 信息	jsoh	200000000
 企鹅	jstu	100000000
 任务	jths	500000000
-任何	jtjz	200000000
+任何	jtjz	300000000
 依靠	jtqd	200000000
 依次	jtwe	100000000
 依赖	jtxx	100000000
@@ -833,6 +845,7 @@ use_preset_vocabulary: false
 创建	jzbu	100000000
 仓颉	jzgd	100000000
 何必	jzht	100000000
+何况	jzwd	100000000
 仓库	jzxy	1200000000
 清楚	kaee	300000000
 活着	kagq	100000000
@@ -851,7 +864,7 @@ use_preset_vocabulary: false
 注意	kixh	500000000
 注解	kixt	100000000
 九品	kjdd	100000000
-涂鸦	kjlx	100000000
+涂鸦	kjlx	500000000
 满满	klkl	100000000
 游戏	klrp	100000000
 满意	klxh	100000000
@@ -928,7 +941,7 @@ use_preset_vocabulary: false
 名字	ldwh	200000000
 重度	ldxl	100000000
 名称	ldxx	100000000
-重置	ldyn	200000000
+重置	ldyn	300000000
 而且	lefq	300000000
 旗舰	leie	100000000
 旅游	lekl	100000000
@@ -960,6 +973,7 @@ use_preset_vocabulary: false
 多数	llpb	200000000
 多长	llpc	100000000
 多谢	llsz	100000000
+多看	lluq	100000000
 多次	llwe	100000000
 多久	llxi	100000000
 多少	llyt	700000000
@@ -968,16 +982,18 @@ use_preset_vocabulary: false
 千元	lqmp	100000000
 生命	lsjd	100000000
 生态	lsmi	200000000
-生成	lsna	800000000
+生成	lsna	900000000
 生计	lssn	100000000
 雅黑	luph	100000000
 带来	lwah	100000000
 蒙古	lwcg	100000000
 带着	lwgq	100000000
 荣耀	lwmz	400000000
+带有	lwnv	100000000
 营销	lwzy	300000000
 外面	lybm	100000000
 菜单	lyhq	100000000
+外部	lyid	100000000
 外观	lyre	100000000
 节奏	lzai	100000000
 节目	lzqm	100000000
@@ -987,8 +1003,10 @@ use_preset_vocabulary: false
 网盘	mbia	200000000
 网络	mbis	200000000
 网站	mbiy	100000000
+刚刚	mbmb	100000000
 刚才	mbnt	100000000
 网页	mbwy	100000000
+网上	mbyf	100000000
 大概	mdei	100000000
 大楼	mdep	100000000
 大堆	mdgu	100000000
@@ -1044,6 +1062,7 @@ use_preset_vocabulary: false
 猎奇	mlmz	100000000
 两行	mlpx	100000000
 两双	mlrr	100000000
+两次	mlwe	100000000
 两种	mlxd	100000000
 码表	mnat	500000000
 码字	mnwh	100000000
@@ -1107,6 +1126,7 @@ use_preset_vocabulary: false
 弄好	nlbh	100000000
 玩玩	nmnm	100000000
 马龙	nmtl	100000000
+南山	nmvs	100000000
 玩意	nmxh	100000000
 驱动	nnbs	200000000
 博士	nngs	300000000
@@ -1157,7 +1177,7 @@ use_preset_vocabulary: false
 显示	ocfs	300000000
 显式	ocpu	100000000
 智慧	odaa	100000000
-知道	odho	1100000000
+知道	odho	1200000000
 智商	odim	100000000
 知识	odsd	100000000
 昊天	offm	100000000
@@ -1179,7 +1199,7 @@ use_preset_vocabulary: false
 几天	ojfm	300000000
 几万	ojfp	100000000
 几部	ojid	100000000
-几个	ojjg	200000000
+几个	ojjg	300000000
 几代	ojjp	100000000
 几遍	ojmi	200000000
 几套	ojmp	100000000
@@ -1196,6 +1216,7 @@ use_preset_vocabulary: false
 时区	oknb	300000000
 星空	oleu	100000000
 暴露	oltp	200000000
+暴雨	oltv	100000000
 映射	omzk	200000000
 购买	onaw	100000000
 旺盛	onna	100000000
@@ -1220,6 +1241,7 @@ use_preset_vocabulary: false
 明天	ovfm	400000000
 明白	ovub	100000000
 昨天	owfm	200000000
+顺着	owgq	100000000
 晚安	owwb	100000000
 顺序	owxi	100000000
 晚上	owyf	400000000
@@ -1246,6 +1268,7 @@ use_preset_vocabulary: false
 或是	pdot	100000000
 或者	pdqo	100000000
 儿子	pehi	100000000
+赶上	peyf	100000000
 师兄	pfdp	100000000
 糟心	pfhx	100000000
 墨奇	pgmz	100000000
@@ -1291,8 +1314,10 @@ use_preset_vocabulary: false
 耳根	qeei	100000000
 考验	qfnj	100000000
 考虑	qfzh	300000000
+特殊	qggt	200000000
 特性	qghl	100000000
 特定	qgwt	100000000
+教育	qhbv	100000000
 思想	qheq	100000000
 具体	qhje	200000000
 联网	qhmb	100000000
@@ -1372,7 +1397,7 @@ use_preset_vocabulary: false
 回聊	rdqb	100000000
 回答	rdrj	100000000
 回笼	rdrt	100000000
-回家	rdwj	100000000
+回家	rdwj	200000000
 圆角	rdxt	100000000
 回车	rdyc	100000000
 欢乐	reby	100000000
@@ -1403,7 +1428,7 @@ use_preset_vocabulary: false
 对啊	rkdt	100000000
 对于	rkfn	200000000
 对比	rkvv	100000000
-对象	rkwx	100000000
+对象	rkwx	800000000
 对应	rkxk	100000000
 了解	rlxt	200000000
 因为	rmis	1000000000
@@ -1422,6 +1447,7 @@ use_preset_vocabulary: false
 难道	ruho	100000000
 难记	rusv	100000000
 难以	ruvj	100000000
+难度	ruxl	100000000
 难受	ruyw	100000000
 笔画	rvfq	100000000
 笔者	rvqo	100000000
@@ -1430,6 +1456,7 @@ use_preset_vocabulary: false
 又能	rykv	100000000
 东南	rynm	100000000
 又是	ryot	300000000
+东东	ryry	100000000
 东西	ryvx	500000000
 请求	safk	100000000
 词条	sahe	300000000
@@ -1437,7 +1464,7 @@ use_preset_vocabulary: false
 请假	sajc	100000000
 话说	sash	200000000
 词频	sass	1000000000
-词语	sasw	100000000
+词语	sasw	200000000
 词库	saxy	2000000000
 尝尝	sbsb	100000000
 尝试	sbsp	100000000
@@ -1472,7 +1499,7 @@ use_preset_vocabulary: false
 该死	skgv	100000000
 访问	slad	100000000
 力量	slof	300000000
-出来	smah	300000000
+出来	smah	400000000
 出场	smga	100000000
 出去	smgk	300000000
 出入	smju	100000000
@@ -1494,7 +1521,7 @@ use_preset_vocabulary: false
 试图	sprh	100000000
 试了	sprl	100000000
 试试	spsp	200000000
-试用	spty	100000000
+试用	spty	200000000
 讲述	sqei	100000000
 发呆	srde	200000000
 发型	srfl	100000000
@@ -1502,7 +1529,7 @@ use_preset_vocabulary: false
 发送	srhm	100000000
 设备	srhq	100000000
 设为	sris	200000000
-发生	srls	100000000
+发生	srls	200000000
 发现	srne	400000000
 发起	srpv	100000000
 发行	srpx	200000000
@@ -1553,6 +1580,7 @@ use_preset_vocabulary: false
 除了	tjrl	100000000
 附加	tjsd	100000000
 附上	tjyf	100000000
+追踪	tkpw	100000000
 需求	tlfk	300000000
 升级	tlic	500000000
 龙码	tlmn	100000000
@@ -1600,7 +1628,8 @@ use_preset_vocabulary: false
 打架	uasd	100000000
 打字	uawh	700000000
 打得	uawo	100000000
-打卡	uayf	100000000
+打上	uayf	100000000
+打卡	uayf	200000000
 打错	uazl	100000000
 白天	ubfm	300000000
 白菜	ubly	100000000
@@ -1664,7 +1693,7 @@ use_preset_vocabulary: false
 提高	uogg	100000000
 提前	uohv	100000000
 担心	uohx	300000000
-提供	uojl	200000000
+提供	uojl	300000000
 提升	uotl	100000000
 提速	uoxu	100000000
 搂着	upgq	100000000
@@ -1676,6 +1705,7 @@ use_preset_vocabulary: false
 看好	uqbh	100000000
 看着	uqgq	200000000
 看懂	uqhl	100000000
+看做	uqjc	100000000
 看过	uqku	200000000
 看了	uqrl	100000000
 拷打	uqua	100000000
@@ -1715,6 +1745,7 @@ use_preset_vocabulary: false
 按说	uwsh	100000000
 按需	uwtl	100000000
 扩展	uxcl	200000000
+换句	uxgj	100000000
 换台	uxkd	200000000
 换成	uxna	200000000
 换行	uxpx	100000000
@@ -1770,7 +1801,7 @@ use_preset_vocabulary: false
 这份	vujh	100000000
 这件	vujq	1100000000
 这才	vunt	100000000
-这是	vuot	700000000
+这是	vuot	800000000
 这类	vupm	100000000
 这颗	vuqe	100000000
 这边	vusu	200000000
@@ -1798,6 +1829,7 @@ use_preset_vocabulary: false
 服务	vzhs	700000000
 脑袋	vzjp	100000000
 嵌入	vzju	200000000
+嵌套	vzmp	100000000
 宁静	waav	100000000
 割裂	wagp	100000000
 害死	wagv	100000000
@@ -1836,6 +1868,7 @@ use_preset_vocabulary: false
 往外	wily	100000000
 很大	wimd	100000000
 往右	wind	300000000
+很有	winv	100000000
 很早	wion	100000000
 往往	wiwi	200000000
 往后	wixf	100000000
@@ -1853,6 +1886,7 @@ use_preset_vocabulary: false
 完全	wmjn	300000000
 头像	wmjw	100000000
 头大	wmmd	100000000
+完成	wmna	200000000
 头发	wmsr	100000000
 完毕	wmvv	100000000
 完整	wmxh	100000000
@@ -1883,7 +1917,7 @@ use_preset_vocabulary: false
 微信	wvjs	100000000
 微笑	wvrt	100000000
 鱼鳞	wvwp	100000000
-微软	wvye	100000000
+微软	wvye	200000000
 实体	wwje	200000000
 实现	wwne	1100000000
 实在	wwng	200000000
@@ -1917,6 +1951,7 @@ use_preset_vocabulary: false
 整句	xhgj	1300000000
 意义	xhib	200000000
 整个	xhjg	400000000
+意外	xhly	100000000
 意思	xhqh	400000000
 季欢	xhre	700000000
 整出	xhsm	100000000
@@ -1947,12 +1982,13 @@ use_preset_vocabulary: false
 解包	xtnv	100000000
 解读	xtsn	100000000
 触发	xtsr	300000000
-解决	xtwn	700000000
+解决	xtwn	900000000
 解压	xtxg	100000000
 角色	xtxm	100000000
 解锁	xtzy	100000000
 原来	xuah	200000000
 原版	xuax	100000000
+原始	xubk	400000000
 原著	xulq	300000000
 原码	xumn	100000000
 原因	xurm	500000000
@@ -2028,7 +2064,7 @@ use_preset_vocabulary: false
 配音	yvxy	100000000
 配置	yvyn	700000000
 爱好	ywbh	100000000
-受众	ywjj	100000000
+受众	ywjj	200000000
 爱你	ywjx	100000000
 小姐	yxbf	100000000
 小姨	yxbm	200000000
@@ -2073,6 +2109,7 @@ use_preset_vocabulary: false
 基干	zheg	100000000
 基于	zhfn	100000000
 其他	zhje	400000000
+基佬	zhjq	100000000
 虎码	zhmn	1200000000
 基础	zhms	700000000
 其次	zhwe	100000000
@@ -2085,6 +2122,8 @@ use_preset_vocabulary: false
 金凡	zjoi	100000000
 金钱	zjzf	100000000
 射雕	zkmg	100000000
+射出	zksm	100000000
+可用	zkty	100000000
 可控	zkue	100000000
 可以	zkvj	2500000000
 错乱	zlaa	200000000
@@ -2147,12 +2186,14 @@ use_preset_vocabulary: false
 一次性	fwhl	100000000
 差不多	gcll	200000000
 去哪儿	gdpe	300000000
+差一点	gfyd	100000000
 半桶水	heks	100000000
 剃须刀	hepd	100000000
 性价比	hjvv	100000000
 普通话	hksa	100000000
 郑耀先	hmqp	300000000
 快捷键	huzb	100000000
+立交桥	iaet	100000000
 产业链	iczy	100000000
 终极版	ieax	100000000
 端午节	ielz	200000000
@@ -2169,6 +2210,7 @@ use_preset_vocabulary: false
 做什么	jjtk	100000000
 保修期	jjzh	100000000
 化学品	jkdd	100000000
+代理费	jnto	100000000
 你是谁	josu	200000000
 候选框	jqen	400000000
 创造力	jqsl	100000000
@@ -2338,6 +2380,7 @@ use_preset_vocabulary: false
 削足适履	ypac	100000000
 啷个哩个啷	djdd	100000000
 倚天屠龙记	jfcs	100000000
+人多力量大	jlsm	100000000
 我吃西红柿	tdve	100000000
 山海八荒录	vkhb	700000000
 恕己之心恕人	bvrj	200000000

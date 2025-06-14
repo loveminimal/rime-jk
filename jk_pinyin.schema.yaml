@@ -136,8 +136,8 @@ user_dict_set:
 add_user_dict:
   __include: jk.yaml:/add_user_dict
 
-# custom_phrase:
-#   __include: jk.yaml:/custom_phrase
+custom_phrase:
+  __include: jk.yaml:/custom_phrase
 
 emoji:
   __include: jk.yaml:/emoji

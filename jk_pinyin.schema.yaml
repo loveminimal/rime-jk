@@ -1,0 +1,157 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: jk_pinyin
+  name: 拼音·知心
+  author: 
+    - Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心拼音，拼音·辅助码，小啊小女仆
+    - https://github.com/loveminimal/rime-jk
+    - 支持〔 全拼、小鹤双拼、自然码双拼 〕+ 增强版
+    - 默认〔 小鹤双拼 〕，辅助码类型与词库有关〔 预设为虎码首末 ¦ 辅助码 〕
+  dependencies:
+    - jk_ascii
+    - jk_chars
+  icon: 'assets/fly.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk.yaml:/switches
+
+
+engine:
+  processors:
+    - lua_processor@*quick_symbol
+    - lua_processor@*exe
+    - ascii_composer
+    - chord_composer
+    - key_binder    
+    - recognizer    
+    - speller       
+    - punctuator    
+    - selector      
+    - navigator     
+    - express_editor
+  segmentors:
+    - ascii_segmentor        
+    - matcher                
+    - abc_segmentor          
+    - punct_segmentor        
+    - affix_segmentor@pinyin
+    - affix_segmentor@add_user_dict
+    - fallback_segmentor     
+  translators:
+    # - echo_translator               
+    - punct_translator        
+    - script_translator
+    # - table_translator
+    - table_translator@custom_phrase  
+    - script_translator@pinyin
+    - script_translator@user_dict_set
+    - script_translator@add_user_dict
+    - reverse_lookup_translator
+    - lua_translator@*schedule
+    - lua_translator@*helper
+    - lua_translator@*date_translator 
+    - lua_translator@*force_gc        
+  filters:
+    - lua_filter@*prettify_comment
+    # - lua_filter@*keep_short_code_first
+    - lua_filter@*single_char_only          # 纯单字
+    - simplifier
+    - simplifier@emoji   
+    - simplifier@zh2en
+    - simplifier@chaifen  
+    - simplifier@traditionalize
+    - uniquifier          
+
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  __include: jk.yaml:/recognizer
+  # patterns/+:
+  #   add_user_dict: "^ZZ[a-z]*$"
+
+punctuator:
+  __include: jk.yaml:/punctuator
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  delimiter: " ~"     
+  # max_code_length: 4
+  # auto_select: true
+  # auto_select_pattern: "^(\\w{4})$"
+  # auto_clear: max_length
+  # 支持：
+  # ① 全拼   algebra_pinyin 
+  # ② 小鹤    algebra_flypy
+  # ③ 自然码    algebra_zrm
+  algebra:
+    __include: algebra.yaml:/algebra_flypy
+    __append:
+      __include: algebra.yaml:/algebra_aux
+      
+chord_composer:
+  __include: jk.yaml:/chord_composer_mini
+
+
+translator:
+  dictionary: jk_pinyin             
+  prism: jk_pinyin                  
+  enable_charset_filter: true     
+  enable_sentence: true           
+  enable_encoder: true            
+  encode_commit_history: false     
+  # disable_user_dict_for_patterns: 
+  #   - "^z.*$"
+  #   - "^[a-z]{1,6}"    #基本的6码3字不调频
+  enable_completion: true     
+  enable_user_dict: false      
+  spelling_hints: 1
+  # comment_format: "{comment}" 
+  comment_format:
+    - xform/[^;]*;([^;]*)/$1/
+  # preedit_format:
+  #   __include: algebra.yaml:/preedit_format_zrm
+
+date_translator:
+  __include: jk.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk.yaml:/reverse_lookup
+
+pinyin:
+  __include: jk.yaml:/pinyin
+
+user_dict_set:
+  __include: jk.yaml:/user_dict_set
+  dictionary: jk_pinyin
+  user_dict: jk_pinyin_u
+
+add_user_dict:
+  __include: jk.yaml:/add_user_dict
+
+custom_phrase:
+  __include: jk.yaml:/custom_phrase
+
+emoji:
+  __include: jk.yaml:/emoji
+
+zh2en:
+  __include: jk.yaml:/zh2en
+
+chaifen:
+  __include: jk.yaml:/chaifen
+
+traditionalize:
+  __include: jk.yaml:/traditionalize
+
+#语法模型
+__include: octagram	#启用语言模型
+octagram:
+  __include: jk.yaml:/octagram

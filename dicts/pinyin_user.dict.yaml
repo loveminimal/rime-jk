@@ -1,0 +1,26 @@
+# Rime dictionary - pinyin_user.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是基于官方自动同步的用户词典合并排序生成 - 越来越懂你的「养成系」词库
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+# 
+# 运行脚本：
+# - https://github.com/loveminimal/rime-jk/blob/master/scripts/sync_pinyin_user_dict.py
+# - py scripts/sync_pinyin_user_dict.py
+# 
+---
+name: pinyin_user
+version: 2025.06
+sort: by_weight
+use_preset_vocabulary: false
+...
+俺宝	an;ja bao;wi	400000000
+宝子	bao;wi zi;hi	400000000
+格衡	ge;es heng;pw	200000000
+小鹤	xiao;yx he;wx	200000000
+辅助码	fu;yn zhu;fs ma;mn	200000000
+自然码	zi;oi ran;vc ma;mn	200000000
+辅助码版	fu;yn zhu;fs ma;mn ban;ar	200000000
+山海八荒录	shan;vs hai;kk ba;hb huang;lo lu;bk	400000000

@@ -96,17 +96,27 @@ def combine(out_dir, out_file):
                 lines_total.extend(f.readlines())
 
     # 加载定频时添加的自造词词典
+    # 修改为直接从 user_words.lua 中解析，不再依赖其生成的 user_words.dict.yaml
     type = ""   # tiger | wubi
     lines_users = []
-    user_words_path = out_dir / 'user_words.dict.yaml'
+    # user_words_path = out_dir / 'user_words.dict.yaml'
+    user_words_path = Path(out_dir / '../lua/user_words.lua').resolve()
+    # print(user_words_path)
     if user_words_path.exists():
         with open(user_words_path, 'r', encoding='utf-8') as f:
             print('☑️  已加载用户自造词文件 » %s' % user_words_path)
             for l in f.readlines():
-                if l.startswith('type'):
-                    type = l.strip().split(':')[1].strip()   # tiger | wubi
-                if is_chinese_char(l[0]):
-                    lines_users.append(l)
+                l = l.strip()
+                if l.startswith('-- type'):
+                    type = l.split(': ')[1]   # tiger | wubi
+                if l.startswith('["'):
+                    _arr = l.split('"] = "')
+                    word = _arr[0][2:]
+                    code = _arr[1][:-2]
+                    weight = '100000000' if is_keep_user_dict_first else '1'
+                    # print(f'{word}\t{code}\t{weight}')
+                    lines_users.append(f'{word}\t{code}\t{weight}\n')
+        # print(type)
         # ^ 虎码常规
         if type == 'tiger' and code_type == '30':
             lines_total.extend(lines_users)

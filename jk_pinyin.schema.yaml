@@ -10,7 +10,7 @@ schema:
     - 知心拼音，拼音·辅助码，小啊小女仆
     - https://github.com/loveminimal/rime-jk
     - 支持〔 全拼、小鹤双拼、自然码双拼 〕+ 增强版
-    - 默认〔 小鹤双拼 〕，辅助码类型与词库有关〔 预设为虎码首末 ¦ 辅助码 〕
+    - 默认〔 小鹤双拼 〕，辅助码类型与词库有关〔 预设为虎码首末 〕
   dependencies:
     - jk_ascii
     - jk_chars
@@ -24,7 +24,7 @@ switches:
 engine:
   processors:
     - lua_processor@*quick_symbol
-    - lua_processor@*exe
+    # - lua_processor@*exe
     - ascii_composer
     - chord_composer
     - key_binder    

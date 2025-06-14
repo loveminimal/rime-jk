@@ -93,11 +93,9 @@ translator:
   enable_charset_filter: true     
   enable_sentence: true           
   enable_encoder: true            
-  encode_commit_history: true     
-  # disable_user_dict_for_patterns: 
-  #   - "^z.*$"
+  encode_commit_history: false
   enable_completion: true     
-  enable_user_dict: true      
+  enable_user_dict: false      
   comment_format: "{comment}" 
 
 

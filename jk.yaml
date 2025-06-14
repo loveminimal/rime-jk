@@ -139,8 +139,10 @@ custom_phrase:
 # -------------------------------------
 # --- 完整版 ---
 chord_composer:
+  finish_chord_on_first_key_release: true
   prompt_format:
-    - "xform/^(.*)$/[$1]/" 
+    # - "xform/^(.*)$/[$1]/" 
+    - "xform/^(.*)$//" 
   output_format:
     - "xform/^(.*)左/$1/"
     - "xform/^(.*)右$/$1/"
@@ -151,7 +153,7 @@ chord_composer:
   # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
   alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/1234567890"
   algebra:
-    __include: algebra.yaml:/algebra_kongming
+    __include: algebra.yaml:/algebra_mirror
 
 # --- 迷你版 ---
 chord_composer_mini:

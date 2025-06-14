@@ -1,0 +1,90 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: jk_pinyin_bj
+  name: 拼音·并击
+  author: 
+    - Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心拼音，拼音·辅助码「 并击版 」，小啊小女仆
+    - https://github.com/loveminimal/rime-jk
+    - 支持〔 全拼、小鹤双拼、自然码双拼 〕+ 增强版
+    - 默认〔 小鹤 + 虎码首末 〕，辅助码类型与词库有关
+  dependencies:
+    - jk_ascii
+    - jk_chars
+  icon: 'assets/fly_m.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk_pinyin.schema.yaml:/switches
+
+engine:
+  __include: jk_pinyin.schema.yaml:/engine       
+
+key_binder:
+  __include: jk_pinyin.schema.yaml:/key_binder       
+
+recognizer:
+  __include: jk_pinyin.schema.yaml:/recognizer
+
+punctuator:
+  __include: jk_pinyin.schema.yaml:/punctuator       
+
+speller:
+  __include: jk_pinyin.schema.yaml:/speller
+  # 支持：
+  # ① 全拼   algebra_pinyin 
+  # ② 小鹤    algebra_flypy
+  # ③ 自然码    algebra_zrm
+  algebra:
+    __include: algebra.yaml:/algebra_flypy
+    __append:
+      __include: algebra.yaml:/algebra_aux
+
+chord_composer:	# 🔥
+  __include: jk.yaml:/chord_composer
+
+translator:			# 🔥
+  __include: jk_pinyin.schema.yaml:/translator       
+  prism: jk_pinyin_bj                  
+  dictionary: jk_pinyin_bj
+
+date_translator:
+  __include: jk_pinyin.schema.yaml:/date_translator       
+
+reverse_lookup:
+  __include: jk_pinyin.schema.yaml:/reverse_lookup       
+
+pinyin:
+  __include: jk_pinyin.schema.yaml:/pinyin       
+
+user_dict_set:	# 🔥
+  __include: jk_pinyin.schema.yaml:/user_dict_set
+  dictionary: jk_pinyin_bj
+
+add_user_dict:	# 🔥
+  __include: jk_pinyin.schema.yaml:/add_user_dict
+  dictionary: jk_pinyin_bj
+
+# custom_phrase:
+#   __include: jk_pinyin.schema.yaml:/custom_phrase       
+
+emoji:
+  __include: jk_pinyin.schema.yaml:/emoji       
+
+zh2en:
+  __include: jk_pinyin.schema.yaml:/zh2en       
+
+chaifen:
+  __include: jk_pinyin.schema.yaml:/chaifen       
+
+traditionalize:
+  __include: jk_pinyin.schema.yaml:/traditionalize       
+
+#语法模型
+__include: octagram	#启用语言模型
+octagram:
+  __include: jk_pinyin.schema.yaml:/octagram       
+

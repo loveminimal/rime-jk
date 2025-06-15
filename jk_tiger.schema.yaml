@@ -41,7 +41,6 @@ engine:
     - affix_segmentor@pinyin
     - fallback_segmentor     
   translators:
-    # - echo_translator               
     - punct_translator        
     - table_translator
     - table_translator@custom_phrase  

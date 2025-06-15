@@ -29,14 +29,6 @@ local function exe(key, env)
         generic_open("https://github.com/loveminimal")
         context:clear()
 
-    elseif (context.input == "~rc") then
-        generic_open("C:\\Users\\jack\\AppData\\Roaming\\Rime")
-        context:clear()
-
-    elseif (context.input == "~ahk") then
-        generic_open("C:\\Users\\jack\\AppData\\Roaming\\Rime\\ahk\\rime.exe")
-        context:clear()
-
     elseif (context.input == "~dazi") then
         generic_open("https://typer.owenyang.top")
         context:clear()

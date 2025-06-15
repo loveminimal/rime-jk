@@ -43,10 +43,8 @@ engine:
     - affix_segmentor@add_user_dict
     - fallback_segmentor     
   translators:
-    # - echo_translator               
     - punct_translator        
     - script_translator
-    # - table_translator
     - table_translator@custom_phrase  
     - script_translator@pinyin
     - script_translator@user_dict_set
@@ -73,8 +71,7 @@ key_binder:
 
 recognizer:
   __include: jk.yaml:/recognizer
-  # patterns/+:
-  #   add_user_dict: "^ZZ[a-z]*$"
+
 
 punctuator:
   __include: jk.yaml:/punctuator
@@ -83,10 +80,6 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
-  # max_code_length: 4
-  # auto_select: true
-  # auto_select_pattern: "^(\\w{4})$"
-  # auto_clear: max_length
   # 支持：
   # ① 全拼   algebra_pinyin 
   # ② 小鹤    algebra_flypy
@@ -107,9 +100,6 @@ translator:
   enable_sentence: true           
   enable_encoder: true            
   encode_commit_history: false     
-  # disable_user_dict_for_patterns: 
-  #   - "^z.*$"
-  #   - "^[a-z]{1,6}"    #基本的6码3字不调频
   enable_completion: true     
   enable_user_dict: false      
   spelling_hints: 1
@@ -117,7 +107,7 @@ translator:
   comment_format:
     - xform/[^;]*;([^;]*)/$1/
   # preedit_format:
-  #   __include: algebra.yaml:/preedit_format_zrm
+  #   __include: algebra.yaml:/preedit_format_flypy
 
 date_translator:
   __include: jk.yaml:/date_translator
@@ -130,14 +120,13 @@ pinyin:
 
 user_dict_set:
   __include: jk.yaml:/user_dict_set
-  dictionary: jk_pinyin
-  user_dict: jk_pinyin_u
 
 add_user_dict:
   __include: jk.yaml:/add_user_dict
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase
+  user_dict: custom_pinyin
 
 emoji:
   __include: jk.yaml:/emoji

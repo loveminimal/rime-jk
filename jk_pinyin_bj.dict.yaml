@@ -7,6 +7,7 @@ sort: by_weight
 # ------------------------------------------------
 # cn_dicts/*   「 万象转换 8105 整句」省流分包词库
 # pinyin           「 万象转换 8105 整句」合一词库
+# pinyin_ext             「 非 8105 字词」补充词库
 # pinyin_user                 「 养成系 」用户词库
 # ------------------------------------------------
 import_tables:
@@ -20,6 +21,7 @@ import_tables:
   # - cn_dicts/poetry        
   # - cn_dicts/place  
   - dicts/pinyin     
+  - dicts/pinyin_ext  
   - dicts/pinyin_user
 use_preset_vocabulary: false
 ...

@@ -16,20 +16,28 @@ version: 2025.06
 sort: by_weight
 use_preset_vocabulary: false
 ...
+一个	yi;fi ge;jg	400000000
 俺宝	an;ja bao;wi	400000000
 宝子	bao;wi zi;hi	400000000
+是的	shi;ot de;ui	500000000
+这个	zhe;vu ge;jg	200000000
 并击	bing;hl ji;um	400000000
 格衡	ge;es heng;pw	200000000
 小鹤	xiao;yx he;wx	200000000
+这种	zhe;vu zhong;xg	200000000
+黄霑	huang;nh zhan;td	200000000
 打起来	da;ua qi;pv lai;ah	100000000
 的威力	de;ui wei;nb li;sl	100000000
 辅助码	fu;yn zhu;fs ma;mn	200000000
 速录宝	su;xu lu;bk bao;wi	600000000
 自然码	zi;oi ran;vc ma;mn	200000000
 并击的	bing;hl ji;um de;ui	300000000
+双拼加	shuang;rr pin;ul jia;sd	200000000
 得到一个	de;wk dao;yp yi;fi ge;jg	200000000
 自然码吗	zi;oi ran;vc ma;mn ma;dn	100000000
 辅助码版	fu;yn zhu;fs ma;mn ban;ar	200000000
 双拼这种	shuang;rr pin;ul zhe;vu zhong;xg	200000000
 并击的威力	bing;hl ji;um de;ui wei;nb li;sl	100000000
 山海八荒录	shan;vs hai;kk ba;hb huang;lo lu;bk	400000000
+你是怎么想的	ni;jy shi;ot zen;wh me;tk xiang;eh de;ui	200000000
+现在使用的简拼	xian;ne zai;ng shi;jb yong;ty de;ui jian;ro pin;ul	100000000

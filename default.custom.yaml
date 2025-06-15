@@ -23,8 +23,6 @@ patch:
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_pinyin}
-    - {schema: jk_ascii_bj}
-    - {schema: jk_pinyin_bj}
     - {schema: jk_tiger}
 
   # --- 选单设置 ---

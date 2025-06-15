@@ -23,7 +23,7 @@ engine:
   processors:
     - lua_processor@*handle_user_words*P
     - lua_processor@*quick_symbol
-    # - lua_processor@*exe
+    - lua_processor@*exe
     - ascii_composer
     - chord_composer
     - key_binder    

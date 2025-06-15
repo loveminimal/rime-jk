@@ -17,11 +17,7 @@ local function exe(key, env)
     local context = engine.context
     local kNoop = 2
 
-    if (context.input == "~ship") then
-        generic_open("https://aituyaa.com/ship")
-        context:clear()
-
-    elseif (context.input == "~nav") then
+    if (context.input == "~nav") then
         generic_open("https://aituyaa.com/nav")
         context:clear()
 
@@ -33,7 +29,7 @@ local function exe(key, env)
         generic_open("https://github.com/loveminimal")
         context:clear()
 
-    elseif (context.input == "~rrc") then
+    elseif (context.input == "~rc") then
         generic_open("C:\\Users\\jack\\AppData\\Roaming\\Rime")
         context:clear()
 
@@ -45,16 +41,8 @@ local function exe(key, env)
         generic_open("https://typer.owenyang.top")
         context:clear()
 
-    elseif (context.input == "~aidazi") then
+    elseif (context.input == "~idazi") then
         generic_open("https://www.52dazi.cn")
-        context:clear()
-
-    elseif (context.input == "~tiger") then
-        generic_open("https://tiger-code.com/")
-        context:clear()
-
-    elseif (context.input == "~rrr") then
-        os.execute('cmd /c start "" "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\小狼毫输入法\\小狼毫算法服务"')
         context:clear()
 
     end

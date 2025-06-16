@@ -203,7 +203,7 @@ def get_pinyin_code(code: str) -> str:
     for _code in code.split(' '):
         _cc = _code.split(';')
         fuzhuma = _cc[int(code_type[-1])] if not code_type.endswith('0') else ''
-        code_parts.append(f'{_cc[0]}{';' if fuzhuma else ''}{fuzhuma}')
+        code_parts.append(f'{_cc[0]}{";" if fuzhuma else ""}{fuzhuma}')
 
     return ' '.join(code_parts)
 

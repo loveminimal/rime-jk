@@ -4,7 +4,9 @@ RIME_JK ，指尖上的旋律 ～ [🍕 指南](https://aituyaa.com/rime_jk-%E6%
 
 > 🪄 该版本之后的版本，都只保留了个人所需方案和功能，不再具备强通用性（除非你和我的使用习惯一模一样）。
 
-🔥 [Release Version 6.6.6.ultimate](https://github.com/loveminimal/rime-jk/releases/tag/v6.6.6.ultimate) ➭「 唯一推荐 」 终极大一统版本 ：
+💡🪧 Release Version v6.6.6.ultimate 已经独立仓库 ➭ [⬇️ loveminimal/rime-jk-ultimate](https://github.com/loveminimal/rime-jk-ultimate) ，后续 ultimate 相关会在该仓库修复 bug，优化功能）。
+
+🔥 [终极大一统版本 ultimate](https://github.com/loveminimal/rime-jk-ultimate) ➭「 唯一推荐 」 终极大一统版本 ：
 
 
 ```

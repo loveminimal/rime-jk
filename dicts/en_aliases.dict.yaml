@@ -119,6 +119,7 @@ code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_wubi.userdb.tx
 code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_tiger.userdb.txt	cct	0
 tail -f "C:\\Users\\jack\\AppData\\Local\\Temp\\rime.weasel\\rime.weasel.JK.jack.log.WARNING.20250525-191342.20412.log"	vlog	0
 
+"C:/Program Files/Rime/weasel-0.17.4/WeaselSetup.exe"	arc	0
 cd ~/AppData/Roaming/Rime && py scripts/deploy_rime.py	ddr	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py	ssr	0
 cd ~/AppData/Roaming/Rime && py scripts/fetch_any_dict.py	fad	0
@@ -126,8 +127,6 @@ cd ~/AppData/Roaming/Rime && py scripts/fetch_any_dict.py -d 2	fadd	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py && py scripts/deploy_rime.py	uud	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 20 && py scripts/deploy_rime.py	uuw	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 30 && py scripts/deploy_rime.py	uut	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_user_dict.py 20	uuww	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_user_dict.py 30	uutt	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uupy	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 21 && py scripts/deploy_rime.py	uuwz	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 31 && py scripts/deploy_rime.py	uutz	0

@@ -30,9 +30,12 @@ use_preset_vocabulary: false
 仙逆	xian;jv ni;hu	400000000
 小鹤	xiao;yx he;wx	200000000
 形码	xing;fe ma;mn	300000000
+咱孩	zan;do hai;hk	300000000
+作者	zuo;jw zhe;qo	200000000
 串击	chuan;dg ji;um	300000000
 罗峰	luo;yl feng;va	200000000
 商业	shang;id ye;cy	100000000
+事情	shi;fb qing;hv	100000000
 使用	shi;jb yong;ty	200000000
 现在	xian;ne zai;ng	500000000
 程琳	cheng;xn lin;ne	200000000
@@ -65,22 +68,30 @@ use_preset_vocabulary: false
 并击输入	bing;hl ji;um shu;yp ru;ju	200000000
 鹤音虎形	he;wx yin;xy hu;zh xing;fe	400000000
 虎鹤音形	hu;zh he;wx yin;xy xing;fe	200000000
+行有不得	xing;px you;nv bu;cb de;wk	200000000
 关于并击	guan;hm yu;fn bing;hl ji;um	100000000
 空明码的	kong;eu ming;ov ma;mn de;ui	400000000
+早早完结	zao;on zao;on wan;wp jie;id	200000000
 地火水风	di;ge huo;ch shui;ks feng;ob	200000000
 脚本位置	jiao;vz ben;ef wei;ji zhi;yf	200000000
 使用形码	shi;jb yong;ty xing;fe ma;mn	100000000
+小鹤音形	xiao;yx he;wx yin;xy xing;fe	200000000
+音形就是	yin;xy xing;fe jiu;go shi;ot	100000000
 虎鹤双形	hu;zh he;wx shuang;rr xing;fe	200000000
 镜像映射	jing;zp xiang;jw ying;om she;zk	200000000
 双拼这种	shuang;rr pin;ul zhe;vu zhong;xg	200000000
 并击的威力	bing;hl ji;um de;ui wei;nb li;sl	100000000
+一味地求稳	yi;fi wei;da de;ge qiu;fi wen;xh	200000000
+不知道作者	bu;cb zhi;od dao;hu zuo;jw zhe;qo	100000000
 还的是形码	hai;cu de;ui shi;ot xing;fe ma;mn	200000000
 商业输入法	shang;id ye;cy shu;yp ru;ju fa;kk	100000000
+都有应属于	dou;qt you;nv ying;xf shu;cv yu;fn	200000000
 山海八荒录	shan;vs hai;kk ba;hb huang;lo lu;bk	400000000
 解构一下自己	jie;xq gou;ek yi;fi xia;fy zi;oi ji;vj	100000000
 你是怎么想的	ni;jy shi;ot zen;wh me;tk xiang;eh de;ui	200000000
 也没有多少吧	ye;ey mei;kr you;nv duo;ll shao;yt ba;dm	100000000
 还是要加一些词	hai;cu shi;ot yao;vb jia;sd yi;fi xie;sm ci;sd	100000000
+没有办法的事情	mei;kr you;nv ban;sh fa;kk de;ui shi;fb qing;hv	100000000
 这个地方叫路由	zhe;vu ge;jg di;ge fang;lf jiao;di lu;ps you;dy	200000000
 餐厅吃饭的算不	can;gq ting;xa chi;da fan;qr de;ui suan;rl bu;cb	200000000
 现在使用的简拼	xian;ne zai;ng shi;jb yong;ty de;ui jian;ro pin;ul	100000000

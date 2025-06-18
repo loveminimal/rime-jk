@@ -40,6 +40,7 @@ patch:
       # ----------------------------------------------------------
       # preedit_type: preview
       inline_preedit: true
+      vertical_auto_reverse: true
       # --- 鼠标操作 ---------------------------------------------
       # hover_type       鼠标悬浮候选 ➭ none、hilite、semi_hilite
       # click_to_capture 点击候选创建截图

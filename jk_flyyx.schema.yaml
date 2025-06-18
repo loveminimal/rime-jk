@@ -94,7 +94,7 @@ translator:
   enable_sentence: true           
   enable_encoder: true            
   encode_commit_history: false
-  enable_completion: false     
+  enable_completion: true     
   enable_user_dict: false      
   comment_format: "{comment}" 
 
@@ -118,8 +118,8 @@ emoji:
 zh2en:
   __include: jk.yaml:/zh2en
 
-chaifen:
-  __include: jk.yaml:/chaifen
+# chaifen:
+#   __include: jk.yaml:/chaifen
 
 traditionalize:
   __include: jk.yaml:/traditionalize

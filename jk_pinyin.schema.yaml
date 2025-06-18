@@ -126,6 +126,7 @@ add_user_dict:
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase
+  user_dict: custom_pinyin
 
 emoji:
   __include: jk.yaml:/emoji

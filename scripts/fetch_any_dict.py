@@ -217,13 +217,15 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
     list_with_tone = list('āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜüńňǹ')
     list_without_tone = list('aaaaooooeeeeiiiiuuuuvvvvvnnn')
 
+    res_dict_word_weight = {}
+    valid_entries = set()
+    _valid_entries = set()
+
     for file_num, file_path in enumerate(src_dir.glob(f'*{file_endswith_filter}'), 1):
         print(f'☑️  已加载第 {file_num} 份码表 » {file_path.name}')
 
-        valid_entries = set()
         invalid_line_count = 0
 
-        res_dict_word_weight = {}
 
         # 预处理，获取权重字的最大权重映射
         with open(file_path, 'r', encoding='utf-8') as fp:
@@ -283,20 +285,30 @@ def convert(src_dir: Path, out_dir: Path, file_endswith_filter: str) -> None:
                         valid_entries.add(f"{word}\t{pinyin_code}\t{res_dict_word_weight[word + get_md5(line)]}\n")
                     elif code_type.startswith("2"):
                         wubi_code = get_wubi_code(word)
-                        valid_entries.add(f"{word}\t{wubi_code}\t{res_dict_word_weight[word]}\n")
-                    else:
+                        # valid_entries.add(f"{word}\t{wubi_code}\t{res_dict_word_weight[word]}\n")
+                        _valid_entries.add(f"{word}\t{wubi_code}")
+                    elif code_type.startswith("3"):
                         tiger_code = get_tiger_code(word)
-                        valid_entries.add(f"{word}\t{tiger_code}\t{res_dict_word_weight[word]}\n")
+                        # valid_entries.add(f"{word}\t{tiger_code}\t{res_dict_word_weight[word]}\n")
+                        _valid_entries.add(f"{word}\t{tiger_code}")
                 except KeyError:
                     invalid_line_count += 1
 
-        if valid_entries:
-            output_path = out_dir / f"{file_path.stem}.yaml"
-            with open(output_path, 'w', encoding='utf-8') as o:
-                o.writelines(get_header_common(f"{file_path.stem}.yaml"))
-                o.writelines(sorted(valid_entries))
+    # 非拼音时去重多音字造成的重复词条
+    if not code_type.startswith("1"):
+        for wc in _valid_entries:
+            # if wc == '从\tww;yz':
+            #     print(wc)
+            #     print(res_dict_word_weight[tab_split_re.split(wc)[0]])
+            valid_entries.add(f"{wc}\t{res_dict_word_weight[tab_split_re.split(wc)[0]]}\n")
 
-            # print(f"  成功转换 {len(valid_entries)} 条记录，跳过 {invalid_line_count} 条无效记录")
+    if valid_entries:
+        output_path = out_dir / f"{file_path.stem}.yaml"
+        with open(output_path, 'w', encoding='utf-8') as o:
+            o.writelines(get_header_common(f"{file_path.stem}.yaml"))
+            o.writelines(sorted(valid_entries))
+
+        # print(f"  成功转换 {len(valid_entries)} 条记录，跳过 {invalid_line_count} 条无效记录")
 
 
 @timer
@@ -604,7 +616,7 @@ def exec(proj_dir, work_dir, repository_url):
         shutil.rmtree(out_dir)
     print('\n🔜  === 开始同步转换词库文件 ===')
     convert(src_dir, out_dir, '.dict.yaml')
-
+    # return
     # 分包操作，以减小推送之后仓库快照体积
     if not is_merge:
         dist_dir = proj_dir / 'cn_dicts'

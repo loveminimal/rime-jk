@@ -17,7 +17,9 @@ schema:
 
 switches:
   __include: jk.yaml:/switches
-
+  __append:
+    - name: char_only
+      reset: 1	# 🔥词 ←0  1→ 单
 
 engine:
   processors:

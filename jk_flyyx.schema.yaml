@@ -21,7 +21,7 @@ switches:
 
 engine:
   processors:
-    # - lua_processor@*handle_user_words*P
+    - lua_processor@*handle_user_words*P
     - lua_processor@*quick_symbol
     - lua_processor@*exe
     - ascii_composer
@@ -51,7 +51,7 @@ engine:
     - lua_translator@*date_translator 
     - lua_translator@*force_gc        
   filters:
-    # - lua_filter@*handle_user_words*F
+    - lua_filter@*handle_user_words*F
     - lua_filter@*prettify_comment
     # - lua_filter@*keep_short_code_first*T
     # - lua_filter@*single_char_first       # 单字优先
@@ -81,7 +81,7 @@ speller:
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
   max_code_length: 4
-  auto_select: true	# 四码上屏 ←true  false→ 五码顶屏
+  # auto_select: true	# 四码上屏 ←true  false→ 五码顶屏
 
 chord_composer:
   __include: jk.yaml:/chord_composer_mini

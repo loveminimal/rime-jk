@@ -28,11 +28,13 @@ local keep_user_words_top = true
 local schema_id_table = {
     ["tiger"] = "jk_tiger",
     ["wubi"] = "jk_wubi",
+    ["flyyx"] = "jk_flyyx",
 }
 
 local cur_code_table = {}
 local tiger_code_table = require("tiger_code_table")
 local wubi86_code_table = require("wubi86_code_table")
+local flyyx_code_table = require("flyyx_code_table")
 
 -- 获取键值对 table 长度
 local function table_len(t)
@@ -153,6 +155,9 @@ function P.init(env)
     elseif startsWith(cur_schema, schema_id_table["wubi"]) then
         env.schema_type = "wubi"
         cur_code_table = wubi86_code_table
+    elseif startsWith(cur_schema, schema_id_table["flyyx"]) then
+        env.schema_type = "flyyx"
+        cur_code_table = flyyx_code_table
     end
 end
 
@@ -173,9 +178,9 @@ function P.func(key_event, env)
 
     -- 判断按下的键
     -- 单字无需处理
-    if utf8.len(phrase) < 2 then
-        return 2
-    end
+    -- if utf8.len(phrase) < 2 then
+    --     return 2
+    -- end
 
     -- ​组合键​​	​​键码（十六进制）​​	​​ASCII 码（十进制）​​
     -- Ctrl + a	0x61	97

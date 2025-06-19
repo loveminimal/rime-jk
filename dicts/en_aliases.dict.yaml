@@ -127,6 +127,7 @@ cd ~/AppData/Roaming/Rime && py scripts/fetch_any_dict.py -d 2	fadd	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py && py scripts/deploy_rime.py	uud	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 20 && py scripts/deploy_rime.py	uuw	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 30 && py scripts/deploy_rime.py	uut	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 40 && py scripts/deploy_rime.py	uuf	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uupy	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 21 && py scripts/deploy_rime.py	uuwz	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 31 && py scripts/deploy_rime.py	uutz	0

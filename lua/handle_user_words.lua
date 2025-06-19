@@ -91,6 +91,10 @@ local function write_word_to_file(env)
     local serialize_str = "" -- 返回数据部分
 	for _, phrase in ipairs(phrases) do
 	    local code = get_code(phrase)
+        -- todo 先放这里，没啥用
+        -- for _code in string.gmatch(code, "([^;]+)") do
+        --     print(_code)
+        -- end
 	    serialize_str = serialize_str .. string.format('    ["%s"] = "%s",\n', phrase, code)
 	end
 

@@ -11,12 +11,14 @@
 name: jk_flyyx
 version: 2025.06
 sort: by_weight
-# ------------------------------------
-# flyyx  「 8105 通规字 」小鹤音形词库
-# flyyx_user      「 养成系 」用户词库
-# ------------------------------------
+# -----------------------------------------
+# flyyx       「 8105 通规字 」小鹤音形词库
+# flyyx_ext      「 小鹤音形 」单字模糊词库
+# flyyx_user           「 养成系 」用户词库
+# -----------------------------------------
 import_tables:
   - dicts/flyyx
+  - dicts/flyyx_ext
   # - dicts/flyyx_user
 use_preset_vocabulary: false
 ...

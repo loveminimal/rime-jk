@@ -18,7 +18,7 @@ sort: by_weight
 # -----------------------------------------
 import_tables:
   - dicts/flyyx
-  - dicts/flyyx_ext
+  # - dicts/flyyx_ext
   # - dicts/flyyx_user
 use_preset_vocabulary: false
 ...

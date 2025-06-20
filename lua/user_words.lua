@@ -1,11 +1,10 @@
 -- type: flyyx
 local user_words = {
     ["一场梦"] = "yimg",
-    ["什么"] = "ufma",
     ["仙逆"] = "xmni",
     ["出简"] = "iujm",
     ["出简让全"] = "ijrq",
-    ["叶凡"] = "xpfj",
+    ["叶凡"] = "yefj",
     ["有坂"] = "yzbj",
     ["梦中界"] = "mvjp",
     ["横跳"] = "hgtn",
@@ -13,6 +12,7 @@ local user_words = {
     ["滑跪"] = "hxgv",
     ["爱涂鸦的蜗牛"] = "atyn",
     ["独体字"] = "dtzi",
+    ["真谛"] = "vfdi",
     ["知北游"] = "vbyz",
     ["神识"] = "ufui",
     ["自我解构"] = "zwjg",

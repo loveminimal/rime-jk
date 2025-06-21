@@ -112,12 +112,13 @@ def sort_dict(src_dir, out_dir):
 
 
             # 添加相应权重，一级字-100 二级字-10 三级字-1 词语-3、2，三级字没有组词
-            if all((char in first_level) for char in word):
-                weight = 100000
-            elif any((char in second_level) for char in word):
-                weight = 1000
-            elif any((char in third_level) for char in word):
-                weight = 10
+            if is_change_weight:
+                if all((char in first_level) for char in word):
+                    weight = 100000
+                elif any((char in second_level) for char in word):
+                    weight = 1000
+                elif any((char in third_level) for char in word):
+                    weight = 10
             
             # 8105 过滤器开关 - is_filter_8105
             if is_filter_8105 and any((char not in wubi86_8105_map and char not in white_list) for char in word):
@@ -135,17 +136,18 @@ def sort_dict(src_dir, out_dir):
     print(f'✅  » 已过滤 {count} 行重复词条')
 
     # 补充词库中可能缺失的通规字 8105 单字
-    count1 = 0
-    for word1 in wubi86_8105_map:
-        if word1 not in res_dict_temp:
-            res_dict_temp1.add(word1)
-            count1 += 1
-            line1 = f'{word1}\t{wubi86_8105_map[word1]}\t1'
-            # print(f'{count1} - {line1}')
-            res_dict[word1 + get_md5(line1)] = f'{wubi86_8105_map[word1]}\t1'
+    if is_complete_8105:
+        count1 = 0
+        for word1 in wubi86_8105_map:
+            if word1 not in res_dict_temp:
+                res_dict_temp1.add(word1)
+                count1 += 1
+                line1 = f'{word1}\t{wubi86_8105_map[word1]}\t1'
+                # print(f'{count1} - {line1}')
+                res_dict[word1 + get_md5(line1)] = f'{wubi86_8105_map[word1]}\t1'
 
-            if not is_sort:
-                res += f'{word1}\t{wubi86_8105_map[word1]}\t1\n'
+                if not is_sort:
+                    res += f'{word1}\t{wubi86_8105_map[word1]}\t1\n'
 
     # 多级分组排序（词长→编码长度→编码→汉字）
     with open(out_dir / out_file, 'w', encoding='utf-8') as o:
@@ -190,11 +192,15 @@ if __name__ == '__main__':
     is_filter_8105 = True
     white_list = ['，']
     # 是否改变原词典顺序（用于不想改变词典顺序的情况）
-    is_sort = False
+    is_sort = True
+    # 是否补充 8105 可能缺失的单字
+    is_complete_8105 = False
+    # 是否改变原有词条权重
+    is_change_weight = False
 
     src_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\out')
-    dict_start = 'wubi86.dict.yaml'
+    dict_start = 'tiger_short.dict.yaml'
 
     if not out_dir.exists():
         out_dir.mkdir(parents=True, exist_ok=True)

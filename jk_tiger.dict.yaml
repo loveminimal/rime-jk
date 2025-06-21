@@ -21,10 +21,12 @@ encoder:
 # ------------------------------------
 # tiger      「 8105 通规字 」虎码词库
 # tiger_user      「 养成系 」用户词库
+# tiger_short         「 秃虎 」简词库
 # ------------------------------------
 import_tables:
   - dicts/tiger
   - dicts/tiger_user
+  - dicts/tiger_short
   # - dicts/user_words
 use_preset_vocabulary: false
 ...

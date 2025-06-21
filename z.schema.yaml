@@ -1,13 +1,13 @@
-# Rime schema - jk_chars.schema.yaml
+# Rime schema - z.schema.yaml
 # encoding: utf-8
 
 schema:
-  schema_id: jk_chars
+  schema_id: z
   name: 拼音·反查
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |
-    - 拼音反查〔 10万+单字集 〕，拼音+自然码辅助码增强
+    - 拼音反查〔 10万+单字集 〕，拼音+辅助码增强
     - 仅用于拼音反查，不作为独立的输入方案
 
 engine:
@@ -41,13 +41,13 @@ speller:
   # ② 小鹤    algebra_flypy
   # ③ 自然码    algebra_zrm
   algebra:
-    __include: algebra.yaml:/algebra_flypy
+    __include: algebra.yaml:/algebra_pinyin
     __append:
       __include: algebra.yaml:/algebra_aux
 
 translator:
-  dictionary: jk_chars
-  prism: jk_chars
+  dictionary: z
+  prism: z
   enable_charset_filter: false
   enable_sentence: false
   enable_encoder: true

@@ -1,4 +1,4 @@
-# Rime dictionary - jk_chars.dict.yaml
+# Rime dictionary - z.dict.yaml
 # encoding: utf-8
 #
 # --- 说明 ---
@@ -10,7 +10,7 @@
 # - https://github.com/amzxyz/rime_wanxiang_pro
 #
 ---
-name: jk_chars
+name: z
 version: 2025.06
 sort: by_weight
 use_preset_vocabulary: false

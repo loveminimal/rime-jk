@@ -19,7 +19,7 @@ switches:
   __include: jk.yaml:/switches
   __append:
     - name: char_only
-      reset: 0	# 🔥词 ←0  1→ 单
+      reset: 1	# 🔥词 ←0  1→ 单
 
 engine:
   processors:
@@ -96,7 +96,7 @@ translator:
   enable_sentence: true           
   enable_encoder: true            
   encode_commit_history: false
-  enable_completion: true     
+  enable_completion: false     
   enable_user_dict: false      
   comment_format: "{comment}" 
 

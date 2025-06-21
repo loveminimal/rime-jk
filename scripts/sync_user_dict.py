@@ -39,6 +39,10 @@ def convert(src_dir, out_dir, src_file, out_file):
 
     src_file_path = src_dir / src_file
 
+    if not src_file_path.exists():
+        print(f'🪧  未发现 {src_file_path}')
+        return
+
     print('☑️  已加载用户词库文件 » %s' % src_file_path)
     with open(src_file_path, 'r', encoding='utf-8') as f:
         lines_total = f.readlines()
@@ -226,7 +230,8 @@ def exec(code_type = ''):
     # 合并至用户文件
     combine(out_dir, out_file)
     # 清理掉临时文件 *.temp
-    current_out_file_temp.unlink()
+    if current_out_file_temp.exists():
+        current_out_file_temp.unlink()
     
 
 if __name__ == '__main__':

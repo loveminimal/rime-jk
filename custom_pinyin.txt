@@ -4,6 +4,8 @@
 #@/db_type	tabledb
 #
 # --- 自定义短语 ---
+# 格式：以 Tab 分割 ➭「 词汇<Tab>编码<Tab>权重 」
+# https://github.com/iDvel/rime-ice/blob/main/custom_phrase.txt
 # 🪧小鹤简码
 
 # -------------------

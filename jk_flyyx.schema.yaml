@@ -77,7 +77,7 @@ punctuator:
 
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~`
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
   max_code_length: 4
@@ -118,8 +118,8 @@ emoji:
 zh2en:
   __include: jk.yaml:/zh2en
 
-# chaifen:
-#   __include: jk.yaml:/chaifen
+chaifen:
+  __include: jk.yaml:/chaifen
 
 traditionalize:
   __include: jk.yaml:/traditionalize

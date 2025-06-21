@@ -3870,6 +3870,8 @@ preset_keys:
   space: { label: '', preview: '{schema}', repeatable: false, functional: false, send: space}
   space1: {label: 空格, repeatable: false, functional: false, send: space}  #用于liquidkeyboard显示一致性
   space2: {label: ⎵, repeatable: false, functional: false, send: space}  #用与数字键盘空格的展现形式
+  # zaoci: { label: '造词', text: '{Z}{Z}' }
+  # fancha: { label: '反查', send: 'Z' }
   jisuan: { label: '计算', send: V }
   jine: { label: '金额', send: R }
   riqi: { label: '日期', send: N }

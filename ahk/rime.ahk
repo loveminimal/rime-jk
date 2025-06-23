@@ -61,7 +61,7 @@ weaselDeployerPath := GetWeaselPath('deployer')
 }
 
 ; 用户资料同步
-+!s::
++!a::
 {
     Run weaselDeployerPath " /sync"
     return

@@ -7,7 +7,7 @@ schema:
   author: 
     - Jack Liu <https://aituyaa.com>
   description: |
-    - 知心虎码「变频版」，虎码·拼音反查，小啊小女仆
+    - 知心虎码，虎码·拼音反查，小啊小女仆
     - https://github.com/loveminimal/rime-jk
   dependencies:
     - jk_ascii
@@ -19,7 +19,7 @@ switches:
   __include: jk.yaml:/switches
   __append:
     - name: char_only
-      reset: 1	# 🔥词 ←0  1→ 单
+      reset: 0	# 🔥词 ←0  1→ 单
 
 engine:
   processors:
@@ -96,9 +96,11 @@ translator:
   enable_sentence: true           
   enable_encoder: true            
   encode_commit_history: false
-  enable_completion: false     
+  enable_completion: true     
   enable_user_dict: false      
-  comment_format: "{comment}" 
+  # comment_format: "{comment}" 
+  comment_format: 
+    - xform|.|| # 不显示补全码
 
 
 date_translator:

@@ -105,7 +105,8 @@ translator:
   spelling_hints: 1
   # comment_format: "{comment}" 
   comment_format:
-    - xform/[^;]*;([^;]*)/$1/
+    # - xform/[^;]*;([^;]*)/$1/
+    - xform|.|| # 不显示补全码
   # preedit_format:
   #   __include: algebra.yaml:/preedit_format_flypy
 

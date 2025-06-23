@@ -18,6 +18,7 @@ use_preset_vocabulary: false
 ...
 词库	ci;sd ku;xy	200000000
 打字	da;ua zi;wh	200000000
+虎码	hu;zh ma;mn	300000000
 一个	yi;fi ge;jg	400000000
 俺宝	an;ja bao;wi	400000000
 宝子	bao;wi zi;hi	400000000
@@ -54,6 +55,9 @@ use_preset_vocabulary: false
 主词库	zhu;in ci;sd ku;xy	200000000
 自然码	zi;oi ran;vc ma;mn	200000000
 并击的	bing;hl ji;um de;ui	300000000
+形码的	xing;fe ma;mn de;ui	200000000
+引导符	yin;bg dao;vk fu;rk	100000000
+瞄一眼	miao;qq yi;fi yan;qi	100000000
 通规字	tong;ku gui;he zi;wh	200000000
 我映射	wo;tp ying;om she;zk	200000000
 修改出	xiu;je gai;vh chu;sm	200000000
@@ -69,6 +73,7 @@ use_preset_vocabulary: false
 加一些词	jia;sd yi;fi xie;sm ci;sd	100000000
 自我解构	zi;oi wo;tp jie;xq gou;ek	400000000
 并击输入	bing;hl ji;um shu;yp ru;ju	200000000
+对于形码	dui;rk yu;fn xing;fe ma;mn	200000000
 鹤音虎形	he;wx yin;xy hu;zh xing;fe	400000000
 虎鹤音形	hu;zh he;wx yin;xy xing;fe	200000000
 行有不得	xing;px you;nv bu;cb de;wk	200000000
@@ -93,6 +98,7 @@ use_preset_vocabulary: false
 解构一下自己	jie;xq gou;ek yi;fi xia;fy zi;oi ji;vj	100000000
 你是怎么想的	ni;jy shi;ot zen;wh me;tk xiang;eh de;ui	200000000
 也没有多少吧	ye;ey mei;kr you;nv duo;ll shao;yt ba;dm	100000000
+形码的确定性	xing;fe ma;mn de;bu,b que;uy ding;br xing;xu	500000000
 还是要加一些词	hai;cu shi;ot yao;vb jia;sd yi;fi xie;sm ci;sd	100000000
 没有办法的事情	mei;kr you;nv ban;sh fa;kk de;ui shi;fb qing;hv	100000000
 这个地方叫路由	zhe;vu ge;jg di;ge fang;lf jiao;di lu;ps you;dy	200000000

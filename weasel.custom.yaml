@@ -48,5 +48,5 @@ patch:
       hover_type: none
       click_to_capture: true
       layout:
-        __include: style.yaml:/layout_h
-        margin_y: -1
+        __include: style.yaml:/layout_v
+        # margin_y: -1

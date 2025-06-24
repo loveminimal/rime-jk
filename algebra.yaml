@@ -392,6 +392,100 @@ algebra_zhixin:
   - xform/kl(?![左右])$/f右/
 
 
+algebra_combo:
+  # 先將物理按鍵字符對應到宮保拼音鍵位中的拼音字母
+  - 'xlit|swxdecfrvgtbjum kiloaqzhynp|SCZHLFGDBKTPIUVANREOXXXXXXX|'
+  # 以下根據宮保拼音的鍵位分別變換聲母、韻母部分
+  # 空格鍵單擊時產生空白
+  - 'xform/^A$/ /'
+  # 消除無效按鍵
+  - xform/X+//
+
+
+  # 並擊聲母
+  - xform/^ZF/zh/
+  - xform/^CL/ch/
+  - xform/^FB/m/
+  - xform/^LD/n/
+  - xform/^HG/r/
+  # 特殊配列鍵盤用
+  - xform/^ZB/p/
+  - xform/^CD/t/
+  - xform/^SG/k/
+
+
+  - xlit/BPFDTLGKHZCS/bpfdtlgkhzcs/
+  # 通摄三等精組、泥來併入一等，須在尖團音規則前變換
+  # 濃龍蹤從松 ⟨niong/liong/ziong/ciong/siong -> nong/long/zong/cong/song⟩
+  - xform/^([nlzcs])(IRO|VNE)$/$1ong/
+
+  # G,K,H 接 I/Ü 作 ⟨ji/ju, qi/qu, xi/xu⟩
+  # 若分尖團，也可用 Z,C,S 與 I/Ü 相拼
+  - xform/^[gz]([IV])/j$1/
+  - xform/^[kc]([IV])/q$1/
+  - xform/^[hs]([IV])/x$1/
+
+  # ⟨er⟩自成音節
+  - xform/^R$/er/
+  # 舌尖元音⟨ï⟩
+  - xform/^([zcsr]h?)R?$/$1i/
+
+  - xform/ANE$/ang/
+  - xform/UARO$/uang/
+  - xform/IRO$/iong/
+  - xform/URO$/ong/
+  - xform/VNE$/iong/
+  - xform/UNE$/ong/
+  - xform/INE$/ing/
+  - xform/NE$/eng/
+
+  - xform/AN$/an/
+  - xform/VN$/vn/
+  - xform/UN$/uen/
+  - xform/IN$/in/
+  - xform/N$/en/
+
+  - xform/IAR$/iao/
+  - xform/IR$/iou/
+  - xform/UR$/uei/
+  - xform/AO$/ao/
+  - xform/RO$/ou/
+  - xform/AR$/ai/
+  - xform/RE?$/ei/
+  - xform/AE$/a/
+
+  - xlit/AOEIUV/aoeiuv/
+
+  # 漢語拼音方案的拼寫規則
+  - xform/^i(ng?)$/yi$1/
+  - xform/^i$/yi/
+  - xform/^i/y/
+  - xform/^ong$/weng/
+  - xform/^u$/wu/
+  - xform/^u/w/
+  - xform/^v/yu/
+  - xform/^([jqx])v/$1u/
+  # 一些容錯
+  - xform/^([bpmf])uo$/$1o/
+  - xform/^([dtngkhzcsr]h?)o$/$1uo/
+  - xform/io$/iao/
+  - xform/^([nl])uei$/$1ei/
+  - xform/^([nl])iong$/$1ong/
+  - xform/^([zcsr]h?)i([aoe])/$1$2/
+  - xform/^([zcsr]h?)i(ng?)$/$1e$2/
+  # 拼寫規則
+  - xform/iou$/iu/
+  - xform/uei$/ui/
+  - xform/uen$/un/
+
+  # 聲母獨用時補足隠含的韻母
+  # ⟨bu, pu, fu⟩
+  - xform/^([bpf])$/$1u/
+  # ⟨de, te, ne, le, ge, ke, he⟩
+  # 特別地，⟨me⟩ 對應常用字「麼·么」
+  - xform/^([mdtnlgkh])$/$1e/
+
+
 # === 拼音运算 ===
 algebra_pinyin: 
   - xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/

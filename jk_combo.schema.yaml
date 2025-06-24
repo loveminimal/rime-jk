@@ -48,7 +48,7 @@ speller:
     - "xform/^([a-z]+)$/$1'/"
 
 chord_composer:
-  __include: jk_pinyin.schema.yaml:/chord_composer_pinyin
+  __include: jk.yaml:/chord_composer_pinyin
 
 editor:
   bindings:

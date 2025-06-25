@@ -39,7 +39,7 @@ patch:
       # ​inline_preedit  单行布局 ← true  false → 双行布局
       # ----------------------------------------------------------
       # preedit_type: preview
-      # inline_preedit: true
+      inline_preedit: true
       # vertical_auto_reverse: true
       # --- 鼠标操作 ---------------------------------------------
       # hover_type       鼠标悬浮候选 ➭ none、hilite、semi_hilite
@@ -48,5 +48,5 @@ patch:
       hover_type: none
       click_to_capture: true
       layout:
-        __include: style.yaml:/layout_v
-        margin_y: -1
+        __include: style.yaml:/layout_h
+        # margin_y: -1

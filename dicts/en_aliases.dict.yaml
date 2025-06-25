@@ -119,7 +119,7 @@ code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_wubi.userdb.tx
 code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_tiger.userdb.txt	cct	0
 tail -f "C:\\Users\\jack\\AppData\\Local\\Temp\\rime.weasel\\rime.weasel.JK.jack.log.WARNING.20250525-191342.20412.log"	vlog	0
 
-"C:/Program Files/Rime/weasel-0.17.4/WeaselSetup.exe"	arc	0
+"C:/Program Files/Rime/weasel-0.16.3/WeaselSetup.exe"	arc	0
 cd ~/AppData/Roaming/Rime && py scripts/deploy_rime.py	ddr	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py	ssr	0
 cd ~/AppData/Roaming/Rime && py scripts/fetch_any_dict.py	fad	0

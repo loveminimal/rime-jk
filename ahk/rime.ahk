@@ -66,3 +66,10 @@ weaselDeployerPath := GetWeaselPath('deployer')
     Run weaselDeployerPath " /sync"
     return
 }
+
+; 添加用户词
++!u::
+{
+    Run "notepad.exe C:\Users\jack\AppData\Roaming\Rime\lua\user_words.lua"
+    return
+}

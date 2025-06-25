@@ -14,6 +14,10 @@ schema:
 
 switches:
   __include: jk.yaml:/switches
+  __append:
+    - name: schema
+      reset: 0
+      states: [ 英文·知心 ]  
 
 engine:
   processors:

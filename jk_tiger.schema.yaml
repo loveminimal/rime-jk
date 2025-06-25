@@ -20,6 +20,9 @@ switches:
   __append:
     - name: char_only
       reset: 0	# 🔥词 ←0  1→ 单
+    - name: schema
+      reset: 0
+      states: [ 虎码·知心 ]  
 
 engine:
   processors:

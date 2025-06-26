@@ -26,6 +26,7 @@ local keep_user_words_top = true
 
 -- ④ 此处可以指定你的方案 schema_id
 local schema_id_table = {
+    ["pinyin"] = "jk_pinyin",
     ["tiger"] = "jk_tiger",
     ["wubi"] = "jk_wubi",
     ["flyyx"] = "jk_flyyx",
@@ -153,7 +154,8 @@ function P.init(env)
     env.user_words = require("user_words") -- 加载文件中的 user_words
     local cur_schema = env.engine.schema.schema_id
     log.warning('➭ ' .. cur_schema)
-    if startsWith(cur_schema, schema_id_table["tiger"]) then
+    -- 鉴于有时候虎码方案隐藏候选框使用，故此处允许 jk_pinyin 方案添加「 自造词 」
+    if startsWith(cur_schema, schema_id_table["tiger"]) or startsWith(cur_schema, schema_id_table["pinyin"]) then
         env.schema_type = "tiger"
         cur_code_table = tiger_code_table
     elseif startsWith(cur_schema, schema_id_table["wubi"]) then

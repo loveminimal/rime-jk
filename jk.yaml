@@ -14,7 +14,7 @@ switches:
     reset: 0
   - name: emoji
     reset: 0
-    states: [ 💀, 😄 ]
+    states: [ 👻, 😄 ]
   - name: zh2en
     reset: 0
     states: [ ☷译, ☰译 ]

@@ -36,6 +36,10 @@ GetWeaselPath(type) {
     if type = "deployer" {
         return "C:\Program Files\Rime\weasel-" version "\WeaselDeployer.exe"
     }
+
+    if type = "setup" {
+        return "C:\Program Files\Rime\weasel-" version "\WeaselSetup.exe"
+    }
 }
 
 ; 获取执行路径
@@ -45,6 +49,7 @@ weaselServerPath := GetWeaselPath('server')
 ;     ; Run weaselServerPath ; 如果需要运行
 ; }
 weaselDeployerPath := GetWeaselPath('deployer')
+weaselSetupPath := GetWeaselPath('setup')
 
 ; 重启 Rime 服务
 ^p::
@@ -64,6 +69,13 @@ weaselDeployerPath := GetWeaselPath('deployer')
 +!a::
 {
     Run weaselDeployerPath " /sync"
+    return
+}
+
+; 打开输入法设定
++!c::
+{
+    Run weaselSetupPath
     return
 }
 

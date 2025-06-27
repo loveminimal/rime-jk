@@ -22,6 +22,7 @@ patch:
     - {schema: jk_ascii}
     - {schema: jk_pinyin}
     - {schema: jk_tiger}
+    - {schema: jk_combo}
 
   # --- 选单设置 ---
   switcher/+:

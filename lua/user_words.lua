@@ -6,6 +6,7 @@ local user_words = {
     ["周予"] = "mgiv",
     ["姜太虚"] = "gmzc",
     ["季欢"] = "xhre",
+    ["安印"] = "wbbf",
     ["宫保"] = "wdjd",
     ["自造词"] = "oqsa",
 }

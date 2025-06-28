@@ -137,8 +137,11 @@ custom_phrase:
 # alphabet      击键一律以字母表顺序排列「字母表，包含用并击按键」
 # algebra       运算规则
 # -------------------------------------
-# --- 完整版 ---
 chord_composer:
+  __include: chord_composer_mini
+
+# --- 空明镜像版 ---
+chord_composer_mirror:
   finish_chord_on_first_key_release: true
   prompt_format:
     # - "xform/^(.*)$/[$1]/" 
@@ -150,11 +153,10 @@ chord_composer:
   # 字母表，包含用并击按键
   # 击键一律以字母表顺序排列
   # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p',./"
-  # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
-  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/1234567890"
+  alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
+  # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/1234567890"
   algebra:
     __include: algebra.yaml:/algebra_mirror
-
 
 # --- 宫保拼音版 ---
 chord_composer_pinyin:
@@ -186,7 +188,6 @@ chord_composer_pinyin:
   algebra:
     __include: algebra.yaml:/algebra_combo
 
-
 # --- 迷你版 ---
 chord_composer_mini:
   prompt_format:
@@ -207,7 +208,6 @@ chord_composer_mini:
     # 仅保留〔 ,. ➭ ~ 〕，其余使用快符
     # ---------------------------------
     - xform/,\.(?![左右])$/~右/
-
 
 # --- OpenCC ---
 # -------------------------------------

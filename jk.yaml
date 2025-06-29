@@ -104,8 +104,8 @@ add_user_dict:
   tag: add_user_dict
   initial_quality: -1
   enable_charset_filter: false
-  enable_completion: true
-  enable_encoder: true
+  enable_completion: false
+  enable_encoder: false
   enable_sentence: true
   enable_user_dict: true
   encode_commit_history: false

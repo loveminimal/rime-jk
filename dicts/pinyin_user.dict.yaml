@@ -19,15 +19,20 @@ use_preset_vocabulary: false
 词库	ci;sd ku;xy	200000000
 打字	da;ua zi;wh	200000000
 虎码	hu;zh ma;mn	300000000
-一个	yi;fi ge;jg	400000000
 俺宝	an;ja bao;wi	400000000
 宝子	bao;wi zi;hi	400000000
+你好	ni;jy hao;bh	500000000
 求魔	qiu;fi mo;za	100000000
+秋儿	qiu;xc er;pe	600000000
 是的	shi;ot de;ui	500000000
+雨浩	yu;tv hao;kd	100000000
 这个	zhe;vu ge;jg	200000000
 并击	bing;hl ji;um	400000000
 部首	bu;it shou;ho	100000000
+都是	dou;qt shi;ot	400000000
 格衡	ge;es heng;pw	200000000
+季欢	ji;xh huan;re	700000000
+精力	jing;pv li;sl	100000000
 快符	kuai;hj fu;rk	200000000
 没有	mei;kr you;nv	200000000
 仙逆	xian;jv ni;hu	400000000
@@ -35,85 +40,51 @@ use_preset_vocabulary: false
 形码	xing;fe ma;mn	300000000
 因为	yin;rm wei;ii	400000000
 咱孩	zan;do hai;hk	300000000
-作者	zuo;jw zhe;qo	200000000
+周予	zhou;md yu;iv	800000000
 串击	chuan;dg ji;um	300000000
 殿主	dian;cr zhu;in	200000000
+好用	hao;bh yong;ty	200000000
 罗峰	luo;yl feng;va	200000000
 朙月	míng;rv yue;vy	100000000
 商业	shang;id ye;cy	100000000
-神印	shen;fg yin;bz	300000000
-事情	shi;fb qing;hv	100000000
-使用	shi;jb yong;ty	200000000
-现在	xian;ne zai;ng	500000000
+神印	shen;fg yin;bz	100000000
+使用	shi;jb yong;ty	2000000000
 音形	yin;xy xing;fe	600000000
 程琳	cheng;xn lin;ne	200000000
-这种	zhe;vu zhong;xg	200000000
 黄霑	huang;nh zhan;td	200000000
 双拼	shuang;rr pin;ul	200000000
+周兄	zhou;md xiong;dp	200000000
 打句子	da;ua ju;gj zi;hi	100000000
-打字吗	da;ua zi;wh ma;dn	100000000
 打起来	da;ua qi;pv lai;ah	100000000
-的威力	de;ui wei;nb li;sl	100000000
 辅助码	fu;yn zhu;fs ma;mn	200000000
 速录宝	su;xu lu;bk bao;wi	600000000
 主词库	zhu;in ci;sd ku;xy	200000000
 自然码	zi;oi ran;vc ma;mn	200000000
-并击的	bing;hl ji;um de;ui	300000000
 魔法殿	mo;za fa;kk dian;cr	100000000
-形码的	xing;fe ma;mn de;ui	200000000
 引导符	yin;bg dao;vk fu;rk	100000000
 瞄一眼	miao;qq yi;fi yan;qi	100000000
 通规字	tong;ku gui;he zi;wh	200000000
-我映射	wo;tp ying;om she;zk	200000000
-修改出	xiu;je gai;vh chu;sm	200000000
 空明码	kong;eu ming;ov ma;mn	600000000
 用形码	yong;ty xing;fe ma;mn	100000000
 越了解	yue;pn liao;rl jie;xq	200000000
-常来到	chang;sr lai;ah dao;yp	200000000
-适配中	shi;au pei;yv zhong;dg	200000000
-上面有	shang;yf mian;bm you;nv	200000000
-双拼加	shuang;rr pin;ul jia;sd	200000000
-得到一个	de;wk dao;yp yi;fi ge;jg	200000000
-自然码吗	zi;oi ran;vc ma;mn ma;dn	100000000
+梦中界	meng;el zhong;dg jie;qp	600000000
 辅助码版	fu;yn zhu;fs ma;mn ban;ar	200000000
-加一些词	jia;sd yi;fi xie;sm ci;sd	100000000
 自我解构	zi;oi wo;tp jie;xq gou;ek	400000000
 并击输入	bing;hl ji;um shu;yp ru;ju	200000000
-对于形码	dui;rk yu;fn xing;fe ma;mn	200000000
 鹤音虎形	he;wx yin;xy hu;zh xing;fe	400000000
-虎鹤音形	hu;zh he;wx yin;xy xing;fe	200000000
 行有不得	xing;px you;nv bu;cb de;wk	200000000
-关于并击	guan;hm yu;fn bing;hl ji;um	100000000
-空明码的	kong;eu ming;ov ma;mn de;ui	400000000
 神印骑士	shen;fg yin;bz qi;nz shi;gs	600000000
-早早完结	zao;on zao;on wan;wp jie;id	200000000
 地火水风	di;ge huo;ch shui;ks feng;ob	200000000
 宫保拼音	gong;wd bao;je pin;ul yin;xy	300000000
 脚本位置	jiao;vz ben;ef wei;ji zhi;yf	200000000
 朙月拼音	míng;rv yue;vy pin;ul yin;xy	100000000
-使用形码	shi;jb yong;ty xing;fe ma;mn	100000000
 小鹤音形	xiao;yx he;wx yin;xy xing;fe	200000000
-音形就是	yin;xy xing;fe jiu;go shi;ot	100000000
 虎鹤双形	hu;zh he;wx shuang;rr xing;fe	200000000
+时空回环	shi;ok kong;eu hui;rd huan;nc	500000000
+吞噬星空	tun;fd shi;dj xing;ol kong;eu	600000000
+出简让全	chu;sm jian;ro rang;sf quan;jn	300000000
 镜像映射	jing;zp xiang;jw ying;om she;zk	200000000
-双拼这种	shuang;rr pin;ul zhe;vu zhong;xg	200000000
 并击的威力	bing;hl ji;um de;ui wei;nb li;sl	100000000
-一味地求稳	yi;fi wei;da de;ge qiu;fi wen;xh	200000000
-不知道作者	bu;cb zhi;od dao;hu zuo;jw zhe;qo	100000000
-还的是形码	hai;cu de;ui shi;ot xing;fe ma;mn	200000000
 商业输入法	shang;id ye;cy shu;yp ru;ju fa;kk	100000000
-都有应属于	dou;qt you;nv ying;xf shu;cv yu;fn	200000000
-好用用哪个	hao;bh yong;ty yong;ty na;dt ge;jg	200000000
 魔法殿殿主	mo;za fa;kk dian;cr dian;cr zhu;in	100000000
 山海八荒录	shan;vs hai;kk ba;hb huang;lo lu;bk	400000000
-解构一下自己	jie;xq gou;ek yi;fi xia;fy zi;oi ji;vj	100000000
-你是怎么想的	ni;jy shi;ot zen;wh me;tk xiang;eh de;ui	200000000
-也没有多少吧	ye;ey mei;kr you;nv duo;ll shao;yt ba;dm	100000000
-形码的确定性	xing;fe ma;mn de;bu,b que;uy ding;br xing;xu	500000000
-还是要加一些词	hai;cu shi;ot yao;vb jia;sd yi;fi xie;sm ci;sd	100000000
-没有办法的事情	mei;kr you;nv ban;sh fa;kk de;ui shi;fb qing;hv	100000000
-这个地方叫路由	zhe;vu ge;jg di;ge fang;lf jiao;di lu;ps you;dy	200000000
-餐厅吃饭的算不	can;gq ting;xa chi;da fan;qr de;ui suan;rl bu;cb	200000000
-殿主是吃过亏的	dian;cr zhu;in shi;ot chi;da guo;ku kui;ma de;ui	100000000
-现在使用的简拼	xian;ne zai;ng shi;jb yong;ty de;ui jian;ro pin;ul	100000000
-用形码时间长了	yong;ty xing;fe ma;mn shi;ok jian;ao chang;pc le;rl	100000000

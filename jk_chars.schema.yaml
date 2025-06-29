@@ -41,7 +41,7 @@ speller:
   # ② 小鹤    algebra_flypy
   # ③ 自然码    algebra_zrm
   algebra:
-    __include: algebra.yaml:/algebra_flypy
+    __include: algebra.yaml:/algebra_pinyin
     __append:
       __include: algebra.yaml:/algebra_aux
 
@@ -50,7 +50,7 @@ translator:
   prism: jk_chars
   enable_charset_filter: false
   enable_sentence: false
-  enable_encoder: true
+  enable_encoder: false
   encode_commit_history: false
   max_phrase_length: 4
   enable_completion: false

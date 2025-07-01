@@ -4,10 +4,12 @@ local user_words = {
     ["候选框"] = "jqen",
     ["吞噬星空"] = "fdoe",
     ["周予"] = "mgiv",
+    ["咱孩"] = "dohk",
     ["姜太虚"] = "gmzc",
     ["季欢"] = "xhre",
     ["安印"] = "wbbf",
     ["宫保"] = "wdjd",
+    ["直聘"] = "nqqd",
     ["自造词"] = "oqsa",
 }
 return user_words

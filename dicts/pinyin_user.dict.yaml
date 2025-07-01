@@ -12,7 +12,7 @@
 # 
 ---
 name: pinyin_user
-version: 2025.06
+version: 2025.07
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -88,3 +88,4 @@ use_preset_vocabulary: false
 商业输入法	shang;id ye;cy shu;yp ru;ju fa;kk	100000000
 魔法殿殿主	mo;za fa;kk dian;cr dian;cr zhu;in	100000000
 山海八荒录	shan;vs hai;kk ba;hb huang;lo lu;bk	400000000
+爱涂鸦的蜗牛	ai;yr tu;kx ya;lx de;ui wo;cj niu;qn	300000000

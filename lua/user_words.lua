@@ -8,8 +8,13 @@ local user_words = {
     ["姜太虚"] = "jtxu",
     ["季欢"] = "jihr",
     ["安印"] = "anyb",
+    ["实践是检验真理的唯一标准"] = "ujuv",
     ["宫保"] = "gsbc",
+    ["山海八荒录"] = "uhbl",
+    ["形码"] = "xkma",
+    ["江湖夜雨十年灯"] = "jhyd",
     ["直聘"] = "vipb",
     ["自造词"] = "zzci",
+    ["音托"] = "ybto",
 }
 return user_words

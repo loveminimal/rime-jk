@@ -16,10 +16,10 @@ patch:
 # kuon lost_temple luna macau metroblue nba ps4 psionics skype smurfs 
 # so_young starcraft starcraft_ii steam tintin wii xbox_silver youtube       
 # ---------------------------------------------------------------------
-  __include: style.yaml:emjk
+  __include: style.yaml:skjk
   __patch:
     style/+:
-      color_scheme: emjk
+      color_scheme: skjk
       font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
       comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根

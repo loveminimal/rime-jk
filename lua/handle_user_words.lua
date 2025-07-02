@@ -155,13 +155,13 @@ function P.init(env)
     local cur_schema = env.engine.schema.schema_id
     log.warning('➭ ' .. cur_schema)
     -- 鉴于有时候虎码方案隐藏候选框使用，故此处允许 jk_pinyin 方案添加「 自造词 」
-    if startsWith(cur_schema, schema_id_table["tiger"]) or startsWith(cur_schema, schema_id_table["pinyin"]) then
+    if startsWith(cur_schema, schema_id_table["tiger"])then
         env.schema_type = "tiger"
         cur_code_table = tiger_code_table
     elseif startsWith(cur_schema, schema_id_table["wubi"]) then
         env.schema_type = "wubi"
         cur_code_table = wubi86_code_table
-    elseif startsWith(cur_schema, schema_id_table["flyyx"]) then
+    elseif startsWith(cur_schema, schema_id_table["flyyx"]) or startsWith(cur_schema, schema_id_table["pinyin"]) then
         env.schema_type = "flyyx"
         cur_code_table = flyyx_code_table
     end

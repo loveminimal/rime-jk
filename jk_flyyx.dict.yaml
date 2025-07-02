@@ -1,0 +1,35 @@
+# Rime dictionary - tiger.dict.yaml
+# encoding: utf-8
+# 
+# --- 说明 ---
+# 该字典是小鹤音形开源版词库
+# 
+# - https://github.com/loveminimal/rime-jk
+# - Jack Liu <https://aituyaa.com>
+
+---
+name: jk_flyyx
+version: 2025.06
+sort: by_weight
+# --------------------------------------------
+# flyyx_user     「 养成系 」用户词库
+# flyyx          「 首选、次选 」小鹤音形词库
+# flyyx_full     「 全码 」
+# flyyx_short    「 简码 」
+# flyyx_emoji    「 表情 」
+# flyyx_symbols  「 符号 」
+# flyyx_char     「 单字全集 」单字全集
+# flyyx_ext      「 查询 」单字模糊词库
+# --------------------------------------------
+import_tables:
+  - dicts/flyyx_user
+  - dicts/flyyx
+  - dicts/flyyx_full
+  - dicts/flyyx_short
+  - dicts/flyyx_emoji
+  - dicts/flyyx_symbols
+  # - dicts/flyyx_char
+  # - dicts/flyyx_ext
+use_preset_vocabulary: false
+...
+霑	vjyk	1

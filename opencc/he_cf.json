@@ -1,0 +1,16 @@
+{
+  "name": "he_cf",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "text",
+      "file": "he_cf.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "text",
+      "file": "he_cf.txt"
+    }
+  }]
+}

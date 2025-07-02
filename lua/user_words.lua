@@ -12,12 +12,17 @@ local user_words = {
     ["实践是检验真理的唯一标准"] = "ujuv",
     ["宫保"] = "gsbc",
     ["山海八荒录"] = "uhbl",
+    ["巴萨"] = "basa",
     ["形码"] = "xkma",
+    ["曼城"] = "mjig",
     ["格式化"] = "guhx",
     ["江湖夜雨十年灯"] = "jhyd",
     ["洛水"] = "louv",
+    ["皇马"] = "hlma",
     ["直聘"] = "vipb",
+    ["签章"] = "qmvh",
     ["自造词"] = "zzci",
+    ["虎码"] = "huma",
     ["音托"] = "ybto",
 }
 return user_words

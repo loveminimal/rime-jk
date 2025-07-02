@@ -229,7 +229,7 @@ zh2en:
 # tips  char←字 词→all
 # -------------------------------------
 chaifen:
-  opencc_config: hu_cf.json
+  opencc_config: he_cf.json
   option_name: chaifen
   show_in_comment: true 
   comment_format:     

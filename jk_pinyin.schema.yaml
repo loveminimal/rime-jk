@@ -10,11 +10,11 @@ schema:
     - 知心拼音，拼音·辅助码，小啊小女仆
     - https://github.com/loveminimal/rime-jk
     - 支持〔 全拼、小鹤双拼、自然码双拼 〕+ 增强版
-    - 默认〔 小鹤双拼 〕，辅助码类型与词库有关〔 预设为虎码首末 〕
+    - 默认〔 小鹤双拼 〕，辅助码类型与词库有关〔 预设为鹤形 〕
   dependencies:
     - jk_ascii
     - jk_chars
-  icon: 'assets/pen.ico'
+  icon: 'assets/fly.ico'
   ascii_icon: 'assets/ascii.ico'
 
 switches:
@@ -90,7 +90,7 @@ speller:
   # ② 小鹤    algebra_flypy
   # ③ 自然码    algebra_zrm
   algebra:
-    __include: algebra.yaml:/algebra_pinyin
+    __include: algebra.yaml:/algebra_flypy
     __append:
       __include: algebra.yaml:/algebra_aux
       

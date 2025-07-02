@@ -7,7 +7,7 @@ schema:
   author:
     - by Jack Liu <https://aituyaa.com>
   description: |
-    - 拼音反查〔 10万+单字集 〕，拼音+自然码辅助码增强
+    - 拼音反查〔 10万+单字集 〕，拼音+鹤形辅助码增强
     - 仅用于拼音反查，不作为独立的输入方案
 
 engine:
@@ -41,7 +41,7 @@ speller:
   # ② 小鹤    algebra_flypy
   # ③ 自然码    algebra_zrm
   algebra:
-    __include: algebra.yaml:/algebra_pinyin
+    __include: algebra.yaml:/algebra_flypy
     __append:
       __include: algebra.yaml:/algebra_aux
 

@@ -87,8 +87,7 @@ speller:
   delimiter: " ~"     
   max_code_length: 4
   auto_select: true	# 四码上屏 ←true  false→ 五码顶屏
-  auto_select_pattern: ^;.$|^\w{4}$
-  auto_clear: max_length  # manual | auto | max_length 空码按下一键确认清屏 | 空码自动清 | 达到最长码时后码顶上清屏
+
 
 chord_composer:
   __include: jk.yaml:/chord_composer_mini
@@ -97,9 +96,9 @@ chord_composer:
 translator:
   dictionary: jk_flyyx             
   prism: jk_flyyx                  
-  enable_charset_filter: true     
+  enable_charset_filter: false     
   enable_sentence: true           
-  enable_encoder: true            
+  enable_encoder: false            
   encode_commit_history: false
   enable_completion: false     
   enable_user_dict: false      

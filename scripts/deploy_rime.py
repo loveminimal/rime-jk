@@ -9,7 +9,7 @@ from get_rime_version import get_rime_version
 def deploy_rime():
     print('\n🔜  === 重新部署 Rime 最新配置 ===')
     try:
-        result = subprocess.run([weasel_deployer_path, "/deploy"], capture_output=True, text=True)
+        result = subprocess.run([weasel_deployer_path, "/deploy"], capture_output=True, text=True, encoding="utf-8")
         if result.returncode == 0:
             progress('正在部署')
             print("\n✅  » Rime 部署成功")

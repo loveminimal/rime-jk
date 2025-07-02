@@ -35,7 +35,7 @@ from datetime import datetime, timedelta, timezone
 def run_git_command(command, cwd=None):
     """执行git命令并返回是否成功"""
     try:
-        result = subprocess.run(["git"] + command, cwd=cwd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        result = subprocess.run(["git"] + command, cwd=cwd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8")
         return {
             "success": True,
             "stdout": result.stdout.strip(),

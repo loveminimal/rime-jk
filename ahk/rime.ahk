@@ -85,3 +85,10 @@ weaselSetupPath := GetWeaselPath('setup')
     Run "notepad.exe C:\Users\jack\AppData\Roaming\Rime\lua\user_words.lua"
     return
 }
+
+; 插入定制词
++!i::
+{
+    Run "notepad.exe C:\Users\jack\AppData\Roaming\Rime\custom_pinyin.txt"
+    return
+}

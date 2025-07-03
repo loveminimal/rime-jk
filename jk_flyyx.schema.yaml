@@ -11,7 +11,7 @@ schema:
     - https://github.com/loveminimal/rime-jk
   dependencies:
     - jk_ascii
-    - jk_chars
+    - jk_pinyin
   icon: 'assets/fly_m.ico'
   ascii_icon: 'assets/ascii.ico'
 
@@ -114,6 +114,7 @@ reverse_lookup:
 
 pinyin:
   __include: jk.yaml:/pinyin
+  dictionary: jk_pinyin
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase
@@ -129,6 +130,10 @@ chaifen:
   __include: jk.yaml:/chaifen
   opencc_config: he_cf.json
 
-
 traditionalize:
   __include: jk.yaml:/traditionalize
+
+#语法模型
+__include: octagram	#启用语言模型
+octagram:
+  __include: jk.yaml:/octagram

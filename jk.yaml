@@ -86,6 +86,7 @@ pinyin:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
+  enable_user_dict: false
 
 user_dict_set:
   dictionary: jk_pinyin

@@ -22,6 +22,7 @@ import_tables:
   - dicts/flyyx
   # - dicts/flyyx_char
   # - dicts/flyyx_ext
+  # - dicts/user_words
 use_preset_vocabulary: false
 ...
 霑	vjyk

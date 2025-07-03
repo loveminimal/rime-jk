@@ -12,7 +12,7 @@ patch:
   # --- 方案列表 ---
   # ---------------------------------------------------------------------
   # jk_ascii      英文·知心   ¦ 自定义 ASCII（方便使用快捷键、快符等）
-  # jk_flyyx      小鹤·音形   ¦ 小鹤音形
+  # jk_flyyx      小鹤·音形   ¦ 小鹤音形（* 默认使用 jk_pinyin 反查）
   # jk_pinyin     拼音·知心   ¦ 拼音输入（默认小鹤双拼+鹤辅）
   # jk_chars      拼音·反查   ¦ * 仅用于反查，非独立方案（10W+大字集）
   # 
@@ -21,7 +21,7 @@ patch:
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_flyyx}
-    - {schema: jk_pinyin}
+    # - {schema: jk_pinyin}
 
   # --- 选单设置 ---
   switcher/+:

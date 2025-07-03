@@ -54,22 +54,363 @@ local function utf8_sub(str, start_char, end_char)
     return string.sub(str, start_byte, end_byte - 1)
 end
 
+local function hasSemi(str)
+    return string.find(str, ";")
+end
+
+local function remove_duplicates(input_str)
+    local seen = {}      -- 用于记录已出现的子串
+    local result = {}    -- 存储去重后的结果
+    local parts = {}     -- 临时存储分割后的子串
+
+    -- 按分号分割字符串
+    for part in string.gmatch(input_str, "([^;]+)") do
+        table.insert(parts, part)
+    end
+
+    -- 去重逻辑
+    for _, item in ipairs(parts) do
+        if not seen[item] then
+            seen[item] = true
+            table.insert(result, item)
+        end
+    end
+
+    -- 重新拼接为字符串
+    return table.concat(result, ";")
+end
+
 -- 将汉字转换为虎码、五笔编码
 local function get_code(word)
+    local CODE = ''
+
+    -- first、seconde、third、last
+    local f_char = ''
+    local s_char = ''
+    local t_char = ''
+    local l_char = ''
+
     local len = utf8.len(word)
     if len == 1 then
-        return cur_code_table[word]
+        return remove_duplicates(cur_code_table[word])
+
     elseif len == 2 then
-        return string.sub(cur_code_table[utf8_sub(word, 1, 1)], 1, 2) .. string.sub(cur_code_table[utf8_sub(word, 2, 2)], 1, 2)
+
+        f_char = utf8_sub(word, 1, 1)
+        s_char = utf8_sub(word, 2, 2)
+
+        local f_char_code = cur_code_table[f_char]
+        local s_char_code = cur_code_table[s_char]
+
+        local f_hasSemi = hasSemi(f_char_code)
+        local s_hasSemi =  hasSemi(s_char_code)
+
+        if not f_hasSemi and not s_hasSemi then
+            CODE = string.sub(f_char_code, 1, 2) .. string.sub(s_char_code, 1, 2)
+            return remove_duplicates(CODE)
+        end
+
+        
+        if f_hasSemi and not s_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do
+                CODE = CODE .. string.sub(_code, 1, 2) .. string.sub(s_char_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+        
+        if not f_hasSemi and s_hasSemi then
+            for _code in string.gmatch(s_char_code, "([^;]+)") do
+                CODE = CODE .. string.sub(f_char_code, 1, 2) .. string.sub(_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+        
+        if f_hasSemi and s_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 2) .. string.sub(s_char_code, 1, 2) .. ';'
+            end
+
+            for _code in string.gmatch(s_char_code, "([^;]+)") do
+                CODE = CODE .. string.sub(f_char_code, 1, 2) .. string.sub(_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+
     elseif len == 3 then
-        return
-            string.sub(cur_code_table[utf8_sub(word, 1, 1)], 1, 1) .. string.sub(cur_code_table[utf8_sub(word, 2, 2)], 1, 1) ..
-                string.sub(cur_code_table[utf8_sub(word, 3, 3)], 1, 2)
+        f_char = utf8_sub(word, 1, 1)
+        s_char = utf8_sub(word, 2, 2)
+        t_char = utf8_sub(word, 3, 3)
+
+        local f_char_code = cur_code_table[f_char]
+        local s_char_code = cur_code_table[s_char]
+        local t_char_code = cur_code_table[t_char]
+
+        
+        local f_hasSemi = hasSemi(f_char_code)
+        local s_hasSemi =  hasSemi(s_char_code)
+        local t_hasSemi =  hasSemi(t_char_code)
+
+        -- 三个有零个
+        if not f_hasSemi and not s_hasSemi and not t_hasSemi then
+            CODE = string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 2)
+            return remove_duplicates(CODE)
+        end
+
+        -- 三个有一个
+        if f_hasSemi and not s_hasSemi and not t_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+
+        if not f_hasSemi and s_hasSemi and not t_hasSemi then
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+        if not f_hasSemi and not s_hasSemi and t_hasSemi then
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+        -- 三个有两个
+        if f_hasSemi and s_hasSemi and not t_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 2) .. ';'
+            end
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+        if f_hasSemi and not s_hasSemi and t_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 2) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+        if not f_hasSemi and s_hasSemi and t_hasSemi then
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 2) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+        -- 三个有三个
+        if f_hasSemi and s_hasSemi and t_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 2) .. ';'
+            end
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 2) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 2) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+
+
+
     elseif len >= 4 then
-        return
-            string.sub(cur_code_table[utf8_sub(word, 1, 1)], 1, 1) .. string.sub(cur_code_table[utf8_sub(word, 2, 2)], 1, 1) ..
-                string.sub(cur_code_table[utf8_sub(word, 3, 3)], 1, 1) ..
-                string.sub(cur_code_table[utf8_sub(word, len, len)], 1, 1)
+        f_char = utf8_sub(word, 1, 1)
+        s_char = utf8_sub(word, 2, 2)
+        t_char = utf8_sub(word, 3, 3)
+        l_char = utf8_sub(word, len, len)
+
+        local f_char_code = cur_code_table[f_char]
+        local s_char_code = cur_code_table[s_char]
+        local t_char_code = cur_code_table[t_char]
+        local l_char_code = cur_code_table[l_char]
+
+                
+        local f_hasSemi = hasSemi(f_char_code)
+        local s_hasSemi =  hasSemi(s_char_code)
+        local t_hasSemi =  hasSemi(t_char_code)
+        local l_hasSemi =  hasSemi(l_char_code)
+
+        -- 四个有零个
+        if not f_hasSemi and not s_hasSemi and not t_hasSemi and not l_hasSemi then
+            CODE = string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1)
+            return remove_duplicates(CODE)
+        end
+
+        -- 四个有一个
+        if f_hasSemi and not s_hasSemi and not t_hasSemi and not l_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end        
+        if not f_hasSemi and s_hasSemi and not t_hasSemi and not l_hasSemi then
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end        
+        if not f_hasSemi and not s_hasSemi and t_hasSemi and not l_hasSemi then
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end        
+        if not f_hasSemi and not s_hasSemi and not t_hasSemi and l_hasSemi then
+            for _code in string.gmatch(l_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end        
+
+        -- 四个有两个
+        if f_hasSemi and s_hasSemi and not t_hasSemi and not l_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end   
+
+        if f_hasSemi and not s_hasSemi and t_hasSemi and not l_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end   
+
+        if f_hasSemi and not s_hasSemi and not t_hasSemi and l_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(l_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end   
+
+        if not f_hasSemi and  s_hasSemi and t_hasSemi and not l_hasSemi then
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end 
+
+        if not f_hasSemi and  s_hasSemi and not t_hasSemi and l_hasSemi then
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(l_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end 
+
+        if not f_hasSemi and  not s_hasSemi and t_hasSemi and l_hasSemi then
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(l_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end 
+
+        -- 四个有三个
+        if f_hasSemi and s_hasSemi and t_hasSemi and not l_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end
+
+        if f_hasSemi and s_hasSemi and not t_hasSemi and l_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(l_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end           
+
+        if f_hasSemi and not s_hasSemi and t_hasSemi and l_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(l_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end 
+
+        if not f_hasSemi and s_hasSemi and t_hasSemi and l_hasSemi then
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(l_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end 
+        
+        -- 四个有四个
+        if f_hasSemi and s_hasSemi and t_hasSemi and l_hasSemi then
+            for _code in string.gmatch(f_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(s_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(t_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(_code, 1, 1) .. string.sub(l_char_code, 1, 1) .. ';'
+            end
+            for _code in string.gmatch(l_char_code, "([^;]+)") do 
+                CODE = CODE .. string.sub(f_char_code, 1, 1) .. string.sub(s_char_code, 1, 1) .. string.sub(t_char_code, 1, 1) .. string.sub(_code, 1, 1) .. ';'
+            end
+            return remove_duplicates(CODE:sub(1, -2))
+        end 
+
+
+
     end
 
     return ""
@@ -90,8 +431,11 @@ local function write_word_to_file(env)
 	table.sort(phrases)  -- 默认按字典序排序
 	-- 使用排序后的顺序生成 serialize_str
     local serialize_str = "" -- 返回数据部分
+
 	for _, phrase in ipairs(phrases) do
-	    local code = get_code(phrase)
+        
+        local code = get_code(phrase)
+
         -- todo 先放这里，没啥用
         -- for _code in string.gmatch(code, "([^;]+)") do
         --     print(_code)
@@ -131,7 +475,13 @@ local function write_word_to_dict(env)
         "version: 2025.05\nsort: by_weight\nuse_preset_vocabulary: false\n...\n" -- 返回数据部分
 	for _, phrase in ipairs(phrases) do
 	    local code = get_code(phrase)
-	    serialize_str = serialize_str .. string.format('%s\t%s\t%d\n', phrase, code, keep_user_words_top and 100000000 or 1)
+        if hasSemi(code) then
+            for _code in string.gmatch(code, "([^;]+)") do 
+	            serialize_str = serialize_str .. string.format('%s\t%s\t%d\n', phrase, _code, keep_user_words_top and 100000000 or 1)
+            end
+        else
+            serialize_str = serialize_str .. string.format('%s\t%s\t%d\n', phrase, code, keep_user_words_top and 100000000 or 1)
+        end
 	end
 
     -- 构造完整的 record 内容
@@ -243,7 +593,7 @@ local function hasKey(tbl, key)
         return false
     end
     for k, _ in pairs(tbl) do
-        if k == key then
+        if #key == 4 and string.find(k, key) then
             return true
         end
     end
@@ -304,7 +654,7 @@ function F.func(input, env)
             -- 遍历当前键对应的词组列表
             for _, phrase in ipairs(phrases) do
                 -- log.warning("值:" .. phrase)
-                if input_code == code then
+                if #input_code == 4 and string.find(code, input_code) then
                     local new_cand = Candidate("word", cand.start, cand._end, phrase, "*")
                     table.insert(new_candidates, new_cand)
                 else

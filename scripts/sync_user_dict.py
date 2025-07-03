@@ -15,6 +15,7 @@ $ ➭ python sync_user_dict.py
 # out - C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\wubi86_user.dict.yaml
 ---------------------------------------------------------------------------------------
 '''
+import hashlib
 import re
 from pathlib import Path
 from collections import defaultdict
@@ -24,6 +25,11 @@ from timer import timer
 from progress import progress
 from is_chinese_char import is_chinese_char
 
+def get_md5(text: str) -> str:
+    """计算字符串的 MD5 哈希值"""
+    md5 = hashlib.md5()  # 创建 MD5 对象
+    md5.update(text.encode('utf-8'))  # 传入字节数据（必须 encode）
+    return md5.hexdigest()  # 返回 32 位 16 进制字符串
 
 @timer
 def convert(src_dir, out_dir, src_file, out_file):
@@ -88,7 +94,7 @@ def convert(src_dir, out_dir, src_file, out_file):
             o.write(res)
 
 @timer
-def combine(out_dir, out_file):
+def combine(out_dir, out_file, code_type):
     res_dict = {}
     res_dict_weight = defaultdict(set)
     lines_total = []
@@ -106,7 +112,7 @@ def combine(out_dir, out_file):
     # user_words_path = out_dir / 'user_words.dict.yaml'
     user_words_path = Path(out_dir / '../lua/user_words.lua').resolve()
     # print(user_words_path)
-    if user_words_path.exists():
+    if not code_type.startswith("1") and user_words_path.exists():
         with open(user_words_path, 'r', encoding='utf-8') as f:
             print('☑️  已加载用户自造词文件 » %s' % user_words_path)
             for l in f.readlines():
@@ -119,8 +125,14 @@ def combine(out_dir, out_file):
                     code = _arr[1][:-2]
                     weight = '100000000' if is_keep_user_dict_first else '1'
                     # print(f'{word}\t{code}\t{weight}')
-                    lines_users.append(f'{word}\t{code}\t{weight}\n')
-        # print(type)
+                    if ';' in code:
+                        print(code)
+                        for _code in code.split(';'):
+                            print(f'{word}\t{_code}\t{weight}')
+                            lines_users.append(f'{word}\t{_code}\t{weight}\n')
+                    else:
+                        lines_users.append(f'{word}\t{code}\t{weight}\n')
+        # print(type, code_type)
         # ^ 虎码常规
         if type == 'tiger' and code_type == '30':
             lines_total.extend(lines_users)
@@ -129,8 +141,8 @@ def combine(out_dir, out_file):
             lines_total.extend(lines_users)
         # ^ 小鹤音形
         if type == 'flyyx' and code_type == '40':
+            # print('lines_users ➭ ', lines_users)
             lines_total.extend(lines_users)
-
 
     # 去重并处理词条
     for line in set(lines_total):
@@ -143,10 +155,10 @@ def combine(out_dir, out_file):
             else:
                 weight = int(weight) if not weight.endswith('00000000') else int(weight[:-8])
 
-            if word not in res_dict or weight > max(res_dict_weight[word]):
-                res_dict[word] = f'{code}\t{weight}'
+            if (word + get_md5(code)) not in res_dict or weight > max(res_dict_weight[word]):
+                res_dict[word + get_md5(code)] = f'{code}\t{weight}'
                 res_dict_weight[word].add(weight)
-
+    # print(res_dict)
     # 多级分组排序（词长→编码长度→编码→汉字）
     with open(out_dir / out_file, 'w', encoding='utf-8') as o:
         o.write(get_header_sync(out_file))
@@ -154,7 +166,7 @@ def combine(out_dir, out_file):
         # 第一级：按词长分组
         word_len_dict = defaultdict(list)
         for word, value in res_dict.items():
-            word_len_dict[len(word)].append((word, value))
+            word_len_dict[len(word) - 32].append((word, value))
 
         # 处理每组词长
         for word_len in sorted(word_len_dict.keys()):
@@ -174,7 +186,7 @@ def combine(out_dir, out_file):
                 group = sorted(code_len_dict[code_len], 
                              key=lambda x: (x[1], x[0]))  # 先按编码排序，再按汉字排序
                 for word, _, value in group:
-                    o.write(f'{word}\t{value}\n')
+                    o.write(f'{word[:-32]}\t{value}\n')
             print(f'☑️  已合并处理生成 {word_len} 字词语')
         print('✅  » 已合并生成用户词典 %s' % (out_dir / out_file))
 
@@ -197,7 +209,7 @@ def exec(code_type = ''):
 1 ➭ 拼音；20 ➭ 五笔常规；21 ➭ 五笔整句；30 ➭ 虎码常规；31 ➭ 虎码整句；40 ➭ 小鹤音形
 --------------------------------------------------------------------------------------
         ''')
-        code_type = input(f"🔔  默认「 虎码常规 」? (30): ").strip().lower() or "30"
+        code_type = input(f"🔔  默认「 小鹤音形 」? (40): ").strip().lower() or "40"
         print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
 
     if code_type.startswith("1"):
@@ -228,7 +240,7 @@ def exec(code_type = ''):
 
     convert(src_dir, out_dir, src_file, out_file)
     # 合并至用户文件
-    combine(out_dir, out_file)
+    combine(out_dir, out_file, code_type)
     # 清理掉临时文件 *.temp
     if current_out_file_temp.exists():
         current_out_file_temp.unlink()

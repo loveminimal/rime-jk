@@ -143,6 +143,13 @@ def combine(out_dir, out_file, code_type):
         if type == 'flyyx' and code_type == '40':
             # print('lines_users ➭ ', lines_users)
             lines_total.extend(lines_users)
+        
+        # 是否在同步至用户词典后删除 user_words.lua
+        if is_delete_user_words:
+            user_words_path.unlink()
+            # 删除后创建并初始化一个新的 user_words.lua
+            with open(user_words_path, 'w', encoding='utf-8') as uw:
+                uw.write('-- type: flyyx\nlocal user_words = {\n\n}\nreturn user_words')
 
     # 去重并处理词条
     for line in set(lines_total):
@@ -209,7 +216,7 @@ def exec(code_type = ''):
 1 ➭ 拼音；20 ➭ 五笔常规；21 ➭ 五笔整句；30 ➭ 虎码常规；31 ➭ 虎码整句；40 ➭ 小鹤音形
 --------------------------------------------------------------------------------------
         ''')
-        code_type = input(f"🔔  默认「 小鹤音形 」? (40): ").strip().lower() or "40"
+        code_type = input(f"🔔  默认「 虎码常规 」? (30): ").strip().lower() or "30"
         print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
 
     if code_type.startswith("1"):
@@ -244,7 +251,6 @@ def exec(code_type = ''):
     # 清理掉临时文件 *.temp
     if current_out_file_temp.exists():
         current_out_file_temp.unlink()
-    
 
 if __name__ == '__main__':
     current_dir = Path.cwd()
@@ -252,6 +258,8 @@ if __name__ == '__main__':
     # --- ① 是否让用户词库排在最前 ---
     # 权重放大亿点点
     is_keep_user_dict_first = True
+    # 是否在同步至用户词典后删除 user_words.lua
+    is_delete_user_words = True
 
     # --- ② 编码类型 ---
     # 目标转码类型：

@@ -497,10 +497,31 @@ end
 local function startsWith(str, prefix)
     return string.sub(str, 1, #prefix) == prefix
 end
+
+local function file_exists(path)
+    local file = io.open(path, "r")
+    if file then
+        file:close()
+        return true
+    end
+    return false
+end
+
 -- ❶ 添加、删除候选项 ---
 -- ------------------------------------------------------------------
 local P = {}
+local user_words_lua = rime_api.get_user_data_dir() .. "/lua/user_words.lua"
 function P.init(env)
+    -- 如果不存在 user_words.lua ，创建并初始化
+    if not file_exists(user_words_lua) then
+        local file, err = io.open(user_words_lua, "w")
+        if not file then
+            return
+        end
+        file:write("-- type: flyyx\nlocal user_words = {\n\n}\nreturn user_words")
+        file:close()
+    end
+
     env.user_words = require("user_words") -- 加载文件中的 user_words
     local cur_schema = env.engine.schema.schema_id
     log.warning('➭ ' .. cur_schema)

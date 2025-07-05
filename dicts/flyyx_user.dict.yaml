@@ -13,22 +13,23 @@
 ---
 name: flyyx_user
 version: 2025.07
-sort: by_weight
+sort: original
 use_preset_vocabulary: false
 ...
 俺宝	anbc	1
 安印	anyb	1
 巴萨	basa	1
 宝子	bczi	1
+遍历	bmli	1
 词频	cipb	1
 道祖	dczu	1
 宫保	gsbc	1
-鹤形	hexk	1
 横跳	hgtn	1
+韩立	hjli	1
 皇马	hlma	1
 虎码	huma	1
 滑跪	hxgv	1
-出简	iujm	1
+茶友	iayz	1
 季欢	jihr	1
 简历	jmli	1
 绝世	jtui	1
@@ -36,9 +37,9 @@ use_preset_vocabulary: false
 洛水	louv	1
 曼城	mjig	1
 魔然	morj	1
+其它	qita	1
 签章	qmvh	1
 求魔	qqmo	1
-让全	rhqr	1
 神识	ufui	1
 实名	uimk	1
 受众	uzvs	1
@@ -50,6 +51,7 @@ use_preset_vocabulary: false
 周予	vzyu	1
 悟空	wuks	1
 形码	xkma	1
+相交	xljn	1
 仙逆	xmni	1
 修仙	xqxm	1
 音托	ybto	1

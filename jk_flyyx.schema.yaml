@@ -97,7 +97,7 @@ translator:
   dictionary: jk_flyyx             
   prism: jk_flyyx                  
   enable_charset_filter: false     
-  enable_sentence: true           
+  enable_sentence: false           
   enable_encoder: false            
   encode_commit_history: false
   enable_completion: false     

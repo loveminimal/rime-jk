@@ -518,7 +518,7 @@ function P.init(env)
         if not file then
             return
         end
-        file:write("-- type: flyyx\nlocal user_words = {\n\n}\nreturn user_words")
+        file:write("-- type: flyyx\nlocal user_words = {\n}\nreturn user_words")
         file:close()
     end
 
@@ -678,11 +678,12 @@ function F.func(input, env)
                 if #input_code == 4 and string.find(code, input_code) then
                     local new_cand = Candidate("word", cand.start, cand._end, phrase, "*")
                     table.insert(new_candidates, new_cand)
-                else
-                    table.insert(old_candidates, cand)
+                -- else
+                --     table.insert(old_candidates, cand)
                 end
             end
         end
+        table.insert(old_candidates, cand)
     end
 
     table.sort(new_candidates, function(a, b)

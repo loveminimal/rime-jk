@@ -149,7 +149,7 @@ def combine(out_dir, out_file, code_type):
             user_words_path.unlink()
             # 删除后创建并初始化一个新的 user_words.lua
             with open(user_words_path, 'w', encoding='utf-8') as uw:
-                uw.write('-- type: flyyx\nlocal user_words = {\n\n}\nreturn user_words')
+                uw.write('-- type: flyyx\nlocal user_words = {\n}\nreturn user_words')
 
     # 去重并处理词条
     for line in set(lines_total):

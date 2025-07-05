@@ -669,20 +669,21 @@ function F.func(input, env)
         return
     end
 
-    for cand in input:iter() do
-        for code, phrases in pairs(env.seq_words_dict) do
-            -- log.warning("键:" .. code)
-            -- 遍历当前键对应的词组列表
-            for _, phrase in ipairs(phrases) do
-                -- log.warning("值:" .. phrase)
-                if #input_code == 4 and string.find(code, input_code) then
-                    local new_cand = Candidate("word", cand.start, cand._end, phrase, "*")
-                    table.insert(new_candidates, new_cand)
-                -- else
-                --     table.insert(old_candidates, cand)
-                end
+    -- 循环遍历 user_words 创建新的候选
+    for code, phrases in pairs(env.seq_words_dict) do
+        -- log.warning("键:" .. code)
+        -- 遍历当前键对应的词组列表
+        for _, phrase in ipairs(phrases) do
+            -- log.warning("值:" .. phrase)
+            if code == input_code then
+            -- if input_code == 4 and string.find(code, input_code) then
+                local new_cand = Candidate("word", 1, 4, phrase, "*")
+                table.insert(new_candidates, new_cand)
             end
         end
+    end
+    -- 整理已有候选（用于后续排序）
+    for cand in input:iter() do
         table.insert(old_candidates, cand)
     end
 

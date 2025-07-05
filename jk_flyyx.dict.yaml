@@ -14,14 +14,16 @@ sort: by_weight
 # ------------------------------------------
 # flyyx          「 合一版 」小鹤音形词库
 # flyyx_user         「 养成系 」用户词库
-# flyyx_char           「 单字 」全码全集 ✗
-# flyyx_ext                「 查询 」模糊 ✗
+# flyyx_ext            「 扩展 」表情符号 
+# flyyx_char             「 单字 」全码集 ✗
+# flyyx_map                「 查询 」模糊 ✗
 # ------------------------------------------
 import_tables:
   - dicts/flyyx_user
   - dicts/flyyx
+  - dicts/flyyx_ext
   # - dicts/flyyx_char
-  # - dicts/flyyx_ext
+  # - dicts/flyyx_map
   # - dicts/user_words
 use_preset_vocabulary: false
 ...

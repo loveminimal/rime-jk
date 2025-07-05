@@ -117,13 +117,17 @@ def combine(out_dir, out_file, code_type):
             print('☑️  已加载用户自造词文件 » %s' % user_words_path)
             for l in f.readlines():
                 l = l.strip()
+                # 获取当前方案类型
                 if l.startswith('-- type'):
-                    type = l.split(': ')[1]   # tiger | wubi
+                    type = l.split(': ')[1]   # tiger | wubi | flyyx
+                # 当前方案词条是否置顶
+                if l.startswith('-- top'):
+                    keep_user_words_top = l.split(': ')[1]  # 'true' | 'false'
                 if l.startswith('["'):
                     _arr = l.split('"] = "')
                     word = _arr[0][2:]
                     code = _arr[1][:-2]
-                    weight = '100000000' if is_keep_user_dict_first else '1'
+                    weight = '100000000' if keep_user_words_top == 'true' else '1'
                     # print(f'{word}\t{code}\t{weight}')
                     if ';' in code:
                         print(code)
@@ -149,7 +153,7 @@ def combine(out_dir, out_file, code_type):
             user_words_path.unlink()
             # 删除后创建并初始化一个新的 user_words.lua
             with open(user_words_path, 'w', encoding='utf-8') as uw:
-                uw.write('-- type: flyyx\nlocal user_words = {\n}\nreturn user_words')
+                uw.write('-- type: flyyx\n-- top: ' + keep_user_words_top + '\nlocal user_words = {\n}\nreturn user_words')
 
     # 去重并处理词条
     for line in set(lines_total):
@@ -157,7 +161,7 @@ def combine(out_dir, out_file, code_type):
             word, code, weight = line.strip().split('\t')
 
             # 增加用户词语的权重，放大亿点点 100,000,000
-            if is_keep_user_dict_first:
+            if is_keep_user_dict_first and keep_user_words_top == 'true':
                 weight = int(weight)  * 100000000 if not weight.endswith('00000000') else int(weight)
             else:
                 weight = int(weight) if not weight.endswith('00000000') else int(weight[:-8])
@@ -216,7 +220,7 @@ def exec(code_type = ''):
 1 ➭ 拼音；20 ➭ 五笔常规；21 ➭ 五笔整句；30 ➭ 虎码常规；31 ➭ 虎码整句；40 ➭ 小鹤音形
 --------------------------------------------------------------------------------------
         ''')
-        code_type = input(f"🔔  默认「 虎码常规 」? (30): ").strip().lower() or "30"
+        code_type = input(f"🔔  默认「 小鹤音形 」? (40): ").strip().lower() or "40"
         print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
 
     if code_type.startswith("1"):
@@ -258,6 +262,10 @@ if __name__ == '__main__':
     # --- ① 是否让用户词库排在最前 ---
     # 权重放大亿点点
     is_keep_user_dict_first = True
+    # --- 联动 user_words.lua ---
+    # user_words.lua 中的词条是否置顶
+    # ⚠️ 无须手动设置，会从文件中自动读取，此处仅做初始化
+    keep_user_words_top = 'true'    
     # 是否在同步至用户词典后删除 user_words.lua
     is_delete_user_words = True
 

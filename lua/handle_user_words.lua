@@ -22,7 +22,7 @@ local auto_generate_dict  = false
 -- ③ ➭ keep_user_words_top
 -- ¹ true 自造词升序排在前面
 -- ² false 排在后面
-local keep_user_words_top = true
+local keep_user_words_top = false
 
 -- ④ 此处可以指定你的方案 schema_id
 local schema_id_table = {
@@ -444,7 +444,7 @@ local function write_word_to_file(env)
 	end
 
     -- 构造完整的 record 内容
-    local record_header = "-- type: " .. env.schema_type .. "\n"
+    local record_header = "-- type: " .. env.schema_type .. "\n-- top: " .. tostring(keep_user_words_top) .. "\n"
     local record = record_header .. "local user_words = {\n" .. serialize_str .. "}\nreturn user_words"
     -- 打开文件进行写入
     local fd = assert(io.open(filename, "w"))
@@ -518,7 +518,7 @@ function P.init(env)
         if not file then
             return
         end
-        file:write("-- type: flyyx\nlocal user_words = {\n}\nreturn user_words")
+        file:write("-- type: flyyx\n-- top: true\nlocal user_words = {\n}\nreturn user_words")
         file:close()
     end
 

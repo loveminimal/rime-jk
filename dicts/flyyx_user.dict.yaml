@@ -13,7 +13,7 @@
 ---
 name: flyyx_user
 version: 2025.07
-sort: original
+sort: by_weight
 use_preset_vocabulary: false
 ...
 俺宝	anbc	1
@@ -24,6 +24,7 @@ use_preset_vocabulary: false
 词频	cipb	1
 道祖	dczu	1
 宫保	gsbc	1
+挂载	gxzd	1
 横跳	hgtn	1
 韩立	hjli	1
 皇马	hlma	1
@@ -49,13 +50,16 @@ use_preset_vocabulary: false
 直聘	vipb	1
 主意	vuyi	1
 周予	vzyu	1
+无解	wujp	1
 悟空	wuks	1
+违和	wwhe	1
 形码	xkma	1
 相交	xljn	1
 仙逆	xmni	1
 修仙	xqxm	1
 音托	ybto	1
 叶凡	yefj	1
+移除	yiiu	1
 有坂	yzbj	1
 咱孩	zjhd	1
 白小纯	bxiy	1

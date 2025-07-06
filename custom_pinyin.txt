@@ -24,6 +24,7 @@
 是	ui
 的	de
 道	dc
+火	ho
 了	le
 子	zi
 小	xn

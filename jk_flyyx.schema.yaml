@@ -90,7 +90,7 @@ speller:
 
 
 chord_composer:
-  __include: jk.yaml:/chord_composer_mini
+  __include: jk.yaml:/chord_composer
 
 
 translator:

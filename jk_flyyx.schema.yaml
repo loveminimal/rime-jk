@@ -102,9 +102,10 @@ translator:
   encode_commit_history: false
   enable_completion: false     
   enable_user_dict: false      
+  # spelling_hints: 1
   # comment_format: "{comment}" 
-  comment_format: 
-    - xform|.|| # 不显示补全码
+  # comment_format: 
+  #   - xform|.|| # 不显示补全码
 
 date_translator:
   __include: jk.yaml:/date_translator

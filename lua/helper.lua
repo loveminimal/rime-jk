@@ -9,8 +9,9 @@ function T.func(input, seg, env)
         local table = {
             { "帮助菜单", "→ ~help|hH" },
             { "二三四选", "→ ; ' / 键" },
-            { "上下翻页", "→ , [   键" },
-            { "拼音反查", "→ z     键" },
+            { "上下翻页", "→ , .   键" },
+            { "拼音反查", "→ Z     键" },
+            { "字词自造", "→ ZZ    键" },
             { "分词符号", "→ ~     键" },
             { "符号反查", "→ ~     键" },
             { "英文反查", "→ ~~    键" },
@@ -23,6 +24,9 @@ function T.func(input, seg, env)
             { "向下移动", "→ Ctrl + j" },
             { "向上移动", "→ Ctrl + k" },
             { "快符   ~", "→ Ctrl + ." },
+            { "添加候选", "→ Ctrl + i" },
+            { "移除候选", "→ Ctrl + o" },
+            { "重启服务", "→ Ctrl + p" },
         }
         segment.prompt = "〔帮助·菜单〕"
         for _, v in ipairs(table) do

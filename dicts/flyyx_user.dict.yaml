@@ -23,9 +23,12 @@ use_preset_vocabulary: false
 必应	biyk	1
 遍历	bmli	1
 词频	cipb	1
+大唐	dath	1
 道祖	dczu	1
+大唐	ddth	1
 芬达	ffda	1
 复刻	fuke	1
+郭靖	gojk	1
 宫保	gsbc	1
 古龙	guls	1
 挂载	gxzd	1
@@ -36,6 +39,7 @@ use_preset_vocabulary: false
 滑跪	hxgv	1
 化神	hxuf	1
 茶友	iayz	1
+惩戒	igjp	1
 极点	jidm	1
 季欢	jihr	1
 简历	jmli	1
@@ -45,6 +49,7 @@ use_preset_vocabulary: false
 洛水	louv	1
 曼城	mjig	1
 魔然	morj	1
+魔头	motz	1
 梅西	mwxi	1
 你的	nide	1
 你是	niui	1
@@ -89,8 +94,10 @@ use_preset_vocabulary: false
 刘奕遥	lyy	1
 刘增玺	lzx	1
 姚秋萍	yqp	1
+编辑器	bjqi	1
 白小纯	bxiy	1
 独体字	dtzi	1
+疯大叔	fduu	1
 格式化	guhx	1
 韩老魔	hlmo	1
 河南省	hnug	1
@@ -110,6 +117,7 @@ use_preset_vocabulary: false
 自造词	zzci	1
 大成若缺	dirq	1
 反求诸己	fqvj	1
+宫保拼音	gbpy	1
 出简让全	ijrq	1
 通天教主	ttjv	1
 吞噬星空	tuxk	1
@@ -125,4 +133,5 @@ use_preset_vocabulary: false
 江湖夜雨十年灯	jhyd	1
 莫待无花空折枝	mdwv	1
 有花堪折直须折	yhkv	1
+早睡早起身体好	zuzh	1
 实践是检验真理的唯一标准	ujuv	1

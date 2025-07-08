@@ -524,7 +524,7 @@ function P.init(env)
 
     env.user_words = require("user_words") -- 加载文件中的 user_words
     local cur_schema = env.engine.schema.schema_id
-    log.warning('➭ ' .. cur_schema)
+    -- log.warning('➭ ' .. cur_schema)
     -- 鉴于有时候虎码方案隐藏候选框使用，故此处允许 jk_pinyin 方案添加「 自造词 」
     if startsWith(cur_schema, schema_id_table["tiger"])then
         env.schema_type = "tiger"

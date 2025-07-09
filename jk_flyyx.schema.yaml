@@ -119,32 +119,31 @@ date_translator:
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
-fixed:
-  dictionary: jk_flyyx
-  db_class: tabledb
-  enable_charset_filter: false
-  enable_sentence: false
-  enable_completion: false
-  enable_user_dict: true
-  enable_encoder: true
-  encode_commit_history: false
-  initial_quality: 0
-  spelling_hints: 100
+# fixed:
+#   dictionary: jk_flyyx
+#   db_class: tabledb
+#   enable_charset_filter: false
+#   enable_sentence: false
+#   enable_completion: false
+#   enable_user_dict: true
+#   enable_encoder: true
+#   encode_commit_history: false
+#   initial_quality: 0
+#   spelling_hints: 100
 
-
-zcci:           # 造詞
-  tag: zcci
-  db_class: tabledb
-  dictionary: jk_flyyx
-  enable_user_dict: false
-  enable_charset_filter: false
-  enable_completion: false
-  enable_sentence: true
-  enable_encoder: false
-  max_phrase_length: 4
-  prefix: "~"
-  tips: 〔造词·形码〕
-  initial_quality: -1
+# zcci:           # 造詞
+#   tag: zcci
+#   db_class: tabledb
+#   dictionary: jk_flyyx
+#   enable_user_dict: false
+#   enable_charset_filter: false
+#   enable_completion: false
+#   enable_sentence: true
+#   enable_encoder: false
+#   max_phrase_length: 4
+#   prefix: "~"
+#   tips: 〔造词·形码〕
+#   initial_quality: -1
 
 pinyin:
   __include: jk.yaml:/pinyin

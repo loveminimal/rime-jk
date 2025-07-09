@@ -41,7 +41,7 @@ engine:
   segmentors:
     - ascii_segmentor        
     - matcher          
-    - affix_segmentor@zcci
+    # - affix_segmentor@zcci
     - abc_segmentor          
     - punct_segmentor        
     - affix_segmentor@pinyin
@@ -49,8 +49,8 @@ engine:
   translators:
     - punct_translator        
     - table_translator
-    - table_translator@fixed
-    - table_translator@zcci
+    # - table_translator@fixed
+    # - table_translator@zcci
     - table_translator@custom_phrase  
     - script_translator@pinyin
     - reverse_lookup_translator
@@ -79,7 +79,7 @@ recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
     pinyin: "^Z[a-z]*$"
-    zcci: "^[a-z]*~[a-z~]*$"
+    # zcci: "^[a-z]*~[a-z~]*$"
 
 punctuator:
   __include: jk.yaml:/punctuator
@@ -119,6 +119,7 @@ date_translator:
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
+# --- 不如我的 user_words ---
 # fixed:
 #   dictionary: jk_flyyx
 #   db_class: tabledb

@@ -45,17 +45,25 @@ def convert(src_dir, out_dir, src_file, out_file):
 
     src_file_path = src_dir / src_file
 
+    # 判断当前同步字典为 userdb（自动同步）还是 tabledb（自造词）
+    is_userdb = 'userdb' in src_file
+
     if not src_file_path.exists():
         print(f'🪧  未发现 {src_file_path}')
         return
 
-    print('☑️  已加载用户词库文件 » %s' % src_file_path)
+    if is_userdb:
+        print('☑️  已加载用户词库文件 » %s' % src_file_path)
+    else:
+        print('☑️  已加载自造词库文件 » %s' % src_file_path)
+
     with open(src_file_path, 'r', encoding='utf-8') as f:
         lines_total = f.readlines()
 
     with open(out_dir / f'{out_file + '.temp'}', 'w', encoding='utf-8') as o:
         res = ''
-        # 以下几行为原始同步词典格式
+        # 以下几行为原始同步词典格式 - userdb
+        # 如 jk_wubi.userdb.txt
         # ---------------------------------------------------
         # yywg 	方便	c=3 d=0.187308 t=1959
         # yywr 	文件	c=1 d=0.826959 t=1959
@@ -63,12 +71,30 @@ def convert(src_dir, out_dir, src_file, out_file):
         # encabbk 	萍聊了吗	c=0 d=0.0202909 t=1959
         # encabbn 	萍聊了	c=0 d=0.0201897 t=1959
         # ---------------------------------------------------
+        # 以下几行为自造词同步词典格式 - tabledb
+        # 如 jk_flyyx.txt
+        # 自造词	zzci	9
+        # 安报	encanbc	1
+        # 报安	encbcan	1
+        # ---------------------------------------------------
         for line in lines_total:
+            word = ''
+            code = ''
+            weight = ''
             if not line[0] in '# ':  # 忽略注释和特殊行
                 line_list = re.split(r'\t+', line.strip())
-                code = line_list[0].strip()
-                word = line_list[1]
-                weight = line_list[2].split(' ')[0].split('=')[1]
+                
+                if is_userdb:
+                    code = line_list[0].strip()
+                    word = line_list[1]
+                    weight = line_list[2].split(' ')[0].split('=')[1]
+                else:
+                    if '' not in line:
+                        continue
+                    word = line_list[0]
+                    code = line_list[1].strip()
+                    weight = line_list[2]
+
 
                 # 删除权重为负数的字词（废词）
                 if int(weight) <= 0:
@@ -239,7 +265,7 @@ def exec(code_type = ''):
         src_file = 'jk_tiger_u.userdb.txt'
         out_file = 'tiger_user_zj.dict.yaml'
     elif code_type.startswith("40"):
-        src_file = 'jk_flyyx.userdb.txt'
+        src_file = 'jk_flyyx.txt'   # 🔥 这里使用 jk_flyyx.txt 「 手动造词 tabledb 」
         out_file = 'flyyx_user.dict.yaml'
 
     # 如果存在输出文件，先删除

@@ -2,5 +2,5 @@
 #@/db_name	jk_flyyx
 #@/db_type	tabledb
 #@/rime_version	1.11.2
-#@/tick	324
+#@/tick	397
 

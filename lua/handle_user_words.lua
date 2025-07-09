@@ -518,7 +518,7 @@ function P.init(env)
         if not file then
             return
         end
-        file:write("-- type: flyyx\n-- top: false\nlocal user_words = {\n    [\"自造词\"] = \"zzci\",\n}\nreturn user_words")
+        file:write("-- type: flyyx\n-- top: false\nlocal user_words = {\n    [\"出\"] = \"iuvk\",\n}\nreturn user_words")
         file:close()
     end
 

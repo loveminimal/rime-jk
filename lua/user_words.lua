@@ -1,6 +1,6 @@
 -- type: flyyx
 -- top: false
 local user_words = {
-    ["自造词"] = "zzci",
+    ["出"] = "iuvk",
 }
 return user_words

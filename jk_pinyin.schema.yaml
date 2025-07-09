@@ -76,7 +76,8 @@ key_binder:
 
 recognizer:
   __include: jk.yaml:/recognizer
-
+    pinyin: "^Z[a-z]*$"    
+    add_user_dict: "^ZZ[a-z]*$"
 
 punctuator:
   __include: jk.yaml:/punctuator

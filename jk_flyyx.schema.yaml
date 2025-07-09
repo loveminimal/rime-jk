@@ -40,7 +40,8 @@ engine:
     - express_editor
   segmentors:
     - ascii_segmentor        
-    - matcher                
+    - matcher          
+    - affix_segmentor@zcci
     - abc_segmentor          
     - punct_segmentor        
     - affix_segmentor@pinyin
@@ -48,6 +49,8 @@ engine:
   translators:
     - punct_translator        
     - table_translator
+    - table_translator@fixed
+    - table_translator@zcci
     - table_translator@custom_phrase  
     - script_translator@pinyin
     - reverse_lookup_translator
@@ -76,6 +79,7 @@ recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
     pinyin: "^Z[a-z]*$"
+    zcci: "^[a-z]*~[a-z~]*$"
 
 punctuator:
   __include: jk.yaml:/punctuator
@@ -94,6 +98,7 @@ chord_composer:
 
 
 translator:
+  db_class: tabledb
   dictionary: jk_flyyx             
   prism: jk_flyyx                  
   enable_charset_filter: false     
@@ -102,16 +107,44 @@ translator:
   encode_commit_history: false
   enable_completion: false     
   enable_user_dict: false      
-  # spelling_hints: 1
+  spelling_hints: 1
   # comment_format: "{comment}" 
   # comment_format: 
   #   - xform|.|| # 不显示补全码
+
 
 date_translator:
   __include: jk.yaml:/date_translator
 
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
+
+fixed:
+  dictionary: jk_flyyx
+  db_class: tabledb
+  enable_charset_filter: false
+  enable_sentence: false
+  enable_completion: false
+  enable_user_dict: true
+  enable_encoder: true
+  encode_commit_history: false
+  initial_quality: 0
+  spelling_hints: 100
+
+
+zcci:           # 造詞
+  tag: zcci
+  db_class: tabledb
+  dictionary: jk_flyyx
+  enable_user_dict: false
+  enable_charset_filter: false
+  enable_completion: false
+  enable_sentence: true
+  enable_encoder: false
+  max_phrase_length: 4
+  prefix: "~"
+  tips: 〔造词·形码〕
+  initial_quality: -1
 
 pinyin:
   __include: jk.yaml:/pinyin

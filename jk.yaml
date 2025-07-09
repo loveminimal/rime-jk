@@ -39,10 +39,10 @@ recognizer:
   # import_preset: default
   patterns:
     reverse_lookup: "^~~[a-z]*:?$"
-    punct: "^~([0-9]|10|[A-Za-z]+)$"
+    punct: "^P([0-9]|10|[A-Za-z]+)$"
     # pinyin: "^z[Xa-z]*$" 
-    pinyin: "^Z[a-z]*$"    
-    add_user_dict: "^ZZ[a-z]*$"
+    # pinyin: "^Z[a-z]*$"    
+    # add_user_dict: "^ZZ[a-z]*$"
     helper: "^(~help|hH)$"
     quick_symbol: "^;.*$" 
 

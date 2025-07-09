@@ -11,6 +11,19 @@
 name: jk_flyyx
 version: 2025.06
 sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+  - stem
+encoder:
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaBaCaCb"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa"
 # ------------------------------------------
 # flyyx          「 合一版 」小鹤音形词库
 # flyyx_user         「 养成系 」用户词库

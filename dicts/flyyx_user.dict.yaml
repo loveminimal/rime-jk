@@ -28,6 +28,7 @@ use_preset_vocabulary: false
 大唐	ddth	1
 芬达	ffda	1
 复刻	fuke	1
+个人	gerf	1
 郭靖	gojk	1
 宫保	gsbc	1
 古龙	guls	1
@@ -54,11 +55,13 @@ use_preset_vocabulary: false
 你的	nide	1
 你是	niui	1
 其它	qita	1
+清纯	qkiy	1
 签章	qmvh	1
 求魔	qqmo	1
 他的	tade	1
 神识	ufui	1
 实名	uimk	1
+世俗	uisu	1
 受众	uzvs	1
 这么	veme	1
 这是	veui	1
@@ -72,6 +75,7 @@ use_preset_vocabulary: false
 我的	wode	1
 无解	wujp	1
 悟空	wuks	1
+微博	wwbo	1
 违和	wwhe	1
 形码	xkma	1
 相交	xljn	1

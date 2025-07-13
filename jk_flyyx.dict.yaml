@@ -35,7 +35,7 @@ import_tables:
   - dicts/flyyx_user
   - dicts/flyyx
   - dicts/flyyx_ext
-  # - dicts/flyyx_char
+  - dicts/flyyx_char
   # - dicts/flyyx_map
   # - dicts/user_words
 use_preset_vocabulary: false

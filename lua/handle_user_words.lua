@@ -80,7 +80,7 @@ local function remove_duplicates(input_str)
     return table.concat(result, ";")
 end
 
--- 将汉字转换为虎码、五笔编码
+-- 将汉字转换为虎码、五笔、小鹤音形编码
 local function get_code(word)
     local CODE = ''
 

@@ -1,0 +1,135 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: jk_tiger
+  name: 虎码·知心
+  author: 
+    - Jack Liu <https://aituyaa.com>
+  description: |
+    - 知心虎码，虎码·拼音反查，小啊小女仆
+    - https://github.com/loveminimal/rime-jk
+  dependencies:
+    - jk_ascii
+    - jk_chars
+  icon: 'assets/tiger.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk.yaml:/switches
+  __append:
+    - name: char_only
+      reset: 0	# 🔥词 ←0  1→ 单
+    - name: schema
+      reset: 0
+      states: [ 虎码·知心 ]  
+
+engine:
+  processors:
+    - lua_processor@*handle_user_words*P
+    - lua_processor@*quick_symbol
+    - lua_processor@*exe
+    - ascii_composer
+    - chord_composer
+    - key_binder    
+    - recognizer    
+    - speller       
+    - punctuator    
+    - selector      
+    - navigator     
+    - express_editor
+  segmentors:
+    - ascii_segmentor        
+    - matcher                
+    - abc_segmentor          
+    - punct_segmentor        
+    - affix_segmentor@pinyin
+    - fallback_segmentor     
+  translators:
+    - punct_translator        
+    - table_translator
+    - table_translator@custom_phrase  
+    - script_translator@pinyin
+    - reverse_lookup_translator
+    - lua_translator@*schedule
+    - lua_translator@*helper
+    - lua_translator@*date_translator 
+    - lua_translator@*force_gc        
+  filters:
+    - lua_filter@*handle_user_words*F
+    - lua_filter@*prettify_comment
+    - lua_filter@*keep_short_code_first*T
+    # - lua_filter@*single_char_first       # 单字优先
+    - lua_filter@*single_char_only
+    - simplifier
+    - simplifier@emoji   
+    - simplifier@zh2en
+    - simplifier@chaifen  
+    - simplifier@traditionalize
+    - uniquifier          
+
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  __include: jk.yaml:/recognizer
+  patterns/+:
+    pinyin: "^Z[a-z]*$"
+
+punctuator:
+  __include: jk.yaml:/punctuator
+
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA~
+  initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
+  delimiter: " ~"     
+  max_code_length: 4
+  # auto_select: true	# 四码上屏 ←true  false→ 五码顶屏
+
+# 形码常规不适合使用并击操作
+# chord_composer:
+#   __include: jk.yaml:/chord_composer
+
+
+translator:
+  dictionary: jk_tiger             
+  prism: jk_tiger                  
+  enable_charset_filter: false     
+  enable_sentence: false           
+  enable_encoder: false            
+  encode_commit_history: false
+  enable_completion: false     
+  enable_user_dict: false      
+  # comment_format: "{comment}" 
+  comment_format: 
+    - xform|.|| # 不显示补全码
+
+
+date_translator:
+  __include: jk.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk.yaml:/reverse_lookup
+
+pinyin:
+  __include: jk.yaml:/pinyin
+
+custom_phrase:
+  __include: jk.yaml:/custom_phrase
+  user_dict: custom_tiger
+
+
+emoji:
+  __include: jk.yaml:/emoji
+
+zh2en:
+  __include: jk.yaml:/zh2en
+
+chaifen:
+  __include: jk.yaml:/chaifen
+  opencc_config: hu_cf.json
+
+traditionalize:
+  __include: jk.yaml:/traditionalize

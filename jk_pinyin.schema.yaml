@@ -76,6 +76,7 @@ key_binder:
 
 recognizer:
   __include: jk.yaml:/recognizer
+  patterns/+:
     pinyin: "^Z[a-z]*$"    
     add_user_dict: "^ZZ[a-z]*$"
 
@@ -124,6 +125,7 @@ reverse_lookup:
 
 pinyin:
   __include: jk.yaml:/pinyin
+  dictionary: jk_chars
 
 user_dict_set:
   __include: jk.yaml:/user_dict_set

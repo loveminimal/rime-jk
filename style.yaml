@@ -125,7 +125,7 @@ layout_h:
   # 候选项间距
   candidate_spacing: 5
   # 圆角
-  corner_radius: 14
+  corner_radius: 4
   round_corner: 4 # i.e. hilited_corner_radius
   # ---〔高亮候选〕---
   # line_spacing: 4

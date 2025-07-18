@@ -24,6 +24,7 @@ use_preset_vocabulary: false
 遍历	bmli	1
 词频	cipb	1
 大唐	dath	1
+大竹	davu	1
 道心	dcxb	1
 道祖	dczu	1
 大唐	ddth	1
@@ -55,6 +56,7 @@ use_preset_vocabulary: false
 亮眼	llyj	1
 罗峰	lofg	1
 洛水	louv	1
+鲁迅	luxy	1
 曼城	mjig	1
 魔然	morj	1
 魔头	motz	1
@@ -134,6 +136,7 @@ use_preset_vocabulary: false
 河南省	hnug	1
 候选框	hxkl	1
 候选栏	hxlj	1
+鹤仙人	hxrf	1
 候选项	hxxl	1
 纯净水	ijuv	1
 金球奖	jqjl	1
@@ -147,9 +150,11 @@ use_preset_vocabulary: false
 梦中界	mvjp	1
 欧国联	oglm	1
 切尔西	qexi	1
+骚操作	sczo	1
 速录宝	slbc	1
 通规字	tgzi	1
 知北游	vbyz	1
+这会儿	vher	1
 吴彦祖	wyzu	1
 小狼毫	xlhc	1
 岳不群	ybqy	1

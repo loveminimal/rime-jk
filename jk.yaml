@@ -139,7 +139,7 @@ custom_phrase:
 # algebra       运算规则
 # -------------------------------------
 chord_composer:
-  __include: chord_composer_mini
+  __include: chord_composer_mirror
 
 # --- 空明镜像版 ---
 chord_composer_mirror:

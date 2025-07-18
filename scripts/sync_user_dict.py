@@ -120,7 +120,7 @@ def convert(src_dir, out_dir, src_file, out_file):
             o.write(res)
 
 @timer
-def combine(out_dir, out_file, code_type):
+def combine(out_dir, out_file, code_type, keep_user_words_top):
     res_dict = {}
     res_dict_weight = defaultdict(set)
     lines_total = []
@@ -228,7 +228,7 @@ def combine(out_dir, out_file, code_type):
         print('✅  » 已合并生成用户词典 %s' % (out_dir / out_file))
 
 
-def exec(code_type = ''):
+def exec(code_type = '', keep_user_words_top = 'true'):
     # print(type(code_type), code_type)
 
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack')
@@ -277,7 +277,7 @@ def exec(code_type = ''):
 
     convert(src_dir, out_dir, src_file, out_file)
     # 合并至用户文件
-    combine(out_dir, out_file, code_type)
+    combine(out_dir, out_file, code_type, keep_user_words_top)
     # 清理掉临时文件 *.temp
     if current_out_file_temp.exists():
         current_out_file_temp.unlink()

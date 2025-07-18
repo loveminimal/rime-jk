@@ -103,9 +103,9 @@ chord_composer:
 translator:
   dictionary: jk_pinyin             
   prism: jk_pinyin                  
-  enable_charset_filter: true     
-  enable_sentence: true           
-  enable_encoder: true            
+  enable_charset_filter: false     
+  enable_sentence: false           
+  enable_encoder: false            
   encode_commit_history: false     
   enable_completion: true     
   enable_user_dict: false      

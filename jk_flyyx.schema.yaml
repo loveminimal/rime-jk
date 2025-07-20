@@ -78,7 +78,7 @@ key_binder:
 recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
-    pinyin: "^Z[a-z]*$"
+    pinyin: "^ow[a-z]*$"
     # zcci: "^[a-z]*~[a-z~]*$"
 
 punctuator:
@@ -149,6 +149,7 @@ reverse_lookup:
 pinyin:
   __include: jk.yaml:/pinyin
   dictionary: jk_pinyin
+  prefix: "ow"
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase

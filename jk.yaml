@@ -61,7 +61,7 @@ punctuator:
 # -------------------------------------
 # date_translator 日期时间输入
 # reverse_lookup  英文翻译字典
-# pinyin          拼音反查
+# pinyin          临时拼音
 # custom_phrase   自定义码表
 # -------------------------------------
 date_translator:
@@ -71,7 +71,7 @@ reverse_lookup:
   dictionary: jk_ascii
   prefix: "~~"
   suffix: ":"
-  tips: 〔英文·反查〕
+  tips: 〔英文·查询〕
   enable_completion: true
   preedit_format:
     - xlit|~| |
@@ -81,7 +81,7 @@ pinyin:
   dictionary: jk_chars
   prefix: "Z"
   suffix: "'"
-  tips: 〔拼音·反查〕
+  tips: 〔拼音·临时〕
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/

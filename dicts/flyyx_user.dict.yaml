@@ -16,10 +16,10 @@ version: 2025.07
 sort: by_weight
 use_preset_vocabulary: false
 ...
-俺宝	anbc	1
+俺宝	anbc	6
 安印	anyb	1
 巴萨	basa	1
-宝子	bczi	1
+宝子	bczi	6
 必应	biyk	1
 遍历	bmli	1
 不赖	buld	1
@@ -53,6 +53,7 @@ use_preset_vocabulary: false
 禁区	jbqu	1
 极点	jidm	1
 季欢	jihr	1
+姜文	jlwf	1
 简历	jmli	1
 绝世	jtui	1
 拉取	laqu	1
@@ -82,6 +83,7 @@ use_preset_vocabulary: false
 神识	ufui	1
 实名	uimk	1
 世俗	uisu	1
+事实	uiui	1
 诗文	uiwf	1
 手疼	uztg	1
 受众	uzvs	1
@@ -172,6 +174,7 @@ use_preset_vocabulary: false
 一场梦	yimg	1
 自然码	zrma	1
 自造词	zzci	1
+沧海横流	chhl	1
 大成若缺	dirq	1
 大衍神君	dyuj	1
 反求诸己	fqvj	1
@@ -198,6 +201,7 @@ use_preset_vocabulary: false
 各领风骚数百年	glfn	1
 江湖夜雨十年灯	jhyd	1
 莫待无花空折枝	mdwv	1
+小鹤在向你召唤	xhzh	1
 有花堪折直须折	yhkv	1
 早睡早起身体好	zuzh	1
 科技是第一生产力	kjul	1

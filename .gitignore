@@ -7,9 +7,6 @@ __pycache__
 *.gram
 .temp
 dicts/out
-dicts/wubi86_zj.dict.yaml
-dicts/wubi86_ext.dict.yaml
-dicts/tiger_zj.dict.yaml
-dicts/tiger_ext.dict.yaml
-dicts/pinyin.dict.yaml
+dicts/*_zj.dict.yaml
+dicts/*_ext.dict.yaml
 *_dicts

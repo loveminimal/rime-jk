@@ -90,7 +90,7 @@ pinyin:
 
 user_dict_set:
   dictionary: jk_pinyin
-  user_dict: jk_pinyin_u
+  user_dict: u # jk_pinyin_u
   initial_quality: 0
   enable_completion: false
   enable_sentence: false
@@ -101,7 +101,7 @@ user_dict_set:
 
 add_user_dict:
   dictionary: jk_pinyin
-  user_dict: jk_pinyin_u
+  user_dict: u # jk_pinyin_u
   tag: add_user_dict
   initial_quality: -1
   enable_charset_filter: false

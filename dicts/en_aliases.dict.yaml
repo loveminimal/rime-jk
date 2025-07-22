@@ -14,7 +14,7 @@
 #
 ---
 name: en_aliases
-version: 2025.06
+version: 2025.07
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -115,8 +115,10 @@ cd ~/site/themes/virgo	cdtt	0
 code	cc	0
 code ~/.bash_aliases	cca	0
 code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_pinyin_u.userdb.txt	ccpy	0
+code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/u.userdb.txt	ccy	0
 code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_wubi.userdb.txt	ccw	0
 code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_tiger.userdb.txt	cct	0
+code C:/Users/jack/AppData/Roaming/Rime/lua/user_words.lua	ccu	0
 tail -f "C:\\Users\\jack\\AppData\\Local\\Temp\\rime.weasel\\rime.weasel.JK.jack.log.WARNING.20250525-191342.20412.log"	vlog	0
 
 "C:/Program Files/Rime/weasel-0.16.3/WeaselSetup.exe"	arc	0
@@ -128,6 +130,7 @@ cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dic
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 20 && py scripts/deploy_rime.py	uuw	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 30 && py scripts/deploy_rime.py	uut	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 40 && py scripts/deploy_rime.py	uuf	0
+cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uuy	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uupy	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 21 && py scripts/deploy_rime.py	uuwz	0
 cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 31 && py scripts/deploy_rime.py	uutz	0

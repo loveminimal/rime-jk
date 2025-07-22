@@ -250,7 +250,7 @@ def exec(code_type = '', keep_user_words_top = 'true'):
         print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
 
     if code_type.startswith("1"):
-        src_file = 'jk_pinyin_u.userdb.txt'
+        src_file = 'u.userdb.txt' # 'jk_pinyin_u.userdb.txt'
         out_file = 'pinyin_user.dict.yaml'
     elif code_type.startswith("20"):
         src_file = 'jk_wubi.userdb.txt'

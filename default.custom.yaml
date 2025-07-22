@@ -33,6 +33,7 @@ patch:
 
   # --- 候选项数 --- 
   menu/page_size: 4
+  menu/alternative_select_labels: [ 〡, 〢, 〣, 〤, 〥, 〦, 〧, 〨, 〩 ]
 
   # --- 标点符号 --
   punctuator/+:

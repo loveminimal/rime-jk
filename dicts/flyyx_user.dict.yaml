@@ -16,6 +16,8 @@ version: 2025.07
 sort: by_weight
 use_preset_vocabulary: false
 ...
+事实	uiu	1
+实时	uiu	1
 俺宝	anbc	6
 安印	anyb	1
 巴萨	basa	1
@@ -29,6 +31,7 @@ use_preset_vocabulary: false
 道心	dcxb	1
 道祖	dczu	1
 大唐	ddth	1
+电力	dmli	1
 鹅厂	eeih	1
 芬达	ffda	1
 俘获	fuho	1
@@ -71,6 +74,7 @@ use_preset_vocabulary: false
 平白	pkbd	1
 其它	qita	1
 清纯	qkiy	1
+前端	qmdr	1
 签章	qmvh	1
 求魔	qqmo	1
 秋萍	qqpk	1
@@ -79,11 +83,11 @@ use_preset_vocabulary: false
 人士	rfui	1
 他的	tade	1
 天雷	tmlw	1
+同化	tshx	1
 神祇	ufqi	1
 神识	ufui	1
 实名	uimk	1
 世俗	uisu	1
-事实	uiui	1
 诗文	uiwf	1
 手疼	uztg	1
 受众	uzvs	1
@@ -129,6 +133,7 @@ use_preset_vocabulary: false
 皂袍	zcpc	1
 紫灵	zilk	1
 咱孩	zjhd	1
+对对对	ddd	1
 刘奕遥	lyy	1
 刘增玺	lzx	1
 姚秋萍	yqp	1

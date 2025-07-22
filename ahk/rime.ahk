@@ -1,13 +1,28 @@
 ﻿#Requires AutoHotkey v2.0
+; 以 ;* 开头的部分为可配置项
 
-; # → Win 键
-; ! → Alt 键
-; ^ → Ctrl 键
-; + → Shift 键
+; === 配置项 ===
+; --------------------------------------------------------
+; ¹ 项目根目录
+RootPath := A_ScriptDir "\.."
+;*² 监听文件列表
+filesToWatch := [
+    ; A_AppData "\Rime\lua\user_words.lua",
+    ; A_AppData "\Rime\custom_pinyin.txt",
+    RootPath "\lua\user_words.lua",
+    RootPath "\custom_pinyin.txt",
+]
+;*³ 执行命令及快捷键绑定
+;   详见 line 66 行上下 ⇩
+;   ……
 
-; 获取 Rime 版本号 ;;;;;;
+
+; === 绑定快捷键到执行函数 ===
+; #→Win 键  !→Alt 键  ^→Ctrl 键  +→Shift 键
+; --------------------------------------------------------
+; 获取 Rime 版本号
 GetRimeVersion() {
-    yamlPath := A_ScriptDir "\..\installation.yaml"
+    yamlPath := RootPath "\installation.yaml"
     if !FileExist(yamlPath) {
         MsgBox "配置文件不存在：" yamlPath
         return ""
@@ -23,87 +38,73 @@ GetRimeVersion() {
     return version
 }
 
-
-; 获取 Rime 执行路径 ;;;;;;
+; 获取 Rime 执行路径
 GetWeaselPath(type) {
     version := GetRimeVersion()
     if version = "" {
         MsgBox "无法读取 Rime 版本号"
         return ""
     }
-
     if type = "server" {
         return "C:\Program Files\Rime\weasel-" version "\WeaselServer.exe"
     }
-
     if type = "deployer" {
         return "C:\Program Files\Rime\weasel-" version "\WeaselDeployer.exe"
     }
-
     if type = "setup" {
         return "C:\Program Files\Rime\weasel-" version "\WeaselSetup.exe"
     }
 }
 
-
-; 获取执行路径 ;;;;;;
+; 获取执行路径
 weaselServerPath := GetWeaselPath('server')
-; if weaselServerPath != "" {
-;     MsgBox "Weasel 路径为: " weaselServerPath
-;     ; Run weaselServerPath ; 如果需要运行
-; }
 weaselDeployerPath := GetWeaselPath('deployer')
 weaselSetupPath := GetWeaselPath('setup')
 
-
-; === 绑定快捷键 ===
-; --------------------------------------------------------
+;* ⇨ 执行命令及快捷键绑定
+;  #→Win 键  !→Alt 键  ^→Ctrl 键  +→Shift 键
+; --------------------
 ; 重启 Rime 服务
 ^p::
 {
     Run weaselServerPath
     return
 }
-
 ; 重新部署
 +!d::
 {
     Run weaselDeployerPath " /deploy"
     return
 }
-
 ; 用户资料同步
 +!a::
 {
     Run weaselDeployerPath " /sync"
     return
 }
-
 ; 打开输入法设定
 +!c::
 {
     Run weaselSetupPath
     return
 }
-
 ; 添加用户词
 +!u::
 {
-    Run "notepad.exe " A_AppData "\Rime\lua\user_words.lua"
+    Run "notepad.exe " RootPath "\lua\user_words.lua"
     return
 }
-
 ; 插入定制词
 +!i::
 {
-    Run "notepad.exe " A_AppData "\Rime\custom_pinyin.txt"
+    Run "notepad.exe " RootPath "\custom_pinyin.txt"
     return
 }
 
 
 ; === 监听脚本 ===
 ; --------------------------------------------------------
-; 多文件监听函数 ;;;;;;
+; 多文件监听函数
 WatchFiles(filesToWatch, callbackFunc) {
     static watchedFiles := Map()
     ; 初始化文件监听
@@ -131,10 +132,7 @@ WatchFiles(filesToWatch, callbackFunc) {
 }
 
 ; 定义要监听的文件列表
-filesToWatch := [
-    A_AppData "\Rime\lua\user_words.lua",
-    A_AppData "\Rime\custom_pinyin.txt",
-]
+; filesToWatch := filesToWatch
 
 ; 定义回调函数
 FileChangedCallback(filePath) {

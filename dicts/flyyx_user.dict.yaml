@@ -56,6 +56,7 @@ use_preset_vocabulary: false
 禁区	jbqu	1
 极点	jidm	1
 季欢	jihr	1
+集成	jiig	1
 姜文	jlwf	1
 简历	jmli	1
 绝世	jtui	1
@@ -134,8 +135,10 @@ use_preset_vocabulary: false
 紫灵	zilk	1
 咱孩	zjhd	1
 对对对	ddd	1
+好家伙	hjh	1
 刘奕遥	lyy	1
 刘增玺	lzx	1
+这会儿	vhe	1
 姚秋萍	yqp	1
 编辑器	bjqi	1
 标准版	bvbj	1
@@ -145,7 +148,6 @@ use_preset_vocabulary: false
 疯大叔	fduu	1
 管理器	glqi	1
 格式化	guhx	1
-好家伙	hjho	1
 韩老魔	hlmo	1
 河南省	hnug	1
 候选框	hxkl	1
@@ -172,7 +174,6 @@ use_preset_vocabulary: false
 生产力	uili	1
 制表符	vbfu	1
 知北游	vbyz	1
-这会儿	vher	1
 吴彦祖	wyzu	1
 小狼毫	xlhc	1
 岳不群	ybqy	1

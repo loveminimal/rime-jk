@@ -11,6 +11,7 @@ schema:
     - https://github.com/loveminimal/rime-jk
   dependencies:
     - jk_ascii
+    - jk_chars
     - jk_pinyin
   icon: 'assets/fly_m.ico'
   ascii_icon: 'assets/ascii.ico'
@@ -44,6 +45,7 @@ engine:
     # - affix_segmentor@zcci
     - abc_segmentor          
     - punct_segmentor        
+    - affix_segmentor@chars
     - affix_segmentor@pinyin
     - fallback_segmentor     
   translators:
@@ -52,6 +54,7 @@ engine:
     # - table_translator@fixed
     # - table_translator@zcci
     - table_translator@custom_phrase  
+    - script_translator@chars
     - script_translator@pinyin
     - reverse_lookup_translator
     - lua_translator@*schedule
@@ -78,6 +81,7 @@ key_binder:
 recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
+    chars: "^oc[a-z]*$"
     pinyin: "^ow[a-z]*$"
     # zcci: "^[a-z]*~[a-z~]*$"
 
@@ -145,6 +149,9 @@ reverse_lookup:
 #   prefix: "~"
 #   tips: 〔造词·形码〕
 #   initial_quality: -1
+
+chars:
+  __include: jk.yaml:/chars
 
 pinyin:
   __include: jk.yaml:/pinyin

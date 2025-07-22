@@ -40,6 +40,7 @@ recognizer:
   patterns:
     reverse_lookup: "^~~[a-z]*:?$"
     punct: "^~([0-9]|10|[A-Za-z]+)$"
+    # chars: "^oc[a-z]*$"
     # pinyin: "^z[Xa-z]*$" 
     # pinyin: "^Z[a-z]*$"    
     # add_user_dict: "^ZZ[a-z]*$"
@@ -61,6 +62,7 @@ punctuator:
 # -------------------------------------
 # date_translator 日期时间输入
 # reverse_lookup  英文翻译字典
+# chars           生僻字查询
 # pinyin          临时拼音
 # custom_phrase   自定义码表
 # -------------------------------------
@@ -76,9 +78,21 @@ reverse_lookup:
   preedit_format:
     - xlit|~| |
 
+chars:
+  tag: chars
+  dictionary: jk_chars
+  prefix: "oc"
+  tips: "〔生僻字·查〕"
+  suffix: "'"
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  enable_user_dict: false
+
 pinyin:
   tag: pinyin
-  dictionary: jk_chars
+  dictionary: jk_pinyin
   prefix: "Z"
   suffix: "'"
   tips: 〔拼音·临时〕

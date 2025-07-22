@@ -595,7 +595,7 @@ function P.func(key_event, env)
         return 2
     end
     -- 实时更新 Lua 表序列化并保存
-    log.warning(env.schema_type)
+    -- log.warning(env.schema_type)
     write_word_to_file(env) -- 使用统一的写入函数
     if auto_generate_dict then
         write_word_to_dict(env) -- 使用统一的写入函数生成对应的词典

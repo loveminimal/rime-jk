@@ -13,6 +13,7 @@ schema:
     - 默认〔 小鹤双拼 〕，辅助码类型与词库有关〔 预设为鹤形 〕
   dependencies:
     - jk_ascii
+    - jk_chars
     - jk_flyyx
   icon: 'assets/fly.ico'
   ascii_icon: 'assets/ascii.ico'
@@ -43,6 +44,7 @@ engine:
     - matcher                
     - abc_segmentor          
     - punct_segmentor        
+    - affix_segmentor@chars
     - affix_segmentor@pinyin
     - affix_segmentor@add_user_dict
     - fallback_segmentor     
@@ -50,6 +52,7 @@ engine:
     - punct_translator        
     - script_translator
     - table_translator@custom_phrase  
+    - script_translator@chars
     - script_translator@pinyin
     - script_translator@user_dict_set
     - script_translator@add_user_dict
@@ -77,6 +80,7 @@ key_binder:
 recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
+    chars: "^oc[a-z]*$"    
     pinyin: "^ow[a-z]*$"    
     add_user_dict: "^oa[a-z]*$"
 
@@ -122,6 +126,9 @@ date_translator:
 
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
+
+chars:
+  __include: jk.yaml:/chars
 
 pinyin:
   __include: jk.yaml:/pinyin

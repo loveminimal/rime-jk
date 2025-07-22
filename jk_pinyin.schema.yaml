@@ -13,7 +13,7 @@ schema:
     - 默认〔 小鹤双拼 〕，辅助码类型与词库有关〔 预设为鹤形 〕
   dependencies:
     - jk_ascii
-    - jk_chars
+    - jk_flyyx
   icon: 'assets/fly.ico'
   ascii_icon: 'assets/ascii.ico'
 
@@ -77,8 +77,8 @@ key_binder:
 recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
-    pinyin: "^Z[a-z]*$"    
-    add_user_dict: "^ZZ[a-z]*$"
+    pinyin: "^ow[a-z]*$"    
+    add_user_dict: "^oa[a-z]*$"
 
 punctuator:
   __include: jk.yaml:/punctuator
@@ -125,13 +125,17 @@ reverse_lookup:
 
 pinyin:
   __include: jk.yaml:/pinyin
-  dictionary: jk_chars
+  dictionary: jk_flyyx
+  prefix: "ow"
+  tips: "〔音形·临时〕"
 
 user_dict_set:
   __include: jk.yaml:/user_dict_set
 
 add_user_dict:
   __include: jk.yaml:/add_user_dict
+  prefix: "oa"
+  tips: "〔字词·自造〕"
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase

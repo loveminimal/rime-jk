@@ -16,6 +16,8 @@ version: 2025.07
 sort: by_weight
 use_preset_vocabulary: false
 ...
+好嘛	hcm	1
+哪条	nat	1
 事实	uiu	1
 实时	uiu	1
 俺宝	anbc	6
@@ -57,6 +59,8 @@ use_preset_vocabulary: false
 极点	jidm	1
 季欢	jihr	1
 集成	jiig	1
+鸡肋	jile	1
+鸡肋	jilw	1
 姜文	jlwf	1
 简历	jmli	1
 绝世	jtui	1
@@ -135,6 +139,7 @@ use_preset_vocabulary: false
 紫灵	zilk	1
 咱孩	zjhd	1
 对对对	ddd	1
+好好的	hhd	1
 好家伙	hjh	1
 刘奕遥	lyy	1
 刘增玺	lzx	1

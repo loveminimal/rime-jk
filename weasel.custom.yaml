@@ -1,3 +1,8 @@
+# Weasel default custom settings
+# encoding: utf-8
+#
+# 覆盖程序预设的配置项「 weasel.yaml 」
+
 customization:
   distribution_code_name: Weasel
   generator: "Weasel::UIStyleSettings"

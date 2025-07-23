@@ -1,0 +1,81 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: jk_flyyx_x
+  name: Ｘ鹤·音形
+  author: 
+    - Jack Liu <https://aituyaa.com>
+  description: |
+    - 小鹤音形「 单字版 」，小鹤·拼音反查，小啊小女仆
+    - https://github.com/loveminimal/rime-jk
+  dependencies:
+    - jk_ascii
+    - jk_chars
+    - jk_pinyin
+  icon: 'assets/pen.ico'
+  ascii_icon: 'assets/ascii.ico'
+
+switches:
+  __include: jk.yaml:/switches
+  __append:
+    - name: char_only
+      reset: 1	# 🔥词 ←0  1→ 单
+    - name: schema
+      reset: 0
+      states: [ Ｘ鹤·音形 ]  
+
+engine:
+  __include: jk_flyyx.schema.yaml:/engine
+
+key_binder:
+  __include: jk_flyyx.schema.yaml:/key_binder
+
+recognizer:
+  __include: jk_flyyx.schema.yaml:/recognizer
+
+punctuator:
+  __include: jk_flyyx.schema.yaml:/punctuator
+
+speller:
+  __include: jk_flyyx.schema.yaml:/speller
+
+chord_composer:
+  __include: jk_flyyx.schema.yaml:/chord_composer
+
+translator:
+  __include: jk_flyyx.schema.yaml:/translator
+  prism: jk_flyyx_x                  
+
+date_translator:
+  __include: jk_flyyx.schema.yaml:/date_translator
+
+reverse_lookup:
+  __include: jk_flyyx.schema.yaml:/reverse_lookup
+
+chars:
+  __include: jk_flyyx.schema.yaml:/chars
+
+pinyin:
+  __include: jk_flyyx.schema.yaml:/pinyin
+
+custom_phrase:
+  __include: jk_flyyx.schema.yaml:/custom_phrase
+
+emoji:
+  __include: jk_flyyx.schema.yaml:/emoji
+
+zh2en:
+  __include: jk_flyyx.schema.yaml:/zh2en
+
+chaifen:
+  __include: jk_flyyx.schema.yaml:/chaifen
+
+traditionalize:
+  __include: jk_flyyx.schema.yaml:/traditionalize
+
+
+#语法模型
+__include: octagram	#启用语言模型
+octagram:
+  __include: jk_flyyx.schema.yaml:/octagram

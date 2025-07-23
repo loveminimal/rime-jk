@@ -20,10 +20,12 @@ use_preset_vocabulary: false
 哪条	nat	1
 事实	uiu	1
 实时	uiu	1
+字幕	zim	1
 俺宝	anbc	6
 安印	anyb	1
 巴萨	basa	1
 宝子	bczi	6
+笔者	bive	1
 必应	biyk	1
 遍历	bmli	1
 不赖	buld	1
@@ -55,6 +57,7 @@ use_preset_vocabulary: false
 惩戒	igjp	1
 产康	ijkh	1
 川普	irpu	1
+厨子	iuzi	1
 禁区	jbqu	1
 极点	jidm	1
 季欢	jihr	1
@@ -64,6 +67,7 @@ use_preset_vocabulary: false
 姜文	jlwf	1
 简纯	jmiy	1
 简历	jmli	1
+结语	jpyu	1
 绝世	jtui	1
 拉取	laqu	1
 老魔	lcmo	1
@@ -95,7 +99,9 @@ use_preset_vocabulary: false
 实名	uimk	1
 世俗	uisu	1
 诗文	uiwf	1
+熟知	uuvi	1
 手疼	uztg	1
+熟知	uzvi	1
 受众	uzvs	1
 首右	uzyz	1
 这么	veme	1
@@ -109,6 +115,7 @@ use_preset_vocabulary: false
 筑基	vuji	1
 主力	vuli	1
 主意	vuyi	1
+赘述	vvuu	1
 周予	vzyu	1
 我的	wode	1
 无解	wujp	1
@@ -116,11 +123,13 @@ use_preset_vocabulary: false
 微博	wwbo	1
 违和	wwhe	1
 形码	xkma	1
+兴起	xkqi	1
 相交	xljn	1
 线程	xmig	1
 仙逆	xmni	1
 仙人	xmrf	1
 修仙	xqxm	1
+讯飞	xyfw	1
 音码	ybma	1
 音托	ybto	1
 叶凡	yefj	1
@@ -149,12 +158,15 @@ use_preset_vocabulary: false
 编辑器	bjqi	1
 标准版	bvbj	1
 白小纯	bxiy	1
+葱油饼	cybk	1
 沧元图	cytu	1
+大乱斗	dldz	1
 独体字	dtzi	1
 疯大叔	fduu	1
 管理器	glqi	1
 格式化	guhx	1
 韩老魔	hlmo	1
+胡辣汤	hlth	1
 河南省	hnug	1
 候选框	hxkl	1
 候选栏	hxlj	1
@@ -180,6 +192,7 @@ use_preset_vocabulary: false
 生产力	uili	1
 制表符	vbfu	1
 知北游	vbyz	1
+周星驰	vxii	1
 吴彦祖	wyzu	1
 小狼毫	xlhc	1
 岳不群	ybqy	1
@@ -191,6 +204,7 @@ use_preset_vocabulary: false
 大衍神君	dyuj	1
 反求诸己	fqvj	1
 宫保拼音	gbpy	1
+哼哼哈嘿	hhhh	1
 横空出世	hkiu	1
 出简让全	ijrq	1
 即插即用	jijy	1
@@ -202,6 +216,7 @@ use_preset_vocabulary: false
 神印王座	uywz	1
 行有不得	xybd	1
 一念永恒	ynyh	1
+应用程序	yyix	1
 自我解构	zwjg	1
 凡人修仙传	frxv	1
 花有重开日	hyir	1

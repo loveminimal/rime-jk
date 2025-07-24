@@ -7,5 +7,5 @@ patch:
       inline_preedit: false
       # vertical_auto_reverse: true
       layout:
-        # __include: style.yaml:/layout_v
+        __include: style.yaml:/layout_v
         margin_y: -1

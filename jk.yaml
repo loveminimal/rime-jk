@@ -8,19 +8,19 @@ version: v6.6.6
 switches:
   - name: ascii_mode
     reset: 0 
-    states: [ 中文, 英文 ]
+    # states: [ 中文, 英文 ]
   - name: traditionalization
-    states: [ 简体, 繁体 ]  
     reset: 0
+    # states: [ 简体, 繁体 ]  
   - name: emoji
     reset: 0
     states: [ 👻, 😄 ]
   - name: zh2en
     reset: 0
-    states: [ ☷译, ☰译 ]
+    # states: [ ☷译, ☰译 ]
   - name: chaifen
     reset: 0
-    states: [ 隐拆, 显拆 ]
+    # states: [ 隐拆, 显拆 ]
   - name: char_only
     reset: 0
     states: [ 词语, 单字 ]

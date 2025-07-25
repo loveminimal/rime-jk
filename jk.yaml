@@ -205,13 +205,16 @@ chord_composer_pinyin:
 
 # --- 迷你版 ---
 chord_composer_mini:
+  finish_chord_on_first_key_release: true
   prompt_format:
-    - "xform/^(.*)$/[$1]/" 
+    # - "xform/^(.*)$/[$1]/" 
+    - "xform/^(.*)$//" 
   output_format:
     - "xform/^(.*)左/$1/"
     - "xform/^(.*)右$/$1/"
     - "xform/^(.*)左(.*)右$/$1$2/"
-  # alphabet: ",."
+  # alphabet: "aqzswxdecfrvgtbhynjumki,lo.;p'/"
+  alphabet: ",."
   algebra:
     # --- 修改为并击键位 ---
     # 定义左手键
@@ -222,7 +225,9 @@ chord_composer_mini:
     # ---------------------------------
     # 仅保留〔 ,. ➭ ~ 〕，其余使用快符
     # ---------------------------------
-    - xform/,\.(?![左右])$/~右/
+    - xform/,\.(?![左右])$/🤭右/
+    # - xform/^sf(?![左右])/ 左/
+    # - xform/jl(?![左右])$/ 右/
 
 # --- OpenCC ---
 # -------------------------------------

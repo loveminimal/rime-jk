@@ -8416,6 +8416,7 @@ local flyyx_code_table = {
     ["𬺈"] = "yivk",
     ["𬺓"] = "iuvr",
     ["𰻝"] = "blzx",
+    ["霑"] = "vjyk",
 }
 
 return flyyx_code_table

@@ -42,6 +42,7 @@ use_preset_vocabulary: false
 郭靖	gojk	1
 宫保	gsbc	1
 古龙	guls	1
+给我	gwwo	1
 挂载	gxzd	1
 好嘛	hcma	1
 好帅	hcuk	1
@@ -49,6 +50,7 @@ use_preset_vocabulary: false
 韩立	hjli	1
 皇马	hlma	1
 黄霑	hlvj	1
+换乘	hrig	1
 虎码	huma	1
 滑跪	hxgv	1
 化神	hxuf	1
@@ -69,6 +71,7 @@ use_preset_vocabulary: false
 简纯	jmiy	1
 剑来	jmld	1
 简历	jmli	1
+监制	jmvi	1
 结语	jpyu	1
 绝世	jtui	1
 拉取	laqu	1
@@ -138,6 +141,8 @@ use_preset_vocabulary: false
 线程	xmig	1
 仙逆	xmni	1
 仙人	xmrf	1
+校花	xnhx	1
+小结	xnjp	1
 修仙	xqxm	1
 讯飞	xyfw	1
 音码	ybma	1
@@ -173,6 +178,7 @@ use_preset_vocabulary: false
 沧元图	cytu	1
 大乱斗	dldz	1
 独体字	dtzi	1
+恶趣味	eqww	1
 疯大叔	fduu	1
 服务器	fwqi	1
 翻译器	fyqi	1
@@ -200,6 +206,8 @@ use_preset_vocabulary: false
 梦中界	mvjp	1
 你不会	nbhv	1
 你不会	nbkk	1
+弄出来	nild	1
+哪一站	nyvj	1
 欧国联	oglm	1
 切尔西	qexi	1
 骚操作	sczo	1
@@ -211,10 +219,13 @@ use_preset_vocabulary: false
 知北游	vbyz	1
 这会儿	vher	1
 周星驰	vxii	1
+重灾区	vzqu	1
+文件夹	wjjx	1
 吴彦祖	wyzu	1
 小狼毫	xlhc	1
 虚拟机	xnji	1
 岳不群	ybqy	1
+引导符	ydfu	1
 一场梦	yimg	1
 自然码	zrma	1
 自造词	zzci	1

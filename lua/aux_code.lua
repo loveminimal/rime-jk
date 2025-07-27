@@ -26,6 +26,20 @@ local function is_in_array(value, array)
     return false
 end
 
+local function reverse_seq_words(user_words)
+    local new_dict = {}
+
+    for word, code in pairs(user_words) do
+        if not new_dict[code] then
+            new_dict[code] = {word}
+        else
+            table.insert(new_dict[code], word)
+        end
+    end
+
+    return new_dict
+end
+
 local old_candidates = {}
 -- 初始化符号输入的状态
 function A.init(env)
@@ -35,6 +49,10 @@ function A.init(env)
     env.chars = config:get_string("chars/prefix")
     env.pinyin = config:get_string("pinyin/prefix")
     -- log.error(pinyin .. ' ' .. chars)
+
+    -- 同样对 user_words 中的候选项进行选重
+    env.user_words = require("user_words") or {}
+    env.seq_words_dict = reverse_seq_words(env.user_words)
 end
 
 -- 处理符号和文本的重复上屏逻辑
@@ -60,6 +78,22 @@ function A.func(input, env)
             table.insert(old_candidates, cand)
             yield(cand)
         end
+
+        -- 循环遍历 user_words 创建新的候选
+        for code, phrases in pairs(env.seq_words_dict) do
+            -- log.warning("键:" .. code)
+            -- 遍历当前键对应的词组列表
+            for _, phrase in ipairs(phrases) do
+                -- log.warning("值:" .. phrase)
+                -- if code == input_code then
+                -- if #input_code == 4 and string.find(code, input_code) then
+                if string.find(code, input_code) then
+                    local new_cand = Candidate("word", 1, 4, phrase, "*")
+                    table.insert(old_candidates, new_cand)
+                end
+            end
+        end
+
         return
     end
 

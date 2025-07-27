@@ -19,6 +19,7 @@ use_preset_vocabulary: false
 俺宝	anbc	6
 安印	anyb	1
 巴萨	basa	1
+宝妈	bcma	1
 宝子	bczi	6
 笔者	bive	1
 必应	biyk	1
@@ -30,6 +31,8 @@ use_preset_vocabulary: false
 道心	dcxb	1
 道祖	dczu	1
 大唐	ddth	1
+定长	dkih	1
+定长	dkvh	1
 电力	dmli	1
 鹅厂	eeih	1
 芬达	ffda	1
@@ -54,6 +57,7 @@ use_preset_vocabulary: false
 惩戒	igjp	1
 产康	ijkh	1
 川普	irpu	1
+串子	irzi	1
 厨子	iuzi	1
 禁区	jbqu	1
 极点	jidm	1
@@ -90,9 +94,11 @@ use_preset_vocabulary: false
 群里	qyli	1
 人设	rfue	1
 人士	rfui	1
+四码	sima	1
 他的	tade	1
 天雷	tmlw	1
 同化	tshx	1
+推出	tviu	1
 神祇	ufqi	1
 神识	ufui	1
 实名	uimk	1
@@ -142,9 +148,11 @@ use_preset_vocabulary: false
 移除	yiiu	1
 移植	yivi	1
 英超	ykic	1
+原著	yrvu	1
 元瑶	yryc	1
 元婴	yryk	1
 用的	ysde	1
+愈加	yujx	1
 有坂	yzbj	1
 有的	yzde	1
 又是	yzui	1
@@ -160,12 +168,14 @@ use_preset_vocabulary: false
 编辑器	bjqi	1
 标准版	bvbj	1
 白小纯	bxiy	1
+编译器	byqi	1
 葱油饼	cybk	1
 沧元图	cytu	1
 大乱斗	dldz	1
 独体字	dtzi	1
 疯大叔	fduu	1
 服务器	fwqi	1
+翻译器	fyqi	1
 管理器	glqi	1
 格式化	guhx	1
 好家伙	hjho	1

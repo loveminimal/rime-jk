@@ -249,20 +249,28 @@ def exec(code_type = '', keep_user_words_top = 'true'):
         code_type = input(f"🔔  默认「 小鹤音形 」? (40): ").strip().lower() or "40"
         print(f'🔜  {code_type}   ➭ {code_dict[code_type]}\n')
 
+    # 以下对于 src_file 来说：
+    # *.userdb.txt 为开启调频时生成的 userdb
+    # *.txt 为关闭调频，使用自造词时生成的 tabledb
+    # 
+    # !!对于形码我们默认关闭调频
+    # 
     if code_type.startswith("1"):
         src_file = 'u.userdb.txt' # 'jk_pinyin_u.userdb.txt'
         out_file = 'pinyin_user.dict.yaml'
     elif code_type.startswith("20"):
-        src_file = 'jk_wubi.userdb.txt'
+        # src_file = 'jk_wubi.userdb.txt'
+        src_file = 'jk_wubi.txt'
         out_file = 'wubi86_user.dict.yaml'
     elif code_type.startswith("21"):
-        src_file = 'jk_wubi_u.userdb.txt'
+        src_file = 'w.userdb.txt' # 'jk_wubi_u.userdb.txt'
         out_file = 'wubi86_user_zj.dict.yaml'
     elif code_type.startswith("30"):
-        src_file = 'jk_tiger.userdb.txt'
+        # src_file = 'jk_tiger.userdb.txt'
+        src_file = 'jk_tiger.txt'
         out_file = 'tiger_user.dict.yaml'
     elif code_type.startswith("31"):
-        src_file = 'jk_tiger_u.userdb.txt'
+        src_file = 't.userdb.txt' # 'jk_tiger_u.userdb.txt'
         out_file = 'tiger_user_zj.dict.yaml'
     elif code_type.startswith("40"):
         src_file = 'jk_flyyx.txt'   # 🔥 这里使用 jk_flyyx.txt 「 手动造词 tabledb 」

@@ -132,9 +132,10 @@ function A.func(input, env)
         -- log.error('aux_code ➭ ' .. aux_code)
         local aux_list = aux_code_table[aux_code] or {}
 
-        -- 排除以 ow、oc 为引导词的副编译器「 拼音反查时 」
+        -- 排除以 ow、oc（小鹤）¦ Z、C（形码）为引导词的副编译器「 拼音反查时 」
+        local f_code = string.sub(input_code, 1, 1)
         local fs_code = string.sub(input_code, 1, 2)
-        if fs_code == env.chars or fs_code == env.pinyin then
+        if fs_code == env.chars or fs_code == env.pinyin or string.find('ABCDEFGHIJKLMNOPQRSTUVWXYZ', f_code) then
             for cand in input:iter() do
                 yield(cand)
             end

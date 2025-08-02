@@ -12,6 +12,7 @@ schema:
   dependencies:
     - jk_ascii
     - jk_chars
+    - jk_pinyin
   icon: 'assets/tiger.ico'
   ascii_icon: 'assets/ascii.ico'
 
@@ -44,6 +45,7 @@ engine:
     # - affix_segmentor@zcci
     - abc_segmentor          
     - punct_segmentor        
+    - affix_segmentor@chars
     - affix_segmentor@pinyin
     - fallback_segmentor     
   translators:
@@ -52,6 +54,7 @@ engine:
     # - table_translator@fixed
     # - table_translator@zcci
     - table_translator@custom_phrase  
+    - script_translator@chars
     - script_translator@pinyin
     - reverse_lookup_translator
     - lua_translator@*schedule

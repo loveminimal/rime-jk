@@ -33,7 +33,12 @@ patch:
       comment_font_point: 9
       label_format: "%s." #"%s."
       # mark_text: "♪"
-      # horizontal: true 
+      # --- 候选项文字纵向排列 ----------------------------------
+      # horizontal: false 
+      # vertical_text: true
+      # vertical_text_left_to_right: true
+      # vertical_text_with_wrap: false
+      # vertical_auto_reverse: false
       # 隐藏编码行
       # --- 编码行操作 -------------------------------------------
       # preedit_type          用于控制​​预编辑文本的显示方式
@@ -45,7 +50,6 @@ patch:
       # ----------------------------------------------------------
       # preedit_type: preview
       inline_preedit: true
-      # vertical_auto_reverse: true
       # --- 鼠标操作 ---------------------------------------------
       # hover_type       鼠标悬浮候选 ➭ none、hilite、semi_hilite
       # click_to_capture 点击候选创建截图
@@ -55,3 +59,4 @@ patch:
       layout:
         __include: style.yaml:/layout_h
         # margin_y: -1
+        # min_width: 0

@@ -12,7 +12,7 @@
 # 
 ---
 name: tiger_user
-version: 2025.07
+version: 2025.08
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -42,6 +42,7 @@ use_preset_vocabulary: false
 姜太虚	gmzc	1
 候选栏	jqeh	1
 候选框	jqen	1
+候选项	jquw	1
 独体字	mjwh	1
 欧国联	nrqh	1
 知北游	oakl	1

@@ -2,11 +2,28 @@
 作用：用于辅助四码定长的形码进一步选重
 -- by Jack Liu <https://aituyaa.com>
 
-支持小鹤音形，感兴趣的朋友可以按需扩展（如虎码、五笔、魔然字词）
+支持小鹤音形、魔然字词，默认使用鹤形作为筛选表
+支持虎码、五笔，默认使用鹤音作为筛选表
+
+感兴趣的朋友可以按需扩展
 --]] 
 
-local aux_code_table = require("aux_code_table")
+local schema_id_table = {
+    ["pinyin"] = "jk_pinyin",
+    ["tiger"] = "jk_tiger",
+    ["wubi"] = "jk_wubi",
+    ["flyyx"] = "jk_flyyx",
+}
+
+local aux_code_table = {}
+local aux_code_hy_table = require("aux_code_hy_table")
+local aux_code_hx_table = require("aux_code_hx_table")
+
 local A = {}
+
+local function startsWith(str, prefix)
+    return string.sub(str, 1, #prefix) == prefix
+end
 
 -- 正确的中文切片函数
 -- lua 对中文的支持相当不友好 😡
@@ -49,6 +66,16 @@ function A.init(env)
     env.chars = config:get_string("chars/prefix")
     env.pinyin = config:get_string("pinyin/prefix")
     -- log.error(pinyin .. ' ' .. chars)
+
+    local cur_schema = env.engine.schema.schema_id
+    -- log.warning('➭ ' .. cur_schema)
+    if startsWith(cur_schema, schema_id_table["tiger"])then
+        env.schema_type = "tiger"
+        aux_code_table = aux_code_hy_table
+    elseif startsWith(cur_schema, schema_id_table["flyyx"]) then
+        env.schema_type = "flyyx"
+        aux_code_table = aux_code_hx_table
+    end
 
     -- 同样对 user_words 中的候选项进行选重
     env.user_words = require("user_words") or {}

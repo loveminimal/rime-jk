@@ -40,7 +40,8 @@ engine:
     - express_editor
   segmentors:
     - ascii_segmentor        
-    - matcher                
+    - matcher       
+    # - affix_segmentor@zcci
     - abc_segmentor          
     - punct_segmentor        
     - affix_segmentor@pinyin
@@ -48,6 +49,8 @@ engine:
   translators:
     - punct_translator        
     - table_translator
+    # - table_translator@fixed
+    # - table_translator@zcci
     - table_translator@custom_phrase  
     - script_translator@pinyin
     - reverse_lookup_translator
@@ -56,9 +59,10 @@ engine:
     - lua_translator@*date_translator 
     - lua_translator@*force_gc        
   filters:
+    # - lua_filter@*aux_code
     - lua_filter@*handle_user_words*F
     - lua_filter@*prettify_comment
-    - lua_filter@*keep_short_code_first*T
+    # - lua_filter@*keep_short_code_first*T
     # - lua_filter@*single_char_first       # 单字优先
     - lua_filter@*single_char_only
     - simplifier
@@ -75,7 +79,9 @@ key_binder:
 recognizer:
   __include: jk.yaml:/recognizer
   patterns/+:
+    chars: "^C[a-z]*$"
     pinyin: "^Z[a-z]*$"
+    # zcci: "^[a-z]*~[a-z~]*$"
 
 punctuator:
   __include: jk.yaml:/punctuator
@@ -86,7 +92,9 @@ speller:
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`
   delimiter: " ~"     
   max_code_length: 4
-  # auto_select: true	# 四码上屏 ←true  false→ 五码顶屏
+  auto_select: true	# 四码上屏 ←true  false→ 五码顶屏
+  # auto_select_pattern: "^(\\w{4,6})$"
+  # auto_clear: max_length # manual | auto | max_length
 
 # 形码常规不适合使用并击操作
 # chord_composer:
@@ -113,12 +121,47 @@ date_translator:
 reverse_lookup:
   __include: jk.yaml:/reverse_lookup
 
+# --- 不如我的 user_words ---
+# fixed:
+#   dictionary: jk_tiger
+#   db_class: tabledb
+#   enable_charset_filter: false
+#   enable_sentence: false
+#   enable_completion: false
+#   enable_user_dict: true
+#   enable_encoder: true
+#   encode_commit_history: false
+#   initial_quality: 0
+#   spelling_hints: 100
+
+# zcci:           # 造詞
+#   tag: zcci
+#   db_class: tabledb
+#   dictionary: jk_tiger
+#   enable_user_dict: false
+#   enable_charset_filter: false
+#   enable_completion: false
+#   enable_sentence: true
+#   enable_encoder: false
+#   max_phrase_length: 4
+#   prefix: "~"
+#   tips: 〔造词·形码〕
+#   initial_quality: -1
+
+chars:
+  __include: jk.yaml:/chars
+  dictionary: jk_chars
+  prefix: "C"
+
 pinyin:
   __include: jk.yaml:/pinyin
+  dictionary: jk_pinyin
+  prefix: "Z"
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase
   user_dict: custom_tiger
+  initial_quality: -1
 
 
 emoji:
@@ -133,3 +176,8 @@ chaifen:
 
 traditionalize:
   __include: jk.yaml:/traditionalize
+
+#语法模型
+__include: octagram	#启用语言模型
+octagram:
+  __include: jk.yaml:/octagram

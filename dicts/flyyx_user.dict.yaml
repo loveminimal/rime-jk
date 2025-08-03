@@ -12,7 +12,7 @@
 # 
 ---
 name: flyyx_user
-version: 2025.07
+version: 2025.08
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -41,6 +41,7 @@ use_preset_vocabulary: false
 俘获	fuho	1
 复刻	fuke	1
 个人	gerf	1
+郭帆	gofj	1
 郭靖	gojk	1
 宫保	gsbc	1
 古龙	guls	1
@@ -80,6 +81,7 @@ use_preset_vocabulary: false
 拉取	laqu	1
 老魔	lcmo	1
 老杨	lcyh	1
+烂货	ljho	1
 灵界	lkjp	1
 亮眼	llyj	1
 罗峰	lofg	1
@@ -188,6 +190,7 @@ use_preset_vocabulary: false
 沧元图	cytu	1
 大乱斗	dldz	1
 独体字	dtzi	1
+邓小平	dxpk	1
 恶趣味	eqww	1
 疯大叔	fduu	1
 服务器	fwqi	1
@@ -257,6 +260,7 @@ use_preset_vocabulary: false
 降维打击	jwdj	1
 苦海无涯	khwy	1
 开箱即用	kxjy	1
+流浪地球	lldq	1
 了然于心	lryx	1
 蜜雪冰城	mxbi	1
 通天教主	ttjv	1

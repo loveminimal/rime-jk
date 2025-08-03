@@ -9,9 +9,10 @@
 -- ① ➭ auto_reload_service
 -- ¹ true 添加、删除操作之后「自动重启」服务，卡顿 
 -- ² false  添加、删除操作之「手动重启」服务，不卡顿
--- - ²¹ 手动点击重启服务选项
--- - ²² rime_jk 方案可通过 ~rrr 触发重启服务「 不推荐 」新版本会崩溃
--- - ²³🎉〔 推荐 〕好消息，已经引入 ahk 调用外部命令（通过绑定 ctrl+p）解决重启服务
+-- - ²¹ ❌ 手动点击重启服务选项
+-- - ²² ❌ rime_jk 方案可通过 ~rrr 触发重启服务「 不推荐 」新版本会崩溃
+-- - ²³ ❌ 已经引入 ahk 调用外部命令（通过绑定 ctrl+p）解决重启服务
+-- - ²⁴ 🎉〔 推荐 〕好消息，已经升级 ahk ，监听到文件变化后会自动重启服务
 local auto_reload_service = false
 
 -- ② ➭ auto_generate_dict
@@ -338,6 +339,11 @@ function P.func(key_event, env)
         write_word_to_dict(env) -- 使用统一的写入函数生成对应的词典
     end
 
+    -- 上屏当前候选项
+    env.engine:commit_text(phrase)
+    context:clear()  -- 清除无用编码及候选框
+
+    -- ❌ 该操作可以废弃，已通过 AHK 在监听到文件变化后从外部重启服务，避免卡死
     if auto_reload_service then
         os.execute('cmd /c start "" "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\小狼毫输入法\\小狼毫算法服务"')
         context:refresh_non_confirmed_composition()

@@ -257,6 +257,7 @@ chaifen:
     - "xform/-/ /"
   tags:     
     - abc
+    - chars
     - pinyin
   tips: all   
 

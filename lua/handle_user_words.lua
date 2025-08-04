@@ -329,19 +329,19 @@ function P.func(key_event, env)
         env.user_words[phrase] = nil
     elseif key_event.keycode == 0x69 then -- ctrl + i (添加 in)
         env.user_words[phrase] = get_code(phrase)
+        env.engine:commit_text(phrase)  -- 上屏当前候选项
     else
         return 2
     end
+
+    context:clear()  -- 清除无用编码及候选框
+
     -- 实时更新 Lua 表序列化并保存
     -- log.warning(env.schema_type)
     write_word_to_file(env) -- 使用统一的写入函数
     if auto_generate_dict then
         write_word_to_dict(env) -- 使用统一的写入函数生成对应的词典
     end
-
-    -- 上屏当前候选项
-    env.engine:commit_text(phrase)
-    context:clear()  -- 清除无用编码及候选框
 
     -- ❌ 该操作可以废弃，已通过 AHK 在监听到文件变化后从外部重启服务，避免卡死
     if auto_reload_service then

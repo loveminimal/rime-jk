@@ -19,14 +19,14 @@ import subprocess
 import hashlib
 from pathlib import Path
 import threading
-from timer import timer
-from is_chinese_char import is_chinese_char
-from progress import format_progress_bar
-from pinyin2aux import load_metadata, process_input
-from tiger_map import tiger_map
-from wubi86_8105_map import wubi86_8105_map
-from header import get_header_ext
-from header import get_header_common
+from data.timer import timer
+from data.is_chinese_char import is_chinese_char
+from data.progress import format_progress_bar
+from data.pinyin2aux import load_metadata, process_input
+from data.tiger_map import tiger_map
+from data.wubi86_8105_map import wubi86_8105_map
+from data.header import get_header_ext
+from data.header import get_header_common
 from collections import defaultdict
 import zipfile
 import urllib.request

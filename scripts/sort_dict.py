@@ -4,10 +4,10 @@
 import hashlib
 from pathlib import Path
 from collections import defaultdict
-from header import get_header_sort
-from timer import timer
-from wubi86_8105_map import wubi86_8105_map
-from three_level_8105 import first_level, second_level, third_level
+from data.header import get_header_sort
+from data.timer import timer
+from data.wubi86_8105_map import wubi86_8105_map
+from data.three_level_8105 import first_level, second_level, third_level
 
 
 def is_chinese_char(char: str) -> bool:

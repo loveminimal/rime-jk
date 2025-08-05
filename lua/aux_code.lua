@@ -16,8 +16,8 @@ local schema_id_table = {
 }
 
 local aux_code_table = {}
-local aux_code_hy_table = require("aux_code_hy_table")
-local aux_code_hx_table = require("aux_code_hx_table")
+local aux_code_hy_table = require("data/aux_code_hy_table")
+local aux_code_hx_table = require("data/aux_code_hx_table")
 
 local A = {}
 

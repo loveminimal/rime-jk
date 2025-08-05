@@ -12,10 +12,10 @@
 # 
 import re
 from pathlib import Path
-from header import get_en_aliases_header
-from timer import timer
+from data.header import get_en_aliases_header
+from data.timer import timer
 
-from progress import progress
+from data.progress import progress
 
 
 @timer

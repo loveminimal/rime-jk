@@ -34,9 +34,9 @@ local schema_id_table = {
 }
 
 local cur_code_table = {}
-local tiger_code_table = require("tiger_code_table")
-local wubi86_code_table = require("wubi86_code_table")
-local flyyx_code_table = require("flyyx_code_table")
+local tiger_code_table = require("data/tiger_code_table")
+local wubi86_code_table = require("data/wubi86_code_table")
+local flyyx_code_table = require("data/flyyx_code_table")
 
 -- 获取键值对 table 长度
 local function table_len(t)

@@ -20,10 +20,10 @@ import re
 from pathlib import Path
 from collections import defaultdict
 import sys
-from header import get_header_sync
-from timer import timer
-from progress import progress
-from is_chinese_char import is_chinese_char
+from data.header import get_header_sync
+from data.timer import timer
+from data.progress import progress
+from data.is_chinese_char import is_chinese_char
 
 def get_md5(text: str) -> str:
     """计算字符串的 MD5 哈希值"""

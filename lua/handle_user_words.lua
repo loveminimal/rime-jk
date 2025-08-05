@@ -122,6 +122,9 @@ local function get_code(word)
         for _code in string.gmatch(f_char_code, "([^;]+)") do 
             for _codes in string.gmatch(s_char_code, "([^;]+)") do 
                 for _codet in string.gmatch(t_char_code, "([^;]+)") do 
+                    -- 这里针对三字词，我们追加三简，如：动不动 → dbd
+                    CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(_codes, 1, 1) .. string.sub(_codet, 1, 1) .. ';'
+                    -- 四码全码
                     CODE = CODE .. string.sub(_code, 1, 1) .. string.sub(_codes, 1, 1) .. string.sub(_codet, 1, 2) .. ';'
                 end
             end
@@ -357,7 +360,9 @@ local function hasKey(tbl, key)
         return false
     end
     for k, _ in pairs(tbl) do
-        if #key == 4 and string.find(k, key) then
+        -- if #key == 4 and string.find(k, key) then
+        -- 此处对三字词添加三简支持
+        if #key >= 3 and string.find(k, key) then
             return true
         end
     end
@@ -392,7 +397,7 @@ function F.init(env)
     --     ["yymg"] = { "小小狗" },
     -- }
     env.seq_words_dict = reverse_seq_words(env.user_words)
-    -- log.warning('FFF ➭ ' .. table_len(env.seq_words_dict))
+    -- log.error('FFF ➭ ' .. table_len(env.seq_words_dict))
 end
 
 function F.func(input, env)
@@ -402,7 +407,7 @@ function F.func(input, env)
     local is_in_table = hasKey(env.seq_words_dict, input_code)
     local old_candidates = {}
     local new_candidates = {}
-    -- log.warning(tostring(is_in_table))
+    -- log.error(tostring(is_in_table))
 
     -- 如果没有匹配的简码或输入长度不符，直接返回原始候选
     if not is_in_table then
@@ -414,15 +419,21 @@ function F.func(input, env)
     -- log.warning('--- in table ---')
     -- 循环遍历 user_words 创建新的候选
     for code, phrases in pairs(env.seq_words_dict) do
-        -- log.warning("键:" .. code)
+        -- log.error("键:" .. code)
         -- 遍历当前键对应的词组列表
         for _, phrase in ipairs(phrases) do
             -- log.warning("值:" .. phrase)
             -- if code == input_code then
             -- if #input_code == 4 and string.find(code, input_code) then
             if string.find(code, input_code) then
-                local new_cand = Candidate("word", 1, 4, phrase, "*")
-                table.insert(new_candidates, new_cand)
+                -- 过滤掉 - 输入码长度为 3 且候选项长为 2 或大于 3 的情况
+                -- 如，实施、事实 → uiu[i] ，以此与转换到词典后是使用体验保持一致
+                -- 实际上，我们只为三字词语追加了三简
+                if not (#input_code == 3 and (utf8.len(phrase) == 2 or utf8.len(phrase) > 3)) then
+                    local new_cand = Candidate("word", 1, 4, phrase, "*")
+                    -- table.insert(new_candidates, new_cand)
+                    table.insert(new_candidates, new_cand)
+                end
             end
         end
     end

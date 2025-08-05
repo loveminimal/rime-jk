@@ -66,7 +66,7 @@ engine:
     - lua_filter@*handle_user_words*F
     - lua_filter@*prettify_comment
     # - lua_filter@*keep_short_code_first*T
-    # - lua_filter@*single_char_first       # 单字优先
+    - lua_filter@*single_char_sort*E
     - lua_filter@*single_char_only
     - simplifier
     - simplifier@emoji   

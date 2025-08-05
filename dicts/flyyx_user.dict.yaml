@@ -22,6 +22,7 @@ use_preset_vocabulary: false
 宝安	bcan	1
 宝妈	bcma	1
 宝子	bczi	6
+避坑	bikg	1
 笔者	bive	1
 必应	biyk	1
 遍历	bmli	1
@@ -50,6 +51,7 @@ use_preset_vocabulary: false
 挂载	gxzd	1
 豪杰	hcjp	1
 好嘛	hcma	1
+耗时	hcui	1
 好帅	hcuk	1
 横跳	hgtn	1
 韩立	hjli	1
@@ -65,6 +67,7 @@ use_preset_vocabulary: false
 产康	ijkh	1
 川普	irpu	1
 串子	irzi	1
+重排	ispd	1
 初代	iudd	1
 厨子	iuzi	1
 禁区	jbqu	1
@@ -73,6 +76,7 @@ use_preset_vocabulary: false
 集成	jiig	1
 鸡肋	jile	1
 鸡肋	jilw	1
+基于	jiyu	1
 姜文	jlwf	1
 简纯	jmiy	1
 剑来	jmld	1
@@ -85,6 +89,7 @@ use_preset_vocabulary: false
 老杨	lcyh	1
 烂货	ljho	1
 灵界	lkjp	1
+零头	lktz	1
 亮眼	llyj	1
 罗峰	lofg	1
 洛水	louv	1
@@ -132,6 +137,7 @@ use_preset_vocabulary: false
 真谛	vfdi	1
 整机	vgji	1
 郑码	vgma	1
+正气	vgqi	1
 置顶	vidk	1
 指法	vifa	1
 止境	vijk	1
@@ -173,11 +179,13 @@ use_preset_vocabulary: false
 元瑶	yryc	1
 元婴	yryk	1
 用的	ysde	1
+预见	yujm	1
 愈加	yujx	1
 有坂	yzbj	1
 有的	yzde	1
 又是	yzui	1
 鱿鱼	yzyu	1
+友友	yzyz	1
 皂袍	zcpc	1
 紫灵	zilk	1
 字幕	zimu	1
@@ -194,6 +202,7 @@ use_preset_vocabulary: false
 沧元图	cytu	1
 大乱斗	dldz	1
 独体字	dtzi	1
+定时器	duqi	1
 邓小平	dxpk	1
 恶趣味	eqww	1
 疯大叔	fduu	1
@@ -213,6 +222,7 @@ use_preset_vocabulary: false
 陈佩斯	ipsi	1
 金球奖	jqjl	1
 姜太虚	jtxu	1
+计时器	juqi	1
 空白符	kbfu	1
 开发者	kfve	1
 空明码	kmma	1
@@ -294,4 +304,7 @@ use_preset_vocabulary: false
 有花堪折直须折	yhkv	1
 早睡早起身体好	zuzh	1
 科技是第一生产力	kjul	1
+浩然天地，正气长存	hrtc	1
+行有不得，反求诸己	xybj	1
+此处不留爷，自有留爷处	cibi	1
 实践是检验真理的唯一标准	ujuv	1

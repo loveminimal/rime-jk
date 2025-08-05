@@ -141,6 +141,7 @@ use_preset_vocabulary: false
 这么	veme	1
 这是	veui	1
 真谛	vfdi	1
+真是	vfui	1
 整机	vgji	1
 郑码	vgma	1
 正气	vgqi	1
@@ -258,6 +259,7 @@ use_preset_vocabulary: false
 通规字	tgz	1
 贪嗔痴	tii	1
 唐太宗	ttz	1
+水浒传	uhv	1
 生产力	uil	1
 生僻字	upz	1
 制表符	vbf	1
@@ -272,6 +274,7 @@ use_preset_vocabulary: false
 兄弟们	xdm	1
 小狼毫	xlh	1
 虚拟机	xnj	1
+西游记	xyj	1
 岳不群	ybq	1
 引导符	ydf	1
 一场梦	yim	1
@@ -340,6 +343,7 @@ use_preset_vocabulary: false
 通规字	tgzi	1
 贪嗔痴	tiii	1
 唐太宗	ttzs	1
+水浒传	uhvr	1
 生产力	uili	1
 生僻字	upzi	1
 制表符	vbfu	1
@@ -354,6 +358,7 @@ use_preset_vocabulary: false
 兄弟们	xdmf	1
 小狼毫	xlhc	1
 虚拟机	xnji	1
+西游记	xyji	1
 岳不群	ybqy	1
 引导符	ydfu	1
 一场梦	yimg	1

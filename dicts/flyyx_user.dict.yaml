@@ -16,6 +16,7 @@ version: 2025.08
 sort: by_weight
 use_preset_vocabulary: false
 ...
+阿里	aali	1
 俺宝	anbc	6
 安印	anyb	1
 巴萨	basa	1
@@ -29,6 +30,7 @@ use_preset_vocabulary: false
 标识	bnui	1
 不赖	buld	1
 词频	cipb	1
+大乘	daig	1
 大唐	dath	1
 大竹	davu	1
 道心	dcxb	1
@@ -82,6 +84,7 @@ use_preset_vocabulary: false
 剑来	jmld	1
 简历	jmli	1
 监制	jmvi	1
+交集	jnji	1
 结语	jpyu	1
 绝世	jtui	1
 拉取	laqu	1
@@ -94,6 +97,7 @@ use_preset_vocabulary: false
 罗峰	lofg	1
 洛水	louv	1
 鲁迅	luxy	1
+卖菜	mdcd	1
 曼城	mjig	1
 魔然	morj	1
 魔头	motz	1
@@ -104,6 +108,7 @@ use_preset_vocabulary: false
 平白	pkbd	1
 其它	qita	1
 清纯	qkiy	1
+情形	qkxk	1
 前端	qmdr	1
 签章	qmvh	1
 求魔	qqmo	1
@@ -122,12 +127,12 @@ use_preset_vocabulary: false
 实名	uimk	1
 世俗	uisu	1
 事实	uiui	1
-史实	uiui	1
 实时	uiui	1
 诗文	uiwf	1
 释义	uiyi	1
 熟知	uuvi	1
 术语	uuyu	1
+水群	uvqy	1
 手疼	uztg	1
 熟知	uzvi	1
 受众	uzvs	1
@@ -202,6 +207,7 @@ use_preset_vocabulary: false
 沧元图	cytu	1
 大乱斗	dldz	1
 独体字	dtzi	1
+短视频	dupb	1
 定时器	duqi	1
 邓小平	dxpk	1
 恶趣味	eqww	1
@@ -229,6 +235,7 @@ use_preset_vocabulary: false
 康师傅	kufu	1
 刘德华	ldhx	1
 令狐冲	lhis	1
+浏览器	llqi	1
 李世民	lumb	1
 老先生	lxug	1
 姆巴佩	mbpw	1
@@ -239,6 +246,7 @@ use_preset_vocabulary: false
 哪一站	nyvj	1
 欧国联	oglm	1
 切尔西	qexi	1
+全家桶	qjts	1
 人生观	rugr	1
 骚操作	sczo	1
 速录宝	slbc	1
@@ -251,8 +259,10 @@ use_preset_vocabulary: false
 制表符	vbfu	1
 知北游	vbyz	1
 这会儿	vher	1
+张纯如	viru	1
 周星驰	vxii	1
 重灾区	vzqu	1
+挖掘机	wjji	1
 文件夹	wjjx	1
 吴彦祖	wyzu	1
 兄弟们	xdmf	1
@@ -278,6 +288,7 @@ use_preset_vocabulary: false
 开箱即用	kxjy	1
 流浪地球	lldq	1
 了然于心	lryx	1
+莫斯密码	msmm	1
 蜜雪冰城	mxbi	1
 通天教主	ttjv	1
 吞噬星空	tuxk	1
@@ -296,6 +307,7 @@ use_preset_vocabulary: false
 山海八荒录	uhbl	1
 爱潜水的乌贼	aquz	1
 爱涂鸦的蜗牛	atyn	1
+狗日的小日本	grdb	1
 不废江河万古流	bfjl	1
 尔曹身与名俱灭	ecum	1
 各领风骚数百年	glfn	1

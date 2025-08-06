@@ -29,6 +29,7 @@ use_preset_vocabulary: false
 遍历	bmli	1
 标识	bnui	1
 不赖	buld	1
+不止	buvi	1
 词频	cipb	1
 大乘	daig	1
 大唐	dath	1
@@ -102,6 +103,7 @@ use_preset_vocabulary: false
 曼城	mjig	1
 魔然	morj	1
 魔头	motz	1
+美团	mwtr	1
 梅西	mwxi	1
 哪条	natn	1
 你的	nide	1
@@ -125,6 +127,7 @@ use_preset_vocabulary: false
 推出	tviu	1
 神祇	ufqi	1
 神识	ufui	1
+圣母	ugmu	1
 实名	uimk	1
 世俗	uisu	1
 事实	uiui	1
@@ -201,6 +204,7 @@ use_preset_vocabulary: false
 编辑器	bjq	1
 标准版	bvb	1
 白小纯	bxi	1
+贬义词	byc	1
 编译器	byq	1
 葱油饼	cyb	1
 沧元图	cyt	1
@@ -248,6 +252,7 @@ use_preset_vocabulary: false
 你不会	nbh	1
 你不会	nbk	1
 弄出来	nil	1
+你是谁	nuu	1
 哪一站	nyv	1
 欧国联	ogl	1
 切尔西	qex	1
@@ -261,6 +266,7 @@ use_preset_vocabulary: false
 唐太宗	ttz	1
 水浒传	uhv	1
 生产力	uil	1
+圣母心	umx	1
 生僻字	upz	1
 制表符	vbf	1
 知北游	vby	1
@@ -285,6 +291,7 @@ use_preset_vocabulary: false
 编辑器	bjqi	1
 标准版	bvbj	1
 白小纯	bxiy	1
+贬义词	byci	1
 编译器	byqi	1
 葱油饼	cybk	1
 沧元图	cytu	1
@@ -332,6 +339,8 @@ use_preset_vocabulary: false
 你不会	nbhv	1
 你不会	nbkk	1
 弄出来	nild	1
+你是谁	nuuv	1
+你是谁	nuuw	1
 哪一站	nyvj	1
 欧国联	oglm	1
 切尔西	qexi	1
@@ -345,6 +354,7 @@ use_preset_vocabulary: false
 唐太宗	ttzs	1
 水浒传	uhvr	1
 生产力	uili	1
+圣母心	umxb	1
 生僻字	upzi	1
 制表符	vbfu	1
 知北游	vbyz	1

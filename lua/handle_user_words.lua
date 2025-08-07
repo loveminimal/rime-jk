@@ -265,7 +265,7 @@ function P.init(env)
 
     env.user_words = require("user_words") -- 加载文件中的 user_words
     local cur_schema = env.engine.schema.schema_id
-    -- log.warning('➭ ' .. cur_schema)
+    -- logger.info('➭ ' .. cur_schema)
     -- 鉴于有时候虎码方案隐藏候选框使用，故此处允许 jk_pinyin 方案添加「 自造词 」
     if startsWith(cur_schema, schema_id_table["tiger"])then
         env.schema_type = "tiger"
@@ -340,7 +340,7 @@ function P.func(key_event, env)
     context:clear()  -- 清除无用编码及候选框
 
     -- 实时更新 Lua 表序列化并保存
-    -- log.warning(env.schema_type)
+    -- logger.info(env.schema_type)
     write_word_to_file(env) -- 使用统一的写入函数
     if auto_generate_dict then
         write_word_to_dict(env) -- 使用统一的写入函数生成对应的词典
@@ -397,7 +397,7 @@ function F.init(env)
     --     ["yymg"] = { "小小狗" },
     -- }
     env.seq_words_dict = reverse_seq_words(env.user_words)
-    -- log.error('FFF ➭ ' .. table_len(env.seq_words_dict))
+    -- logger.info('FFF ➭ ' .. table_len(env.seq_words_dict))
 end
 
 function F.func(input, env)
@@ -407,7 +407,7 @@ function F.func(input, env)
     local is_in_table = hasKey(env.seq_words_dict, input_code)
     local old_candidates = {}
     local new_candidates = {}
-    -- log.error(tostring(is_in_table))
+    -- logger.info(tostring(is_in_table))
 
     -- 如果没有匹配的简码或输入长度不符，直接返回原始候选
     if not is_in_table then
@@ -416,13 +416,13 @@ function F.func(input, env)
         end
         return
     end
-    -- log.warning('--- in table ---')
+    -- logger.info('--- in table ---')
     -- 循环遍历 user_words 创建新的候选
     for code, phrases in pairs(env.seq_words_dict) do
-        -- log.error("键:" .. code)
+        -- logger.info("键:" .. code)
         -- 遍历当前键对应的词组列表
         for _, phrase in ipairs(phrases) do
-            -- log.warning("值:" .. phrase)
+            -- logger.info("值:" .. phrase)
             -- if code == input_code then
             -- if #input_code == 4 and string.find(code, input_code) then
             if string.find(code, input_code) then

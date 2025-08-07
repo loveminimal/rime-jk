@@ -10,3 +10,4 @@ dicts/out
 dicts/*_zj.dict.yaml
 dicts/*_ext.dict.yaml
 *_dicts
+lua/log.txt

@@ -12,10 +12,6 @@
 ② 排除自定义别名和 Emoji 及标点符号
 --]] 
 
--- 定义日志输出
-local function logg(text)
-    log.warning(text)
-end
 
 local function parse_definitions(text)
     local definitions = {}
@@ -28,13 +24,13 @@ end
 
 
 local function filter(input)
-    -- logg('--- 开始测试 FILTER ---')
+    -- logger.info('--- 开始测试 FILTER ---')
     local l = {}
     for cand in input:iter() do
 
         -- 增强一下英文词典反查 将释义放在注释中---
         local cand_text = cand.text
-        -- logg('cand.text >>> ' .. cand_text)
+        -- logger.info('cand.text >>> ' .. cand_text)
 
         -- --- 自定义指令 ---
         -- 排除包含路径字符或命令符号的字符串 - 全部放候选
@@ -53,9 +49,9 @@ local function filter(input)
         local word, pos, meaning = string.match(cand_text, "(%a+)%s+([%a&%.]+)%s*(.+)")
 
         if word then
-            -- log.warning("Word:" .. word)        -- 输出: Word: China
-            -- log.warning("POS:" .. pos)          -- 输出: POS: n.    
-            -- log.warning("Meaning:" .. meaning)  -- 输出: Meaning: 中国 adj. 中国的 中国制造的
+            -- logger.info("Word:" .. word)        -- 输出: Word: China
+            -- logger.info("POS:" .. pos)          -- 输出: POS: n.    
+            -- logger.info("Meaning:" .. meaning)  -- 输出: Meaning: 中国 adj. 中国的 中国制造的
             cand.text = word
             cand.comment = pos .. meaning
 
@@ -98,7 +94,7 @@ local function filter(input)
         ::continue::
     end
 
-    -- logg('--- END ---')
+    -- logger.info('--- END ---')
 end
 
 return filter

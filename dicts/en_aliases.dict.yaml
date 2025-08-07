@@ -14,7 +14,7 @@
 #
 ---
 name: en_aliases
-version: 2025.07
+version: 2025.08
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -114,13 +114,11 @@ cd ~/site/themes/virgo	cdtt	0
 # --- Rime ---
 code	cc	0
 code ~/.bash_aliases	cca	0
-code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_pinyin_u.userdb.txt	ccpy	0
 code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/u.userdb.txt	ccy	0
-code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_wubi.userdb.txt	ccw	0
-code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/jk_tiger.userdb.txt	cct	0
+code ~/AppData/Roaming/Rime/custom_pinyin.txt	ccc	0
 code C:/Users/jack/AppData/Roaming/Rime/lua/user_words.lua	ccu	0
-code C:/Users/jack/AppData/Roaming/Rime/custom_pinyin.txt	ccc	0
-tail -f "C:\\Users\\jack\\AppData\\Local\\Temp\\rime.weasel\\rime.weasel.JK.jack.log.WARNING.20250525-191342.20412.log"	vlog	0
+# alias vlog='tail -f "C:\\Users\\jack\\AppData\\Local\\Temp\\rime.weasel\\rime.weasel.JK.jack.log.WARNING.20250525-191342.20412.log"'
+tail -f "C:\\Users\\jack\\AppData\\Roaming\\Rime\\lua\\log.txt"	lgg	0
 
 "C:/Program Files/Rime/weasel-0.16.3/WeaselSetup.exe"	arc	0
 cd ~/AppData/Roaming/Rime && py scripts/deploy_rime.py	ddr	0

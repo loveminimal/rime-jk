@@ -8,6 +8,8 @@
 感兴趣的朋友可以按需扩展
 --]] 
 
+-- local logger = require("logger")
+
 local schema_id_table = {
     ["pinyin"] = "jk_pinyin",
     ["tiger"] = "jk_tiger",
@@ -65,10 +67,11 @@ function A.init(env)
     local config = env.engine.schema.config
     env.chars = config:get_string("chars/prefix")
     env.pinyin = config:get_string("pinyin/prefix")
-    -- log.error(pinyin .. ' ' .. chars)
+    env.reverse_lookup = config:get_string("reverse_lookup/prefix")
+    -- logger.info(pinyin .. ' ' .. chars)
 
     local cur_schema = env.engine.schema.schema_id
-    -- log.warning('➭ ' .. cur_schema)
+    -- logger.info('➭ ' .. cur_schema)
     if startsWith(cur_schema, schema_id_table["tiger"])then
         env.schema_type = "tiger"
         aux_code_table = aux_code_hy_table
@@ -101,17 +104,17 @@ function A.func(input, env)
     if code_len == 4 then
         old_candidates = {}
         for cand in input:iter() do
-            -- log.error('4 -- ' .. cand.text)
+            -- logger.info('4 -- ' .. cand.text)
             table.insert(old_candidates, cand)
             yield(cand)
         end
 
         -- 循环遍历 user_words 创建新的候选
         for code, phrases in pairs(env.seq_words_dict) do
-            -- log.warning("键:" .. code)
+            -- logger.info("键:" .. code)
             -- 遍历当前键对应的词组列表
             for _, phrase in ipairs(phrases) do
-                -- log.warning("值:" .. phrase)
+                -- logger.info("值:" .. phrase)
                 -- if code == input_code then
                 -- if #input_code == 4 and string.find(code, input_code) then
                 if string.find(code, input_code) then
@@ -127,15 +130,18 @@ function A.func(input, env)
     -- 默认使用 4 码后的两码作为辅助码用以筛选缓存的四码候选
     -- 且排除拼音反查的情况
     if code_len == 5 or code_len == 6 then
-        -- log.error('input_code ➭ ' .. input_code)
+        -- logger.info('input_code ➭ ' .. input_code)
         local aux_code = string.sub(input_code, 5)
-        -- log.error('aux_code ➭ ' .. aux_code)
+        -- logger.info('aux_code ➭ ' .. aux_code)
         local aux_list = aux_code_table[aux_code] or {}
 
-        -- 排除以 ow、oc（小鹤）¦ Z、C（形码）为引导词的副编译器「 拼音反查时 」
+        -- 排除以 ow、oc（小鹤）¦ Z、C（形码）¦ ~~（字符反查）为引导词的副编译器「 拼音反查时 」
         local f_code = string.sub(input_code, 1, 1)
         local fs_code = string.sub(input_code, 1, 2)
-        if fs_code == env.chars or fs_code == env.pinyin or string.find('ABCDEFGHIJKLMNOPQRSTUVWXYZ', f_code) then
+        if fs_code == env.chars or fs_code == env.pinyin or 
+            -- f_code == env.reverse_lookup or fs_code == env.reverse_lookup or 
+            string.find("ABCDEFGHIJKLMNOPQRSTUVWXYZ~`;'/", f_code) then
+
             for cand in input:iter() do
                 yield(cand)
             end
@@ -144,13 +150,13 @@ function A.func(input, env)
 
         for _, cand in ipairs(old_candidates) do
             local cand_text = cand.text
-            -- log.error(cand_text)
+            -- logger.info(cand_text)
             local len = utf8.len(cand_text)
             local last_char = utf8_sub(cand_text, len, len)
-            -- log.error('last_char → ' .. last_char)
+            -- logger.info('last_char → ' .. last_char)
 
             if is_in_array(last_char, aux_list) then
-                -- log.error('new_candidates → ' .. cand_text)
+                -- logger.info('new_candidates → ' .. cand_text)
                 local new_cand = Candidate("word", 1, 6, cand_text, "〆")
                 table.insert(new_candidates, new_cand)
             end

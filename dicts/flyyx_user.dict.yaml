@@ -36,7 +36,9 @@ use_preset_vocabulary: false
 大乘	daig	1
 大唐	dath	1
 大竹	davu	1
+道人	dcrf	1
 道心	dcxb	1
+道友	dcyz	1
 道祖	dczu	1
 大唐	ddth	1
 定长	dkih	1
@@ -242,6 +244,7 @@ use_preset_vocabulary: false
 懂不懂	dbd	1
 对对对	ddd	1
 大乱斗	dld	1
+大模型	dmx	1
 狄仁杰	drj	1
 第三方	dsf	1
 独体字	dtz	1
@@ -303,6 +306,7 @@ use_preset_vocabulary: false
 人生观	rug	1
 骚操作	scz	1
 速录宝	slb	1
+速录机	slj	1
 孙燕姿	syz	1
 通规字	tgz	1
 贪嗔痴	tii	1
@@ -337,8 +341,10 @@ use_preset_vocabulary: false
 岳不群	ybq	1
 引导符	ydf	1
 一场梦	yim	1
+越来越	yly	1
 姚秋萍	yqp	1
 自动化	zdh	1
+自定义	zdy	1
 字符串	zfi	1
 最高级	zgj	1
 自然码	zrm	1
@@ -355,6 +361,7 @@ use_preset_vocabulary: false
 懂不懂	dbds	1
 对对对	dddv	1
 大乱斗	dldz	1
+大模型	dmxk	1
 狄仁杰	drjp	1
 第三方	dsfh	1
 独体字	dtzi	1
@@ -417,6 +424,7 @@ use_preset_vocabulary: false
 人生观	rugr	1
 骚操作	sczo	1
 速录宝	slbc	1
+速录机	slji	1
 孙燕姿	syzi	1
 通规字	tgzi	1
 贪嗔痴	tiii	1
@@ -451,12 +459,15 @@ use_preset_vocabulary: false
 岳不群	ybqy	1
 引导符	ydfu	1
 一场梦	yimg	1
+越来越	ylyt	1
 姚秋萍	yqpk	1
 自动化	zdhx	1
+自定义	zdyi	1
 字符串	zfir	1
 最高级	zgji	1
 自然码	zrma	1
 自造词	zzci	1
+不可得兼	bkdj	1
 沧海横流	chhl	1
 大成若缺	dirq	1
 大闹天宫	dntg	1
@@ -466,6 +477,7 @@ use_preset_vocabulary: false
 宫保拼音	gbpy	1
 哼哼哈嘿	hhhh	1
 横空出世	hkiu	1
+鹤啸九天	hxjt	1
 出简让全	ijrq	1
 即插即用	jijy	1
 降维打击	jwdj	1
@@ -494,6 +506,7 @@ use_preset_vocabulary: false
 山海八荒录	uhbl	1
 爱潜水的乌贼	aquz	1
 爱涂鸦的蜗牛	atyn	1
+方显英雄本色	fxys	1
 狗日的小日本	grdb	1
 不废江河万古流	bfjl	1
 尔曹身与名俱灭	ecum	1

@@ -42,7 +42,6 @@ use_preset_vocabulary: false
 道祖	dczu	1
 大唐	ddth	1
 定长	dkih	1
-定长	dkvh	1
 电力	dmli	1
 鹅厂	eeih	1
 发力	fali	1
@@ -84,10 +83,9 @@ use_preset_vocabulary: false
 极点	jidm	1
 季欢	jihr	1
 集成	jiig	1
-鸡肋	jile	1
 鸡肋	jilw	1
-既能	jind	1
 既能	jing	1
+基数	jiuu	1
 基于	jiyu	1
 姜文	jlwf	1
 简纯	jmiy	1
@@ -108,7 +106,6 @@ use_preset_vocabulary: false
 洛水	louv	1
 鲁迅	luxy	1
 卖菜	mdcd	1
-密钥	miyc	1
 密钥	miyt	1
 曼城	mjig	1
 墨奇	moqi	1
@@ -163,6 +160,7 @@ use_preset_vocabulary: false
 这么	veme	1
 这是	veui	1
 真谛	vfdi	1
+真神	vfuf	1
 真是	vfui	1
 整机	vgji	1
 郑码	vgma	1
@@ -243,6 +241,7 @@ use_preset_vocabulary: false
 动不动	dbd	1
 懂不懂	dbd	1
 对对对	ddd	1
+电动车	ddi	1
 大乱斗	dld	1
 大模型	dmx	1
 狄仁杰	drj	1
@@ -272,6 +271,7 @@ use_preset_vocabulary: false
 候选项	hxx	1
 纯净水	iju	1
 陈佩斯	ips	1
+初始化	iuh	1
 结构化	jgh	1
 金球奖	jqj	1
 姜太虚	jtx	1
@@ -296,7 +296,6 @@ use_preset_vocabulary: false
 姆巴佩	mbp	1
 梦中界	mvj	1
 你不会	nbh	1
-你不会	nbk	1
 弄出来	nil	1
 你是谁	nuu	1
 哪一站	nyv	1
@@ -360,6 +359,7 @@ use_preset_vocabulary: false
 动不动	dbds	1
 懂不懂	dbds	1
 对对对	dddv	1
+电动车	ddie	1
 大乱斗	dldz	1
 大模型	dmxk	1
 狄仁杰	drjp	1
@@ -389,6 +389,7 @@ use_preset_vocabulary: false
 候选项	hxxl	1
 纯净水	ijuv	1
 陈佩斯	ipsi	1
+初始化	iuhx	1
 结构化	jghx	1
 金球奖	jqjl	1
 姜太虚	jtxu	1
@@ -413,7 +414,6 @@ use_preset_vocabulary: false
 姆巴佩	mbpw	1
 梦中界	mvjp	1
 你不会	nbhv	1
-你不会	nbkk	1
 弄出来	nild	1
 你是谁	nuuv	1
 你是谁	nuuw	1

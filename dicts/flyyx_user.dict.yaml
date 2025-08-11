@@ -208,7 +208,9 @@ use_preset_vocabulary: false
 易懂	yids	1
 溢出	yiiu	1
 移除	yiiu	1
+一件	yijm	1
 移植	yivi	1
+一位	yiww	1
 一组	yizu	1
 英超	ykic	1
 原著	yrvu	1
@@ -233,6 +235,7 @@ use_preset_vocabulary: false
 编辑器	bjq	1
 标准版	bvb	1
 标识符	bvf	1
+不重要	bvy	1
 白小纯	bxi	1
 贬义词	byc	1
 编译器	byq	1
@@ -316,6 +319,7 @@ use_preset_vocabulary: false
 实际上	uju	1
 圣母心	umx	1
 生僻字	upz	1
+杀伤力	uul	1
 制表符	vbf	1
 知北游	vby	1
 这会儿	vhe	1
@@ -351,6 +355,7 @@ use_preset_vocabulary: false
 编辑器	bjqi	1
 标准版	bvbj	1
 标识符	bvfu	1
+不重要	bvyc	1
 白小纯	bxiy	1
 贬义词	byci	1
 编译器	byqi	1
@@ -435,6 +440,7 @@ use_preset_vocabulary: false
 实际上	ujuh	1
 圣母心	umxb	1
 生僻字	upzi	1
+杀伤力	uuli	1
 制表符	vbfu	1
 知北游	vbyz	1
 这会儿	vher	1

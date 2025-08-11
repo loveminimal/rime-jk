@@ -115,7 +115,8 @@ cd ~/site/themes/virgo	cdtt	0
 code	cc	0
 code ~/.bash_aliases	cca	0
 code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/u.userdb.txt	ccy	0
-code ~/AppData/Roaming/Rime/custom_pinyin.txt	ccc	0
+code ~/AppData/Roaming/Rime/custom_pinyin.txt	cci	0
+code ~/AppData/Roaming/Rime/custom_tiger.txt	cct	0
 code C:/Users/jack/AppData/Roaming/Rime/lua/user_words.lua	ccu	0
 # alias vlog='tail -f "C:\\Users\\jack\\AppData\\Local\\Temp\\rime.weasel\\rime.weasel.JK.jack.log.WARNING.20250525-191342.20412.log"'
 tail -f "C:\\Users\\jack\\AppData\\Roaming\\Rime\\lua\\log.txt"	lgg	0

@@ -11,6 +11,7 @@ filesToWatch := [
     ; A_AppData "\Rime\custom_pinyin.txt",
     RootPath "\lua\user_words.lua",
     RootPath "\custom_pinyin.txt",
+    RootPath "\lua\quick_symbol.lua",
     ; RootPath "\custom_tiger.txt",
 ]
 ;*³ 执行命令及快捷键绑定
@@ -101,9 +102,9 @@ weaselSetupPath := GetWeaselPath('setup')
     Run "notepad.exe " RootPath "\custom_pinyin.txt"
     return
 }
-+!t::
++!v::
 {
-    Run "notepad.exe " RootPath "\custom_tiger.txt"
+    Run "notepad.exe " RootPath "\lua\quick_symbol.lua"
     return
 }
 

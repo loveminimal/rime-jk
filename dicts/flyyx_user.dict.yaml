@@ -35,12 +35,14 @@ use_preset_vocabulary: false
 大幅	dafu	1
 大乘	daig	1
 大唐	dath	1
+大赚	davr	1
 大竹	davu	1
 道人	dcrf	1
 道心	dcxb	1
 道友	dcyz	1
 道祖	dczu	1
 大唐	ddth	1
+大赚	ddvr	1
 定长	dkih	1
 电力	dmli	1
 鹅厂	eeih	1
@@ -78,6 +80,7 @@ use_preset_vocabulary: false
 串子	irzi	1
 重排	ispd	1
 初代	iudd	1
+出手	iuuz	1
 厨子	iuzi	1
 禁区	jbqu	1
 极点	jidm	1
@@ -88,6 +91,7 @@ use_preset_vocabulary: false
 基数	jiuu	1
 基于	jiyu	1
 姜文	jlwf	1
+坚果	jmgo	1
 简纯	jmiy	1
 剑来	jmld	1
 简历	jmli	1
@@ -279,6 +283,7 @@ use_preset_vocabulary: false
 陈佩斯	ips	1
 初始化	iuh	1
 结构化	jgh	1
+坚果云	jgy	1
 金球奖	jqj	1
 姜太虚	jtx	1
 计时器	juq	1
@@ -294,6 +299,7 @@ use_preset_vocabulary: false
 里程碑	lib	1
 连接池	lji	1
 浏览器	llq	1
+浪浪山	llu	1
 螺蛳粉	lsf	1
 李世民	lum	1
 老先生	lxu	1
@@ -400,6 +406,7 @@ use_preset_vocabulary: false
 陈佩斯	ipsi	1
 初始化	iuhx	1
 结构化	jghx	1
+坚果云	jgyy	1
 金球奖	jqjl	1
 姜太虚	jtxu	1
 计时器	juqi	1
@@ -415,6 +422,7 @@ use_preset_vocabulary: false
 里程碑	libw	1
 连接池	ljii	1
 浏览器	llqi	1
+浪浪山	lluj	1
 螺蛳粉	lsff	1
 李世民	lumb	1
 老先生	lxug	1

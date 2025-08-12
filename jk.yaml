@@ -24,7 +24,9 @@ switches:
   - name: char_only
     reset: 0
     states: [ 词语, 单字 ]
-
+  - name: charset_filter
+    reset: 0
+    # states: [ 通规, 扩集 ]
 
 # --- 识别器 ---
 # -------------------------------------
@@ -40,10 +42,10 @@ recognizer:
   patterns:
     reverse_lookup: "^~~[a-z]*:?$"
     punct: "^~([0-9]|10|[A-Za-z]+)$"
-    # chars: "^oc[a-z]*$"
+    # chars: "^C[a-z]*$"
     # pinyin: "^z[Xa-z]*$" 
-    # pinyin: "^Z[a-z]*$"    
-    # add_user_dict: "^ZZ[a-z]*$"
+    # pinyin: "^P[a-z]*$"    
+    # add_user_dict: "^Z[a-z]*$"
     helper: "^(~help|hH)$"
     quick_symbol: "^;.*$" 
 
@@ -81,7 +83,7 @@ reverse_lookup:
 chars:
   tag: chars
   dictionary: jk_chars
-  prefix: "oc"
+  prefix: "C"	# oc
   tips: "〔生僻字·查〕"
   suffix: "'"
   preedit_format:
@@ -93,7 +95,7 @@ chars:
 pinyin:
   tag: pinyin
   dictionary: jk_pinyin
-  prefix: "Z"
+  prefix: "P"	# ow 
   suffix: "'"
   tips: 〔拼音·临时〕
   preedit_format:
@@ -101,6 +103,19 @@ pinyin:
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
   enable_user_dict: false
+
+tiger:
+  tag: tiger
+  dictionary: jk_tiger
+  prefix: "T"	# ot
+  suffix: "'"
+  tips: 〔虎码·临时〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  enable_user_dict: false
+  enable_completion: false
 
 user_dict_set:
   dictionary: jk_pinyin
@@ -127,7 +142,7 @@ add_user_dict:
   preedit_format:   
   comment_format:
     - xform/[^;]*;([^;]*)/$1/
-  prefix: "ZZ"
+  prefix: "Z"	# oa
   tips: "〔字词·自造〕"
 
 # -------------------------------------

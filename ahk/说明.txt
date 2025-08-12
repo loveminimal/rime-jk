@@ -18,6 +18,7 @@ RootPath := A_ScriptDir "\.."
 filesToWatch := [
     RootPath "\lua\user_words.lua",
     RootPath "\custom_pinyin.txt",
+    RootPath "\custom_tiger.txt",
 ]
 ;*³ 执行命令及快捷键绑定
 ;   详见 line 66 行上下 ⇩
@@ -32,7 +33,8 @@ filesToWatch := [
 ;    用户资料同步   → S-M-a
 ;    打开输入法设定 → S-M-c
 ;    添加用户词     → S-M-u
-;    插入定制词     → S-M-i
+;    插入定制词     → S-M-p（拼音）
+;    插入定制词     → S-M-t（虎码）
 
 当前主要是为了配合 lua/handle_user_words.lua 在定频的情况下新增用户词后快速重启 Rime 服务
 如 C-i C-p 即可立即使用该词
@@ -51,4 +53,5 @@ filesToWatch := [
 filesToWatch := [
     RootPath "\lua\user_words.lua",
     RootPath "\custom_pinyin.txt",
+    RootPath "\custom_tiger.txt",
 ]

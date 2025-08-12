@@ -29,7 +29,7 @@ vim	vv	0
 vim ~/.vim/vimrc	vvc	0
 nvim	nv	0
 nvim ~/AppData/Local/nvim/init.lua	nvi	0
-cd ~/AppData/Local/nvim	cdn	0
+# alias cdn="cd ~/AppData/Local/nvim"
 cd ~/AppData/Local	cdl	0
 
 vim ~/.bash_aliases	va	0
@@ -100,6 +100,7 @@ ssh jack@aituyaa.lo	ssvm	0
 # --- Windows ---
 cd ~/AppData/Roaming/.emacs.d	cde	0
 cd ~/AppData/Roaming/Rime	cdr	0
+cd ~/Nutstore/1/Rime	cdn	0
 cd ~/AppData/Roaming/site	cds	0
 cd ~/AppData/Roaming/site/themes/virgo	cdt	0
 cd ~/AppData/Roaming/site/content/.obsidian/themes/Virgo	cdo	0
@@ -115,27 +116,27 @@ cd ~/site/themes/virgo	cdtt	0
 code	cc	0
 code ~/.bash_aliases	cca	0
 code C:/Users/jack/Nutstore/1/我的坚果云/RimeSync/jk-jack/u.userdb.txt	ccy	0
-code ~/AppData/Roaming/Rime/custom_pinyin.txt	cci	0
+code ~/AppData/Roaming/Rime/custom_pinyin.txt	ccp	0
 code ~/AppData/Roaming/Rime/custom_tiger.txt	cct	0
-code ~/AppData/Roaming/Rime/lua/quick_symbol.lua	ccs	0
-code C:/Users/jack/AppData/Roaming/Rime/lua/user_words.lua	ccu	0
-# alias vlog='tail -f "C:\\Users\\jack\\AppData\\Local\\Temp\\rime.weasel\\rime.weasel.JK.jack.log.WARNING.20250525-191342.20412.log"'
+code ~/AppData/Roaming/Rime/lua/quick_symbol.lua	ccv	0
+code ~/AppData/Roaming/Rime/lua/user_words.lua	ccu	0
 tail -f "C:\\Users\\jack\\AppData\\Roaming\\Rime\\lua\\log.txt"	lgg	0
 
 "C:/Program Files/Rime/weasel-0.16.3/WeaselSetup.exe"	arc	0
-cd ~/AppData/Roaming/Rime && py scripts/deploy_rime.py	ddr	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py	ssr	0
-cd ~/AppData/Roaming/Rime && py scripts/fetch_any_dict.py	fad	0
-cd ~/AppData/Roaming/Rime && py scripts/fetch_any_dict.py -d 2	fadd	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py && py scripts/deploy_rime.py	uud	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 20 && py scripts/deploy_rime.py	uuw	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 30 && py scripts/deploy_rime.py	uut	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 40 && py scripts/deploy_rime.py	uuf	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uuy	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uupy	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 21 && py scripts/deploy_rime.py	uuwz	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_rime.py && py scripts/sync_user_dict.py 31 && py scripts/deploy_rime.py	uutz	0
-cd ~/AppData/Roaming/Rime && py scripts/sync_en_aliases_dict.py && py scripts/deploy_rime.py	uea	0
+# cd ~/AppData/Roaming/Rime 
+py scripts/deploy_rime.py	ddr	0
+py scripts/sync_rime.py	ssr	0
+py scripts/fetch_any_dict.py	fad	0
+py scripts/fetch_any_dict.py -d 2	fadd	0
+py scripts/sync_rime.py && py scripts/sync_user_dict.py && py scripts/deploy_rime.py	uud	0
+py scripts/sync_rime.py && py scripts/sync_user_dict.py 20 && py scripts/deploy_rime.py	uuw	0
+py scripts/sync_rime.py && py scripts/sync_user_dict.py 30 && py scripts/deploy_rime.py	uut	0
+py scripts/sync_rime.py && py scripts/sync_user_dict.py 40 && py scripts/deploy_rime.py	uuf	0
+py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uuy	0
+py scripts/sync_rime.py && py scripts/sync_user_dict.py 1 && py scripts/deploy_rime.py	uupy	0
+py scripts/sync_rime.py && py scripts/sync_user_dict.py 21 && py scripts/deploy_rime.py	uuwz	0
+py scripts/sync_rime.py && py scripts/sync_user_dict.py 31 && py scripts/deploy_rime.py	uutz	0
+py scripts/sync_en_aliases_dict.py && py scripts/deploy_rime.py	uea	0
 
 # --- Hugo ---
 cd ~/AppData/Roaming/site && rm -rf public && hugo && source scripts/deploy.sh && rm -rf public	ssd	0

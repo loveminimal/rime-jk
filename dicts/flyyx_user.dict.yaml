@@ -18,6 +18,7 @@ use_preset_vocabulary: false
 ...
 阿里	aali	1
 俺宝	anbc	6
+安迪	andi	1
 安印	anyb	1
 巴萨	basa	1
 宝安	bcan	1
@@ -99,6 +100,7 @@ use_preset_vocabulary: false
 简历	jmli	1
 监制	jmvi	1
 交集	jnji	1
+杰瑞	jprv	1
 结语	jpyu	1
 绝世	jtui	1
 拉取	laqu	1
@@ -137,6 +139,7 @@ use_preset_vocabulary: false
 人士	rfui	1
 四码	sima	1
 他的	tade	1
+汤姆	thmu	1
 天雷	tmlw	1
 脱敏	tomb	1
 同化	tshx	1
@@ -146,6 +149,7 @@ use_preset_vocabulary: false
 审视	ufui	1
 神识	ufui	1
 圣母	ugmu	1
+汤姆	uhmu	1
 时机	uiji	1
 事件	uijm	1
 示例	uili	1

@@ -200,6 +200,10 @@ if __name__ == '__main__':
 
     src_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts\\out')
+    if not out_dir.exists():
+        src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\Rime\\dicts')
+        out_dir = Path('C:\\Users\\jack\\Nutstore\\1\\Rime\\dicts\\out')
+
     dict_start = 'tiger.dict.yaml'
 
     if not out_dir.exists():

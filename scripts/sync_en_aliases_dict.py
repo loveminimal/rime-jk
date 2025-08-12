@@ -69,6 +69,9 @@ if __name__ == '__main__':
 
     src_dir = Path('C:\\Users\\jack')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
+    if not out_dir.exists():
+        out_dir = Path('C:\\Users\\jack\\Nutstore\\1\\Rime\\dicts')
+
     file_endswith_filter = '.bash_aliases'
 
     out_file = 'en_aliases.dict.yaml'

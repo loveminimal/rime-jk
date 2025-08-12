@@ -233,6 +233,8 @@ def exec(code_type = '', keep_user_words_top = 'true'):
 
     src_dir = Path('C:\\Users\\jack\\Nutstore\\1\\我的坚果云\\RimeSync\\jk-jack')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
+    if not out_dir.exists():
+        out_dir = Path('C:\\Users\\jack\\Nutstore\\1\\Rime\\dicts')
 
     src_file = 'jk_wubi.userdb.txt'
     out_file = 'wubi86_user.dict.yaml'

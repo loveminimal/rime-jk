@@ -31,6 +31,7 @@ use_preset_vocabulary: false
 遍历	bmli	1
 标识	bnui	1
 不赖	buld	1
+不时	buui	1
 不止	buvi	1
 词频	cipb	1
 大幅	dafu	1
@@ -46,6 +47,7 @@ use_preset_vocabulary: false
 大赚	ddvr	1
 定长	dkih	1
 电力	dmli	1
+短剧	drju	1
 鹅厂	eeih	1
 发力	fali	1
 分词	ffci	1
@@ -77,6 +79,7 @@ use_preset_vocabulary: false
 茶友	iayz	1
 辰东	ifds	1
 惩戒	igjp	1
+盛世	igui	1
 产康	ijkh	1
 川普	irpu	1
 串子	irzi	1
@@ -148,7 +151,9 @@ use_preset_vocabulary: false
 神祇	ufqi	1
 审视	ufui	1
 神识	ufui	1
+声笔	ugbi	1
 圣母	ugmu	1
+盛世	ugui	1
 汤姆	uhmu	1
 时机	uiji	1
 事件	uijm	1
@@ -159,6 +164,7 @@ use_preset_vocabulary: false
 实时	uiui	1
 诗文	uiwf	1
 释义	uiyi	1
+实用	uiys	1
 熟知	uuvi	1
 术语	uuyu	1
 水群	uvqy	1
@@ -203,6 +209,7 @@ use_preset_vocabulary: false
 线程	xmig	1
 仙逆	xmni	1
 仙人	xmrf	1
+贤者	xmve	1
 校花	xnhx	1
 小结	xnjp	1
 小字	xnzi	1
@@ -219,6 +226,7 @@ use_preset_vocabulary: false
 溢出	yiiu	1
 移除	yiiu	1
 一件	yijm	1
+一款	yikr	1
 移植	yivi	1
 一位	yiww	1
 一组	yizu	1
@@ -312,6 +320,7 @@ use_preset_vocabulary: false
 刘奕遥	lyy	1
 刘增玺	lzx	1
 姆巴佩	mbp	1
+抹了蜜	mlm	1
 毛润之	mrv	1
 梦中界	mvj	1
 你不会	nbh	1
@@ -338,6 +347,7 @@ use_preset_vocabulary: false
 杀伤力	uul	1
 制表符	vbf	1
 知北游	vby	1
+注册表	vcb	1
 这会儿	vhe	1
 张纯如	vir	1
 中州韵	vvy	1
@@ -436,6 +446,7 @@ use_preset_vocabulary: false
 刘奕遥	lyyc	1
 刘增玺	lzxi	1
 姆巴佩	mbpw	1
+抹了蜜	mlmi	1
 毛润之	mrvi	1
 梦中界	mvjp	1
 你不会	nbhv	1
@@ -463,6 +474,7 @@ use_preset_vocabulary: false
 杀伤力	uuli	1
 制表符	vbfu	1
 知北游	vbyz	1
+注册表	vcbn	1
 这会儿	vher	1
 张纯如	viru	1
 中州韵	vvyy	1

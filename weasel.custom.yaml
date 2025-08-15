@@ -31,7 +31,7 @@ patch:
       font_point: 11 
       label_font_point: 9
       comment_font_point: 9
-      label_format: "%s." #"%s."
+      label_format: "%s " #"%s."
       # mark_text: "♪"
       # --- 候选项文字纵向排列 ----------------------------------
       # horizontal: false 

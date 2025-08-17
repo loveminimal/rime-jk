@@ -286,6 +286,7 @@ use_preset_vocabulary: false
 服务器	fwq	1
 翻译器	fyq	1
 复杂度	fzd	1
+攻击力	gjl	1
 管理器	glq	1
 管理者	glv	1
 狗日的	grd	1
@@ -414,6 +415,7 @@ use_preset_vocabulary: false
 服务器	fwqi	1
 翻译器	fyqi	1
 复杂度	fzdu	1
+攻击力	gjli	1
 管理器	glqi	1
 管理者	glve	1
 狗日的	grde	1

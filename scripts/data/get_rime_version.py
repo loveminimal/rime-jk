@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 def get_rime_version():
-    proj_dir = Path(__file__).resolve().parent.parent
+    proj_dir = Path(__file__).resolve().parent.parent.parent
     installation_path = proj_dir / 'installation.yaml'
 
     with open(installation_path, 'r', encoding='utf-8') as f:

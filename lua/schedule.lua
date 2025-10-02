@@ -24,7 +24,7 @@
     ---------------------------------------
 ]]--
 
-require("lunar_lib")
+require("data/lunar_lib")
 
 -- +++ 主函数 +++
 local function schedule(input, seg, env)

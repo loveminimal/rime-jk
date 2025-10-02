@@ -2,8 +2,8 @@
 # by Jack Liu <https://aituyaa.com>
 # 
 import subprocess
-from progress import progress
-from get_rime_version import get_rime_version
+from data.progress import progress
+from data.get_rime_version import get_rime_version
 
 # 执行部署命令
 def deploy_rime():

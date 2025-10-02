@@ -29,14 +29,12 @@ encoder:
 # flyyx_user         「 养成系 」用户词库
 # flyyx_ext            「 扩展 」表情符号 
 # flyyx_char             「 单字 」全码集 ✗
-# flyyx_map                「 查询 」模糊 ✗
 # ------------------------------------------
 import_tables:
   - dicts/flyyx_user
   - dicts/flyyx
-  - dicts/flyyx_ext
-  - dicts/flyyx_char
-  # - dicts/flyyx_map
+  # - dicts/flyyx_ext
+  # - dicts/flyyx_char
   # - dicts/user_words
 use_preset_vocabulary: false
 ...

@@ -62,6 +62,7 @@ engine:
     - lua_translator@*date_translator 
     - lua_translator@*force_gc        
   filters:
+    # - lua_filter@*charset_filter
     - lua_filter@*aux_code
     - lua_filter@*handle_user_words*F
     - lua_filter@*prettify_comment
@@ -154,11 +155,12 @@ reverse_lookup:
 
 chars:
   __include: jk.yaml:/chars
+  prefix: "oc"
 
 pinyin:
   __include: jk.yaml:/pinyin
-  dictionary: jk_pinyin
   prefix: "ow"
+
 
 custom_phrase:
   __include: jk.yaml:/custom_phrase

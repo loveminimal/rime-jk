@@ -45,11 +45,11 @@ local function create_filter(is_front)
     end
 end
 
-local F = { func = create_filter(true) }
-local E = { func = create_filter(false)}
+local B = { func = create_filter(true) }  -- 居前 Begin
+local E = { func = create_filter(false)}  -- 居后 End
 
 return {
-    F = F,
+    B = B,
     E = E,
     func = E.func
 }

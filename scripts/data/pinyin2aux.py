@@ -118,7 +118,7 @@ if __name__ == "__main__":
     # metadata_directory = '单字表万象辅助码'  # 替换为你的元数据目录路径
     # input_path = '/home/amz/.local/share/fcitx5/rime/cn_dicts'  # 输入路径（可以是文件或目录）
     # output_path = '/home/amz/.local/share/fcitx5/rime/万象cn_dicts'  # 输出路径（可以是文件或目录）
-    metadata_directory = proj_dir / 'scripts'  # 替换为你的元数据目录路径
+    metadata_directory = proj_dir / 'scripts' / 'data'  # 替换为你的元数据目录路径
     input_path = work_dir / 'cn_dicts'  # 输入路径（可以是文件或目录）
     output_path = work_dir / 'out'  # 输出路径（可以是文件或目录）
 

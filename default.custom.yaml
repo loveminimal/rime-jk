@@ -81,9 +81,10 @@ patch:
       - { when: always, accept: "Control+backslash", toggle: chaifen }             
       - { when: always, accept: Control+e, toggle: emoji }
       - { when: always, accept: Control+t, toggle: char_only }
+      - { when: always, accept: Control+apostrophe, toggle: charset_filter }
       - { when: always, accept: Control+space, toggle: ascii_mode }                
       - { when: always, accept: Control+comma, select: .next }                     
-      - { when: always, accept: Control+apostrophe, select: .next }                     
+      # - { when: always, accept: Control+apostrophe, select: .next }                     
       - { when: always, accept: Control+period, send: '~' }
       - { when: has_menu, accept: semicolon, send: 2 }                             
       - { when: has_menu, accept: apostrophe, send: 3 }                            

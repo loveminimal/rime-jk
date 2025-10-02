@@ -12,10 +12,10 @@
 # 
 import re
 from pathlib import Path
-from header import get_en_aliases_header
-from timer import timer
+from data.header import get_en_aliases_header
+from data.timer import timer
 
-from progress import progress
+from data.progress import progress
 
 
 @timer
@@ -69,6 +69,9 @@ if __name__ == '__main__':
 
     src_dir = Path('C:\\Users\\jack')
     out_dir = Path('C:\\Users\\jack\\AppData\\Roaming\\Rime\\dicts')
+    if not out_dir.exists():
+        out_dir = Path('C:\\Users\\jack\\Nutstore\\1\\Rime\\dicts')
+
     file_endswith_filter = '.bash_aliases'
 
     out_file = 'en_aliases.dict.yaml'

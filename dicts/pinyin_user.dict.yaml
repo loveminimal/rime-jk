@@ -12,7 +12,7 @@
 # 
 ---
 name: pinyin_user
-version: 2025.07
+version: 2025.08
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -22,5 +22,7 @@ use_preset_vocabulary: false
 速录宝	su;zu lu;eu bao;by	300000000
 自然码	zi;po ran;ph ma;um	200000000
 空明码	kong;bg ming;oo ma;um	300000000
+浪浪山	lang;dl lang;dl shan;lk	400000000
 小鹤音形	xiao;ld he;dn yin;lo xing;kp	300000000
 山海八荒录	shan;lk hai;dm ba;pn huang;cv lu;eu	200000000
+浪浪山的小妖怪	lang;dl lang;dl shan;lk de;bu,b xiao;ld yao;ny guai;xt	300000000

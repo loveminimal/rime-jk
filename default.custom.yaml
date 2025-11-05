@@ -22,8 +22,8 @@ patch:
   schema_list:
     - {schema: jk_ascii}
     - {schema: jk_flyyx}
-    # - {schema: jk_pinyin}
-    - {schema: jk_tiger}
+    - {schema: jk_pinyin}
+    # - {schema: jk_tiger}
 
   # --- 选单设置 ---
   switcher/+:

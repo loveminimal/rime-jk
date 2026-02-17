@@ -12,26 +12,28 @@ patch:
 # ---- 主题汇总 -------------------------------------------------------
 #〔 制作 11 〕
 # pujk skjk prjk emjk orjk otjk sljk tkjk aqjk mljk mdjk
-#〔 魔改 11 〕
+#〔 魔改 12 〕
 # google_jk dark_temple_jk flypy_jk kuon_jk lost_temple_jk metroblue_jk
-# modern_warfare_jk skype_jk so_young_jk starcraft_ii_jk steam_jk
+# modern_warfare_jk skype_jk so_young_jk starcraft_ii_jk steam_jk ink_jk
 #〔 内置 26 〕
 # android aqua azure brasil brisk cool_breeze dark_temple doraemon 
 # dota_2 espagna flypy gholabok google google_plus ink kuma_shuzboz 
 # kuon lost_temple luna macau metroblue nba ps4 psionics skype smurfs 
 # so_young starcraft starcraft_ii steam tintin wii xbox_silver youtube       
 # ---------------------------------------------------------------------
-  __include: style.yaml:skjk
+  __include: style.yaml:styles
   __patch:
+    # 方案、状态切换时的提示跟随 
+    show_notifications: false
     style/+:
-      color_scheme: skjk
-      font_face: LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
-      label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
-      comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, Segoe UI Emoji, 黑体字根
+      color_scheme: skjk  # 👈 永久性修改默认主题
+      font_face: LXGW WenKai GB Screen R, LXGW WenKai, Segoe UI Emoji, 黑体字根
+      label_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, LXGW WenKai, Segoe UI Emoji, 黑体字根
+      comment_font_face: LXGW WenKai Mono, LXGW WenKai GB Screen R, LXGW WenKai, Segoe UI Emoji, 黑体字根
       font_point: 11 
       label_font_point: 9
       comment_font_point: 9
-      label_format: "%s " #"%s."
+      # label_format: "" #"%s."
       # mark_text: "♪"
       # --- 候选项文字纵向排列 ----------------------------------
       # horizontal: false 

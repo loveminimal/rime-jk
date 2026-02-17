@@ -4,9 +4,9 @@
 # ---- 主题汇总 -------------------------------------------------------
 #〔 制作 11 〕
 # pujk skjk prjk emjk orjk otjk sljk tkjk aqjk mljk mdjk
-#〔 魔改 11 〕
+#〔 魔改 12 〕
 # google_jk dark_temple_jk flypy_jk kuon_jk lost_temple_jk metroblue_jk
-# modern_warfare_jk skype_jk so_young_jk starcraft_ii_jk steam_jk
+# modern_warfare_jk skype_jk so_young_jk starcraft_ii_jk steam_jk ink_jk
 #〔 内置 26 〕
 # android aqua azure brasil brisk cool_breeze dark_temple doraemon 
 # dota_2 espagna flypy gholabok google google_plus ink kuma_shuzboz 
@@ -138,6 +138,47 @@ layout_h:
   shadow_offset_x: 1
   shadow_offset_y: 1
 
+# 主要用于优化以下属性设置为 false 时的观感
+# style/inline_preedit: true
+layout_hp:
+  # ---〔基础〕---
+  # 排列
+  # type: vertical
+  type: horizontal
+  # 字号
+  linespacing: 0
+  baseline: 0
+  # 对齐
+  align_type: bottom
+  # 边框
+  border_width: 0
+  # 边距
+  margin_x: 16
+  margin_y: 8
+  # 编码区域和候选区域的间距
+  spacing: 10
+  # ---〔候选框〕---
+  # 候选框宽高
+  max_width: 0
+  min_width: 0
+  min_height: 0
+  max_height: 0
+  # 候选项间距
+  candidate_spacing: 5
+  # 圆角
+  corner_radius: 4
+  round_corner: 4 # i.e. hilited_corner_radius
+  # ---〔高亮候选〕---
+  # line_spacing: 4
+  hilite_spacing: 4
+  hilite_padding: 4
+  hilite_padding_x: 12
+  # hilite_padding_y: 8
+  # --- 〔阴影区域〕---
+  shadow_radius: 2
+  shadow_offset_x: 1
+  shadow_offset_y: 1
+
 layout_v:
   # ---〔基础〕---
   # 排列
@@ -178,8 +219,9 @@ layout_v:
   shadow_offset_y: 4
 
 
+styles:
 # --- Purple 绛紫 ---
-pujk:
+# pujk:
   preset_color_schemes/pujk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·绛紫"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -188,7 +230,7 @@ pujk:
     border_color: 0xEEEEFF                      # 边框
     back_color: 0xEEEEFF                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x48466d                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -215,7 +257,7 @@ pujk:
     nextpage_color: 0x48466d99                  # 下一页
 
 # --- Sky 天蓝 ----
-skjk:
+# skjk:
   preset_color_schemes/skjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·天蓝"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -224,7 +266,7 @@ skjk:
     border_color: 0xD6EAF8                      # 边框
     back_color: 0xD6EAF8                        # 背景
     
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1B4F72                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -251,7 +293,7 @@ skjk:
     nextpage_color: 0x1B4F7299                  # 下一页
 
 # --- Primary 主蓝 ---
-prjk:
+# prjk:
   preset_color_schemes/prjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·主蓝"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -260,7 +302,7 @@ prjk:
     border_color: 0xcfe2ff                      # 边框
     back_color: 0xcfe2ff                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x0a58ca                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -287,7 +329,7 @@ prjk:
     nextpage_color: 0x0a58ca99                  # 下一页
 
 # --- Emerald 翠绿 ---
-emjk:
+# emjk:
   preset_color_schemes/emjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·青翠"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -296,7 +338,7 @@ emjk:
     border_color: 0xD0ECE7                      # 边框
     back_color: 0xD0ECE7                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x0B5345                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -323,7 +365,7 @@ emjk:
     nextpage_color: 0x0B534599                  # 下一页
 
 # --- Orange 暖橙 ---
-orjk:
+# orjk:
   preset_color_schemes/orjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·暖橙"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -332,7 +374,7 @@ orjk:
     border_color: 0xFFF8F3                      # 边框
     back_color: 0xFFF8F3                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x555250                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -359,7 +401,7 @@ orjk:
     nextpage_color: 0x55525099                  # 下一页
 
 # --- Orange 虎橙 ---
-otjk:
+# otjk:
   preset_color_schemes/otjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·虎橙"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -368,7 +410,7 @@ otjk:
     border_color: 0xFFF8F3                      # 边框
     back_color: 0xFFF8F3                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x663300                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -395,7 +437,7 @@ otjk:
     nextpage_color: 0x66330099                  # 下一页
 
 # --- Slate 岩灰 ---
-sljk:
+# sljk:
   preset_color_schemes/sljk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·岩灰"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -404,7 +446,7 @@ sljk:
     border_color: 0xe2e8f0                      # 边框
     back_color: 0xe2e8f0                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x334155                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -431,7 +473,7 @@ sljk:
     nextpage_color: 0x33415599                  # 下一页
 
 # --- TeaInk 茶墨 ---
-tkjk:
+# tkjk:
   preset_color_schemes/tkjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·茶墨"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -440,7 +482,7 @@ tkjk:
     border_color: 0xe8f3f5                      # 边框
     back_color: 0xe8f3f5                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1150af                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -467,7 +509,7 @@ tkjk:
     nextpage_color: 0x1150af99                  # 下一页
 
 # --- Aqua 碧水〔改〕---
-aqjk:
+# aqjk:
   preset_color_schemes/aqjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·碧水"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -476,7 +518,7 @@ aqjk:
     border_color: 0xECEFF4                      # 边框
     back_color: 0xECEFF4                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x2E3440                        # 文字
     # hilited_text_color: 0xFFFFFF                # 编码
@@ -506,7 +548,7 @@ aqjk:
     nextpage_color: 0x0A3AFA99                  # 下一页
 
 # --- Light 微亮 ---
-mljk:
+# mljk:
   preset_color_schemes/mljk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·微浅"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -515,7 +557,7 @@ mljk:
     border_color: 0xE8E8E8                      # 边框
     back_color: 0xF9F9F9                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0x1A1A1A                        # 文字
     # hilited_text_color: 0x191919                # 编码
@@ -542,7 +584,7 @@ mljk:
     nextpage_color: 0x19191999                  # 下一页
 
 # --- Dark 微暗 ---
-mdjk:
+# mdjk:
   preset_color_schemes/mdjk:                    # 在 `style/color_schema` 指定的配色方案值
     name: "知心·微暗"                           # 方案设置中显示的配色名称
     author: Jack Liu                            # 配色作者名称
@@ -551,7 +593,7 @@ mdjk:
     border_color: 0x2c2c2c99                    # 边框
     back_color: 0x2c2c2c                        # 背景
 
-    shadow_color: 0x000000b4                    # 阴影
+    shadow_color: 0x666666b4                    # 阴影
     # ---〔内选区域·顶部〕---
     text_color: 0xffffff                        # 文字
     # hilited_text_color: 0xffffff                # 编码
@@ -579,9 +621,9 @@ mdjk:
 
 
 # --- 官方内置「 改 」---
-google_jk:
+# google_jk:
   preset_color_schemes/google_jk:
-    name: 谷歌／Google
+    name: 知心·谷歌／Google
     author: skoj <skoj@qq.com>
     color_format: rgba
     text_color: 0x666666
@@ -597,9 +639,9 @@ google_jk:
     nextpage_color: 0x3975CE99
     prevpage_color: 0x3975CE99
 
-dark_temple_jk:
+# dark_temple_jk:
   preset_color_schemes/dark_temple_jk:
-    name: 暗堂／Dark Temple
+    name: 知心·暗堂／Dark Temple
     author: 佛振 <chen.sst@gmail.com>, based on ir_black
     color_format: rgba
     text_color: 0xdaf692
@@ -616,13 +658,13 @@ dark_temple_jk:
     nextpage_color: 0xdaf69299
     prevpage_color: 0xdaf69299
   
-flypy_jk:
+# flypy_jk:
   preset_color_schemes/flypy_jk:
     # description: |
     #   小鹤飞扬：白底蓝字，红色高亮。
     #   根据小鹤双拼官网图片制作
     #   http://www.flypy.com/images/mr.png
-    name: "小鹤飞扬／flypy"
+    name: "知心·小鹤飞扬／flypy"
     author: "Pal.lxk <Pal.lxk@gmail.com>"
     color_format: rgba
     text_color: 0x0080ff # 0x000000
@@ -640,9 +682,9 @@ flypy_jk:
     nextpage_color: 0x0080ff99
     prevpage_color: 0x0080ff99
   
-kuon_jk:
+# kuon_jk:
   preset_color_schemes/kuon_jk:
-    name: "琨／Kuon"
+    name: "知心·琨／Kuon"
     author: "Patricivs <ipatrickmac@me.com>"
     color_format: rgba
     text_color: 0xffffff
@@ -660,9 +702,9 @@ kuon_jk:
     nextpage_color: 0xffffff99
     prevpage_color: 0xffffff99
   
-lost_temple_jk:
+# lost_temple_jk:
   preset_color_schemes/lost_temple_jk:
-    name: 孤寺／Lost Temple
+    name: 知心·孤寺／Lost Temple
     author: 佛振 <chen.sst@gmail.com>, based on ir_black
     color_format: rgba
     text_color: 0xf6f3e8
@@ -676,9 +718,9 @@ lost_temple_jk:
     nextpage_color: 0xcae68299
     prevpage_color: 0xcae68299
   
-metroblue_jk:
+# metroblue_jk:
   preset_color_schemes/metroblue_jk:
-    name: "现代蓝／Metro Blue"
+    name: "知心·现代蓝／Metro Blue"
     author: "Prcuvu <prcuvu@gmail.com>"
     color_format: rgba
     text_color: 0x000000
@@ -697,9 +739,9 @@ metroblue_jk:
     nextpage_color: 0x0078d799
     prevpage_color: 0x0078d799
   
-modern_warfare_jk:
+# modern_warfare_jk:
   preset_color_schemes/modern_warfare_jk:
-    name: "現代戰爭／Modern Warfare"
+    name: "知心·現代戰爭／Modern Warfare"
     author: P1461
     color_format: rgba
     text_color: 0x70bc14
@@ -715,9 +757,9 @@ modern_warfare_jk:
     nextpage_color: 0x636f6799
     prevpage_color: 0x636f6799
   
-skype_jk:
+# skype_jk:
   preset_color_schemes/skype_jk:
-    name: "斯蓋普／Skype"
+    name: "知心·斯蓋普／Skype"
     author: "Patricivs <ipatrickmac@me.com>"
     color_format: rgba
     text_color: 0xffffff
@@ -735,9 +777,9 @@ skype_jk:
     nextpage_color: 0xffffff99
     prevpage_color: 0xffffff99
   
-so_young_jk:
+# so_young_jk:
   preset_color_schemes/so_young_jk:
-    name: "致青春／So Young"
+    name: "知心·致青春／So Young"
     author: "五磅兔 <zcunlin@foxmail.com>"
     color_format: rgba
     text_color: 0x2aa198 # 0xd33682
@@ -755,9 +797,9 @@ so_young_jk:
     nextpage_color: 0x2aa19899
     prevpage_color: 0x2aa19899
   
-starcraft_ii_jk:
+# starcraft_ii_jk:
   preset_color_schemes/starcraft_ii_jk:
-    name: "星際爭霸Ⅱ／StarCraft Ⅱ"
+    name: "知心·星際爭霸Ⅱ／StarCraft Ⅱ"
     author: "Patricivs <ipatrickmac@me.com>"
     color_format: rgba
     text_color: 0xffffff
@@ -775,9 +817,9 @@ starcraft_ii_jk:
     nextpage_color: 0x1eadef99
     prevpage_color: 0x1eadef99
   
-steam_jk:
+# steam_jk:
   preset_color_schemes/steam_jk:
-    name: "Steam"
+    name: "知心·Steam"
     author: "Patricivs <ipatrickmac@me.com>"
     color_format: rgba
     text_color: 0x528ccd
@@ -794,4 +836,22 @@ steam_jk:
     # ---〔翻页选项〕---
     nextpage_color: 0x31425999
     prevpage_color: 0x31425999
-  
+
+# ink_jk:
+  preset_color_schemes/ink_jk:
+    # 参考常用背景色、Monokai 色调、佛振的墨池色
+    # 0x222827  0x3E3D32
+    color_format: rgba
+    name: 知心·宣墨／Ink
+    text_color: 0x222827
+    back_color: 0xf6f2f1
+    border_color: 0x222827
+    shadow_color: 0x22282766
+    # hilited_text_color: 0x222827
+    # hilited_back_color: 0xdddddd
+    hilited_candidate_text_color: 0xf6f2f1
+    hilited_candidate_back_color: 0x222827  
+    hilited_comment_text_color: 0xf6f2f199
+    # ---〔翻页选项〕---
+    nextpage_color: 0x22282799
+    prevpage_color: 0x22282799
